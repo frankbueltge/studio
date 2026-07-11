@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diminishing Returns — Increment 1</title>
+<style>
+  :root {
+    --paper: #efe9db;
+    --ink: #1c1a15;
+    --ink-soft: #4a4437;
+    --rule: rgba(28, 26, 21, 0.28);
+    --rule-faint: rgba(28, 26, 21, 0.14);
+    --danger: #8c2a1f;
+    --danger-bg: rgba(140, 42, 31, 0.10);
+    --teal: #1f5c4a;
+    --teal-bg: rgba(31, 92, 74, 0.10);
+    --steel: #3a4a63;
+    --amber: #8a6a1f;
+    --amber-bg: rgba(138, 106, 31, 0.10);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: ui-monospace, "IBM Plex Mono", "Consolas", "Liberation Mono", "SFMono-Regular", monospace;
+    line-height: 1.5;
+  }
+  .instrument {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  h1, h2, h3 { font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight: 600; }
+  a { color: var(--teal); }
+  button {
+    font-family: inherit;
+  }
+  button:focus-visible, [tabindex]:focus-visible, a:focus-visible {
+    outline: 3px solid var(--steel);
+    outline-offset: 2px;
+  }
+
+  /* ---------- header ---------- */
+  .head {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+    margin: 0 0 0.4rem;
+  }
+  .head h1 { font-size: 2rem; margin: 0 0 0.5rem; letter-spacing: 0.01em; }
+  .dek { margin: 0 0 0.9rem; font-size: 0.92rem; color: var(--ink-soft); max-width: 62ch; }
+  .tier-legend { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+  /* ---------- tier tags ---------- */
+  .tag {
+    display: inline-block;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+    line-height: 1.4;
+  }
+  .tag-verified { color: var(--teal); background: var(--teal-bg); border: 1px solid var(--teal); }
+  .tag-imagined { color: var(--amber); background: var(--amber-bg); border: 1px dashed var(--amber); }
+
+  /* ---------- stage ---------- */
+  .stage {
+    border: 1px solid var(--ink);
+    padding: 1.2rem 1.3rem 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .round-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+  }
+  .round-line h2 { font-size: 1rem; margin: 0; text-transform: uppercase; letter-spacing: 0.04em; }
+  .round-line .years { font-size: 0.78rem; color: var(--ink-soft); }
+
+  .mechanism-note {
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+    border-left: 3px solid var(--steel);
+    padding-left: 0.6rem;
+    margin: 0 0 1.1rem;
+  }
+
+  .readouts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-bottom: 1rem; }
+  @media (max-width: 640px) { .readouts { grid-template-columns: 1fr; } }
+
+  .readout-panel { border: 1px solid var(--rule); padding: 0.8rem 0.9rem; }
+  .readout-panel h3 {
+    font-family: inherit;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+  }
+  .readout-big { font-size: 1.9rem; font-weight: 700; margin: 0 0 0.3rem; font-variant-numeric: tabular-nums; }
+  .readout-sub { font-size: 0.74rem; color: var(--ink-soft); margin: 0 0 0.6rem; }
+
+  .meter { height: 10px; border: 1px solid var(--ink); background: transparent; position: relative; margin-bottom: 0.35rem; }
+  .meter-fill { height: 100%; background: var(--steel); width: 0%; }
+  .meter-fill--growth { background: var(--danger); }
+  @media (prefers-reduced-motion: no-preference) {
+    .meter-fill { transition: width 0.12s linear; }
+  }
+  .meter-ticks { display: flex; justify-content: space-between; font-size: 0.62rem; color: var(--ink-soft); }
+
+  .timer-row { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1rem; font-size: 0.8rem; color: var(--ink-soft); }
+  .timer-row .secs { font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+  .controls { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: 1px solid var(--ink);
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+  }
+  .btn:hover:not(:disabled) { background: var(--steel); border-color: var(--steel); }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-press {
+    width: 9rem;
+    height: 4.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .input-tally { font-size: 0.74rem; color: var(--ink-soft); }
+  .input-tally strong { color: var(--ink); }
+
+  /* ---------- referee card ---------- */
+  .referee-card {
+    border: 2px solid var(--ink);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .referee-card h2 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 0.8rem; }
+  .referee-row { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--rule-faint); }
+  .referee-row:last-of-type { border-bottom: none; }
+  .referee-outcome {
+    margin: 0.9rem 0 0.7rem;
+    padding: 0.7rem 0.85rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1px solid var(--ink);
+  }
+  .referee-outcome.won { color: var(--teal); border-color: var(--teal); background: var(--teal-bg); }
+  .referee-outcome.lost { color: var(--danger); border-color: var(--danger); background: var(--danger-bg); }
+  .winnability-line { font-size: 0.78rem; color: var(--ink-soft); margin: 0 0 0.9rem; }
+  .quote-block { font-size: 0.78rem; font-style: italic; border-left: 3px solid var(--ink); padding-left: 0.7rem; margin: 0 0 0.9rem; color: var(--ink-soft); }
+
+  /* ---------- consumption index ---------- */
+  .consumption-index { border: 1px solid var(--rule); padding: 1.1rem 1.3rem; margin-bottom: 1.5rem; }
+  .consumption-index h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 0.4rem; }
+  .consumption-index .dek-small { font-size: 0.78rem; color: var(--ink-soft); margin: 0 0 1rem; }
+  .index-row { margin-bottom: 0.9rem; }
+  .index-row-label { display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 0.25rem; }
+  .index-row-label .val { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .index-bar-track { height: 16px; border: 1px solid var(--ink); background: transparent; }
+  .index-bar-fill { height: 100%; }
+  .index-bar-fill--yours { background: var(--steel); }
+  .index-bar-fill--perfect { background: var(--teal); }
+  .index-bar-fill--actual { background: var(--danger); }
+  @media (prefers-reduced-motion: no-preference) {
+    .index-bar-fill { transition: width 0.2s ease-out; }
+  }
+  .index-caption { font-size: 0.74rem; color: var(--ink-soft); margin: 0.9rem 0 0; border-top: 1px dashed var(--rule-faint); padding-top: 0.7rem; }
+  .final-summary { margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--ink); }
+  .final-summary table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  .final-summary th, .final-summary td { text-align: left; padding: 0.3rem 0.4rem; border-bottom: 1px solid var(--rule-faint); }
+  .final-summary th { color: var(--ink-soft); font-weight: 700; text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.03em; }
+
+  /* ---------- honesty & sources (always visible) ---------- */
+  .honesty, .selftest, .sources {
+    border: 1px solid var(--rule);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .honesty h2, .selftest h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 0.9rem; }
+  .honesty-block { margin-bottom: 1rem; }
+  .honesty-block:last-child { margin-bottom: 0; }
+  .honesty-block h3 { font-family: inherit; font-size: 0.78rem; margin: 0 0 0.5rem; }
+  .honesty-block p { font-size: 0.8rem; margin: 0; }
+  .honesty-block ul, .honesty-block ol { margin: 0; padding-left: 1.2rem; font-size: 0.8rem; }
+  .honesty-block li { margin-bottom: 0.5rem; }
+  .honesty-block li:last-child { margin-bottom: 0; }
+  .report-quote { font-style: italic; color: var(--ink-soft); }
+  .tier-legend-note { font-size: 0.72rem; color: var(--ink-soft); }
+  .final-summary-title { font-family: inherit; font-size: 0.82rem; margin: 0 0 0.6rem; }
+  .selftest-lede { font-size: 0.8rem; margin: 0 0 0.9rem; }
+  .index-round-label { font-size: 0.78rem; font-weight: 700; margin: 0 0 0.4rem; }
+  .noscript-wrap { max-width: 700px; margin: 2rem auto; padding: 0 1.25rem; font-family: ui-monospace, monospace; }
+  .noscript-wrap h1 { font-family: ui-serif, Georgia, serif; }
+
+  .selftest button { margin-bottom: 0.9rem; }
+  .selftest-output { font-size: 0.8rem; white-space: pre-wrap; border: 1px dashed var(--rule); padding: 0.7rem 0.85rem; background: rgba(28,26,21,0.03); }
+  .selftest-note { font-size: 0.74rem; color: var(--ink-soft); margin: 0.7rem 0 0; }
+
+  .sources ul { margin: 0.4rem 0; padding-left: 1.2rem; font-size: 0.78rem; }
+  .sources li { margin-bottom: 0.5rem; }
+  .sources-note { font-size: 0.72rem; color: var(--ink-soft); margin-top: 0.6rem; }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="instrument" id="app">
+
+  <header class="head">
+    <p class="eyebrow">Ensemble · Diminishing Returns · increment 1 · prototype, not a premiere</p>
+    <h1>Diminishing Returns</h1>
+    <p class="dek">
+      Three rounds, one disclosed fleet. Each round you work an efficiency dial down against
+      resistance while a growth needle rises on its own. At the end of each round the referee
+      computes — live, from the numbers below — whether that year could have been won at all.
+    </p>
+    <div class="tier-legend">
+      <span class="tag tag-verified">VERIFIED</span>
+      <span class="tag tag-imagined">IMAGINED</span>
+      <span class="tier-legend-note">— both tiers appear throughout; watch for the tags.</span>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- GAME STAGE                                                     -->
+  <!-- ============================================================ -->
+  <section class="stage" id="stage">
+    <div class="round-line">
+      <h2 id="round-title">Round — · —</h2>
+      <span class="years" id="round-phase-label" aria-live="polite">not started</span>
+    </div>
+
+    <p class="mechanism-note">
+      <span class="tag tag-imagined">IMAGINED</span>
+      You cannot <em>set</em> this dial the way instrument 013's breakeven slider let you set a
+      growth value and read a result. Here you can only exert repeated effort — spacebar presses
+      or pointer taps — against resistance that roughly <strong>doubles for every 0.01 of PUE</strong>
+      you claw toward the floor. See <code>addEffort()</code> and <code>thresholdForStep()</code>
+      in the page source.
+    </p>
+
+    <div class="readouts">
+      <div class="readout-panel">
+        <h3>Efficiency dial (you work this)</h3>
+        <p class="readout-big" id="dial-value">1.10</p>
+        <p class="readout-sub" id="dial-sub">floor 1.00 · 0 of 0 hundredths crossed</p>
+        <div class="meter" aria-hidden="true"><div class="meter-fill" id="dial-meter-fill"></div></div>
+        <p class="readout-sub" id="dial-next-cost">press to begin</p>
+      </div>
+      <div class="readout-panel">
+        <h3>Growth needle (autonomous — you do not control this)</h3>
+        <p class="readout-big" id="growth-value">0.0%</p>
+        <p class="readout-sub" id="growth-sub">rises to the disclosed rate as the fiscal year passes</p>
+        <div class="meter" aria-hidden="true"><div class="meter-fill meter-fill--growth" id="growth-meter-fill"></div></div>
+        <div class="meter-ticks" aria-hidden="true"><span>0%</span><span>20%</span><span>40%</span></div>
+      </div>
+    </div>
+
+    <div class="timer-row">
+      <span>Fiscal year elapsed</span>
+      <span><span class="secs" id="timer-secs">20</span>s remaining</span>
+    </div>
+
+    <div class="controls">
+      <button type="button" class="btn" id="start-btn">Begin round 1 — 2023</button>
+      <button type="button" class="btn btn-press" id="press-btn" disabled>PRESS</button>
+      <p class="input-tally" id="input-tally">keyboard: <strong>0</strong> · pointer: <strong>0</strong></p>
+    </div>
+    <p class="readout-sub" id="keyboard-hint">Keyboard: hold nothing — press and release the spacebar repeatedly once a round starts. Pointer: tap the PRESS button repeatedly. Holding either down does not help; only new presses count.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- REFEREE CARD                                                   -->
+  <!-- ============================================================ -->
+  <section class="referee-card" id="referee-card" hidden aria-live="polite">
+    <h2>The referee card — <span id="ref-year">—</span></h2>
+    <div class="referee-row"><span>Base PUE (start of round)</span><span id="ref-base">—</span></div>
+    <div class="referee-row"><span>Disclosed growth this year</span><span id="ref-growth">—</span></div>
+    <div class="referee-row"><span>Your achieved PUE (dial at round end)</span><span id="ref-achieved">—</span></div>
+    <div class="referee-row"><span>Required PUE to hold energy flat — base_PUE / (1 + growth)</span><span id="ref-required">—</span></div>
+    <p class="quote-block" id="ref-quote">—</p>
+    <p class="winnability-line" id="ref-winnability">—</p>
+    <p class="referee-outcome" id="ref-outcome">—</p>
+    <button type="button" class="btn" id="next-btn">Next round</button>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CONSUMPTION INDEX                                              -->
+  <!-- ============================================================ -->
+  <section class="consumption-index" id="consumption-index">
+    <h2>Consumption index — start 100</h2>
+    <p class="dek-small">
+      Each round: <code>index ×= (1 + growth) × (PUE_that_round / base_PUE)</code>. Three
+      trajectories, all computed live: what your dial achieved, what perfect play (PUE fixed at
+      the floor, 1.00, every round — impossible, shown for scale) would have produced, and what
+      Google's fleet actually reported.
+    </p>
+    <div id="index-rows"><p class="readout-sub">Index starts at 100 for all three trajectories. Complete a round to see it move.</p></div>
+    <div class="final-summary" id="final-summary" hidden>
+      <h3 class="final-summary-title">Referee summary, all three rounds</h3>
+      <table>
+        <thead><tr><th>Year</th><th>Base</th><th>Growth</th><th>Achieved</th><th>Required</th><th>Winnable?</th><th>Outcome</th></tr></thead>
+        <tbody id="final-summary-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- HONESTY PANEL — always visible, no interaction required        -->
+  <!-- ============================================================ -->
+  <section class="honesty" id="honesty-panel">
+    <h2>Honesty panel</h2>
+
+    <div class="honesty-block">
+      <h3><span class="tag tag-imagined">IMAGINED</span> the framing, not a premise</h3>
+      <p>
+        "You cannot win" is not assumed anywhere in this piece — it is whatever
+        <code>roundVerdict()</code> computes from the disclosed numbers below, every time it
+        runs. If a future disclosed year shows growth at or below the winnable threshold, this
+        same function declares that round winnable and the dial can win it. See the self-test
+        section below, which proves this with synthetic numbers right now.
+      </p>
+    </div>
+
+    <div class="honesty-block">
+      <h3><span class="tag tag-imagined">IMAGINED</span> the dial-as-opponent, the rounds, the game's voice</h3>
+      <p>
+        The dial-as-opponent framing, the rounds-as-game structure, the effort resistance curve,
+        and every word of this game's narrative voice are dramatization — a design choice made by
+        this studio, not a fact asserted about the world or about Google.
+      </p>
+    </div>
+
+    <div class="honesty-block">
+      <h3><span class="tag tag-verified">VERIFIED</span> the figures — three Google environmental reports</h3>
+      <ul>
+        <li><strong>2025 Environmental Report</strong> (covers fiscal 2024): <span class="report-quote">"our total data center electricity consumption grew by 27% in 2024, compared to 17% growth in the prior year."</span></li>
+        <li><strong>2026 Environmental Report</strong> (covers fiscal 2025): <span class="report-quote">"…our total electricity consumption grew by 37% in 2025, up from 27% in 2024."</span></li>
+        <li><strong>2024 Environmental Report</strong> (covers fleet PUE 2019–2023): fleet PUE flat at 1.10 for five consecutive years.</li>
+        <li>Breakeven arithmetic, the physical floor (1.0), and every per-year row (0.94 / 0.87 / 0.80) are carried unchanged from upstream instrument <strong>013, "The Floor"</strong> (<code>field-research/works/2026-07-09-the-floor/</code>), fully gauntleted there.</li>
+      </ul>
+    </div>
+
+    <div class="honesty-block">
+      <h3><span class="tag tag-verified">VERIFIED</span> four carried caveats, verbatim from data.json</h3>
+      <ol id="caveats-list"><li>loading…</li></ol>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SELF-TEST — always visible, no interaction required to inspect -->
+  <!-- ============================================================ -->
+  <section class="selftest" id="engine-selftest">
+    <h2>Verify the engine — a live self-test</h2>
+    <p class="selftest-lede">
+      This is the exact place to check that losing is <em>computed</em>, not scripted. The three
+      real rounds above never take the WIN branch, because in every disclosed year the required
+      PUE already falls below the physical floor before any dial work happens. Below,
+      <code>roundVerdict()</code> — the same pure function, unmodified — is run on two
+      <strong>synthetic</strong> rounds that are not in <code>data.json</code> and are not
+      claimed as real disclosures, only as a runtime proof that the WIN branch exists and fires
+      when the arithmetic allows it.
+    </p>
+    <button type="button" class="btn" id="selftest-btn">Run self-test</button>
+    <pre class="selftest-output" id="selftest-output">(not yet run)</pre>
+    <p class="selftest-note"><span class="tag tag-imagined">IMAGINED</span> the two input rows above (growth 5%, achieved 1.01 / 1.06) are fabricated test fixtures for verification only — not a claim about any company's actual figures.</p>
+  </section>
+
+  <footer class="sources" id="sources-footer">
+    <p>Sources — the subject's own disclosures, plus the upstream instrument this piece carries forward:</p>
+    <ul id="sources-list"><li>loading…</li></ul>
+    <p class="sources-note">All figures above are Google's own reported numbers, or deterministic arithmetic on them (floor = 1.00 by definition — PUE cannot fall below it; no modeling, no external estimate). Data embedded in this page's <code>#data-island</code>, unedited from <code>data.json</code>.</p>
+  </footer>
+
+</div>
+
+<noscript>
+  <div class="noscript-wrap">
+    <h1>Diminishing Returns — Increment 1</h1>
+    <p>This is an interactive prototype; the dial and the referee card require JavaScript and
+      are not shown here. What follows is the honesty panel, unabridged, so this page stays
+      honest with scripting off.</p>
+    <h2>Honesty panel</h2>
+    <p><strong>IMAGINED — the framing, not a premise.</strong> "You cannot win" is not a premise
+      of this piece. With JavaScript on, the engine computes the outcome of every round live
+      from disclosed numbers, and contains a genuine win branch that fires whenever the required
+      PUE (base_PUE / (1 + growth)) is at or above the physical floor of 1.00.</p>
+    <p><strong>IMAGINED — the dial-as-opponent, the rounds, the game's voice.</strong> The
+      dial-as-opponent framing, the rounds-as-game structure, the effort resistance curve, and
+      every word of the game's narrative voice are dramatization — a choice made by this studio,
+      not a fact about the world or about Google.</p>
+    <p><strong>VERIFIED — the figures.</strong> Google's 2025 Environmental Report (fiscal 2024):
+      "our total data center electricity consumption grew by 27% in 2024, compared to 17% growth
+      in the prior year." Google's 2026 Environmental Report (fiscal 2025): "…our total
+      electricity consumption grew by 37% in 2025, up from 27% in 2024." Google's 2024
+      Environmental Report: fleet PUE flat at 1.10 for five consecutive years (2019–2023). The
+      floor (1.0) and breakeven arithmetic are carried from upstream instrument 013, "The Floor."</p>
+    <p><strong>VERIFIED — four carried caveats:</strong></p>
+    <ol>
+      <li>Not a concealment claim: Google discloses the growth figures openly in the same
+        reports; the critique concerns framing (efficiency foregrounded as counterweight to
+        absolutes), and this game dramatizes that arithmetic — it accuses nobody of hiding
+        numbers.</li>
+      <li>Fleet PUE covers Google-owned-and-operated campuses only, not leased/colocation
+        facilities.</li>
+      <li>The 27%-vs-37% figures carry a wording shift between the two reports ("data center
+        electricity" vs "total electricity") — quoted exactly per source, not conflated.</li>
+      <li>Per-year base discipline: each round's required PUE divides the PRIOR year's fleet PUE
+        (the upstream seed correction, session 18).</li>
+    </ol>
+    <p>Sources: Google 2024, 2025 and 2026 Environmental Reports; upstream instrument
+      field-research/works/2026-07-09-the-floor.</p>
+  </div>
+</noscript>
+
+<script type="application/json" id="data-island">
+{
+  "project": "diminishing-returns",
+  "increment": 1,
+  "assembled": "2026-07-12 (Ensemble session 02; every VERIFIED figure checked first-hand by the conductor against the upstream instrument's committed record)",
+  "tier_note": "VERIFIED = from the research wing's gauntleted instrument 013 'The Floor' (field-research/works/2026-07-09-the-floor/) and its claims ledger; IMAGINED = the game framing, marked. The engine must compute all outcomes from the numbers below at runtime — nothing about winning or losing may be hardcoded.",
+  "verified": {
+    "subject": "Google's data-center fleet, as disclosed in Google's own environmental reports",
+    "floor": 1.0,
+    "floor_meaning": "PUE = total facility energy / IT-equipment energy; IT energy is a subset of total, so the ratio cannot fall below 1.0 (The Green Grid; ISO/IEC 30134-2:2016).",
+    "breakeven_formula": "required_PUE = base_PUE / (1 + growth); base_PUE is the PRIOR year's fleet PUE (per-year base — 1.10 for the 2024 round, 1.09 for the 2025 round)",
+    "winnable_condition": "a round is winnable in principle iff required_PUE >= floor, i.e. growth_pct <= (base_PUE - 1.0) * 100 (10% at base 1.10; 9% at base 1.09)",
+    "rounds": [
+      {
+        "year": 2023,
+        "base_pue": 1.10,
+        "growth_pct": 17,
+        "growth_quote": "compared to 17% growth in the prior year",
+        "growth_scope": "total data center electricity consumption (2025 report's wording, describing 2023)",
+        "achieved_fleet_pue_that_year": 1.10
+      },
+      {
+        "year": 2024,
+        "base_pue": 1.10,
+        "growth_pct": 27,
+        "growth_quote": "our total data center electricity consumption grew by 27% in 2024, compared to 17% growth in the prior year",
+        "growth_scope": "total data center electricity consumption (2025 report, FY2024)",
+        "achieved_fleet_pue_that_year": 1.09
+      },
+      {
+        "year": 2025,
+        "base_pue": 1.09,
+        "growth_pct": 37,
+        "growth_quote": "…our total electricity consumption grew by 37% in 2025, up from 27% in 2024",
+        "growth_scope": "TOTAL electricity consumption (2026 report, FY2025) — a wider wording than the 2025 report's 'data center' framing; quoted exactly as each source states it, not conflated (upstream wording-shift flag carried)",
+        "achieved_fleet_pue_that_year": 1.09
+      }
+    ],
+    "fleet_pue_series": {
+      "2019-2023": 1.10,
+      "2024": 1.09,
+      "2025": 1.09,
+      "note": "2019–2023 all 1.10 (2024 report data table); 2024 = 1.09 ('for the first time in six years... dropped below 1.10 to 1.09', 2025 report); 2025 = 1.09 (2026 report: 'a 2025 average annual PUE of 1.09... 83% less overhead energy than the industry average')."
+    },
+    "sources": [
+      {"id": "google_2024_env_report", "covers": "fleet PUE 2019–2023", "url": "https://www.smartenergydecisions.com/wp-content/uploads/2025/04/google-2024-environmental-report.pdf"},
+      {"id": "google_2025_env_report", "covers": "FY2024: PUE 1.09; growth 27% (and 17% prior year)", "url": "https://www.smartenergydecisions.com/wp-content/uploads/2025/07/google-2025-environmental-report-1.pdf", "official": "https://sustainability.google/reports/google-2025-environmental-report"},
+      {"id": "google_2026_env_report", "covers": "FY2025: PUE 1.09; growth 37%", "url": "https://storage.googleapis.com/gweb-mobius-cdn/sustainability/uploads/7f477eb723fe0c23d03f94b90a08882b9f28187d.pdf", "official": "https://sustainability.google/google-2026-environmental-report"},
+      {"id": "upstream_instrument_013", "covers": "the breakeven arithmetic, the floor, all caveats — fully gauntleted upstream", "url": "https://github.com/frankbueltge/field-research/tree/main/works/2026-07-09-the-floor"}
+    ],
+    "caveats_carried": [
+      "NOT a concealment claim: Google discloses the growth figures openly in the same reports; the critique upstream concerns framing (efficiency foregrounded as counterweight to absolutes), and this game dramatizes that arithmetic — it accuses nobody of hiding numbers.",
+      "Fleet PUE covers Google-owned-and-operated campuses only, not leased/colocation facilities.",
+      "The 27%-vs-37% figures carry a wording shift between the two reports ('data center electricity' vs 'total electricity') — quoted exactly per source, not conflated.",
+      "Per-year base discipline: each round's required PUE divides the PRIOR year's fleet PUE (the upstream seed correction, session 18)."
+    ]
+  },
+  "imagined": {
+    "marked": true,
+    "elements": "The dial-as-opponent, the rounds-as-game, the effort resistance curve, and every word of the game's voice are dramatization — a choice, not a fact about the world. The honesty panel on the work must say so. In particular: 'you cannot win' is NOT a premise of this piece — it is whatever the engine computes from the disclosed numbers above; if a future disclosed year shows growth at or below the winnable threshold, this same engine declares that round winnable."
+  }
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------------------------------------------------------------
+  // 0. Data island — the ONLY source of figures for this page.
+  //    Nothing below duplicates a VERIFIED number as a literal; every
+  //    figure rendered is read from this parsed object at runtime.
+  // ---------------------------------------------------------------
+  var DATA = JSON.parse(document.getElementById('data-island').textContent);
+  var ROUNDS = DATA.verified.rounds;
+  var FLOOR = DATA.verified.floor; // 1.0
+
+  // ---------------------------------------------------------------
+  // 1. THE VERDICT FUNCTION — pure, no hidden state, no hardcoding.
+  //    Condition 2: this is the one place a hostile reader checks
+  //    that losing is computed, not scripted. Read it top to bottom.
+  // ---------------------------------------------------------------
+  function roundVerdict(round, achievedPue) {
+    // required_PUE = base_PUE / (1 + growth) — the PUE that would have
+    // held that year's total energy flat despite the disclosed growth.
+    var requiredPue = round.base_pue / (1 + round.growth_pct / 100);
+
+    // A round is winnable in principle iff required_PUE >= FLOOR, which
+    // is algebraically identical to: growth_pct <= (base_pue - FLOOR) * 100.
+    // Stated as a threshold so it reads directly as "winnable if growth <= X%".
+    var winnableThresholdPct = (round.base_pue - FLOOR) * 100;
+    var winnable = round.growth_pct <= winnableThresholdPct;
+
+    // Did the achieved dial value actually reach the required PUE?
+    // achievedPue is always >= FLOOR by construction of the dial (it
+    // cannot go below 1.00), so heldFlat can only be true when the
+    // round is winnable in the first place (requiredPue >= FLOOR too).
+    var heldFlat = achievedPue <= requiredPue;
+
+    var outcome;
+    if (!winnable) {
+      outcome = 'LOST — structurally unwinnable: required PUE falls below the physical floor before any dial effort happens.';
+    } else if (heldFlat) {
+      // <-- the genuine win path. Never reached by the three real,
+      // disclosed rounds below, because none of them is winnable —
+      // but the branch exists and the self-test section fires it live.
+      outcome = 'WON — achieved PUE reached the required PUE; energy held flat or fell.';
+    } else {
+      outcome = 'LOST — winnable in principle this round, but the achieved PUE did not reach the required PUE.';
+    }
+
+    return {
+      requiredPue: requiredPue,
+      winnableThresholdPct: winnableThresholdPct,
+      winnable: winnable,
+      heldFlat: heldFlat,
+      outcome: outcome
+    };
+  }
+
+  // ---------------------------------------------------------------
+  // 2. THE DIAL — asymptotic-resistance engine (condition 1).
+  //    Mechanically distinct in kind from a slider: you cannot set a
+  //    value, you can only add discrete units of effort, and each
+  //    successive hundredth toward the floor costs 2x the effort of
+  //    the previous one.
+  // ---------------------------------------------------------------
+  var BASE_EFFORT = 0.35; // tuning constant, see README "tuning choices"
+  var ROUND_MS = 20000;
+  var POINTER_DEBOUNCE_MS = 30;
+
+  function makeDial(round) {
+    return {
+      round: round,
+      maxSteps: Math.round((round.base_pue - FLOOR) * 100),
+      stepsCrossed: 0,
+      effortInStep: 0
+    };
+  }
+
+  function currentPue(dial) {
+    return +(dial.round.base_pue - dial.stepsCrossed * 0.01).toFixed(2);
+  }
+
+  // cost of crossing the (stepIndex+1)-th hundredth (0-indexed stepIndex):
+  // doubles every step — the asymptotic resistance the brief requires.
+  function thresholdForStep(stepIndex) {
+    return BASE_EFFORT * Math.pow(2, stepIndex);
+  }
+
+  function addEffort(dial, amount) {
+    if (dial.stepsCrossed >= dial.maxSteps) return; // floor reached — hard stop
+    dial.effortInStep += amount;
+    var threshold = thresholdForStep(dial.stepsCrossed);
+    while (dial.effortInStep >= threshold && dial.stepsCrossed < dial.maxSteps) {
+      dial.effortInStep -= threshold;
+      dial.stepsCrossed += 1;
+      threshold = thresholdForStep(dial.stepsCrossed);
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // 3. GAME STATE
+  // ---------------------------------------------------------------
+  var state = {
+    phase: 'intro', // intro | ready | running | referee | end
+    roundIndex: 0,
+    dial: makeDial(ROUNDS[0]),
+    keyboardPresses: 0,
+    pointerPresses: 0,
+    roundStartTs: 0,
+    rafId: null,
+    results: [], // { round, achievedPue, verdict, indexYourRun, indexPerfect, indexActual }
+    indexYourRun: 100,
+    indexPerfect: 100,
+    indexActual: 100,
+    lastPointerTs: 0
+  };
+
+  // ---------------------------------------------------------------
+  // 4. DOM refs
+  // ---------------------------------------------------------------
+  var $ = function (id) { return document.getElementById(id); };
+  var roundTitle = $('round-title');
+  var roundPhaseLabel = $('round-phase-label');
+  var dialValueEl = $('dial-value');
+  var dialSubEl = $('dial-sub');
+  var dialMeterFill = $('dial-meter-fill');
+  var dialNextCost = $('dial-next-cost');
+  var growthValueEl = $('growth-value');
+  var growthSubEl = $('growth-sub');
+  var growthMeterFill = $('growth-meter-fill');
+  var timerSecs = $('timer-secs');
+  var startBtn = $('start-btn');
+  var pressBtn = $('press-btn');
+  var inputTally = $('input-tally');
+  var refereeCard = $('referee-card');
+  var nextBtn = $('next-btn');
+  var indexRows = $('index-rows');
+  var finalSummary = $('final-summary');
+  var finalSummaryBody = $('final-summary-body');
+
+  // ---------------------------------------------------------------
+  // 5. Rendering
+  // ---------------------------------------------------------------
+  function renderStage() {
+    var round = ROUNDS[state.roundIndex];
+    roundTitle.textContent = 'Round ' + (state.roundIndex + 1) + ' of ' + ROUNDS.length + ' — ' + round.year;
+    roundPhaseLabel.textContent =
+      state.phase === 'intro' || state.phase === 'ready' ? 'not started' :
+      state.phase === 'running' ? 'fiscal year in progress' :
+      state.phase === 'referee' ? 'round complete' : 'all rounds complete';
+
+    var pue = currentPue(state.dial);
+    dialValueEl.textContent = pue.toFixed(2);
+    dialSubEl.textContent = 'floor ' + FLOOR.toFixed(2) + ' · ' + state.dial.stepsCrossed + ' of ' + state.dial.maxSteps + ' hundredths crossed';
+    var dialPct = state.dial.maxSteps > 0 ? (state.dial.stepsCrossed / state.dial.maxSteps) * 100 : 0;
+    dialMeterFill.style.width = dialPct + '%';
+
+    if (state.phase === 'running' && state.dial.stepsCrossed < state.dial.maxSteps) {
+      var threshold = thresholdForStep(state.dial.stepsCrossed);
+      var remaining = Math.max(0, Math.ceil(threshold - state.dial.effortInStep));
+      dialNextCost.textContent = '≈ ' + remaining + ' more presses for the next 0.01 (this hundredth costs 2× the last)';
+    } else if (state.dial.stepsCrossed >= state.dial.maxSteps) {
+      dialNextCost.textContent = 'floor reached — no further effect';
+    } else {
+      dialNextCost.textContent = 'press to begin';
+    }
+
+    inputTally.innerHTML = 'keyboard: <strong>' + state.keyboardPresses + '</strong> · pointer: <strong>' + state.pointerPresses + '</strong>';
+  }
+
+  function renderGrowth(growthPct) {
+    growthValueEl.textContent = growthPct.toFixed(1) + '%';
+    var scaleMax = 40;
+    growthMeterFill.style.width = Math.min(100, (growthPct / scaleMax) * 100) + '%';
+  }
+
+  function renderTimer(remainingSec) {
+    timerSecs.textContent = String(Math.max(0, remainingSec));
+  }
+
+  function fmt2(n) { return n.toFixed(2); }
+  function fmt1(n) { return n.toFixed(1); }
+
+  function renderRefereeCard(round, achievedPue, verdict) {
+    $('ref-year').textContent = String(round.year);
+    $('ref-base').textContent = fmt2(round.base_pue);
+    $('ref-growth').textContent = round.growth_pct + '% — ' + round.growth_scope;
+    $('ref-achieved').textContent = fmt2(achievedPue);
+    $('ref-required').textContent = fmt2(verdict.requiredPue) + (verdict.requiredPue < FLOOR ? ' (below the physical floor)' : '');
+    $('ref-quote').textContent = '"' + round.growth_quote + '"';
+    $('ref-winnability').textContent =
+      'This round would be winnable if growth ≤ (base−1.0)×100 = ' +
+      verdict.winnableThresholdPct.toFixed(0) + '% — disclosed growth: ' + round.growth_pct + '%.';
+    var outcomeEl = $('ref-outcome');
+    outcomeEl.textContent = verdict.outcome;
+    outcomeEl.classList.remove('won', 'lost');
+    outcomeEl.classList.add(verdict.heldFlat && verdict.winnable ? 'won' : 'lost');
+    refereeCard.hidden = false;
+  }
+
+  function renderConsumptionIndex() {
+    if (state.results.length === 0) {
+      indexRows.innerHTML = '<p class="readout-sub">Index starts at 100 for all three trajectories. Complete a round to see it move.</p>';
+      return;
+    }
+    var maxVal = 100;
+    state.results.forEach(function (r) {
+      maxVal = Math.max(maxVal, r.indexYourRun, r.indexPerfect, r.indexActual);
+    });
+    var html = '';
+    state.results.forEach(function (r, i) {
+      html += '<div class="index-row">' +
+        '<p class="index-round-label">Round ' + (i + 1) + ' — ' + r.round.year + '</p>' +
+        indexBar('your run', r.indexYourRun, maxVal, 'yours') +
+        indexBar('perfect play (PUE 1.00, impossible)', r.indexPerfect, maxVal, 'perfect') +
+        indexBar('what actually happened', r.indexActual, maxVal, 'actual') +
+        '</div>';
+    });
+    var last = state.results[state.results.length - 1];
+    html += '<p class="index-caption">Round ' + last.round.year + ': you moved the dial from ' +
+      fmt2(last.round.base_pue) + ' to ' + fmt2(last.achievedPue) + ' (' +
+      Math.round((last.round.base_pue - last.achievedPue) / (last.round.base_pue - FLOOR) * 100) +
+      '% of that round’s available headroom, worked by hand). The consumption index still climbed to ' +
+      fmt1(last.indexYourRun) + '.</p>';
+    indexRows.innerHTML = html;
+    // width is data, not markup: set via the CSSOM after insertion, never as a
+    // literal style="" string (SITE-API CSP contract — element.style.x only).
+    indexRows.querySelectorAll('.index-bar-fill[data-pct]').forEach(function (el) {
+      el.style.width = el.getAttribute('data-pct') + '%';
+    });
+  }
+
+  function indexBar(label, value, maxVal, modifier) {
+    var pct = Math.min(100, (value / maxVal) * 100);
+    return '<div class="index-row-label"><span>' + label + '</span><span class="val">' + fmt1(value) + '</span></div>' +
+      '<div class="index-bar-track"><div class="index-bar-fill index-bar-fill--' + modifier + '" data-pct="' + pct + '"></div></div>';
+  }
+
+  function renderFinalSummary() {
+    finalSummary.hidden = false;
+    var rows = '';
+    state.results.forEach(function (r) {
+      rows += '<tr>' +
+        '<td>' + r.round.year + '</td>' +
+        '<td>' + fmt2(r.round.base_pue) + '</td>' +
+        '<td>' + r.round.growth_pct + '%</td>' +
+        '<td>' + fmt2(r.achievedPue) + '</td>' +
+        '<td>' + fmt2(r.verdict.requiredPue) + '</td>' +
+        '<td>' + (r.verdict.winnable ? 'yes (≤' + r.verdict.winnableThresholdPct.toFixed(0) + '%)' : 'no (>' + r.verdict.winnableThresholdPct.toFixed(0) + '%)') + '</td>' +
+        '<td>' + (r.verdict.heldFlat && r.verdict.winnable ? 'WON' : 'LOST') + '</td>' +
+        '</tr>';
+    });
+    finalSummaryBody.innerHTML = rows;
+  }
+
+  // ---------------------------------------------------------------
+  // 6. Round lifecycle
+  // ---------------------------------------------------------------
+  function startRound() {
+    state.phase = 'running';
+    state.roundStartTs = performance.now();
+    startBtn.disabled = true;
+    pressBtn.disabled = false;
+    pressBtn.focus();
+    renderStage();
+    renderGrowth(0);
+    renderTimer(20);
+    tick();
+  }
+
+  function tick() {
+    var round = ROUNDS[state.roundIndex];
+    var elapsed = performance.now() - state.roundStartTs;
+    var growthPct = Math.min(round.growth_pct, (elapsed / ROUND_MS) * round.growth_pct);
+    renderGrowth(growthPct);
+    renderTimer(Math.ceil((ROUND_MS - elapsed) / 1000));
+    renderStage();
+    if (elapsed >= ROUND_MS) {
+      endRound();
+      return;
+    }
+    state.rafId = requestAnimationFrame(tick);
+  }
+
+  function endRound() {
+    if (state.rafId) cancelAnimationFrame(state.rafId);
+    state.phase = 'referee';
+    pressBtn.disabled = true;
+    var round = ROUNDS[state.roundIndex];
+    var achievedPue = currentPue(state.dial);
+    var verdict = roundVerdict(round, achievedPue);
+
+    // consumption index — three trajectories, all computed live
+    var growthFactor = 1 + round.growth_pct / 100;
+    state.indexYourRun *= growthFactor * (achievedPue / round.base_pue);
+    state.indexPerfect *= growthFactor * (FLOOR / round.base_pue);
+    state.indexActual *= growthFactor * (round.achieved_fleet_pue_that_year / round.base_pue);
+
+    state.results.push({
+      round: round,
+      achievedPue: achievedPue,
+      verdict: verdict,
+      indexYourRun: state.indexYourRun,
+      indexPerfect: state.indexPerfect,
+      indexActual: state.indexActual
+    });
+
+    renderRefereeCard(round, achievedPue, verdict);
+    renderConsumptionIndex();
+    renderStage();
+  }
+
+  function goToNextRound() {
+    refereeCard.hidden = true;
+    if (state.roundIndex + 1 < ROUNDS.length) {
+      state.roundIndex += 1;
+      state.dial = makeDial(ROUNDS[state.roundIndex]);
+      state.keyboardPresses = 0;
+      state.pointerPresses = 0;
+      state.phase = 'ready';
+      startBtn.disabled = false;
+      startBtn.textContent = 'Begin round ' + (state.roundIndex + 1) + ' — ' + ROUNDS[state.roundIndex].year;
+      renderStage();
+      renderGrowth(0);
+      renderTimer(20);
+    } else {
+      state.phase = 'end';
+      startBtn.hidden = true;
+      pressBtn.hidden = true;
+      inputTally.hidden = true;
+      $('keyboard-hint').hidden = true;
+      roundPhaseLabel.textContent = 'all rounds complete';
+      renderFinalSummary();
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // 7. Input — keyboard (global) and pointer (button), both counted
+  //    and shown separately, per the brief's "show which".
+  // ---------------------------------------------------------------
+  document.addEventListener('keydown', function (e) {
+    if (e.code !== 'Space' || state.phase !== 'running') return;
+    e.preventDefault(); // stop page scroll / accidental button re-activation
+    if (e.repeat) return; // holding the key down must not substitute for mashing it
+    state.keyboardPresses += 1;
+    addEffort(state.dial, 1);
+    renderStage();
+  });
+
+  pressBtn.addEventListener('pointerdown', function () {
+    if (state.phase !== 'running') return;
+    var now = performance.now();
+    if (now - state.lastPointerTs < POINTER_DEBOUNCE_MS) return;
+    state.lastPointerTs = now;
+    state.pointerPresses += 1;
+    addEffort(state.dial, 1);
+    renderStage();
+  });
+
+  startBtn.addEventListener('click', startRound);
+  nextBtn.addEventListener('click', goToNextRound);
+
+  // ---------------------------------------------------------------
+  // 8. Static content sourced from the data island (sources, caveats)
+  // ---------------------------------------------------------------
+  (function renderStaticSourced() {
+    var caveats = DATA.verified.caveats_carried;
+    $('caveats-list').innerHTML = caveats.map(function (c) { return '<li>' + c + '</li>'; }).join('');
+
+    var sources = DATA.verified.sources;
+    $('sources-list').innerHTML = sources.map(function (s) {
+      var url = s.official || s.url;
+      return '<li>' + s.id + ' — ' + s.covers + ' — <a href="' + url + '">' + url + '</a></li>';
+    }).join('');
+  })();
+
+  // ---------------------------------------------------------------
+  // 9. Self-test — proves the WIN branch fires, live, on request.
+  //    Uses synthetic rounds, clearly not part of data.json.
+  // ---------------------------------------------------------------
+  $('selftest-btn').addEventListener('click', function () {
+    var syntheticWin = { base_pue: 1.10, growth_pct: 5, growth_scope: 'synthetic test fixture, not disclosed data' };
+    var syntheticLose = { base_pue: 1.10, growth_pct: 5, growth_scope: 'synthetic test fixture, not disclosed data' };
+    var v1 = roundVerdict(syntheticWin, 1.01);   // achieved <= required -> WON
+    var v2 = roundVerdict(syntheticLose, 1.06);  // winnable, but fell short -> LOST
+    var v3 = roundVerdict(ROUNDS[1], 1.05);      // real 2024 round, any achievable dial value -> LOST (unwinnable)
+
+    var out =
+      'roundVerdict({base_pue:1.10, growth_pct:5}, achievedPue:1.01)\n' +
+      '  requiredPue=' + fmt2(v1.requiredPue) + ' winnableThreshold=' + v1.winnableThresholdPct.toFixed(0) + '%' +
+      ' winnable=' + v1.winnable + ' heldFlat=' + v1.heldFlat + '\n' +
+      '  -> ' + v1.outcome + '\n\n' +
+      'roundVerdict({base_pue:1.10, growth_pct:5}, achievedPue:1.06)\n' +
+      '  requiredPue=' + fmt2(v2.requiredPue) + ' winnableThreshold=' + v2.winnableThresholdPct.toFixed(0) + '%' +
+      ' winnable=' + v2.winnable + ' heldFlat=' + v2.heldFlat + '\n' +
+      '  -> ' + v2.outcome + '\n\n' +
+      'roundVerdict(real 2024 round from data.json, achievedPue:1.05)\n' +
+      '  requiredPue=' + fmt2(v3.requiredPue) + ' winnableThreshold=' + v3.winnableThresholdPct.toFixed(0) + '%' +
+      ' winnable=' + v3.winnable + ' heldFlat=' + v3.heldFlat + '\n' +
+      '  -> ' + v3.outcome;
+
+    $('selftest-output').textContent = out;
+  });
+
+  // ---------------------------------------------------------------
+  // 10. Initial render
+  // ---------------------------------------------------------------
+  renderStage();
+  renderGrowth(0);
+  renderTimer(20);
+  renderConsumptionIndex();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "project": "diminishing-returns",
+  "increment": 1,
+  "assembled": "2026-07-12 (Ensemble session 02; every VERIFIED figure checked first-hand by the conductor against the upstream instrument's committed record)",
+  "tier_note": "VERIFIED = from the research wing's gauntleted instrument 013 'The Floor' (field-research/works/2026-07-09-the-floor/) and its claims ledger; IMAGINED = the game framing, marked. The engine must compute all outcomes from the numbers below at runtime — nothing about winning or losing may be hardcoded.",
+  "verified": {
+    "subject": "Google's data-center fleet, as disclosed in Google's own environmental reports",
+    "floor": 1.0,
+    "floor_meaning": "PUE = total facility energy / IT-equipment energy; IT energy is a subset of total, so the ratio cannot fall below 1.0 (The Green Grid; ISO/IEC 30134-2:2016).",
+    "breakeven_formula": "required_PUE = base_PUE / (1 + growth); base_PUE is the PRIOR year's fleet PUE (per-year base — 1.10 for the 2024 round, 1.09 for the 2025 round)",
+    "winnable_condition": "a round is winnable in principle iff required_PUE >= floor, i.e. growth_pct <= (base_PUE - 1.0) * 100 (10% at base 1.10; 9% at base 1.09)",
+    "rounds": [
+      {
+        "year": 2023,
+        "base_pue": 1.10,
+        "growth_pct": 17,
+        "growth_quote": "compared to 17% growth in the prior year",
+        "growth_scope": "total data center electricity consumption (2025 report's wording, describing 2023)",
+        "achieved_fleet_pue_that_year": 1.10
+      },
+      {
+        "year": 2024,
+        "base_pue": 1.10,
+        "growth_pct": 27,
+        "growth_quote": "our total data center electricity consumption grew by 27% in 2024, compared to 17% growth in the prior year",
+        "growth_scope": "total data center electricity consumption (2025 report, FY2024)",
+        "achieved_fleet_pue_that_year": 1.09
+      },
+      {
+        "year": 2025,
+        "base_pue": 1.09,
+        "growth_pct": 37,
+        "growth_quote": "…our total electricity consumption grew by 37% in 2025, up from 27% in 2024",
+        "growth_scope": "TOTAL electricity consumption (2026 report, FY2025) — a wider wording than the 2025 report's 'data center' framing; quoted exactly as each source states it, not conflated (upstream wording-shift flag carried)",
+        "achieved_fleet_pue_that_year": 1.09
+      }
+    ],
+    "fleet_pue_series": {
+      "2019-2023": 1.10,
+      "2024": 1.09,
+      "2025": 1.09,
+      "note": "2019–2023 all 1.10 (2024 report data table); 2024 = 1.09 ('for the first time in six years... dropped below 1.10 to 1.09', 2025 report); 2025 = 1.09 (2026 report: 'a 2025 average annual PUE of 1.09... 83% less overhead energy than the industry average')."
+    },
+    "sources": [
+      {"id": "google_2024_env_report", "covers": "fleet PUE 2019–2023", "url": "https://www.smartenergydecisions.com/wp-content/uploads/2025/04/google-2024-environmental-report.pdf"},
+      {"id": "google_2025_env_report", "covers": "FY2024: PUE 1.09; growth 27% (and 17% prior year)", "url": "https://www.smartenergydecisions.com/wp-content/uploads/2025/07/google-2025-environmental-report-1.pdf", "official": "https://sustainability.google/reports/google-2025-environmental-report"},
+      {"id": "google_2026_env_report", "covers": "FY2025: PUE 1.09; growth 37%", "url": "https://storage.googleapis.com/gweb-mobius-cdn/sustainability/uploads/7f477eb723fe0c23d03f94b90a08882b9f28187d.pdf", "official": "https://sustainability.google/google-2026-environmental-report"},
+      {"id": "upstream_instrument_013", "covers": "the breakeven arithmetic, the floor, all caveats — fully gauntleted upstream", "url": "https://github.com/frankbueltge/field-research/tree/main/works/2026-07-09-the-floor"}
+    ],
+    "caveats_carried": [
+      "NOT a concealment claim: Google discloses the growth figures openly in the same reports; the critique upstream concerns framing (efficiency foregrounded as counterweight to absolutes), and this game dramatizes that arithmetic — it accuses nobody of hiding numbers.",
+      "Fleet PUE covers Google-owned-and-operated campuses only, not leased/colocation facilities.",
+      "The 27%-vs-37% figures carry a wording shift between the two reports ('data center electricity' vs 'total electricity') — quoted exactly per source, not conflated.",
+      "Per-year base discipline: each round's required PUE divides the PRIOR year's fleet PUE (the upstream seed correction, session 18)."
+    ]
+  },
+  "imagined": {
+    "marked": true,
+    "elements": "The dial-as-opponent, the rounds-as-game, the effort resistance curve, and every word of the game's voice are dramatization — a choice, not a fact about the world. The honesty panel on the work must say so. In particular: 'you cannot win' is NOT a premise of this piece — it is whatever the engine computes from the disclosed numbers above; if a future disclosed year shows growth at or below the winnable threshold, this same engine declares that round winnable."
+  }
+}

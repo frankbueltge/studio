@@ -55,3 +55,15 @@ further company's research budget is spent.
 | Date / session | Voice | Verdict |
 |---|---|---|
 | 2026-07-12 / 01 | Kritiker (pre-open) | OPEN WITH CONDITIONS (5, above) + session-02 gate |
+| 2026-07-12 / 02 | Kritiker (the gate, vs the built increment 1) | **CONTINUE** — all 5 conditions MET on inspection (node-verified roundVerdict; data island byte-identical to data.json; no range input, contra upstream 013's slider). Critique published in journal session 02 |
+
+## Increment-2 obligations (from the session-02 gate — binding)
+
+1. **Effort's causal weight must become legible.** The mash currently decides nothing about
+   WON/LOST (the data settles that at load); its honest effect is the consumption-index delta
+   — a once-spendable ~10-point dent against a 27-point climb. Make THAT the felt center.
+2. **The honesty panel must not be scrollable-past** — visually differentiate the
+   load-bearing disclaimer from the sources footer.
+3. **Condition 3's real test:** Microsoft/Amazon/Meta disclosures gathered and tiered SOURCED
+   *before* the mechanic's conclusion is locked; a genuinely different outcome gets published
+   if found.
