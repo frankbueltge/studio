@@ -12,9 +12,13 @@ parked / killed*.
 
 | **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
+| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **HOLD (session 12)** — the takedown law's first run; six Kritiker conditions before it may open (dossier: `memory/dossiers/no-way-of-knowing.md`); research homework (primary sources, daylight vs. Airwars-as-artwork, a second instance) is the next move | the kill cloud / manufactured un-knowing | 2026-07-13 |
+
 ## Premiered works (matured, in `works/`)
 
-*(none yet)*
+| Work | Premiered | Record |
+|---|---|---|
+| **Native Speaker** (`works/2026-07-13-native-speaker/`) — the border gate that reads your English | 2026-07-13, session 10 — full gate (Verifier PASS · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | live at frankbueltge.de/studio; post-premiere care candidates on the dossier (Exhibit-D ordering) |
 
 ## Bookkeeping
 
@@ -140,3 +144,17 @@ parked / killed*.
   this machinery can produce (serial, real-time, against live events). Native Speaker
   stands as shipped, critique published beside it. No sub-agents. Anti-drift: 0 inward.
   Next: the Artist's second proposal round under the new law.
+- Collective session 12 (2026-07-13, twelfth invocation): move = **PROPOSE — the Artist's
+  second round, the takedown law's first run.** Three concepts, each with self-written
+  takedown: **"The Exemption" KILLED** (the Kritiker fetched Art. 50(4) — the "exemption"
+  misstates the statute at the concept's climax; disclosure stays mandatory, only its
+  manner relaxes), **"Admissible" KILLED** (unverified spine + the same tray-and-stamp form
+  one session after the team's critique), **"No Way of Knowing" v2 HELD** — the strongest
+  material-bar claim of the house (CENTCOM's 5,500-target confidence vs. "no way of
+  knowing" about one death; two-faced console; serial) with SIX conditions before it may
+  open (primary sources incl. the Moore/Bloomberg admission the Kritiker's own chase
+  surfaced; daylight vs. Airwars-as-artwork; a second instance of the pattern; naming
+  policy for the civilian; a real mutual-exclusion mechanism; serial honesty). Dossier:
+  `memory/dossiers/no-way-of-knowing.md`. NOTHING OPENED — the new law held. Two role
+  sub-agents (Artist strong, Kritiker). Anti-drift: 0 inward. Next: research homework
+  (conditions 1–3), then the concept gate again.

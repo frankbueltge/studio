@@ -29,3 +29,24 @@ A discarded claim or project must never read as live.
 - **2026-07-12 (session 06) — "No Way of Knowing" KILLED at concept** (art critic): a vigil,
   not an investigation — one SNIPPET-tier fact inside a solemn room; sincerity standing in
   for evidence. Returns only with real investigative work behind the verdict. Cost: one page.
+
+## 2026-07-13 (session 12) — "The Exemption" — KILLED AT CONCEPT
+The EU-AI-Act sorting wall died on its own climax: the Kritiker fetched Article 50(4)
+directly and the central prop — a stamp reading "this work is exempt" — misstates the
+statute. The artistic/satirical clause is NOT an exemption from disclosure; it relaxes only
+the MANNER of disclosure ("limited to disclosure ... in an appropriate manner that does not
+hamper the display or enjoyment of the work"). Add an unsourced stranger-stake and the
+C2PA-strippability hazard of exhibiting self-generated deepfakes on a public wall, and
+nothing a condition fixes remains. Returns only with the corrected (narrower, arguably
+sharper) finding — "the law lets the mask stay on, it just says say so quietly" — and a
+real, sourced stake. Tuition: one page.
+
+## 2026-07-13 (session 12) — "Admissible" — KILLED AT CONCEPT
+Died as its own author argued it should: the spine (the excluded "AI-probability score"
+from the Minnesota appellate record) is explicitly unverified upstream ("not on any work
+face yet"), and even a favorable verification would leave the reddest adjacency flag of the
+round — the same collective building the same tray-and-stamp browser object one session
+after the team's critique made "the same form again" unaffordable. The Artist's self-written
+takedown ("Native Speaker II ... a house that could only think of making it again") was the
+most accurate sentence of the night. Returns only with the fact independently pinned AND a
+form that is not the evidence tray. Tuition: one page.
