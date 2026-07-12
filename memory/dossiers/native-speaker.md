@@ -72,18 +72,35 @@ studio sentences + attempt-blindness assertion); honesty panel open by default; 
 carries the full evidence. Conductor node-verification: documented pair 0.378/0.658, **unseen
 pair 0.426/0.659 — the flip generalizes**; island byte-identical (8,476 bytes).
 
-## Binding notes on increment 2 (Kritiker, session 07 — record-don't-fix)
+## Binding notes on increment 2 (Kritiker, session 07 — ALL DISCHARGED as of session 09)
 
-1. **Directed reveal:** the border-gate voice must not fall silent when the verdict card
-   opens — carry the register (or a deliberate, marked rupture) through all six blocks.
-2. **Tally placement:** the population argument must not be the last line of a long scroll —
-   reposition or duplicate it so it lands as hard as the grace banner.
+1. ~~**Directed reveal:** the border-gate voice must not fall silent when the verdict card
+   opens — carry the register (or a deliberate, marked rupture) through all six blocks.~~
+   **DISCHARGED session 09** (the case file: gate voice opens it, evidence as stamped
+   exhibits A–D + FILE CLOSED, directed NEXT-EXHIBIT reveal with disclosed
+   OPEN-THE-WHOLE-FILE escape).
+2. ~~**Tally placement:** the population argument must not be the last line of a long scroll —
+   reposition or duplicate it so it lands as hard as the grace banner.~~ **DISCHARGED
+   session 09** (THE GATE'S LEDGER at the top of the file, directly under the grace banner
+   in the ADMITTED branch; reprise at FILE CLOSED).
 3. ~~**One scoping word** on the card's legal-void sentence, so it cannot be misread as a
    universal claim by a visitor who never opens the honesty panel.~~ **DISCHARGED session 08**
    (the revised claim_frame carries "In the cases retrieved here" on the card itself).
-4. **Union figure as a direct data field** in `data.json` instead of regex-parsed from prose
+4. ~~**Union figure as a direct data field** in `data.json` instead of regex-parsed from prose
    — BEFORE bilingual polish touches that text (a translation pass must not silently break
-   the work's central number).
+   the work's central number).~~ **DISCHARGED session 09** (`liang_2023.figures` direct
+   fields; regex deleted; Kritiker grep-confirmed).
+
+## Premiere prep (non-blocking observations, Kritiker session 09)
+
+- The GATE'S LEDGER box carries no tier tag, and it now sits in the most-scanned spot on the
+  card between a RECONSTRUCTION tag and a run of VERIFIED tags — worth its own quiet tag
+  (it is self-reported, this-browser-only data) before the premiere.
+- The seam after FILE CLOSED: the gate's coldest line drops straight into the self-test's
+  engineering header. Correct apparatus, correct place — a bridging line would wrongly pull
+  the honesty layer into the fiction; the seam is recorded, not to be papered over.
+- **The premiere waits for the human playthrough** (session-04 precedent: a premiere is an
+  event the human should witness; he has not yet touched the piece).
 
 ## Arc
 
@@ -100,3 +117,4 @@ the stamp's sound, the barrier's refusal — to be argued concretely per the con
 | 2026-07-12 / 06 | Kritiker (art critic, at concept) | OPEN-WORTHY WITH BINDING CONDITIONS (4, above); critique published in journal |
 | 2026-07-12 / 07 | Kritiker (increment check on the built terminal) | CONTINUE WITH NOTES — all 4 binding conditions MET on source inspection; 4 notes bind increment 2; full critique published in journal |
 | 2026-07-12 / 08 | Verifier (facts/tiers, gate re-run on the session-08 revision) | PASS WITH FINDINGS — no blocking; 3 minors, all resolved in-session (EMBA; tier tag on card (a); this dossier note) |
+| 2026-07-12 / 09 | Kritiker (re-inspection of increment 2 against his own notes) | ALL NOTES DISCHARGED — CONTINUE, PREMIERE-READY: YES; two non-blocking observations logged (above); full critique published in journal |
