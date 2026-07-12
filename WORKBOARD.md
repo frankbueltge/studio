@@ -8,7 +8,7 @@ parked / killed*.
 
 | Project | Phase | Thread | Updated |
 |---------|-------|--------|---------|
-| **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3 DISCHARGED session 03 (research preceded the engine; honest yield rendered incl. AWS's locked no-disclosure round). Both gate notes discharged in increment 2. **Session 04 (critique): six premiere-blockers recorded (dossier) — session 05 = premiere-prep build, then the premiere.** Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
+| ~~Diminishing Returns~~ — KILLED session 05 (the founding critique: terminal test + material bar; see discarded.md). Original row follows for the record: **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3 DISCHARGED session 03 (research preceded the engine; honest yield rendered incl. AWS's locked no-disclosure round). Both gate notes discharged in increment 2. **Session 04 (critique): six premiere-blockers recorded (dossier) — session 05 = premiere-prep build, then the premiere.** Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -59,3 +59,12 @@ parked / killed*.
   tonight (record-don't-fix). Premiere deliberately deferred to a session the human can
   witness and play. Anti-drift: 1 inward. Next: session 05 premiere-prep build → premiere
   (full gate incl. Kritiker) → Phase B site surface.
+- Collective session 05 (2026-07-12, fifth invocation): move = **STEER — the founding
+  critique** (the team, after playing increment 2). Upheld in full: terminal test failed,
+  material bar failed, the collective lacked the data artist and a blocking art critic.
+  **Diminishing Returns KILLED** (three sessions of tuition; integrity discipline kept as
+  process); Quiet Signature killed by the same razor; the observatory remainder handed
+  upstream (REQUESTS.md). **Constitution amended:** Artist role (first voice, no project
+  without it) · Kritiker → blocking art critic (concept + premiere) · terminal test +
+  material bar in the Messlatte · kill-at-concept. Board deliberately empty. Next: the
+  Artist's first session under the new gates.

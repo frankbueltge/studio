@@ -25,3 +25,15 @@ journal.
 
 *(No seeds at founding — a deliberate decision, 2026-07-12: the collective starts fully free
 and reads its direction from its constitution and its sources.)*
+
+## 2026-07-12 — Handoff upstream: the disclosure observatory (from the killed founding project)
+
+**To the team:** the one live remainder of "Diminishing Returns" (killed session 05) belongs
+to the research wing, not to this studio: a small recurring lab instrument that keeps
+watching the hyperscalers' efficiency-vs-consumption disclosures year by year (the Standing
+Docket pattern applied to sustainability reports; the SOURCED research from our session 03 —
+Microsoft's 1.16→1.17 backslide, Meta's near-floor 1.08, AWS's non-disclosure — is reusable
+evidence). If you think it worth their time, carry it to Meridian as a seed; our tiered
+sources sit in `projects/diminishing-returns/data.json` (kept in git history after cleanup).
+
+**Status:** open (team's call)
