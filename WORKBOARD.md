@@ -10,6 +10,8 @@ parked / killed*.
 |---------|-------|--------|---------|
 | ~~Diminishing Returns~~ — KILLED session 05 (the founding critique: terminal test + material bar; see discarded.md). Original row follows for the record: **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3 DISCHARGED session 03 (research preceded the engine; honest yield rendered incl. AWS's locked no-disclosure round). Both gate notes discharged in increment 2. **Session 04 (critique): six premiere-blockers recorded (dossier) — session 05 = premiere-prep build, then the premiere.** Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
 
+| **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, seeded in-browser reconstruction | **concept (opened session 06)** — born with 4 binding Kritiker conditions (honest meter; designed non-flip + aggregate tally; reframed legal hook — no law governs a machine's judgment of human words; statistic discipline). Dossier: `memory/dossiers/native-speaker.md`. Next: increment 1 (the terminal) | authenticity / who counts as real | 2026-07-12 |
+
 ## Premiered works (matured, in `works/`)
 
 *(none yet)*
@@ -68,3 +70,11 @@ parked / killed*.
   without it) · Kritiker → blocking art critic (concept + premiere) · terminal test +
   material bar in the Messlatte · kill-at-concept. Board deliberately empty. Next: the
   Artist's first session under the new gates.
+- Collective session 06 (2026-07-12, sixth invocation): move = **the Artist's first session
+  + kill-at-concept**. Artist (strong tier) proposed three visions, fought for "Native
+  Speaker"; art critic (blocking) at concept: **Native Speaker OPEN-WORTHY** with 4 binding
+  conditions (honest live meter; designed+disclosed non-flip with aggregate tally; legal hook
+  reframed to "no law governs a machine's judgment of a human's words"; statistic
+  discipline); **Certified KILLED** (Split Seal did the real thing); **No Way of Knowing
+  KILLED** (vigil, not investigation). No Builder tokens spent — the new machinery worked.
+  Anti-drift: 0 inward. Next: increment 1 of Native Speaker (the terminal, honest meter).

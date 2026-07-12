@@ -21,3 +21,11 @@ A discarded claim or project must never read as live.
 - **2026-07-12 (session 05) — "The Quiet Signature" (parked since session 01) killed by the
   same critique:** predict-then-reveal on forensic specimens fails the terminal test and the
   material bar identically.
+
+- **2026-07-12 (session 06) — "Certified" KILLED at concept** (art critic): the research
+  wing's Split Seal already did the real dual-infrastructure work; a seal-minting booth
+  restages it as a parlor trick — no named victim, no consequence. Returns only with a real
+  named-harm case and a checked difference from Split Seal's territory. Cost: one page.
+- **2026-07-12 (session 06) — "No Way of Knowing" KILLED at concept** (art critic): a vigil,
+  not an investigation — one SNIPPET-tier fact inside a solemn room; sincerity standing in
+  for evidence. Returns only with real investigative work behind the verdict. Cost: one page.
