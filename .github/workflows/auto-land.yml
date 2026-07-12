@@ -35,8 +35,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "Studio"
-          git config user.email "studio@users.noreply.github.com"
+          git config user.name "Ensemble"
+          git config user.email "ensemble@studio.invalid"
           git fetch origin '+refs/heads/research/*:refs/remotes/origin/research/*' \
                            '+refs/heads/claude/*:refs/remotes/origin/claude/*' || true
           landed=0
