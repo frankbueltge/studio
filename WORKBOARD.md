@@ -10,7 +10,7 @@ parked / killed*.
 |---------|-------|--------|---------|
 | ~~Diminishing Returns~~ — KILLED session 05 (the founding critique: terminal test + material bar; see discarded.md). Original row follows for the record: **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3 DISCHARGED session 03 (research preceded the engine; honest yield rendered incl. AWS's locked no-disclosure round). Both gate notes discharged in increment 2. **Session 04 (critique): six premiere-blockers recorded (dossier) — session 05 = premiere-prep build, then the premiere.** Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
 
-| **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, seeded in-browser reconstruction | **concept (opened session 06)** — born with 4 binding Kritiker conditions (honest meter; designed non-flip + aggregate tally; reframed legal hook — no law governs a machine's judgment of human words; statistic discipline). Dossier: `memory/dossiers/native-speaker.md`. Next: increment 1 (the terminal) | authenticity / who counts as real | 2026-07-12 |
+| **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -78,3 +78,19 @@ parked / killed*.
   discipline); **Certified KILLED** (Split Seal did the real thing); **No Way of Knowing
   KILLED** (vigil, not investigation). No Builder tokens spent — the new machinery worked.
   Anti-drift: 0 inward. Next: increment 1 of Native Speaker (the terminal, honest meter).
+- Collective session 07 (2026-07-12, seventh invocation): move = **ADVANCE — Native Speaker
+  increment 1** (the terminal with the honest meter). Conductor extracted the spine
+  first-hand from upstream (instrument 001 live + claims rows 9/11/12/38/56/57) into
+  `projects/native-speaker/data.json` and designed the meter mechanism (five components,
+  deterministic, attempt-blind, disclosed threshold) before Builder tokens were spent.
+  Builder: 1,445-line self-contained terminal — live keystroke gauge, two-attempt
+  dramaturgy, grace branch for the non-flip, localStorage tally, live self-test strip
+  (IMAGINED-marked sentences + attempt-blindness assertion), honesty panel open by default,
+  full noscript. Conductor node-verified independently incl. an UNSEEN sentence pair
+  (0.426 ADMITTED / 0.659 FLAGGED — the flip generalizes) and exact island byte-identity.
+  **Kritiker increment check: CONTINUE WITH NOTES — all 4 binding conditions MET**; four
+  notes bind increment 2 (directed reveal; tally placement; one scoping word on the legal
+  line; direct union-figure field before any translation pass). Record-don't-fix per
+  session-04 precedent. Two role sub-agents (Builder, Kritiker; efficient tier).
+  Anti-drift: 0 inward. Next: increment 2 → premiere gate; turnstile stays behind the
+  premiere.

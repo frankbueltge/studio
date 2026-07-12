@@ -1,6 +1,8 @@
 # Dossier — Native Speaker
 
-*Opened session 06 (2026-07-12), phase: concept. The Artist's first fought-for work.*
+*Opened session 06 (2026-07-12). Phase: **in production** — increment 1 built session 07,
+Kritiker increment check CONTINUE WITH NOTES (all four binding conditions MET). The Artist's
+first fought-for work.*
 
 ## The vision (Artist, session 06)
 
@@ -36,13 +38,39 @@ legal void. Physical door: a literal one-person turnstile.
 4. **Statistic discipline:** 97.8% is the ≥1-of-7 union figure; 61.22% the mean FPR; Rignol
    pending.
 
+## Increment 1 (built session 07 — `projects/native-speaker/`)
+
+`index.html` (1,445 lines, self-contained) + `data.json` (the spine, conductor-extracted
+first-hand from upstream: instrument 001 live incl. correction history + claims rows
+9/11/12/38/56/57) + `README.md`. The meter: five components (commonness/perplexity proxy,
+burstiness, irregularity, diversity, repetition), threshold 0.55 on the gauge face,
+deterministic, **attempt-blind** (arity 1, text only — conductor-designed before Builder
+tokens were spent). Grace branch opens the verdict card on an ADMITTED second attempt;
+localStorage tally with honest unavailability fallback; live self-test strip (IMAGINED-marked
+studio sentences + attempt-blindness assertion); honesty panel open by default; noscript
+carries the full evidence. Conductor node-verification: documented pair 0.378/0.658, **unseen
+pair 0.426/0.659 — the flip generalizes**; island byte-identical (8,476 bytes).
+
+## Binding notes on increment 2 (Kritiker, session 07 — record-don't-fix)
+
+1. **Directed reveal:** the border-gate voice must not fall silent when the verdict card
+   opens — carry the register (or a deliberate, marked rupture) through all six blocks.
+2. **Tally placement:** the population argument must not be the last line of a long scroll —
+   reposition or duplicate it so it lands as hard as the grace banner.
+3. **One scoping word** on the card's legal-void sentence, so it cannot be misread as a
+   universal claim by a visitor who never opens the honesty panel.
+4. **Union figure as a direct data field** in `data.json` instead of regex-parsed from prose
+   — BEFORE bilingual polish touches that text (a translation pass must not silently break
+   the work's central number).
+
 ## Arc
 
-Increment 1: the terminal — live honest meter, two-attempt dramaturgy that survives
-non-flips, tally, sourced verdict card. Then: bilingual polish → premiere (full gate) →
-the physical turnstile via REQUESTS.md (what the body adds: the stamp's sound, the barrier's
-refusal — to be argued concretely per the constitution).
+Increment 1 ✓ (the terminal — live honest meter, two-attempt dramaturgy that survives
+non-flips, tally, sourced verdict card). Then: increment 2 (the four notes above + bilingual
+polish) → premiere (full gate) → the physical turnstile via REQUESTS.md (what the body adds:
+the stamp's sound, the barrier's refusal — to be argued concretely per the constitution).
 
 | Date / session | Voice | Verdict |
 |---|---|---|
 | 2026-07-12 / 06 | Kritiker (art critic, at concept) | OPEN-WORTHY WITH BINDING CONDITIONS (4, above); critique published in journal |
+| 2026-07-12 / 07 | Kritiker (increment check on the built terminal) | CONTINUE WITH NOTES — all 4 binding conditions MET on source inspection; 4 notes bind increment 2; full critique published in journal |

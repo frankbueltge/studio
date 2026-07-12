@@ -1,0 +1,88 @@
+{
+  "work": "native-speaker",
+  "increment": 1,
+  "extracted": "2026-07-12",
+  "upstream": {
+    "source": "field-research (Meridian): works/2026-07-01-calibration-gap (Instrument 001, Calibration Certificate) + memory/claims.md rows on detector bias, harm cases, and the legal record",
+    "instrument_001_live_status": "SHIPPED and live at extraction time, with its 2026-07-03 correction and re-verification history displayed on the work itself; if upstream revises or discards, this work updates on the same cycle or pauses",
+    "contract": "Live status travels; load-bearing caveats survive re-voicing; corrections flow upstream, never silently sideways"
+  },
+  "verified": {
+    "liang_2023": {
+      "tier": "VERIFIED",
+      "claim": "AI text detectors flag non-native-English-speaker writing as AI-generated at far higher rates than native writing: on 91 TOEFL essays, 89 (97.8%) were flagged by at least one of the seven detectors studied; the average false-positive rate across the seven detectors was 61.22%; 18 of 91 (19.8%) were flagged unanimously; native-speaker control essays were near-zero",
+      "mechanism": "Perplexity-based detection penalizes constrained vocabulary — the careful, limited word choice of a second-language writer reads as machine-like regularity",
+      "source": "Liang, Yuksekgonul, Mao, Wu, Zou — Cell Patterns 2023",
+      "url": "https://arxiv.org/abs/2304.02819",
+      "discipline": [
+        "97.8% is the union statistic (flagged by ≥1 of 7 detectors) — never attribute it to a single detector",
+        "61.22% is the mean FPR across the seven — per-detector rates were not individually retrieved upstream; do not attribute the average to a specific tool",
+        "Population effect, not an individual guarantee: one careful sentence is not guaranteed to be flagged"
+      ]
+    },
+    "yang": {
+      "tier": "VERIFIED",
+      "claim": "Haishan Yang, PhD student, University of Minnesota: expelled over alleged AI use (GPTZero + faculty review); student visa revoked. Expulsion upheld by the Minnesota Court of Appeals, February 2026; his federal lawsuit was dismissed (October 2025). Believed to be the first student expelled from the University of Minnesota over alleged AI use (KARE 11) — an institution-specific claim, not a national superlative",
+      "url": "https://minnlawyer.com/2026/02/13/u-of-m-ai-cheating-expulsion-upheld-appeal"
+    },
+    "rignol": {
+      "tier": "VERIFIED",
+      "claim": "Thierry Rignol, French-born EMBA student, Yale School of Management: one-year suspension and failing grade after a GPTZero flag on a final exam; he submitted scans showing the same tool flagged papers by Yale scholars, including a former university president, as probably AI-generated. Federal lawsuit PENDING (D. Conn. 3:25-cv-00159); injunction denied May 2025",
+      "discipline": "PENDING — never state as decided",
+      "url": "https://yaledailynews.com/articles/som-student-sues-yale-alleges-wrongful-suspension-over-ai-use"
+    },
+    "legal_void": {
+      "tier": "VERIFIED",
+      "claim_frame": "The nearby law governs something else: the EU AI Act's Article 50 obliges PROVIDERS to mark machine OUTPUT as machine-made. No statute reviewed the machine's judgment of these students' own words. The courts that upheld the consequences examined whether the institution followed its own procedures — not whether the detector was right",
+      "upstream_basis": [
+        "Claims ledger row on the harm cases: 'courts found institutions followed their own procedures even where the underlying tool has known false-positive rates'",
+        "Claims ledger row on the England & Wales ombudsman record (searched-and-not-found, scoped): detector output carries no evidentiary presumption of misconduct; the burden of proof stays on the provider; the pure 'detector output alone as dispositive' scenario was never squarely adjudicated in the cases reviewed. This is a procedural-fairness finding from a non-binding ombudsman in one jurisdiction — not a proven universal negative",
+        "The most-cited detection vendor's own statement: 'we provide data for educators to make an informed decision ... Turnitin does not make a determination of misconduct even in the space of text similarity'"
+      ],
+      "discipline": "State as searched-and-scoped, never as a proven universal negative. Do not conflate with, or re-grade, upstream instrument 011's card 001 (live status there: UNSETTLED-but-informed)",
+      "urls": [
+        "https://www.oiahe.org.uk/resources-and-publications/learning-from-our-casework/ai-and-academic-misconduct/casework-note-complaints-relating-to-ai-and-academic-misconduct/",
+        "https://www.turnitin.com/blog/understanding-false-positives-within-our-ai-writing-detection-capabilities"
+      ]
+    },
+    "counter_evidence": {
+      "tier": "VERIFIED",
+      "role": "LOAD-BEARING CAVEAT — survives every re-voicing of this work",
+      "claims": [
+        "A 2026 study in a Czech-language setting found NO systematic bias against non-native speakers; the contemporary detectors studied did not rely on perplexity as a key feature (Al Ali, Helcl, Libovický, EACL 2026). The bias may be perplexity-architecture-specific and/or English-specific, or diminishing in newer models — not resolved",
+        "Turnitin's own research (vendor, on its own tool) reports no statistically significant FPR bias against English-language learners at 300+ words — and Liang et al.'s seven detectors did not include Turnitin. Short documents show a significantly larger false-positive gap",
+        "The documented pattern is real and sourced — and it is documented, not universal"
+      ],
+      "urls": [
+        "https://arxiv.org/abs/2602.05769",
+        "https://www.turnitin.com/blog/new-research-turnitin-s-ai-detector-shows-no-statistically-significant-bias-against-english-language-learners"
+      ]
+    },
+    "short_text": {
+      "tier": "VERIFIED",
+      "claim": "Turnitin's own research: 'too short' documents show a significantly larger false-positive gap; its document-level FPR claim of <1% holds only for documents with 20%+ AI writing",
+      "url": "https://www.turnitin.com/blog/understanding-the-false-positive-rate-for-sentences-of-our-ai-writing-detection-capability"
+    }
+  },
+  "meter": {
+    "tier": "DISCLOSED RECONSTRUCTION",
+    "statement": "The meter on this page is NOT GPTZero, Turnitin, or any commercial detector. It is a deterministic, in-browser reconstruction of the documented mechanism — perplexity-and-burstiness-style scoring — built by this studio so that the mechanism can be experienced and checked. Same input, same verdict, always; the full scoring function and its lexicon are in this page's source; the score breakdown is shown for every sample. Its verdict proves nothing about you. The verified figures above prove the pattern at population scale.",
+    "components": [
+      "COMMONNESS (perplexity proxy): the share of your words drawn from a built-in list of very common English words — constrained, careful vocabulary scores machine-ward, exactly the documented mechanism",
+      "BURSTINESS: variation in sentence and word length — even, careful rhythm scores machine-ward",
+      "IRREGULARITY: contractions, informal tokens, loose punctuation — their absence scores machine-ward",
+      "DIVERSITY: type-token ratio — a narrow working vocabulary scores machine-ward",
+      "REPETITION: repeated word pairs score machine-ward"
+    ],
+    "threshold_disclosed": true,
+    "attempt_blind": "The scoring function receives only the text. It cannot see which attempt it is scoring. A scripted flip would be a lie; this meter cannot tell your first sentence from your second."
+  },
+  "imagined": {
+    "tier": "IMAGINED",
+    "elements": "The border-checkpoint dramaturgy, the gate's voice, the prompts, the stamps, and the self-test sentences are fiction by this studio — marked as such on the work's face. The figures, names, and consequences inside the verdict card are not."
+  },
+  "tally": {
+    "scope": "This terminal only (this browser): counted in local storage, never transmitted. The aggregate argument is carried by the verified population figures, not by this tally.",
+    "non_flip_disclosure": "Your careful sentence may pass. Liang et al. is a population effect, not a per-person guarantee: 89 of 91 flagged means 2 walked through. An ADMITTED second attempt does not acquit the tool — it makes you one of the two."
+  }
+}
