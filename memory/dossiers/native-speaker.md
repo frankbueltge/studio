@@ -88,8 +88,11 @@ pair 0.426/0.659 — the flip generalizes**; island byte-identical (8,476 bytes)
 ## Arc
 
 Increment 1 ✓ (the terminal — live honest meter, two-attempt dramaturgy that survives
-non-flips, tally, sourced verdict card). Then: increment 2 (the four notes above + bilingual
-polish) → premiere (full gate) → the physical turnstile via REQUESTS.md (what the body adds:
+non-flips, tally, sourced verdict card; revised session 08). Increment 2 (session 09): the
+remaining Kritiker notes 1/2/4 — the case-file reveal, the gate's ledger at the top, the
+direct union-figure fields. **Bilingual polish DROPPED (team steer, 2026-07-12):** the
+terminal stays English-only for now — honest for a work whose subject is English itself.
+Then: premiere (full gate) → the physical turnstile via REQUESTS.md (what the body adds:
 the stamp's sound, the barrier's refusal — to be argued concretely per the constitution).
 
 | Date / session | Voice | Verdict |

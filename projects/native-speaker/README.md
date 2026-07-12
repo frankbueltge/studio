@@ -1,10 +1,13 @@
-# Native Speaker — increment 1
+# Native Speaker — increments 1–2
 
 **This is a prototype, not a premiere.** The concept passed the Kritiker's session-06 gate with
 four binding conditions (see `../../memory/dossiers/native-speaker.md`). This build is the
 terminal: a self-contained interactive border-control fiction whose meter is real code, not a
 scripted flip. Revised in session 08 for the team's named-individuals policy and the conductor's
 Minnesota correction (both below); `data.json` is conductor-owned and was applied verbatim.
+Increment 2 (session 09) rebuilt the verdict card as **the case file** — the three remaining
+Kritiker session-07 notes, discharged below — and, per team steer, the terminal stays
+English-only (no bilingual step in the arc).
 
 Open `index.html` directly in a browser — no build step, no server, no external requests. Every
 VERIFIED figure, case, URL and caveat on the page is read at runtime from the
@@ -17,13 +20,47 @@ A fictional "English Verification Gate" that asks a visitor to describe their mo
 once quickly, the way they'd text a friend, and once as if English were a second language
 learned carefully at fifteen. A live meter — the studio's own deterministic, disclosed
 reconstruction of the documented AI-detector mechanism, not a commercial product — scores both
-samples with the same unmodified function. The gate then opens a verdict card that puts the
-visitor's own two scores next to the real research record: a population study where 89 of 91
-non-native essays were flagged by at least one of seven detectors; an institution that logged
-roughly 6,000 misconduct allegations in a year before abandoning its AI detector; a student
-whose suspension after a detector flag is being litigated right now; and the finding that in the
-cases retrieved here, no court reviewed the machine's judgment of a human's words itself. The
-border-checkpoint dramaturgy is fiction. The figures underneath it are not.
+samples with the same unmodified function. The gate then opens **a case file** that puts the
+visitor's own two scores next to the real research record, exhibit by exhibit: a population
+study where 89 of 91 non-native essays were flagged by at least one of seven detectors; an
+institution that logged roughly 6,000 misconduct allegations in a year before abandoning its AI
+detector; a student whose suspension after a detector flag is being litigated right now; and the
+finding that in the cases retrieved here, no court reviewed the machine's judgment of a human's
+words itself. The border-checkpoint dramaturgy is fiction. The figures underneath it are not.
+
+## Increment 2 — the case file (session 09)
+
+The Kritiker's session-07 notes land here (note 3 was already discharged in session 08):
+
+1. **Note 1 — the directed reveal.** The evidence enters as exhibits, one at a time, in the
+   gate's own register: after the second stamp the gate voice opens the file ("PROCESSING
+   COMPLETE. YOUR CASE FILE FOLLOWS."), then EXHIBIT A — POPULATION RECORD, EXHIBIT B —
+   PRECEDENT, EXHIBIT C — APPLICABLE LAW: NONE FOUND, EXHIBIT D — WHAT THIS FILE MUST ALSO
+   CARRY, and FILE CLOSED (a last gate line: "THE GATE DOES NOT APOLOGIZE. IT RECORDS. NEXT."),
+   each revealed by a keyboard-accessible "NEXT EXHIBIT →" button (the last click reads "CLOSE
+   THE FILE →"). Focus moves to each newly revealed exhibit; the stamp-in is a restrained
+   ~200ms opacity/transform transition that no-ops under `prefers-reduced-motion`. **The
+   disclosed escape:** an "OPEN THE WHOLE FILE" control at the top of the card reveals every
+   exhibit at once — pacing never hides evidence — and the noscript block continues to carry
+   the full record as plain text. Every gate-voice line is IMAGINED (covered by the legend);
+   every exhibit header carries its [VERIFIED] tag; the subject-record block keeps its
+   [RECONSTRUCTION] tag.
+2. **Note 2 — the ledger at the top of the file.** The tally is now THE GATE'S LEDGER, placed
+   load-bearing at the top: immediately after the subject-record block, before any exhibit. In
+   the non-flip (ADMITTED) branch the grace banner stays first and the ledger moves directly
+   under it, so the individual grace and the aggregate argument land in the same breath. Its
+   localStorage disclosure line stays underneath, with a pointer to the honesty panel; a short
+   reprise ("ENTERED IN THE LEDGER: N presented; M flagged.") sits in the FILE CLOSED block to
+   carry the exit line.
+3. **Note 4 — figures from fields, never parsed from prose.** `data.json`'s
+   `verified.liang_2023` now carries a `figures` object (essays 91, flagged 89, union 97.8%,
+   mean FPR 61.22%, unanimous 18 / 19.8%). Exhibit A renders its headline ("89 of 91 (97.8%)")
+   and a secondary figures line directly from those fields; the regex that previously parsed
+   the union figure out of `liang.claim` is deleted. A wording change in the prose claim can no
+   longer silently break the central figure.
+
+(Note 3 — the scoping word on the legal claim — was discharged in session 08; the scoped
+`legal_void.claim_frame` renders verbatim as Exhibit C.)
 
 ## Naming policy (team steer, 2026-07-12)
 
@@ -52,18 +89,18 @@ panel, and this README follows the same rule: case captions appear only in citat
   the two self-test sentences. Marked as fiction on the work's face (tier legend on the gate
   screen, and again in the honesty panel).
 
-## The two cases on the verdict card — and the one deliberately not on it
+## The two cases in the case file (Exhibit B) — and the one deliberately not in it
 
 - **The scale case (VERIFIED):** Australian Catholic University, 2024 — roughly 6,000
   academic-misconduct allegations (around 90% AI-related); about 25% dismissed; a Deputy
   Vice-Chancellor called the figures "substantially overstated"; the university abandoned
-  Turnitin AI detection in March 2025. Rendered first on the card, before the individual case.
+  Turnitin AI detection in March 2025. Rendered first in Exhibit B, before the individual case.
 - **The detector case (VERIFIED, strictly PENDING):** an EMBA student at Yale School of
   Management, a French national writing in his second language — one-year suspension and a
   failing grade after a GPTZero flag; his federal lawsuit is pending (D. Conn. 3:25-cv-00159),
   injunction denied May 2025. The amber discipline note ("PENDING — never state as decided")
   sits on the card itself. Citation: Rignol v. Yale (pending), Yale Daily News.
-- **The boundary case (VERIFIED — deliberately NOT on the verdict card):** the most widely
+- **The boundary case (VERIFIED — deliberately NOT in the case file's exhibits):** the most widely
   reported consequence case — a PhD student expelled from the University of Minnesota, visa
   revoked, expulsion upheld on appeal in February 2026 — is *not* presented as detector harm,
   because the Minnesota Court of Appeals noted the disciplinary panel did not rely on
@@ -85,18 +122,19 @@ panel, and this README follows the same rule: case captions appear only in citat
 - **Mean, not per-tool:** 61.22% is the *average* false-positive rate across the seven detectors
   studied; it is never attributed to a named tool.
 - **Population effect, not a per-visitor guarantee — the non-flip is designed in:** if a
-  visitor's careful second attempt comes back ADMITTED, the verdict card opens with the grace
+  visitor's careful second attempt comes back ADMITTED, the case file opens with the grace
   copy from `data.json`'s `tally.non_flip_disclosure` ("89 of 91 flagged means 2 walked
-  through... it makes you one of the two") — the dramaturgy has no dead end and no disappointment
-  framing in that branch. Verified live in this build (see below).
-- **The Yale case: always pending, never decided.** The verdict card carries the discipline
+  through... it makes you one of the two"), with the gate's ledger directly beneath it — the
+  dramaturgy has no dead end and no disappointment framing in that branch. Verified live in
+  this build (see below).
+- **The Yale case: always pending, never decided.** Exhibit B carries the discipline
   string verbatim, on its face.
 - **The Minnesota correction:** see "the boundary case" above — that consequence may not be
   presented as detector harm, and this work does not.
 - **Counter-evidence is load-bearing, not a footnote:** a 2026 Czech-language study found no bias
   (its detectors don't key on perplexity), and Turnitin's own research reports no significant
   bias against English-language learners at 300+ words — and Turnitin was not one of Liang's
-  seven detectors. The verdict card gives this one line plus a pointer to the honesty panel,
+  seven detectors. Exhibit D gives this one line plus a pointer to the honesty panel,
   which carries all three counter-evidence claims and both sources in full. "Documented, not
   universal."
 - **Short-text gap:** texts under the meter's 8-word floor show `INSUFFICIENT SAMPLE` with the
@@ -115,11 +153,12 @@ panel, and this README follows the same rule: case captions appear only in citat
    markers — re-verified after the edit.
 2. **The non-flip is designed and disclosed.** See "Load-bearing caveats" above. Verified live in
    a full Playwright run: attempt 2 scored deliberately below threshold, and the grace banner
-   opened the verdict card with the exact `tally.non_flip_disclosure` text before anything else
-   rendered. The running tally (`localStorage['native-speaker-tally']`) carries the aggregate
+   opened the case file with the exact `tally.non_flip_disclosure` text before anything else
+   rendered — since increment 2, with the gate's ledger placed directly beneath it. The running
+   tally (`localStorage['native-speaker-tally']`) carries the aggregate
    argument, with the honesty panel stating its scope is "this terminal only... never
    transmitted."
-3. **The legal hook, reframed — and now scoped on the card.** The verdict card and honesty panel
+3. **The legal hook, reframed — and now scoped on the card.** Exhibit C and the honesty panel
    render the revised `verified.legal_void.claim_frame` verbatim: Article 50 governs *providers
    marking machine output*; "in the cases retrieved here, no court reviewed the machine's
    judgment of a human's words itself — where consequences were challenged, review ran on whether
@@ -128,8 +167,10 @@ panel, and this README follows the same rule: case captions appear only in citat
    discharges the Kritiker's increment-2 note 3 (a scoping word on the card) early, in
    increment 1.
 4. **Statistic discipline.** 97.8% is rendered as the union figure with its own explanatory
-   sub-line; 61.22% is only ever described as the seven-detector mean; the Yale case is rendered
-   PENDING everywhere it appears (the card's discipline note and the island's single
+   sub-line — since increment 2, straight from `figures` fields, never parsed from prose;
+   61.22% is only ever described as the seven-detector mean (Exhibit A's secondary line labels
+   it "mean false-positive rate across the seven"); the Yale case is rendered
+   PENDING everywhere it appears (the exhibit's discipline note and the island's single
    `discipline` string, so there is only one place this could drift).
 
 ## The meter mechanism
@@ -190,12 +231,13 @@ strip prints `SELF-TEST FAILED` honestly rather than faking a pass.
 ## Tally disclosure
 
 `localStorage['native-speaker-tally'] = { tried, flagged }`, incremented once per attempt-2
-submission (`tried` always, `flagged` only on a FLAGGED verdict). Rendered as "AT THIS TERMINAL: N
-presented a careful sample; M were flagged as machine," with `data.json`'s `tally.scope` line
-directly underneath: this-terminal-only, local, never transmitted — the aggregate argument is
-carried by the VERIFIED population figures, not by this counter. If `localStorage` throws
-(private browsing, storage disabled), the tally line reads "Tally unavailable on this device"
-instead of crashing or silently showing zero.
+submission (`tried` always, `flagged` only on a FLAGGED verdict). Rendered as THE GATE'S LEDGER
+at the top of the case file — "N presented a careful sample; M were flagged as machine." — with
+`data.json`'s `tally.scope` line directly underneath and a pointer to the honesty panel, plus a
+short reprise in the FILE CLOSED block: this-terminal-only, local, never transmitted — the
+aggregate argument is carried by the VERIFIED population figures, not by this counter. If
+`localStorage` throws (private browsing, storage disabled), the ledger reads "Ledger unavailable
+on this device" instead of crashing or silently showing zero.
 
 ## Upstream sources
 
@@ -278,10 +320,61 @@ instead of crashing or silently showing zero.
 7. **File size.** `index.html`: 1,506 lines, 74,555 bytes (74.6 kB). No external requests of any
    kind.
 
+## Verification run (2026-07-12, session-09 increment 2)
+
+1. **Data-island byte-identity** against the session-09 `data.json` (with the new `figures`
+   object): `island length: 10805, data.json length: 10805 — MATCH`.
+
+2. **Engine untouched + `node` test** after the case-file rebuild — scores unchanged:
+
+   ```
+   CASUAL       → score 0.378  verdict ADMITTED
+   CAREFUL      → score 0.658  verdict FLAGGED
+   THRESHOLD    = 0.55
+   determinism  PASS (same input → identical JSON)
+   arity        PASS (scoreText.length === 1)
+   ALL CHECKS PASSED (full suite as in the session-08 run)
+   ```
+
+3. **The regex is gone.** No `.match(` remains outside the engine's own tokenizers (word/sentence
+   tokenizing and contraction detection); `unionMatch` no longer exists in the file. The figures
+   render from fields — the live render line:
+   `$("liang-figure-line").textContent = figs.flagged_by_at_least_one_of_seven + " of " + figs.essays + " (" + figs.union_pct + "%)"` —
+   confirmed in-browser as "89 of 91 (97.8%)", with the secondary line "mean false-positive rate
+   across the seven: 61.22% · flagged unanimously: 18 of 91 (19.8%)".
+
+4. **Name grep still clean:** hits only in the two noscript `<a>` citation labels and the two
+   island `caption` strings; README hits in citation lines only.
+
+5. **`html.parser`:** no unclosed or mismatched tags.
+
+6. **Live browser run (Playwright, headless), both branches.**
+   - FLAGGED branch: card opens with gate voice + OPEN THE WHOLE FILE control + subject record +
+     ledger (grace banner hidden, ledger confirmed in DOM directly after the subject record);
+     five NEXT clicks revealed A → B → C → D → FILE CLOSED in order, focus landing on each new
+     exhibit (`document.activeElement` = the exhibit, every step); the button relabeled to
+     "CLOSE THE FILE →" before the last step and both controls hid after it; the reprise and
+     the closing gate line rendered.
+   - Grace branch (attempt 2 forced ADMITTED at 0.451): grace banner first, ledger confirmed in
+     DOM directly after the banner and before the subject record; ledger values accumulated
+     correctly from localStorage ("2 presented a careful sample; 1 were flagged as machine.").
+   - Keyboard: tabbed to NEXT EXHIBIT (nudge → OPEN THE WHOLE FILE → ledger link → NEXT
+     EXHIBIT), activated with Enter, focus landed on the revealed exhibit.
+   - OPEN THE WHOLE FILE: all five sections revealed at once, focus moved to the first
+     previously-unrevealed exhibit, both controls hidden.
+   - No `undefined`/`null` text anywhere; zero real console errors across all runs (only the
+     dev server's favicon 404); no horizontal overflow at 360px through the entire flow
+     including the fully opened case file.
+
+7. **File size.** `index.html`: 1,647 lines, 81,521 bytes (81.5 kB). No external requests of any
+   kind.
+
 ## Increment status
 
-Increment 1 of the arc: **terminal** (this build, revised session 08) → bilingual polish →
-premiere (the full gate, Kritiker gate re-run) → the physical turnstile, proposed through
-`REQUESTS.md` per the studio's physical-realisation channel — a literal one-person barrier is
-explicitly not in scope here and would need its own concrete torque/resistance/stop account, not
-a paragraph bolted onto this README.
+Increment 2 of the arc: **terminal** (increment 1, revised session 08) → **the case file**
+(increment 2, this build — the directed reveal, the gate's ledger at the top, figures from
+fields) → premiere (the full gate, Kritiker gate re-run) → the physical turnstile, proposed
+through `REQUESTS.md` per the studio's physical-realisation channel. Per team steer (session
+09), the terminal stays English-only — there is no bilingual step in the arc. A literal
+one-person barrier is explicitly not in scope here and would need its own concrete
+torque/resistance/stop account, not a paragraph bolted onto this README.

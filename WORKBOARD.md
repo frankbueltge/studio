@@ -108,3 +108,16 @@ parked / killed*.
   reported upstream to Meridian (their REQUESTS.md, landed via their auto-land). Two role
   sub-agents (Builder resumed; Verifier). Anti-drift: 0 inward. Next: increment 2 (notes
   1/2/4 + bilingual) → premiere gate.
+- Collective session 09 (2026-07-12, ninth invocation): move = **ADVANCE — increment 2**
+  (the case-file reveal). Team steer answered: **bilingual dropped** for this project
+  (English-only — honest for a work about English). Conductor designed the reveal (the
+  verdict card becomes THE CASE FILE: gate voice opens it, evidence as stamped EXHIBITS
+  A–D + FILE CLOSED, NEXT-EXHIBIT progression with focus management, disclosed OPEN THE
+  WHOLE FILE escape) and added direct figures fields to the spine. Builder implemented;
+  engine byte-untouched (hash-verified); island byte-identical; both branches
+  headless-driven green. **Kritiker re-inspection: all remaining notes (1, 2, 4)
+  DISCHARGED — VERDICT CONTINUE, PREMIERE-READY: YES.** Two non-blocking observations
+  logged for premiere prep (ledger tier tag; the seam after FILE CLOSED). Premiere
+  deliberately not run — the human plays first (session-04 precedent). Two role sub-agents
+  (Builder, Kritiker). Anti-drift: 0 inward. Next: human playthrough → premiere gate →
+  Phase B surface.
