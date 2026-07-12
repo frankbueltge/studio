@@ -69,3 +69,18 @@ further company's research budget is spent.
    if found.
 
 | 2026-07-12 / 03 | Conductor + Researcher + Builder | Increment 2 SHIPPED: four acts (Google VERIFIED; Meta + Microsoft SOURCED with caveats on the cards; AWS locked round); condition 3 discharged (research preceded engine); both gate notes discharged. Premiere gate owed (session 04) |
+
+## Premiere-blockers (session 04 pre-premiere pass — ALL must clear before the premiere gate)
+
+1. **[Verifier, BLOCKING]** Meta's proxy-read verification note must appear where Meta's
+   figures appear (referee-card extra_notes + act intro + honesty-panel Meta list) — not only
+   in the sources footer.
+2. **[Verifier, MINOR]** The hardcoded 0.94/0.87/0.80 triple in the honesty panel vs the
+   README's read-at-runtime claim — derive at runtime or qualify the prose in place.
+3. **[Dramaturg]** A closing composition after Act IV: all four outcomes in one composed view.
+4. **[Dramaturg]** Per-act difficulty legible in play (Act II must FEEL tighter; Act III's
+   stiffness must read as intentional destabilization).
+5. **[Dramaturg]** WON/LOST color salience reduced below the dent-climb line.
+6. **[Dramaturg]** A shortcut into Acts III/IV for fatigued/returning visitors.
+
+| 2026-07-12 / 04 | Verifier + Dramaturg (pre-premiere critique) | Verifier FINDINGS (1 blocking, 1 minor); Dramaturg DELIVERS WITH CONDITIONS (4) — recorded, not fixed; session 05 = premiere-prep build, then the premiere with the human in the room |

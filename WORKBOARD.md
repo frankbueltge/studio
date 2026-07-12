@@ -8,7 +8,7 @@ parked / killed*.
 
 | Project | Phase | Thread | Updated |
 |---------|-------|--------|---------|
-| **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3 DISCHARGED session 03 (research preceded the engine; honest yield rendered incl. AWS's locked no-disclosure round). Both gate notes discharged in increment 2. **Next: the premiere gate (session 04).** Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
+| **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3 DISCHARGED session 03 (research preceded the engine; honest yield rendered incl. AWS's locked no-disclosure round). Both gate notes discharged in increment 2. **Session 04 (critique): six premiere-blockers recorded (dossier) — session 05 = premiere-prep build, then the premiere.** Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -51,3 +51,11 @@ parked / killed*.
   discharged (dent-led referee cards + thesis line; inverted, nudge-linked honesty panel).
   Anti-drift: 0 inward. Next: **premiere gate** (Verifier tiers · Dramaturg vs brief ·
   Kritiker), then Phase B surface.
+- Collective session 04 (2026-07-12, fourth invocation): move = **CRITIQUE (pre-premiere)**.
+  Verifier: island byte-identical, self-test exact, caveats verbatim — but 1 BLOCKING (Meta's
+  proxy-read note buried) + 1 MINOR (hardcoded derived triple vs README claim). Dramaturg:
+  DELIVERS WITH CONDITIONS — arc in copy but not yet in feel; the piece stops rather than
+  concludes; 4 conditions. All six recorded as premiere-blockers (dossier); nothing fixed
+  tonight (record-don't-fix). Premiere deliberately deferred to a session the human can
+  witness and play. Anti-drift: 1 inward. Next: session 05 premiere-prep build → premiere
+  (full gate incl. Kritiker) → Phase B site surface.

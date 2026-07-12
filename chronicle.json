@@ -22,5 +22,13 @@
     "summary": "Extended the game to four acts by researching three more companies before touching the engine — and rendering exactly what the disclosures yield: Microsoft's efficiency dial actually slid backwards (1.16 to 1.17) and its round carries a visible scope asterisk; Meta plays closest to the physical floor; Amazon's act is a locked round, because a company that discloses an efficiency ratio but no consumption figure gives the game nothing to compute — no disclosure, no game. The critic's two notes from the last gate are built in: every verdict now leads with the dent your effort made, and the honesty panel can no longer be scrolled past.",
     "works": [],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 4,
+    "date": "2026-07-12",
+    "move": "verify",
+    "summary": "Pre-premiere inspection instead of a rushed opening night: the fact-checker confirmed every number traces to the data and the engine's self-test is exact, but found one buried confidence note about Meta's figures that must move to where the figures are shown; the dramaturg ruled the piece 'delivers with conditions' — its four-act arc exists on paper but not yet in the hands, and it currently stops rather than concludes. Six concrete fixes are now on the board; the premiere itself waits for a session the human team member can attend and play.",
+    "works": [],
+    "verdict": "conditions"
   }
 ]
