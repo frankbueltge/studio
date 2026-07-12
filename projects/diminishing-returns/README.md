@@ -1,99 +1,139 @@
-# Diminishing Returns — increment 1
+# Diminishing Returns — increment 2
 
-**This is a prototype, not a premiere.** It is the Google-only build the Kritiker's session-02
-gate is judged against (see `../../memory/dossiers/diminishing-returns.md`). If it fails the
-gate, the project dies here, before any further company's research budget is spent.
+**This is a prototype, not a premiere.** Increment 1 (Google-only) passed the Kritiker's
+session-02 gate (see `../../memory/dossiers/diminishing-returns.md`, "Verdicts"). This build
+discharges the gate's three increment-2 obligations and extends the same unmodified engine to
+three more companies' disclosures, gathered SOURCED per Kritiker condition 3.
 
-Open `index.html` directly in a browser — no build step, no server, no external requests.
-Every figure on the page is read at runtime from the `<script type="application/json"
-id="data-island">` island, which is `data.json`'s content embedded verbatim (untouched, per the
-brief — nothing in that file was edited).
+Open `index.html` directly in a browser (or serve the folder statically) — no build step, no
+external requests. Every figure on the page is read at runtime from the `<script
+type="application/json" id="data-island">` island, which is `data.json`'s content embedded
+verbatim — nothing in `data.json` was edited for this increment (it arrived already extended
+with `sourced_companies`, conductor-owned).
 
-## Tier table
+## The four acts
 
-| Tier | What it covers here | Where it's tagged on the page |
-|---|---|---|
-| **VERIFIED** | The three Google environmental-report figures (PUE floor, per-year growth, breakeven arithmetic), the four carried caveats, and the "actual" trajectory in the consumption index — all traced to `data.json`, which itself traces to upstream instrument 013 "The Floor" (fully gauntleted, `field-research/works/2026-07-09-the-floor/`). | Honesty panel, referee card, sources footer — `.tag-verified` chips |
-| **SOURCED** | Not present in increment 1. Microsoft/Amazon/Meta disclosures are deferred to increment 2+ (Kritiker condition 3) — the mechanic's conclusion stays unlocked until that research lands. | — |
-| **IMAGINED** | The dial-as-opponent framing, the rounds-as-game structure, the effort resistance curve, every word of the game's narrative voice, and the two synthetic test fixtures in the self-test section. | Mechanism note, honesty panel, self-test footnote — `.tag-imagined` chips |
+| Act | Company | Rounds | Tier | Note |
+|---|---|---|---|---|
+| **I** | Google | 3 (2023, 2024, 2025) | VERIFIED | Carried unchanged from increment 1. |
+| **II** | Meta | 2 (2023, 2024) | SOURCED | Runs closest to the floor of all four: winnability threshold 8% growth, total remaining headroom 7.4% — once. |
+| **III** | Microsoft | 1 (FY2024) | SOURCED | Scope-mismatch and base-PUE-approximation asterisks sit on the referee card itself. PUE disclosed as WORSENING FY24→FY25 (1.16→1.17). |
+| **IV** | Amazon / AWS | 0 — locked | LOCKED | Cannot be played: an efficiency ratio (1.14 as reported 2025) with no consumption figure means `required_PUE = base/(1+growth)` has no growth to divide by. Rendered with the same sober dignity as the playable acts — a finding, not an error. |
 
-## Conditions map — where each of the five binding conditions is met
+Acts play in sequence by default. `enterAct(idx)` (the act lifecycle function) unlocks the next
+act's nav button (`#act-nav`, built by `renderActNav()`) once its predecessor is reached
+(`state.highestActReached`); reaching Act IV for the first time sets `state.allUnlocked = true`,
+after which every act tab is freely clickable — "selectable after first playthrough," per the
+brief.
 
-1. **Mechanically distinct in kind from instrument 013's slider.** The dial has no `<input
-   type="range">` and no way to set a value directly. `addEffort(dial, amount)` and
-   `thresholdForStep(stepIndex)` (top of the main `<script>`) implement a resistance curve where
-   crossing the *n*-th hundredth toward the floor costs `BASE_EFFORT * 2^(n-1)` units of
-   effort — literally double the previous hundredth. Effort only accrues from discrete input
-   events (a spacebar `keydown` with `e.repeat` filtered out, or a debounced `pointerdown` on the
-   `PRESS` button) — holding a key down does nothing, unlike a slider's continuous drag. The
-   in-page "mechanism note" under the round title names this contrast explicitly.
-2. **"You cannot win" computed live, never hardcoded.** The pure function `roundVerdict(round,
-   achievedPue)` (first function in the script, ~15 lines) derives `requiredPue`,
-   `winnableThresholdPct`, `winnable`, and `heldFlat` from its two arguments alone, with a
-   genuine `WON` branch that fires whenever `winnable && heldFlat`. **The exact place a hostile
-   reader checks this:** the "Verify the engine" section (`#engine-selftest`), always visible,
-   no game-completion required — its button calls the same unmodified `roundVerdict()` on a
-   synthetic low-growth round (5%, base 1.10) and prints `WON` live in the page, then a second
-   call showing `LOST` when the dial falls short but the round was still winnable. The three
-   real rounds never take that branch only because every disclosed year's required PUE is
-   already below 1.00 — a fact about the data, not the code.
-3. **Three-company research deferred, not skipped.** No Microsoft/Amazon/Meta figures appear
-   anywhere in this build; the tier table above states this plainly, and the dossier's arc
-   (session 03+) commits to gathering them SOURCED before any conclusion is locked.
-4. **No physical-door proposal here** — increment 1 is screen-only by design; the dossier holds
-   the physical-realisation step for session 03+ via `REQUESTS.md`, once a concrete torque/stop
-   account exists (out of scope for this gate).
-5. **Honesty panel visible without interaction.** `#honesty-panel` and `#engine-selftest` render
-   unconditionally on page load, before any round is played — no click, no completed game
-   required. The panel states outright that "you cannot win" is the engine's live output, not a
-   premise, names every IMAGINED element (dial-as-opponent, rounds, voice, the self-test
-   fixtures), quotes the three VERIFIED reports, and lists the four caveats verbatim from
-   `data.json`. The `<noscript>` block duplicates this same panel's text as static markup so the
-   page stays honest with JavaScript disabled (the interactive dial itself cannot run without
-   JS, and the `<noscript>` says so).
+## Tier table — every figure, its tier, its caveat
 
-## Validation run (against the brief's own check numbers)
+| Company | Figure | Tier | Caveat |
+|---|---|---|---|
+| Google | fleet PUE, breakeven arithmetic, floor 1.0 | VERIFIED | Four caveats carried from `data.json.verified.caveats_carried` — not a concealment claim; owned-and-operated campuses only; 27%-vs-37% wording shift; per-year base discipline. |
+| Meta | PUE 1.08 flat, dc electricity growth (+34.1%, +20.6%) | SOURCED | `data.json.sourced_companies.meta.caveats`: PUE scope UNCONFIRMED against the owned+leased electricity figure; "data centers total" combines owned+leased; closest to the floor (threshold 8%, headroom 7.4%, once). |
+| Microsoft | global PUE (FY24 1.16, FY25 1.17), org electricity growth (+26.6%) | SOURCED | `data.json.sourced_companies.microsoft.caveats` + `pue_direction_note`: SCOPE MISMATCH (datacenter-only PUE vs org-wide electricity); base-PUE approximation (FY23 PUE undisclosed, FY24's own 1.16 used); fiscal not calendar years; PUE disclosed as worsening FY24→FY25. |
+| Amazon/AWS | PUE as reported (2024: 1.15, 2025: 1.14) | LOCKED | `data.json.sourced_companies.aws`: report-year ambiguity (`pue_ambiguity`); no consumption disclosure found at the primary source (`consumption_disclosure`); `no_round` — the absence itself is the finding. |
+
+## Obligation (a) — effort's causal weight is the felt center
+
+- **Discharged on every referee card** via `#ref-dent-climb`, rendered first in
+  `renderRefereeCard()` — before the base/growth/achieved/required rows and before the WON/LOST
+  outcome. Computed in `endRound()`: `dent = indexNoEffort − newIndexYourRun` (the index-point gap
+  your effort actually carved out of a hypothetical zero-effort baseline this round) and
+  `climb = indexNoEffort − prevIndex` (the growth-only increase, holding PUE at base). Verified
+  live: Google 2023 (base 1.10, growth 17%, dial mashed to the floor) prints "−10.6 points… +17.0
+  points"; a round with zero presses prints "−0.0 points" — the formula degrades correctly to no
+  effect when no effort is spent.
+- **The end-of-act primary visual** is the existing three-trajectory bar chart in
+  `#consumption-index` (your run / perfect play / as reported), now paired with a fixed thesis
+  line (`.thesis-line`, always visible, not act-specific): *"The dent is the metric's whole
+  remaining lifetime headroom — it spends once and does not repeat. The climb repeats every
+  year."* The per-round caption (`renderConsumptionIndex()`) also states the dent and climb in
+  words, not just as bars.
+- Each act's consumption index resets to 100 independently (`newActRuntime()`) — four different
+  companies' own baselines, not one combined economy.
+
+## Obligation (b) — the honesty panel is load-bearing
+
+- **A fixed, always-visible notice** (`#honesty-nudge`, `position: fixed; top: 0`) reads "This game
+  computes; it does not assert — honesty panel below ↓" and anchor-links to `#honesty-panel`
+  (`scroll-margin-top` set so the jump lands cleanly). Styled with a heavy ink background, paper
+  text, and a solid danger-colored bottom border — a flat color block, deliberately not a
+  gradient.
+- **`#honesty-panel` itself is fully inverted** (`background: var(--ink); color: var(--paper);
+  border: 4px solid var(--ink)`), unmistakably distinct from the plain, light-bordered
+  `#sources-footer` and `#engine-selftest` directly below it, which are left deliberately
+  un-inverted for contrast.
+- **Content extended, not just restyled:** a new `<dl id="tier-legend-detail">` explains
+  VERIFIED / SOURCED / LOCKED / IMAGINED in plain language; three new blocks
+  (`#meta-caveats-list`, `#microsoft-caveats-list`, `#aws-caveats-list`) render each company's
+  caveats verbatim from `data.json`, built by `renderStaticSourced()`.
+
+## The winnability line and the pure function
+
+Every referee card, every act, computes and shows its own line: *"This round would be winnable if
+growth ≤ (base−1.0)×100 = X% — disclosed growth: Y%."* This comes from the same
+`roundVerdict(round, achievedPue)` used in increment 1, **unchanged** — it only ever reads
+`round.base_pue` and `round.growth_pct`, so it works identically for Google, Meta and Microsoft
+rounds without modification. Per-company data is normalized into that shape by
+`normalizeGoogleRound()` / `normalizeMetaRound()` / `normalizeMicrosoftRound()`; only the
+normalization differs, never the verdict logic or the dial engine (`makeDial()`,
+`addEffort()`, `thresholdForStep()`, `currentPue()` — all byte-identical to increment 1).
+
+The self-test (`#engine-selftest`, `$('selftest-btn')`) now runs four cases through
+`roundVerdict()`: the two increment-1 synthetic fixtures (WON, LOST) plus two real rounds pulled
+straight from the data island — Meta 2024 and Microsoft FY2024 — both correctly returning LOST.
+
+## Validation run
+
+Extracted `roundVerdict()` verbatim from the shipped `index.html` and ran it under Node:
 
 ```
-2023  required=0.94  threshold=10%  winnable=false  -> LOST (unwinnable)
-2024  required=0.87  threshold=10%  winnable=false  -> LOST (unwinnable)
-2025  required=0.80  threshold=9%   winnable=false  -> LOST (unwinnable)
-synthetic {base 1.10, growth 5%}, achieved 1.01  -> WON   (winnable=true, heldFlat=true)
-synthetic {base 1.10, growth 5%}, achieved 1.06  -> LOST  (winnable=true, heldFlat=false)
+Google  [1.10, 17%] -> required=0.94  threshold=10.0%  winnable=false
+Google  [1.10, 27%] -> required=0.87  threshold=10.0%  winnable=false
+Google  [1.09, 37%] -> required=0.80  threshold=9.0%   winnable=false
+
+Meta 2024:       required=0.896  threshold=8.0   winnable=false -> LOST (structurally unwinnable)
+Microsoft FY2024: required=0.916  threshold=16.0  winnable=false -> LOST (structurally unwinnable)
 ```
-Reproduced with `node` against the extracted `roundVerdict()` logic before shipping; matches the
-brief's 0.94/0.87/0.80 and 10/10/9% exactly.
 
-## Tuning choices
+Matches the brief's own check numbers exactly (Meta 0.896/8.0/LOST; Microsoft 0.916/16.0/LOST) and
+reproduces increment 1's Google numbers unchanged. Also driven end-to-end in a real browser
+(Playwright, headless): played all three Google rounds (one to the floor, two at zero effort),
+Meta's two rounds, Microsoft's one round — confirming the dent/climb line, the tier tag, and the
+Microsoft/Meta extra-notes lists all render on the referee card as required — then confirmed the
+Act IV locked card's text, the act-nav auto-unlocking after reaching Act IV, and the in-page
+self-test output byte-matches the Node run above.
 
-- **Resistance curve, `BASE_EFFORT = 0.35`, cost doubling per hundredth:** cumulative effort to
-  cross hundredth *n* is `0.35 * (2^n − 1)`. Reaching PUE 1.02 (8 hundredths from a 1.10 base)
-  costs ≈89 input events; 1.01 (9 hundredths) ≈179; the true floor 1.00 for a 1.10-base round (10
-  hundredths) ≈358. At a genuinely committed mashing rate (roughly 5–9 presses/second sustained
-  over the 20-second round, both hands/input methods combined), 1.02 is comfortably reachable,
-  1.01 asks for real effort, and the floor is the "asymptotically brutal but reachable" edge case
-  the brief calls for — reachable in principle (finite, no asymptote that never terminates), not
-  in practice for one round of casual play. The 2025 round starts one hundredth closer to the
-  floor (base 1.09, only 9 steps to 1.00, ≈179 units) than the 2023/2024 rounds (base 1.10, 10
-  steps, ≈358) — a side effect of the real data, not a separate tuning knob, and thematically
-  apt: an already-more-efficient fleet has less room left to fall.
-- **20-second round timer, growth needle linear in elapsed time:** matches the brief's "~20
-  seconds" and keeps the needle's rise legible as a straight, autonomous climb the visitor never
-  touches.
-- **`e.repeat` filtering and a 30ms pointer debounce:** without these, holding Space down (OS key
-  repeat) or a jittery double-fire on touch devices would substitute for genuine repeated
-  presses, collapsing the mechanic back into something closer to "hold to win" — the opposite of
-  condition 1.
-- **Consumption index scaling (auto-fit to the largest of the three trajectories each render):**
-  keeps "your run," "perfect play," and "what actually happened" comparable at a glance without a
-  fixed axis that could clip a later round's bar.
+## Judgment calls
 
-## What increment 2+ would add
+- **"Actual" (as-reported) trajectory for Meta and Microsoft**, since neither publishes a field
+  named `achieved_fleet_pue_that_year` the way Google does: Meta uses that year's own
+  `pue_series` entry (flat at 1.08 both rounds, since Meta's PUE hasn't moved 2022→2024).
+  Microsoft uses **FY25's** disclosed PUE (1.17) for the FY2024 round — deliberately, so the "as
+  reported" bar shows the real, disclosed backslide (1.16→1.17) rather than silently repeating the
+  base value.
+- **Self-test achieved-PUE inputs** for the two new real-round tests pass `round.base_pue` itself
+  as the achieved value (i.e., "if you hadn't touched the dial at all") — irrelevant to the
+  LOST/WON branch here since both rounds are unwinnable regardless of `heldFlat`, but chosen for
+  narrative honesty over an arbitrary number.
+- **Per-act index reset to 100:** treated as required, not optional — Google's, Meta's and
+  Microsoft's absolute consumption scales are incomparable, so a single running index across acts
+  would misrepresent all three as one economy.
+- **Act nav unlock rule:** acts unlock strictly in order until Act IV is first reached, then all
+  four become freely selectable. This reads as "played in sequence (or selectable after first
+  playthrough)" without building a full save/replay system, which felt out of scope for a
+  prototype.
+- **Microsoft's round year label** is kept as the raw `"FY2024"` string from `data.json` (not
+  reformatted) so the fiscal-year caveat is visible in the data itself, not just in prose.
 
-Microsoft, Amazon and Meta efficiency-vs-growth disclosures, gathered and tiered SOURCED — every
-claim traceable to a retrievable primary URL, no invented figures — **before** the mechanic's
-"unwinnable" conclusion is treated as locked (Kritiker condition 3). If any of the three shows a
-disclosed year at or below its own winnable threshold, that gets published as a genuine
-counter-finding, using this same `roundVerdict()` unmodified. Only after that research lands does
-a physical-door proposal go to `REQUESTS.md`, with a concrete account of what torque, resistance,
-and the sound of a real stop add over the screen version already built here.
+## What increment 3+ would add
+
+**Premiere polish** — this build is still visually and mechanically a prototype: transitions
+between acts are a plain button, not a scene change; the resistance curve and 20-second timer are
+untuned for the shorter Meta/Microsoft rounds (a 16-hundredths Microsoft climb costs far more
+effort than a Google round did, unexamined here); no sound, no larger-format presentation. The
+physical-door proposal (Kritiker condition 4) stays parked in `REQUESTS.md` — it was never in
+scope for increment 2, and a concrete torque/resistance/stop account for four companies' worth of
+dials would need its own design pass, not a paragraph bolted onto this README.

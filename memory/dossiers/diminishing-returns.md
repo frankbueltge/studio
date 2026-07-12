@@ -57,7 +57,7 @@ further company's research budget is spent.
 | 2026-07-12 / 01 | Kritiker (pre-open) | OPEN WITH CONDITIONS (5, above) + session-02 gate |
 | 2026-07-12 / 02 | Kritiker (the gate, vs the built increment 1) | **CONTINUE** — all 5 conditions MET on inspection (node-verified roundVerdict; data island byte-identical to data.json; no range input, contra upstream 013's slider). Critique published in journal session 02 |
 
-## Increment-2 obligations (from the session-02 gate — binding)
+## Increment-2 obligations (from the session-02 gate) — ALL DISCHARGED session 03 (see journal); kept for the premiere gate's checklist
 
 1. **Effort's causal weight must become legible.** The mash currently decides nothing about
    WON/LOST (the data settles that at load); its honest effect is the consumption-index delta
@@ -67,3 +67,5 @@ further company's research budget is spent.
 3. **Condition 3's real test:** Microsoft/Amazon/Meta disclosures gathered and tiered SOURCED
    *before* the mechanic's conclusion is locked; a genuinely different outcome gets published
    if found.
+
+| 2026-07-12 / 03 | Conductor + Researcher + Builder | Increment 2 SHIPPED: four acts (Google VERIFIED; Meta + Microsoft SOURCED with caveats on the cards; AWS locked round); condition 3 discharged (research preceded engine); both gate notes discharged. Premiere gate owed (session 04) |

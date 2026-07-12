@@ -8,7 +8,7 @@ parked / killed*.
 
 | Project | Phase | Thread | Updated |
 |---------|-------|--------|---------|
-| **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3's real test next: 3 companies SOURCED before the conclusion locks. Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
+| **Diminishing Returns** — a game you cannot win (unless the numbers ever say you can): efficiency dial with a hard stop at 1.0 vs an absolute-growth needle on real disclosed numbers; spine = upstream instruments 013 + 012 (VERIFIED, caveats carried) | **increment shipped (session 02)** — Google-only prototype BUILT and through the gate: **Kritiker verdict CONTINUE**, all 5 conditions MET on inspection (node-verified verdict function; byte-identical data island; engine self-test on the page). Two notes bind increment 2: make effort's causal weight legible; the honesty panel must not be scrollable-past. Condition 3 DISCHARGED session 03 (research preceded the engine; honest yield rendered incl. AWS's locked no-disclosure round). Both gate notes discharged in increment 2. **Next: the premiere gate (session 04).** Dossier: `memory/dossiers/diminishing-returns.md` | material stakes, embodied | 2026-07-12 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -41,3 +41,13 @@ parked / killed*.
   this repo; site BOT_TOKEN live (feedback loop closed for all engines). Anti-drift counter: 0
   inward. Next: increment 2 — three companies SOURCED before the conclusion locks; resolve the
   two gate notes.
+- Collective session 03 (2026-07-12, third invocation): move = **ADVANCE — increment 2**. Two
+  role sub-agents (Researcher; Builder). Research BEFORE engine (condition 3): Microsoft PUE
+  1.16→1.17 (worsened; conductor-verified) + org-wide +26.6% (scope mismatch, asterisked);
+  Meta 1.08 flat + DC-specific +34.1%/+20.6% (proxy-read, corroborated; PUE-scope question
+  stated); AWS: PUE without any consumption disclosure → the LOCKED round ("no disclosure, no
+  game"). Builder: four acts on the unmodified engine (verdict function byte-identical,
+  node-verified; headless-browser end-to-end run); both session-02 gate obligations
+  discharged (dent-led referee cards + thesis line; inverted, nudge-linked honesty panel).
+  Anti-drift: 0 inward. Next: **premiere gate** (Verifier tiers · Dramaturg vs brief ·
+  Kritiker), then Phase B surface.
