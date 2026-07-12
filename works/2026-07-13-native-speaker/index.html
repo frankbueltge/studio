@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Native Speaker — English Verification Gate — Increment 1</title>
+<title>Native Speaker — English Verification Gate</title>
 <style>
   :root {
     --bg: #0d0d0d;
@@ -87,6 +87,7 @@
   }
   .tag-verified { color: #7fbf9c; background: var(--green-bg); border: 1px solid var(--green); }
   .tag-reconstruction { color: #8fb4c9; background: rgba(92, 122, 138, 0.12); border: 1px solid var(--steel); }
+  .tag-ledger { color: #9a9a9a; background: rgba(120, 120, 120, 0.10); border: 1px dotted #6b6b6b; }
   .tag-imagined { color: #d4b25c; background: var(--amber-bg); border: 1px dashed var(--amber); }
 
   /* ---------- stages ---------- */
@@ -384,7 +385,7 @@
 <div class="gate" id="app">
 
   <header class="strip">
-    <p class="strip-line">THE LAB / ENSEMBLE / <strong>NATIVE SPEAKER — INCREMENT 1</strong> · IN PRODUCTION</p>
+    <p class="strip-line">THE LAB / ENSEMBLE / <strong>NATIVE SPEAKER</strong> · PREMIERED 2026-07-13</p>
   </header>
 
   <!-- ============================================================ -->
@@ -398,6 +399,7 @@
       <div class="tier-legend-row"><span class="tag tag-verified">VERIFIED</span><span class="meaning">from the research record — checked, sourced, cited.</span></div>
       <div class="tier-legend-row"><span class="tag tag-reconstruction">RECONSTRUCTION</span><span class="meaning">this page's own meter — a disclosed, deterministic rebuild of the documented mechanism, not a commercial detector.</span></div>
       <div class="tier-legend-row"><span class="tag tag-imagined">IMAGINED</span><span class="meaning">the border-checkpoint fiction — the gate's voice, the stamps, the prompts.</span></div>
+      <div class="tier-legend-row"><span class="tag tag-ledger">SELF-REPORTED</span><span class="meaning">this terminal's own ledger — counted locally in your browser, never transmitted; it carries no population claim.</span></div>
     </div>
 
     <button type="button" class="btn btn-primary" id="begin-btn">[BEGIN] STEP FORWARD</button>
@@ -522,7 +524,7 @@
          JS repositions it right after the grace banner in the
          ADMITTED branch so banner and ledger argue in one breath. -->
     <div class="verdict-block" id="gate-ledger">
-      <h3>This gate's ledger</h3>
+      <h3><span class="tag tag-ledger">SELF-REPORTED</span> This gate's ledger</h3>
       <p class="tally-line" id="tally-line-text">—</p>
       <p class="tally-note" id="tally-scope-text"></p>
       <p class="tally-note"><a href="#honesty-panel">Full tally disclosure in the honesty panel ↓</a></p>
@@ -685,7 +687,7 @@
 
 <noscript>
   <div class="noscript-wrap">
-    <h1>Native Speaker — English Verification Gate — Increment 1</h1>
+    <h1>Native Speaker — English Verification Gate</h1>
     <p>This is an interactive prototype: the live meter, the two-attempt gate, and the self-test require
       JavaScript and are not shown here. What follows is the full, honest static record: every VERIFIED figure
       and case, the legal void, the counter-evidence and every source, unabridged. Naming policy: no personal

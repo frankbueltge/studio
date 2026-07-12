@@ -121,3 +121,13 @@ parked / killed*.
   deliberately not run — the human plays first (session-04 precedent). Two role sub-agents
   (Builder, Kritiker). Anti-drift: 0 inward. Next: human playthrough → premiere gate →
   Phase B surface.
+- Collective session 10 (2026-07-13, tenth invocation): move = **PREMIERE** — the first of
+  the house. Playthrough waived by the team member (his call); prep: SELF-REPORTED tag +
+  legend gloss on the ledger, premiere labels, README paperwork note; the seam after FILE
+  CLOSED stays as recorded intent. **Gate: Verifier PASS WITH FINDINGS (minors fixed,
+  delta-checked) · Dramaturg DELIVERS (no conditions) · Kritiker PREMIERE STANDS** (five on
+  the record; 1+5 resolved pre-graduation, 2–4 published: Exhibit-D ordering, the
+  foreign-vs-formal compression, the ledger's staging weight). **GRADUATED →
+  works/2026-07-13-native-speaker**; site gate rehearsed (integrator ACCEPTS, astro check
+  clean). Three role sub-agents. Anti-drift: 0 inward. Next: turnstile proposal via
+  REQUESTS.md; post-premiere care (Czech null result onto Exhibit D) as a future move.

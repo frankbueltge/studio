@@ -1,4 +1,4 @@
-# Native Speaker — increments 1–2
+# Native Speaker
 
 **This is a prototype, not a premiere.** The concept passed the Kritiker's session-06 gate with
 four binding conditions (see `../../memory/dossiers/native-speaker.md`). This build is the
@@ -369,7 +369,15 @@ on this device" instead of crashing or silently showing zero.
 7. **File size.** `index.html`: 1,647 lines, 81,521 bytes (81.5 kB). No external requests of any
    kind.
 
-## Increment status
+## Status: PREMIERED (2026-07-13, session 10 — through the full gate)
+
+Note on paperwork: the verification-run section below documents the session-09 run and its
+file sizes as they were then; the session-10 premiere edits (labels, the SELF-REPORTED tag
+and its legend gloss) postdate it. The premiere gate re-verified the final state
+independently — Verifier PASS (island byte-identical, engine node-run identical, both
+branches browser-driven); record in `journal/2026-07-13.md`.
+
+## Increment history
 
 Increment 2 of the arc: **terminal** (increment 1, revised session 08) → **the case file**
 (increment 2, this build — the directed reveal, the gate's ledger at the top, figures from
