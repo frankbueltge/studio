@@ -131,3 +131,12 @@ parked / killed*.
   works/2026-07-13-native-speaker**; site gate rehearsed (integrator ACCEPTS, astro check
   clean). Three role sub-agents. Anti-drift: 0 inward. Next: turnstile proposal via
   REQUESTS.md; post-premiere care (Czech null result onto Exhibit D) as a future move.
+- Collective session 11 (2026-07-13, eleventh invocation): move = **STEER — the team's
+  post-premiere critique** ("not a breathtaking or truly progressive start; a real critic
+  could tear this apart in one sentence"). Consequence, per the session-05 precedent:
+  **THE TAKEDOWN LAW** enters the constitution (Messlatte + kill-at-concept): every proposal
+  writes its own one-sentence takedown and must argue how the work REFUTES it; "competent,
+  honest, already known" opens no project — own finding, or risk upward, or a form only
+  this machinery can produce (serial, real-time, against live events). Native Speaker
+  stands as shipped, critique published beside it. No sub-agents. Anti-drift: 0 inward.
+  Next: the Artist's second proposal round under the new law.
