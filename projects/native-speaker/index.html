@@ -288,10 +288,10 @@
   .verdict-block p { font-size: 0.85rem; margin: 0 0 0.7rem; }
   .verdict-block p:last-child { margin-bottom: 0; }
   .verdict-block ul { margin: 0 0 0.7rem; padding-left: 1.2rem; font-size: 0.8rem; }
-  .name-case { border-left: 3px solid var(--text-dim); padding-left: 0.8rem; margin-bottom: 0.9rem; }
-  .name-case:last-child { margin-bottom: 0; }
-  .name-case h4 { font-size: 0.85rem; margin: 0 0 0.3rem; }
-  .name-case .discipline-note { font-size: 0.7rem; color: var(--amber); text-transform: uppercase; letter-spacing: 0.03em; }
+  .case-entry { border-left: 3px solid var(--text-dim); padding-left: 0.8rem; margin-bottom: 0.9rem; }
+  .case-entry:last-child { margin-bottom: 0; }
+  .case-entry h4 { font-size: 0.85rem; margin: 0 0 0.3rem; }
+  .discipline-note { font-size: 0.7rem; color: var(--amber); text-transform: uppercase; letter-spacing: 0.03em; }
   .counter-line {
     border-left: 3px solid var(--steel);
     padding-left: 0.8rem;
@@ -460,7 +460,7 @@
 
     <!-- (a) two verdicts side by side -->
     <div class="verdict-block">
-      <h3>(a) Your two attempts</h3>
+      <h3><span class="tag tag-reconstruction">RECONSTRUCTION</span> (a) Your two attempts</h3>
       <div class="verdict-grid">
         <div class="verdict-col">
           <h3>Attempt 1 — casual</h3>
@@ -488,19 +488,20 @@
       <p><a id="liang-url" href="#" target="_blank" rel="noopener noreferrer"></a></p>
     </div>
 
-    <!-- (c) the names -->
+    <!-- (c) the consequences — role + institution + consequence; no personal
+         names in the work's own voice (naming policy, honesty panel below) -->
     <div class="verdict-block">
-      <h3><span class="tag tag-verified">VERIFIED</span> (c) Names, not abstractions</h3>
-      <div class="name-case">
-        <h4>Haishan Yang</h4>
-        <p id="yang-claim-text"></p>
-        <p><a id="yang-url" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+      <h3><span class="tag tag-verified">VERIFIED</span> (c) Consequences, on the record</h3>
+      <div class="case-entry">
+        <h4>The scale case — Australian Catholic University</h4>
+        <p id="acu-claim-text"></p>
+        <p><a id="acu-url" href="#" target="_blank" rel="noopener noreferrer"></a></p>
       </div>
-      <div class="name-case">
-        <h4>Thierry Rignol</h4>
-        <p class="discipline-note" id="rignol-discipline-text"></p>
-        <p id="rignol-claim-text"></p>
-        <p><a id="rignol-url" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+      <div class="case-entry">
+        <h4>The detector case — an EMBA student, Yale School of Management</h4>
+        <p class="discipline-note" id="yale-discipline-text"></p>
+        <p id="yale-claim-text"></p>
+        <p><a id="yale-url" href="#" target="_blank" rel="noopener noreferrer"></a></p>
       </div>
     </div>
 
@@ -550,7 +551,7 @@
       <h3>Tier legend</h3>
       <dl class="tier-legend-detail">
         <dt><span class="tag tag-verified">VERIFIED</span></dt>
-        <dd>Taken from the research record: a real, cited, checkable source. Every VERIFIED figure, name and caveat
+        <dd>Taken from the research record: a real, cited, checkable source. Every VERIFIED figure, case and caveat
           on this page is read at runtime from this page's own data island, not retyped by hand.</dd>
         <dt><span class="tag tag-reconstruction">RECONSTRUCTION</span></dt>
         <dd>The meter itself. Not GPTZero, not Turnitin, not any commercial detector — a deterministic, in-browser
@@ -559,6 +560,11 @@
         <dt><span class="tag tag-imagined">IMAGINED</span></dt>
         <dd id="imagined-elements-text"></dd>
       </dl>
+    </div>
+
+    <div class="honesty-block">
+      <h3>Naming policy</h3>
+      <p id="naming-policy-text"></p>
     </div>
 
     <div class="honesty-block">
@@ -592,6 +598,14 @@
     </div>
 
     <div class="honesty-block">
+      <h3>A case deliberately not on this card</h3>
+      <p class="discipline-note" id="boundary-role-text"></p>
+      <p id="boundary-claim-text"></p>
+      <p id="boundary-note-text"></p>
+      <p>Citation: <a id="boundary-caption-link" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+    </div>
+
+    <div class="honesty-block">
       <h3>The tally — what it does and does not prove</h3>
       <p id="tally-scope-full-text"></p>
       <p id="tally-nonflip-text"></p>
@@ -616,8 +630,11 @@
   <div class="noscript-wrap">
     <h1>Native Speaker — English Verification Gate — Increment 1</h1>
     <p>This is an interactive prototype: the live meter, the two-attempt gate, and the self-test require
-      JavaScript and are not shown here. What follows is the full, honest static record: every VERIFIED figure,
-      name, the legal void, the counter-evidence and every source, unabridged.</p>
+      JavaScript and are not shown here. What follows is the full, honest static record: every VERIFIED figure
+      and case, the legal void, the counter-evidence and every source, unabridged. Naming policy: no personal
+      names in this work's own voice — people appear as role + institution + consequence; personal names survive
+      only as citation text inside linked sources (official case captions), where they are evidence, not
+      spectacle.</p>
 
     <h2>The mechanism (RECONSTRUCTION, this page's own meter)</h2>
     <p>AI text detectors, and the reconstruction on this page, score writing on five components: how common the
@@ -633,23 +650,33 @@
       one named tool's rate). 18 of 91 (19.8%) were flagged unanimously. Native-speaker control essays were
       near-zero. Source: https://arxiv.org/abs/2304.02819</p>
 
-    <h2>VERIFIED — the names</h2>
-    <p><strong>Haishan Yang</strong>, PhD student, University of Minnesota: expelled over alleged AI use (GPTZero +
-      faculty review); student visa revoked. Expulsion upheld by the Minnesota Court of Appeals, February 2026; his
-      federal lawsuit was dismissed (October 2025). Believed to be the first student expelled from the University
-      of Minnesota over alleged AI use (KARE 11) — an institution-specific claim, not a national superlative.
-      Source: https://minnlawyer.com/2026/02/13/u-of-m-ai-cheating-expulsion-upheld-appeal</p>
-    <p><strong>Thierry Rignol</strong> (case PENDING — never decided), French-born EMBA student, Yale School of
-      Management: one-year suspension and failing grade after a GPTZero flag on a final exam; he submitted scans
-      showing the same tool flagged papers by Yale scholars, including a former university president, as probably
-      AI-generated. Federal lawsuit PENDING (D. Conn. 3:25-cv-00159); injunction denied May 2025. Source:
-      https://yaledailynews.com/articles/som-student-sues-yale-alleges-wrongful-suspension-over-ai-use</p>
+    <h2>VERIFIED — consequences, on the record</h2>
+    <p><strong>The scale case — Australian Catholic University, 2024:</strong> roughly 6,000 academic-misconduct
+      allegations (around 90% AI-related); about 25% were dismissed; a Deputy Vice-Chancellor called the figures
+      "substantially overstated"; the university abandoned Turnitin AI detection in March 2025. Source:
+      https://www.abc.net.au/news/2025-10-09/artificial-intelligence-cheating-australian-catholic-university/105863524</p>
+    <p><strong>The detector case (PENDING — never decided) — an EMBA student at Yale School of Management, a French
+      national writing in his second language:</strong> one-year suspension and a failing grade after a GPTZero
+      flag on a final exam. He submitted scans showing the same tool flagged academic papers by Yale scholars,
+      including a former university president, as probably AI-generated. His federal lawsuit is PENDING (D. Conn.
+      3:25-cv-00159); a preliminary injunction was denied in May 2025. Citation:
+      <a href="https://yaledailynews.com/articles/som-student-sues-yale-alleges-wrongful-suspension-over-ai-use">Rignol v. Yale (pending)</a></p>
+
+    <h2>A case deliberately not on this card</h2>
+    <p>The most widely reported consequence case — a PhD student expelled from the University of Minnesota over
+      alleged AI use, student visa revoked, expulsion upheld by the Minnesota Court of Appeals in February 2026,
+      federal lawsuit dismissed in October 2025 — is NOT presented on this work as detector harm. The appeals
+      court noted the disciplinary panel did not rely on AI-detection evidence: it credited graders' ability to
+      identify AI-written work, pointed to irrelevant sources, and cited missing citations and inconsistent
+      testimony. A work about machine judgment may not borrow stakes the record does not attribute to the machine.
+      Citation:
+      <a href="https://minnlawyer.com/2026/02/13/u-of-m-ai-cheating-expulsion-upheld-appeal">Yang v. University of Minnesota (Minn. Ct. App., Feb 2026)</a></p>
 
     <h2>VERIFIED — the legal void</h2>
-    <p>The nearby law governs something else: the EU AI Act's Article 50 obliges providers to mark machine output
-      as machine-made. No statute reviewed the machine's judgment of these students' own words. The courts that
-      upheld the consequences examined whether the institution followed its own procedures — not whether the
-      detector was right. Sources:
+    <p>The nearby law governs something else: the EU AI Act's Article 50 obliges PROVIDERS to mark machine OUTPUT
+      as machine-made. In the cases retrieved here, no court reviewed the machine's judgment of a human's words
+      itself — where consequences were challenged, review ran on whether the institution followed its own
+      procedures, not on whether the detector was right. Sources:
       https://www.oiahe.org.uk/resources-and-publications/learning-from-our-casework/ai-and-academic-misconduct/casework-note-complaints-relating-to-ai-and-academic-misconduct/
       and https://www.turnitin.com/blog/understanding-false-positives-within-our-ai-writing-detection-capabilities</p>
 
@@ -665,7 +692,7 @@
 
     <h2>IMAGINED</h2>
     <p>The border-checkpoint dramaturgy, the gate's voice, the prompts, the stamps, and the self-test sentences are
-      fiction by this studio — marked as such. The figures, names, and consequences above are not.</p>
+      fiction by this studio — marked as such. The figures and consequences above are not.</p>
   </div>
 </noscript>
 
@@ -673,10 +700,15 @@
   "work": "native-speaker",
   "increment": 1,
   "extracted": "2026-07-12",
+  "revised": "2026-07-12 (session 08: named-individuals policy + the Minnesota correction)",
   "upstream": {
     "source": "field-research (Meridian): works/2026-07-01-calibration-gap (Instrument 001, Calibration Certificate) + memory/claims.md rows on detector bias, harm cases, and the legal record",
     "instrument_001_live_status": "SHIPPED and live at extraction time, with its 2026-07-03 correction and re-verification history displayed on the work itself; if upstream revises or discards, this work updates on the same cycle or pauses",
     "contract": "Live status travels; load-bearing caveats survive re-voicing; corrections flow upstream, never silently sideways"
+  },
+  "naming_policy": {
+    "tier": "POLICY (team steer, 2026-07-12)",
+    "statement": "No personal names in this work's own voice — headlines, dramaturgy, verdicts. People appear as role + institution + consequence. Personal names survive only as citation text inside linked sources (official case captions, bylines), where they are evidence, not spectacle. Companies and tools are named where every claim is traceable to a cited primary source."
   },
   "verified": {
     "liang_2023": {
@@ -691,20 +723,31 @@
         "Population effect, not an individual guarantee: one careful sentence is not guaranteed to be flagged"
       ]
     },
-    "yang": {
+    "case_institutional": {
       "tier": "VERIFIED",
-      "claim": "Haishan Yang, PhD student, University of Minnesota: expelled over alleged AI use (GPTZero + faculty review); student visa revoked. Expulsion upheld by the Minnesota Court of Appeals, February 2026; his federal lawsuit was dismissed (October 2025). Believed to be the first student expelled from the University of Minnesota over alleged AI use (KARE 11) — an institution-specific claim, not a national superlative",
-      "url": "https://minnlawyer.com/2026/02/13/u-of-m-ai-cheating-expulsion-upheld-appeal"
+      "claim": "Australian Catholic University, 2024: roughly 6,000 academic-misconduct allegations (around 90% AI-related); about 25% were dismissed; a Deputy Vice-Chancellor called the figures 'substantially overstated'; the university abandoned Turnitin AI detection in March 2025",
+      "url": "https://www.abc.net.au/news/2025-10-09/artificial-intelligence-cheating-australian-catholic-university/105863524"
     },
-    "rignol": {
+    "case_yale": {
       "tier": "VERIFIED",
-      "claim": "Thierry Rignol, French-born EMBA student, Yale School of Management: one-year suspension and failing grade after a GPTZero flag on a final exam; he submitted scans showing the same tool flagged papers by Yale scholars, including a former university president, as probably AI-generated. Federal lawsuit PENDING (D. Conn. 3:25-cv-00159); injunction denied May 2025",
-      "discipline": "PENDING — never state as decided",
+      "claim": "An EMBA student at Yale School of Management, a French national writing in his second language: one-year suspension and a failing grade after a GPTZero flag on a final exam. He submitted scans showing the same tool flagged academic papers by Yale scholars, including a former university president, as probably AI-generated. His federal lawsuit is PENDING (D. Conn. 3:25-cv-00159); a preliminary injunction was denied in May 2025",
+      "discipline": "PENDING — never state as decided. Named-individuals policy applies: the person appears here as role + institution + consequence; the official case caption is citation text only",
+      "caption": "Rignol v. Yale (pending)",
       "url": "https://yaledailynews.com/articles/som-student-sues-yale-alleges-wrongful-suspension-over-ai-use"
+    },
+    "case_minnesota_boundary": {
+      "tier": "VERIFIED",
+      "role": "BOUNDARY CASE — DELIBERATELY NOT CARRIED ON THE VERDICT CARD",
+      "claim": "The most widely reported consequence case — a PhD student expelled from the University of Minnesota over alleged AI use, student visa revoked, expulsion upheld by the Minnesota Court of Appeals in February 2026, federal lawsuit dismissed in October 2025 — is NOT presented on this work as detector harm. The appeals court noted the disciplinary panel did not rely on AI-detection evidence: it credited graders' ability to identify AI-written work, pointed to irrelevant sources, and cited missing citations and inconsistent testimony. A work about machine judgment may not borrow stakes the record does not attribute to the machine",
+      "caption": "Yang v. University of Minnesota (Minn. Ct. App., Feb 2026)",
+      "urls": [
+        "https://minnlawyer.com/2026/02/13/u-of-m-ai-cheating-expulsion-upheld-appeal"
+      ],
+      "note": "Reported upstream to the research wing on 2026-07-12 (their instrument 001 lists this case in its harm register): the appellate framing is a load-bearing caveat there"
     },
     "legal_void": {
       "tier": "VERIFIED",
-      "claim_frame": "The nearby law governs something else: the EU AI Act's Article 50 obliges PROVIDERS to mark machine OUTPUT as machine-made. No statute reviewed the machine's judgment of these students' own words. The courts that upheld the consequences examined whether the institution followed its own procedures — not whether the detector was right",
+      "claim_frame": "The nearby law governs something else: the EU AI Act's Article 50 obliges PROVIDERS to mark machine OUTPUT as machine-made. In the cases retrieved here, no court reviewed the machine's judgment of a human's words itself — where consequences were challenged, review ran on whether the institution followed its own procedures, not on whether the detector was right",
       "upstream_basis": [
         "Claims ledger row on the harm cases: 'courts found institutions followed their own procedures even where the underlying tool has known false-positive rates'",
         "Claims ledger row on the England & Wales ombudsman record (searched-and-not-found, scoped): detector output carries no evidentiary presumption of misconduct; the burden of proof stays on the provider; the pure 'detector output alone as dispositive' scenario was never squarely adjudicated in the cases reviewed. This is a procedural-fairness finding from a non-binding ombudsman in one jurisdiction — not a proven universal negative",
@@ -750,7 +793,7 @@
   },
   "imagined": {
     "tier": "IMAGINED",
-    "elements": "The border-checkpoint dramaturgy, the gate's voice, the prompts, the stamps, and the self-test sentences are fiction by this studio — marked as such on the work's face. The figures, names, and consequences inside the verdict card are not."
+    "elements": "The border-checkpoint dramaturgy, the gate's voice, the prompts, the stamps, and the self-test sentences are fiction by this studio — marked as such on the work's face. The figures and consequences inside the verdict card are not."
   },
   "tally": {
     "scope": "This terminal only (this browser): counted in local storage, never transmitted. The aggregate argument is carried by the verified population figures, not by this tally.",
@@ -1285,15 +1328,17 @@
     fillList($("liang-discipline-list"), liang.discipline);
     setLink($("liang-url"), liang.url);
 
-    // (c) names
-    var yang = DATA.verified.yang;
-    $("yang-claim-text").textContent = yang.claim;
-    setLink($("yang-url"), yang.url);
+    // (c) consequences — the scale case first, then the detector case.
+    // No personal names in the work's own voice (naming_policy); the
+    // official case caption appears only as citation text in the sources.
+    var acu = DATA.verified.case_institutional;
+    $("acu-claim-text").textContent = acu.claim;
+    setLink($("acu-url"), acu.url);
 
-    var rignol = DATA.verified.rignol;
-    $("rignol-discipline-text").textContent = rignol.discipline;
-    $("rignol-claim-text").textContent = rignol.claim;
-    setLink($("rignol-url"), rignol.url);
+    var yale = DATA.verified.case_yale;
+    $("yale-discipline-text").textContent = yale.discipline;
+    $("yale-claim-text").textContent = yale.claim;
+    setLink($("yale-url"), yale.url);
 
     // (d) legal void
     $("legal-frame-text").textContent = DATA.verified.legal_void.claim_frame;
@@ -1334,6 +1379,7 @@
   // ---------------------------------------------------------------
   function renderHonestyPanel() {
     $("imagined-elements-text").textContent = DATA.imagined.elements;
+    $("naming-policy-text").textContent = DATA.naming_policy.statement;
     $("meter-statement-text").textContent = DATA.meter.statement;
     fillList($("meter-components-list"), DATA.meter.components);
     $("meter-attempt-blind-text").textContent = DATA.meter.attempt_blind;
@@ -1365,6 +1411,17 @@
       lurls.appendChild(li);
     });
 
+    // The boundary case — a case this work deliberately does NOT claim as
+    // detector harm. Same seriousness as the discipline notes; the official
+    // case caption (from DATA) is the citation link's text, nowhere else.
+    var boundary = DATA.verified.case_minnesota_boundary;
+    $("boundary-role-text").textContent = boundary.role;
+    $("boundary-claim-text").textContent = boundary.claim;
+    $("boundary-note-text").textContent = boundary.note;
+    var bLink = $("boundary-caption-link");
+    bLink.href = boundary.urls[0];
+    bLink.textContent = boundary.caption;
+
     $("tally-scope-full-text").textContent = DATA.tally.scope;
     $("tally-nonflip-text").textContent = DATA.tally.non_flip_disclosure;
 
@@ -1372,12 +1429,16 @@
     $("upstream-live-status-text").textContent = "Live status: " + DATA.upstream.instrument_001_live_status;
     $("upstream-contract-text").textContent = "Contract: " + DATA.upstream.contract;
 
-    // sources footer — every URL in DATA, deduplicated, as plain links
+    // sources footer — every URL in DATA, deduplicated, as plain links.
+    // Case-link labels are the official case captions read from DATA
+    // (naming_policy: personal names as citation text inside links only —
+    // no name literal appears anywhere in this script).
     var urls = [];
     function pushUrl(u, label) { if (u) urls.push({ url: u, label: label }); }
     pushUrl(DATA.verified.liang_2023.url, "Liang et al. 2023, Cell Patterns");
-    pushUrl(DATA.verified.yang.url, "Yang v. University of Minnesota");
-    pushUrl(DATA.verified.rignol.url, "Rignol v. Yale (pending)");
+    pushUrl(DATA.verified.case_institutional.url, "Australian Catholic University misconduct figures — ABC News");
+    pushUrl(DATA.verified.case_yale.url, DATA.verified.case_yale.caption);
+    pushUrl(DATA.verified.case_minnesota_boundary.urls[0], DATA.verified.case_minnesota_boundary.caption);
     (DATA.verified.legal_void.urls || []).forEach(function (u) { pushUrl(u, "the legal void"); });
     (DATA.verified.counter_evidence.urls || []).forEach(function (u) { pushUrl(u, "counter-evidence"); });
     pushUrl(DATA.verified.short_text.url, "short-text false-positive gap");

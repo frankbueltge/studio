@@ -18,11 +18,32 @@ legal void. Physical door: a literal one-person turnstile.
 - VERIFIED (upstream instrument 001 + claims ledger): union false-flag rate 97.8% (89 of 91
   TOEFL essays flagged by ≥1 of 7 detectors — never attribute to a single detector); mean FPR
   61.22% (Liang et al. 2023); the perplexity-penalizes-constrained-vocabulary mechanism;
-  Yang v. U. Minnesota (expelled, visa revoked, upheld Feb 2026); Rignol v. Yale (PENDING —
-  never state as decided).
+  ~~Yang v. U. Minnesota (expelled, visa revoked, upheld Feb 2026)~~ **SUPERSEDED session 08,
+  see revision note below**; the Yale detector case (PENDING — never state as decided).
 - IMAGINED (marked): the border-checkpoint dramaturgy; the gate's voice.
-- The meter: a DISCLOSED, SEEDED, in-browser reconstruction (perplexity/burstiness proxy),
-  labeled as reconstruction, never vendor-branded — AI as transparent, checkable tool.
+- The meter: a DISCLOSED, DETERMINISTIC in-browser reconstruction (perplexity/burstiness
+  proxy), labeled as reconstruction, never vendor-branded — AI as transparent, checkable tool.
+
+## Session-08 revision (team steer + the Minnesota correction — binding)
+
+1. **Named-individuals policy (team, binding, `memory/decisions.md`):** no personal names in
+   the work's own voice — role + institution + consequence instead; names only as citation
+   text in linked sources (official case captions). Applied to the built increment; steered
+   upstream to Meridian the same day (their REQUESTS.md) for instrument 001 + FIELD.md.
+2. **The Minnesota case is OFF the verdict card** — it is a disclosed boundary case in the
+   honesty panel. The conductor read the appellate reporting first-hand (Minnesota Lawyer,
+   2026-02-13): the Court of Appeals upheld the expulsion on substantial evidence AND noted
+   the disciplinary panel **did not rely on AI-detection evidence** (graders' assessment,
+   irrelevant/missing citations, inconsistent testimony). A work about machine judgment may
+   not borrow stakes the record does not attribute to the machine. The card's detector case
+   is the Yale case (EMBA student, GPTZero flag, strictly PENDING); the scale case is ACU
+   (~6,000 allegations, ~25% dismissed, Turnitin abandoned March 2025).
+3. **Condition 3's session-06 phrasing ("zero legal grounding") is superseded** by the scoped
+   card copy: "In the cases retrieved here, no court reviewed the machine's judgment of a
+   human's words itself…" — which also discharged the session-07 Kritiker note 3 early.
+4. Gate re-run on the changed state (session 08): Verifier **PASS WITH FINDINGS** — no
+   blocking; two minors fixed in-session (EMBA precision; RECONSTRUCTION tag on card section
+   (a)); this dossier note is the third.
 
 ## Binding conditions (Kritiker at concept, session 06 — the work is born with these)
 
@@ -57,8 +78,9 @@ pair 0.426/0.659 — the flip generalizes**; island byte-identical (8,476 bytes)
    opens — carry the register (or a deliberate, marked rupture) through all six blocks.
 2. **Tally placement:** the population argument must not be the last line of a long scroll —
    reposition or duplicate it so it lands as hard as the grace banner.
-3. **One scoping word** on the card's legal-void sentence, so it cannot be misread as a
-   universal claim by a visitor who never opens the honesty panel.
+3. ~~**One scoping word** on the card's legal-void sentence, so it cannot be misread as a
+   universal claim by a visitor who never opens the honesty panel.~~ **DISCHARGED session 08**
+   (the revised claim_frame carries "In the cases retrieved here" on the card itself).
 4. **Union figure as a direct data field** in `data.json` instead of regex-parsed from prose
    — BEFORE bilingual polish touches that text (a translation pass must not silently break
    the work's central number).
@@ -74,3 +96,4 @@ the stamp's sound, the barrier's refusal — to be argued concretely per the con
 |---|---|---|
 | 2026-07-12 / 06 | Kritiker (art critic, at concept) | OPEN-WORTHY WITH BINDING CONDITIONS (4, above); critique published in journal |
 | 2026-07-12 / 07 | Kritiker (increment check on the built terminal) | CONTINUE WITH NOTES — all 4 binding conditions MET on source inspection; 4 notes bind increment 2; full critique published in journal |
+| 2026-07-12 / 08 | Verifier (facts/tiers, gate re-run on the session-08 revision) | PASS WITH FINDINGS — no blocking; 3 minors, all resolved in-session (EMBA; tier tag on card (a); this dossier note) |

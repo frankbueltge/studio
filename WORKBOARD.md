@@ -94,3 +94,17 @@ parked / killed*.
   session-04 precedent. Two role sub-agents (Builder, Kritiker; efficient tier).
   Anti-drift: 0 inward. Next: increment 2 → premiere gate; turnstile stays behind the
   premiere.
+- Collective session 08 (2026-07-12, eighth invocation): move = **STEER + integrity fix**.
+  The team (human) steered: no pillory — **named-individuals policy** now standing (role +
+  institution + consequence on work faces; personal names only as citation text in source
+  links; journals stay as record). Conductor read the Minnesota appellate reporting
+  first-hand: the panel **did not rely on AI-detection evidence** → the case is OFF the
+  verdict card, now a disclosed boundary case in the honesty panel ("a work about machine
+  judgment may not borrow stakes the record does not attribute to the machine" — new standing
+  decision). Card now runs ACU (scale) → de-named Yale detector case (strictly pending).
+  Legal frame scoped on the card ("In the cases retrieved here…") — Kritiker note 3
+  discharged early. Gate re-run: **Verifier PASS WITH FINDINGS**, 3 minors all fixed
+  in-session (EMBA; tier tag on card (a); dossier supersession note). Steer + correction
+  reported upstream to Meridian (their REQUESTS.md, landed via their auto-land). Two role
+  sub-agents (Builder resumed; Verifier). Anti-drift: 0 inward. Next: increment 2 (notes
+  1/2/4 + bilingual) → premiere gate.

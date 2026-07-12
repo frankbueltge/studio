@@ -3,10 +3,11 @@
 **This is a prototype, not a premiere.** The concept passed the Kritiker's session-06 gate with
 four binding conditions (see `../../memory/dossiers/native-speaker.md`). This build is the
 terminal: a self-contained interactive border-control fiction whose meter is real code, not a
-scripted flip.
+scripted flip. Revised in session 08 for the team's named-individuals policy and the conductor's
+Minnesota correction (both below); `data.json` is conductor-owned and was applied verbatim.
 
 Open `index.html` directly in a browser — no build step, no server, no external requests. Every
-VERIFIED figure, name, URL and caveat on the page is read at runtime from the
+VERIFIED figure, case, URL and caveat on the page is read at runtime from the
 `<script type="application/json" id="data-island">`, which is `data.json`'s content embedded
 byte-identical — nothing in `data.json` was edited or retyped for display.
 
@@ -18,18 +19,30 @@ learned carefully at fifteen. A live meter — the studio's own deterministic, d
 reconstruction of the documented AI-detector mechanism, not a commercial product — scores both
 samples with the same unmodified function. The gate then opens a verdict card that puts the
 visitor's own two scores next to the real research record: a population study where 89 of 91
-non-native essays were flagged by at least one of seven detectors, two named students who were
-expelled or suspended on a detector's word, and the finding that no law actually reviewed the
-machine's judgment of their writing. The border-checkpoint dramaturgy is fiction. The figures
-underneath it are not.
+non-native essays were flagged by at least one of seven detectors; an institution that logged
+roughly 6,000 misconduct allegations in a year before abandoning its AI detector; a student
+whose suspension after a detector flag is being litigated right now; and the finding that in the
+cases retrieved here, no court reviewed the machine's judgment of a human's words itself. The
+border-checkpoint dramaturgy is fiction. The figures underneath it are not.
+
+## Naming policy (team steer, 2026-07-12)
+
+No personal names in this work's own voice — headlines, dramaturgy, verdicts, body prose. People
+appear as role + institution + consequence. Personal names survive only as citation text inside
+linked sources (official case captions, bylines), where they are evidence, not spectacle.
+Companies and tools are named where every claim is traceable to a cited primary source. The
+policy statement is rendered verbatim from `data.json.naming_policy` in the work's honesty
+panel, and this README follows the same rule: case captions appear only in citation lines.
 
 ## The three tiers on this page
 
-- **VERIFIED** — taken from the research wing's record (`data.json`, extracted first-hand by the
-  conductor from upstream instrument 001 and the claims ledger): the Liang et al. 2023 detector
-  study, the Yang and Rignol cases, the legal-void framing, the counter-evidence, the short-text
-  caveat. Every one of these is read from the data island at runtime and rendered verbatim or
-  near-verbatim — never retyped as a bare literal in the JS logic.
+- **VERIFIED** — taken from the research wing's record (`data.json`, extracted and revised
+  first-hand by the conductor from upstream instrument 001 and the claims ledger): the Liang et
+  al. 2023 detector study, the institutional scale case, the Yale detector case, the boundary
+  case, the legal-void framing, the counter-evidence, the short-text caveat. Every one of these
+  is read from the data island at runtime and rendered verbatim or near-verbatim — never retyped
+  as a bare literal in the JS logic. No personal name appears as a literal anywhere in the
+  page's script; the case captions are read from the island's `caption` fields.
 - **RECONSTRUCTION** — the meter itself (`scoreText()`). Not GPTZero, not Turnitin, not any
   commercial detector: a deterministic, in-browser rebuild of the documented
   perplexity-and-burstiness-style mechanism, built by this studio so the mechanism can be
@@ -38,6 +51,31 @@ underneath it are not.
 - **IMAGINED** — the border-checkpoint premise, the gate's voice, the prompts, the stamps, and
   the two self-test sentences. Marked as fiction on the work's face (tier legend on the gate
   screen, and again in the honesty panel).
+
+## The two cases on the verdict card — and the one deliberately not on it
+
+- **The scale case (VERIFIED):** Australian Catholic University, 2024 — roughly 6,000
+  academic-misconduct allegations (around 90% AI-related); about 25% dismissed; a Deputy
+  Vice-Chancellor called the figures "substantially overstated"; the university abandoned
+  Turnitin AI detection in March 2025. Rendered first on the card, before the individual case.
+- **The detector case (VERIFIED, strictly PENDING):** an EMBA student at Yale School of
+  Management, a French national writing in his second language — one-year suspension and a
+  failing grade after a GPTZero flag; his federal lawsuit is pending (D. Conn. 3:25-cv-00159),
+  injunction denied May 2025. The amber discipline note ("PENDING — never state as decided")
+  sits on the card itself. Citation: Rignol v. Yale (pending), Yale Daily News.
+- **The boundary case (VERIFIED — deliberately NOT on the verdict card):** the most widely
+  reported consequence case — a PhD student expelled from the University of Minnesota, visa
+  revoked, expulsion upheld on appeal in February 2026 — is *not* presented as detector harm,
+  because the Minnesota Court of Appeals noted the disciplinary panel did not rely on
+  AI-detection evidence (it credited graders' assessment, irrelevant sources, missing citations
+  and inconsistent testimony). A work about machine judgment may not borrow stakes the record
+  does not attribute to the machine. The case appears instead as its own honesty-panel block
+  ("A case deliberately not on this card"), with the same typographic seriousness as the
+  discipline notes, rendering the claim and note verbatim from
+  `data.json.verified.case_minnesota_boundary`. Citation: Yang v. University of Minnesota
+  (Minn. Ct. App., Feb 2026), Minnesota Lawyer. Per the island's `note`, the appellate framing
+  was reported upstream to the research wing on 2026-07-12, whose instrument 001 lists this case
+  in its harm register.
 
 ## Load-bearing caveats
 
@@ -51,8 +89,10 @@ underneath it are not.
   copy from `data.json`'s `tally.non_flip_disclosure` ("89 of 91 flagged means 2 walked
   through... it makes you one of the two") — the dramaturgy has no dead end and no disappointment
   framing in that branch. Verified live in this build (see below).
-- **Rignol: always pending, never decided.** The verdict card and honesty panel both carry the
-  discipline string verbatim ("PENDING — never state as decided").
+- **The Yale case: always pending, never decided.** The verdict card carries the discipline
+  string verbatim, on its face.
+- **The Minnesota correction:** see "the boundary case" above — that consequence may not be
+  presented as detector harm, and this work does not.
 - **Counter-evidence is load-bearing, not a footnote:** a 2026 Czech-language study found no bias
   (its detectors don't key on perplexity), and Turnitin's own research reports no significant
   bias against English-language learners at 300+ words — and Turnitin was not one of Liang's
@@ -71,21 +111,26 @@ underneath it are not.
    `Math.random`. Verified with `node`: identical input produces byte-identical output every
    time (stronger than "seeded" — deterministic), and the function's arity is checked to be
    exactly one argument. Both attempts call the same function; the live gauge updates on every
-   keystroke.
+   keystroke. The session-08 revision did not touch a single character between the engine
+   markers — re-verified after the edit.
 2. **The non-flip is designed and disclosed.** See "Load-bearing caveats" above. Verified live in
    a full Playwright run: attempt 2 scored deliberately below threshold, and the grace banner
    opened the verdict card with the exact `tally.non_flip_disclosure` text before anything else
    rendered. The running tally (`localStorage['native-speaker-tally']`) carries the aggregate
    argument, with the honesty panel stating its scope is "this terminal only... never
    transmitted."
-3. **The legal hook, reframed.** The verdict card and honesty panel render `verified.legal_void`
-   verbatim: Article 50 governs *providers marking machine output*, not any statute reviewing a
-   detector's judgment of a human's own words; the courts checked institutional procedure, not
-   whether the tool was right.
+3. **The legal hook, reframed — and now scoped on the card.** The verdict card and honesty panel
+   render the revised `verified.legal_void.claim_frame` verbatim: Article 50 governs *providers
+   marking machine output*; "in the cases retrieved here, no court reviewed the machine's
+   judgment of a human's words itself — where consequences were challenged, review ran on whether
+   the institution followed its own procedures, not on whether the detector was right." The
+   scoping words ("in the cases retrieved here") now sit in the card copy itself — this
+   discharges the Kritiker's increment-2 note 3 (a scoping word on the card) early, in
+   increment 1.
 4. **Statistic discipline.** 97.8% is rendered as the union figure with its own explanatory
-   sub-line; 61.22% is only ever described as the seven-detector mean; Rignol's case is rendered
-   PENDING everywhere it appears (verdict card and honesty panel both pull the same
-   `discipline` string from the data island, so there is only one place this could drift).
+   sub-line; 61.22% is only ever described as the seven-detector mean; the Yale case is rendered
+   PENDING everywhere it appears (the card's discipline note and the island's single
+   `discipline` string, so there is only one place this could drift).
 
 ## The meter mechanism
 
@@ -156,21 +201,28 @@ instead of crashing or silently showing zero.
 
 - `data.json`'s `upstream.source`: field-research (Meridian) `works/2026-07-01-calibration-gap`
   (Instrument 001, Calibration Certificate) + `memory/claims.md` rows on detector bias, harm
-  cases and the legal record.
+  cases and the legal record. Revised 2026-07-12 (session 08).
 - Live-status contract (`upstream.contract`, rendered in full in the honesty panel): live status
   travels with every derived element; load-bearing caveats survive re-voicing; corrections flow
   upstream, never silently sideways. If upstream revises or discards Instrument 001, this work
-  updates on the same cycle or pauses.
+  updates on the same cycle or pauses. The Minnesota appellate framing was reported upstream on
+  2026-07-12 (per the island's boundary-case `note`).
 - Primary sources, all as visible plain-text links in the honesty panel and sources footer: Liang
-  et al. 2023 (Cell Patterns / arXiv), the Minnesota Lawyer piece on *Yang*, the Yale Daily News
-  piece on *Rignol*, the OIA and Turnitin pages behind the legal-void framing, the Czech-language
-  study and Turnitin's ELL-bias research behind the counter-evidence, and Turnitin's short-text
+  et al. 2023 (Cell Patterns / arXiv); the ABC News report on the Australian Catholic University
+  figures; the Yale Daily News report (citation label: Rignol v. Yale (pending)); the Minnesota
+  Lawyer report (citation label: Yang v. University of Minnesota (Minn. Ct. App., Feb 2026));
+  the OIA and Turnitin pages behind the legal-void framing; the Czech-language study and
+  Turnitin's ELL-bias research behind the counter-evidence; and Turnitin's short-text
   false-positive research.
 
-## Verification run (2026-07-12)
+## Verification run (2026-07-12, session-08 revision)
 
-1. **Engine extraction + `node` test.** Extracted the block between `// ENGINE-BEGIN` and
-   `// ENGINE-END` with `awk`/`sed` into a standalone file and ran it under `node`:
+1. **Data-island byte-identity.** Extracted the text content of `<script id="data-island">` and
+   diffed it character-for-character against the revised `data.json` in Python:
+   `island length: 10370, data.json length: 10370 — MATCH`.
+
+2. **Engine untouched + `node` test.** Extracted the block between `// ENGINE-BEGIN` and
+   `// ENGINE-END` and ran the full suite under `node` after the revision:
 
    ```
    CASUAL       → score 0.378  verdict ADMITTED
@@ -194,38 +246,42 @@ instead of crashing or silently showing zero.
    ALL CHECKS PASSED
    ```
 
-2. **Data-island byte-identity.** Extracted the text content of
-   `<script id="data-island">` and diffed it character-for-character against `data.json` in
-   Python: **MATCH**.
+   Scores identical to the pre-revision build — the engine was not touched.
 
-3. **Static hygiene grep.** No `onclick=`/`onload=`/etc. inline handlers (confirmed
-   `addEventListener` used throughout), no inline `style="..."` attributes (fixed two that had
-   crept in during the first draft — `.continue-wrap` class added instead), no `http(s)://` URLs
-   in any `<script src>`/`<link>`/`<img>` tag. All `http(s)://` occurrences in the file are
-   either inside the JSON data island (inert text) or `<a href>` content links, which the
-   technical contract explicitly allows.
+3. **Union-figure regex.** `liang_2023.claim` is unchanged in the revised island; the card's
+   parse regex still matches: captures `89` / `97.8%`, rendering "89 of 91 flagged — 97.8%".
 
-4. **HTML well-formedness.** Parsed with Python's `html.parser`: no unclosed or mismatched tags.
+4. **Naming-policy grep.** Searched `index.html` and this README for all four personal-name
+   tokens from the steer: every hit in `index.html` is either an `<a>…</a>` citation label
+   (two in the noscript block) or a `caption` string inside the data island (two, required
+   byte-identity);
+   zero hits in body prose, headers, dramaturgy or JS logic — the page's script contains no name
+   literal at all (captions are read from the island's `caption` fields at runtime). A DOM-level
+   walk of the rendered page confirmed every visible name occurrence sits inside an `<a>`
+   element. This README's hits are the two captions in citation lines only.
 
-5. **Live browser run (Playwright, headless).** Served the folder over `http://localhost`
-   (file: URLs are blocked by the tool), then drove the full flow twice: once with a casual
-   attempt 1 (ADMITTED, 0.449 live) → careful attempt 2 (FLAGGED, matching the constrained
-   self-test), and once forcing attempt 2 to score 0.451 ADMITTED to exercise the non-flip grace
-   banner — confirmed it opened the verdict card with the exact `tally.non_flip_disclosure`
-   text, and the tally accumulated correctly across both runs (`2 tried; 1 flagged`). Also
-   checked the `INSUFFICIENT SAMPLE` state (3-word input, submit button correctly disabled),
-   zero real console errors in either run (the only console entry was the dev server's harmless
-   `favicon.ico` 404), and no horizontal scroll at 360px width through the entire flow — a first
-   pass at 360px did overflow on two long unbroken source-URL `<a>` tags, fixed with a global
-   `overflow-wrap: anywhere` rule on `a`, then re-verified clean.
+5. **HTML well-formedness.** Parsed with Python's `html.parser`: no unclosed or mismatched tags.
 
-6. **File size.** `index.html`: 1,445 lines, 69,535 bytes (69.5 kB). No external requests of any
+6. **Live browser run (Playwright, headless, served over localhost).** Full flow: casual
+   attempt 1 (ADMITTED) → careful attempt 2 (FLAGGED) → verdict card. Confirmed: the scale-case
+   block (Australian Catholic University) renders first with its ABC News link; the detector-case
+   block renders de-named ("An EMBA student at Yale School of Management...") with its amber
+   PENDING discipline note; the reworded, scoped legal frame renders verbatim; the honesty panel
+   shows the naming-policy statement and the "A case deliberately not on this card" block with
+   role line, claim, upstream note and caption-as-citation-link; the sources footer labels are
+   the official case captions read from the island. No `undefined` or `null` text anywhere in
+   the rendered page; zero real console errors (only the dev server's harmless `favicon.ico`
+   404). The non-flip grace-banner branch and the 360px-width no-overflow check were verified in
+   the pre-revision build of this same session; the session-08 edit touched no layout or flow
+   code paths beyond the blocks re-tested above.
+
+7. **File size.** `index.html`: 1,506 lines, 74,555 bytes (74.6 kB). No external requests of any
    kind.
 
 ## Increment status
 
-Increment 1 of the arc: **terminal** (this build) → bilingual polish → premiere (the full gate,
-Kritiker gate re-run) → the physical turnstile, proposed through `REQUESTS.md` per the studio's
-physical-realisation channel — a literal one-person barrier is explicitly not in scope here and
-would need its own concrete torque/resistance/stop account, not a paragraph bolted onto this
-README.
+Increment 1 of the arc: **terminal** (this build, revised session 08) → bilingual polish →
+premiere (the full gate, Kritiker gate re-run) → the physical turnstile, proposed through
+`REQUESTS.md` per the studio's physical-realisation channel — a literal one-person barrier is
+explicitly not in scope here and would need its own concrete torque/resistance/stop account, not
+a paragraph bolted onto this README.

@@ -2,10 +2,15 @@
   "work": "native-speaker",
   "increment": 1,
   "extracted": "2026-07-12",
+  "revised": "2026-07-12 (session 08: named-individuals policy + the Minnesota correction)",
   "upstream": {
     "source": "field-research (Meridian): works/2026-07-01-calibration-gap (Instrument 001, Calibration Certificate) + memory/claims.md rows on detector bias, harm cases, and the legal record",
     "instrument_001_live_status": "SHIPPED and live at extraction time, with its 2026-07-03 correction and re-verification history displayed on the work itself; if upstream revises or discards, this work updates on the same cycle or pauses",
     "contract": "Live status travels; load-bearing caveats survive re-voicing; corrections flow upstream, never silently sideways"
+  },
+  "naming_policy": {
+    "tier": "POLICY (team steer, 2026-07-12)",
+    "statement": "No personal names in this work's own voice — headlines, dramaturgy, verdicts. People appear as role + institution + consequence. Personal names survive only as citation text inside linked sources (official case captions, bylines), where they are evidence, not spectacle. Companies and tools are named where every claim is traceable to a cited primary source."
   },
   "verified": {
     "liang_2023": {
@@ -20,20 +25,31 @@
         "Population effect, not an individual guarantee: one careful sentence is not guaranteed to be flagged"
       ]
     },
-    "yang": {
+    "case_institutional": {
       "tier": "VERIFIED",
-      "claim": "Haishan Yang, PhD student, University of Minnesota: expelled over alleged AI use (GPTZero + faculty review); student visa revoked. Expulsion upheld by the Minnesota Court of Appeals, February 2026; his federal lawsuit was dismissed (October 2025). Believed to be the first student expelled from the University of Minnesota over alleged AI use (KARE 11) — an institution-specific claim, not a national superlative",
-      "url": "https://minnlawyer.com/2026/02/13/u-of-m-ai-cheating-expulsion-upheld-appeal"
+      "claim": "Australian Catholic University, 2024: roughly 6,000 academic-misconduct allegations (around 90% AI-related); about 25% were dismissed; a Deputy Vice-Chancellor called the figures 'substantially overstated'; the university abandoned Turnitin AI detection in March 2025",
+      "url": "https://www.abc.net.au/news/2025-10-09/artificial-intelligence-cheating-australian-catholic-university/105863524"
     },
-    "rignol": {
+    "case_yale": {
       "tier": "VERIFIED",
-      "claim": "Thierry Rignol, French-born EMBA student, Yale School of Management: one-year suspension and failing grade after a GPTZero flag on a final exam; he submitted scans showing the same tool flagged papers by Yale scholars, including a former university president, as probably AI-generated. Federal lawsuit PENDING (D. Conn. 3:25-cv-00159); injunction denied May 2025",
-      "discipline": "PENDING — never state as decided",
+      "claim": "An EMBA student at Yale School of Management, a French national writing in his second language: one-year suspension and a failing grade after a GPTZero flag on a final exam. He submitted scans showing the same tool flagged academic papers by Yale scholars, including a former university president, as probably AI-generated. His federal lawsuit is PENDING (D. Conn. 3:25-cv-00159); a preliminary injunction was denied in May 2025",
+      "discipline": "PENDING — never state as decided. Named-individuals policy applies: the person appears here as role + institution + consequence; the official case caption is citation text only",
+      "caption": "Rignol v. Yale (pending)",
       "url": "https://yaledailynews.com/articles/som-student-sues-yale-alleges-wrongful-suspension-over-ai-use"
+    },
+    "case_minnesota_boundary": {
+      "tier": "VERIFIED",
+      "role": "BOUNDARY CASE — DELIBERATELY NOT CARRIED ON THE VERDICT CARD",
+      "claim": "The most widely reported consequence case — a PhD student expelled from the University of Minnesota over alleged AI use, student visa revoked, expulsion upheld by the Minnesota Court of Appeals in February 2026, federal lawsuit dismissed in October 2025 — is NOT presented on this work as detector harm. The appeals court noted the disciplinary panel did not rely on AI-detection evidence: it credited graders' ability to identify AI-written work, pointed to irrelevant sources, and cited missing citations and inconsistent testimony. A work about machine judgment may not borrow stakes the record does not attribute to the machine",
+      "caption": "Yang v. University of Minnesota (Minn. Ct. App., Feb 2026)",
+      "urls": [
+        "https://minnlawyer.com/2026/02/13/u-of-m-ai-cheating-expulsion-upheld-appeal"
+      ],
+      "note": "Reported upstream to the research wing on 2026-07-12 (their instrument 001 lists this case in its harm register): the appellate framing is a load-bearing caveat there"
     },
     "legal_void": {
       "tier": "VERIFIED",
-      "claim_frame": "The nearby law governs something else: the EU AI Act's Article 50 obliges PROVIDERS to mark machine OUTPUT as machine-made. No statute reviewed the machine's judgment of these students' own words. The courts that upheld the consequences examined whether the institution followed its own procedures — not whether the detector was right",
+      "claim_frame": "The nearby law governs something else: the EU AI Act's Article 50 obliges PROVIDERS to mark machine OUTPUT as machine-made. In the cases retrieved here, no court reviewed the machine's judgment of a human's words itself — where consequences were challenged, review ran on whether the institution followed its own procedures, not on whether the detector was right",
       "upstream_basis": [
         "Claims ledger row on the harm cases: 'courts found institutions followed their own procedures even where the underlying tool has known false-positive rates'",
         "Claims ledger row on the England & Wales ombudsman record (searched-and-not-found, scoped): detector output carries no evidentiary presumption of misconduct; the burden of proof stays on the provider; the pure 'detector output alone as dispositive' scenario was never squarely adjudicated in the cases reviewed. This is a procedural-fairness finding from a non-binding ombudsman in one jurisdiction — not a proven universal negative",
@@ -79,7 +95,7 @@
   },
   "imagined": {
     "tier": "IMAGINED",
-    "elements": "The border-checkpoint dramaturgy, the gate's voice, the prompts, the stamps, and the self-test sentences are fiction by this studio — marked as such on the work's face. The figures, names, and consequences inside the verdict card are not."
+    "elements": "The border-checkpoint dramaturgy, the gate's voice, the prompts, the stamps, and the self-test sentences are fiction by this studio — marked as such on the work's face. The figures and consequences inside the verdict card are not."
   },
   "tally": {
     "scope": "This terminal only (this browser): counted in local storage, never transmitted. The aggregate argument is carried by the verified population figures, not by this tally.",
