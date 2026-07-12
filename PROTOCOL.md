@@ -120,9 +120,14 @@ The research wing bound its downstream consumers to standing conditions
   tables as the work's primary form — the research wing owns that shelf. (A table may appear
   *inside* a work; it may not *be* the work.) This is the founding constraint; revisable only
   with a journalled rationale and a full session's deliberation.
-- **Read the atlas before building.** Form and mechanism must differ from this studio's own
-  previous works and must not copy an atlas artist. The atlas's ~40 physical/hybrid exemplars
-  are default inspiration, not an exception.
+- **Read the atlas before building — and the adjacency rule (sharpened by the team,
+  2026-07-12).** Copying an existing work is the studio's greatest possible embarrassment —
+  the reddest of red flags. But burning or already-treated THEMES are open territory:
+  re-reflecting them from a different perspective, with a clear added value or a genuinely
+  different angle, is legitimate and welcome. The discipline that makes the difference:
+  **every proposal names its nearest neighbors itself and argues its daylight from them** —
+  as the Artist's first session did unprompted (the Paglen adjacency, named before anyone
+  asked). A proposal that hides its neighbors is presumed to be copying them.
 - **Projects over miniatures — and small-and-working beats large-and-broken.** The resolution
   of that tension: ambitious arcs, shipped as working increments.
 - **No AI slop** (no gradient wallpaper, no emoji as decoration, not Inter/Roboto). Generative
