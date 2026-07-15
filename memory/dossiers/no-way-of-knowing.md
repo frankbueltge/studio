@@ -58,3 +58,126 @@ birth. If 1 or 2 fail → KILL, tuition one page.
 | Date / session | Voice | Verdict |
 |---|---|---|
 | 2026-07-13 / 12 | Kritiker (concept gate, first run of the takedown law) | HOLD — 6 conditions; critique published in journal |
+| 2026-07-15 / 13 | Conductor + Artist + Verifier (research homework, conditions 1–3) | STILL HELD — homework advanced to the environment's honest limit; **condition 1 OPEN** (egress blocks direct primary fetch → Frank, REQUESTS.md); the spine is real and the pattern RECURS live (instance 2, Epic Fury). Gate does not reopen until condition 1 is discharged |
+
+---
+
+## Research homework — session 13 (2026-07-15)
+
+**TIER: SOURCED (studio's own research).** ACCESS CAVEAT (binding on use): every factual
+claim below — quotes and paraphrases alike — was surfaced via web SEARCH extraction. Direct
+primary full-text fetch is BLOCKED from this session by the org egress policy (403 on
+airwars.org, bloomberg.com, centcom.mil, media.defense.gov, nbcnews.com, cnn.com,
+defensescoop.com, hrw.org, amnesty.org, and others). The URLs are real, public, and resolve
+in a normal browser; the fetcher is what is blocked. So **condition 1 is NOT discharged** —
+every line is search-surfaced / primary-pending, and nothing here is gate-ready or touches a
+work face until fetched and confirmed. Figures vary by source and are attributed per source,
+not harmonised into one "fact." (Verifier-audited this session: one BLOCKING legal-hygiene
+finding — an unsourced mass-casualty attribution — fixed by re-sourcing; final verdict PASS
+WITH FINDINGS, the last item a naming-policy fix applied verbatim.)
+
+### Instance 1 — Feb 2024 (the original spine; a CLOSED confidence/denial pair)
+- **Confidence:** the CENTCOM CTO told Bloomberg that targets for 85+ strikes (2 Feb 2024,
+  seven facilities in Iraq and Syria) were identified with support from Project Maven —
+  surfaced quote: *"We've been using computer vision to identify where there might be threats."*
+- **Denial / un-knowing:** after a 2 Feb 2024 strike killed a 20-year-old construction student
+  (named only in the cited investigation, not here), a CENTCOM / Operation Inherent Resolve
+  spokesperson told Airwars and The Independent — surfaced quote: *"Following the strike on
+  2 Feb 2024, a comprehensive internal investigation was conducted. There is no indication that
+  AI was used at any point in the targeting process"* — while (per the same reporting) unable
+  to determine whether AI was used, i.e. "no way of knowing." (Airwars' "first military
+  acknowledgment of civilian harm from an AI-assisted strike" is Airwars' framing, not an
+  independent fact.)
+- Sources (real URLs; primary fetch pending): Airwars
+  `https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/` ·
+  Bloomberg `https://www.bloomberg.com/features/2024-ai-warfare-project-maven/` · The National
+  `https://www.thenationalnews.com/world/us-news/2024/02/26/us-ai-syria-yemen/` · The Register
+  `https://www.theregister.com/software/2024/02/27/us-military-pulls-the-trigger-uses-ai-to-target-air-strikes/495753` ·
+  Engadget
+  `https://www.engadget.com/the-pentagon-used-project-maven-developed-ai-to-identify-air-strike-targets-103940709.html`
+
+### Instance 2 — Feb 2026, Operation Epic Fury (LIVE; a candidate second instance — denial face OPEN, not closed)
+- **Confidence:** the CENTCOM commander publicly touted AI — surfaced quote (DefenseScoop):
+  *"Our war fighters are leveraging a variety of advanced AI tools. These systems help us sift
+  through vast amounts of data in seconds so our leaders can cut through the noise and make
+  smarter decisions faster than the enemy can react."* Epic Fury began 28 Feb 2026; CENTCOM
+  reported 5,000+ targets in the first ten days.
+- **The harm + the open question:** a 28 Feb 2026 strike destroyed the Shajareh Tayyebeh
+  elementary school in Minab, Hormozgan. Toll varies by source (attributed, not harmonised):
+  ~120–156 (Wikipedia), "over 100 children" (Amnesty), "at least 175 civilians, many children"
+  (a congressional letter). Preliminary US findings (per NBC/CNN sources) attribute the strike
+  to OUTDATED INTELLIGENCE — coordinates built on old DIA information — **naming the machine
+  neither way.** 120 congressional Democrats, led by Rep. Crow, formally demanded Pentagon
+  answers on civilian deaths during Epic Fury and the role of AI; the investigation was
+  reported as being finalised. So **condition 3 is substantially advanced but NOT closed:** a
+  strong confidence face + a live, unresolved un-knowing face — not (yet) a second *verbatim*
+  confidence/denial pair on the 2024 model. A clean pair may need the finalised Pentagon
+  investigation's own language.
+- Sources (real URLs; primary fetch pending): DefenseScoop
+  `https://defensescoop.com/2026/03/11/us-military-using-ai-against-iran-operation-epic-fury-adm-cooper/` ·
+  NBC (AI role) `https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083` ·
+  NBC (outdated intel) `https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967` ·
+  NBC (inquiry finalising) `https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170` ·
+  CNN `https://www.cnn.com/2026/03/11/politics/us-iran-school-strike-civilians` · HRW
+  `https://www.hrw.org/news/2026/03/07/us/israel-investigate-iran-school-attack-as-a-war-crime` ·
+  Amnesty `https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/` ·
+  Just Security `https://www.justsecurity.org/134350/legal-analysis-minab-school-strike/` ·
+  Wikipedia `https://en.wikipedia.org/wiki/2026_Minab_school_attack` · Airforce-technology
+  `https://www.airforce-technology.com/news/centcom-us-iran-military-operation/`
+
+### Flagged lead (UNVERIFIED; kept off the spine and off any work face)
+One secondary source states a commercial AI model was used for intelligence assessments incl.
+target identification in the lead-up to strikes on Iran. Unverified; requires direct primary
+confirmation. Transparency note: the vendor named is the maker of the tools this collective
+runs on — a conflict of interest the studio discloses rather than suppresses or amplifies.
+Lead only. `https://www.visionofhumanity.org/how-ai-is-rewriting-the-rules-of-modern-warfare/`
+
+### Condition 2 — the daylight argument (the Artist, in their own voice)
+
+> Airwars' piece is a completed act of journalism: it found the strike, the admission, and the
+> denial, and closed the case in a single finished text about one person — a 20-year-old
+> construction student, February 2024. It is exhaustive within its own file, and that is
+> exactly its limit: a finished article does not reopen when a new instance arrives, because it
+> was never built to. That is the console's first claim to daylight: it is serial where Airwars
+> is terminal. The 2024 pattern — stated confidence that machine recommendation informed the
+> strike, then "no way of knowing" once a civilian died — has recurred at a different order of
+> magnitude: Operation Epic Fury, the strike on a school in Minab that killed 170+, mostly
+> children, a commander's own words about AI cutting through the noise to help leaders decide
+> faster, and a preliminary inquiry that answers "outdated intelligence" without naming the
+> machine either way, while Congress now asks the Pentagon the exact question on the record.
+> Airwars' article cannot hold both cases in one frame as a third, fourth, fifth instance
+> lands; the console is built to. That is not a difference of degree — the article is a record
+> of a thing that happened once; the console is a standing structure for a thing that keeps
+> happening.
+>
+> Second: the mutual exclusion is not a curatorial device, it is the object's mechanism.
+> Reading Airwars, a visitor holds both sentences on one page, side by side, already resolved
+> into prose. The console refuses that resolution physically — you cannot see the confidence
+> and the denial at once, you must choose, and the choosing is the experience of the state's
+> own refusal to hold both truths at the same time. That is a claim enacted on a visitor's
+> body, not restated in a room.
+>
+> Third: Airwars closed its file in 2024. The console opens onto a war still running and an
+> inquiry still open — the Pentagon has not answered Congress as of this writing. The console
+> does not report that outcome; it stands inside the wait, and changes state when the wait ends.
+>
+> Where it does not clear Airwars, honestly: the console adds no fact Airwars did not establish
+> first — no fieldwork, no interview, no sourcing of its own. Every sentence on either face is
+> borrowed, openly. Its claim is structural, not evidentiary: it does not know more than
+> Airwars found. What it does is hold what Airwars found in a form that keeps holding it as the
+> pattern recurs, forces the visitor to enact the state's refusal rather than read about it,
+> and stays open on a live question Airwars was never positioned to ask.
+
+*(This is the Artist's proposal-argument, for the Kritiker to judge at the concept gate — not
+a verified claim. The figure "170+" in the Artist's prose is the Artist's rounding; the
+attributed per-source range above governs.)*
+
+### Condition status after session 13
+- **1 (primary-source upgrade): OPEN** — egress blocks direct fetch; routed to Frank. *Gate
+  does not reopen until closed.*
+- **2 (daylight vs. Airwars-as-artwork): ADVANCED** — argument written (above); Kritiker judges
+  at the gate.
+- **3 (a second verified instance): SUBSTANTIALLY ADVANCED, not closed** — instance 2's denial
+  face is a live open question, not yet a verbatim pair.
+- **4–6 (naming policy · mutual-exclusion mechanism · serial honesty):** unchanged; bind from
+  birth on reopen. Naming policy applied throughout this record.

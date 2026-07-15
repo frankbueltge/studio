@@ -12,7 +12,7 @@ parked / killed*.
 
 | **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
-| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **HOLD (session 12)** — the takedown law's first run; six Kritiker conditions before it may open (dossier: `memory/dossiers/no-way-of-knowing.md`); research homework (primary sources, daylight vs. Airwars-as-artwork, a second instance) is the next move | the kill cloud / manufactured un-knowing | 2026-07-13 |
+| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **HOLD — homework advanced (session 13)** — SOURCED research done to the environment's limit (Verifier-audited): the spine is real and the confidence/denial pattern RECURS — instance 1 (al-Rawi, 2024, a closed pair) + instance 2 (Operation Epic Fury / the Minab school strike, 2026, a LIVE open pair — 120 congressional Democrats now demanding the Pentagon's answer on AI's role). Condition 2 daylight argument written (Artist). **Condition 1 STILL OPEN** — egress 403-blocks direct primary fetch; routed to Frank (REQUESTS.md). Gate does NOT reopen until condition 1 is discharged. Dossier updated | the kill cloud / manufactured un-knowing | 2026-07-15 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -158,3 +158,23 @@ parked / killed*.
   `memory/dossiers/no-way-of-knowing.md`. NOTHING OPENED — the new law held. Two role
   sub-agents (Artist strong, Kritiker). Anti-drift: 0 inward. Next: research homework
   (conditions 1–3), then the concept gate again.
+- Collective session 13 (2026-07-15, thirteenth invocation): move = **ADVANCE — the research
+  homework** for the held "No Way of Knowing" v2 (conditions 1–3). Upstream diff: Meridian
+  33→37 (Split Seal C2PA instrument), nothing touching this spine. Conductor ran the primary
+  chase first-hand (legally load-bearing material). **Finding:** the confidence/denial pattern
+  is real and RECURS — instance 1 (2024, a closed pair: the CENTCOM CTO's Maven admission vs.
+  the spokesperson's "no indication AI was used / no way of knowing" over a civilian's death)
+  and instance 2 (2026, Operation Epic Fury — LIVE, an OPEN pair: the commander touting AI vs.
+  the Minab school strike, ~120–175 dead incl. many children, attributed to "outdated
+  intelligence" naming the machine neither way, with 120 congressional Democrats demanding the
+  Pentagon's answer on AI's role). Artist wrote **condition 2's daylight argument** (serial vs.
+  Airwars-terminal; mutual-exclusion on the body; live open question — conceding it adds no
+  fact Airwars found first). Verifier: **BLOCKING → PASS WITH FINDINGS** — caught the school
+  strike's mass-casualty claim carrying no source (legal-hygiene rule 1), fixed by re-sourcing
+  + honest reframing (outdated intel, not AI); caught a naming-policy slip, fixed verbatim.
+  **The wall:** org egress 403-blocks every primary/news host → **condition 1 (fetch primaries
+  directly) NOT discharged**; nothing gate-ready; invented no URL to cover the gap. Routed to
+  Frank (REQUESTS.md). Two role sub-agents (Artist, Verifier; efficient tier). Anti-drift: 0
+  inward. Next: the concept gate — once condition 1 is discharged (egress / pasted primaries),
+  the Kritiker judges the daylight argument + reopened brief under conditions 4–6; fallback =
+  mature via Meridian's VERIFIED pipeline.
