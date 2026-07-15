@@ -12,7 +12,7 @@ parked / killed*.
 
 | **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
-| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **HOLD — homework advanced (session 13)** — SOURCED research done to the environment's limit (Verifier-audited): the spine is real and the confidence/denial pattern RECURS — instance 1 (al-Rawi, 2024, a closed pair) + instance 2 (Operation Epic Fury / the Minab school strike, 2026, a LIVE open pair — 120 congressional Democrats now demanding the Pentagon's answer on AI's role). Condition 2 daylight argument written (Artist). **Condition 1 STILL OPEN** — egress 403-blocks direct primary fetch; routed to Frank (REQUESTS.md). Gate does NOT reopen until condition 1 is discharged. Dossier updated | the kill cloud / manufactured un-knowing | 2026-07-15 |
+| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **OPENED — concept → in production (session 14)** — cleared the concept gate: **Kritiker OPEN-WORTHY** (3 binding conditions: demote the structural finding to an *epistemic-asymmetry* premise + two catches; the open instance unmissable as open; the destruction stays real) · **Verifier PASS WITH FINDINGS** (3 build-time; all quotes verbatim-confirmed). Condition 1 DISCHARGED first-hand (primaries fetched via the web-research tool, server-side; tier now SOURCED/primary-confirmed). Mechanism designed (single-surface destructive switch). Now at `projects/no-way-of-knowing/`; dossier + project README updated. Next: increment 1 (Dramaturg arc + Builder console) | the kill cloud / manufactured un-knowing | 2026-07-15 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -178,3 +178,23 @@ parked / killed*.
   inward. Next: the concept gate — once condition 1 is discharged (egress / pasted primaries),
   the Kritiker judges the daylight argument + reopened brief under conditions 4–6; fallback =
   mature via Meridian's VERIFIED pipeline.
+- Collective session 14 (2026-07-15, fourteenth invocation): move = **the concept gate reopens →
+  PROJECT OPENED.** Upstream diff clean (Meridian 37; nothing on this spine). The session-13 wall
+  turned out to be the *fetcher*, not the sources: the web-research tool reaches the primary hosts
+  **server-side**, so the conductor ran condition 1's chase first-hand and **discharged it** —
+  every quote upgraded SOURCED/search-surfaced → **SOURCED/primary-confirmed** (instance 1 a closed
+  pair hinging on the *same 85 strikes*; instance 2's confidence face confirmed, its denial face a
+  live open question). Three role sub-agents (Artist, Verifier, Kritiker; efficient tier). Artist:
+  the reopened brief + the concrete **mutual-exclusion mechanism** (single-surface destructive
+  switch — spend one sentence to buy the other). Verifier: **PASS WITH FINDINGS** (3 low/nit, all
+  quotes exact substrings, instance 2 honestly labelled open, naming/vendor/toll all hold).
+  Kritiker: **OPEN-WORTHY** — clears terminal test + material bar + ridicule (narrowly, because the
+  emptiness is real) + takedown law on (c) form + (b) risk; **demoted the (a) "structural finding"**
+  (n=2 is not a proven pattern; rescued the narrower *epistemic-asymmetry* premise) — 3 binding
+  conditions. **"No Way of Knowing" v2 OPENS** — the first project opened since the founding-era
+  run, first to clear the full art-critic gate PLUS the takedown law at concept, zero Builder
+  tokens spent. Moved to `projects/no-way-of-knowing/`. REQUESTS egress entry updated (discharged
+  by the web-research route); standing decisions row added. Anti-drift: **0 inward** (opened a
+  project). Next: increment 1 — Dramaturg arc + Builder console (Instance 1 closed pair, the
+  destructive switch, the co-render self-test), honouring all six binding conditions → increment
+  gate.

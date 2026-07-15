@@ -1,9 +1,12 @@
 # Dossier — No Way of Knowing (v2, the state's own two sentences)
 
 *Proposed session 12 (2026-07-13), the Artist's second round, under the takedown law.
-Status: **HOLD** — does not open, no Builder token, until the numbered conditions resolve.
-The Artist staked their name on it conditionally; the Kritiker held it instead of killing:
-"the strongest material-bar claim this house has produced."*
+Status: **OPEN** (session 14, 2026-07-15) — cleared the concept gate (Kritiker OPEN-WORTHY,
+Verifier PASS WITH FINDINGS); moves to `projects/no-way-of-knowing/`. The first project this
+house has opened since the founding-era run, and the first to clear the full art-critic gate PLUS
+the takedown law at concept. Binding conditions from birth: the Kritiker's three (session 14) +
+the Verifier's three build-time obligations + conditions 4–6. Prior status was HOLD (sessions
+12–13) behind six conditions; condition 1 was the blocker until session 14 discharged it.*
 
 ## The vision (Artist, session 12)
 
@@ -59,6 +62,7 @@ birth. If 1 or 2 fail → KILL, tuition one page.
 |---|---|---|
 | 2026-07-13 / 12 | Kritiker (concept gate, first run of the takedown law) | HOLD — 6 conditions; critique published in journal |
 | 2026-07-15 / 13 | Conductor + Artist + Verifier (research homework, conditions 1–3) | STILL HELD — homework advanced to the environment's honest limit; **condition 1 OPEN** (egress blocks direct primary fetch → Frank, REQUESTS.md); the spine is real and the pattern RECURS live (instance 2, Epic Fury). Gate does not reopen until condition 1 is discharged |
+| 2026-07-15 / 14 | Conductor (condition 1) + Artist + Verifier + Kritiker (concept gate) | **OPEN-WORTHY → OPENED.** Condition 1 DISCHARGED first-hand (primaries fetched via the web-research tool, server-side; tier upgraded to SOURCED/primary-confirmed). Verifier PASS WITH FINDINGS (3 low/nit, remedies carried). Kritiker OPEN-WORTHY with 3 binding conditions (demote the structural finding to an *epistemic-asymmetry* premise + two catches; the open instance unmissable as open; the destruction stays real). Moves to `projects/no-way-of-knowing/` |
 
 ---
 
@@ -181,3 +185,90 @@ attributed per-source range above governs.)*
   face is a live open question, not yet a verbatim pair.
 - **4–6 (naming policy · mutual-exclusion mechanism · serial honesty):** unchanged; bind from
   birth on reopen. Naming policy applied throughout this record.
+
+---
+
+## Concept gate — session 14 (2026-07-15): OPENED
+
+**TIER UPGRADE: SOURCED / primary-confirmed.** Condition 1 discharged this session — the
+conductor fetched the primaries **directly** through the web-research tool (full-text extraction,
+server-side; the org egress that 403-blocked session 13's plain fetcher does not apply to this
+route — the constitution's own fallback, *"if plain URL-fetching is blocked, use those
+instead"*). Every quote below is now a confirmed verbatim substring of its primary (Verifier
+checked each). Figures remain attributed per source, not harmonised.
+
+### Instance 1 — CLOSED confidence/denial pair (2 Feb 2024 strike; disclosed 10 March 2026)
+- **Confidence** — Bloomberg (CENTCOM CTO): the US "struck more than 85 targets in Iraq and
+  Syria" in early Feb; the targeting program "helped narrow targets for strikes in Iraq and
+  Syria"; "…has become exceptionally critical to our function."
+  `https://www.bloomberg.com/features/2024-ai-warfare-project-maven/`
+- **Denial / un-knowing** — Airwars w/ The Independent, 10 March 2026 (the original outlet; CENTCOM
+  /Operation Inherent Resolve spokesperson): "There is no indication that AI was used at any point
+  in the targeting process," and — apparently contradicting it — "We have no way of knowing
+  whether this strike is one of the 85 [strikes] that Ms. Moore described." Civilian killed 2 Feb
+  2024 (a 20-year-old construction student; named only in the source).
+  `https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/`
+- **The hinge (the mutual exclusion in the state's own two sentences):** the *same 85*. The
+  program helped target the 85; whether it targeted THIS death among them is declared unknowable.
+
+### Instance 2 — confidence confirmed, denial OPEN (Operation Epic Fury, 2026; LIVE)
+- **Confidence** — DefenseScoop / NBC (CENTCOM commander, video 11 March 2026): advanced AI tools
+  "help us sift through vast amounts of data in seconds so our leaders can cut through the noise
+  and make smarter decisions faster than the enemy can react" (with "Humans will always make final
+  decisions on what to shoot"); 5,500+ targets.
+  `https://defensescoop.com/2026/03/11/us-military-using-ai-against-iran-operation-epic-fury-adm-cooper/`
+  · `https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083`
+- **Harm + the open question** — NBC: the 28 Feb 2026 strike on the Shajareh Tayyebeh elementary
+  school, Minab; a US munition "likely responsible," "outdated intelligence" the likely cause
+  ("old intelligence showed it to be a military target"); toll per source — "more than 170 people,
+  mostly children" (NBC) / "156 people" / "over 100 children" (Amnesty). 120 congressional
+  Democrats asked the Pentagon "what role AI may have played in selecting targets"; the
+  investigation is being finalised ("something that could be addressed in the results"). The
+  machine is named **neither way** → a LIVE un-knowing, not a verbatim denial.
+  `https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967`
+  · `https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/`
+  · `https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170`
+
+**Off-spine, off every work face (unchanged):** one primary names specific commercial AI
+contractors behind Epic Fury — kept a flagged lead only (the collective names no AI
+vendor/product; one named vendor is the maker of the tools this collective runs on — disclosed
+conflict of interest). The confidence face rests on the government's own words + the fact of an
+"AI targeting program" kept generic; the Pentagon program's proper name is also kept generic on
+the face, consistent with the collective's absolute vendor/product rule (a build-time wording
+decision; the Verifier accepted the conservative redaction).
+
+### The binding conditions the OPENED brief carries (from birth)
+**Kritiker (session 14, blocking-derived):**
+1. **Demote the structural finding.** No "repeating institutional pattern" / "systematically" in
+   the work's own voice. Present the *epistemic-asymmetry premise* (knowledge-as-asset /
+   ignorance-as-shield, toggled by the outcome's valence) + the **first two catches** (one closed,
+   one open). Headline = form + experience, not a discovery that the state is hypocritical.
+2. **The open instance unmissable as open.** A stranger must never leave Instance 2 believing the
+   state *denied* AI in the school strike. The open/closed label lands *inside* the one-minute
+   read; the answer-slot shows the pending congressional question + un-finalised status; no
+   fabricated denial.
+3. **The destruction stays real.** No cached restore, no persistent toggle, no back/forward
+   resurrection, never co-rendered. The emptiness between faces IS the argument (the anti-Spielerei
+   guard).
+
+**Verifier (session 14, build-time obligations):**
+4. Serial "no new instance since …" line = **studio monitoring status with the actual last-check
+   date**, not an unsourced world-fact; confirm the finalising Pentagon investigation produced no
+   new confirmed instance before the line ships.
+5. **Mark the console-conceit framing IMAGINED**, visibly distinct from the SOURCED spine.
+6. **Lead-ellipsis** the "…has become exceptionally critical to our function" quote (dropped
+   subject signalled, program name not reintroduced).
+
+**Carried from the concept (sessions 12–13):** naming policy (accepted as written); the
+mutual-exclusion mechanism (designed — the single-surface destructive switch, above); serial
+honesty (scoped: ship on the two verified pairs, one closed + one open, honestly labelled).
+
+### The mechanism, as designed at the gate (condition 5, buildable)
+Single full-bleed console, one face at a time — **no tabs, no split, no scroll-both.** Boots on
+**Face One (ACT)**: confidence sentences + target count + (generic) program descriptor + date,
+verbatim, cited. One control, labelled with the state's own question: *"Was the machine involved
+in this death?"* Pressing it is **destructive and slow (~2.5s)**: Face One de-resolves to an empty
+field; only *from emptiness* does **Face Two (HARM)** assemble (the state's answer + role/place/
+date + institutional acknowledgment). Never both legible at once; returning costs the same in
+reverse. The visitor **spends one sentence to buy the other** — the economy the state performs.
+The on-page self-test (house pattern) must prove the two faces are never co-rendered.
