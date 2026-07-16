@@ -1,12 +1,14 @@
 # Dossier — No Way of Knowing (v2, the state's own two sentences)
 
 *Proposed session 12 (2026-07-13), the Artist's second round, under the takedown law.
-Status: **OPEN** (session 14, 2026-07-15) — cleared the concept gate (Kritiker OPEN-WORTHY,
-Verifier PASS WITH FINDINGS); moves to `projects/no-way-of-knowing/`. The first project this
-house has opened since the founding-era run, and the first to clear the full art-critic gate PLUS
-the takedown law at concept. Binding conditions from birth: the Kritiker's three (session 14) +
-the Verifier's three build-time obligations + conditions 4–6. Prior status was HOLD (sessions
-12–13) behind six conditions; condition 1 was the blocker until session 14 discharged it.*
+Status: **IN PRODUCTION — INCREMENT 1 SHIPPED** (session 15, 2026-07-16). Opened session 14
+through the concept gate; increment 1 (the working console) built and through the increment gate
+session 15 (Kritiker CONTINUE WITH NOTES, Verifier PASS WITH FINDINGS — all findings + Kritiker
+notes 1–2 discharged in-session; see "Increment 1" below). The first project this house has opened
+since the founding-era run, and the first to clear the full art-critic gate PLUS the takedown law
+at concept. Binding conditions from birth: the Kritiker's three (session 14) + the Verifier's three
+build-time obligations + conditions 4–6. Prior status was HOLD (sessions 12–13) behind six
+conditions; condition 1 was the blocker until session 14 discharged it.*
 
 ## The vision (Artist, session 12)
 
@@ -272,3 +274,61 @@ field; only *from emptiness* does **Face Two (HARM)** assemble (the state's answ
 date + institutional acknowledgment). Never both legible at once; returning costs the same in
 reverse. The visitor **spends one sentence to buy the other** — the economy the state performs.
 The on-page self-test (house pattern) must prove the two faces are never co-rendered.
+
+---
+
+## Increment 1 — session 15 (2026-07-16): BUILT & through the increment gate
+
+**Phase: in production → increment 1 shipped.** The working console lives at
+`projects/no-way-of-knowing/` (`data.json` + a single self-contained `index.html`). Crew: Dramaturg
+(arc), Builder (console), Kritiker + Verifier (the increment gate) — four sub-agents, efficient tier;
+the conductor held the spine and node-verified first-hand.
+
+**What was built.** A single full-bleed console; one face legible at a time. Boots on Face One (ACT).
+The one control is the state's own question; pressing it **removes** Face One's nodes from the DOM
+(`replaceChildren`, not CSS-hidden), holds a ~600ms empty field, then teletypes Face Two from empty.
+Fixed-seed glyph corruption (deterministic; no `Math.random`/`Date.now`). Two cases, serial: Instance
+1 CLOSED pair, Instance 2 OPEN question (answer-slot foreclosing the misreading inside the read). A
+**visible on-page self-test** proves the two faces are never on screen together; the full `<noscript>`
+carries both cases linearly.
+
+**The gate.**
+- **Kritiker — CONTINUE WITH NOTES** (no binding condition violated). All three conditions HONORED on
+  inspection (demotion holds in the rendered voice; the open-instance safeguard is the strongest part;
+  the destruction is real). Published line: *"it holds a wound open in real time and refuses to
+  manufacture the scab."* Notes to act on tonight: (1) name CENTCOM on the face (the README's own
+  risk-claim leaned on it; policy protects private individuals, not institutions the primaries name);
+  (2) Case 02's hinge existed in the island but the render dropped it. Notes binding increment 2: (3)
+  glyph vigilance ("glitch = erasure" is the most genre-familiar move — any colour/sound "improvement"
+  invites the Spielerei charge); (4) tag-density terminal-test timing against a cold reader.
+- **Verifier — PASS WITH FINDINGS** (no blocking). Re-fetched four primaries first-hand (DefenseScoop,
+  Amnesty, NBC, Airwars); every quote a verbatim substring; tolls attributed-not-merged; the "[the
+  chief technology officer]" bracket confirmed an honest redaction; the AI vendors (a Palantir system,
+  one vendor's model) correctly kept off every face (absolute rule + disclosed conflict of interest).
+  Findings: (1 LOW) a named operation ("Epic Fury") on two rendered surfaces vs. Instance 1's generic
+  treatment; (2 NIT) Instance 1 HARM quote dropped the source's own bracket "[as having been targeted
+  using AI]"; (3 NIT) Instance 2 ACT quote truncated "…what to shoot" without marking the drop.
+
+**Fixes discharged in-session** (gate re-run on the changed state, conductor delta-check first-hand):
+- **CENTCOM named** on all three officials + the naming-policy statement, takedown refutation, README
+  (Kritiker note 1) — the **operation, program, and any AI vendor kept generic** (Verifier finding 1 +
+  the absolute rule; the coherent split — name the accountable institution, not the codename/vendor).
+- **Quote continuations restored verbatim** after re-fetching Airwars + DefenseScoop to confirm the
+  exact text before adding words: Instance 1 "…described **[as having been targeted using AI]**" (also
+  strengthens the hinge); Instance 2 full sentence "…what to shoot **and what not to shoot and when to
+  shoot**" (Verifier findings 2, 3).
+- **Case 02 hinge rendered** from the island, before the answer-slot so the condition-2 safeguard still
+  lands last (Kritiker note 2).
+- Re-verified first-hand: island byte-identical to `data.json`; 0 co-render violations both cases; self-test
+  PASS at boot and after every transition; no "Epic Fury"/"combatant command" on any rendered surface;
+  no page errors.
+
+**Binding increment 2:** Kritiker notes 3 (glyphs) + 4 (tag-density timing); + a build-hygiene note —
+Face Two still hardcodes several lines as render literals mirroring the island; render Face Two fully
+from the island so data and display cannot drift (they match now, checked line-by-line, but the risk
+should be closed structurally). Then the premiere gate — human playthrough first (session-04
+precedent) — then the `/studio` site surface (SITE-API; a REQUESTS ask when the premiere approaches).
+
+| Date / session | Voice | Verdict |
+|---|---|---|
+| 2026-07-16 / 15 | Dramaturg + Builder + Kritiker + Verifier (increment 1 build + gate) | **INCREMENT 1 SHIPPED.** Kritiker CONTINUE WITH NOTES; Verifier PASS WITH FINDINGS; findings 1–3 + Kritiker notes 1–2 discharged in-session; conductor delta-checked (0 co-render both cases, self-test PASS). Notes 3, 4 + render-from-island bind increment 2 |

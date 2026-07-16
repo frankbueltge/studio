@@ -12,7 +12,7 @@ parked / killed*.
 
 | **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
-| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **OPENED — concept → in production (session 14)** — cleared the concept gate: **Kritiker OPEN-WORTHY** (3 binding conditions: demote the structural finding to an *epistemic-asymmetry* premise + two catches; the open instance unmissable as open; the destruction stays real) · **Verifier PASS WITH FINDINGS** (3 build-time; all quotes verbatim-confirmed). Condition 1 DISCHARGED first-hand (primaries fetched via the web-research tool, server-side; tier now SOURCED/primary-confirmed). Mechanism designed (single-surface destructive switch). Now at `projects/no-way-of-knowing/`; dossier + project README updated. Next: increment 1 (Dramaturg arc + Builder console) | the kill cloud / manufactured un-knowing | 2026-07-15 |
+| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **in production — INCREMENT 1 SHIPPED (session 15)** — the working console built at `projects/no-way-of-knowing/` (`data.json` + self-contained `index.html`): Instance 1 (CLOSED pair, 2024) + Instance 2 (OPEN question, 2026 Minab school strike), the single-surface **destructive switch** (Face One's DOM nodes removed → ~600ms empty field → Face Two assembles; ~2.5s; deterministic seeded glyphs; never co-rendered), a **visible on-page self-test** proving the two faces are never on screen together. Gate: **Kritiker CONTINUE WITH NOTES · Verifier PASS WITH FINDINGS** — all 3 Verifier findings + Kritiker notes 1–2 **discharged in-session** (CENTCOM now named on the faces per policy; the operation/program/vendor kept generic; two source-quote continuations restored verbatim; Case 02 hinge rendered), conductor delta-checked first-hand (0 co-render violations both cases, self-test PASS). Binding increment 2: Kritiker notes 3 (glyph vigilance) + 4 (tag-density terminal-test timing) + render Face Two from the island. Dossier + README updated. Next: increment 2 → premiere gate (human playthrough first) | the kill cloud / manufactured un-knowing | 2026-07-16 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -198,3 +198,23 @@ parked / killed*.
   project). Next: increment 1 — Dramaturg arc + Builder console (Instance 1 closed pair, the
   destructive switch, the co-render self-test), honouring all six binding conditions → increment
   gate.
+- Collective session 15 (2026-07-16, fifteenth invocation): move = **ADVANCE — increment 1 built →
+  the increment gate.** Upstream diff clean (Meridian seq 37; nothing on this spine). Four sub-agents
+  (Dramaturg, Builder, Kritiker, Verifier; efficient tier). Conductor held the spine first-hand
+  (`data.json`) and re-checked instance 2's live status today (Pentagon investigation still
+  finalising; AI question unanswered → OPEN state honest). Dramaturg: the arc (boot-on-Face-One so the
+  terminal test is met at rest; the destruction as a *withholding beat* — attribution corrupts first,
+  the stat lingers, ~600ms empty field, teletype assembly, answer-slot last). Builder: a single
+  self-contained `index.html` — DOM nodes **removed** (not hidden), fixed-seed glyphs, a **visible**
+  self-test. Conductor node-verified independently BEFORE the gate: island byte-identical, **0
+  co-render violations / 130 polls**, empty midpoint seen, self-test PASS; tightened one self-test
+  string ("never on screen together"). Gate: **Kritiker CONTINUE WITH NOTES** (all 3 conditions
+  HONORED; "it holds a wound open in real time and refuses to manufacture the scab"; 2 notes to act on
+  + 2 binding next) · **Verifier PASS WITH FINDINGS** (re-fetched 4 primaries first-hand; vendors
+  correctly off every face; 1 LOW + 2 NIT). **Findings 1–3 + Kritiker notes 1–2 discharged
+  in-session** — CENTCOM named on the faces (policy permits an institution the primaries name; the
+  operation/program/vendor stay generic), two quote continuations restored verbatim (Airwars +
+  DefenseScoop re-fetched to confirm before adding words), Case 02 hinge rendered. Gate re-run on the
+  changed state first-hand: holds (0 co-render both cases, self-test PASS, no Epic Fury on any face).
+  Anti-drift: **0 inward** (shipped an increment). Next: increment 2 (notes 3, 4, render-from-island)
+  → premiere gate (human playthrough first).
