@@ -1,0 +1,115 @@
+{
+  "work": "no-way-of-knowing",
+  "increment": 1,
+  "tier_of_spine": "SOURCED / primary-confirmed (studio's own research; every quote a verbatim substring of a cited primary, fetched first-hand)",
+  "extracted": "2026-07-15 (session 14, concept gate) — primaries fetched server-side via the web-research route",
+  "revised": "2026-07-16 (session 15, increment 1): Instance 2 monitoring status re-checked first-hand and advanced — the investigation was reportedly submitted in April 2026 but, as of 2026-07-16, has not been publicly released (Reed et al., 13 July 2026); the AI-role question remains publicly unanswered",
+  "subject": {
+    "statement": "The state said BOTH sentences on the record — total epistemic confidence when it acts (machine targeting 'critical to our function', letting leaders 'make smarter decisions faster than the enemy can react', across thousands of targets) and declared un-knowing when it harms ('no way of knowing whether this strike is one of the 85'). The console never claims 'AI killed this person' — that is unprovable and it says so. It makes a stranger FEEL the seam by forcing the same either/or the state performs: to read the second sentence you must lose the first.",
+    "premise_not_finding": "The work presents the epistemic-asymmetry PREMISE — knowledge-as-asset when the machine is credited, ignorance-as-shield at the moment attribution would name a death — plus its first two catches (one closed, one open). It does NOT claim a proven structural or systematic pattern in its own voice (Kritiker condition 1, session 14; standing decision 'a finding at n=2 is a premise, not a proven pattern')."
+  },
+  "naming_policy": {
+    "tier": "POLICY (team steer, 2026-07-12, binding)",
+    "statement": "No personal name of a private individual in this work's own voice. The civilian killed appears as role + place + date + institutional acknowledgment; officials appear as institutional roles (CENTCOM CTO, CENTCOM/OIR spokesperson, CENTCOM commander); the school's victims appear only as per-source aggregate toll. Personal names survive only as citation text inside the linked primary sources.",
+    "vendor_rule": "No AI product, company, or tool vendor is named on any face. One primary names specific commercial contractors behind the operation's AI; this is held as an off-spine lead only — because of the collective's absolute vendor/product rule AND a disclosed conflict of interest (one named vendor makes the tools this collective runs on). The confidence face rests on the government's own words and the fact of a machine-targeting program kept generic; the program's proper name is kept generic on every face."
+  },
+  "instance_1": {
+    "label": "CLOSED PAIR",
+    "tier": "SOURCED / primary-confirmed",
+    "one_line": "A 2 Feb 2024 strike; the confidence and the denial hinge on the SAME 85 strikes — the state's mutual exclusion in its own two sentences, on one set.",
+    "act": {
+      "role": "CENTCOM Chief Technology Officer",
+      "outlet": "Bloomberg",
+      "date_context": "early February 2024; reported 2024",
+      "verbatim": [
+        "struck more than 85 targets in Iraq and Syria",
+        "helped narrow targets for strikes in Iraq and Syria",
+        "…has become exceptionally critical to our function."
+      ],
+      "quote_discipline": "The third quote is lead-ellipsised (Verifier obligation 6): the dropped subject was the machine-targeting program's proper name, which the vendor rule keeps off the face. The ellipsis signals the omission honestly; nothing is added.",
+      "url": "https://www.bloomberg.com/features/2024-ai-warfare-project-maven/"
+    },
+    "harm": {
+      "role": "a 20-year-old construction student, killed 2 Feb 2024 (named only in the cited investigation)",
+      "acknowledgment_outlet": "Airwars, with The Independent (10 March 2026 — the original outlet)",
+      "spokesperson": "CENTCOM / Operation Inherent Resolve spokesperson",
+      "verbatim": [
+        "There is no indication that AI was used at any point in the targeting process,",
+        "We have no way of knowing whether this strike is one of the 85 [strikes] that Ms. Moore described."
+      ],
+      "url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/"
+    },
+    "hinge": "The same 85. The program helped target the 85; whether it targeted THIS death among them is declared unknowable. The console preserves 'no way of knowing' and never asserts the death WAS one of the 85 (Verifier, session 14 — the '85' link is made by the spokesperson in-source, not manufactured)."
+  },
+  "instance_2": {
+    "label": "OPEN QUESTION",
+    "tier": "SOURCED / primary-confirmed (confidence face); LIVE / publicly unanswered (harm face)",
+    "one_line": "Operation Epic Fury, 2026: the confidence is on the record; the answer is not. The console fabricates NO denial quote for this instance — the open state is the truth it shows (Kritiker condition 2, session 14).",
+    "act": {
+      "role": "CENTCOM commander",
+      "outlet": "DefenseScoop / NBC (video, 11 March 2026)",
+      "verbatim": [
+        "help us sift through vast amounts of data in seconds so our leaders can cut through the noise and make smarter decisions faster than the enemy can react",
+        "Humans will always make final decisions on what to shoot"
+      ],
+      "targets_attributed": "CENTCOM said it struck about 6,000 targets in Iran in the first two weeks of the war (per multiple reports); ~2,000 in the first four days (per legal-analysis reporting). Attributed per source, not harmonised.",
+      "url": "https://defensescoop.com/2026/03/11/us-military-using-ai-against-iran-operation-epic-fury-adm-cooper/",
+      "url_secondary": "https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083"
+    },
+    "harm": {
+      "what": "A 28 Feb 2026 strike on the Shajareh Tayyebeh girls' elementary school in Minab, Hormozgan, on the first day of the war.",
+      "toll_per_source": [
+        "\"more than 170 people, most of them children\" — NBC News",
+        "\"At least 156 children and teachers\" — Iranian officials, via Sky News (13 July 2026)",
+        "\"over 100 children\" / \"156 people\" — Amnesty International",
+        "\"approximately 120 children and at least 175 people in total\" — U.S. senators' letter (13 July 2026)"
+      ],
+      "toll_discipline": "Figures vary by source and are ATTRIBUTED, never harmonised into one number (legal-hygiene rule; Verifier, sessions 13–14).",
+      "state_framing_on_record": [
+        "A U.S. Tomahawk munition was 'likely responsible' (initial U.S. military investigation, per Reuters/NBC).",
+        "'Old intelligence showed it to be a military target' / outdated intelligence used to build the targeting packages — the state's on-record explanation (per NBC, Reuters, Sky News).",
+        "Per the New York Times (read second-hand, via Arms Control Today, May 2026 — this studio did not fetch the Times directly), officials said the error was 'unlikely to have been the result of new technology'; the internal report characterised it as human error — while the machine-targeting program WAS used to build the operation's target list."
+      ],
+      "the_open_question": "The machine is named NEITHER way in an answer to the specific death. 120 members of Congress (March 2026) asked the Pentagon what role AI played in selecting targets — 'something that could be addressed in the results of the Pentagon investigation' (NBC). That question is, as of the monitoring date below, publicly unanswered.",
+      "urls": [
+        "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967",
+        "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/",
+        "https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170",
+        "https://www.armscontrol.org/act/2026-05/news/ai-plays-major-role-war-iran"
+      ]
+    }
+  },
+  "monitoring_status": {
+    "tier": "SOURCED / primary-confirmed — studio monitoring status, NOT an unsourced world-fact (Verifier obligation 4)",
+    "last_checked": "2026-07-16",
+    "statement": "As of 2026-07-16: the Department of Defense investigation into the strike was reportedly submitted in April 2026 but has NOT been publicly released. On 13 July 2026 more than two dozen U.S. senators demanded its findings be released — within one week, by 20 July 2026 — and Congress briefed. The question of AI's role, first put by 120 members of Congress in March 2026, remains publicly unanswered. No second CLOSED confidence/denial pair has been confirmed since Instance 1. This line ships with its check-date and is re-checked before any re-serving; the console never manufactures content to feed the serial.",
+    "urls": [
+      "https://www.reed.senate.gov/news/releases/reed-colleagues-demand-pentagon-release-investigation-of-deadly-iran-school-strike-without-further-delay",
+      "https://news.sky.com/story/senators-demand-pentagon-reveals-outcome-of-minab-school-strike-probe-13563191"
+    ]
+  },
+  "imagined": {
+    "tier": "IMAGINED — marked on the work's face, visibly distinct from the SOURCED spine (Verifier obligation 5)",
+    "elements": "The console conceit itself — the two-faced surface, the 'ACT / HARM' framing, the single destructive control and its ~2.5s de-resolution, the labels 'ACT' and 'HARM' — is this studio's curatorial form, not the state's language. It is fiction in the sense that the state built no such console; the sentences it holds are not fiction. Every quoted sentence on either face is SOURCED / primary-confirmed and cited."
+  },
+  "mechanism": {
+    "tier": "IMAGINED form enacting a SOURCED economy",
+    "statement": "Single full-bleed surface, one face at a time — no tabs, no split view, no scroll containing both. Boots on Face One (ACT). Exactly one control, labelled with the state's own question: 'Was the machine involved in this death?' Pressing it is destructive and slow (~2.5s): Face One de-resolves to an empty field; only from emptiness does Face Two (HARM) assemble. The two faces are never legible at once; returning costs the same in reverse. The visitor spends one sentence to buy the other — the economy the state performs.",
+    "guards_binding": [
+      "No persistent toggle.",
+      "No back/forward that restores a face.",
+      "Never co-rendered — the DOM of one face is destroyed before the other assembles.",
+      "The emptiness between faces IS the argument (Kritiker condition 3, session 14 — the anti-Spielerei guard). The day the destruction becomes a cached animation over a preserved DOM, the work is dead."
+    ],
+    "self_test": "An on-page self-test (house pattern) proves at load-time and after each switch that the two faces are never co-rendered (exactly one face element present in the DOM; the other fully removed)."
+  },
+  "neighbors": {
+    "airwars": "Airwars, 'The First Civilian Confirmed Killed in an AI-Assisted Strike?' (catalogued atlas artwork) — terminal & evidentiary. Daylight: the console adds NOTHING evidentiary (conceded openly) but is serial where Airwars is terminal, enacts the mutual exclusion on the body, and stands inside a live, open instance Airwars was not built to hold.",
+    "aaajiao": "aaajiao, 'Minority Algorithm' — algorithmic subjectivity / metaphor. Daylight: the console refuses metaphor, pinned to dated state utterances and specific deaths.",
+    "dnl": "Disruption Network Lab, 'Investigating the Kill Cloud' (incl. Suchman's lecture) — discursive / expert / lecture-length. Daylight: the console is non-discursive, one-minute bodily enactment."
+  },
+  "takedown": {
+    "sentence": "A competent, honest gallery restaging of a finding an investigative outlet already published and closed — it juxtaposes two quotes anyone can read in the original source and adds no fact, no risk, nothing new.",
+    "refutation": "On (c) form + (b) risk, NOT on (a): only a serial, self-dating machine can hold a LIVE, un-finalised instance where the answer-slot honestly shows a pending, withheld question rather than a written denial — terminal prose cannot, because the fact does not yet exist. The destructive switch produces a finding of EXPERIENCE (spend the boast to buy the denial) no article can. It implicates a serving combatant command and the Pentagon by their own dated words in an actively-withheld investigation into the killing of children. The (a) structural-finding leg is demoted (Kritiker condition 1) — the work does not lean on it."
+  }
+}

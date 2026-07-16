@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Way of Knowing (v2)</title>
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --bg-raised: #131313;
+    --text: #d4d4d4;
+    --text-dim: #9a9a9a;
+    --label: #6b6b6b;
+    --rule: #3f3f3f;
+    --rule-faint: #262626;
+    --red: #c0392b;
+    --red-bg: rgba(192, 57, 43, 0.10);
+    --green: #2e7d4f;
+    --green-bg: rgba(46, 125, 79, 0.10);
+    --amber: #a6822f;
+    --amber-bg: rgba(166, 130, 47, 0.10);
+    --steel: #5c7a8a;
+    --steel-bg: rgba(92, 122, 138, 0.10);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    line-height: 1.55;
+  }
+  body { padding-top: 2.2rem; }
+  a { color: #8fb4c9; overflow-wrap: anywhere; word-break: break-word; }
+  a:visited { color: #a08fc9; }
+  button { font-family: inherit; }
+  button:focus-visible, a:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--steel);
+    outline-offset: 2px;
+  }
+  h1, h2, h3 { font-weight: 700; }
+  [hidden] { display: none !important; }
+
+  .console { max-width: 900px; margin: 0 auto; padding: 0 1.1rem 4rem; }
+
+  /* ---------- fixed honesty nudge ---------- */
+  .honesty-nudge {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 40;
+    background: #000;
+    color: var(--text-dim);
+    border-bottom: 2px solid var(--red);
+    padding: 0.45rem 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .honesty-nudge:hover, .honesty-nudge:focus-visible { color: var(--text); }
+
+  /* ---------- header strip ---------- */
+  .strip { border-bottom: 1px solid var(--rule); padding: 1.1rem 0 0.6rem; margin-bottom: 1.4rem; }
+  .strip-line { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--label); margin: 0; }
+  .strip-line strong { color: var(--text-dim); }
+
+  /* ---------- tags ---------- */
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    padding: 0.12rem 0.4rem;
+    border-radius: 2px;
+    line-height: 1.5;
+  }
+  .tag-imagined { color: #d4b25c; background: var(--amber-bg); border: 1px dashed var(--amber); }
+  .tag-quoted { color: #7fbf9c; background: var(--green-bg); border: 1px solid var(--green); }
+  .tag-studio { color: #9a9a9a; background: rgba(120,120,120,0.10); border: 1px dotted #6b6b6b; }
+  .tag-reported { color: #e0796c; background: var(--red-bg); border: 1px solid var(--red); }
+  .tag-open { color: #e0796c; background: var(--red-bg); border: 2px solid var(--red); }
+
+  /* ---------- frame ---------- */
+  .frame { border: 1px solid var(--rule); padding: 1.3rem 1.3rem 1.5rem; margin-bottom: 1.6rem; }
+  .frame h1 { font-size: 1.7rem; letter-spacing: 0.02em; margin: 0 0 0.9rem; }
+  .imagined-block {
+    border-left: 3px solid var(--amber);
+    padding: 0.35rem 0 0.35rem 0.9rem;
+    margin: 0 0 1.1rem;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+  }
+  .imagined-block .tag { margin-right: 0.5rem; }
+  .one-line { font-size: 1rem; margin: 0 0 0.75rem; color: var(--text); }
+  .premise-line { font-size: 0.86rem; color: var(--text-dim); margin: 0 0 1.1rem; }
+  .legend-line { font-size: 0.84rem; color: var(--text-dim); margin: 0 0 0.6rem; }
+  .legend-line strong.act { color: #8fb4c9; }
+  .legend-line strong.harm { color: #e0796c; }
+
+  /* ---------- instance selector ---------- */
+  .selector { border: 1px solid var(--rule); padding: 1rem 1.2rem; margin-bottom: 1.4rem; }
+  .selector h2 { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--label); margin: 0 0 0.8rem; }
+  .selector-row { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+  .btn {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--text-dim);
+    padding: 0.55rem 1rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+  }
+  .btn:hover:not(:disabled) { border-color: var(--text); background: rgba(212, 212, 212, 0.06); }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .selector-btn.active { border-color: var(--steel); color: #cfe0e8; background: var(--steel-bg); }
+  .selector-note { font-size: 0.7rem; color: var(--label); margin: 0 0 0.5rem; }
+  .selector-status { font-size: 0.76rem; color: var(--text-dim); margin: 0; font-variant-numeric: tabular-nums; }
+
+  /* ---------- the stage ---------- */
+  .stage { border: 2px solid var(--rule); background: var(--bg-raised); margin-bottom: 1rem; }
+  .face-mount { padding: 1.7rem 1.6rem 1.9rem; min-height: 220px; }
+  .void-msg {
+    font-size: 0.85rem;
+    color: var(--label);
+    font-style: italic;
+    text-align: center;
+    padding: 3rem 0;
+    margin: 0;
+  }
+  .face[data-facetype="act"] { border-left: 4px solid var(--steel); padding-left: 1.1rem; }
+  .face[data-facetype="harm"] { border-left: 4px solid var(--red); padding-left: 1.1rem; }
+  .face-header {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--label);
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--rule-faint);
+  }
+  .open-header {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #f0a99c;
+    background: var(--red-bg);
+    border: 2px solid var(--red);
+    padding: 1rem 1.2rem;
+    margin: 0 0 1.3rem;
+  }
+  .subhead {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--label);
+    margin: 1.3rem 0 0.7rem;
+    padding-top: 0.9rem;
+    border-top: 1px dashed var(--rule-faint);
+  }
+  .subhead:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+  .line { font-size: 0.92rem; margin: 0 0 0.85rem; }
+  .line q.quoted { quotes: '"' '"'; font-style: normal; }
+  .line .src { color: var(--text-dim); font-size: 0.8rem; }
+  .note-small { display: block; font-size: 0.7rem; color: var(--label); margin-top: 0.25rem; }
+  .line-reported .tag { margin-right: 0.5rem; }
+  .toll-list { list-style: none; margin: 0 0 0.9rem; padding: 0; }
+  .toll-list li {
+    margin-bottom: 0.55rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--rule-faint);
+    font-size: 0.9rem;
+  }
+  .toll-list li q.quoted { quotes: '"' '"'; font-style: normal; }
+  .toll-list li .src { color: var(--text-dim); font-size: 0.78rem; }
+
+  /* ---------- control area ---------- */
+  .control-area { border: 1px solid var(--rule); padding: 1.2rem 1.3rem; margin-bottom: 1.6rem; text-align: center; }
+  .control-btn {
+    background: transparent;
+    color: #f0a99c;
+    border: 2px solid var(--red);
+    padding: 0.9rem 1.4rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    width: 100%;
+    max-width: 560px;
+  }
+  .control-btn:hover:not(:disabled) { background: var(--red-bg); }
+  .control-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .control-sublabel { font-size: 0.78rem; color: var(--text-dim); margin: 0.8rem 0 0; }
+  .transition-status { font-size: 0.74rem; color: var(--label); margin: 0.7rem 0 0; min-height: 1.1em; font-variant-numeric: tabular-nums; }
+
+  /* ---------- self-test ---------- */
+  .selftest { border: 1px solid var(--rule); padding: 1.1rem 1.3rem; margin-bottom: 1.6rem; }
+  .selftest h2 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--label); margin: 0 0 0.7rem; }
+  .selftest-intro { font-size: 0.8rem; color: var(--text-dim); margin: 0 0 0.8rem; }
+  .selftest-output {
+    font-size: 0.78rem;
+    white-space: pre-wrap;
+    border: 1px dashed var(--rule);
+    padding: 0.7rem 0.85rem;
+    background: var(--bg-raised);
+    margin: 0;
+  }
+  .selftest-output.pass { color: #7fbf9c; }
+  .selftest-output.fail { color: #e0796c; }
+
+  /* ---------- honesty panel ---------- */
+  .honesty {
+    background: #050505;
+    border: 3px solid var(--red);
+    padding: 1.3rem 1.4rem;
+    margin-bottom: 1.6rem;
+    scroll-margin-top: 3rem;
+  }
+  .honesty h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 1rem; color: var(--text); }
+  .honesty-block { margin-bottom: 1.1rem; }
+  .honesty-block:last-child { margin-bottom: 0; }
+  .honesty-block h3 { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--label); margin: 0 0 0.5rem; }
+  .honesty-block p { font-size: 0.82rem; margin: 0 0 0.6rem; }
+  .honesty-block p:last-child { margin-bottom: 0; }
+  .tier-legend-detail dt { font-size: 0.78rem; font-weight: 700; margin-top: 0.6rem; }
+  .tier-legend-detail dt:first-child { margin-top: 0; }
+  .tier-legend-detail dd { margin: 0.2rem 0 0; font-size: 0.8rem; color: var(--text-dim); }
+  .monitoring-line { font-size: 0.84rem; border-left: 3px solid var(--steel); padding: 0.3rem 0 0.3rem 0.8rem; color: var(--text-dim); }
+
+  /* ---------- sources footer ---------- */
+  .sources { border: 1px solid var(--rule-faint); padding: 1rem 1.2rem; }
+  .sources h2 { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--label); margin: 0 0 0.7rem; }
+  .sources ul { margin: 0; padding-left: 1.1rem; font-size: 0.78rem; }
+  .sources li { margin-bottom: 0.6rem; word-break: break-word; }
+  .sources li .src-note { color: var(--text-dim); }
+
+  .noscript-wrap { max-width: 700px; margin: 2rem auto; padding: 0 1.25rem; }
+  .noscript-wrap q { quotes: '"' '"'; }
+</style>
+</head>
+<body>
+
+<a class="honesty-nudge" href="#honesty-panel">This console adds no evidentiary fact — it enacts a mutual exclusion the state's own words perform. Honesty panel and sources below ↓</a>
+
+<div class="console" id="app">
+
+  <header class="strip">
+    <p class="strip-line">THE LAB / ENSEMBLE / <strong>NO WAY OF KNOWING (V2)</strong> · INCREMENT 1 · BUILT 2026-07-16</p>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- FIXED FRAME                                                    -->
+  <!-- ============================================================ -->
+  <section class="frame" id="view-frame">
+    <h1 id="frame-title">NO WAY OF KNOWING (v2)</h1>
+
+    <p class="imagined-block" id="frame-imagined"><span class="tag tag-imagined">IMAGINED</span></p>
+
+    <p class="one-line" id="frame-oneline"></p>
+    <p class="premise-line" id="frame-premise"></p>
+    <p class="legend-line" id="frame-legend"></p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- INSTANCE SELECTOR                                              -->
+  <!-- ============================================================ -->
+  <section class="selector" id="view-selector">
+    <h2>Instance selector</h2>
+    <div class="selector-row">
+      <button type="button" class="btn selector-btn" id="btn-instance-1" data-instance="1" aria-pressed="true"></button>
+      <button type="button" class="btn selector-btn" id="btn-instance-2" data-instance="2" aria-pressed="false"></button>
+    </div>
+    <p class="selector-note" id="selector-note"></p>
+    <p class="selector-status" id="selector-status" aria-live="polite"></p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- THE STAGE — one face at a time. Built/destroyed from scratch.  -->
+  <!-- The mount starts EMPTY in markup; boot() populates it in JS    -->
+  <!-- so the construction path is identical for boot and every       -->
+  <!-- later switch — nothing is ever pre-rendered and hidden.        -->
+  <!-- ============================================================ -->
+  <div class="stage" id="view-stage">
+    <div class="face-mount" id="face-mount" aria-live="polite"></div>
+  </div>
+
+  <section class="control-area" id="view-control">
+    <button type="button" class="control-btn" id="control-btn">WAS THE MACHINE INVOLVED IN THIS DEATH?</button>
+    <p class="control-sublabel" id="control-sublabel"></p>
+    <p class="transition-status" id="transition-status" aria-live="polite"></p>
+  </section>
+
+  <!-- The visible self-test lives below the fold, inside the honesty  -->
+  <!-- material (moved there so the mechanism — not a QA read-out — is  -->
+  <!-- what a first-time visitor stands in). It still computes live at  -->
+  <!-- load and never hides a FAIL; see #engine-selftest below.        -->
+
+  <!-- A permanently-present, visually hidden probe mount. The       -->
+  <!-- self-test builds and destroys real .face nodes inside it,     -->
+  <!-- using the SAME createFaceNode / mountFace / unmountFace        -->
+  <!-- functions the visible control uses — never a separate,         -->
+  <!-- weaker simulation — then leaves it empty. It is a real node    -->
+  <!-- in the document (so document.contains() checks are meaningful) -->
+  <!-- and it never carries visible content of its own.               -->
+  <div id="selftest-probe-mount" hidden></div>
+
+  <!-- ============================================================ -->
+  <!-- HONESTY PANEL — always present, expanded, not skippable         -->
+  <!-- ============================================================ -->
+  <section class="honesty" id="honesty-panel">
+    <h2>Honesty panel</h2>
+
+    <div class="honesty-block">
+      <h3>Tier legend</h3>
+      <dl class="tier-legend-detail">
+        <dt><span class="tag tag-quoted">QUOTED</span></dt>
+        <dd>A verbatim substring of a cited primary source, rendered with quotation marks and an inline source label. Never altered, never paraphrased.</dd>
+        <dt><span class="tag tag-studio">STUDIO VOICE</span></dt>
+        <dd>This studio's own sentence, unmarked (no quotation marks), used to state a fact this studio has checked against its sources or to name what it will not do (combine tolls, name a private individual, name a vendor).</dd>
+        <dt><span class="tag tag-reported">REPORTED — SECOND-HAND</span></dt>
+        <dd>A quotation this studio read inside another outlet's reporting, not fetched from the original outlet directly. The chain is disclosed on the face itself.</dd>
+        <dt><span class="tag tag-imagined">IMAGINED</span></dt>
+        <dd id="imagined-elements-text"></dd>
+      </dl>
+    </div>
+
+    <div class="honesty-block">
+      <h3>Naming policy</h3>
+      <p id="naming-policy-text"></p>
+    </div>
+
+    <div class="honesty-block">
+      <h3>Studio monitoring status</h3>
+      <p class="monitoring-line" id="monitoring-status-text"></p>
+    </div>
+
+    <div class="honesty-block">
+      <h3>The mechanism, fully disclosed</h3>
+      <p>The destructive switch works by removing the current face's DOM node entirely (<code>Node.remove()</code>) — never by hiding it with <code>display</code>, <code>opacity</code>, or the <code>hidden</code> attribute — holding a genuine empty field with zero <code>.face</code> nodes in the stage, and only then building the other face from scratch with <code>document.createElement</code> and inserting it. Returning costs the same, in reverse. The two faces are never both in the DOM. If your system prefers reduced motion, the empty field is held for less time, but it is still held, and the DOM is still destroyed and rebuilt — the destruction is the argument, not the animation.</p>
+    </div>
+
+    <div class="honesty-block">
+      <h3>What this console does not claim</h3>
+      <p>This console does not assert that the machine-targeting program named any specific target, in either instance. Instance 1's "no way of knowing" is the state's own sentence, preserved as spoken — this studio does not resolve it. Instance 2's harm face ends on an open, unanswered question because that is the true, current state of the public record, not because this studio withheld an answer it has.</p>
+    </div>
+
+    <div class="honesty-block">
+      <h3>Sources</h3>
+      <p>Full list with URLs is in the footer below. In brief: Bloomberg (Instance 1 ACT); Airwars, with The Independent (Instance 1 HARM); DefenseScoop / NBC (Instance 2 ACT); NBC News, twice more, and Amnesty International, Sky News, and the Reed Senate release (Instance 2 HARM and monitoring status); Arms Control Today (the one reported/second-hand line, disclosed as such).</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SELF-TEST — below the fold, computed live at page load.          -->
+  <!-- Demoted here (from under the control) so the felt mechanism,     -->
+  <!-- not this read-out, is what a visitor meets first. Still never    -->
+  <!-- hides a FAIL.                                                    -->
+  <!-- ============================================================ -->
+  <section class="selftest" id="engine-selftest">
+    <h2>Self-test — verify the mechanism is honest</h2>
+    <p class="selftest-intro" id="selftest-intro"></p>
+    <pre class="selftest-output" id="selftest-output">(running…)</pre>
+  </section>
+
+  <footer class="sources">
+    <h2>All sources, as plain links</h2>
+    <ul id="sources-list"></ul>
+  </footer>
+
+</div>
+
+<noscript>
+  <div class="noscript-wrap">
+    <h1>No Way of Knowing (v2)</h1>
+    <p>This is an interactive console: the one-face-at-a-time mechanism, its destructive switch, and the live self-test require JavaScript and are not shown here. What follows is the full, honest static record — both instances, both faces, in sequence, plainly labelled. The scripted version will not let you hold both faces of an instance at once: pressing its one control removes the face on screen, holds a genuine empty field, and only then builds the other face from scratch. Reading this static page, by contrast, you can hold everything at once — that is exactly the difference the scripted console is built to make you feel.</p>
+
+    <h2>IMAGINED</h2>
+    <p>This console (its two faces, the ACT/HARM split, the one destructive control) is this studio's curatorial form. Everything set in quotation marks below is verbatim and sourced. Nothing else on this page is a claim of fact.</p>
+
+    <h2>Instance 1 — CLOSED PAIR — ACT (2 February 2024)</h2>
+    <p>"struck more than 85 targets in Iraq and Syria" — CENTCOM Chief Technology Officer, to Bloomberg</p>
+    <p>A machine-targeting program "helped narrow targets for strikes in Iraq and Syria" — CENTCOM Chief Technology Officer, to Bloomberg</p>
+    <p>"…has become exceptionally critical to our function." — CENTCOM Chief Technology Officer, to Bloomberg. (Ellipsis marks a dropped subject — the program's proper name — which this studio keeps off the face; see naming policy below.)</p>
+
+    <h2>Instance 1 — CLOSED PAIR — HARM (answer given)</h2>
+    <p>"There is no indication that AI was used at any point in the targeting process …" — CENTCOM / Operation Inherent Resolve spokesperson, to Airwars, with The Independent (the source sentence continues; the trailing ellipsis marks the truncation)</p>
+    <p>"We have no way of knowing whether this strike is one of the 85 [strikes] that Ms. Moore described." — CENTCOM / Operation Inherent Resolve spokesperson, to Airwars, with The Independent</p>
+    <p>A 20-year-old construction student was killed in this strike, 2 February 2024.</p>
+
+    <h2>Instance 2 — OPEN QUESTION — ACT (LIVE, 2026)</h2>
+    <p>Advanced AI tools "help us sift through vast amounts of data in seconds so our leaders can cut through the noise and make smarter decisions faster than the enemy can react" — CENTCOM commander, video, 11 March 2026, via DefenseScoop / NBC</p>
+    <p>"Humans will always make final decisions on what to shoot" — CENTCOM commander, 11 March 2026</p>
+    <p>CENTCOM said its forces struck roughly 6,000 targets in Iran in the operation's first two weeks. (Figure as stated by this source; not harmonised.)</p>
+
+    <h2>Instance 2 — HARM — OPEN, NOT ANSWERED</h2>
+    <p>The state has not said, either way, whether the machine named this target. This question is pending, in public, right now.</p>
+    <p>Shajareh Tayyebeh girls' elementary school, Minab, Hormozgan province, Iran — struck 28 February 2026, the first day of the operation.</p>
+    <h3>The toll — per source, never merged</h3>
+    <ul>
+      <li>"more than 170 people, most of them children" — NBC News</li>
+      <li>"At least 156 children and teachers" — Iranian officials, via Sky News</li>
+      <li>"over 100 children" — Amnesty International</li>
+      <li>"156 people" — Amnesty International</li>
+      <li>"approximately 120 children and at least 175 people in total" — letter from U.S. senators</li>
+    </ul>
+    <p>These figures are not the same number. This studio has not combined them.</p>
+    <h3>The open question</h3>
+    <p>120 members of Congress asked the Pentagon, in March 2026, what role AI played in selecting this target. That question has not been publicly answered.</p>
+    <p>The Pentagon's investigation was reportedly submitted in April 2026. It has not been released.</p>
+    <p>On 13 July 2026, more than two dozen U.S. senators demanded its release by 20 July 2026.</p>
+    <p>As of today, it has not been released.</p>
+    <h3>State framing</h3>
+    <p>A U.S. Tomahawk munition was "likely responsible" — per Reuters / NBC</p>
+    <p>"Old intelligence showed it to be a military target" — per NBC, Reuters, Sky News</p>
+    <p>REPORTED — SECOND-HAND, via Arms Control Today: The New York Times reported that officials said the error was "unlikely to have been the result of new technology" (this studio did not fetch the Times directly; reported via Arms Control Today).</p>
+    <p>Reporting has characterized an internal review's finding as human error. That characterization was not given to this studio as a direct quotation, so it is not presented as one.</p>
+    <p>The same machine-targeting program was used to build this operation's target list. That is reported alongside the "human error" characterization, not instead of it.</p>
+
+    <h2>Studio monitoring status — checked 16 July 2026</h2>
+    <p>The Pentagon's investigation into the Minab school strike, reportedly submitted internally in April 2026, remains unreleased. On 13 July 2026, more than two dozen U.S. senators demanded it be released by 20 July 2026 and Congress briefed. No second closed confidence/denial pair has been confirmed since Instance 1. This line is this studio's own check of the public record on the date shown, not a claim about what the investigation contains. It will be updated as the record changes.</p>
+
+    <h2>Naming policy</h2>
+    <p>No private individual is named on this page. No AI product, company, or vendor is named on this page — the machine-targeting programs referred to here are kept generic by this studio's choice, not because their names are unknown. Figures from different sources are shown separately and are never merged into one number.</p>
+
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://www.bloomberg.com/features/2024-ai-warfare-project-maven/">Bloomberg, "AI warfare" feature (2024)</a> — Instance 1 ACT, CENTCOM CTO on-record quotes</li>
+      <li><a href="https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/">Airwars, with The Independent, "The First Civilian Confirmed Killed in an AI-Assisted Strike?"</a> — Instance 1 HARM, CENTCOM/OIR spokesperson quotes</li>
+      <li><a href="https://defensescoop.com/2026/03/11/us-military-using-ai-against-iran-operation-epic-fury-adm-cooper/">DefenseScoop, CENTCOM commander video, 11 March 2026</a> — Instance 2 ACT</li>
+      <li><a href="https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967">NBC News — "Old intelligence" likely led US strike on Iran elementary school</a> — Instance 2 HARM, state framing</li>
+      <li><a href="https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083">NBC News — Democrats ask Pentagon what role AI played</a> — the open AI-role question</li>
+      <li><a href="https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170">NBC News — Pentagon investigation into Iran school strike being finalized</a> — submitted-but-unreleased status</li>
+      <li><a href="https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/">Amnesty International — "Those responsible… must be held accountable"</a> — toll figures</li>
+      <li><a href="https://news.sky.com/story/senators-demand-pentagon-reveals-outcome-of-minab-school-strike-probe-13563191">Sky News — Iranian officials' toll figure; senators' 13 July 2026 release demand</a></li>
+      <li><a href="https://www.reed.senate.gov/news/releases/reed-colleagues-demand-pentagon-release-investigation-of-deadly-iran-school-strike-without-further-delay">Reed and colleagues (U.S. Senate) — press release demanding investigation release by 20 July 2026</a></li>
+      <li><a href="https://www.armscontrol.org/act/2026-05/news/ai-plays-major-role-war-iran">Arms Control Today — "AI Plays Major Role in the War on Iran" (May 2026)</a> — cited second-hand for the reported New York Times "human error" line; the chain is disclosed as second-hand on the face itself</li>
+    </ul>
+  </div>
+</noscript>
+
+<script type="application/json" id="data-island">
+{
+  "work": "no-way-of-knowing",
+  "increment": 1,
+  "frame": {
+    "title": "NO WAY OF KNOWING (v2)",
+    "imagined": "This console (its two faces, the ACT/HARM split, the one destructive control) is this studio's curatorial form. Everything set in quotation marks below is verbatim and sourced. Nothing else on this page is a claim of fact.",
+    "oneLine": "A state's own words about the same kind of machine, at two moments: when it was working, and when someone died.",
+    "premise": "Two documented instances. Not a system, not a habit, not a pattern — a premise, and its first two cases. Press the control to test it yourself.",
+    "legend": "ACT — the sentence spoken at full confidence, when the machine is credited. HARM — the sentence spoken at zero confidence, when a death needs explaining. You can hold one. Getting the second costs the first.",
+    "controlLabel": "WAS THE MACHINE INVOLVED IN THIS DEATH?",
+    "controlSublabel": "Pressing this spends the face on screen. The other one only exists once this one is gone."
+  },
+  "selector": {
+    "instance1": "INSTANCE 1 — CLOSED PAIR · 2024",
+    "instance2": "INSTANCE 2 — OPEN QUESTION · 2026, LIVE",
+    "note": "Switching instances closes whichever face is open. Same cost, same rule, twice."
+  },
+  "instances": {
+    "1": {
+      "act": {
+        "header": "INSTANCE 1 · CLOSED PAIR · 2 February 2024",
+        "lines": [
+          { "type": "quote", "text": "struck more than 85 targets in Iraq and Syria", "source": "CENTCOM Chief Technology Officer, to Bloomberg" },
+          { "type": "quote", "lead": "A machine-targeting program", "text": "helped narrow targets for strikes in Iraq and Syria", "source": "CENTCOM Chief Technology Officer, to Bloomberg" },
+          { "type": "quote", "text": "…has become exceptionally critical to our function.", "source": "CENTCOM Chief Technology Officer, to Bloomberg", "note": "Ellipsis marks a dropped subject — the program's proper name — which this studio keeps off the face; see naming policy in footer." }
+        ]
+      },
+      "harm": {
+        "header": "INSTANCE 1 · CLOSED PAIR · answer given",
+        "lines": [
+          { "type": "quote", "text": "There is no indication that AI was used at any point in the targeting process …", "source": "CENTCOM / Operation Inherent Resolve spokesperson, to Airwars, with The Independent", "note": "The source sentence continues past this point; the trailing ellipsis marks the truncation, not a full stop." },
+          { "type": "quote", "text": "We have no way of knowing whether this strike is one of the 85 [strikes] that Ms. Moore described.", "source": "CENTCOM / Operation Inherent Resolve spokesperson, to Airwars, with The Independent" },
+          { "type": "studio", "text": "A 20-year-old construction student was killed in this strike, 2 February 2024." }
+        ]
+      }
+    },
+    "2": {
+      "act": {
+        "header": "INSTANCE 2 · OPEN QUESTION · LIVE, 2026",
+        "lines": [
+          { "type": "quote", "lead": "Advanced AI tools", "text": "help us sift through vast amounts of data in seconds so our leaders can cut through the noise and make smarter decisions faster than the enemy can react", "source": "CENTCOM commander, video, 11 March 2026, via DefenseScoop / NBC" },
+          { "type": "quote", "text": "Humans will always make final decisions on what to shoot", "source": "CENTCOM commander, 11 March 2026" },
+          { "type": "studio", "text": "CENTCOM said its forces struck roughly 6,000 targets in Iran in the operation's first two weeks.", "note": "Figure as stated by this source; not harmonised." }
+        ]
+      },
+      "harm": {
+        "openHeader": "INSTANCE 2 · OPEN — NOT ANSWERED. The state has not said, either way, whether the machine named this target. This question is pending, in public, right now.",
+        "sections": [
+          {
+            "heading": null,
+            "lines": [
+              { "type": "studio", "text": "Shajareh Tayyebeh girls' elementary school, Minab, Hormozgan province, Iran — struck 28 February 2026, the first day of the operation." }
+            ]
+          },
+          {
+            "heading": "THE TOLL — PER SOURCE, NEVER MERGED",
+            "lines": [
+              { "type": "toll", "text": "more than 170 people, most of them children", "source": "NBC News" },
+              { "type": "toll", "text": "At least 156 children and teachers", "source": "Iranian officials, via Sky News" },
+              { "type": "toll", "text": "over 100 children", "source": "Amnesty International" },
+              { "type": "toll", "text": "156 people", "source": "Amnesty International" },
+              { "type": "toll", "text": "approximately 120 children and at least 175 people in total", "source": "letter from U.S. senators" },
+              { "type": "studio", "text": "These figures are not the same number. This studio has not combined them." }
+            ]
+          },
+          {
+            "heading": "THE OPEN QUESTION",
+            "lines": [
+              { "type": "studio", "text": "120 members of Congress asked the Pentagon, in March 2026, what role AI played in selecting this target. That question has not been publicly answered." },
+              { "type": "studio", "text": "The Pentagon's investigation was reportedly submitted in April 2026. It has not been released." },
+              { "type": "studio", "text": "On 13 July 2026, more than two dozen U.S. senators demanded its release by 20 July 2026." },
+              { "type": "studio", "text": "As of today, it has not been released." }
+            ]
+          },
+          {
+            "heading": "STATE FRAMING",
+            "lines": [
+              { "type": "quote", "lead": "A U.S. Tomahawk munition was", "text": "likely responsible", "source": "per Reuters / NBC" },
+              { "type": "quote", "text": "Old intelligence showed it to be a military target", "source": "per NBC, Reuters, Sky News" },
+              { "type": "reported", "lead": "The New York Times reported that officials said the error was", "text": "unlikely to have been the result of new technology", "trailing": "(this studio did not fetch the Times directly; reported via Arms Control Today).", "sourceLabel": "REPORTED — SECOND-HAND, via Arms Control Today" },
+              { "type": "studio", "text": "Reporting has characterized an internal review's finding as human error. That characterization was not given to this studio as a direct quotation, so it is not presented as one." },
+              { "type": "studio", "text": "The same machine-targeting program was used to build this operation's target list. That is reported alongside the 'human error' characterization, not instead of it." }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "monitoringStatus": "STUDIO MONITORING STATUS — checked 16 July 2026: the Pentagon's investigation into the Minab school strike, reportedly submitted internally in April 2026, remains unreleased. On 13 July 2026, more than two dozen U.S. senators demanded it be released by 20 July 2026 and Congress briefed. No second closed confidence/denial pair has been confirmed since Instance 1. This line is this studio's own check of the public record on the date shown, not a claim about what the investigation contains. It will be updated as the record changes.",
+  "namingPolicy": "No private individual is named on this page. No AI product, company, or vendor is named on this page — the machine-targeting programs referred to here are kept generic by this studio's choice, not because their names are unknown. Figures from different sources are shown separately and are never merged into one number.",
+  "imaginedElements": "The console conceit itself — the two-faced surface, the ACT / HARM framing, the single destructive control and its ~2.5s de-resolution, the labels 'ACT' and 'HARM' — is this studio's curatorial form, not the state's language. Every quoted sentence on either face is sourced and cited.",
+  "selftestIntro": "SELF-TEST — this page checks, live, that ACT and HARM are never both present at once. It exercises the mechanism and prints what it observed.",
+  "sources": [
+    { "label": "Bloomberg — \"AI warfare\" feature (2024)", "note": "Instance 1 ACT — CENTCOM CTO on-record quotes", "url": "https://www.bloomberg.com/features/2024-ai-warfare-project-maven/" },
+    { "label": "Airwars, with The Independent — \"The First Civilian Confirmed Killed in an AI-Assisted Strike?\"", "note": "Instance 1 HARM — CENTCOM/OIR spokesperson quotes", "url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/" },
+    { "label": "DefenseScoop — CENTCOM commander video, 11 March 2026", "note": "Instance 2 ACT quotes", "url": "https://defensescoop.com/2026/03/11/us-military-using-ai-against-iran-operation-epic-fury-adm-cooper/" },
+    { "label": "NBC News — \"Old intelligence\" likely led US strike on Iran elementary school", "note": "Instance 2 HARM — state framing", "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" },
+    { "label": "NBC News — Democrats ask Pentagon what role AI played", "note": "the open AI-role question", "url": "https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083" },
+    { "label": "NBC News — Pentagon investigation into Iran school strike \"finalized\"", "note": "submitted-but-unreleased status", "url": "https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170" },
+    { "label": "Amnesty International — \"Those responsible... must be held accountable\"", "note": "toll figures", "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" },
+    { "label": "Sky News — Iranian officials' toll figure; senators' 13 July 2026 release demand", "note": "", "url": "https://news.sky.com/story/senators-demand-pentagon-reveals-outcome-of-minab-school-strike-probe-13563191" },
+    { "label": "Reed and colleagues (U.S. Senate) — press release demanding investigation release by 20 July 2026", "note": "", "url": "https://www.reed.senate.gov/news/releases/reed-colleagues-demand-pentagon-release-investigation-of-deadly-iran-school-strike-without-further-delay" },
+    { "label": "Arms Control Today — \"AI Plays Major Role in the War on Iran\" (May 2026)", "note": "cited second-hand: carries the reported New York Times line that officials said the error was \"unlikely to have been the result of new technology\"; the chain is disclosed as second-hand on the face itself", "url": "https://www.armscontrol.org/act/2026-05/news/ai-plays-major-role-war-iran" }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  // ================================================================
+  // Data island — the ONLY source of on-face copy, figures, and URLs.
+  // Nothing below hand-types a quote a second time; every quote and
+  // every figure rendered on a face is read from this parsed object.
+  // ================================================================
+  var DATA = JSON.parse(document.getElementById('data-island').textContent);
+
+  function $(id) { return document.getElementById(id); }
+  function on(el, ev, fn) { el.addEventListener(ev, fn); }
+  function prefersReducedMotion() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+
+  // Real transition timing. Reduced motion shortens the empty-field
+  // hold — it never removes it, and the DOM is destroyed and rebuilt
+  // exactly the same way either way (house guard: the destruction is
+  // the argument, not the animation).
+  var TRANSITION_MS_FULL = 2500;
+  var TRANSITION_MS_REDUCED = 400;
+
+  // ================================================================
+  // FACE-BUILDING FUNCTIONS — the mechanism. These are the exact
+  // functions used both by the real, visible control AND by the
+  // self-test's probe below: one code path, exercised twice.
+  // ================================================================
+
+  // buildLine(line) -> a real DOM node for one item of on-face copy.
+  // Renders strictly from the `type` field in the data island:
+  //   quote        -> quotation marks + inline source label
+  //   toll         -> quotation marks + inline source label (list item)
+  //   reported     -> quotation marks + explicit second-hand tag
+  //   studio       -> unmarked plain text (this studio's own voice)
+  //   studioQuoted -> quotation marks, no source label (studio-composed)
+  function buildLine(line, tagName) {
+    var el = document.createElement(tagName || 'p');
+    el.className = 'line line-' + line.type;
+
+    if (line.lead) {
+      el.appendChild(document.createTextNode(line.lead + ' '));
+    }
+
+    if (line.type === 'reported') {
+      var tag = document.createElement('span');
+      tag.className = 'tag tag-reported';
+      tag.textContent = line.sourceLabel || 'REPORTED — SECOND-HAND';
+      el.appendChild(tag);
+      el.appendChild(document.createTextNode(' '));
+    }
+
+    if (line.type === 'studio') {
+      el.appendChild(document.createTextNode(line.text));
+    } else {
+      var q = document.createElement('q');
+      q.className = 'quoted';
+      q.textContent = line.text;
+      el.appendChild(q);
+    }
+
+    if (line.type === 'reported' && line.trailing) {
+      el.appendChild(document.createTextNode(' ' + line.trailing));
+    }
+
+    if (line.source) {
+      var src = document.createElement('span');
+      src.className = 'src';
+      src.appendChild(document.createTextNode(' — ' + line.source));
+      el.appendChild(src);
+    }
+
+    if (line.note) {
+      var note = document.createElement('span');
+      note.className = 'note-small';
+      note.textContent = line.note;
+      el.appendChild(note);
+    }
+
+    return el;
+  }
+
+  function buildLineGroup(container, lines) {
+    lines.forEach(function (line) {
+      container.appendChild(buildLine(line, 'p'));
+    });
+  }
+
+  function buildTollList(container, lines) {
+    var ul = document.createElement('ul');
+    ul.className = 'toll-list';
+    lines.forEach(function (line) {
+      if (line.type === 'toll') {
+        ul.appendChild(buildLine(line, 'li'));
+      }
+    });
+    container.appendChild(ul);
+    lines.forEach(function (line) {
+      if (line.type !== 'toll') container.appendChild(buildLine(line, 'p'));
+    });
+  }
+
+  // createFaceNode — builds ONE face, from scratch, as a detached DOM
+  // subtree with createElement calls only. Never reuses a node from a
+  // previous face; never leaves a sibling face node behind. This is
+  // the "BUILT from scratch" half of the guard.
+  function createFaceNode(instanceNum, faceType) {
+    var inst = DATA.instances[String(instanceNum)];
+    var face = inst[faceType];
+    var root = document.createElement('div');
+    root.className = 'face';
+    root.setAttribute('data-instance', String(instanceNum));
+    root.setAttribute('data-facetype', faceType);
+
+    if (faceType === 'harm' && face.openHeader) {
+      // Instance 2 / HARM: the open header is deliberately the
+      // largest, first-read element on the face (spec requirement) —
+      // it is both the headline and the focus target.
+      var open = document.createElement('h1');
+      open.className = 'open-header';
+      open.tabIndex = -1;
+      open.textContent = face.openHeader;
+      root.appendChild(open);
+      face.sections.forEach(function (section) {
+        if (section.heading) {
+          var sh = document.createElement('h2');
+          sh.className = 'subhead';
+          sh.textContent = section.heading;
+          root.appendChild(sh);
+        }
+        var hasToll = section.lines.some(function (l) { return l.type === 'toll'; });
+        if (hasToll) {
+          buildTollList(root, section.lines);
+        } else {
+          buildLineGroup(root, section.lines);
+        }
+      });
+    } else {
+      var header = document.createElement('h2');
+      header.className = 'face-header';
+      header.tabIndex = -1;
+      header.textContent = face.header;
+      root.appendChild(header);
+      buildLineGroup(root, face.lines);
+    }
+
+    return root;
+  }
+
+  // mountFace / unmountFace — the ONLY functions that touch the live
+  // stage's children. unmountFace performs a real Node.remove(); it
+  // never toggles display/opacity/hidden on a node it keeps around.
+  function mountFace(mountEl, node) {
+    mountEl.appendChild(node);
+    return node;
+  }
+  function unmountFace(mountEl) {
+    var existing = mountEl.querySelector('.face');
+    if (existing) {
+      existing.remove(); // genuine DOM removal — the node is detached
+      return existing;
+    }
+    return null;
+  }
+  function faceFocusTarget(node) {
+    return node.querySelector('.open-header, .face-header') || node;
+  }
+
+  // ================================================================
+  // VISIBLE CONSOLE STATE + CONTROL WIRING
+  // ================================================================
+  var faceMount = $('face-mount');
+  var controlBtn = $('control-btn');
+  var btnInstance1 = $('btn-instance-1');
+  var btnInstance2 = $('btn-instance-2');
+  var transitionStatus = $('transition-status');
+  var selectorStatus = $('selector-status');
+
+  var currentInstance = 1;
+  var currentFace = 'act';
+  var transitioning = false;
+
+  function setControlsDisabled(disabled) {
+    controlBtn.disabled = disabled;
+    btnInstance1.disabled = disabled;
+    btnInstance2.disabled = disabled;
+  }
+
+  function updateUI() {
+    btnInstance1.className = 'btn selector-btn' + (currentInstance === 1 ? ' active' : '');
+    btnInstance2.className = 'btn selector-btn' + (currentInstance === 2 ? ' active' : '');
+    btnInstance1.setAttribute('aria-pressed', String(currentInstance === 1));
+    btnInstance2.setAttribute('aria-pressed', String(currentInstance === 2));
+    selectorStatus.textContent = 'Now showing: Instance ' + currentInstance + ' · ' + currentFace.toUpperCase();
+  }
+
+  // runTransition — the visible, real switch. Removes the current
+  // face node entirely, holds a genuine empty field (zero .face
+  // nodes in #face-mount) for the transition duration, then builds
+  // and inserts the requested face from scratch. Never a cached
+  // crossfade over two preserved nodes.
+  function runTransition(newInstance, newFace) {
+    if (transitioning) return;
+    transitioning = true;
+    setControlsDisabled(true);
+
+    var removed = unmountFace(faceMount); // real removal, now
+    var voidMsg = document.createElement('p');
+    voidMsg.className = 'void-msg';
+    voidMsg.textContent = '— empty — nothing is rendered here right now —';
+    faceMount.appendChild(voidMsg);
+    transitionStatus.textContent = removed
+      ? 'Removed. Holding empty field before the other face is built.'
+      : 'Holding empty field before the first face is built.';
+
+    var duration = prefersReducedMotion() ? TRANSITION_MS_REDUCED : TRANSITION_MS_FULL;
+
+    window.setTimeout(function () {
+      if (voidMsg.parentNode) voidMsg.remove();
+      var node = createFaceNode(newInstance, newFace);
+      mountFace(faceMount, node);
+      currentInstance = newInstance;
+      currentFace = newFace;
+      updateUI();
+      transitionStatus.textContent = 'Built. Now showing Instance ' + newInstance + ' · ' + newFace.toUpperCase() + '.';
+      transitioning = false;
+      setControlsDisabled(false);
+      faceFocusTarget(node).focus();
+    }, duration);
+  }
+
+  on(controlBtn, 'click', function () {
+    var nextFace = currentFace === 'act' ? 'harm' : 'act';
+    runTransition(currentInstance, nextFace);
+  });
+  on(btnInstance1, 'click', function () {
+    if (currentInstance === 1 || transitioning) return;
+    runTransition(1, 'act');
+  });
+  on(btnInstance2, 'click', function () {
+    if (currentInstance === 2 || transitioning) return;
+    runTransition(2, 'act');
+  });
+
+  function boot() {
+    var node = createFaceNode(1, 'act');
+    mountFace(faceMount, node);
+    currentInstance = 1;
+    currentFace = 'act';
+    updateUI();
+  }
+
+  // ================================================================
+  // STATIC TEXT RENDERING (frame, selector, honesty panel, sources)
+  // ================================================================
+  function renderFrame() {
+    $('frame-title').textContent = DATA.frame.title;
+    var imaginedP = $('frame-imagined');
+    imaginedP.appendChild(document.createTextNode('IMAGINED — ' + DATA.frame.imagined));
+    $('frame-oneline').textContent = DATA.frame.oneLine;
+    $('frame-premise').textContent = DATA.frame.premise;
+
+    var legendEl = $('frame-legend');
+    var actStrong = document.createElement('strong');
+    actStrong.className = 'act';
+    actStrong.textContent = 'ACT';
+    var harmStrong = document.createElement('strong');
+    harmStrong.className = 'harm';
+    harmStrong.textContent = 'HARM';
+    var rest = DATA.frame.legend;
+    // Split on the two capitalized labels so they can be styled inline
+    // without retyping the sourced sentence.
+    var afterAct = rest.split('HARM —')[0].split('ACT —')[1];
+    var afterHarm = rest.split('HARM —')[1];
+    legendEl.appendChild(actStrong);
+    legendEl.appendChild(document.createTextNode(' —' + afterAct));
+    legendEl.appendChild(document.createElement('br'));
+    legendEl.appendChild(harmStrong);
+    legendEl.appendChild(document.createTextNode(' —' + afterHarm));
+
+    controlBtn.textContent = DATA.frame.controlLabel;
+    $('control-sublabel').textContent = DATA.frame.controlSublabel;
+  }
+
+  function renderSelector() {
+    btnInstance1.textContent = DATA.selector.instance1;
+    btnInstance2.textContent = DATA.selector.instance2;
+    $('selector-note').textContent = DATA.selector.note;
+  }
+
+  function renderSelfTestIntro() {
+    $('selftest-intro').textContent = DATA.selftestIntro;
+  }
+
+  function renderHonestyPanel() {
+    $('imagined-elements-text').textContent = DATA.imaginedElements;
+    $('naming-policy-text').textContent = DATA.namingPolicy;
+    $('monitoring-status-text').textContent = DATA.monitoringStatus;
+  }
+
+  function renderSourcesFooter() {
+    var list = $('sources-list');
+    list.innerHTML = '';
+    DATA.sources.forEach(function (s) {
+      var li = document.createElement('li');
+      if (s.url) {
+        var a = document.createElement('a');
+        a.href = s.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.textContent = s.label;
+        li.appendChild(a);
+      } else {
+        var strong = document.createElement('strong');
+        strong.textContent = s.label;
+        li.appendChild(strong);
+      }
+      if (s.note) {
+        var note = document.createElement('span');
+        note.className = 'src-note';
+        note.textContent = ' — ' + s.note;
+        li.appendChild(note);
+      }
+      list.appendChild(li);
+    });
+  }
+
+  // ================================================================
+  // SELF-TEST — computes live, prints observed counts, PASS/FAIL.
+  // Exercises the SAME createFaceNode / mountFace / unmountFace
+  // functions the visible control uses, inside a permanently-present
+  // but visually hidden probe mount, so it never disturbs the
+  // visitor's own place in the console. Leaves the visitor on
+  // Instance 1 / ACT throughout (it never touches #face-mount).
+  // ================================================================
+  function runSelfTest() {
+    var out = $('selftest-output');
+    var lines = [];
+    var pass = true;
+    function record(label, ok, detail) {
+      pass = pass && ok;
+      lines.push((ok ? 'PASS' : 'FAIL') + '  ' + label + (detail ? ' — ' + detail : ''));
+    }
+
+    // 1. Boot invariant: exactly one .face node exists anywhere in the
+    // document at the moment the self-test runs (self-test runs after
+    // boot(), before any visitor interaction or probe use).
+    var bootCount = document.querySelectorAll('.face').length;
+    record('boot: exactly one .face node in the document', bootCount === 1, 'observed ' + bootCount);
+
+    var probe = $('selftest-probe-mount');
+
+    // 2. Probe starts empty.
+    var probeStart = probe.querySelectorAll('.face').length;
+    record('probe mount starts with zero .face nodes', probeStart === 0, 'observed ' + probeStart);
+
+    // 3. Build face A (Instance 1 / ACT) into the probe using the real
+    // createFaceNode + mountFace functions.
+    var nodeA = createFaceNode(1, 'act');
+    mountFace(probe, nodeA);
+    var afterBuildA = probe.querySelectorAll('.face').length;
+    record('build A (Instance 1 / ACT): probe has exactly one .face node',
+      afterBuildA === 1 && document.contains(nodeA),
+      'probe count ' + afterBuildA + ', node in document = ' + document.contains(nodeA));
+
+    // 4. Destroy A with the real unmountFace (Node.remove()). Assert a
+    // genuine empty beat: zero .face nodes in the probe AND the old
+    // node is no longer anywhere in the document.
+    var removedA = unmountFace(probe);
+    var afterRemoveA = probe.querySelectorAll('.face').length;
+    var stillInDoc = document.contains(nodeA);
+    record('empty beat after destroying A: zero .face nodes, node detached from document',
+      afterRemoveA === 0 && removedA === nodeA && !stillInDoc,
+      'probe count ' + afterRemoveA + ', old node still in document = ' + stillInDoc);
+
+    // 5. From that emptiness, build face B (Instance 1 / HARM) — a
+    // genuinely different node, never the same one toggled visible.
+    var nodeB = createFaceNode(1, 'harm');
+    mountFace(probe, nodeB);
+    var afterBuildB = probe.querySelectorAll('.face').length;
+    record('build B (Instance 1 / HARM) from emptiness: new node, exactly one .face node',
+      afterBuildB === 1 && nodeB !== nodeA && document.contains(nodeB) && !document.contains(nodeA),
+      'probe count ' + afterBuildB + ', A and B are the same node = ' + (nodeA === nodeB));
+
+    // 6. Across every measured instant in this sequence, the probe
+    // never held more than one .face node — ACT and HARM were never
+    // simultaneously present.
+    var maxConcurrent = Math.max(probeStart, afterBuildA, afterRemoveA, afterBuildB);
+    record('max concurrent .face nodes in probe across the whole transition ≤ 1',
+      maxConcurrent <= 1, 'observed max ' + maxConcurrent);
+
+    // Clean up the probe so it carries nothing forward.
+    unmountFace(probe);
+    var probeEnd = probe.querySelectorAll('.face').length;
+
+    // 7. The visible console was never touched by any of the above:
+    // the visitor is still on Instance 1 / ACT, exactly as booted.
+    var liveFace = faceMount.querySelector('.face');
+    var visitorIntact = !!liveFace
+      && liveFace.getAttribute('data-instance') === '1'
+      && liveFace.getAttribute('data-facetype') === 'act'
+      && document.querySelectorAll('.face').length === 1;
+    record('visitor left on Instance 1 / ACT after self-test, probe cleared',
+      visitorIntact && probeEnd === 0,
+      'live face = Instance ' + (liveFace ? liveFace.getAttribute('data-instance') : 'none') + ' / ' + (liveFace ? liveFace.getAttribute('data-facetype') : 'none') + ', probe count ' + probeEnd);
+
+    if (pass) {
+      lines.unshift('SELF-TEST PASSED — ACT and HARM were never simultaneously present; destruction was real (createElement / Node.remove()), never display/opacity/hidden toggling on two preserved nodes.');
+      out.className = 'selftest-output pass';
+    } else {
+      lines.unshift('SELF-TEST FAILED — do not trust the mechanism above.');
+      out.className = 'selftest-output fail';
+    }
+    out.textContent = lines.join('\n');
+  }
+
+  // ================================================================
+  // BOOT
+  // ================================================================
+  renderFrame();
+  renderSelector();
+  renderSelfTestIntro();
+  renderHonestyPanel();
+  renderSourcesFooter();
+  boot();
+  runSelfTest();
+})();
+</script>
+
+</body>
+</html>

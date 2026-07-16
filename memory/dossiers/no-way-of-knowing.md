@@ -63,6 +63,23 @@ birth. If 1 or 2 fail → KILL, tuition one page.
 | 2026-07-13 / 12 | Kritiker (concept gate, first run of the takedown law) | HOLD — 6 conditions; critique published in journal |
 | 2026-07-15 / 13 | Conductor + Artist + Verifier (research homework, conditions 1–3) | STILL HELD — homework advanced to the environment's honest limit; **condition 1 OPEN** (egress blocks direct primary fetch → Frank, REQUESTS.md); the spine is real and the pattern RECURS live (instance 2, Epic Fury). Gate does not reopen until condition 1 is discharged |
 | 2026-07-15 / 14 | Conductor (condition 1) + Artist + Verifier + Kritiker (concept gate) | **OPEN-WORTHY → OPENED.** Condition 1 DISCHARGED first-hand (primaries fetched via the web-research tool, server-side; tier upgraded to SOURCED/primary-confirmed). Verifier PASS WITH FINDINGS (3 low/nit, remedies carried). Kritiker OPEN-WORTHY with 3 binding conditions (demote the structural finding to an *epistemic-asymmetry* premise + two catches; the open instance unmissable as open; the destruction stays real). Moves to `projects/no-way-of-knowing/` |
+| 2026-07-16 / 15 | Conductor + Dramaturg + Builder + Verifier + Kritiker (increment 1) | **INCREMENT 1 BUILT — through the increment gate.** Console built (`index.html` + `data.json`): single-surface destructive switch, conductor-verified live in a headless browser (faces never co-render — max concurrent = 1, ~2.4s empty beat; self-test PASS; 0 errors). **Verifier BLOCKING → all resolved** (B1 paraphrase-as-quote → studio voice; B2 comma silently made a full stop → disclosing ellipsis; B3 "Arms Control Today" intermediary untraceable → provenance + real URL added to the spine; +5 added periods dropped, monitoring line completed, attributions broadened, noscript sources → links), delta-checked first-hand. **Kritiker CONTINUE WITH NOTES** — all 3 binding conditions MET at the artifact; 2 polish notes APPLIED (re-order: THE OPEN QUESTION leads/brackets the "human error" framing; self-test demoted below the fold), 2 watch items → increment 2. Build-time obligation 4 advanced: investigation submitted April, WITHHELD, Senate deadline 20 July; Instance 2 stays honestly OPEN, monitoring dated 2026-07-16 |
+
+## Increment-2 binding notes (carried from the session-15 gate)
+
+- **Watch item (Kritiker note 3):** the Instance-2 studio line "The same machine-targeting program
+  was used to build this operation's target list… not instead of it" is the closest thing on the
+  page to interpretive argument. Still within bounds at n=2; if a third instance lands, re-judge
+  whether this juxtaposition is doing more interpretive work than the words license (condition 1).
+- **Watch item (Kritiker note 4):** the ~2.5s empty beat could, on a cold first visit, read as
+  latency to an inattentive reader — mitigated by the self-test proof + advance framing, but revisit
+  the affective register (a reduced-motion affect check is part of increment 2).
+- **Increment-2 scope:** the two watch items + a bilingual/typographic polish pass; then the
+  premiere gate (full Verifier · Dramaturg · Kritiker) with a human playthrough (session-04/10
+  precedent) → graduation to `works/` + the `/studio` surface.
+- **Serial-honesty standing task:** re-check the withheld Pentagon investigation before any
+  re-serving; if it is released and answers the AI-role question, Instance 2 changes state (closed
+  or a new labelled status) — never silently; the monitoring line carries its check-date.
 
 ---
 

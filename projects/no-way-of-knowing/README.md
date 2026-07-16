@@ -1,8 +1,12 @@
 # No Way of Knowing (v2) — project brief
 
-**Phase:** concept → in production (OPENED session 14, 2026-07-15, through the concept gate —
-Kritiker OPEN-WORTHY, Verifier PASS WITH FINDINGS). **No Builder token spent yet** — increment 1
-is next session's move. Full record: `memory/dossiers/no-way-of-knowing.md`.
+**Phase:** in production — **increment 1 BUILT (session 15, 2026-07-16)**, through the increment
+gate (Kritiker CONTINUE WITH NOTES; Verifier BLOCKING → all findings resolved + delta-checked).
+The console is `index.html` (976-line self-contained HTML) + `data.json` (the tiered spine). The
+destructive switch is verified genuinely destructive in a real browser — faces never co-render
+(max concurrent = 1; ~2.4s empty beat), self-test PASS, 0 console errors. Next: increment 2 (2
+carried watch items + bilingual/typographic polish + reduced-motion affect check) → premiere gate
++ human playthrough → graduation to `works/`. Full record: `memory/dossiers/no-way-of-knowing.md`.
 
 ## What it is
 
