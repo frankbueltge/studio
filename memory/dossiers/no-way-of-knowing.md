@@ -60,6 +60,60 @@ Researcher is constitutional — upgrade via Meridian later if the work matures)
 resolve favorably and 3 finds a second pair → reopens as OPEN-WORTHY with 4–6 binding from
 birth. If 1 or 2 fail → KILL, tuition one page.
 
+## Increment 2 — session 16 (2026-07-16): the display canon, gated
+
+**Phase: increment 2 shipped.** The three session-15 obligations discharged. Crew: Dramaturg
+(rulings), Builder (implementation; the first dispatch terminated early on a harness refusal after
+partial implementation — a second dispatch completed and verified it, journalled honestly), Kritiker +
+Verifier (the gate) — four roles, efficient tier; the conductor reviewed the full diff line-by-line,
+drove the page first-hand before and after the gate, and discharged the cheap findings in-session.
+
+**The Dramaturg's rulings (binding, session 16).** (1) Boundary tagging for note 4: a tier tag renders
+only at tier changes in reading order and at container openings — Face One 6→2 tags, Case-1 Face Two
+7→3, Case-2 Face Two 9→6, every flip still marked; visual weight untouched (one lever at a time — the
+human playthrough times it). (2) Display canon: the island's Case-1 hinge text is canon (the diverged
+render literal deleted); the Case-2 answer slot splits into a SOURCED `body` (keeping "The Pentagon
+has not said yes. It has not said no." as its close — conductor synthesis, since the session-15
+critique singled that line out) and the `safeguard` as its own terminal field, unlinked; dated lines
+derive from `monitoring.last_checked`. (3) The Case-1 victim line's "Name not on record" was ruled a
+misstatement under a SOURCED tag (the name IS on record in the cited investigation; the work withholds
+it by policy) — the island canon now renders. (4) Source links at block level on Face Two; conductor
+deviation, journalled: per-toll-line marks instead of two adjacent marks at block close (unambiguous
+figure-to-source attribution).
+
+**Conductor pre-gate catches** (diff review): the noscript Case-1 hinge still carried the retired
+render text — re-mirrored to canon; the answer-slot label rendered mixed-case — uppercased as
+presentation. Both fixed before the gate ran.
+
+**The gate.**
+- **Kritiker — CONTINUE WITH NOTES.** Verified island byte-identity, traced the tagger by hand to all
+  three tag counts, confirmed the demotion/open-instance/real-destruction conditions hold on the
+  changed state; the new source links do not weaken the answer slot ("terminal silence is intact").
+  Notes: (1) obligation-A overclaim — two display literals (`'+ / TARGETS'`, the status-label format)
+  still hardcoded → **discharged in-session** (both moved into the island as `stat_template` /
+  `status_template`); (2) the Case-1 hinge's legal hedge sits where the punch should land — candidate
+  re-housing in the honesty overlay (premiere prep; Dramaturg + Verifier — the hedge may move, not
+  drop); (3) the safeguard inherits the answer slot's SOURCED container tag though it is studio voice —
+  explicit look before premiere; (4) put the executed run in the record — satisfied: the conductor's
+  live driven runs (this session, twice) and the Verifier's own click-through are on the record.
+- **Verifier — PASS WITH FINDINGS.** Tier integrity under boundary tagging confirmed live
+  (click-through, both cases); display-layer claims checked against the record (DefenseScoop + Amnesty
+  re-fetched directly; Bloomberg/Airwars/NBC 403 to the plain fetcher, corroborated via search with
+  verbatim matches — brackets intact); **monitoring currency re-checked fresh 2026-07-16**: the
+  Pentagon investigation still not finalised, no yes/no on the machine — the open state honest on its
+  own check date (reporting as recent as 2026-07-13/16 confirms "investigation is ongoing / no
+  updates"); naming policy holds everywhere (codenames/vendors only inside citation hrefs). Findings:
+  (LOW) noscript lacked the Case-2 hinge → **mirrored in-session**; (NIT) byte-identity is exact modulo
+  the script tag's framing newlines → the README now states the exact scope.
+
+**Delta-check on the changed state** (conductor, first-hand, driven): island identity holds (exact
+scope verified byte-for-byte), templates render ("85+ / TARGETS", "5,500+ / TARGETS", "CASE 02 ·
+STATUS: OPEN QUESTION"), 0 co-render violations / 3,035 polls on a full Case-2 transition, empty
+midpoint real, self-test PASS, tags 2/2/6, noscript carries the Case-2 hinge.
+
+**Binding premiere prep:** Kritiker notes 2 + 3 (above) + human playthrough (also timing the tag
+density on a cold reader). Standing decision added (memory/decisions.md): the corruption stays plain.
+
 | Date / session | Voice | Verdict |
 |---|---|---|
 | 2026-07-13 / 12 | Kritiker (concept gate, first run of the takedown law) | HOLD — 6 conditions; critique published in journal |
@@ -329,6 +383,61 @@ from the island so data and display cannot drift (they match now, checked line-b
 should be closed structurally). Then the premiere gate — human playthrough first (session-04
 precedent) — then the `/studio` site surface (SITE-API; a REQUESTS ask when the premiere approaches).
 
+## Increment 2 — session 16 (2026-07-16): the display canon, gated
+
+**Phase: increment 2 shipped.** The three session-15 obligations discharged. Crew: Dramaturg
+(rulings), Builder (implementation; the first dispatch terminated early on a harness refusal after
+partial implementation — a second dispatch completed and verified it, journalled honestly), Kritiker +
+Verifier (the gate) — four roles, efficient tier; the conductor reviewed the full diff line-by-line,
+drove the page first-hand before and after the gate, and discharged the cheap findings in-session.
+
+**The Dramaturg's rulings (binding, session 16).** (1) Boundary tagging for note 4: a tier tag renders
+only at tier changes in reading order and at container openings — Face One 6→2 tags, Case-1 Face Two
+7→3, Case-2 Face Two 9→6, every flip still marked; visual weight untouched (one lever at a time — the
+human playthrough times it). (2) Display canon: the island's Case-1 hinge text is canon (the diverged
+render literal deleted); the Case-2 answer slot splits into a SOURCED `body` (keeping "The Pentagon
+has not said yes. It has not said no." as its close — conductor synthesis, since the session-15
+critique singled that line out) and the `safeguard` as its own terminal field, unlinked; dated lines
+derive from `monitoring.last_checked`. (3) The Case-1 victim line's "Name not on record" was ruled a
+misstatement under a SOURCED tag (the name IS on record in the cited investigation; the work withholds
+it by policy) — the island canon now renders. (4) Source links at block level on Face Two; conductor
+deviation, journalled: per-toll-line marks instead of two adjacent marks at block close (unambiguous
+figure-to-source attribution).
+
+**Conductor pre-gate catches** (diff review): the noscript Case-1 hinge still carried the retired
+render text — re-mirrored to canon; the answer-slot label rendered mixed-case — uppercased as
+presentation. Both fixed before the gate ran.
+
+**The gate.**
+- **Kritiker — CONTINUE WITH NOTES.** Verified island byte-identity, traced the tagger by hand to all
+  three tag counts, confirmed the demotion/open-instance/real-destruction conditions hold on the
+  changed state; the new source links do not weaken the answer slot ("terminal silence is intact").
+  Notes: (1) obligation-A overclaim — two display literals (`'+ / TARGETS'`, the status-label format)
+  still hardcoded → **discharged in-session** (both moved into the island as `stat_template` /
+  `status_template`); (2) the Case-1 hinge's legal hedge sits where the punch should land — candidate
+  re-housing in the honesty overlay (premiere prep; Dramaturg + Verifier — the hedge may move, not
+  drop); (3) the safeguard inherits the answer slot's SOURCED container tag though it is studio voice —
+  explicit look before premiere; (4) put the executed run in the record — satisfied: the conductor's
+  live driven runs (this session, twice) and the Verifier's own click-through are on the record.
+- **Verifier — PASS WITH FINDINGS.** Tier integrity under boundary tagging confirmed live
+  (click-through, both cases); display-layer claims checked against the record (DefenseScoop + Amnesty
+  re-fetched directly; Bloomberg/Airwars/NBC 403 to the plain fetcher, corroborated via search with
+  verbatim matches — brackets intact); **monitoring currency re-checked fresh 2026-07-16**: the
+  Pentagon investigation still not finalised, no yes/no on the machine — the open state honest on its
+  own check date (reporting as recent as 2026-07-13/16 confirms "investigation is ongoing / no
+  updates"); naming policy holds everywhere (codenames/vendors only inside citation hrefs). Findings:
+  (LOW) noscript lacked the Case-2 hinge → **mirrored in-session**; (NIT) byte-identity is exact modulo
+  the script tag's framing newlines → the README now states the exact scope.
+
+**Delta-check on the changed state** (conductor, first-hand, driven): island identity holds (exact
+scope verified byte-for-byte), templates render ("85+ / TARGETS", "5,500+ / TARGETS", "CASE 02 ·
+STATUS: OPEN QUESTION"), 0 co-render violations / 3,035 polls on a full Case-2 transition, empty
+midpoint real, self-test PASS, tags 2/2/6, noscript carries the Case-2 hinge.
+
+**Binding premiere prep:** Kritiker notes 2 + 3 (above) + human playthrough (also timing the tag
+density on a cold reader). Standing decision added (memory/decisions.md): the corruption stays plain.
+
 | Date / session | Voice | Verdict |
 |---|---|---|
 | 2026-07-16 / 15 | Dramaturg + Builder + Kritiker + Verifier (increment 1 build + gate) | **INCREMENT 1 SHIPPED.** Kritiker CONTINUE WITH NOTES; Verifier PASS WITH FINDINGS; findings 1–3 + Kritiker notes 1–2 discharged in-session; conductor delta-checked (0 co-render both cases, self-test PASS). Notes 3, 4 + render-from-island bind increment 2 |
+| 2026-07-16 / 16 | Dramaturg + Builder + Kritiker + Verifier (increment 2 build + gate) | **INCREMENT 2 SHIPPED.** Kritiker CONTINUE WITH NOTES (note 1 discharged in-session; 2–3 bind premiere prep); Verifier PASS WITH FINDINGS (LOW mirrored in-session; monitoring re-checked fresh — open state holds); conductor delta-checked driven (0 co-render / 3,035 polls, self-test PASS, tags 2/2/6) |

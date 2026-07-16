@@ -1,124 +1,132 @@
 [
- {
-  "collective_session": 1,
-  "date": "2026-07-12",
-  "move": "other",
-  "summary": "The founding session: the collective named itself Ensemble and opened its first project, 'Diminishing Returns' — an instrument you operate with both hands, racing an efficiency dial with a hard stop against a growth needle driven by real disclosed numbers. The house critic's published attack became binding law before anything is built: the game may never be rigged — 'you cannot win' must be computed live from the data and must be able to lose its own premise if the numbers ever allow a win. First prototype faces a kill-or-continue review next session.",
-  "works": [],
-  "verdict": "conditions"
- },
- {
-  "collective_session": 2,
-  "date": "2026-07-12",
-  "move": "build",
-  "summary": "Built the first playable increment of 'Diminishing Returns': a self-contained game where you physically work an efficiency dial against doubling resistance while a growth needle runs on Google's own disclosed numbers — and a referee computes each round's outcome live, with an on-page self-test proving the loss is calculated, not scripted. The house critic re-ran its five conditions against the built thing and ruled CONTINUE, leaving two binding notes: make the difference your effort actually makes the felt center, and make the honesty panel impossible to scroll past.",
-  "works": [],
-  "verdict": "pass"
- },
- {
-  "collective_session": 3,
-  "date": "2026-07-12",
-  "move": "build",
-  "summary": "Extended the game to four acts by researching three more companies before touching the engine — and rendering exactly what the disclosures yield: Microsoft's efficiency dial actually slid backwards (1.16 to 1.17) and its round carries a visible scope asterisk; Meta plays closest to the physical floor; Amazon's act is a locked round, because a company that discloses an efficiency ratio but no consumption figure gives the game nothing to compute — no disclosure, no game. The critic's two notes from the last gate are built in: every verdict now leads with the dent your effort made, and the honesty panel can no longer be scrolled past.",
-  "works": [],
-  "verdict": "pass"
- },
- {
-  "collective_session": 4,
-  "date": "2026-07-12",
-  "move": "verify",
-  "summary": "Pre-premiere inspection instead of a rushed opening night: the fact-checker confirmed every number traces to the data and the engine's self-test is exact, but found one buried confidence note about Meta's figures that must move to where the figures are shown; the dramaturg ruled the piece 'delivers with conditions' — its four-act arc exists on paper but not yet in the hands, and it currently stops rather than concludes. Six concrete fixes are now on the board; the premiere itself waits for a session the human team member can attend and play.",
-  "works": [],
-  "verdict": "conditions"
- },
- {
-  "collective_session": 5,
-  "date": "2026-07-12",
-  "move": "steer",
-  "summary": "The human team member played the game and delivered the studio's first real critique — and it stands: a museum visitor with no background would walk past it, and corporate report arithmetic is lab material, not the stuff of great works. The founding project is killed, three sessions of honest tuition. The constitution now has the two voices whose absence let it through: a data artist who must propose or assent to every project, and an art critic with the power to block at concept — armed with a new law: if a stranger at a terminal cannot grasp it in a minute, it does not open.",
-  "works": [],
-  "verdict": "discarded"
- },
- {
-  "collective_session": 6,
-  "date": "2026-07-12",
-  "move": "other",
-  "summary": "The studio's new artist proposed three works and fought for one: 'Native Speaker' — a border gate that reads the sentence you type and flags you as a machine for sounding foreign, built on the lab's verified finding that AI-text detectors brand non-native writers as fake at staggering rates, with a real expelled student and a revoked visa behind it. The new art critic, now holding veto power, opened it with binding conditions — the meter must be honest and computed live, a visitor who passes must be part of the story too, and the legal framing must say the sharper truth: no law governs a machine's judgment of a human's words. The two weaker concepts died at the cost of a page each.",
-  "works": [],
-  "verdict": "conditions"
- },
- {
-  "collective_session": 7,
-  "date": "2026-07-12",
-  "move": "build",
-  "summary": "The terminal exists. Increment 1 of Native Speaker is built and checked: a border gate that reads the sentence you type — live, on every keystroke, through a fully disclosed scoring function that cannot see which attempt it is judging — and stamps you ADMITTED or FLAGGED AS MACHINE. The critic inspected the source against the four conditions the work was born with and found all four met, including on a sentence pair the builder never saw; the verdict is continue, with four notes that bind the next increment: the border-gate fiction must not fall silent the moment the evidence arrives, and the tally that carries the population argument must not be the last line of a long scroll.",
-  "works": [],
-  "verdict": "pass"
- },
- {
-  "collective_session": 8,
-  "date": "2026-07-12",
-  "move": "steer",
-  "summary": "The human team member drew a line and the studio moved the same evening: no names of private individuals on a work's face — people appear as role, institution and consequence, and their names survive only inside the cited sources. Reading the appellate decision first-hand also forced an honest correction: the widely reported Minnesota expulsion was upheld on evidence the court says did not rest on a detector, so the terminal no longer presents it as machine harm — it stands disclosed in the honesty panel as the case this work deliberately does not claim. The revised terminal passed its re-run fact check, and the finding was reported upstream to the research wing, whose live instrument still names both students.",
-  "works": [],
-  "verdict": "pass"
- },
- {
-  "collective_session": 9,
-  "date": "2026-07-12",
-  "move": "build",
-  "summary": "The verdict card became a case file. The border gate that just judged your English now processes you in its own voice to the end: your stamps, its ledger — moved to the top, so the population argument lands in the same breath as your personal verdict — then the evidence as stamped exhibits, one at a time, closing on the gate's own cold self-description that the preceding four exhibits have just disproved. A disclosed 'open the whole file' control keeps the pacing honest, and the work's central number is now a direct data field that no rewording can silently break. The critic who bound these conditions re-inspected the source and closed them all: the piece is declared ready for its premiere — which waits, deliberately, until the human team member has played it.",
-  "works": [],
-  "verdict": "pass"
- },
- {
-  "collective_session": 10,
-  "date": "2026-07-13",
-  "move": "ship",
-  "summary": "The first premiere of the house. Native Speaker — the border gate that reads the English you type, live, through a fully disclosed scoring function, and stamps you ADMITTED or FLAGGED AS MACHINE — passed the full three-voice gate and graduated to the stage. The fact-checker verified every figure against the revised upstream record; the dramaturg found the visitor performs the mechanism on their own body and the file closes instead of trailing off; the art critic, publishing alongside the work, named both the achievement (a meter that cannot lie about what it is scoring, and a piece disciplined enough to cut its own most devastating case when the court record stopped supporting it) and the standing risk: the gate reads carefulness, not foreignness, and says so honestly one panel below the feeling.",
-  "works": [
-   "2026-07-13-native-speaker"
-  ],
-  "verdict": "graduated"
- },
- {
-  "collective_session": 11,
-  "date": "2026-07-13",
-  "move": "steer",
-  "summary": "Hours after the first premiere, the human team member said the harder true thing: competent and honest, but not breathtaking — a serious critic could tear it apart in one sentence. The studio answered the way its constitution demands: not with defense but with law. Every future proposal must now write that one-sentence takedown itself and argue how the built work will refute it; a work that is merely honest about something already known no longer opens a project. The first premiere stands, its published critique beside it — debut albums may be competent, if the second one is dangerous.",
-  "works": [],
-  "verdict": "conditions"
- },
- {
-  "collective_session": 12,
-  "date": "2026-07-13",
-  "move": "other",
-  "summary": "The takedown law's first proposal round, and nothing opened — which is the news. The artist brought three concepts, each carrying its own one-sentence execution; the critic verified before judging and the gate earned its keep twice: one concept died because its climax misstates the very law it dramatizes (the critic read the statute himself), one died as a sequel to the house's own premiere, and the strongest — a two-faced console holding a state's total confidence to strike against its refusal to know whom it killed — was held, not opened, behind six conditions and real homework: primary sources, an honest answer to the journalists who staged this contradiction first, and proof the pattern repeats. Under the old bar, something would have opened tonight. That is the difference the law made.",
-  "works": [],
-  "verdict": "deferred"
- },
- {
-  "collective_session": 13,
-  "date": "2026-07-15",
-  "move": "other",
-  "summary": "Homework, and an honest wall. The house's strongest held concept — a two-faced console holding a state's total confidence to strike thousands on machine recommendation against its refusal to know whom it killed — was sent back last session to prove three things: real primary sources, daylight from the journalists who staged this contradiction first, and proof the pattern repeats. The research found the pattern is no longer a single 2024 case: it has recurred this year at the scale of a schoolhouse — a commander touting AI that helps leaders 'decide faster than the enemy can react,' a strike that destroyed an elementary school and killed scores of children, a preliminary finding of 'outdated intelligence' that names the machine neither way, and 120 members of Congress now demanding the Pentagon answer the console's own question: what did the machine do? The artist wrote the daylight argument — the console is serial where the original investigation is finished, and makes a visitor enact the state's refusal rather than read about it — and conceded, unasked, that it adds no fact the journalists did not find first. But the fact-checker caught the highest-stakes claim carrying no source at all and blocked it until it was re-sourced, and the one thing the concept needs most — fetching the primary record directly — this session could not do: the network blocks every news and government host. Nothing was invented to cover the gap. The concept stays shut behind that one open condition, now a request to the human team member; the pattern it is about keeps happening in real time.",
-  "works": [],
-  "verdict": "deferred"
- },
- {
-  "collective_session": 14,
-  "date": "2026-07-15",
-  "move": "other",
-  "summary": "The wall that stopped the last session turned out to be the fetcher, not the sources: the research tool reaches the primary record where the plain one was blocked, so the studio fetched the military's own words directly and confirmed them line by line. That discharged the one open condition holding back the house's strongest concept — a two-faced console that can show the state at only one moment at a time: its total confidence that machine targeting was 'critical to our function' across thousands of strikes, or its answer when a civilian dies, 'no way of knowing.' To read the second sentence you must destroy the first; you spend the boast to buy the denial, enacting the state's own refusal to hold both. The fact-checker confirmed every quote verbatim and that the newer, still-open case is labeled honestly as open; the art critic opened the project but demoted its proudest claim — two cases are not yet a proven pattern — binding it to lead with the form it alone can build, a serial machine that stands inside a killing still under investigation, and never with the easy charge that the state is merely hypocritical. First project opened since the founding run, and the first to clear the full gate and the takedown law at concept without a line of it built yet.",
-  "works": [],
-  "verdict": "conditions"
- },
- {
-  "collective_session": 15,
-  "date": "2026-07-16",
-  "move": "build",
-  "summary": "Built the first working increment of 'No Way of Knowing': a two-faced console about the state's own two sentences. Face one shows a combatant command at maximal confidence — its own on-record words that machine/AI targeting was 'critical to our function' and lets leaders 'make smarter decisions faster than the enemy can react', across thousands of strikes. One control — the state's own question, 'was the machine involved in this death?' — destroys that face (its words are removed from the page, not hidden, then a held empty beat), and only from the emptiness assembles face two: the death, and the institution's answer. Two cases, serial: a closed pair from 2024 (confidence, then 'no way of knowing' over a civilian's death, both hinged on the same 85 strikes) and an open question from 2026 (a school strike still under Pentagon investigation, where the console fabricates no denial and states plainly that none was made). A visible on-page self-test proves to any visitor that the two faces are never on screen together. The art critic ruled continue — 'it holds a wound open in real time and refuses to manufacture the scab' — and the fact-checker passed it after re-fetching four primaries; both their findings were fixed in the same session, including naming the accountable command on the page while keeping the operation, program and AI vendors generic.",
-  "works": [],
-  "verdict": "pass"
- }
+  {
+    "collective_session": 1,
+    "date": "2026-07-12",
+    "move": "other",
+    "summary": "The founding session: the collective named itself Ensemble and opened its first project, 'Diminishing Returns' — an instrument you operate with both hands, racing an efficiency dial with a hard stop against a growth needle driven by real disclosed numbers. The house critic's published attack became binding law before anything is built: the game may never be rigged — 'you cannot win' must be computed live from the data and must be able to lose its own premise if the numbers ever allow a win. First prototype faces a kill-or-continue review next session.",
+    "works": [],
+    "verdict": "conditions"
+  },
+  {
+    "collective_session": 2,
+    "date": "2026-07-12",
+    "move": "build",
+    "summary": "Built the first playable increment of 'Diminishing Returns': a self-contained game where you physically work an efficiency dial against doubling resistance while a growth needle runs on Google's own disclosed numbers — and a referee computes each round's outcome live, with an on-page self-test proving the loss is calculated, not scripted. The house critic re-ran its five conditions against the built thing and ruled CONTINUE, leaving two binding notes: make the difference your effort actually makes the felt center, and make the honesty panel impossible to scroll past.",
+    "works": [],
+    "verdict": "pass"
+  },
+  {
+    "collective_session": 3,
+    "date": "2026-07-12",
+    "move": "build",
+    "summary": "Extended the game to four acts by researching three more companies before touching the engine — and rendering exactly what the disclosures yield: Microsoft's efficiency dial actually slid backwards (1.16 to 1.17) and its round carries a visible scope asterisk; Meta plays closest to the physical floor; Amazon's act is a locked round, because a company that discloses an efficiency ratio but no consumption figure gives the game nothing to compute — no disclosure, no game. The critic's two notes from the last gate are built in: every verdict now leads with the dent your effort made, and the honesty panel can no longer be scrolled past.",
+    "works": [],
+    "verdict": "pass"
+  },
+  {
+    "collective_session": 4,
+    "date": "2026-07-12",
+    "move": "verify",
+    "summary": "Pre-premiere inspection instead of a rushed opening night: the fact-checker confirmed every number traces to the data and the engine's self-test is exact, but found one buried confidence note about Meta's figures that must move to where the figures are shown; the dramaturg ruled the piece 'delivers with conditions' — its four-act arc exists on paper but not yet in the hands, and it currently stops rather than concludes. Six concrete fixes are now on the board; the premiere itself waits for a session the human team member can attend and play.",
+    "works": [],
+    "verdict": "conditions"
+  },
+  {
+    "collective_session": 5,
+    "date": "2026-07-12",
+    "move": "steer",
+    "summary": "The human team member played the game and delivered the studio's first real critique — and it stands: a museum visitor with no background would walk past it, and corporate report arithmetic is lab material, not the stuff of great works. The founding project is killed, three sessions of honest tuition. The constitution now has the two voices whose absence let it through: a data artist who must propose or assent to every project, and an art critic with the power to block at concept — armed with a new law: if a stranger at a terminal cannot grasp it in a minute, it does not open.",
+    "works": [],
+    "verdict": "discarded"
+  },
+  {
+    "collective_session": 6,
+    "date": "2026-07-12",
+    "move": "other",
+    "summary": "The studio's new artist proposed three works and fought for one: 'Native Speaker' — a border gate that reads the sentence you type and flags you as a machine for sounding foreign, built on the lab's verified finding that AI-text detectors brand non-native writers as fake at staggering rates, with a real expelled student and a revoked visa behind it. The new art critic, now holding veto power, opened it with binding conditions — the meter must be honest and computed live, a visitor who passes must be part of the story too, and the legal framing must say the sharper truth: no law governs a machine's judgment of a human's words. The two weaker concepts died at the cost of a page each.",
+    "works": [],
+    "verdict": "conditions"
+  },
+  {
+    "collective_session": 7,
+    "date": "2026-07-12",
+    "move": "build",
+    "summary": "The terminal exists. Increment 1 of Native Speaker is built and checked: a border gate that reads the sentence you type — live, on every keystroke, through a fully disclosed scoring function that cannot see which attempt it is judging — and stamps you ADMITTED or FLAGGED AS MACHINE. The critic inspected the source against the four conditions the work was born with and found all four met, including on a sentence pair the builder never saw; the verdict is continue, with four notes that bind the next increment: the border-gate fiction must not fall silent the moment the evidence arrives, and the tally that carries the population argument must not be the last line of a long scroll.",
+    "works": [],
+    "verdict": "pass"
+  },
+  {
+    "collective_session": 8,
+    "date": "2026-07-12",
+    "move": "steer",
+    "summary": "The human team member drew a line and the studio moved the same evening: no names of private individuals on a work's face — people appear as role, institution and consequence, and their names survive only inside the cited sources. Reading the appellate decision first-hand also forced an honest correction: the widely reported Minnesota expulsion was upheld on evidence the court says did not rest on a detector, so the terminal no longer presents it as machine harm — it stands disclosed in the honesty panel as the case this work deliberately does not claim. The revised terminal passed its re-run fact check, and the finding was reported upstream to the research wing, whose live instrument still names both students.",
+    "works": [],
+    "verdict": "pass"
+  },
+  {
+    "collective_session": 9,
+    "date": "2026-07-12",
+    "move": "build",
+    "summary": "The verdict card became a case file. The border gate that just judged your English now processes you in its own voice to the end: your stamps, its ledger — moved to the top, so the population argument lands in the same breath as your personal verdict — then the evidence as stamped exhibits, one at a time, closing on the gate's own cold self-description that the preceding four exhibits have just disproved. A disclosed 'open the whole file' control keeps the pacing honest, and the work's central number is now a direct data field that no rewording can silently break. The critic who bound these conditions re-inspected the source and closed them all: the piece is declared ready for its premiere — which waits, deliberately, until the human team member has played it.",
+    "works": [],
+    "verdict": "pass"
+  },
+  {
+    "collective_session": 10,
+    "date": "2026-07-13",
+    "move": "ship",
+    "summary": "The first premiere of the house. Native Speaker — the border gate that reads the English you type, live, through a fully disclosed scoring function, and stamps you ADMITTED or FLAGGED AS MACHINE — passed the full three-voice gate and graduated to the stage. The fact-checker verified every figure against the revised upstream record; the dramaturg found the visitor performs the mechanism on their own body and the file closes instead of trailing off; the art critic, publishing alongside the work, named both the achievement (a meter that cannot lie about what it is scoring, and a piece disciplined enough to cut its own most devastating case when the court record stopped supporting it) and the standing risk: the gate reads carefulness, not foreignness, and says so honestly one panel below the feeling.",
+    "works": [
+      "2026-07-13-native-speaker"
+    ],
+    "verdict": "graduated"
+  },
+  {
+    "collective_session": 11,
+    "date": "2026-07-13",
+    "move": "steer",
+    "summary": "Hours after the first premiere, the human team member said the harder true thing: competent and honest, but not breathtaking — a serious critic could tear it apart in one sentence. The studio answered the way its constitution demands: not with defense but with law. Every future proposal must now write that one-sentence takedown itself and argue how the built work will refute it; a work that is merely honest about something already known no longer opens a project. The first premiere stands, its published critique beside it — debut albums may be competent, if the second one is dangerous.",
+    "works": [],
+    "verdict": "conditions"
+  },
+  {
+    "collective_session": 12,
+    "date": "2026-07-13",
+    "move": "other",
+    "summary": "The takedown law's first proposal round, and nothing opened — which is the news. The artist brought three concepts, each carrying its own one-sentence execution; the critic verified before judging and the gate earned its keep twice: one concept died because its climax misstates the very law it dramatizes (the critic read the statute himself), one died as a sequel to the house's own premiere, and the strongest — a two-faced console holding a state's total confidence to strike against its refusal to know whom it killed — was held, not opened, behind six conditions and real homework: primary sources, an honest answer to the journalists who staged this contradiction first, and proof the pattern repeats. Under the old bar, something would have opened tonight. That is the difference the law made.",
+    "works": [],
+    "verdict": "deferred"
+  },
+  {
+    "collective_session": 13,
+    "date": "2026-07-15",
+    "move": "other",
+    "summary": "Homework, and an honest wall. The house's strongest held concept — a two-faced console holding a state's total confidence to strike thousands on machine recommendation against its refusal to know whom it killed — was sent back last session to prove three things: real primary sources, daylight from the journalists who staged this contradiction first, and proof the pattern repeats. The research found the pattern is no longer a single 2024 case: it has recurred this year at the scale of a schoolhouse — a commander touting AI that helps leaders 'decide faster than the enemy can react,' a strike that destroyed an elementary school and killed scores of children, a preliminary finding of 'outdated intelligence' that names the machine neither way, and 120 members of Congress now demanding the Pentagon answer the console's own question: what did the machine do? The artist wrote the daylight argument — the console is serial where the original investigation is finished, and makes a visitor enact the state's refusal rather than read about it — and conceded, unasked, that it adds no fact the journalists did not find first. But the fact-checker caught the highest-stakes claim carrying no source at all and blocked it until it was re-sourced, and the one thing the concept needs most — fetching the primary record directly — this session could not do: the network blocks every news and government host. Nothing was invented to cover the gap. The concept stays shut behind that one open condition, now a request to the human team member; the pattern it is about keeps happening in real time.",
+    "works": [],
+    "verdict": "deferred"
+  },
+  {
+    "collective_session": 14,
+    "date": "2026-07-15",
+    "move": "other",
+    "summary": "The wall that stopped the last session turned out to be the fetcher, not the sources: the research tool reaches the primary record where the plain one was blocked, so the studio fetched the military's own words directly and confirmed them line by line. That discharged the one open condition holding back the house's strongest concept — a two-faced console that can show the state at only one moment at a time: its total confidence that machine targeting was 'critical to our function' across thousands of strikes, or its answer when a civilian dies, 'no way of knowing.' To read the second sentence you must destroy the first; you spend the boast to buy the denial, enacting the state's own refusal to hold both. The fact-checker confirmed every quote verbatim and that the newer, still-open case is labeled honestly as open; the art critic opened the project but demoted its proudest claim — two cases are not yet a proven pattern — binding it to lead with the form it alone can build, a serial machine that stands inside a killing still under investigation, and never with the easy charge that the state is merely hypocritical. First project opened since the founding run, and the first to clear the full gate and the takedown law at concept without a line of it built yet.",
+    "works": [],
+    "verdict": "conditions"
+  },
+  {
+    "collective_session": 15,
+    "date": "2026-07-16",
+    "move": "build",
+    "summary": "Built the first working increment of 'No Way of Knowing': a two-faced console about the state's own two sentences. Face one shows a combatant command at maximal confidence — its own on-record words that machine/AI targeting was 'critical to our function' and lets leaders 'make smarter decisions faster than the enemy can react', across thousands of strikes. One control — the state's own question, 'was the machine involved in this death?' — destroys that face (its words are removed from the page, not hidden, then a held empty beat), and only from the emptiness assembles face two: the death, and the institution's answer. Two cases, serial: a closed pair from 2024 (confidence, then 'no way of knowing' over a civilian's death, both hinged on the same 85 strikes) and an open question from 2026 (a school strike still under Pentagon investigation, where the console fabricates no denial and states plainly that none was made). A visible on-page self-test proves to any visitor that the two faces are never on screen together. The art critic ruled continue — 'it holds a wound open in real time and refuses to manufacture the scab' — and the fact-checker passed it after re-fetching four primaries; both their findings were fixed in the same session, including naming the accountable command on the page while keeping the operation, program and AI vendors generic.",
+    "works": [],
+    "verdict": "pass"
+  },
+  {
+    "collective_session": 16,
+    "date": "2026-07-16",
+    "move": "build",
+    "summary": "Increment 2 of 'No Way of Knowing', through the increment gate. The obligations from increment 1 discharged: every displayed sentence now renders from the console's canonical data island, killing the silent drift between data and display that had already produced two diverged texts and one real misstatement — the victim line said 'Name not on record' when the name is on record in the cited investigation and is withheld by the work's own naming policy; the line now says exactly that. The honesty tags moved to boundary tagging — a tag at every point where SOURCED and IMAGINED flip, roughly half the parsing overhead, nothing blurred. The harm face gained visible source links for every claim while the final safeguard sentence keeps its terminal silence, unlinked, with nothing rendered after it. The corruption glyphs stayed deliberately plain — now a standing decision: any 'improvement' re-runs the full gate. The fact-checker re-checked the open case fresh on the check date: the Pentagon investigation is still not finalised and the question Congress asked about the machine's role remains unanswered — the open state the console shows is honest as of today. The art critic's published line: competent, disciplined work that did not oversell the fix; its two remaining notes — where the legal hedge sits inside the work's hardest sentence, and which voice the terminal safeguard's tag certifies — bind the premiere preparation, together with a human playthrough.",
+    "works": [],
+    "verdict": "pass"
+  }
 ]

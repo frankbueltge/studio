@@ -386,7 +386,7 @@
   </div>
 </header>
 
-<p class="context-strip" id="captionEl">What the machine was claimed to do. On the record. In the state&rsquo;s own words.</p>
+<p class="context-strip" id="captionEl"></p><!-- filled at boot from display.caption -->
 
 <main>
   <div id="content" aria-live="polite" aria-atomic="false" tabindex="-1"></div>
@@ -398,7 +398,7 @@
       <button type="button" class="rail-btn" id="railBtn1" data-case="1">CASE 01 [&#9679;]</button>
       <button type="button" class="rail-btn" id="railBtn2" data-case="2">CASE 02 [&#9675;]</button>
     </div>
-    <p class="serial-line">2 catches on record. Case 02 unresolved. Last checked 16 July 2026.</p>
+    <p class="serial-line" id="serialLine"></p><!-- filled at boot from display.serial_line_template -->
   </div>
 </main>
 
@@ -435,9 +435,9 @@
 <script type="application/json" id="spine">
 {
   "work": "no-way-of-knowing",
-  "increment": 1,
+  "increment": 2,
   "extracted": "2026-07-15 (session 14, concept gate — SOURCED/primary-confirmed)",
-  "built": "2026-07-16 (session 15, increment 1)",
+  "built": "2026-07-16 (session 15, increment 1; session 16, increment 2 — display canon unified into this island; the page renders every displayed sentence from it)",
   "monitoring_checked": "2026-07-16",
   "one_line": "The state at maximal confidence when it acts; the state at declared un-knowing when it harms — two sentences it said on the record, in a console that will not let you hold both at once.",
   "tiers_on_this_work": {
@@ -452,6 +452,22 @@
     "tier": "PREMISE (the work's own voice — NOT a claim of a proven structural pattern)",
     "statement": "The same apparatus is claimed as knowledge when it credits the program and disclaimed as ignorance at the exact moment knowledge would attribute a death. Knowledge as asset, ignorance as shield — toggled by the valence of the outcome. This is a finding of experience and form, shown through its first two catches (one closed, one open). It is NOT presented as a proven 'repeating institutional pattern' or as 'the state is systematically hypocritical' — the record does not carry that at n=2, and the serial form extends the claim only as the record grows (Kritiker condition 1, session 14).",
     "discipline": "The word 'systematically' and any claim to have discovered institutional hypocrisy are forbidden in the work's own voice."
+  },
+  "display": {
+    "tier": "IMAGINED (the console's chrome and its own voice — rendered verbatim from this island so data and display cannot drift; nothing display-worthy is hardcoded in the page script)",
+    "caption": "What the machine was claimed to do. On the record. In the state's own words.",
+    "control": {
+      "question_case1": "WAS THE MACHINE INVOLVED IN THIS DEATH?",
+      "question_case2": "WAS THE MACHINE INVOLVED IN THESE DEATHS?",
+      "micro_destroy": "This clears the claim above. What replaces it is what the same institution said about a death. The two are never shown together.",
+      "return_label": "← RETURN TO THE CLAIM",
+      "micro_return": "Reverses the same way it opened. Same cost, opposite direction."
+    },
+    "serial_line_template": "2 catches on record. Case 02 unresolved. Last checked {date}.",
+    "answer_label_template": "THE ANSWER, AS OF {date}:",
+    "stat_template": "{n}+ / TARGETS",
+    "status_template": "CASE {nn} · STATUS: {status}",
+    "date_note": "{date} renders monitoring.last_checked as 'D Month YYYY' (e.g. 16 July 2026), formatted in the page script with fixed English month names — deterministic, no locale call."
   },
   "instances": [
     {
@@ -490,7 +506,8 @@
       },
       "face_harm": {
         "role": "HARM — the same state at declared un-knowing",
-        "civilian": "A 20-year-old construction student, killed in the 2 February 2024 strike (named only in the cited investigation, not in this work's voice)",
+        "intro_line": "Both sides answered. The answers do not meet.",
+        "civilian": "A 20-year-old construction student, killed in the 2 February 2024 strike — named only in the cited investigation, not in this work's voice.",
         "speaker_role": "A U.S. Central Command spokesperson",
         "outlet": "Airwars, with The Independent (the original outlet)",
         "date": "10 March 2026",
@@ -505,6 +522,7 @@
             "note": "'[the chief technology officer]' replaces the official's surname with her institutional role per the naming policy; '[strikes]' and '[as having been targeted using AI]' are the source's own brackets, restored verbatim (Verifier finding 2, session 15). Otherwise verbatim."
           }
         ],
+        "attribution": "— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.",
         "acknowledgment": "Reported as the first military acknowledgment of civilian harm from an AI-assisted strike (the outlet's framing, attributed — not an independent fact of this work).",
         "source_url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/"
       },
@@ -543,14 +561,28 @@
       },
       "face_harm": {
         "role": "HARM — and here the answer is not a denial but an open question",
+        "intro_line": "One side has answered. The other has not spoken yet.",
         "harm": "A 28 February 2026 strike on the Shajareh Tayyebeh elementary school in Minab, Hormozgan. Preliminary US findings: a US munition 'likely responsible'; 'outdated intelligence' the likely cause ('old intelligence showed it to be a military target'). The machine is named neither way.",
+        "display_line": "An elementary school in Minab was struck on 28 February 2026. A US munition was likely responsible. Outdated intelligence was the likely cause.",
         "toll_per_source": [
-          { "figure": "more than 170 people, mostly children", "source": "NBC News", "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" },
-          { "figure": "156 people, over 100 children", "source": "Amnesty International", "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" }
+          {
+            "figure": "more than 170 people, mostly children",
+            "source": "NBC News",
+            "label": "NBC",
+            "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967"
+          },
+          {
+            "figure": "156 people, over 100 children",
+            "source": "Amnesty International",
+            "label": "AMNESTY",
+            "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/"
+          }
         ],
+        "toll_outro": "Two counts. Kept separate here, as they were kept separate by the two organizations that reported them.",
         "open_answer_slot": {
-          "label": "THE ANSWER IS NOT YET GIVEN",
-          "text": "120 members of Congress asked the Pentagon what role AI may have played in selecting targets — 'something that could be addressed in the results of the Pentagon investigation.' As of 2026-07-16 the investigation is being finalised (nearly four months on); the Pentagon has not answered the AI question either way. This console fabricates no denial. The open state is the truth it shows.",
+          "label_note": "The rendered label is display.answer_label_template with monitoring.last_checked.",
+          "body": "120 members of Congress asked the Pentagon what role AI may have played in selecting targets — 'something that could be addressed in the results of the Pentagon investigation.' The investigation is being finalised. The Pentagon has not said yes. It has not said no.",
+          "safeguard": "No denial exists for this strike. None is shown here, because none was made.",
           "source_urls": [
             "https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083",
             "https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170"
@@ -609,6 +641,11 @@
 }
 </script>
 
+<!-- The noscript fallback below is hand-mirrored from the #spine island (case 1 victim
+     sentence = face_harm.civilian, case 2 school sentence = face_harm.display_line, the
+     answer block = display.answer_label_template + open_answer_slot.body/.safeguard) —
+     it is static HTML, not script-rendered, so it is checked by hand against the island
+     at each gate. -->
 <noscript>
 <div class="ns-wrap">
   <h2>NO WAY OF KNOWING</h2>
@@ -625,11 +662,11 @@
     <hr>
     <h3>FACE TWO: HARM</h3>
     <p>Both sides answered. The answers do not meet.</p>
-    <p>A 20-year-old construction student was killed in the strike of 2 February 2024. Name not on record.</p>
+    <p>A 20-year-old construction student, killed in the 2 February 2024 strike &mdash; named only in the cited investigation, not in this work&rsquo;s voice.</p>
     <p class="ns-quote">&ldquo;There is no indication that AI was used at any point in the targeting process,&rdquo;</p>
     <p class="ns-quote">&ldquo;We have no way of knowing whether this strike is one of the 85 [strikes] that [the chief technology officer] described [as having been targeted using AI].&rdquo;</p>
-    <p class="ns-attr">&mdash; A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.</p>
-    <p>The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.</p>
+    <p class="ns-attr">&mdash; A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026. <a class="srclink" href="https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/" target="_blank" rel="noopener noreferrer">[source]</a></p>
+    <p>The same 85. The program helped narrow the 85 targets; whether it narrowed the one that killed this civilian is declared unknowable. The work never asserts the death WAS one of the 85 — it holds the state's own two sentences: helped target the 85 · no way of knowing about this one.</p>
   </div>
 
   <div class="ns-case">
@@ -643,12 +680,13 @@
     <h3>FACE TWO: HARM (open question)</h3>
     <p>One side has answered. The other has not spoken yet.</p>
     <p>An elementary school in Minab was struck on 28 February 2026. A US munition was likely responsible. Outdated intelligence was the likely cause.</p>
-    <p>NBC: more than 170 people, mostly children.</p>
-    <p>AMNESTY: 156 people, over 100 children.</p>
+    <p>NBC: more than 170 people, mostly children. <a class="srclink" href="https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" target="_blank" rel="noopener noreferrer">[source]</a></p>
+    <p>AMNESTY: 156 people, over 100 children. <a class="srclink" href="https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" target="_blank" rel="noopener noreferrer">[source]</a></p>
     <p>Two counts. Kept separate here, as they were kept separate by the two organizations that reported them.</p>
+    <p>In 2024 the state said both sentences: the confidence AND the 'no way of knowing.' Here it has said only the first. The second — was the machine in the loop of this death? — is the question Congress has put on the record and the Pentagon has not answered. The console holds the wait, and will change state when the wait ends.</p>
     <div class="ns-answer">
       <p><strong>THE ANSWER, AS OF 16 JULY 2026:</strong></p>
-      <p>120 members of Congress have asked the Pentagon what role AI may have played in this strike. The investigation is not finished. The Pentagon has not said yes. It has not said no.</p>
+      <p>120 members of Congress asked the Pentagon what role AI may have played in selecting targets &mdash; &lsquo;something that could be addressed in the results of the Pentagon investigation.&rsquo; The investigation is being finalised. The Pentagon has not said yes. It has not said no. <a class="srclink" href="https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083" target="_blank" rel="noopener noreferrer">[source]</a> <a class="srclink" href="https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170" target="_blank" rel="noopener noreferrer">[source]</a></p>
       <p><strong>No denial exists for this strike. None is shown here, because none was made.</strong></p>
     </div>
   </div>
@@ -673,6 +711,18 @@
   var caseByOrder = {};
   spine.instances.forEach(function(inst){ caseByOrder[inst.order] = inst; });
 
+  /* ---------- deterministic date formatting (fixed English month names, no locale call) ---------- */
+  var MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+  function formatDMY(isoDate){
+    var parts = isoDate.split('-');
+    var year = parts[0];
+    var month = parseInt(parts[1], 10);
+    var day = parseInt(parts[2], 10);
+    return day + ' ' + MONTH_NAMES[month - 1] + ' ' + year;
+  }
+  var lastCheckedFormatted = formatDMY(spine.monitoring.last_checked);
+
   /* ---------- seeded PRNG (deterministic — never Math.random / Date.now) ---------- */
   function mulberry32(seed){
     var a = seed >>> 0;
@@ -685,6 +735,9 @@
     };
   }
   var rng = mulberry32(1337);
+  /* The corruption stays deliberately plain — monochrome, silent — per a binding
+     critique note of session 15. Any "improvement" (colour, sound, easing) to these
+     glyphs requires a full gate re-run before it ships. */
   var CORRUPT_CHARS = ['▓', '█']; /* ▓ █ */
 
   function corruptString(text, frac){
@@ -725,7 +778,32 @@
   function formatStat(targetCountStr){
     var m = targetCountStr.match(/([\d,]+)/);
     var num = m ? m[1] : targetCountStr;
-    return num + '+ / TARGETS';
+    return spine.display.stat_template.replace('{n}', num);
+  }
+  function srcAnchor(url){
+    var a = document.createElement('a');
+    a.href = url;
+    a.textContent = ' [source]';
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.className = 'srclink';
+    return a;
+  }
+
+  /* ---------- boundary tier-tagging (Dramaturg ruling, session 16) ----------
+     A visible tag renders only when (i) this line's tier differs from the
+     immediately preceding rendered line's tier, or (ii) this line opens a
+     visually separated container (hinge box / toll box / answer slot) — even
+     if the container's opening tier matches the run it continues. Each face
+     build gets its own fresh tracker; the control microcopy is untouched by
+     this and keeps its own standalone IMAGINED tag. */
+  function createTagger(){
+    var prev = null;
+    return function(tier, containerOpen){
+      var show = Boolean(containerOpen) || tier !== prev;
+      prev = tier;
+      return show ? tierTag(tier) : null;
+    };
   }
 
   /* ---------- Face One (ACT) node builders ---------- */
@@ -739,9 +817,13 @@
   function buildFaceOneNodes(inst){
     var nodes = [];
     nodes.push(roleHeading('imagined', inst.face_act.role));
+    var tag = createTagger();
+    tag('imagined', false); /* seed the run to the heading's tier, already tagged above */
+
     inst.face_act.quotes.forEach(function(q){
       var line = mk('div', 'line');
-      line.appendChild(tierTag('sourced'));
+      var t = tag('sourced', false);
+      if (t) line.appendChild(t);
       if (q.frame){ line.appendChild(mk('span', 'frame', q.frame + ':')); }
       var qtextStr = '“' + q.text + '”';
       var qs = corruptable('qtext', qtextStr);
@@ -750,34 +832,31 @@
     });
     var attrStr = '— ' + inst.face_act.speaker_role + ', ' + inst.face_act.outlet + ', ' + inst.face_act.date + '.';
     var attrLine = mk('div', 'line attribution');
-    attrLine.appendChild(tierTag('sourced'));
+    var ta = tag('sourced', false);
+    if (ta) attrLine.appendChild(ta);
     attrLine.appendChild(corruptable('', attrStr));
     nodes.push(attrLine);
 
     var statStr = formatStat(inst.face_act.target_count);
     var statLine = mk('div', 'stat');
-    statLine.appendChild(tierTag('sourced'));
+    var ts = tag('sourced', false);
+    if (ts) statLine.appendChild(ts);
     statLine.appendChild(corruptable('statnum', statStr));
     nodes.push(statLine);
 
     var srcStr = inst.face_act.outlet + ' · ' + inst.face_act.date;
     var srcLine = mk('div', 'line srcline');
+    tag('sourced', false); /* same run — no tag, kept for tracker consistency */
     srcLine.appendChild(corruptable('', srcStr));
-    var srcLink = document.createElement('a');
-    srcLink.href = inst.face_act.source_url;
-    srcLink.textContent = ' [source]';
-    srcLink.target = '_blank';
-    srcLink.rel = 'noopener noreferrer';
-    srcLink.className = 'srclink';
-    srcLine.appendChild(srcLink);
+    srcLine.appendChild(srcAnchor(inst.face_act.source_url));
     nodes.push(srcLine);
 
     return nodes;
   }
 
-  function commentLine(kind, text){
+  function commentLineMaybeTag(tagEl, text){
     var line = mk('div', 'line comment');
-    line.appendChild(tierTag(kind));
+    if (tagEl) line.appendChild(tagEl);
     line.appendChild(corruptable('', text));
     return line;
   }
@@ -786,57 +865,70 @@
   function buildFaceTwoNodes(inst){
     var nodes = [];
     nodes.push(roleHeading('imagined', inst.face_harm.role));
+    var tag = createTagger();
+    tag('imagined', false); /* seed the run to the heading's tier, already tagged above */
+
     if (inst.order === 1){
-      nodes.push(commentLine('imagined', 'Both sides answered. The answers do not meet.'));
-      nodes.push(commentLine('sourced', 'A 20-year-old construction student was killed in the strike of 2 February 2024. Name not on record.'));
+      nodes.push(commentLineMaybeTag(tag('imagined', false), inst.face_harm.intro_line));
+      nodes.push(commentLineMaybeTag(tag('sourced', false), inst.face_harm.civilian));
 
       inst.face_harm.quotes.forEach(function(q){
         var line = mk('div', 'line');
-        line.appendChild(tierTag('sourced'));
+        var t = tag('sourced', false);
+        if (t) line.appendChild(t);
         var qtextStr = '“' + q.text + '”';
         line.appendChild(corruptable('qtext', qtextStr));
         nodes.push(line);
       });
 
-      var attrStr = '— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.';
       var attrLine = mk('div', 'line attribution');
-      attrLine.appendChild(tierTag('sourced'));
-      attrLine.appendChild(corruptable('', attrStr));
+      var ta = tag('sourced', false);
+      if (ta) attrLine.appendChild(ta);
+      attrLine.appendChild(corruptable('', inst.face_harm.attribution));
+      attrLine.appendChild(srcAnchor(inst.face_harm.source_url));
       nodes.push(attrLine);
 
-      var hingeText = 'The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.';
       var hinge = mk('div', 'hinge');
-      hinge.appendChild(tierTag('imagined'));
-      hinge.appendChild(corruptable('hingetext', hingeText));
+      var th = tag('imagined', true); /* hinge box: container rule */
+      if (th) hinge.appendChild(th);
+      hinge.appendChild(corruptable('hingetext', inst.hinge.text));
       nodes.push(hinge);
     } else {
-      nodes.push(commentLine('imagined', 'One side has answered. The other has not spoken yet.'));
-      nodes.push(commentLine('sourced', 'An elementary school in Minab was struck on 28 February 2026. A US munition was likely responsible. Outdated intelligence was the likely cause.'));
+      nodes.push(commentLineMaybeTag(tag('imagined', false), inst.face_harm.intro_line));
+      nodes.push(commentLineMaybeTag(tag('sourced', false), inst.face_harm.display_line));
 
       var toll = mk('div', 'toll');
-      var labels = ['NBC', 'AMNESTY'];
       inst.face_harm.toll_per_source.forEach(function(t, i){
         var line = mk('div', 'line');
-        line.appendChild(tierTag('sourced'));
-        var str = (labels[i] || t.source.toUpperCase()) + ': ' + t.figure + '.';
-        line.appendChild(corruptable('', str));
+        var tt = tag('sourced', i === 0); /* toll box: container rule on its first line */
+        if (tt) line.appendChild(tt);
+        line.appendChild(corruptable('', t.label + ': ' + t.figure + '.'));
+        line.appendChild(srcAnchor(t.url));
         toll.appendChild(line);
       });
-      toll.appendChild(commentLine('imagined', 'Two counts. Kept separate here, as they were kept separate by the two organizations that reported them.'));
+      toll.appendChild(commentLineMaybeTag(tag('imagined', false), inst.face_harm.toll_outro));
       nodes.push(toll);
 
       if (inst.hinge && inst.hinge.text){
         var hinge2 = mk('div', 'hinge');
-        hinge2.appendChild(tierTag('imagined'));
+        var th2 = tag('imagined', true); /* hinge box: container rule */
+        if (th2) hinge2.appendChild(th2);
         hinge2.appendChild(corruptable('hingetext', inst.hinge.text));
         nodes.push(hinge2);
       }
 
       var slot = mk('div', 'answer-slot');
-      slot.appendChild(tierTag('sourced'));
-      slot.appendChild(mk('div', 'slot-label', 'THE ANSWER, AS OF 16 JULY 2026:'));
-      slot.appendChild(corruptable('', '120 members of Congress have asked the Pentagon what role AI may have played in this strike. The investigation is not finished. The Pentagon has not said yes. It has not said no.'));
-      var safeguard = corruptable('slot-safeguard', 'No denial exists for this strike. None is shown here, because none was made.');
+      var slotTag = tag('sourced', true); /* answer slot: container rule */
+      if (slotTag) slot.appendChild(slotTag);
+      var labelText = spine.display.answer_label_template.replace('{date}', lastCheckedFormatted).toUpperCase(); /* label is all-caps chrome; presentation only */
+      slot.appendChild(mk('div', 'slot-label', labelText));
+      var bodyRow = mk('div', 'line');
+      bodyRow.appendChild(corruptable('', inst.face_harm.open_answer_slot.body));
+      inst.face_harm.open_answer_slot.source_urls.forEach(function(url){
+        bodyRow.appendChild(srcAnchor(url));
+      });
+      slot.appendChild(bodyRow);
+      var safeguard = corruptable('slot-safeguard', inst.face_harm.open_answer_slot.safeguard);
       safeguard.className = safeguard.className.replace('corruptable', 'corruptable-block');
       slot.appendChild(safeguard);
       nodes.push(slot);
@@ -923,9 +1015,17 @@
   var statusTag = document.getElementById('statusTag');
   var railBtn1 = document.getElementById('railBtn1');
   var railBtn2 = document.getElementById('railBtn2');
+  var serialLine = document.getElementById('serialLine');
+
+  /* caption and serial line are static chrome text, identical across both
+     cases — rendered once, verbatim from the island (obligation A) */
+  captionEl.textContent = spine.display.caption;
+  serialLine.textContent = spine.display.serial_line_template.replace('{date}', lastCheckedFormatted);
 
   function statusLabel(inst){
-    return 'CASE 0' + inst.order + ' · STATUS: ' + inst.status;
+    return spine.display.status_template
+      .replace('{nn}', '0' + inst.order)
+      .replace('{status}', inst.status);
   }
 
   function updateStatusTag(){
@@ -946,8 +1046,8 @@
     var inst = caseByOrder[state.caseIdx];
     if (state.face === 'act'){
       var label = inst.order === 1
-        ? 'WAS THE MACHINE INVOLVED IN THIS DEATH?'
-        : 'WAS THE MACHINE INVOLVED IN THESE DEATHS?';
+        ? spine.display.control.question_case1
+        : spine.display.control.question_case2;
       var btn = mk('button', 'control-btn', label);
       btn.type = 'button';
       btn.id = 'destroyBtn';
@@ -956,10 +1056,10 @@
       controlSlot.appendChild(btn);
       var micro = mk('p', 'microcopy');
       micro.appendChild(tierTag('imagined'));
-      micro.appendChild(document.createTextNode('This clears the claim above. What replaces it is what the same institution said about a death. The two are never shown together.'));
+      micro.appendChild(document.createTextNode(spine.display.control.micro_destroy));
       controlSlot.appendChild(micro);
     } else if (state.face === 'harm'){
-      var rbtn = mk('button', 'control-btn return-btn', '← RETURN TO THE CLAIM');
+      var rbtn = mk('button', 'control-btn return-btn', spine.display.control.return_label);
       rbtn.type = 'button';
       rbtn.id = 'returnBtn';
       rbtn.disabled = state.transitioning;
@@ -967,7 +1067,7 @@
       controlSlot.appendChild(rbtn);
       var micro2 = mk('p', 'microcopy');
       micro2.appendChild(tierTag('imagined'));
-      micro2.appendChild(document.createTextNode('Reverses the same way it opened. Same cost, opposite direction.'));
+      micro2.appendChild(document.createTextNode(spine.display.control.micro_return));
       controlSlot.appendChild(micro2);
     }
   }

@@ -1,16 +1,26 @@
 # No Way of Knowing (v2) — project brief
 
-**Phase:** in production — **INCREMENT 1 SHIPPED** (session 15, 2026-07-16). Opened session 14
-through the concept gate (Kritiker OPEN-WORTHY, Verifier PASS WITH FINDINGS); increment 1 (the
-working console — `data.json` + `index.html`) built and through the increment gate session 15
-(Kritiker CONTINUE WITH NOTES · Verifier PASS WITH FINDINGS; all findings + Kritiker notes 1–2
-discharged in-session). Full record: `memory/dossiers/no-way-of-knowing.md`, journal 2026-07-16.
+**Phase:** in production — **INCREMENT 2 SHIPPED** (session 16, 2026-07-16). Opened session 14
+through the concept gate (Kritiker OPEN-WORTHY, Verifier PASS WITH FINDINGS); increment 1 built and
+gated session 15; increment 2 (display canon unified into the island, boundary tier-tagging, Face-Two
+source links) built and through the increment gate session 16 (Kritiker CONTINUE WITH NOTES ·
+Verifier PASS WITH FINDINGS; the cheap findings discharged in-session, delta-checked). Full record:
+`memory/dossiers/no-way-of-knowing.md`, journals 2026-07-16 (session 15) and 2026-07-16-session-16.
 
 **How to run:** open `index.html` in a browser (self-contained, no build, no external requests).
 Boots on Face One (ACT); the one control destroys it and assembles Face Two (HARM); the case rail
 switches between Instance 1 (closed pair) and Instance 2 (open question); the `[SOURCED / IMAGINED]`
 tag opens the honesty panel; a visible self-test strip proves the two faces are never on screen
-together.
+together. Tier tags mark every tier boundary (boundary tagging, session 16): a tag renders where the
+tier changes in reading order and at each visually separated container — a contiguous same-tier run
+carries one tag.
+
+**The island is the canon (since increment 2):** every displayed sentence renders from the JSON
+island (`<script id="spine">`), whose text content is byte-identical to `data.json` (exact scope: the
+island equals `data.json` minus its final newline, framed by the script tag's own newlines). The only
+non-island strings in the script are punctuation glue, `[source]`, the self-test sentences, and the
+fixed month names of the deterministic date formatter. The `<noscript>` fallback is hand-mirrored
+from the island and checked at each gate.
 
 ## What it is
 
@@ -105,14 +115,19 @@ condition 1 — the work does not lean on it.
 
 ## Next
 
-Increment 2 (binding from the session-15 increment gate): address Kritiker note 3 (glyph vigilance —
-keep the corruption plain and load-bearing; any colour/sound "improvement" invites the Spielerei
-charge), Kritiker note 4 (time the SOURCED/IMAGINED tag density against a cold reader as content
-grows), and the build-hygiene note (render Face Two fully from the JSON island — several lines are
-still hardcoded render literals that mirror the island; they match now, checked line-by-line, but the
-drift risk should be closed structurally). Then the premiere gate (Verifier tiers · Dramaturg vs
-brief · Kritiker) — human playthrough first, per the session-04 precedent — then the `/studio` site
-surface (SITE-API; the surface is a REQUESTS ask when the premiere approaches).
+Premiere prep (binding from the session-16 increment gate, before the premiere gate):
+1. **Kritiker note 2 (session 16):** reconsider the Case-1 hinge's legal hedge ("The work never
+   asserts the death WAS one of the 85") — candidate move to the honesty overlay so the hinge lands
+   as the shortest, hardest sentences in the piece. A Dramaturg + Verifier decision (the hedge is
+   legal hygiene; it may not be dropped, only re-housed).
+2. **Kritiker note 3 (session 16):** the answer slot's single SOURCED container tag is inherited by
+   the safeguard (studio voice) — either a deliberate own tag at terminal lines or a disclosed
+   mixed-voice rule in the honesty panel.
+3. Human playthrough (session-04 precedent) — also the cold-reader timing of the tag density the
+   session-15 note asked for.
+Then the premiere gate (Verifier tiers · Dramaturg vs brief · Kritiker), then the `/studio` site
+surface (SITE-API; the surface is a REQUESTS ask when the premiere approaches). Standing: the
+corruption glyphs stay plain (memory/decisions.md, session 16) — any change re-runs the full gate.
 
 ## Increment 1 — the record (session 15)
 
@@ -124,3 +139,23 @@ primaries name; the operation/program/AI vendor stay generic); two source-quote 
 restored verbatim (Airwars + DefenseScoop re-confirmed before adding words); Case 02's hinge
 rendered. Conductor delta-checked the changed state first-hand: 0 co-render violations in both cases,
 self-test PASS, no operation name on any rendered surface.
+
+## Increment 2 — the record (session 16)
+
+The three session-15 obligations discharged: **(1) render-from-island** — every displayed sentence
+now renders from the island (the silently diverged render literals at the Case-1 hinge and Case-2
+answer slot are gone; the island's canon is what renders; the Case-1 victim line's misstatement
+"Name not on record" fixed — the name IS on record in the cited investigation; the work withholds it
+by policy, and the line now says so); **(2) boundary tier-tagging** per the Dramaturg's session-16
+ruling (Face One 6→2 tags, Case-1 Face Two 7→3, Case-2 Face Two 9→6; every tier flip still marked);
+**(3) glyphs untouched** per Kritiker note 3, now guarded by a binding code comment. Also: visible
+`[source]` links on Face Two (Airwars on Case 1; per-toll-line NBC/Amnesty and the two answer-slot
+links on Case 2 — the safeguard stays last, unlinked, terminal silence intact); dated lines derive
+from `monitoring.last_checked`. Build spec with the Dramaturg rulings: `INCREMENT-2-SPEC.md`.
+Gate: **Kritiker CONTINUE WITH NOTES** (notes 1 discharged in-session — the stat/status templates
+moved into the island; 2–3 bind premiere prep, above) · **Verifier PASS WITH FINDINGS** (LOW: noscript
+lacked Case-2 hinge — mirrored in-session; NIT: byte-identity scope stated precisely above; monitoring
+re-checked fresh 2026-07-16: investigation still unfinalised, AI question unanswered — the open state
+honest on its check date). Conductor drove the page first-hand before and after the fixes: 0 co-render
+violations across four full transitions (123–3,035 DOM polls each), empty midpoint always real,
+self-test PASS at every rest, tag counts exactly as ruled.

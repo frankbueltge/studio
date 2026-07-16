@@ -1,8 +1,8 @@
 {
   "work": "no-way-of-knowing",
-  "increment": 1,
+  "increment": 2,
   "extracted": "2026-07-15 (session 14, concept gate — SOURCED/primary-confirmed)",
-  "built": "2026-07-16 (session 15, increment 1)",
+  "built": "2026-07-16 (session 15, increment 1; session 16, increment 2 — display canon unified into this island; the page renders every displayed sentence from it)",
   "monitoring_checked": "2026-07-16",
   "one_line": "The state at maximal confidence when it acts; the state at declared un-knowing when it harms — two sentences it said on the record, in a console that will not let you hold both at once.",
   "tiers_on_this_work": {
@@ -17,6 +17,22 @@
     "tier": "PREMISE (the work's own voice — NOT a claim of a proven structural pattern)",
     "statement": "The same apparatus is claimed as knowledge when it credits the program and disclaimed as ignorance at the exact moment knowledge would attribute a death. Knowledge as asset, ignorance as shield — toggled by the valence of the outcome. This is a finding of experience and form, shown through its first two catches (one closed, one open). It is NOT presented as a proven 'repeating institutional pattern' or as 'the state is systematically hypocritical' — the record does not carry that at n=2, and the serial form extends the claim only as the record grows (Kritiker condition 1, session 14).",
     "discipline": "The word 'systematically' and any claim to have discovered institutional hypocrisy are forbidden in the work's own voice."
+  },
+  "display": {
+    "tier": "IMAGINED (the console's chrome and its own voice — rendered verbatim from this island so data and display cannot drift; nothing display-worthy is hardcoded in the page script)",
+    "caption": "What the machine was claimed to do. On the record. In the state's own words.",
+    "control": {
+      "question_case1": "WAS THE MACHINE INVOLVED IN THIS DEATH?",
+      "question_case2": "WAS THE MACHINE INVOLVED IN THESE DEATHS?",
+      "micro_destroy": "This clears the claim above. What replaces it is what the same institution said about a death. The two are never shown together.",
+      "return_label": "← RETURN TO THE CLAIM",
+      "micro_return": "Reverses the same way it opened. Same cost, opposite direction."
+    },
+    "serial_line_template": "2 catches on record. Case 02 unresolved. Last checked {date}.",
+    "answer_label_template": "THE ANSWER, AS OF {date}:",
+    "stat_template": "{n}+ / TARGETS",
+    "status_template": "CASE {nn} · STATUS: {status}",
+    "date_note": "{date} renders monitoring.last_checked as 'D Month YYYY' (e.g. 16 July 2026), formatted in the page script with fixed English month names — deterministic, no locale call."
   },
   "instances": [
     {
@@ -55,7 +71,8 @@
       },
       "face_harm": {
         "role": "HARM — the same state at declared un-knowing",
-        "civilian": "A 20-year-old construction student, killed in the 2 February 2024 strike (named only in the cited investigation, not in this work's voice)",
+        "intro_line": "Both sides answered. The answers do not meet.",
+        "civilian": "A 20-year-old construction student, killed in the 2 February 2024 strike — named only in the cited investigation, not in this work's voice.",
         "speaker_role": "A U.S. Central Command spokesperson",
         "outlet": "Airwars, with The Independent (the original outlet)",
         "date": "10 March 2026",
@@ -70,6 +87,7 @@
             "note": "'[the chief technology officer]' replaces the official's surname with her institutional role per the naming policy; '[strikes]' and '[as having been targeted using AI]' are the source's own brackets, restored verbatim (Verifier finding 2, session 15). Otherwise verbatim."
           }
         ],
+        "attribution": "— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.",
         "acknowledgment": "Reported as the first military acknowledgment of civilian harm from an AI-assisted strike (the outlet's framing, attributed — not an independent fact of this work).",
         "source_url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/"
       },
@@ -108,14 +126,28 @@
       },
       "face_harm": {
         "role": "HARM — and here the answer is not a denial but an open question",
+        "intro_line": "One side has answered. The other has not spoken yet.",
         "harm": "A 28 February 2026 strike on the Shajareh Tayyebeh elementary school in Minab, Hormozgan. Preliminary US findings: a US munition 'likely responsible'; 'outdated intelligence' the likely cause ('old intelligence showed it to be a military target'). The machine is named neither way.",
+        "display_line": "An elementary school in Minab was struck on 28 February 2026. A US munition was likely responsible. Outdated intelligence was the likely cause.",
         "toll_per_source": [
-          { "figure": "more than 170 people, mostly children", "source": "NBC News", "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" },
-          { "figure": "156 people, over 100 children", "source": "Amnesty International", "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" }
+          {
+            "figure": "more than 170 people, mostly children",
+            "source": "NBC News",
+            "label": "NBC",
+            "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967"
+          },
+          {
+            "figure": "156 people, over 100 children",
+            "source": "Amnesty International",
+            "label": "AMNESTY",
+            "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/"
+          }
         ],
+        "toll_outro": "Two counts. Kept separate here, as they were kept separate by the two organizations that reported them.",
         "open_answer_slot": {
-          "label": "THE ANSWER IS NOT YET GIVEN",
-          "text": "120 members of Congress asked the Pentagon what role AI may have played in selecting targets — 'something that could be addressed in the results of the Pentagon investigation.' As of 2026-07-16 the investigation is being finalised (nearly four months on); the Pentagon has not answered the AI question either way. This console fabricates no denial. The open state is the truth it shows.",
+          "label_note": "The rendered label is display.answer_label_template with monitoring.last_checked.",
+          "body": "120 members of Congress asked the Pentagon what role AI may have played in selecting targets — 'something that could be addressed in the results of the Pentagon investigation.' The investigation is being finalised. The Pentagon has not said yes. It has not said no.",
+          "safeguard": "No denial exists for this strike. None is shown here, because none was made.",
           "source_urls": [
             "https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083",
             "https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170"
