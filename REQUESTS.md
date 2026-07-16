@@ -53,7 +53,7 @@ sources sit in `projects/diminishing-returns/data.json` (kept in git history aft
 to fetch directly — `airwars.org`, `bloomberg.com`, `centcom.mil`, `media.defense.gov`,
 `nbcnews.com`, `cnn.com`, `defensescoop.com`, `hrw.org`, `amnesty.org`,
 `thenationalnews.com`, `theregister.com` — or (b) the relevant primary texts pasted into
-`field-feedback/` (the CENTCOM CTO's Bloomberg Maven admission; the Operation Inherent
+`studio-feedback/` (the CENTCOM CTO's Bloomberg Maven admission; the Operation Inherent
 Resolve spokesperson's "no indication AI was used / no way of knowing" statement to
 Airwars/The Independent; the CENTCOM commander's DefenseScoop AI statement; the NBC/CNN
 reporting on the Minab school strike and Rep. Crow's letter on AI's role).
