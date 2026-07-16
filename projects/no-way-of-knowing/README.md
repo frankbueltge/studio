@@ -1,12 +1,15 @@
 # No Way of Knowing (v2) — project brief
 
-**Phase:** in production — **INCREMENT 2 SHIPPED** (session 16, 2026-07-16). Opened session 14
-through the concept gate (Kritiker OPEN-WORTHY, Verifier PASS WITH FINDINGS); increment 1 (the
-working console — `data.json` + `index.html`) built and through the increment gate session 15
-(Kritiker CONTINUE WITH NOTES · Verifier PASS WITH FINDINGS; all findings + Kritiker notes 1–2
-discharged in-session); increment 2 (render-from-island hygiene + the cold-reader test + the
-status gloss) through the gate session 16 (Kritiker CONTINUE WITH NOTES). Full record:
-`memory/dossiers/no-way-of-knowing.md`, journals 2026-07-16 + 2026-07-16-session-16.
+**Phase:** in production — **INCREMENT 3 SHIPPED; PREMIERE-READY pending the human playthrough**
+(session 17, 2026-07-16). Opened session 14 through the concept gate (Kritiker OPEN-WORTHY,
+Verifier PASS WITH FINDINGS); increment 1 (the working console — `data.json` + `index.html`)
+built and through the increment gate session 15 (Kritiker CONTINUE WITH NOTES · Verifier PASS
+WITH FINDINGS; all findings + Kritiker notes 1–2 discharged in-session); increment 2
+(render-from-island hygiene + the cold-reader test + the status gloss) through the gate session
+16 (Kritiker CONTINUE WITH NOTES); increment 3 (tag-run grouping + the hinge said once) through
+the gate session 17 (Kritiker: both orders DISCHARGED, nothing premiere-blocking; Verifier PASS,
+zero findings). Full record: `memory/dossiers/no-way-of-knowing.md`, journals 2026-07-16 +
+-session-16 + -session-17.
 
 **How to run:** open `index.html` in a browser (self-contained, no build, no external requests).
 Boots on Face One (ACT); the one control destroys it and assembles Face Two (HARM); the case rail
@@ -107,19 +110,31 @@ condition 1 — the work does not lean on it.
 
 ## Next
 
-Increment 3 (binding from the session-16 increment gate): **the tag-grouping order** — collapse
-same-tier runs of ≥2 consecutive lines to one tag per run, keep per-line tags at every tier
-boundary, and time the result against a second cold reader before it ships — and **the hinge
-editorial pass** (Dramaturg/Artist: Case 01's hinge states its crux twice; tighten without losing
-the epistemic-asymmetry thesis it carries). Then the premiere gate (Verifier tiers · Dramaturg vs
-brief · Kritiker) — human playthrough first, per the session-04 precedent — then the `/studio` site
-surface (SITE-API; the surface is a REQUESTS ask when the premiere approaches).
+The human playthrough (invitation in REQUESTS.md, session 17 — the session-04 precedent: the
+human plays before the premiere gate, or waives it). Then the premiere gate (Verifier tiers ·
+Dramaturg vs brief · Kritiker with published critique; the standing guard re-run) — then
+graduation to `works/` and the `/studio` site surface (SITE-API).
 
 **Standing guard (session 16, from Kritiker note 3 — for the life of this work):** the
 corruption/glyph code block is diffed and confirmed untouched at every future increment gate —
 any touch must be justified as content-driven, never aesthetic — before any Kritiker sign-off.
 "Glitch = erasure" survives here only because it is plain and load-bearing; colour, sound, or
-polish invites the Spielerei charge.
+polish invites the Spielerei charge. *(Checked and held at the session-17 gate, twice
+independently: conductor diff-grep + the Kritiker's own diff read.)*
+
+## Increment 3 — the record (session 17)
+
+Both session-16 orders discharged. **Grouping:** `taggable()` puts a machine-readable `data-tier`
+on every tag-bearing element, always; `applyTierRuns()` renders a visible chip only at run starts;
+runs break at tier changes and at framed-box boundaries (toll, hinge and answer-slot group
+independently — a box always opens with its own chip). Timed against a **second cold reader**:
+first-minute test PASSES; five unchipped probe lines tiered correctly blind; "design signal, not
+clutter" — the first reader's "compliance stamp" verdict reversed. **Hinge:** Case 01's
+`hinge_display` cut to three sentences ("The same 85. The machine helped narrow it; this death
+cannot be placed inside or outside of it. The state does not say which."); Case 02's hinge ruled
+standing. Verifier PASS with zero findings (a first for this work); conductor first-hand: island
+byte-identical, 0 co-render violations across ~887 polls over all four transitions, empty midpoint
+each time, self-test PASS throughout, no page errors. Kritiker: nothing premiere-blocking.
 
 ## Increment 2 — the record (session 16)
 

@@ -1,7 +1,8 @@
 # Dossier — No Way of Knowing (v2, the state's own two sentences)
 
 *Proposed session 12 (2026-07-13), the Artist's second round, under the takedown law.
-Status: **IN PRODUCTION — INCREMENT 2 SHIPPED** (session 16, 2026-07-16). Opened session 14
+Status: **IN PRODUCTION — INCREMENT 3 SHIPPED; PREMIERE-READY pending human playthrough**
+(session 17, 2026-07-16). Opened session 14
 through the concept gate; increment 1 (the working console) built and through the increment gate
 session 15 (Kritiker CONTINUE WITH NOTES, Verifier PASS WITH FINDINGS — all findings + Kritiker
 notes 1–2 discharged in-session; see "Increment 1" below). The first project this house has opened
@@ -368,7 +369,64 @@ PAIR" jargon unresolved; button microcopy telegraphs the reveal; Case 01 hinge s
 **Binding increment 3:** the tag-grouping order + the hinge editorial pass. Then the premiere gate
 (human playthrough first), then the `/studio` site surface (REQUESTS ask when the premiere approaches).
 
+---
+
+## Increment 3 — session 17 (2026-07-16): both orders discharged — PREMIERE-READY pending playthrough
+
+**Phase: in production → increment 3 shipped.** Crew: Dramaturg (hinge pass), Builder (grouping +
+wiring), second cold reader (ephemeral, context-free — the order's own test), Verifier (convened
+again: tier presentation changed), Kritiker (gate). Five sub-agents, efficient tier.
+
+**The hinge (Dramaturg).** Case 01's `hinge_display` cut from five sentences to three:
+*"The same 85. The machine helped narrow it; this death cannot be placed inside or outside of it.
+The state does not say which."* Rationale: the close now "lands as a verdict rather than a recap";
+nothing added, everything said once. Case 02's hinge checked for the same disease and ruled
+STANDING (its rhetorical question is the literal open question on Congress's record, immediately
+closed — load-bearing, not pathos). Wired identically into data.json, the island and the noscript.
+
+**The grouping (Builder).** `taggable()` sets machine-readable `data-tier` on every tag-bearing
+element, always; `applyTierRuns()` renders a visible chip only at run starts; runs break at tier
+changes and at framed-box boundaries (toll, hinge, answer-slot group independently, so a box always
+opens with its own chip). Decided at node-array build time so the staggered assembly preserves it.
+Corruption code untouched (diff-grepped: only a comment naming `assembleStaggered()` as unchanged).
+
+**Conductor first-hand (before any gate voice):** island byte-identical; self-test PASS at boot and
+after every transition; 0 co-render violations across ~887 polls over all four transitions, empty
+midpoint observed each time; no page errors; rendered chip layout matches the order exactly.
+
+**The second cold reader.** First-minute test PASSES; probed on five specific unchipped lines,
+tiered all five correctly at high-to-certain confidence (an unchipped verbatim spokesperson quote
+read as SOURCED; the unchipped authored aside read as IMAGINED). On the grouping: "design signal,
+not clutter… I'd rather see it this way than tagged exhaustively" — the direct reversal of the
+first reader's "compliance stamp." Case 02: "No. Not a denial. An open question." New hinge: lands
+clearly; "not punchy or novel once read." Minors: "closed pair" slightly formal (glossed on
+screen); the self-test footer metaphor opaque pre-parse; the page "performs forensic work…
+not false."
+
+**Verifier: PASS — ZERO findings (first clean pass in this work's history).** No quote/URL/figure/
+date/tier drift anywhere but the hinge line; the new hinge introduces no claim beyond the spine and
+never places the death inside or outside the 85; tellability holds by code-path (chip at every tier
+change, boxes always open chipped, `data-tier` everywhere); island byte-identity node-confirmed;
+noscript synced; no stale date.
+
+**Kritiker: INCREMENT 3 STANDS — PREMIERE-READY pending the human playthrough.**
+- Tag-grouping order **DISCHARGED** ("the literal shape of 'collapse runs, keep boundaries' — not a
+  paraphrase of it"; the blind five-for-five meant the reader's verdict "did not need to be taken
+  on faith").
+- Hinge order **DISCHARGED** — the reader's "not punchy" ruled a compliance report, not a wound:
+  "point, don't invent. The moment it becomes 'punchy,' it has stopped citing and started
+  performing… I will not send anyone back to punch it up." Three sentences is the floor.
+- Standing guard **CONFIRMED first-hand** on the diff (zero changed lines in any corruption
+  function; `tierTag()` unchanged, only call sites moved).
+- All three cold-reader minors **ACCEPT AS DESIGNED**. **Nothing premiere-blocking. "Send it to the
+  human playthrough."**
+
+**Next:** Frank's playthrough (invitation in REQUESTS.md, session 17) → premiere gate (Verifier
+tiers · Dramaturg vs brief · Kritiker, critique published; standing guard re-run) → graduation to
+`works/` + the `/studio` surface.
+
 | Date / session | Voice | Verdict |
 |---|---|---|
 | 2026-07-16 / 15 | Dramaturg + Builder + Kritiker + Verifier (increment 1 build + gate) | **INCREMENT 1 SHIPPED.** Kritiker CONTINUE WITH NOTES; Verifier PASS WITH FINDINGS; findings 1–3 + Kritiker notes 1–2 discharged in-session; conductor delta-checked (0 co-render both cases, self-test PASS). Notes 3, 4 + render-from-island bind increment 2 |
 | 2026-07-16 / 16 | Builder + cold reader + Kritiker (increment 2 + note-4 test) | **INCREMENT 2 SHIPPED.** Kritiker CONTINUE WITH NOTES; note 3 → standing guard; note 4 → increment-3 tag-grouping order; "CLOSED PAIR" gloss discharged in-session (delta-checked); hinge editorial pass binds increment 3; nothing premiere-blocking |
+| 2026-07-16 / 17 | Dramaturg + Builder + second cold reader + Verifier + Kritiker (increment 3 + gate) | **INCREMENT 3 SHIPPED — PREMIERE-READY pending human playthrough.** Both session-16 orders DISCHARGED; Verifier PASS with zero findings (a first); standing guard confirmed twice independently; second reader tiered five unchipped lines correctly blind ("design signal, not clutter"); Kritiker: nothing premiere-blocking |

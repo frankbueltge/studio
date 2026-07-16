@@ -441,10 +441,11 @@
 <script type="application/json" id="spine">
 {
   "work": "no-way-of-knowing",
-  "increment": 2,
+  "increment": 3,
   "extracted": "2026-07-15 (session 14, concept gate — SOURCED/primary-confirmed)",
   "built": "2026-07-16 (session 15, increment 1)",
   "built_increment_2": "2026-07-16 (session 16, increment 2 — render-from-island hygiene; no visible change)",
+  "built_increment_3": "2026-07-16 (session 17, increment 3 — tag-run grouping + the Case 01 hinge said once)",
   "monitoring_checked": "2026-07-16",
   "one_line": "The state at maximal confidence when it acts; the state at declared un-knowing when it harms — two sentences it said on the record, in a console that will not let you hold both at once.",
   "tiers_on_this_work": {
@@ -518,7 +519,7 @@
           "opening_comment_imagined": "Both sides answered. The answers do not meet.",
           "opening_comment_sourced": "A 20-year-old construction student was killed in the strike of 2 February 2024. Name not on record.",
           "attribution": "— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.",
-          "hinge_display": "The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.",
+          "hinge_display": "The same 85. The machine helped narrow it; this death cannot be placed inside or outside of it. The state does not say which.",
           "note": "The exact Face Two display copy for this instance, verbatim — kept here so buildFaceTwoNodes() never hardcodes a sentence literal (increment-2 hygiene, session-15 gate). hinge_display is the work's rendered voice and intentionally differs from the analytic hinge.text below."
         }
       },
@@ -653,7 +654,7 @@
     <p class="ns-quote">&ldquo;There is no indication that AI was used at any point in the targeting process,&rdquo;</p>
     <p class="ns-quote">&ldquo;We have no way of knowing whether this strike is one of the 85 [strikes] that [the chief technology officer] described [as having been targeted using AI].&rdquo;</p>
     <p class="ns-attr">&mdash; A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.</p>
-    <p>The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.</p>
+    <p>The same 85. The machine helped narrow it; this death cannot be placed inside or outside of it. The state does not say which.</p>
   </div>
 
   <div class="ns-case">
@@ -752,37 +753,67 @@
     return num + '+ / TARGETS';
   }
 
+  /* ---------- tag-run grouping (increment 3) ----------
+     Every line/box that carries a tier still gets a machine-readable
+     data-tier attribute, always. The visible chip is collapsed: same-tier
+     runs of consecutive units show one chip, on the first unit of the run.
+     A run breaks on a tier change or a container change. This is a pure
+     post-pass over an array of {el, tier} units decided at array-build
+     time (each call to applyTierRuns() is scoped to exactly one context —
+     the top-level flow, or the inside of one bordered box — so a fresh
+     array always starts a fresh run); assembleStaggered() still just
+     appends the finished nodes one at a time and is untouched. */
+  function taggable(el, kind){
+    el.dataset.tier = kind;
+    return { el: el, tier: kind };
+  }
+  function applyTierRuns(units){
+    var last = null;
+    units.forEach(function(u){
+      if (u.tier !== last){
+        u.el.insertBefore(tierTag(u.tier), u.el.firstChild);
+        last = u.tier;
+      }
+    });
+  }
+
   /* ---------- Face One (ACT) node builders ---------- */
   function roleHeading(kind, text){
     var line = mk('div', 'line face-role');
-    line.appendChild(tierTag(kind));
     line.appendChild(corruptable('roletext', text));
     return line;
   }
 
   function buildFaceOneNodes(inst){
     var nodes = [];
-    nodes.push(roleHeading('imagined', inst.face_act.role));
+    var flow = [];
+
+    var roleEl = roleHeading('imagined', inst.face_act.role);
+    flow.push(taggable(roleEl, 'imagined'));
+    nodes.push(roleEl);
+
     inst.face_act.quotes.forEach(function(q){
       var line = mk('div', 'line');
-      line.appendChild(tierTag('sourced'));
       if (q.frame){ line.appendChild(mk('span', 'frame', q.frame + ':')); }
       var qtextStr = '“' + q.text + '”';
       var qs = corruptable('qtext', qtextStr);
       line.appendChild(qs);
+      flow.push(taggable(line, 'sourced'));
       nodes.push(line);
     });
     var attrStr = '— ' + inst.face_act.speaker_role + ', ' + inst.face_act.outlet + ', ' + inst.face_act.date + '.';
     var attrLine = mk('div', 'line attribution');
-    attrLine.appendChild(tierTag('sourced'));
     attrLine.appendChild(corruptable('', attrStr));
+    flow.push(taggable(attrLine, 'sourced'));
     nodes.push(attrLine);
 
     var statStr = formatStat(inst.face_act.target_count);
     var statLine = mk('div', 'stat');
-    statLine.appendChild(tierTag('sourced'));
     statLine.appendChild(corruptable('statnum', statStr));
+    flow.push(taggable(statLine, 'sourced'));
     nodes.push(statLine);
+
+    applyTierRuns(flow);
 
     var srcStr = inst.face_act.outlet + ' · ' + inst.face_act.date;
     var srcLine = mk('div', 'line srcline');
@@ -801,7 +832,6 @@
 
   function commentLine(kind, text){
     var line = mk('div', 'line comment');
-    line.appendChild(tierTag(kind));
     line.appendChild(corruptable('', text));
     return line;
   }
@@ -814,59 +844,82 @@
   function buildFaceTwoNodes(inst){
     var nodes = [];
     var render = inst.face_harm.render;
-    nodes.push(roleHeading('imagined', inst.face_harm.role));
+    var flow = [];
+
+    var roleEl = roleHeading('imagined', inst.face_harm.role);
+    flow.push(taggable(roleEl, 'imagined'));
+    nodes.push(roleEl);
+
     if (inst.order === 1){
-      nodes.push(commentLine('imagined', render.opening_comment_imagined));
-      nodes.push(commentLine('sourced', render.opening_comment_sourced));
+      var openImg = commentLine('imagined', render.opening_comment_imagined);
+      flow.push(taggable(openImg, 'imagined'));
+      nodes.push(openImg);
+
+      var openSrc = commentLine('sourced', render.opening_comment_sourced);
+      flow.push(taggable(openSrc, 'sourced'));
+      nodes.push(openSrc);
 
       inst.face_harm.quotes.forEach(function(q){
         var line = mk('div', 'line');
-        line.appendChild(tierTag('sourced'));
         var qtextStr = '“' + q.text + '”';
         line.appendChild(corruptable('qtext', qtextStr));
+        flow.push(taggable(line, 'sourced'));
         nodes.push(line);
       });
 
       var attrStr = render.attribution;
       var attrLine = mk('div', 'line attribution');
-      attrLine.appendChild(tierTag('sourced'));
       attrLine.appendChild(corruptable('', attrStr));
+      flow.push(taggable(attrLine, 'sourced'));
       nodes.push(attrLine);
+
+      applyTierRuns(flow);
 
       var hingeText = render.hinge_display;
       var hinge = mk('div', 'hinge');
-      hinge.appendChild(tierTag('imagined'));
       hinge.appendChild(corruptable('hingetext', hingeText));
+      applyTierRuns([taggable(hinge, 'imagined')]);
       nodes.push(hinge);
     } else {
-      nodes.push(commentLine('imagined', render.opening_comment_imagined));
-      nodes.push(commentLine('sourced', render.opening_comment_sourced));
+      var openImg2 = commentLine('imagined', render.opening_comment_imagined);
+      flow.push(taggable(openImg2, 'imagined'));
+      nodes.push(openImg2);
+
+      var openSrc2 = commentLine('sourced', render.opening_comment_sourced);
+      flow.push(taggable(openSrc2, 'sourced'));
+      nodes.push(openSrc2);
+
+      applyTierRuns(flow);
 
       var toll = mk('div', 'toll');
+      var tollUnits = [];
       inst.face_harm.toll_per_source.forEach(function(t){
         var line = mk('div', 'line');
-        line.appendChild(tierTag('sourced'));
         var str = t.label + ': ' + t.figure + '.';
         line.appendChild(corruptable('', str));
+        tollUnits.push(taggable(line, 'sourced'));
         toll.appendChild(line);
       });
-      toll.appendChild(commentLine('imagined', render.toll_note));
+      var tollNote = commentLine('imagined', render.toll_note);
+      tollUnits.push(taggable(tollNote, 'imagined'));
+      toll.appendChild(tollNote);
+      applyTierRuns(tollUnits);
       nodes.push(toll);
 
       if (inst.hinge && inst.hinge.text){
         var hinge2 = mk('div', 'hinge');
-        hinge2.appendChild(tierTag('imagined'));
         hinge2.appendChild(corruptable('hingetext', inst.hinge.text));
+        applyTierRuns([taggable(hinge2, 'imagined')]);
         nodes.push(hinge2);
       }
 
       var slot = mk('div', 'answer-slot');
-      slot.appendChild(tierTag('sourced'));
       slot.appendChild(mk('div', 'slot-label', render.answer_slot_label));
       slot.appendChild(corruptable('', render.answer_slot_text));
       var safeguard = corruptable('slot-safeguard', render.answer_slot_safeguard);
       safeguard.className = safeguard.className.replace('corruptable', 'corruptable-block');
       slot.appendChild(safeguard);
+      applyTierRuns([taggable(slot, 'sourced')]);
       nodes.push(slot);
     }
     return nodes;

@@ -1,9 +1,10 @@
 {
   "work": "no-way-of-knowing",
-  "increment": 2,
+  "increment": 3,
   "extracted": "2026-07-15 (session 14, concept gate — SOURCED/primary-confirmed)",
   "built": "2026-07-16 (session 15, increment 1)",
   "built_increment_2": "2026-07-16 (session 16, increment 2 — render-from-island hygiene; no visible change)",
+  "built_increment_3": "2026-07-16 (session 17, increment 3 — tag-run grouping + the Case 01 hinge said once)",
   "monitoring_checked": "2026-07-16",
   "one_line": "The state at maximal confidence when it acts; the state at declared un-knowing when it harms — two sentences it said on the record, in a console that will not let you hold both at once.",
   "tiers_on_this_work": {
@@ -77,7 +78,7 @@
           "opening_comment_imagined": "Both sides answered. The answers do not meet.",
           "opening_comment_sourced": "A 20-year-old construction student was killed in the strike of 2 February 2024. Name not on record.",
           "attribution": "— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.",
-          "hinge_display": "The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.",
+          "hinge_display": "The same 85. The machine helped narrow it; this death cannot be placed inside or outside of it. The state does not say which.",
           "note": "The exact Face Two display copy for this instance, verbatim — kept here so buildFaceTwoNodes() never hardcodes a sentence literal (increment-2 hygiene, session-15 gate). hinge_display is the work's rendered voice and intentionally differs from the analytic hinge.text below."
         }
       },
