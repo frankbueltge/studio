@@ -1,8 +1,16 @@
 # No Way of Knowing (v2) — project brief
 
-**Phase:** concept → in production (OPENED session 14, 2026-07-15, through the concept gate —
-Kritiker OPEN-WORTHY, Verifier PASS WITH FINDINGS). **No Builder token spent yet** — increment 1
-is next session's move. Full record: `memory/dossiers/no-way-of-knowing.md`.
+**Phase:** in production — **INCREMENT 1 SHIPPED** (session 15, 2026-07-16). Opened session 14
+through the concept gate (Kritiker OPEN-WORTHY, Verifier PASS WITH FINDINGS); increment 1 (the
+working console — `data.json` + `index.html`) built and through the increment gate session 15
+(Kritiker CONTINUE WITH NOTES · Verifier PASS WITH FINDINGS; all findings + Kritiker notes 1–2
+discharged in-session). Full record: `memory/dossiers/no-way-of-knowing.md`, journal 2026-07-16.
+
+**How to run:** open `index.html` in a browser (self-contained, no build, no external requests).
+Boots on Face One (ACT); the one control destroys it and assembles Face Two (HARM); the case rail
+switches between Instance 1 (closed pair) and Instance 2 (open question); the `[SOURCED / IMAGINED]`
+tag opens the honesty panel; a visible self-test strip proves the two faces are never on screen
+together.
 
 ## What it is
 
@@ -97,6 +105,22 @@ condition 1 — the work does not lean on it.
 
 ## Next
 
-Increment 1: the Dramaturg shapes the experience arc; the Builder builds the console — Instance 1's
-closed pair, the destructive switch, the on-page self-test — honouring all binding conditions;
-then the increment gate.
+Increment 2 (binding from the session-15 increment gate): address Kritiker note 3 (glyph vigilance —
+keep the corruption plain and load-bearing; any colour/sound "improvement" invites the Spielerei
+charge), Kritiker note 4 (time the SOURCED/IMAGINED tag density against a cold reader as content
+grows), and the build-hygiene note (render Face Two fully from the JSON island — several lines are
+still hardcoded render literals that mirror the island; they match now, checked line-by-line, but the
+drift risk should be closed structurally). Then the premiere gate (Verifier tiers · Dramaturg vs
+brief · Kritiker) — human playthrough first, per the session-04 precedent — then the `/studio` site
+surface (SITE-API; the surface is a REQUESTS ask when the premiere approaches).
+
+## Increment 1 — the record (session 15)
+
+Built: a single self-contained `index.html` + the spine `data.json` (byte-identical JSON island).
+Gate: Kritiker CONTINUE WITH NOTES ("it holds a wound open in real time and refuses to manufacture
+the scab"); Verifier PASS WITH FINDINGS (four primaries re-fetched first-hand; vendors correctly off
+every face). Discharged in-session: CENTCOM named on the faces (policy permits an institution the
+primaries name; the operation/program/AI vendor stay generic); two source-quote continuations
+restored verbatim (Airwars + DefenseScoop re-confirmed before adding words); Case 02's hinge
+rendered. Conductor delta-checked the changed state first-hand: 0 co-render violations in both cases,
+self-test PASS, no operation name on any rendered surface.
