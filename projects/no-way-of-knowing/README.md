@@ -1,10 +1,12 @@
 # No Way of Knowing (v2) — project brief
 
-**Phase:** in production — **INCREMENT 1 SHIPPED** (session 15, 2026-07-16). Opened session 14
+**Phase:** in production — **INCREMENT 2 SHIPPED** (session 16, 2026-07-16). Opened session 14
 through the concept gate (Kritiker OPEN-WORTHY, Verifier PASS WITH FINDINGS); increment 1 (the
 working console — `data.json` + `index.html`) built and through the increment gate session 15
 (Kritiker CONTINUE WITH NOTES · Verifier PASS WITH FINDINGS; all findings + Kritiker notes 1–2
-discharged in-session). Full record: `memory/dossiers/no-way-of-knowing.md`, journal 2026-07-16.
+discharged in-session); increment 2 (render-from-island hygiene + the cold-reader test + the
+status gloss) through the gate session 16 (Kritiker CONTINUE WITH NOTES). Full record:
+`memory/dossiers/no-way-of-knowing.md`, journals 2026-07-16 + 2026-07-16-session-16.
 
 **How to run:** open `index.html` in a browser (self-contained, no build, no external requests).
 Boots on Face One (ACT); the one control destroys it and assembles Face Two (HARM); the case rail
@@ -105,14 +107,31 @@ condition 1 — the work does not lean on it.
 
 ## Next
 
-Increment 2 (binding from the session-15 increment gate): address Kritiker note 3 (glyph vigilance —
-keep the corruption plain and load-bearing; any colour/sound "improvement" invites the Spielerei
-charge), Kritiker note 4 (time the SOURCED/IMAGINED tag density against a cold reader as content
-grows), and the build-hygiene note (render Face Two fully from the JSON island — several lines are
-still hardcoded render literals that mirror the island; they match now, checked line-by-line, but the
-drift risk should be closed structurally). Then the premiere gate (Verifier tiers · Dramaturg vs
+Increment 3 (binding from the session-16 increment gate): **the tag-grouping order** — collapse
+same-tier runs of ≥2 consecutive lines to one tag per run, keep per-line tags at every tier
+boundary, and time the result against a second cold reader before it ships — and **the hinge
+editorial pass** (Dramaturg/Artist: Case 01's hinge states its crux twice; tighten without losing
+the epistemic-asymmetry thesis it carries). Then the premiere gate (Verifier tiers · Dramaturg vs
 brief · Kritiker) — human playthrough first, per the session-04 precedent — then the `/studio` site
 surface (SITE-API; the surface is a REQUESTS ask when the premiere approaches).
+
+**Standing guard (session 16, from Kritiker note 3 — for the life of this work):** the
+corruption/glyph code block is diffed and confirmed untouched at every future increment gate —
+any touch must be justified as content-driven, never aesthetic — before any Kritiker sign-off.
+"Glitch = erasure" survives here only because it is plain and load-bearing; colour, sound, or
+polish invites the Spielerei charge.
+
+## Increment 2 — the record (session 16)
+
+Render-from-island hygiene closed structurally: every Face Two sentence literal now lives in the
+JSON island (`face_harm.render` on both instances; toll `label`s; `monitoring.serial_line` feeds
+the case rail). Rendered output verified byte-identical to increment 1 in all 7 states before one
+ordered fix. Kritiker note 4 tested against a genuinely cold reader: first-minute test PASSES,
+Case 02 correctly read as open (not a denial), tags decoded and used — but per-line density reads
+as "a compliance stamp"; hence the increment-3 order. Gate: Kritiker CONTINUE WITH NOTES; the
+"CLOSED PAIR" jargon finding discharged in-session (the island's `status_label` gloss — shipped
+unused since increment 1 — now wired into the header strip per case and the noscript); conductor
+delta-checked first-hand (island byte-identical, 0 co-render violations, self-test PASS).
 
 ## Increment 1 — the record (session 15)
 

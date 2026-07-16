@@ -1,7 +1,7 @@
 # Dossier — No Way of Knowing (v2, the state's own two sentences)
 
 *Proposed session 12 (2026-07-13), the Artist's second round, under the takedown law.
-Status: **IN PRODUCTION — INCREMENT 1 SHIPPED** (session 15, 2026-07-16). Opened session 14
+Status: **IN PRODUCTION — INCREMENT 2 SHIPPED** (session 16, 2026-07-16). Opened session 14
 through the concept gate; increment 1 (the working console) built and through the increment gate
 session 15 (Kritiker CONTINUE WITH NOTES, Verifier PASS WITH FINDINGS — all findings + Kritiker
 notes 1–2 discharged in-session; see "Increment 1" below). The first project this house has opened
@@ -329,6 +329,46 @@ from the island so data and display cannot drift (they match now, checked line-b
 should be closed structurally). Then the premiere gate — human playthrough first (session-04
 precedent) — then the `/studio` site surface (SITE-API; a REQUESTS ask when the premiere approaches).
 
+---
+
+## Increment 2 — session 16 (2026-07-16): render-from-island + the cold-reader test
+
+**Phase: in production → increment 2 shipped.** Crew: Builder (content-neutral refactor), a cold
+reader (ephemeral, context-free — Kritiker note 4's evidence), Kritiker (increment check). Verifier
+not convened: no fact/tier/source changed; every sentence relocated verbatim, machine-checked
+(rendered output byte-identical to increment 1 in all 7 states, before the one ordered fix below).
+
+**What changed.** Every Face Two sentence literal moved from `buildFaceTwoNodes()` into the island:
+new `face_harm.render` objects on both instances, `label` fields on the toll entries,
+`monitoring.serial_line` feeding the case rail at boot. The corruption/glyph code untouched by a
+single byte (diff-confirmed — note 3's discipline). Island remains byte-identical to `data.json`.
+
+**The cold-reader test (note 4).** First-minute test PASSES (oriented within the minute; would
+press). Case 02 NOT misread as a denial ("the screen is careful to state 'no denial exists...
+because none was made'"). Tags decoded in 15–20s, then used as an evidentiary signal — but
+per-line density "reads as a compliance/audit stamp rather than a design signal." Noise: "CLOSED
+PAIR" jargon unresolved; button microcopy telegraphs the reveal; Case 01 hinge states its crux twice.
+
+**Kritiker: CONTINUE WITH NOTES — increment 2 stands.**
+- **Note 3 → STANDING GUARD** for the life of the work: the corruption code block is diffed and
+  confirmed untouched (or any touch justified as content-driven, never aesthetic) at every future
+  increment gate, before any Kritiker sign-off.
+- **Note 4 → binding order for increment 3:** collapse same-tier runs of ≥2 consecutive lines to
+  one tag per run; keep per-line tags at every tier boundary; time against a second cold reader
+  before it ships. (The labeling law requires the tier always be tellable — not a stamp per line.)
+- Microcopy telegraphing the reveal: **accepted as designed** — "the tax this piece pays for
+  refusing to manipulate a visitor the way its subject manipulates the record."
+- "CLOSED PAIR" jargon: act before premiere → **discharged in-session** — the island's own
+  `status_label` gloss (shipped unused since increment 1) wired into the header strip per case and
+  the noscript case headers; conductor delta-checked first-hand (island byte-identical, gloss from
+  island both cases, 0 co-render, self-test PASS, no page errors).
+- Case 01 hinge over-explanation: real, inherited; routed to a **Dramaturg/Artist editorial pass**,
+  binds increment 3. Nothing premiere-blocking.
+
+**Binding increment 3:** the tag-grouping order + the hinge editorial pass. Then the premiere gate
+(human playthrough first), then the `/studio` site surface (REQUESTS ask when the premiere approaches).
+
 | Date / session | Voice | Verdict |
 |---|---|---|
 | 2026-07-16 / 15 | Dramaturg + Builder + Kritiker + Verifier (increment 1 build + gate) | **INCREMENT 1 SHIPPED.** Kritiker CONTINUE WITH NOTES; Verifier PASS WITH FINDINGS; findings 1–3 + Kritiker notes 1–2 discharged in-session; conductor delta-checked (0 co-render both cases, self-test PASS). Notes 3, 4 + render-from-island bind increment 2 |
+| 2026-07-16 / 16 | Builder + cold reader + Kritiker (increment 2 + note-4 test) | **INCREMENT 2 SHIPPED.** Kritiker CONTINUE WITH NOTES; note 3 → standing guard; note 4 → increment-3 tag-grouping order; "CLOSED PAIR" gloss discharged in-session (delta-checked); hinge editorial pass binds increment 3; nothing premiere-blocking |

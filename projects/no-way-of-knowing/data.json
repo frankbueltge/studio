@@ -1,8 +1,9 @@
 {
   "work": "no-way-of-knowing",
-  "increment": 1,
+  "increment": 2,
   "extracted": "2026-07-15 (session 14, concept gate — SOURCED/primary-confirmed)",
   "built": "2026-07-16 (session 15, increment 1)",
+  "built_increment_2": "2026-07-16 (session 16, increment 2 — render-from-island hygiene; no visible change)",
   "monitoring_checked": "2026-07-16",
   "one_line": "The state at maximal confidence when it acts; the state at declared un-knowing when it harms — two sentences it said on the record, in a console that will not let you hold both at once.",
   "tiers_on_this_work": {
@@ -71,7 +72,14 @@
           }
         ],
         "acknowledgment": "Reported as the first military acknowledgment of civilian harm from an AI-assisted strike (the outlet's framing, attributed — not an independent fact of this work).",
-        "source_url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/"
+        "source_url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/",
+        "render": {
+          "opening_comment_imagined": "Both sides answered. The answers do not meet.",
+          "opening_comment_sourced": "A 20-year-old construction student was killed in the strike of 2 February 2024. Name not on record.",
+          "attribution": "— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.",
+          "hinge_display": "The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.",
+          "note": "The exact Face Two display copy for this instance, verbatim — kept here so buildFaceTwoNodes() never hardcodes a sentence literal (increment-2 hygiene, session-15 gate). hinge_display is the work's rendered voice and intentionally differs from the analytic hinge.text below."
+        }
       },
       "hinge": {
         "label": "The mutual exclusion, in the state's own two sentences",
@@ -110,8 +118,8 @@
         "role": "HARM — and here the answer is not a denial but an open question",
         "harm": "A 28 February 2026 strike on the Shajareh Tayyebeh elementary school in Minab, Hormozgan. Preliminary US findings: a US munition 'likely responsible'; 'outdated intelligence' the likely cause ('old intelligence showed it to be a military target'). The machine is named neither way.",
         "toll_per_source": [
-          { "figure": "more than 170 people, mostly children", "source": "NBC News", "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" },
-          { "figure": "156 people, over 100 children", "source": "Amnesty International", "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" }
+          { "figure": "more than 170 people, mostly children", "source": "NBC News", "label": "NBC", "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" },
+          { "figure": "156 people, over 100 children", "source": "Amnesty International", "label": "AMNESTY", "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" }
         ],
         "open_answer_slot": {
           "label": "THE ANSWER IS NOT YET GIVEN",
@@ -120,6 +128,15 @@
             "https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083",
             "https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170"
           ]
+        },
+        "render": {
+          "opening_comment_imagined": "One side has answered. The other has not spoken yet.",
+          "opening_comment_sourced": "An elementary school in Minab was struck on 28 February 2026. A US munition was likely responsible. Outdated intelligence was the likely cause.",
+          "toll_note": "Two counts. Kept separate here, as they were kept separate by the two organizations that reported them.",
+          "answer_slot_label": "THE ANSWER, AS OF 16 JULY 2026:",
+          "answer_slot_text": "120 members of Congress have asked the Pentagon what role AI may have played in this strike. The investigation is not finished. The Pentagon has not said yes. It has not said no.",
+          "answer_slot_safeguard": "No denial exists for this strike. None is shown here, because none was made.",
+          "note": "The exact Face Two display copy for this instance, verbatim — kept here so buildFaceTwoNodes() never hardcodes a sentence literal (increment-2 hygiene, session-15 gate). Distinct from open_answer_slot above, which is the analytic slot data; answer_slot_label/text/safeguard are the work's rendered voice for that slot."
         }
       },
       "hinge": {
@@ -132,7 +149,8 @@
     "tier": "STUDIO MONITORING STATUS (not a world-fact)",
     "last_checked": "2026-07-16",
     "statement": "Two catches as of the last check (2026-07-16): one closed pair (2024), one open question (2026, the operation against Iran, investigation being finalised — the AI question unanswered). No new confirmed confidence/denial pair since. This is the studio's own monitoring status on the date shown, not a claim that none exists.",
-    "serial_note": "The console ships on the pairs that verifiably exist and never manufactures content to feed the form. When the Pentagon investigation answers Congress's AI question, Instance 2's open slot updates on that cycle — or the console discloses that it has not."
+    "serial_note": "The console ships on the pairs that verifiably exist and never manufactures content to feed the form. When the Pentagon investigation answers Congress's AI question, Instance 2's open slot updates on that cycle — or the console discloses that it has not.",
+    "serial_line": "2 catches on record. Case 02 unresolved. Last checked 16 July 2026."
   },
   "mechanism": {
     "tier": "IMAGINED (the form) — the SOURCED spine is what it carries",

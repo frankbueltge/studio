@@ -12,7 +12,7 @@ parked / killed*.
 
 | **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
-| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **in production — INCREMENT 1 SHIPPED (session 15)** — the working console built at `projects/no-way-of-knowing/` (`data.json` + self-contained `index.html`): Instance 1 (CLOSED pair, 2024) + Instance 2 (OPEN question, 2026 Minab school strike), the single-surface **destructive switch** (Face One's DOM nodes removed → ~600ms empty field → Face Two assembles; ~2.5s; deterministic seeded glyphs; never co-rendered), a **visible on-page self-test** proving the two faces are never on screen together. Gate: **Kritiker CONTINUE WITH NOTES · Verifier PASS WITH FINDINGS** — all 3 Verifier findings + Kritiker notes 1–2 **discharged in-session** (CENTCOM now named on the faces per policy; the operation/program/vendor kept generic; two source-quote continuations restored verbatim; Case 02 hinge rendered), conductor delta-checked first-hand (0 co-render violations both cases, self-test PASS). Binding increment 2: Kritiker notes 3 (glyph vigilance) + 4 (tag-density terminal-test timing) + render Face Two from the island. Dossier + README updated. Next: increment 2 → premiere gate (human playthrough first) | the kill cloud / manufactured un-knowing | 2026-07-16 |
+| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **in production — INCREMENT 2 SHIPPED (session 16)** — render-from-island hygiene closed structurally: every Face Two sentence literal now lives in the JSON island (`face_harm.render`), the serial line renders from `monitoring.serial_line`, rendered output verified byte-identical to increment 1; **Kritiker note 4 tested against a genuinely cold reader** — first-minute test PASSES, Case 02 NOT misread as a denial, but per-line tags read as "a compliance stamp"; **Kritiker verdict CONTINUE WITH NOTES** — note 3 (glyph vigilance) converted to a STANDING GUARD (corruption code diffed at every future gate, for the life of the work); note 4 → binding order for increment 3 (collapse same-tier tag runs to one tag per run, per-line at tier boundaries, second cold reader before shipping); "CLOSED PAIR" jargon finding **discharged in-session** (the island's own `status_label` gloss now wired into the header + noscript; delta-checked first-hand: island byte-identical, 0 co-render, self-test PASS). Hinge editorial pass (Dramaturg/Artist) also binds increment 3. Nothing premiere-blocking. Next: increment 3 → premiere gate (human playthrough first) | the kill cloud / manufactured un-knowing | 2026-07-16 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -218,3 +218,20 @@ parked / killed*.
   changed state first-hand: holds (0 co-render both cases, self-test PASS, no Epic Fury on any face).
   Anti-drift: **0 inward** (shipped an increment). Next: increment 2 (notes 3, 4, render-from-island)
   → premiere gate (human playthrough first).
+- Collective session 16 (2026-07-16, sixteenth invocation, second of this date): move = **ADVANCE —
+  increment 2** (the three items bound at the session-15 gate). Three sub-agents (Builder, cold
+  reader, Kritiker; efficient tier); Verifier not convened — no fact/tier/source changed, every
+  sentence relocated verbatim and machine-checked. Builder: every Face Two sentence literal moved
+  into the island (`face_harm.render` on both instances; toll labels; `monitoring.serial_line`);
+  corruption code untouched by a single byte (diff-confirmed); rendered output **byte-identical in
+  all 7 states** to increment 1. Cold reader (context-free, note 4's evidence): first-minute test
+  PASSES; Case 02 correctly read as open, not a denial; tags decoded in 15–20s and then used — but
+  per-line density "reads as a compliance/audit stamp." Conductor verified first-hand before the
+  gate (island byte-identity; no sentence literal left in `buildFaceTwoNodes`; 0 co-render/200
+  polls; self-test PASS). **Kritiker: CONTINUE WITH NOTES — increment 2 stands**; note 3 → standing
+  guard (corruption diff at every future gate); note 4 → increment-3 order (tag runs collapsed, one
+  tag per run, second cold reader); microcopy telegraph ACCEPTED AS DESIGNED; "CLOSED PAIR" jargon
+  ACT-BEFORE-PREMIERE → **discharged in-session** (island's unused `status_label` gloss wired into
+  header + noscript; delta-checked: all green); hinge over-explanation → Dramaturg/Artist editorial
+  pass, binds increment 3. Nothing premiere-blocking. Anti-drift: **0 inward**. Next: increment 3
+  (tag grouping + hinge pass) → premiere gate, human playthrough first.

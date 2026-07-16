@@ -96,6 +96,11 @@
     display:inline-block;
   }
   .statustag .stateword{ color:var(--accent); }
+  .statusgloss{
+    color:var(--dim);
+    margin-left:8px;
+    display:inline-block;
+  }
 
   /* ---- context strip ---- */
   .context-strip{
@@ -383,6 +388,7 @@
   </div>
   <div class="row2">
     <span id="statusTag" class="statustag">CASE 01 &middot; STATUS: CLOSED PAIR</span>
+    <span id="statusGloss" class="statusgloss">A CLOSED PAIR &mdash; both sentences said, on the record</span>
   </div>
 </header>
 
@@ -435,9 +441,10 @@
 <script type="application/json" id="spine">
 {
   "work": "no-way-of-knowing",
-  "increment": 1,
+  "increment": 2,
   "extracted": "2026-07-15 (session 14, concept gate — SOURCED/primary-confirmed)",
   "built": "2026-07-16 (session 15, increment 1)",
+  "built_increment_2": "2026-07-16 (session 16, increment 2 — render-from-island hygiene; no visible change)",
   "monitoring_checked": "2026-07-16",
   "one_line": "The state at maximal confidence when it acts; the state at declared un-knowing when it harms — two sentences it said on the record, in a console that will not let you hold both at once.",
   "tiers_on_this_work": {
@@ -506,7 +513,14 @@
           }
         ],
         "acknowledgment": "Reported as the first military acknowledgment of civilian harm from an AI-assisted strike (the outlet's framing, attributed — not an independent fact of this work).",
-        "source_url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/"
+        "source_url": "https://airwars.org/the-first-civilian-confirmed-killed-in-an-ai-assisted-strike/",
+        "render": {
+          "opening_comment_imagined": "Both sides answered. The answers do not meet.",
+          "opening_comment_sourced": "A 20-year-old construction student was killed in the strike of 2 February 2024. Name not on record.",
+          "attribution": "— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.",
+          "hinge_display": "The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.",
+          "note": "The exact Face Two display copy for this instance, verbatim — kept here so buildFaceTwoNodes() never hardcodes a sentence literal (increment-2 hygiene, session-15 gate). hinge_display is the work's rendered voice and intentionally differs from the analytic hinge.text below."
+        }
       },
       "hinge": {
         "label": "The mutual exclusion, in the state's own two sentences",
@@ -545,8 +559,8 @@
         "role": "HARM — and here the answer is not a denial but an open question",
         "harm": "A 28 February 2026 strike on the Shajareh Tayyebeh elementary school in Minab, Hormozgan. Preliminary US findings: a US munition 'likely responsible'; 'outdated intelligence' the likely cause ('old intelligence showed it to be a military target'). The machine is named neither way.",
         "toll_per_source": [
-          { "figure": "more than 170 people, mostly children", "source": "NBC News", "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" },
-          { "figure": "156 people, over 100 children", "source": "Amnesty International", "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" }
+          { "figure": "more than 170 people, mostly children", "source": "NBC News", "label": "NBC", "url": "https://www.nbcnews.com/world/iran/old-intelligence-likely-led-us-strike-iran-elementary-school-rcna262967" },
+          { "figure": "156 people, over 100 children", "source": "Amnesty International", "label": "AMNESTY", "url": "https://www.amnesty.org/en/latest/news/2026/03/usa-iran-those-responsible-for-deadly-and-unlawful-us-strike-on-school-that-killed-over-100-children-must-be-held-accountable/" }
         ],
         "open_answer_slot": {
           "label": "THE ANSWER IS NOT YET GIVEN",
@@ -555,6 +569,15 @@
             "https://www.nbcnews.com/politics/national-security/democrats-ask-pentagon-iran-school-strike-role-ai-rcna263083",
             "https://www.nbcnews.com/politics/national-security/pentagon-investigation-iran-school-strike-finalized-rcna350170"
           ]
+        },
+        "render": {
+          "opening_comment_imagined": "One side has answered. The other has not spoken yet.",
+          "opening_comment_sourced": "An elementary school in Minab was struck on 28 February 2026. A US munition was likely responsible. Outdated intelligence was the likely cause.",
+          "toll_note": "Two counts. Kept separate here, as they were kept separate by the two organizations that reported them.",
+          "answer_slot_label": "THE ANSWER, AS OF 16 JULY 2026:",
+          "answer_slot_text": "120 members of Congress have asked the Pentagon what role AI may have played in this strike. The investigation is not finished. The Pentagon has not said yes. It has not said no.",
+          "answer_slot_safeguard": "No denial exists for this strike. None is shown here, because none was made.",
+          "note": "The exact Face Two display copy for this instance, verbatim — kept here so buildFaceTwoNodes() never hardcodes a sentence literal (increment-2 hygiene, session-15 gate). Distinct from open_answer_slot above, which is the analytic slot data; answer_slot_label/text/safeguard are the work's rendered voice for that slot."
         }
       },
       "hinge": {
@@ -567,7 +590,8 @@
     "tier": "STUDIO MONITORING STATUS (not a world-fact)",
     "last_checked": "2026-07-16",
     "statement": "Two catches as of the last check (2026-07-16): one closed pair (2024), one open question (2026, the operation against Iran, investigation being finalised — the AI question unanswered). No new confirmed confidence/denial pair since. This is the studio's own monitoring status on the date shown, not a claim that none exists.",
-    "serial_note": "The console ships on the pairs that verifiably exist and never manufactures content to feed the form. When the Pentagon investigation answers Congress's AI question, Instance 2's open slot updates on that cycle — or the console discloses that it has not."
+    "serial_note": "The console ships on the pairs that verifiably exist and never manufactures content to feed the form. When the Pentagon investigation answers Congress's AI question, Instance 2's open slot updates on that cycle — or the console discloses that it has not.",
+    "serial_line": "2 catches on record. Case 02 unresolved. Last checked 16 July 2026."
   },
   "mechanism": {
     "tier": "IMAGINED (the form) — the SOURCED spine is what it carries",
@@ -615,7 +639,7 @@
   <p class="ns-note">Without JavaScript, the console cannot destroy one face to assemble the other &mdash; here, the console would erase this claim and assemble the harm below; without JavaScript, both are simply shown in order &mdash; the interaction (spending one sentence to buy the other) does not happen for you. That omission is part of this piece.</p>
 
   <div class="ns-case">
-    <p><strong>CASE 01 &middot; STATUS: CLOSED PAIR</strong></p>
+    <p><strong>CASE 01 &middot; STATUS: CLOSED PAIR</strong> &mdash; a closed pair: both sentences said, on the record.</p>
     <h3>FACE ONE: ACT</h3>
     <p class="ns-quote">&ldquo;In early February the United States struck more than 85 targets in Iraq and Syria&rdquo;</p>
     <p class="ns-quote">&ldquo;helped narrow targets for strikes in Iraq and Syria&rdquo;</p>
@@ -633,7 +657,7 @@
   </div>
 
   <div class="ns-case">
-    <p><strong>CASE 02 &middot; STATUS: OPEN QUESTION</strong></p>
+    <p><strong>CASE 02 &middot; STATUS: OPEN QUESTION</strong> &mdash; an open question: the confidence stated, the answer not yet given.</p>
     <h3>FACE ONE: ACT</h3>
     <p class="ns-quote">&ldquo;Advanced AI tools help us sift through vast amounts of data in seconds so our leaders can cut through the noise and make smarter decisions faster than the enemy can react&rdquo;</p>
     <p class="ns-quote">&ldquo;Humans will always make final decisions on what to shoot and what not to shoot and when to shoot&rdquo;</p>
@@ -783,12 +807,17 @@
   }
 
   /* ---------- Face Two (HARM) node builders ---------- */
+  /* All sentence literals below come from the island (inst.face_harm.render.*,
+     inst.hinge.text, toll_per_source[i].label) — nothing here is hardcoded
+     display copy; see face_harm.render.note on each instance (increment-2
+     hygiene, session-15 gate: render Face Two fully from the island). */
   function buildFaceTwoNodes(inst){
     var nodes = [];
+    var render = inst.face_harm.render;
     nodes.push(roleHeading('imagined', inst.face_harm.role));
     if (inst.order === 1){
-      nodes.push(commentLine('imagined', 'Both sides answered. The answers do not meet.'));
-      nodes.push(commentLine('sourced', 'A 20-year-old construction student was killed in the strike of 2 February 2024. Name not on record.'));
+      nodes.push(commentLine('imagined', render.opening_comment_imagined));
+      nodes.push(commentLine('sourced', render.opening_comment_sourced));
 
       inst.face_harm.quotes.forEach(function(q){
         var line = mk('div', 'line');
@@ -798,31 +827,30 @@
         nodes.push(line);
       });
 
-      var attrStr = '— A U.S. Central Command spokesperson, to Airwars, published with The Independent, 10 March 2026.';
+      var attrStr = render.attribution;
       var attrLine = mk('div', 'line attribution');
       attrLine.appendChild(tierTag('sourced'));
       attrLine.appendChild(corruptable('', attrStr));
       nodes.push(attrLine);
 
-      var hingeText = 'The same 85. On Face One, 85 is what the machine helped narrow. Here, 85 is the count this death cannot be placed inside or outside of. Both numbers are the same number. Neither statement says which side of it this death falls on.';
+      var hingeText = render.hinge_display;
       var hinge = mk('div', 'hinge');
       hinge.appendChild(tierTag('imagined'));
       hinge.appendChild(corruptable('hingetext', hingeText));
       nodes.push(hinge);
     } else {
-      nodes.push(commentLine('imagined', 'One side has answered. The other has not spoken yet.'));
-      nodes.push(commentLine('sourced', 'An elementary school in Minab was struck on 28 February 2026. A US munition was likely responsible. Outdated intelligence was the likely cause.'));
+      nodes.push(commentLine('imagined', render.opening_comment_imagined));
+      nodes.push(commentLine('sourced', render.opening_comment_sourced));
 
       var toll = mk('div', 'toll');
-      var labels = ['NBC', 'AMNESTY'];
-      inst.face_harm.toll_per_source.forEach(function(t, i){
+      inst.face_harm.toll_per_source.forEach(function(t){
         var line = mk('div', 'line');
         line.appendChild(tierTag('sourced'));
-        var str = (labels[i] || t.source.toUpperCase()) + ': ' + t.figure + '.';
+        var str = t.label + ': ' + t.figure + '.';
         line.appendChild(corruptable('', str));
         toll.appendChild(line);
       });
-      toll.appendChild(commentLine('imagined', 'Two counts. Kept separate here, as they were kept separate by the two organizations that reported them.'));
+      toll.appendChild(commentLine('imagined', render.toll_note));
       nodes.push(toll);
 
       if (inst.hinge && inst.hinge.text){
@@ -834,9 +862,9 @@
 
       var slot = mk('div', 'answer-slot');
       slot.appendChild(tierTag('sourced'));
-      slot.appendChild(mk('div', 'slot-label', 'THE ANSWER, AS OF 16 JULY 2026:'));
-      slot.appendChild(corruptable('', '120 members of Congress have asked the Pentagon what role AI may have played in this strike. The investigation is not finished. The Pentagon has not said yes. It has not said no.'));
-      var safeguard = corruptable('slot-safeguard', 'No denial exists for this strike. None is shown here, because none was made.');
+      slot.appendChild(mk('div', 'slot-label', render.answer_slot_label));
+      slot.appendChild(corruptable('', render.answer_slot_text));
+      var safeguard = corruptable('slot-safeguard', render.answer_slot_safeguard);
       safeguard.className = safeguard.className.replace('corruptable', 'corruptable-block');
       slot.appendChild(safeguard);
       nodes.push(slot);
@@ -921,15 +949,23 @@
   var controlSlot = document.getElementById('controlSlot');
   var railWrap = document.getElementById('railWrap');
   var statusTag = document.getElementById('statusTag');
+  var statusGloss = document.getElementById('statusGloss');
   var railBtn1 = document.getElementById('railBtn1');
   var railBtn2 = document.getElementById('railBtn2');
+
+  /* the serial line states monitoring data — render it from the island;
+     the static text already in the markup is only the pre-JS fallback. */
+  var serialLineEl = railWrap.querySelector('.serial-line');
+  if (serialLineEl) serialLineEl.textContent = spine.monitoring.serial_line;
 
   function statusLabel(inst){
     return 'CASE 0' + inst.order + ' · STATUS: ' + inst.status;
   }
 
   function updateStatusTag(){
-    statusTag.textContent = statusLabel(caseByOrder[state.caseIdx]);
+    var inst = caseByOrder[state.caseIdx];
+    statusTag.textContent = statusLabel(inst);
+    statusGloss.textContent = inst.status_label;
   }
 
   function updateChrome(){
