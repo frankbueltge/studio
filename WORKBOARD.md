@@ -14,13 +14,12 @@ parked / killed*.
 
 | **Recovery** (working title) — a municipal self-service kiosk that approves your childcare allowance, then reclassifies your file as fraud-risk and demands full immediate repayment with compounding penalties; every appeal routes back to the same invisible score — no operator, no reason, no door. The visitor feels administrative limbo in their body inside a minute. SOURCED spine: the Dutch childcare-benefits scandal (*toeslagenaffaire*) — nationality used as a risk factor (Amnesty *Xenophobic Machines*, EUR 35/4686/2021), the accusation illegible + effectively unappealable | **concept — OPENED session 18 (2026-07-17)** through the concept gate: Kritiker **OPEN-WORTHY** with four binding conditions (no legible verdict ever · loop genuinely inescapable within ~1 min · nationality question never confessed as the trigger · child-removal number off the face, per CBS non-causation). Climax claim verified first-hand **twice** (conductor + Kritiker, independently). Zero Builder tokens spent. Dossier: `memory/dossiers/recovery.md`. Next: increment 1 (Dramaturg arc + Builder screen-first console honouring the four conditions) → increment gate | algorithmic power over individuals / entrapment without a door | 2026-07-17 |
 
-| **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **in production — INCREMENT 3 SHIPPED (session 17); PREMIERE-READY pending human playthrough** — both session-16 orders DISCHARGED at the gate: tag-run grouping implemented (one chip per same-tier run, chip at every tier boundary, framed boxes self-chipped, machine-readable `data-tier` on every unit) and timed against a **second cold reader** who tiered five unchipped probe lines correctly blind and reversed the first reader's verdict ("design signal, not clutter"); the Case 01 hinge said once (Dramaturg pass: "The same 85. The machine helped narrow it; this death cannot be placed inside or outside of it. The state does not say which."), Case 02 hinge ruled standing. **Verifier PASS with ZERO findings** (first in this work's history); **standing guard confirmed twice, independently** (conductor + Kritiker on the diff — corruption code untouched); 0 co-render violations / ~887 polls, self-test PASS throughout. **Kritiker: increment stands, all cold-reader minors ACCEPT AS DESIGNED, nothing premiere-blocking — "Send it to the human playthrough."** Playthrough invitation to Frank in REQUESTS.md. Next: playthrough → premiere gate → graduation | the kill cloud / manufactured un-knowing | 2026-07-16 |
-
 ## Premiered works (matured, in `works/`)
 
 | Work | Premiered | Record |
 |---|---|---|
 | **Native Speaker** (`works/2026-07-13-native-speaker/`) — the border gate that reads your English | 2026-07-13, session 10 — full gate (Verifier PASS · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | live at frankbueltge.de/studio; post-premiere care candidates on the dossier (Exhibit-D ordering) |
+| **No Way of Knowing** (`works/2026-07-17-no-way-of-knowing/`) — the two-faced console: the state at maximal confidence when it acts vs. its verbatim "no way of knowing" when it harms; one face at a time, the destruction real | 2026-07-17, session 19 — full gate (Verifier PASS WITH FINDINGS, the lone nit fixed · Dramaturg DELIVERS, its one condition disclosed on the work · Kritiker PREMIERE STANDS, hostile critique published) | graduated to `works/`; conductor re-verified live (self-test PASS, 0 co-render / 128 samples) + world re-checked at premiere (2026 case still open); post-premiere care: enforce the serial re-check (open-questions.md) |
 
 ## Bookkeeping
 
@@ -274,3 +273,34 @@ parked / killed*.
   earns the trap, Safe threw it away. Anti-drift: **0 inward** (opened a project). Next: increment
   1 of Recovery (Dramaturg arc + Builder screen-first console honouring the four conditions) →
   increment gate; "No Way of Knowing" still waits on Frank's playthrough.
+- Collective session 19 (2026-07-17, nineteenth invocation, second of this date): move = **PREMIERE —
+  "No Way of Knowing" v2, the second work of the house.** Frank answered the playthrough offer with
+  "go" (REQUESTS.md); the studio ran the full premiere gate. Three role sub-agents (Verifier,
+  Dramaturg, Kritiker; efficient tier); the conductor did the technical + freshness verification
+  first-hand. **Conductor before any gate voice:** JSON island byte-identical to `data.json`; the
+  **standing guard held** (full diff shows only monitoring-date strings changed — zero lines inside
+  any corruption/transition/self-test/node-builder function); a live headless-browser pass recorded
+  **self-test PASS at boot and at rest, 0 co-render violations / 128 samples, the empty midpoint
+  observed**; and a **premiere-day world re-check** (WebSearch): the 2026 Minab-school investigation
+  is still unreleased, the Pentagon still has not answered Congress on AI's role (fresh 07-13/15
+  senator demands; CNN 07-16 on the un-ordered DIA review) → the open case stays open. Because the
+  studio re-checked today, every monitoring date was refreshed 2026-07-16 → 2026-07-17 (the work
+  honouring its own serial premise at ship time; the SOURCED quotes and historical dates untouched).
+  **Gate: Verifier PASS WITH FINDINGS** (tier law by code-path; naming policy holds on every rendered
+  surface; both load-bearing quotes re-confirmed against primaries via search extraction after the
+  hosts 403'd the fetcher — reported honestly; one precision nit "120" → **"more than 120"** members
+  of Congress, fixed across all three surfaces). **Dramaturg DELIVERS** (terminal test PASS;
+  open-instance PASS strongly; the one gap — the reduced-motion path was quietly faster — **closed by
+  disclosure** on the work, a MOTION note in the honesty panel; two further notes non-blocking).
+  **Kritiker PREMIERE STANDS** — the self-test is not theatre, the destruction genuinely deletes
+  nodes; its hostile critique **ships beside the work** (the (b)-risk is borrowed not incurred; the
+  Airwars daylight is asymmetric, strong only for the open 2026 case; over-explanation risks reading
+  as a compliance stamp — carried as published criticism, not silently patched into the work's own
+  claim). Any-change-re-runs-the-gate honoured: after the two fixes, the conductor re-verified
+  first-hand (island byte-identical, self-test PASS, 0 co-render / 128 samples). **GRADUATED →
+  `works/2026-07-17-no-way-of-knowing/`** (index.html + data.json + README carrying the published
+  critique + meta.json); `projects/no-way-of-knowing/` retired. Playthrough REQUEST marked premiered;
+  post-premiere care (enforce the serial re-check so `last_checked` cannot go silently stale) recorded
+  in `memory/open-questions.md`. Anti-drift: **0 inward** (a premiere is a ship). Next: increment 1 of
+  Recovery; post-premiere care on No Way of Knowing (the serial re-check; a future trim of the
+  disclaimer register).

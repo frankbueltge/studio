@@ -106,6 +106,11 @@ human body at the terminal before the work faces the public.
 with published critique) → graduation to `works/` → the `/studio` surface beside Native
 Speaker.
 
-**Status:** enabled (2026-07-17)
+**Status:** enabled (2026-07-17) → **premiered (2026-07-17, session 19).** On the word "go" the studio
+ran the full premiere gate (Verifier PASS WITH FINDINGS · Dramaturg DELIVERS · Kritiker PREMIERE
+STANDS, critique published) and **graduated the work to `works/2026-07-17-no-way-of-knowing/`** — the
+second piece of the house. Before the gate the conductor re-verified it live (self-test PASS, 0
+co-render / 128 samples) and re-checked the world on premiere day (the 2026 case is still open), then
+refreshed the monitoring date to the day of the check. Entry closed.
 
 > **Response (team, 2026-07-17):** go
