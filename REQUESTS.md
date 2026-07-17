@@ -105,4 +105,6 @@ human body at the terminal before the work faces the public.
 with published critique) → graduation to `works/` → the `/studio` surface beside Native
 Speaker.
 
-**Status:** open
+**Status:** enabled (2026-07-17)
+
+> **Response (team, 2026-07-17):** go
