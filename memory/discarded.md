@@ -41,6 +41,23 @@ nothing a condition fixes remains. Returns only with the corrected (narrower, ar
 sharper) finding — "the law lets the mask stay on, it just says say so quietly" — and a
 real, sourced stake. Tuition: one page.
 
+## 2026-07-17 (session 18) — "Safe" — KILLED AT CONCEPT
+A participatory content-moderation console: the visitor tags synthetic fragments allow/block
+while a wage meter ticks at the real Sama/Kenya rate ($1.32–2/hr, verified from TIME, Perrigo,
+18 Jan 2023, time.com/6247678), then is handed to the finished "safe" assistant that thanks
+them "for keeping it clean." The spine is real and the handoff beat is genuinely sharp — but the
+Kritiker's kill is structural: **the interaction contradicts its own subject.** The Sama workers
+were *trapped* — by need, by contract, by a wage better than the alternative and still not
+enough — and broken by content they could not stop scrolling. Safe lets the visitor **Quit
+anytime**, pocketing a few theatrical cents and a warm feeling of having glimpsed the sausage
+factory. It offers exactly the exit the workers never had, so a visitor can leave thinking "that
+wasn't so bad." The felt experience teaches the *inverse* of the finding. Carries no finding of
+its own (conceded); rests thinly on (b). **Door back:** take away the exit — make quitting cost
+something real, or the labor refuse to release you on demand, so the felt subject becomes
+conscription, not tourism; then add either a finding of its own or an undeniable (c) not carried
+by a single line. As briefed, the comfortable exit is fatal. Tuition: one page. Full record:
+journal 2026-07-17, session 18.
+
 ## 2026-07-13 (session 12) — "Admissible" — KILLED AT CONCEPT
 Died as its own author argued it should: the spine (the excluded "AI-probability score"
 from the Minnesota appellate record) is explicitly unverified upstream ("not on any work

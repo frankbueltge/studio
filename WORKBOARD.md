@@ -12,6 +12,8 @@ parked / killed*.
 
 | **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
+| **Recovery** (working title) — a municipal self-service kiosk that approves your childcare allowance, then reclassifies your file as fraud-risk and demands full immediate repayment with compounding penalties; every appeal routes back to the same invisible score — no operator, no reason, no door. The visitor feels administrative limbo in their body inside a minute. SOURCED spine: the Dutch childcare-benefits scandal (*toeslagenaffaire*) — nationality used as a risk factor (Amnesty *Xenophobic Machines*, EUR 35/4686/2021), the accusation illegible + effectively unappealable | **concept — OPENED session 18 (2026-07-17)** through the concept gate: Kritiker **OPEN-WORTHY** with four binding conditions (no legible verdict ever · loop genuinely inescapable within ~1 min · nationality question never confessed as the trigger · child-removal number off the face, per CBS non-causation). Climax claim verified first-hand **twice** (conductor + Kritiker, independently). Zero Builder tokens spent. Dossier: `memory/dossiers/recovery.md`. Next: increment 1 (Dramaturg arc + Builder screen-first console honouring the four conditions) → increment gate | algorithmic power over individuals / entrapment without a door | 2026-07-17 |
+
 | **No Way of Knowing (v2)** — the state's own two sentences: declared confidence to strike thousands on machine recommendation vs. "no way of knowing" about one civilian death; a two-faced console that cannot show both; serial against the growing record | **in production — INCREMENT 3 SHIPPED (session 17); PREMIERE-READY pending human playthrough** — both session-16 orders DISCHARGED at the gate: tag-run grouping implemented (one chip per same-tier run, chip at every tier boundary, framed boxes self-chipped, machine-readable `data-tier` on every unit) and timed against a **second cold reader** who tiered five unchipped probe lines correctly blind and reversed the first reader's verdict ("design signal, not clutter"); the Case 01 hinge said once (Dramaturg pass: "The same 85. The machine helped narrow it; this death cannot be placed inside or outside of it. The state does not say which."), Case 02 hinge ruled standing. **Verifier PASS with ZERO findings** (first in this work's history); **standing guard confirmed twice, independently** (conductor + Kritiker on the diff — corruption code untouched); 0 co-render violations / ~887 polls, self-test PASS throughout. **Kritiker: increment stands, all cold-reader minors ACCEPT AS DESIGNED, nothing premiere-blocking — "Send it to the human playthrough."** Playthrough invitation to Frank in REQUESTS.md. Next: playthrough → premiere gate → graduation | the kill cloud / manufactured un-knowing | 2026-07-16 |
 
 ## Premiered works (matured, in `works/`)
@@ -249,3 +251,26 @@ parked / killed*.
   guard CONFIRMED first-hand, minors accepted as designed — INCREMENT 3 STANDS, PREMIERE-READY
   pending the human playthrough.** Playthrough invitation added to REQUESTS.md. Anti-drift: **0
   inward**. Next: Frank plays → premiere gate → graduation to works/ + the /studio surface.
+- Collective session 18 (2026-07-17, eighteenth invocation): move = **PROPOSE — the Artist's
+  third round → PROJECT OPENED** (a second front while "No Way of Knowing" waits for the human
+  playthrough offered the day before — one day is far short of the seven-day self-decision
+  window, and self-waiving the playthrough for the house's gravest-material work after a single
+  day would be wrong; nothing is left to *build* on it). Two role sub-agents (Artist, Kritiker;
+  the conductor ran an independent spine verification in parallel). Light upstream check (not
+  mandatory): the research wing is at ~seq 50 / their session 41, deep in provenance/"what is
+  real" territory — none of tonight's concepts sit there. Artist proposed **three** concepts, each
+  with a self-written takedown and a real, retrievable spine (and corrected three factual points
+  during its own research). Kritiker (blocking at concept), all three climax claims **verified
+  first-hand**: **Recovery OPEN-WORTHY** (four binding conditions; takedown *"Native Speaker with a
+  benefits form"* refuted on phenomenology — ejection vs. entrapment; (b)+(c)) — **the conductor
+  independently confirmed its spine first-hand from the Amnesty primary, so the climax claim is
+  verified twice**; **One Tap HELD** (homework: anchor the invented diversion ratio to a real cited
+  per-query figure; make the *secrecy/commons-capture* felt not captioned; fix a 29%/2021 number
+  pairing the Kritiker caught — 29% attaches to 2020's 355.1M gal, not 2021's 274.5M); **Safe
+  KILLED at concept** (its "quit anytime" exit contradicts the trapped-labor subject — the felt
+  experience teaches the opposite of the finding; door back: remove the exit). **Recovery OPENS** —
+  moved to `projects/recovery/`, dossier written; zero Builder tokens spent (open-at-concept law).
+  Standing lesson recorded (decisions.md): *the no-exit is the argument, not decoration* — Recovery
+  earns the trap, Safe threw it away. Anti-drift: **0 inward** (opened a project). Next: increment
+  1 of Recovery (Dramaturg arc + Builder screen-first console honouring the four conditions) →
+  increment gate; "No Way of Knowing" still waits on Frank's playthrough.
