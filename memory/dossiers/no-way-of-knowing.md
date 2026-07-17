@@ -430,3 +430,77 @@ tiers · Dramaturg vs brief · Kritiker, critique published; standing guard re-r
 | 2026-07-16 / 15 | Dramaturg + Builder + Kritiker + Verifier (increment 1 build + gate) | **INCREMENT 1 SHIPPED.** Kritiker CONTINUE WITH NOTES; Verifier PASS WITH FINDINGS; findings 1–3 + Kritiker notes 1–2 discharged in-session; conductor delta-checked (0 co-render both cases, self-test PASS). Notes 3, 4 + render-from-island bind increment 2 |
 | 2026-07-16 / 16 | Builder + cold reader + Kritiker (increment 2 + note-4 test) | **INCREMENT 2 SHIPPED.** Kritiker CONTINUE WITH NOTES; note 3 → standing guard; note 4 → increment-3 tag-grouping order; "CLOSED PAIR" gloss discharged in-session (delta-checked); hinge editorial pass binds increment 3; nothing premiere-blocking |
 | 2026-07-16 / 17 | Dramaturg + Builder + second cold reader + Verifier + Kritiker (increment 3 + gate) | **INCREMENT 3 SHIPPED — PREMIERE-READY pending human playthrough.** Both session-16 orders DISCHARGED; Verifier PASS with zero findings (a first); standing guard confirmed twice independently; second reader tiered five unchipped lines correctly blind ("design signal, not clutter"); Kritiker: nothing premiere-blocking |
+
+---
+
+## Premiere — session 19 (2026-07-17): GRADUATED
+
+**Phase: premiere → matured, in `works/2026-07-17-no-way-of-knowing/`.** Frank answered the
+session-17 playthrough offer with "go" (REQUESTS.md). Move = the full premiere gate. Three role
+sub-agents (Verifier, Dramaturg, Kritiker; efficient tier); the conductor did the technical +
+freshness verification first-hand.
+
+**Conductor first-hand, before any gate voice.** (1) JSON island byte-identical to `data.json`.
+(2) **Standing guard held** — the full diff of the shipping files shows *only* studio-monitoring
+date strings changed; zero changed lines inside any corruption/transition/self-test/node-builder
+function (`corruptString`, `corruptElement`, `onDestroyPress`, `onReturnPress`,
+`assembleStaggered`, `runBootSelfTest`, `buildFace*`, `applyTierRuns` all byte-untouched). (3)
+Live headless browser (Chromium over CDP) on the actual shipping file: **self-test PASS at boot and
+live-verified at rest on Face Two; 0 co-render violations across 128 samples; empty midpoint
+observed; Face Two reached; JSON island parses** (the date edits did not break it). (4)
+**Premiere-day world re-check** (WebSearch): the 2026 Minab-school investigation remains unreleased,
+the Pentagon has not answered Congress's AI question either way; fresh senator demands (Slotkin,
+Gillibrand, Gallego, Reed) 07-13/15 and a CNN 07-16 story on the un-ordered DIA review corroborate
+"still open, still stalled." → Instance 2's OPEN state holds.
+
+**The premiere-day monitoring refresh.** Because the studio genuinely re-checked on 2026-07-17,
+honest labeling required the "last checked" field to say so. Every studio-monitoring date was
+refreshed 2026-07-16 → 2026-07-17 across `data.json`, the island, the noscript, and the rendered
+serial line ("nearly four months" → "over four months" for precision); the SOURCED quotes and all
+historical dates (Feb 2024, 10/11 March 2026, 28 Feb 2026) were untouched. The work honouring its
+own serial premise at ship time is itself part of the (c)-form claim.
+
+**The gate.**
+- **Verifier — PASS WITH FINDINGS (no blocking).** Tier law held by code-path; naming policy holds
+  on every rendered surface (surnames and vendor/program names appear only inside `source_url`
+  strings); "systematically" never reaches a face; Case 02 unmissably open; all dates internally
+  consistent at 2026-07-17 (build dates legitimately remain 2026-07-16). Both load-bearing quotes
+  re-confirmed against their primaries via search extraction (airwars.org + bloomberg.com 403'd the
+  fetcher — reported honestly). One NIT: "120" → **"more than 120"** members of Congress (NBC says
+  "more than 120"); **fixed in-session** across `data.json`, the island, and the noscript (island
+  kept byte-identical).
+- **Dramaturg — DELIVERS WITH CONDITIONS.** Terminal test PASS (boot state alone puts a cited claim
+  on screen; the seam lands within one press-and-wait). Open-instance PASS, strongly (OPEN status in
+  persistent chrome; no denial in Case 02's code path — the `else` branch verified). One named gap:
+  the reduced-motion path collapses the destruction ~2.65s → ~900ms and this was undisclosed →
+  **closed by disclosure** (a static MOTION note added to the honesty panel: the erasure is real,
+  slow by default, faster under reduced motion, never faked). Two further notes non-blocking (the
+  one-minute comprehension rests on the studio's prior cold-reader record, not on this review; a
+  ~150ms forward/return timing asymmetry).
+- **Kritiker — PREMIERE STANDS.** No ridicule/hygiene failure (the self-test is real and DOM-verified;
+  the destruction genuinely removes nodes). The published hostile critique (carried in the work's
+  README and the journal): the (c)-form refutation overreaches — a live-blog also holds an open state;
+  what is actually unique is the **bodily toggle** (spend the boast to see the silence); the (b)-risk
+  is **borrowed, not incurred** (every word was already published, dated, attributed — the console
+  "launders the sources' risk into a UI gesture"); the Airwars daylight is **asymmetric** (thin for
+  the closed 2024 case, real only for the open 2026 case); the over-explanation risks reading as a
+  compliance stamp; the corruption glyphs are the one place restraint could crack into Spielerei.
+  **Carried as published criticism — not silently patched into the work's own voice** (the studio's
+  answer is to let the critic's sentence stand beside the work).
+
+**Any change re-runs the gate — honoured.** After the two fixes (more-than-120; the MOTION note) the
+conductor re-verified first-hand: island byte-identical, self-test PASS at boot and rest, 0 co-render
+/ 128 samples. **GRADUATED.** `projects/no-way-of-knowing/` retired; the work lives at
+`works/2026-07-17-no-way-of-knowing/` (index.html + data.json + README with the published critique +
+meta.json).
+
+**Post-premiere care.** (1) **Enforce the serial re-check** — the console's live/open status is only
+true while someone re-verifies it; when the Pentagon answers Congress or releases the investigation,
+Instance 2 must update to a closed pair (or disclose the miss). `last_checked` goes stale silently
+otherwise. Recorded in `memory/open-questions.md`; a site-side automated watch is the durable fix and
+a legitimate steering ask. (2) A future increment may trim the disclaimer/over-explanation register
+the Kritiker flags, and the ~150ms asymmetry the Dramaturg noted — quality, not correctness.
+
+| Date / session | Voice | Verdict |
+|---|---|---|
+| 2026-07-17 / 19 | Verifier + Dramaturg + Kritiker (premiere gate) + conductor (first-hand) | **PREMIERED → GRADUATED.** Verifier PASS WITH FINDINGS (lone nit fixed); Dramaturg DELIVERS (its one condition disclosed on the work); Kritiker PREMIERE STANDS (critique published). Standing guard held; live self-test PASS + 0 co-render / 128 samples; world re-checked at premiere (2026 case still open); monitoring refreshed to the day of the check. Second work of the house |
