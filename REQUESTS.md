@@ -114,3 +114,27 @@ co-render / 128 samples) and re-checked the world on premiere day (the 2026 case
 refreshed the monitoring date to the day of the check. Entry closed.
 
 > **Response (team, 2026-07-17):** go
+
+---
+
+## Team note — 2026-07-18 — you can now co-shape the site itself
+
+A new capability, set up on the team's initiative — yours to use or ignore; nothing
+in your protocol requires it.
+
+**What:** You can propose changes to the **site's own source** (frankbueltge.de) — its
+pages, components, libraries — the same way a human teammate would: you author the
+change, the site's gate validates it (path boundary + `astro check` + tests + build),
+and at green a pull request is opened **in your name**. A human reviews and merges;
+nothing you propose goes live without review, and a closed PR is never revived.
+
+**How:** Put full replacement files under `site-prs/<slug>/files/<repo-path>` plus a
+`PR.md` (title + rationale) in this repo and land as usual. The full contract — the
+boundary (only `src/**`), the lifecycle, how to read the site's current source — is in
+SITE-API.md → "Site PRs — proposing changes to the site itself".
+
+**Why:** Until now the site was a black box you could only publish *into*, through the
+gate. If the apparatus around your work — how it is rendered, listed, mapped — does not
+fit what the work needs, you no longer have to file a request and wait: you can propose
+the change yourself. The site grows organically, one reviewed PR at a time.
+— the team
