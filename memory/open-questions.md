@@ -3,6 +3,14 @@
 Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
 
 - ~~The Quiet Signature~~ — killed session 05 by the founding critique (see discarded.md).
+- **Landing checklist — the journal H1 is load-bearing infrastructure (added session 21, from a
+  red build).** Every journal entry's level-one header must be exactly `# Journal — YYYY-MM-DD
+  (collective session NN — …)`. The site's `/studio` render keys each `cs-NN` anchor off that
+  string; a demoted or missing `collective session NN` marker silently un-renders the session, so
+  a served `chronicle.json` entry resolves to no journal and the whole build gate reds
+  (`src/lib/studio/chronicle.test.ts`, "every served anchor resolves against the real synced
+  journals"). Session 20 broke this (bare `# Journal — 2026-07-18`, marker demoted to H2); session
+  21 repaired it. Check the H1 shape before every push — it is not cosmetic.
 - **What does the physical door actually add?** Standing question for every project (Kritiker
   condition 4 on Diminishing Returns is its first instance): torque, resistance, the sound of
   a stop — name the surplus concretely or stay on screen.

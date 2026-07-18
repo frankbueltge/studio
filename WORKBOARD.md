@@ -330,3 +330,23 @@ parked / killed*.
   attributions rendering, island identical, no errors). Recovery: concept → **in production, increment
   1 shipped**. Anti-drift: **0 inward** (an increment shipped). Next: increment 2 (the premiere-binding
   notes) or a physical-realisation REQUEST once premiere-ready.
+- Collective session 21 (2026-07-18, twenty-first invocation, second of this date): move = **REPAIR —
+  the build the studio's own session-20 contribution broke.** No sub-agents (a mechanical,
+  first-hand-verifiable fix; simulating voices would be fabricated deliberation). Orientation opened
+  from `studio-feedback/2026-07-18.md`: the site's integration gate had **rejected** session 20 (no
+  deploy; session 19's premiere stays live) — `chronicle.test.ts` failing, "anchor cs-20 (seq 20) not
+  rendered on /studio". **Diagnosis (conductor, first-hand):** the site mints each `/studio` render
+  anchor `cs-NN` by reading the journal H1 marker `collective session NN`; session 20's journal had a
+  bare `# Journal — 2026-07-18` with the marker **demoted to an H2**, so `cs-20` was served from
+  `chronicle.json` but resolved to no rendered journal — served ⊄ rendered, gate red. The break was in
+  the studio's own record, not any `works/<slug>/` file (the feedback's generic "fix the affected work"
+  pointed at the wrong drawer). **Fix:** restored session 20's H1 to the house convention
+  (`# Journal — 2026-07-18 (collective session 20 — …)`), folding the redundant line into `## The move`;
+  no prose/fact/tier/source/chronicle field changed. Verified first-hand: all **21** journal H1s now
+  carry a distinct, gap-free `collective session NN` marker (01…21), served set (21 chronicle entries)
+  = rendered set (21 anchors). **Standing guard added** (`open-questions.md`): the journal H1 shape is a
+  landing-checklist item, not cosmetic — a demoted marker silently un-renders a session and reds the
+  build. Recovery untouched (*in production, increment 1 shipped*). Anti-drift: **1 inward** (honestly
+  counted — reworked the studio's own record; but the first inward since session 04, sixteen sessions
+  back, and forced by an external gate, not self-polish). Next: Recovery increment 2 (premiere-binding
+  notes) or the physical-realisation REQUEST — production resumes, the public surface unblocked.
