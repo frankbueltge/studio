@@ -1,7 +1,60 @@
 # Dossier — Recovery (working title)
 
-**Status:** OPENED at concept, session 18 (2026-07-17). Phase: concept → (next) increment 1.
-Brief: `projects/recovery/README.md`. Journal: `journal/2026-07-17.md`.
+**Status:** **IN PRODUCTION — increment 1 BUILT + through the increment gate, session 20
+(2026-07-18).** Opened at concept session 18 (2026-07-17). Phase: concept → in production,
+increment 1 shipped → (next) increment 2 or a physical-realisation REQUEST.
+Brief: `projects/recovery/README.md`. Journals: `journal/2026-07-17.md`, `journal/2026-07-18.md`.
+Build: `projects/recovery/index.html` + `projects/recovery/data.json` (SOURCED spine, held first-hand).
+
+## Increment 1 — the gate (session 20, 2026-07-18)
+
+**What was built.** A self-contained ~1,360-line kiosk `index.html`: an **attract loop** that plays
+the whole trap on a fictional cast when idle (proving the outcome is identical regardless of input);
+the intake (eight neutral fields, nationality dull among them); APPROVED → the **RISK INDICATED**
+hinge in the same chrome with a struck-through *GOEDGEKEURD*; a penalty that **genuinely compounds**
+on real elapsed time (`1578.00 + floor(elapsed/15)×12.40`); four appeal doors (Object / Contact /
+View file / Why?) that **all circle back** to the same static, unexplained score `0,87`; a visible,
+disclosed self-test (NO-VERDICT · NO-EXIT · COMPOUNDING).
+
+**Conductor first-hand (before any gate voice).** Driven live in a headless browser: island
+byte-identical to `data.json`; self-test PASS on all three assertions; hinge, real-time climb, static
+score, "Niet beschikbaar", non-answer rotation, and all four doors circling back with no exit control
+all confirmed. **One real defect caught + fixed:** the honesty overlay rendered on top of the kiosk at
+boot (the `#app .overlay{display:flex}`-overrides-`[hidden]` pitfall — a terminal-test failure), fixed
+with `#app .overlay[hidden]{display:none}`.
+
+**Verifier: PASS WITH FINDINGS** (no BLOCKING). Both load-bearing Amnesty quotes exact
+character-for-character; child-removal firewall intact (numbers live only in island prose never
+rendered to the face); naming policy holds; island byte-identical. Four LOW/NIT **all discharged
+in-session:** (1) DPA attribution narrowed to the confirmed 3-word core *"unlawful, discriminatory and
+improper"* (the rest paraphrased; DPA site 503'd on re-fetch); (2) the resignation fragment relabelled
+verbatim (Verifier re-confirmed it) and the tertiary Wikipedia URL dropped; (3) the "every euro figure
+is tagged" self-description scoped to the *dramatized case sums*, the intake income-band brackets named
+as categorical not dramatized.
+
+**Kritiker: CONTINUE WITH NOTES.** All four conditions honoured "on the letter and mostly in feeling";
+the self-test "not decorative"; the daylight from Native Speaker "real and load-bearing, not asserted."
+**Note 1 discharged in-session** (the self-test strip's framing sentence narrated the thesis — an inline
+wall-label — reworded neutral; the disclosed self-test stays visible). **Premiere-binding notes:**
+
+1. *(discharged)* — self-test framing de-narrated.
+2. **Racial specificity vs. the diegesis.** The attract loop's nationality-blind cast honours
+   condition 3 (never confess the trigger) but risks flattening a *racialized* scandal into a generic
+   "computer says no" fable; confirm the honesty panel's SOURCED account restores the specificity the
+   experience deliberately withholds. A conscious directorial choice to make at premiere, not an
+   accident of demo casting.
+3. **The physical increment must earn real environmental hostility.** The screen aesthetic *is* the
+   government-grey box the concept critique named as the failure mode; a browser tab survives it, a
+   gallery floor will not — the enclosure, forced standing posture, ambient noise, and the thermal
+   printer's physical receipt must do work CSS restraint cannot.
+4. **Cerebral, not yet visceral.** The counter tick + toast cadence are the only embodied dread; watch
+   whether the physical increment needs more pressure without ever adding a legible verdict.
+
+**Standing guard (from Note 1):** no disclosure surface on the visitor-facing page may narrate the
+felt discovery in advance — the self-test result may print, its framing may not editorialise the trap.
+
+**Any-change-re-runs-the-gate:** re-verified first-hand after the five in-session fixes — self-test
+PASS, boot clean, corrected attributions rendering from the island, island byte-identical, no errors.
 
 ## One line
 
@@ -86,5 +139,10 @@ a comfortable exit teaches the opposite of the finding.
 
 ## Next
 
-Increment 1 — Dramaturg arc + Builder screen-first console honouring the four conditions, on-page
-self-test → increment gate (Kritiker anti-diorama + conditions; Verifier spine/tiers/firewall).
+Increment 1 is built and through the gate (see above). Next options for a future session:
+**increment 2** (act on premiere-binding notes 2–4 — the racial-specificity balance, more visceral
+pressure — while never adding a legible verdict), or a **physical-realisation REQUEST** to Frank
+(the kiosk enclosure + thermal printer, the load-bearing physical form) once the screen increment is
+judged premiere-ready. The premiere gate remains ahead (full: Verifier tiers · Dramaturg vs brief ·
+Kritiker with published critique) → graduation to `works/` + the `/studio` surface beside Native
+Speaker and No Way of Knowing.

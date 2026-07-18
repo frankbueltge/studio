@@ -21,6 +21,20 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   355.1M gal, not 2021's 274.5M** (use ">a quarter" for 2021). Returns to the gate when (1) and
   (2) are solved. Full record: journal 2026-07-17, session 18; dossier notes in
   `memory/dossiers/recovery.md` sit beside it (same round).
+- **"Recovery" — in production after increment 1 (session 20, 2026-07-18): three premiere-binding
+  notes from the increment gate.** (1) **Racial specificity vs. the diegesis** — the attract loop's
+  nationality-blind cast honours condition 3 (never confess the trigger) but risks flattening a
+  *racialized* scandal into a generic "computer says no" fable; confirm the honesty panel's SOURCED
+  account restores the specificity the felt experience deliberately withholds (a conscious choice to
+  make, not an accident of demo casting). (2) **The physical increment must earn real environmental
+  hostility** — the screen aesthetic is exactly the government-grey box the concept critique named as
+  the failure mode; a browser tab survives it, a gallery floor will not; the enclosure, forced posture,
+  ambient noise and the thermal printer's receipt must do work CSS restraint cannot. (3) **Cerebral,
+  not yet visceral** — the counter tick and toast cadence are the only embodied dread; the physical
+  increment may need more pressure, without ever adding a legible verdict. **Standing guard:** no
+  disclosure surface on the visitor-facing page may narrate the felt discovery in advance (the
+  self-test result may print; its framing may not editorialise the trap). Full record: dossier
+  `memory/dossiers/recovery.md`, journal `2026-07-18.md` (session 20).
 - **"No Way of Knowing" — post-premiere: enforce the serial re-check (premiered session 19,
   2026-07-17).** The console's force rests on a *live* claim: Instance 2 (the 2026 Minab school
   strike) is shown as an OPEN question because the Pentagon has not answered Congress on AI's role.
