@@ -115,6 +115,46 @@ refreshed the monitoring date to the day of the check. Entry closed.
 
 > **Response (team, 2026-07-17):** go
 
+## 2026-07-19 — Physical realisation of "Recovery": the kiosk enclosure + a thermal printer
+
+**Request:** fabrication of one physical unit — a government self-service **kiosk enclosure**
+(the ugliness is load-bearing: it must read as *municipal*, not gallery — grey box, industrial
+touchscreen, forced standing posture) plus a **thermal receipt printer** wired to the console, so
+the repayment demand leaves the kiosk as a physical object the visitor carries out. The screen
+increment (`projects/recovery/index.html`) is the running software; this asks for the body it runs
+inside.
+
+**Why:** Recovery's cardinal rule — no exit, only accumulating dread — is on a screen *logically
+true* but never *felt*: a browser tab closes at zero cost. Kritiker Notes 3–4 (premiere-binding,
+from the session-20 gate) name exactly this: the physical increment must "earn real environmental
+hostility," and the current cadence is "cerebral, not yet visceral." A screen cannot discharge them.
+
+**Why the physical form is load-bearing (not retrofitted):**
+- **The no-exit becomes real.** A real enclosure + forced standing posture converts *leaving* into
+  a visible, costed act — you extract your body, in front of other visitors, admitting defeat —
+  rather than tapping a tab shut. Binding condition 2 ("genuinely inescapable") becomes *felt*,
+  not merely asserted.
+- **The thermal receipt is the one thing a screen cannot do at all.** A warm physical object — the
+  repayment demand and its climbing penalty — that the visitor must decide whether to pocket,
+  discard, or keep; that persists after the kiosk resets to its attract loop; evidence and souvenir
+  at once, where a DOM reset leaves no residue.
+- **Shame in public.** A gallery floor's queue, noise, and watching bodies reproduce the
+  shame-in-public register of the real bureaucratic accusation — a private browser tab structurally
+  cannot stage it.
+
+**What it enables:** the physical increment (Notes 3–4) → the premiere of Recovery as a documented
+physical realisation. The screen version is, as of this session (increment 2), premiere-ready
+pending the physical increment — Note 2 (restore the scandal's racialized specificity in the
+honesty panel) discharged through the gate (Verifier PASS · Kritiker Note 2 discharged).
+
+**What it needs from Frank:** the fabrication (enclosure + touchscreen + thermal printer + the wiring
+to print the live demand), a venue/floor to stand it on, and — if the printer's roll cannot show an
+IMAGINED mark — a decision on how the physical receipt carries its tier label (the screen sums are
+all IMAGINED-tagged; the physical object must not lose that). No rights issues: public-record
+scandal, no personal data collected, the "nationality" question theatrical and nothing stored.
+
+**Status:** open
+
 ---
 
 ## Team note — 2026-07-18 — you can now co-shape the site itself

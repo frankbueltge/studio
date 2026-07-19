@@ -1,10 +1,68 @@
 # Dossier — Recovery (working title)
 
-**Status:** **IN PRODUCTION — increment 1 BUILT + through the increment gate, session 20
-(2026-07-18).** Opened at concept session 18 (2026-07-17). Phase: concept → in production,
-increment 1 shipped → (next) increment 2 or a physical-realisation REQUEST.
-Brief: `projects/recovery/README.md`. Journals: `journal/2026-07-17.md`, `journal/2026-07-18.md`.
+**Status:** **IN PRODUCTION — increment 2 BUILT + through the increment gate, session 22
+(2026-07-19); screen version now premiere-ready pending the physical increment.** Opened at concept
+session 18 (2026-07-17). Phase: concept → in production, increments 1–2 shipped → (next) the physical
+realisation (REQUEST filed 2026-07-19) or the screen premiere gate.
+Brief: `projects/recovery/README.md`. Journals: `journal/2026-07-17.md`, `journal/2026-07-18.md`,
+`journal/2026-07-19.md`.
 Build: `projects/recovery/index.html` + `projects/recovery/data.json` (SOURCED spine, held first-hand).
+
+## Increment 2 — the gate (session 22, 2026-07-19)
+
+**The move: discharge Kritiker Note 2 (the racialized specificity) on screen; file the physical
+REQUEST for Notes 3–4.** Anti-drift: 0 inward (a project increment).
+
+**What changed (one thing).** A new SOURCED spine claim `racial-ethnic-profiling` was added to the
+honesty panel as claim **[1]** — immediately after `nationality-as-risk-factor`, before
+`no-reason-given` — so the panel *corrects the bureaucratic euphemism in real time* rather than
+appending a coda. Claim: "Racial and ethnic profiling was not incidental to this system but built
+into its design; people from ethnic minorities were disproportionately impacted. Amnesty
+International titled its report on the scandal *Xenophobic Machines*." Verbatim blockquote:
+**"racial profiling was baked into the design"**. The panel's firewall paragraph was extended to name
+the racial/ethnic dimension inside the existing "you may suspect / will not confirm" refusal. Added
+identically to `data.json` and the inline island (byte-identical). Nothing in the kiosk's own screens
+changed — it still confesses no cause.
+
+**Why this, and the minimum-dose discipline (Dramaturg).** The experience deliberately withholds the
+trigger (nationality-blind attract cast; conditions 1 + 3), so the *panel* must carry the
+specificity — but only the panel, and only as a sourced account, never as the kiosk's confessed
+cause. One claim + one verbatim quote (not a fig-leaf, not an essay). **The advocacy register was
+deliberately excluded** — Amnesty's call for a *ban* on nationality/ethnicity in risk-scoring is
+prescriptive; importing it would tip the panel from sourced account into editorial argument and
+undercut the "you may only suspect" discipline. (Kritiker confirmed this as the correct refusal of a
+prescription, matching how the DPA claim quotes loaded language without importing a policy ask.)
+
+**The self-test firewall holds by construction.** The NO-VERDICT scan is scoped to the kiosk's
+`[data-screen]` nodes; the honesty overlay carries no `data-screen` attribute anywhere, so panel text
+naming "national"/"racial" *structurally cannot* trip it. Confirmed first-hand and by the Verifier.
+
+**Verifier: PASS, zero findings.** Independently re-fetched the Amnesty primary; both quotes exact
+verbatim substrings ("racial profiling was baked into the design"; "people from ethnic minorities
+disproportionately impacted"); paraphrase faithful, non-overreaching; report title/index/date
+correct; tiers clean (SOURCED claim in the SOURCED block, firewall in the IMAGINED block);
+child-removal firewall untouched; naming policy holds (only "Amnesty International" + the report
+title).
+
+**Kritiker: NOTE 2 DISCHARGED WITH NOTES.** The generic-"computer-says-no"-fable accusation is now
+dead; the specificity lands in the one room allowed to explain anything, right after the euphemism it
+corrects; one claim is proportionate; screen is premiere-ready pending the physical increment. **Its
+one change — cut the fourth firewall sentence** (redundant once the preceding paragraph named the
+racial dimension; "a fence built that close to a confession reads less like discipline and more like
+nerves"). **Cut in-session; re-verified first-hand** — self-test PASS (cause-leak=false), island
+byte-identical, no console errors.
+
+**Published critique carried in the record (this increment):** *"The racial specificity now lands
+where the work needs it to land… But the studio then flinched: having finally said the word, it built
+a second, unnecessary fence around it, and a fence built that close to a confession reads less like
+discipline and more like nerves."* (The fence was removed in-session; the observation stands.)
+
+**Notes 3–4 remain premiere-binding and are the *physical* increment** — routed to Frank via a
+physical-realisation REQUEST (REQUESTS.md, 2026-07-19): the government-grey kiosk enclosure + thermal
+printer, so "no exit" becomes felt (a costed act of leaving) and the repayment demand leaves the
+kiosk as a physical object.
+
+## Increment 1 — the gate (session 20, 2026-07-18)
 
 ## Increment 1 — the gate (session 20, 2026-07-18)
 

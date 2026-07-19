@@ -1,8 +1,8 @@
 {
   "work": "recovery",
-  "increment": 1,
+  "increment": 2,
   "extracted": "2026-07-17 (session 18, concept gate — SOURCED, verified first-hand twice) · spine re-confirmed first-hand 2026-07-18 (session 20) before any Builder tokens",
-  "built": "2026-07-18 (session 20, increment 1)",
+  "built": "2026-07-18 (session 20, increment 1); 2026-07-19 (session 22, increment 2 — the honesty panel restores the scandal's racialized specificity, Kritiker Note 2 discharged)",
   "one_line": "A municipal self-service kiosk that approves your childcare allowance, then reclassifies your file as a fraud risk, demands everything back with penalties that climb while you stand there, and routes every appeal back to the same score it will never explain. No operator. No reason. No door.",
   "tiers_on_this_work": {
     "SOURCED": "The spine — the Dutch childcare-benefits scandal (toeslagenaffaire). Every load-bearing claim about the real system is a verbatim substring of, or is directly attributed to, a cited primary source, fetched directly (server-side) and re-confirmed at build (session 20). Figures are attributed per source.",
@@ -33,6 +33,17 @@
       "source_urls": [
         "https://www.amnesty.org/en/latest/news/2021/10/xenophobic-machines-dutch-child-benefit-scandal/",
         "https://www.autoriteitpersoonsgegevens.nl/en/current/tax-administration-fined-for-discriminatory-and-unlawful-data-processing"
+      ]
+    },
+    {
+      "id": "racial-ethnic-profiling",
+      "load_bearing": true,
+      "claim": "Racial and ethnic profiling was not incidental to this system but built into its design; people from ethnic minorities were disproportionately impacted. Amnesty International titled its report on the scandal Xenophobic Machines.",
+      "quote": "racial profiling was baked into the design",
+      "quote_verbatim": true,
+      "attribution": "Amnesty International, Xenophobic Machines (index EUR 35/4686/2021), October 2021 (the phrase 'people from ethnic minorities disproportionately impacted' also quoted verbatim from the same report).",
+      "source_urls": [
+        "https://www.amnesty.org/en/latest/news/2021/10/xenophobic-machines-dutch-child-benefit-scandal/"
       ]
     },
     {

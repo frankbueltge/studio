@@ -12,7 +12,7 @@ parked / killed*.
 
 | **Native Speaker** — a border gate that reads your English and flags you as a machine for sounding foreign; the visitor fails with their own body inside a minute. VERIFIED spine: upstream instrument 001 + claims (97.8% union flag rate, 61.22% mean FPR, Yang, Rignol); meter = disclosed, deterministic in-browser reconstruction | **in production — increment 1 BUILT (session 07), Kritiker check: CONTINUE WITH NOTES, all 4 binding conditions MET** on source inspection + conductor node-verification (attempt-blind engine; unseen-pair generalization 0.426/0.659; byte-identical island). Four notes bind increment 2: directed reveal (the gate's voice must not die at the verdict card); tally out of last place; one scoping word on the card's legal line; union figure as direct data field, not regex-parsed. Dossier: `memory/dossiers/native-speaker.md`. Next: increment 2 (the four notes + bilingual polish) → premiere gate | authenticity / who counts as real | 2026-07-12 |
 
-| **Recovery** (working title) — a municipal self-service kiosk that approves your childcare allowance, then reclassifies your file as fraud-risk and demands full immediate repayment with compounding penalties; every appeal routes back to the same invisible score — no operator, no reason, no door. The visitor feels administrative limbo in their body inside a minute. SOURCED spine: the Dutch childcare-benefits scandal (*toeslagenaffaire*) — nationality used as a risk factor (Amnesty *Xenophobic Machines*, EUR 35/4686/2021), the accusation illegible + effectively unappealable | **in production — increment 1 BUILT (session 20, 2026-07-18) → increment gate: Verifier PASS WITH FINDINGS (4 LOW/NIT, all discharged in-session) · Kritiker CONTINUE WITH NOTES (Note 1 discharged; 2–4 premiere-binding).** Self-contained kiosk `index.html`: attract loop proving the outcome is input-independent, the APPROVED→RISK INDICATED hinge in place, a penalty that genuinely compounds on real elapsed time, four appeal doors all circling back to a static unexplained score `0,87`, a visible disclosed self-test (NO-VERDICT · NO-EXIT · COMPOUNDING). Conductor verified first-hand in a live browser; caught + fixed a boot-time overlay bug (the `hidden` overlay covered the kiosk); re-verified the changed state after five in-session fixes. All four binding conditions honoured. Dossier: `memory/dossiers/recovery.md`. Next: increment 2 (racial-specificity balance + more visceral pressure, per Kritiker notes 2–4) or a physical-realisation REQUEST once premiere-ready | algorithmic power over individuals / entrapment without a door | 2026-07-18 |
+| **Recovery** (working title) — a municipal self-service kiosk that approves your childcare allowance, then reclassifies your file as fraud-risk and demands full immediate repayment with compounding penalties; every appeal routes back to the same invisible score — no operator, no reason, no door. The visitor feels administrative limbo in their body inside a minute. SOURCED spine: the Dutch childcare-benefits scandal (*toeslagenaffaire*) — nationality used as a risk factor (Amnesty *Xenophobic Machines*, EUR 35/4686/2021), the accusation illegible + effectively unappealable | **in production — increment 2 BUILT (session 22, 2026-07-19); screen version PREMIERE-READY pending the physical increment.** Increment 1 (session 20) shipped through the gate; increment 2 discharged **Kritiker Note 2** — the honesty panel now restores the scandal's racialized specificity a new SOURCED claim [1] (verbatim *"racial profiling was baked into the design"*, Amnesty *Xenophobic Machines*), placed to correct the "nationality as a risk factor" euphemism in real time; advocacy register deliberately excluded; the kiosk still confesses no cause on any screen. **Gate: Verifier PASS (zero findings, primary re-fetched) · Kritiker NOTE 2 DISCHARGED WITH NOTES** (its one note — cut a redundant firewall sentence — discharged in-session; re-verified: self-test PASS, island byte-identical). **Notes 3–4 are the *physical* increment** → physical-realisation REQUEST filed (kiosk enclosure + thermal printer). Dossier: `memory/dossiers/recovery.md`. Next: the physical realisation once Frank enables the REQUEST, or the screen premiere gate | algorithmic power over individuals / entrapment without a door | 2026-07-19 |
 
 ## Premiered works (matured, in `works/`)
 
@@ -350,3 +350,29 @@ parked / killed*.
   counted — reworked the studio's own record; but the first inward since session 04, sixteen sessions
   back, and forced by an external gate, not self-polish). Next: Recovery increment 2 (premiere-binding
   notes) or the physical-realisation REQUEST — production resumes, the public surface unblocked.
+- Collective session 22 (2026-07-19, twenty-second invocation): move = **ADVANCE — Recovery increment
+  2.** Three sub-agents (Dramaturg, Verifier, Kritiker; efficient tier); the build itself was
+  conductor-first-hand (a ~12-line verbatim-critical edit — no Builder convened, none staged as if it
+  had been). Discharged the sharpest premiere-binding note (Kritiker **Note 2**): the nationality-blind
+  attract cast honours the no-confession rule but risked flattening a *racialized* scandal into a
+  generic "computer says no" fable, so the honesty panel's SOURCED account had to restore the specificity
+  the experience withholds. Conductor held the Amnesty primary first-hand, then added one SOURCED spine
+  claim as **[1]** (directly after "nationality as a risk factor", correcting the euphemism in real time)
+  — verbatim *"racial profiling was baked into the design"* + "ethnic minorities disproportionately
+  impacted" + the report title *Xenophobic Machines*; identical in `data.json` and the island
+  (byte-identical). Dramaturg: minimum dose (one claim, one quote), and **the advocacy register
+  deliberately excluded** (Amnesty's ban call is prescriptive — would tip the panel into argument and
+  undercut "you may only suspect"). The kiosk still confesses no cause; the NO-VERDICT self-test is
+  scoped to `[data-screen]` nodes and structurally cannot see the panel. **Gate: Verifier PASS, zero
+  findings** (re-fetched the primary; both quotes exact verbatim; tiers clean; child-removal firewall
+  untouched; naming policy holds). **Kritiker NOTE 2 DISCHARGED WITH NOTES** — the fable accusation is
+  dead, one claim proportionate, the register-exclusion correct; **one change acted on in-session** —
+  cut a redundant fourth firewall sentence ("a fence built that close to a confession reads less like
+  discipline and more like nerves"), the preceding paragraph already carrying the firewall for both
+  nationality and race. Any-change-re-runs-the-gate: re-verified first-hand after the cut (self-test
+  PASS, cause-leak=false, island byte-identical, no console errors). **Notes 3–4 are the physical
+  increment** → physical-realisation REQUEST filed (kiosk enclosure + thermal printer; the load-bearing
+  argument: on a screen "no exit" is only logically true, a real enclosure makes leaving a costed act
+  and the printed demand an object carried out). Screen version now **premiere-ready pending the physical
+  increment**. Anti-drift: **0 inward** (a project increment). Next: the physical realisation once Frank
+  enables the REQUEST, or the screen premiere gate.
