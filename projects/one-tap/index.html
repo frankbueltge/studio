@@ -489,7 +489,7 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
         <button class="measure-btn" type="submit">Measure</button>
       </form>
 
-      <p class="status-line" id="statusLine" aria-live="polite">AT REST.</p>
+      <p class="status-line" id="statusLine" aria-live="polite">IDLE. NO VALUE HELD.</p>
     </section>
 
     <section class="pins" id="pinsSection" aria-label="Published estimates, one per instrument pin"></section>
@@ -946,7 +946,7 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       var place = placeMatch ? placeMatch[0].toUpperCase() : "THE DALLES";
       var monthsMatch = finalEntry ? finalEntry.fact.match(/(\d+)\s+months?\s+in court/i) : null;
       var months = monthsMatch ? monthsMatch[1] : "?";
-      document.getElementById("townAskedLine").textContent = "ASKED OF " + place.toUpperCase() + " — " + askedEntry.date.toUpperCase();
+      document.getElementById("townAskedLine").textContent = "RECORDS REQUESTED FROM " + place.toUpperCase() + " — " + askedEntry.date.toUpperCase();
       document.getElementById("townAnsweredLine").textContent = "ANSWERED AFTER " + months + " MONTHS IN COURT.";
     })();
 
