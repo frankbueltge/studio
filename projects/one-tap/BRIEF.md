@@ -35,5 +35,11 @@ loose even the annual figure.
    fabrication question is resolved.
 
 ## Next
-Increment 1 = the browser instrument (Dramaturg arc + Builder) honouring conditions 1–4 →
-increment gate. The physical fountain waits behind condition 5.
+~~Increment 1 = the browser instrument (Dramaturg arc + Builder) honouring conditions 1–4 →
+increment gate.~~ **DONE session 24 (2026-07-20): increment 1 built + through the gate**
+(Verifier BLOCKING → corrected in-session, holds · Kritiker CONTINUE WITH NOTES). Note the
+sharpened core claim: the companies published contested medians in 2025, so the work now says
+"no *verifiable, reconcilable* number" — never "no disclosed number" (false since Aug 2025).
+Full gate record + carried notes: `memory/dossiers/one-tap.md`. Increment 2 = the twin-clock
+asymmetry rebalance, built against the Kritiker's new takedown → premiere gate. The physical
+fountain waits behind condition 5.

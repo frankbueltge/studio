@@ -23,9 +23,18 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   Dalles concealment fight. OPENED through the full art-critic gate with 5 binding conditions
   (screen-first; state the 70x + label pins; Act 2 live or dropped; fact-lock; no fabrication
   until the screen increment passes AND Recovery's fabrication resolves). Full record:
-  `memory/dossiers/one-tap.md`, journal `2026-07-20.md` (session 23). Open item carried forward:
+  `memory/dossiers/one-tap.md`, journal `2026-07-20.md` (session 23). ~~Open item carried forward:
   the ~15 mL revision and the exact $153k / 2021-figure primaries are still **primary-pending** —
-  bind increment 1's fact-lock.
+  bind increment 1's fact-lock.~~ **Discharged session 24 (2026-07-20, second of this date):**
+  the 2021 figure primary-confirmed (The Register/AP + RCFP); $153k hedged on the face to
+  ">$100,000, paid by Google" with the total attributed; the ~15 mL revision **dropped entirely**
+  (no primary). Increment 1 built + through the gate. **Now open on One Tap:** (1) the twin-clock
+  asymmetry binds increment 2 (the Kritiker's new takedown sentence on the dossier is the
+  measure); (2) premiere-binding — corroborate the UCR researcher's "hiding the critical
+  information" quote via a second, less ephemeral outlet than the PC Gamer pickup; (3) the pins are
+  time-sensitive material — Google's median and any future vendor disclosures can move; any session
+  touching the work before premiere re-checks whether a new per-query figure has been published and
+  updates the dial from primaries, or says it didn't.
 - **"Recovery" — in production after increment 1 (session 20, 2026-07-18): three premiere-binding
   notes from the increment gate.** (1) **Racial specificity vs. the diegesis** — the attract loop's
   nationality-blind cast honours condition 3 (never confess the trigger) but risks flattening a

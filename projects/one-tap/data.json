@@ -104,7 +104,7 @@
       {
         "date": "2021",
         "fact": "274.5 million gallons — 'more than a quarter of all the water used in the city.'",
-        "quote_verbatim": "The search giant consumed 274.5 million gallons (about 1.2 billion liters) of water during 2021 at its facilities in The Dalles alone.",
+        "quote_verbatim": "[T]he search giant consumed 274.5 million gallons (about 1.2 billion liters) of water during 2021 at its facilities in The Dalles alone.",
         "source_urls": ["https://www.theregister.com/2022/12/19/google_datacenters_dalles/", "https://www.rcfp.org/dalles-google-oregonian-settlement/"]
       },
       {
@@ -126,7 +126,7 @@
       },
       {
         "date": "14 December 2022",
-        "fact": "After 13 months in court, the city drops the case and releases ten years of data. The city's legal fees — reported at $153,000 in total, and rendered on this work's face as 'more than $100,000' — are all paid by Google ('Google will pay all of the city's legal fees associated with the case').",
+        "fact": "After 13 months in court, the city drops the case and releases ten years of data. The city's legal fees — more than $100,000, all paid by Google ('Google will pay all of the city's legal fees associated with the case'); local reporting puts the total at $153,000.",
         "quote_verbatim": "Google will pay all of the city's legal fees associated with the case",
         "figure_policy": "Load-bearing face line uses '>$100,000, paid by Google' (binding condition 4b); the $153,000 total appears attributed to the local reporting that states it.",
         "source_urls": ["https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian", "https://www.rcfp.org/dalles-google-oregonian-settlement/"]
