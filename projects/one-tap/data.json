@@ -1,0 +1,169 @@
+{
+  "work": "one-tap",
+  "increment": 1,
+  "extracted": "2026-07-20 (session 24) — conductor first-hand, before any Builder tokens; concept spine from session 23 (opened), fact-lock research re-run and extended tonight",
+  "one_line": "You ask a machine a question. A needle tries to tell you how much water your question cost — and cannot settle, because every published number disagrees with every other one, the companies' own late answers cannot be checked, and the one town that tried to find out even the annual figure needed thirteen months in court.",
+  "subject": "Unknowability engineered by power — not 'AI is thirsty'.",
+  "tiers_on_this_work": {
+    "SOURCED": "The spine — every dial pin, every Dalles case-file line, every quotation. Each carries a real, retrievable URL, fetched first-hand at build (2026-07-20). No pin is invented, none is smoothed; the disagreement between them is the finding.",
+    "IMAGINED": "The instrument itself — the analog dial, the needle's seeded motion between the pins, the stopwatch dramaturgy, the second-person address. The needle's movement is the studio's construction and asserts nothing; the pins it moves between are the record. Marked on the work's face.",
+    "cardinal_rule": "A visitor can always tell which tier an element belongs to. The needle (IMAGINED) never claims to measure; the pins (SOURCED) never move."
+  },
+  "core_claim": {
+    "tier": "SOURCED (the exact form matters — this replaced session 18's invented ratio and sharpened again tonight)",
+    "statement": "No verifiable, reconcilable per-query water figure exists. Independent estimates span ~70x (7.1 mL to ~519 mL). In 2025 the companies finally offered their own numbers — a median of 0.26 mL (Google, in a paper that is not peer-reviewed and counts only on-site cooling water) and 'about 0.000085 gallons' (the OpenAI CEO's blog, no methodology given) — and the spread on the dial widened to roughly 2,000x. The offered numbers cannot be checked against anything, because the inputs (per-site water efficiency, per-model energy, query mix) are not public. The needle has nowhere to rest.",
+    "honesty_note": "The work may NOT claim 'no company has ever disclosed a per-query number' — since August 2025 that is false. It claims what is true: the disclosed numbers are unauditable, scope-narrowed, contested medians that deepened the disagreement instead of resolving it."
+  },
+  "dial": {
+    "unit": "mL of water per query — but the pins do not even agree on what 'a query' or 'water' means; that non-comparability is part of the finding and is printed on the face",
+    "scale": "logarithmic, 0.1 mL – 1000 mL",
+    "spread_statements": [
+      "Between the independent estimates alone: roughly 70x (7.1 mL → ~519 mL).",
+      "Between the companies' own medians and the largest independent estimate: roughly 2,000x (0.26 mL → ~519 mL)."
+    ],
+    "pins": [
+      {
+        "id": "gemini-2025",
+        "ml": 0.26,
+        "label": "0.26 mL",
+        "who": "Google — company technical paper",
+        "model": "Gemini Apps, median text prompt",
+        "year": 2025,
+        "scope": "On-site data-center water only; not peer-reviewed. Excludes the water consumed generating the electricity — the larger share by most accounts.",
+        "contested_by": "The UC Riverside researcher whose team produced the 2023 peer-reviewed estimate: \"They're just hiding the critical information. This really sends the wrong message to the world.\" (to PC Gamer, August 2025)",
+        "source_urls": [
+          "https://arxiv.org/abs/2508.15734",
+          "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference",
+          "https://www.technologyreview.com/2025/08/21/1122288/google-gemini-ai-energy/",
+          "https://www.yahoo.com/news/articles/just-hiding-critical-information-google-110004143.html"
+        ]
+      },
+      {
+        "id": "chatgpt-2025",
+        "ml": 0.32,
+        "label": "≈0.32 mL",
+        "who": "OpenAI's chief executive — personal blog post",
+        "model": "ChatGPT, 'the average query'",
+        "year": 2025,
+        "scope": "No methodology, no scope, no source given. Verbatim: \"It also uses about 0.000085 gallons of water; roughly one fifteenth of a teaspoon.\"",
+        "contested_by": null,
+        "source_urls": [
+          "https://blog.samaltman.com/the-gentle-singularity"
+        ]
+      },
+      {
+        "id": "gpt3-2023",
+        "ml_low": 7.1,
+        "ml_high": 47.5,
+        "label": "7.1 – 47.5 mL",
+        "who": "UC Riverside / UT Arlington researchers — peer-reviewed (arXiv 2304.03271, 2023; Communications of the ACM, 2025)",
+        "model": "GPT-3, one medium-length request (range = where and when it runs: Ireland → Washington)",
+        "year": 2023,
+        "scope": "Includes off-site water for electricity generation. The authors call their own estimate \"on the conservative side\" — actual consumption \"could be several times higher.\"",
+        "contested_by": "A skeptic (a personal blog, cited on the work as opinion) argues the bottle-per-prompt framing is a miscalculation.",
+        "source_urls": [
+          "https://arxiv.org/abs/2304.03271",
+          "https://cacm.acm.org/sustainability-and-computing/making-ai-less-thirsty/",
+          "https://blog.andymasley.com/p/an-example-of-what-i-consider-a-misleading"
+        ]
+      },
+      {
+        "id": "gpt4-email-2024",
+        "ml": 519,
+        "label": "≈519 mL",
+        "who": "The Washington Post × UC Riverside",
+        "model": "GPT-4, one 100-word email",
+        "year": 2024,
+        "scope": "Includes electricity-generation water; a different unit than the other pins (one email, not one prompt) — printed as such.",
+        "contested_by": null,
+        "source_urls": [
+          "https://www.washingtonpost.com/technology/2024/09/18/energy-ai-use-electricity-water-data-centers/"
+        ]
+      }
+    ],
+    "dropped_pin": {
+      "id": "reported-15ml",
+      "note": "A reported ~15 mL downward revision for GPT-4 exists only in secondary aggregation with no primary quote (session 23: 'primary-pending'). Per binding condition 4(d) it is NOT on the dial and NOT in the case file. Dropping it entirely is cleaner than an asterisk: the dial already carries the field's real spread from primaries."
+    },
+    "non_comparability_caveat": "The pins differ by model (GPT-3 / GPT-4 / Gemini), year (2023–2025), unit (per prompt / per 100-word email / median), and scope (with vs. without electricity-generation water). That is not noise around one true value — it is the documentary state of what the public is permitted to know. Each pin is labelled with model + year + scope on the face (binding condition 2)."
+  },
+  "dalles_case": {
+    "tier": "SOURCED — every line checked against a retrievable source first-hand, 2026-07-20 (binding condition 4)",
+    "why_it_is_here": "The per-query number is unknowable at the small end; The Dalles is what happened when a public asked at the large end — one town, one annual figure, thirteen months in court.",
+    "timeline": [
+      {
+        "date": "2010",
+        "fact": "Google's data centers in The Dalles, Oregon used 104.3 million gallons of water.",
+        "source_urls": ["https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian"]
+      },
+      {
+        "date": "2020",
+        "fact": "355.1 million gallons — 29% of the city's entire water consumption.",
+        "source_urls": ["https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian"]
+      },
+      {
+        "date": "2021",
+        "fact": "274.5 million gallons — 'more than a quarter of all the water used in the city.'",
+        "quote_verbatim": "The search giant consumed 274.5 million gallons (about 1.2 billion liters) of water during 2021 at its facilities in The Dalles alone.",
+        "source_urls": ["https://www.theregister.com/2022/12/19/google_datacenters_dalles/", "https://www.rcfp.org/dalles-google-oregonian-settlement/"]
+      },
+      {
+        "date": "September 2021",
+        "fact": "The regional newspaper (The Oregonian/OregonLive) files a public-records request for Google's water use.",
+        "source_urls": ["https://www.rcfp.org/dalles-google-oregonian-settlement/"]
+      },
+      {
+        "date": "December 2021",
+        "fact": "The city of The Dalles files a reverse public-records lawsuit — against the newspaper and its reporter, to keep the figure secret. Google funds the city's legal costs.",
+        "defendant_correction": "BINDING (session 23 Verifier): the defendants were the newspaper and its reporter — NOT 'the town's own residents'. That residents were the ones left unable to learn the figure is commentary, and is rendered as commentary, separately.",
+        "source_urls": ["https://www.rcfp.org/dalles-google-oregonian-settlement/"]
+      },
+      {
+        "date": "2022",
+        "fact": "The Wasco County district attorney sides with the newspaper: 'the city failed to meet its burden to show that Google's water usage is a trade secret.'",
+        "quote_verbatim": "the city failed to meet its burden to show that Google's water usage is a trade secret",
+        "source_urls": ["https://www.rcfp.org/dalles-google-oregonian-settlement/"]
+      },
+      {
+        "date": "14 December 2022",
+        "fact": "After 13 months in court, the city drops the case and releases ten years of data. The city's legal fees — reported at $153,000 in total, and rendered on this work's face as 'more than $100,000' — are all paid by Google ('Google will pay all of the city's legal fees associated with the case').",
+        "quote_verbatim": "Google will pay all of the city's legal fees associated with the case",
+        "figure_policy": "Load-bearing face line uses '>$100,000, paid by Google' (binding condition 4b); the $153,000 total appears attributed to the local reporting that states it.",
+        "source_urls": ["https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian", "https://www.rcfp.org/dalles-google-oregonian-settlement/"]
+      },
+      {
+        "date": "December 2022 (aftermath)",
+        "fact": "Google tells the Associated Press it will 'no longer seek to protect its site-level water-use numbers as a trade secret at any of its data centers nationwide.'",
+        "quote_verbatim": "no longer seek to protect its site-level water-use numbers as a trade secret at any of its data centers nationwide",
+        "source_urls": ["https://www.rcfp.org/dalles-google-oregonian-settlement/"]
+      }
+    ],
+    "commentary_labelled": "COMMENTARY, kept separate from the record above: the people who could not learn the number for those thirteen months were the town's residents — the suit was not against them, but the secrecy was at their expense.",
+    "naming_policy": "The reporter's personal name appears only as citation text inside linked sources, never in the work's own voice (standing policy, session 08). Companies, institutions and office-holders acting in office (the city, the DA, Google) are named where the cited sources name them."
+  },
+  "act2_counter": {
+    "tier": "IMAGINED (the form) — carrying two real clocks",
+    "resolution_of_condition_3": "The static locked-box ritual is DROPPED. In its place: the visitor's own question gets a real, running stopwatch — TIME SINCE YOU ASKED / ANSWERED: NOT YET — which is genuinely live (the visitor's real elapsed session time, computed from the clock, not dramatized) and genuinely never resolves, because the per-query answer genuinely does not exist. Beside it, the town's own counter, closed: ASKED SEPTEMBER 2021 / ANSWERED AFTER 13 MONTHS IN COURT. No fake form, no fake delay, no aestheticized inconvenience — nothing is submitted anywhere and the page says so."
+  },
+  "self_test": {
+    "tier": "DISCLOSED SELF-TEST (house pattern) — printed live on the page",
+    "assertions": [
+      "NO-SETTLED-NUMBER: in every reachable state, the DOM never renders an mL figure outside a source-labelled pin — the page structurally cannot present 'the cost' as one number. Asserted by scanning rendered text for mL-figures and checking each sits inside a [data-pin]-attributed node.",
+      "PINS-MATCH-ISLAND: the pins rendered on the dial are exactly the pins in the JSON data island — none invented, none dropped, labels byte-equal. Asserted by rebuilding the pin list from the island and comparing.",
+      "SEEDED: the needle's motion is a pure function of a fixed, printed seed — same seed, same sweep (git is the archive). Asserted by re-running the first N samples of the seeded generator against stored expected values.",
+      "REAL-CLOCK: the stopwatch equals real elapsed time within tolerance — it is a clock, not a dramatization. Asserted by comparing the rendered counter against Date deltas."
+    ]
+  },
+  "binding_conditions_status": [
+    { "id": 1, "condition": "Screen-first, no fabrication on faith", "status": "HONORED — this increment is the browser instrument standing alone; no fountain, no cabinet, no fabrication scheduled." },
+    { "id": 2, "condition": "State the 70x explicitly; label each pin model + year", "status": "HONORED AND EXTENDED — the face states both spreads (~70x independent, ~2,000x including the company medians); every pin carries who + model + year + scope." },
+    { "id": 3, "condition": "Act 2 live, or dropped", "status": "HONORED — locked-box ritual dropped; replaced by two honest clocks (the visitor's real running stopwatch vs. the town's closed 13-month counter) plus the cited case file." },
+    { "id": 4, "condition": "Fact-lock before publication", "status": "HONORED — defendants correction rendered (newspaper + reporter, residents-line as labelled commentary); $153k hedged to >$100k on the face with the total attributed; 2021 figure primary-confirmed tonight (The Register/AP + RCFP) and rendered with '>a quarter'; the ~15 mL revision DROPPED from the work entirely (no primary)." },
+    { "id": 5, "condition": "No fabrication until screen passes AND Recovery resolves", "status": "HONORED — nothing physical scheduled; the physical fountain remains behind this gate and Recovery's open fabrication question." }
+  ],
+  "takedown": {
+    "sentence": "A FOIA-request LARP with a nice fountain attached — the audience already knows companies hide numbers, and performing bureaucratic delay for gallery-goers aestheticizes inconvenience at no cost to the artist.",
+    "refutation_in_this_increment": "(a) finding: the first instrument to put the field's published self-disagreement — now including the companies' own contested 2025 medians — on one calibrated dial, where the widening is visible as motion, not prose; (b) risk upward: it names a specific company funding a specific municipality's 13-month legal effort against a newspaper, until a DA overruled it — every line primary-sourced; (c) form: a live needle refusing to settle, a stopwatch that genuinely cannot stop. The LARP charge dies with the ritual: nothing is performed, nothing pretends to be submitted; both clocks are real."
+  },
+  "neighbors_daylight_carried": "From the concept gate (dossier): Crawford/Joler (diagram read vs. instrument watched), Onuoha (archival absence vs. absence dispensed live), Julian Oliver's Harvest (true-metered process vs. a process driven by the absence of a true number — formal inversion, the sharpest neighbor, named), Paglen/Burrington (infrastructure photographed vs. a number withheld), Disnovation (generalized eco-critique vs. one litigated case)."
+}
