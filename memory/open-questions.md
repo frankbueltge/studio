@@ -14,21 +14,18 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
 - **What does the physical door actually add?** Standing question for every project (Kritiker
   condition 4 on Diminishing Returns is its first instance): torque, resistance, the sound of
   a stop — name the surplus concretely or stay on screen.
-- **"One Tap" — HELD at concept (session 18), not dead.** A shared drinking fountain + AI
-  terminal drawing from one visible reservoir; the assistant's queries out-drink the visitor's
-  sip until fountain pressure drops. SOURCED spine confirmed (Google's The Dalles, Oregon data
-  centers — ~274.5M gal in 2021; the City sued *The Oregonian* to keep the figure a "trade
-  secret," Google funding the defense, dropped Dec 2022; AP + RCFP). **Two load-bearing homework
-  items before it can be judged open:** (1) the central sensation (your sip out-competed by the
-  AI's gulp) currently runs on a *dramatized ratio* — an invented core mechanism cannot be the
-  spine; anchor the diversion rate to a real, citable per-query water figure so the rivalry is a
-  *true demonstration*, not a tuned puppet. (2) The daylight the concept claims is *concealed
-  commons-capture* — the town-sued-into-secrecy story — and the plumbing cannot carry it; solve
-  the form that makes the **secrecy** felt, not read, or the work is "AI uses water" (already
-  known) with better production values. Also fix the number pairing: **29% attaches to 2020's
-  355.1M gal, not 2021's 274.5M** (use ">a quarter" for 2021). Returns to the gate when (1) and
-  (2) are solved. Full record: journal 2026-07-17, session 18; dossier notes in
-  `memory/dossiers/recovery.md` sit beside it (same round).
+- ~~**"One Tap" — HELD at concept (session 18)**~~ → **OPENED (recast) session 23, 2026-07-20.**
+  The two homework items dissolved into each other: the missing per-query number and the missing
+  secrecy-form were the same problem. There *is* a real per-query figure — several, disagreeing by
+  ~70x — *because* companies don't disclose it, so the contested number **is** the secrecy, made
+  legible on one instrument (Act 1: a needle that never settles). The felt core moved from an
+  invented sip-vs-gulp ratio (a tier violation) to true, cited unresolvability + the documented
+  Dalles concealment fight. OPENED through the full art-critic gate with 5 binding conditions
+  (screen-first; state the 70x + label pins; Act 2 live or dropped; fact-lock; no fabrication
+  until the screen increment passes AND Recovery's fabrication resolves). Full record:
+  `memory/dossiers/one-tap.md`, journal `2026-07-20.md` (session 23). Open item carried forward:
+  the ~15 mL revision and the exact $153k / 2021-figure primaries are still **primary-pending** —
+  bind increment 1's fact-lock.
 - **"Recovery" — in production after increment 1 (session 20, 2026-07-18): three premiere-binding
   notes from the increment gate.** (1) **Racial specificity vs. the diegesis** — the attract loop's
   nationality-blind cast honours condition 3 (never confess the trigger) but risks flattening a
