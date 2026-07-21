@@ -481,8 +481,8 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     <p class="title-sub">an instrument that cannot settle</p>
 
     <div class="tier-legend">
-      <span class="tag tag-sourced">SOURCED &mdash; fixed, engraved, cited, never moves</span>
-      <span class="tag tag-imagined">IMAGINED &mdash; thin, translucent, ticking, alive</span>
+      <span class="tag tag-sourced">SOURCED &mdash; the pins, the case file: engraved, cited, never moves</span>
+      <span class="tag tag-imagined">IMAGINED &mdash; the needle, the stopwatch: thin, translucent, ticking</span>
     </div>
 
     <p class="subtitle" id="oneLine"></p>
@@ -528,7 +528,6 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
         <h3>Time since you asked</h3>
         <div class="clock-value" id="stopwatch">00:00.00</div>
         <div class="clock-sub" id="answeredState">ANSWERED: NOT YET</div>
-        <div class="clock-sub" id="waitFraction">= &mdash; OF THE NEWSPAPER&rsquo;S WAIT</div>
       </div>
     </section>
 
@@ -549,7 +548,6 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       <div class="seed-line" id="seedLine"></div>
       <div class="honesty-block" id="caveatGrounds"></div>
       <div class="honesty-block">MOTION: with reduced motion requested, the needle updates in slow discrete steps rather than continuously. The seeded stream is read at a different cadence on that path, so the exact positions visited differ from the animated version &mdash; the refusal to settle does not.</div>
-      <div class="honesty-block">WAIT-FRACTION BASIS: the demoted stopwatch states its reading as a fraction of the newspaper&rsquo;s thirteen-month wait. The sources give the request month (September 2021) and the settlement date (14 December 2022) but no day-level duration, so any date-difference would invent precision the record does not state. The cited figure itself is operationalized instead: 13 months &times; 30.44 average days = 395.72 days = 34,190,208 seconds. The settlement date is cited as record and not used in the arithmetic.</div>
       <div class="honesty-block">
         <span class="h-label">All source URLs, fetched first-hand at build</span>
         <ul class="sources-list" id="sourcesList"></ul>
@@ -777,7 +775,8 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
   "act2_counter": {
     "tier": "IMAGINED (the form) — carrying two real clocks",
     "resolution_of_condition_3": "The static locked-box ritual is DROPPED. In its place: the visitor's own question gets a real, running stopwatch — TIME SINCE YOU ASKED / ANSWERED: NOT YET — which is genuinely live (the visitor's real elapsed session time, computed from the clock, not dramatized) and genuinely never resolves, because the per-query answer genuinely does not exist. Beside it, the town's own counter, closed: ASKED SEPTEMBER 2021 / ANSWERED AFTER 13 MONTHS IN COURT. No fake form, no fake delay, no aestheticized inconvenience — nothing is submitted anywhere and the page says so.",
-    "increment2_rebalance": "Session 26, against the standing takedown from the session-24 gate: the clocks no longer sit at equal weight. The SOURCED counter of the record moves first and carries the large engraved type and the wider column; the visitor's IMAGINED stopwatch is demoted — second, narrower, thin and translucent — and made to state, live, its own reading as a fraction of the thirteen months ('= 1 / N OF THE NEWSPAPER'S WAIT'), recomputed every second from real elapsed time. The asymmetry is no longer a risk the layout manages; it is a reading the instrument takes. Role precision holds: the thirteen-month wait belonged to the newspaper that asked — the town sued. Basis for the arithmetic disclosed in the honesty panel: the cited figure itself is operationalized at the average month length (13 × 30.44 days = 395.72 days = 34,190,208 seconds), because any date-difference would invent day-level precision the sources do not state."
+    "increment2_rebalance": "Session 26, against the standing takedown from the session-24 gate: the clocks no longer sit at equal weight. The SOURCED counter of the record moves first and carries the large engraved type and the wider column; the visitor's IMAGINED stopwatch is demoted — second, narrower, thin and translucent — and made to state, live, its own reading as a fraction of the thirteen months ('= 1 / N OF THE NEWSPAPER'S WAIT'), recomputed every second from real elapsed time. The asymmetry is no longer a risk the layout manages; it is a reading the instrument takes. Role precision holds: the thirteen-month wait belonged to the newspaper that asked — the town sued. Basis for the arithmetic disclosed in the honesty panel: the cited figure itself is operationalized at the average month length (13 × 30.44 days = 395.72 days = 34,190,208 seconds), because any date-difference would invent day-level precision the sources do not state. (Superseded in part at session 27: the fraction line was cut — see session27_resolution.)",
+    "session27_resolution": "Session 27 (premiere prep, 2026-07-21): the live fraction line is CUT — '= 1 / N OF THE NEWSPAPER'S WAIT', its edge-case line ('YOU HAVE NOW WAITED LONGER THAN THE NEWSPAPER DID.'), the 34,190,208-second basis arithmetic and the WAIT-FRACTION self-test assertion are all removed; no computation replaces them. The Artist's resolution, upheld by the Kritiker over the only zero-context felt data on record: a ratio is a resolved number, recomputed every second, about the person standing there — the one operation this instrument exists to refuse — and dressing the visitor's smallness in the newspaper's thirteen months gave it a documentary alibi, not a different subject. What remains is the rhyme: the needle never rests because no disclosed figure exists for it to rest on; the demoted stopwatch never resolves because no mechanism to answer exists at all. The stopwatch stays at its full four-axis demotion, a real elapsed-time clock stating only TIME SINCE YOU ASKED / ANSWERED: NOT YET. The wait-fraction measured the visitor's smallness, not the record's asymmetry, and has been cut — the record now states its own asymmetry alone, in engraved words, and the demoted clock keeps only the one honest thing it ever needed to say: it, too, has not resolved."
   },
   "self_test": {
     "tier": "DISCLOSED SELF-TEST (house pattern) — printed live on the page",
@@ -785,9 +784,9 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       "NO-SETTLED-NUMBER: in every reachable state, the DOM never renders an mL figure outside a source-labelled pin — the page structurally cannot present 'the cost' as one number. Asserted by scanning rendered text for mL-figures and checking each sits inside a [data-pin]-attributed node.",
       "PINS-MATCH-ISLAND: the pins rendered on the dial are exactly the pins in the JSON data island — none invented, none dropped, labels byte-equal. Asserted by rebuilding the pin list from the island and comparing.",
       "SEEDED: the needle's motion is a pure function of a fixed, printed seed — same seed, same sweep (git is the archive). Asserted by re-running the first N samples of the seeded generator against stored expected values.",
-      "REAL-CLOCK: the stopwatch equals real elapsed time within tolerance — it is a clock, not a dramatization. Asserted by comparing the rendered counter against Date deltas.",
-      "WAIT-FRACTION: the demoted clock's '1 / N' line is a pure derivation of the same real elapsed time against the disclosed 34,190,208-second basis (13 × 30.44 days) — asserted by recomputing N independently and comparing, with ±1 second of tolerance."
-    ]
+      "REAL-CLOCK: the stopwatch equals real elapsed time within tolerance — it is a clock, not a dramatization. Asserted by comparing the rendered counter against Date deltas."
+    ],
+    "session27_note": "The fifth assertion (WAIT-FRACTION) was removed at session 27 together with the device it verified — see act2_counter.session27_resolution. Four assertions remain."
   },
   "binding_conditions_status": [
     { "id": 1, "condition": "Screen-first, no fabrication on faith", "status": "HONORED — this increment is the browser instrument standing alone; no fountain, no cabinet, no fabrication scheduled." },
@@ -801,12 +800,19 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     "refutation_in_this_increment": "(a) finding: the first instrument to put the field's published self-disagreement — now including the companies' own contested 2025 medians and the one reviewed lifecycle figure — on one calibrated dial, where the widening is visible as motion, not prose; (b) risk upward: it names a specific company funding a specific municipality's 13-month legal effort against a newspaper, until a DA overruled it — every line primary-sourced; (c) form: a live needle refusing to settle, a stopwatch that genuinely cannot stop. The LARP charge dies with the ritual: nothing is performed, nothing pretends to be submitted; both clocks are real.",
     "standing_takedown_session24": {
       "sentence": "Pairing the visitor's own idle five seconds with a town's thirteen-month court fight, at equal visual weight, doesn't refuse aestheticized inconvenience — it just moved the aestheticization from a locked box to a stopwatch, and dressed up the audience's boredom as if it belonged in the same courtroom.",
-      "refutation_in_increment_2": "'Equal visual weight' is made false on four axes at once — position (the record's counter first), column width (wider), type size (larger, engraved), material (fixed plate vs. thin and translucent). And the stopwatch no longer coexists with the courtroom clock as a competing spectacle: every second, it computes and announces its own reading as a fraction of the thirteen months, so the visitor's wait is not dressed up as comparable — it is measured against the record and found microscopic, live, by disclosed arithmetic. The fraction is the refusal of comparability, spoken continuously, not a caption asserting it once."
+      "refutation_in_increment_2": "'Equal visual weight' is made false on four axes at once — position (the record's counter first), column width (wider), type size (larger, engraved), material (fixed plate vs. thin and translucent). And the stopwatch no longer coexists with the courtroom clock as a competing spectacle: every second, it computes and announces its own reading as a fraction of the thirteen months, so the visitor's wait is not dressed up as comparable — it is measured against the record and found microscopic, live, by disclosed arithmetic. The fraction is the refusal of comparability, spoken continuously, not a caption asserting it once. (The fraction device itself was subsequently cut at session 27 — see standing_takedown_session26.)"
+    },
+    "standing_takedown_session26": {
+      "sentence": "A stopwatch that no longer competes for weight with the courtroom clock still spends every second doing the same trick: converting the visitor's own idle time into content. The denominator got more honest, but the subject of the instrument's liveness is still the visitor watching themselves shrink — self-deprecation is not the same as refusing the frame.",
+      "resolution_session27": "Conceded and discharged by subtraction, not by defense: the Artist's resolution accepted the sentence's premise — the fraction's true subject was the visitor — and cut the device (act2_counter.session27_resolution). The Kritiker upheld the cut over the cold reader's outward-pointing felt response, ruling that the response arrived by way of exactly the operation the sentence condemns: a resolved ratio, ticking, about the person standing there."
+    },
+    "standing_takedown_session27": {
+      "sentence": "The fraction is gone, and with it the one operation this instrument was ever built to refuse — but a cut ratio doesn't automatically become a rhyme; it only becomes one if a visitor actually hears the needle's refusal and the stopwatch's 'NOT YET' as making the same argument. Premiere gate: does an unbriefed visitor register two honest non-resolutions echoing each other, or does the demoted clock just recede into chrome nobody reads — a rhyme that only the Artist can hear because the Artist wrote both halves?",
+      "status": "The premiere gate's measure, replacing the session-26 sentence."
     }
   },
   "neighbors_daylight_carried": "From the concept gate (dossier): Crawford/Joler (diagram read vs. instrument watched), Onuoha (archival absence vs. absence dispensed live), Julian Oliver's Harvest (true-metered process vs. a process driven by the absence of a true number — formal inversion, the sharpest neighbor, named), Paglen/Burrington (infrastructure photographed vs. a number withheld), Disnovation (generalized eco-critique vs. one litigated case)."
 }
-
   </script>
 
   <script>
@@ -1212,31 +1218,10 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     var stopwatchEl = document.getElementById("stopwatch");
     var stopwatchTimerId = null;
 
-    // 13 months × 30.44 average days × 86,400 s — basis disclosed in the honesty panel
-    var TOWN_WAIT_SECONDS = 34190208;
-    var waitFractionEl = document.getElementById("waitFraction");
-    var FRACTION_PLACEHOLDER = "= — OF THE NEWSPAPER’S WAIT";
-    var lastFractionSecond = -1;
-    function formatInt(n) {
-      return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-    function updateWaitFraction(elapsedMs) {
-      var s = Math.floor(elapsedMs / 1000);
-      if (s === lastFractionSecond) return;
-      lastFractionSecond = s;
-      if (s < 1) {
-        waitFractionEl.textContent = FRACTION_PLACEHOLDER;
-      } else if (s > TOWN_WAIT_SECONDS) {
-        waitFractionEl.textContent = "YOU HAVE NOW WAITED LONGER THAN THE NEWSPAPER DID.";
-      } else {
-        waitFractionEl.textContent = "= 1 / " + formatInt(Math.floor(TOWN_WAIT_SECONDS / s)) + " OF THE NEWSPAPER’S WAIT";
-      }
-    }
     function tickStopwatch() {
       if (measureStartTime == null) return;
       var elapsed = Date.now() - measureStartTime;
       stopwatchEl.textContent = formatElapsed(elapsed);
-      updateWaitFraction(elapsed);
     }
 
     // ---------- self-test ----------
@@ -1307,26 +1292,6 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       });
     }
 
-    function testWaitFraction() {
-      var text = waitFractionEl.textContent;
-      if (measureStartTime == null) {
-        var idlePass = text === FRACTION_PLACEHOLDER;
-        return { pass: idlePass, detail: idlePass ? "not started; placeholder shown" : "unexpected text before MEASURE" };
-      }
-      var s = Math.floor((Date.now() - measureStartTime) / 1000);
-      if (s < 1) {
-        var subPass = text === FRACTION_PLACEHOLDER;
-        return { pass: subPass, detail: subPass ? "under 1s; placeholder shown" : "expected placeholder under 1s" };
-      }
-      var m = text.match(/1 \/ ([\d,]+)/);
-      if (!m) return { pass: false, detail: "no fraction rendered" };
-      var n = parseInt(m[1].replace(/,/g, ""), 10);
-      var ok = [s - 1, s, s + 1].some(function (sec) {
-        return sec >= 1 && Math.floor(TOWN_WAIT_SECONDS / sec) === n;
-      });
-      return { pass: ok, detail: "1/" + m[1] + " at ~" + s + "s against the 34,190,208 s basis" };
-    }
-
     function renderRow(list, name, result) {
       var li = document.createElement("li");
       var badge = document.createElement("span");
@@ -1349,7 +1314,6 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       renderRow(list, "NO-SETTLED-NUMBER", testNoSettledNumber());
       renderRow(list, "PINS-MATCH-ISLAND", testPinsMatchIsland());
       renderRow(list, "SEEDED", testSeeded());
-      renderRow(list, "WAIT-FRACTION", testWaitFraction());
 
       var running = document.createElement("li");
       var runningBadge = document.createElement("span");
@@ -1379,8 +1343,6 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       state = "sweeping";
       statusLine.textContent = "SEEKING A RESTING VALUE…";
       document.getElementById("answeredState").textContent = "ANSWERED: NOT YET";
-      lastFractionSecond = -1;
-      waitFractionEl.textContent = FRACTION_PLACEHOLDER;
       sweepWaypoints = buildSweepWaypoints();
       stopwatchTimerId = setInterval(tickStopwatch, 100);
       tickStopwatch();
