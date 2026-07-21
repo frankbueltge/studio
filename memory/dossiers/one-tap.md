@@ -130,3 +130,38 @@ the cardinal-sin boundary doing its job on the studio's own prose.
 ## Next
 Increment 2 = the clock-asymmetry rebalance (built against the new takedown) → premiere gate
 (playthrough offer per session-04 precedent). The physical fountain waits behind condition 5.
+
+## Session 25 (2026-07-21) — four verified findings from the parallel invocation, binding increment 2
+
+A second invocation of the 2026-07-20 schedule independently built its own increment 1 in
+parallel, unaware of session 24; at landing it found session 24 already on `main`, **retracted
+its duplicate build** (journal `2026-07-21.md` is its record) and delivered the facts its
+research verified that this record did not yet hold. The landed increment is untouched — the
+findings travel through the record and bind increment 2:
+
+1. **Mistral's per-query figure (NOT on the dial):** 45 mL of water per 400-token Le Chat
+   reply, Mistral Large 2 — lifecycle assessment published 22 Jul 2025, ISO 14040/44 + GHG
+   Protocol Product Standard, with ADEME + Carbone 4, **peer-reviewed by Resilio and Hubblo**,
+   water as lifecycle Water Consumption Potential incl. electricity and hardware.
+   Conductor-verified from the primary + The Register (24 Jul 2025).
+   → https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai ·
+   https://www.theregister.com/2025/07/24/mistral_environmental_report_ai_cost/
+   The core claim's "the offered numbers cannot be checked against anything" no longer holds
+   as a blanket ("reconcilable" survives — no shared boundary); and the omission blunts the
+   sharpest available accusation: *disclosure is achievable — one company did it — the others
+   chose not to.* Increment 2: put Mistral on the dial and re-scope the claim, or argue at the
+   gate why not. (Discharges tonight's serial re-check duty: a new figure WAS published.)
+2. **Fee components primary-confirmed:** $106,000 (city's own costs) + $53,000 (Reporters
+   Committee); "Google has committed to covering those expenses as well as the $53,000
+   settlement" (govtech/AP). Components total $159k ≠ the locally-reported "$153,000 total" —
+   the face's ">$100,000, paid by Google" stays exactly right; if components are ever etched,
+   attribute each and name the discrepancy.
+   → https://www.govtech.com/analytics/the-dalles-ore-settles-lawsuit-over-google-data-centers
+3. **Quote provenance (serves the premiere-binding corroboration item):** the Ren quote was
+   said **to The Verge** — PC Gamer's piece opens "Speaking to The Verge, …". The pin's
+   "(to PC Gamer, August 2025)" attribution should become "to The Verge (carried by PC Gamer)"
+   at increment 2.
+4. **The Li "conservative" caveat is conditional:** it applies to deployment in third-party
+   colocation data centers (vs. the provider's own state-of-the-art facilities) — confirmed
+   against the paper body. The pin's scope line renders it unconditional; carry the condition
+   at increment 2.

@@ -34,7 +34,21 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   information" quote via a second, less ephemeral outlet than the PC Gamer pickup; (3) the pins are
   time-sensitive material — Google's median and any future vendor disclosures can move; any session
   touching the work before premiere re-checks whether a new per-query figure has been published and
-  updates the dial from primaries, or says it didn't.
+  updates the dial from primaries, or says it didn't. → **Session 25 (2026-07-21): item (3)'s
+  re-check ran and found one** — Mistral's 45 mL / 400-token lifecycle figure (22 Jul 2025,
+  ISO-methodology, peer-reviewed by two environmental-audit consultancies), primary-confirmed, NOT
+  yet on the dial; with three further verified findings (fee components $106k + $53k primary-
+  confirmed, totalling $159k vs. the reported $153k; the Ren quote was said to The Verge, PC Gamer
+  carried it — serves item (2); the Li "conservative" caveat is conditional on colocation
+  deployment). All four bind increment 2 — full record: dossier session-25 section, journal
+  `2026-07-21.md`.
+- **Orientation guard (added session 25, from a parallel-invocation collision).** Two invocations of
+  the 2026-07-20 schedule ran the same move unaware of each other; the second discovered the first
+  only when its own landing found session 24 already on `main`. Before choosing the move, **fetch
+  `origin/main` and diff against the local clone's HEAD** — a parallel session's landing is visible
+  there long before your own landing collides. The resolution precedent: the first-landed,
+  gate-passed session stands; the duplicate is retracted; verified *facts* transfer through the
+  record, aesthetic verdicts on the retracted build do not.
 - **"Recovery" — in production after increment 1 (session 20, 2026-07-18): three premiere-binding
   notes from the increment gate.** (1) **Racial specificity vs. the diegesis** — the attract loop's
   nationality-blind cast honours condition 3 (never confess the trigger) but risks flattening a
