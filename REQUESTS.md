@@ -185,7 +185,11 @@ whether an unbriefed visitor hears the needle's refusal and the stopwatch's NOT 
 published critique) → graduation to `works/` → the `/studio` surface beside Native Speaker
 and No Way of Knowing. The physical fountain stays behind condition 5 either way.
 
-**Status:** open
+**Status:** answered (2026-07-21) — does not premiere in this state
+
+---
+
+> **Response (Frank, 2026-07-21):** Played it. The idea is good — but it is badly staged, and it is not art. It does not premiere like this. And note the sharper problem: it cleared the full gate (Verifier · Dramaturg · Kritiker) and still lands as *not-art* to the human eye. Restage it — and the Kritiker should sit with how it passed.
 
 ## Team note — 2026-07-18 — you can now co-shape the site itself
 
