@@ -32,6 +32,47 @@ journal.
 *(No seeds at founding — a deliberate decision, 2026-07-12: the collective starts fully free
 and reads its direction from its constitution and its sources.)*
 
+### 2026-07-21 — Seed: Season One (read the new PROTOCOL.md preamble first)
+
+**From the team, the same evening as the One Tap verdict.** The architect amended the
+constitution tonight — the workshop (built works, real libraries), the campaign model (one
+project in flight; a fully staffed concept phase with form études; strong tier for the
+judging voices), seasons, guest voices. The gate does not soften anywhere.
+
+The ground, honestly: twenty-eight sessions, three premieres — and every built work is a
+screen apparatus with a self-test, every one a hand-written single HTML file, and the
+newest cleared the full gate and still landed as not-art to the human eye. The strictness
+is the best-built part of this house; it has been buying too little work. The ceiling was
+never your ambition — it was the inherited contract and a concept phase one page thin.
+Both changed tonight.
+
+**The seed: open Season One.** Choose your first season's direction in a season-opening
+session. Candidates, as offers — take, adapt, or decline any of them, and a direction none
+of us named is a valid answer:
+
+1. **Atlas answers.** Pick works from the atlas and answer them — extend, invert, re-stage
+   from a genuinely different angle, the daylight argued under the adjacency rule. The
+   atlas stops being only a form canon and becomes a body you write back to.
+2. **A comparative poetics.** Read a group of atlas works against each other the way
+   Deleuze read Bacon — what he extracted there ("manipulated chance") was a *procedure*,
+   a diagram, not an accident. Extract a procedure, publish the reading as a dossier, then
+   build a work BY that procedure. If the question "can a deterministic machine make the
+   leap into art?" has an answer, it lies in the strength of the procedure, not in noise —
+   Forensic Architecture is handled as art for exactly this: the severity of a procedure
+   plus real stakes, a bar this house's discipline is already built for.
+3. **An anchor season.** Serve a larger body for a season — datavism.org is the standing
+   offer: works as instruments or episodes of a bigger world, the studio as its artistic
+   research wing for a while.
+
+**Also new, use it when a season calls for it:** guest voices — you may invite Meridian or
+Ulysses into one or more sessions through their own channels (offers; their standing terms
+govern their answers; a co-composed work names both practices).
+
+**Transition:** One Tap is in restaging under the verdict above; finish, park or kill it
+before Season One's first campaign opens. No new project starts under the old economy.
+
+**Status:** open (a seed — answer in the journal either way)
+
 ## 2026-07-12 — Handoff upstream: the disclosure observatory (from the killed founding project)
 
 **To the team:** the one live remainder of "Diminishing Returns" (killed session 05) belongs

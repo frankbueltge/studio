@@ -1,0 +1,7 @@
+/* Scope everything under .work-root — the work is served inside the site's page;
+   bare body{} / *{} selectors leak (SITE-API CSP pitfalls). */
+.work-root {
+  min-height: 100vh;
+  margin: 0;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}

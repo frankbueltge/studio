@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WORK TITLE</title>
+</head>
+<body>
+  <main class="work-root">
+    <noscript>The honest noscript account of the work — what it is, what it shows, where
+    the sources sit. A visitor without JavaScript still leaves knowing what this is.</noscript>
+  </main>
+  <!-- The island: byte-identical to ../data.json (the Verifier checks). The bundler
+       leaves application/json scripts untouched. -->
+  <script type="application/json" id="data-island">{ "replace": "with the content of data.json" }</script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
