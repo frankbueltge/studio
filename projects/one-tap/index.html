@@ -285,7 +285,6 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
   margin-bottom: 26px;
 }
 #work .clock {
-  flex: 1 1 260px;
   border: 1px solid var(--rule);
   padding: 14px 16px;
   background: var(--plaque-deep);
@@ -307,9 +306,33 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
   margin-top: 6px;
   color: var(--imagined);
 }
-#work .clock.imagined-clock .clock-value { font-weight: normal; opacity: 0.92; }
-#work .clock.static-clock .clock-value { font-weight: bold; }
-#work .clock-value-sub { font-size: 1.05rem; }
+#work .clock.static-clock {
+  flex: 3 1 300px;
+}
+#work .clock.static-clock .clock-value {
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+}
+#work .clock.imagined-clock {
+  flex: 2 1 220px;
+  border-style: dashed;
+}
+#work .clock.imagined-clock h3 {
+  font-size: 0.68rem;
+  font-weight: normal;
+  opacity: 0.65;
+}
+#work .clock.imagined-clock .clock-value {
+  font-weight: normal;
+  font-size: 0.95rem;
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+#work .clock.imagined-clock .clock-sub {
+  font-size: 0.72rem;
+  opacity: 0.65;
+}
 #work #selfTestList li.selftest-run-header { opacity: 0.7; list-style: none; }
 
 #work .placard {
@@ -450,7 +473,7 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
 <body>
 <div id="work">
 
-  <div class="work-header">ONE TAP &middot; ENSEMBLE &middot; INCREMENT 1 &middot; 2026-07-20</div>
+  <div class="work-header">ONE TAP &middot; ENSEMBLE &middot; INCREMENT 2 &middot; 2026-07-21</div>
 
   <div id="stage">
 
@@ -495,15 +518,17 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     <section class="pins" id="pinsSection" aria-label="Published estimates, one per instrument pin"></section>
 
     <section class="clocks">
+      <div class="clock static-clock">
+        <span class="tag tag-sourced">SOURCED &mdash; the record</span>
+        <h3 id="townAskedLine"></h3>
+        <div class="clock-value" id="townAnsweredLine"></div>
+      </div>
       <div class="clock imagined-clock">
         <span class="tag tag-imagined">IMAGINED &mdash; the instrument&rsquo;s construction</span>
         <h3>Time since you asked</h3>
         <div class="clock-value" id="stopwatch">00:00.00</div>
         <div class="clock-sub" id="answeredState">ANSWERED: NOT YET</div>
-      </div>
-      <div class="clock static-clock">
-        <h3 id="townAskedLine"></h3>
-        <div class="clock-value clock-value-sub" id="townAnsweredLine"></div>
+        <div class="clock-sub" id="waitFraction">= &mdash; OF THE NEWSPAPER&rsquo;S WAIT</div>
       </div>
     </section>
 
@@ -522,7 +547,9 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       <div class="honesty-block" id="tierRule"></div>
       <div class="no-transmission">NOTHING TYPED HERE IS SENT, STORED, OR ANSWERED. THE REFUSAL ABOVE IS THE ONLY ANSWER THAT EXISTS.</div>
       <div class="seed-line" id="seedLine"></div>
+      <div class="honesty-block" id="caveatGrounds"></div>
       <div class="honesty-block">MOTION: with reduced motion requested, the needle updates in slow discrete steps rather than continuously. The seeded stream is read at a different cadence on that path, so the exact positions visited differ from the animated version &mdash; the refusal to settle does not.</div>
+      <div class="honesty-block">WAIT-FRACTION BASIS: the demoted stopwatch states its reading as a fraction of the newspaper&rsquo;s thirteen-month wait. The sources give the request month (September 2021) and the settlement date (14 December 2022) but no day-level duration, so any date-difference would invent precision the record does not state. The cited figure itself is operationalized instead: 13 months &times; 30.44 average days = 395.72 days = 34,190,208 seconds. The settlement date is cited as record and not used in the arithmetic.</div>
       <div class="honesty-block">
         <span class="h-label">All source URLs, fetched first-hand at build</span>
         <ul class="sources-list" id="sourcesList"></ul>
@@ -539,11 +566,11 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
   <noscript>
     <div class="noscript-content">
       <h2>One Tap &mdash; static record</h2>
-      <p><em>Between the independent estimates alone: roughly 70x (7.1 mL &rarr; ~519 mL). Between the companies&rsquo; own medians and the largest independent estimate: roughly 2,000x (0.26 mL &rarr; ~519 mL).</em></p>
+      <p><em>Between the independent estimates alone: roughly 70x (7.1 mL &rarr; ~519 mL). Between the companies&rsquo; own medians and the largest independent estimate: roughly 2,000x (0.26 mL &rarr; ~519 mL). Between the companies&rsquo; own disclosures: roughly 170x (0.26 mL &rarr; 45 mL) &mdash; and no two of them measured the same thing.</em></p>
 
       <div class="ns-pin">
-        <strong>0.26 mL</strong> &mdash; WHO: Google &mdash; company technical paper. MODEL: Gemini Apps, median text prompt. YEAR: 2025. SCOPE: On-site data-center water only; not peer-reviewed. Excludes the water consumed generating the electricity &mdash; the larger share by most accounts. CONTESTED BY: The UC Riverside researcher whose team produced the 2023 peer-reviewed estimate: &ldquo;They&rsquo;re just hiding the critical information. This really sends the wrong message to the world.&rdquo; (to PC Gamer, August 2025).
-        <br>Sources: <a href="https://arxiv.org/abs/2508.15734">arxiv.org/abs/2508.15734</a>, <a href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference">cloud.google.com</a>, <a href="https://www.technologyreview.com/2025/08/21/1122288/google-gemini-ai-energy/">technologyreview.com</a>, <a href="https://www.yahoo.com/news/articles/just-hiding-critical-information-google-110004143.html">yahoo.com</a>
+        <strong>0.26 mL</strong> &mdash; WHO: Google &mdash; company technical paper. MODEL: Gemini Apps, median text prompt. YEAR: 2025. SCOPE: On-site data-center water only; not peer-reviewed. Excludes the water consumed generating the electricity &mdash; the larger share by most accounts. CONTESTED BY: The UC Riverside researcher whose team produced the 2023 peer-reviewed estimate: &ldquo;They&rsquo;re just hiding the critical information. This really spreads the wrong message to the world.&rdquo; (to The Verge, August 2025).
+        <br>Sources: <a href="https://arxiv.org/abs/2508.15734">arxiv.org/abs/2508.15734</a>, <a href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference">cloud.google.com</a>, <a href="https://www.technologyreview.com/2025/08/21/1122288/google-gemini-ai-energy/">technologyreview.com</a>, <a href="https://www.theverge.com/report/763080/google-ai-gemini-water-energy-emissions-study">theverge.com</a>, <a href="https://www.pcgamer.com/software/ai/theyre-just-hiding-the-critical-information-google-says-its-gemini-ai-sips-a-mere-five-drops-of-water-per-text-prompt-but-experts-disagree-with-its-findings/">pcgamer.com</a>
       </div>
 
       <div class="ns-pin">
@@ -554,6 +581,11 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       <div class="ns-pin">
         <strong>7.1 &ndash; 47.5 mL</strong> &mdash; WHO: UC Riverside / UT Arlington researchers &mdash; peer-reviewed (arXiv 2304.03271, 2023; Communications of the ACM, 2025). MODEL: GPT-3, one medium-length request (range = where and when it runs: Ireland &rarr; Washington). YEAR: 2023. SCOPE: Includes off-site water for electricity generation. The authors call their own estimate &ldquo;on the conservative side&rdquo; &mdash; actual consumption &ldquo;could be several times higher.&rdquo; CONTESTED BY: A skeptic (a personal blog, cited on the work as opinion) argues the bottle-per-prompt framing is a miscalculation.
         <br>Sources: <a href="https://arxiv.org/abs/2304.03271">arxiv.org/abs/2304.03271</a>, <a href="https://cacm.acm.org/sustainability-and-computing/making-ai-less-thirsty/">cacm.acm.org</a>, <a href="https://blog.andymasley.com/p/an-example-of-what-i-consider-a-misleading">blog.andymasley.com</a>
+      </div>
+
+      <div class="ns-pin">
+        <strong>45 mL</strong> &mdash; WHO: Mistral &mdash; company lifecycle assessment, with France&rsquo;s ecological transition agency (ADEME) and Carbone 4; peer-reviewed by Resilio and Hubblo. MODEL: Mistral Large 2 / Le Chat, one 400-token reply. YEAR: 2025. SCOPE: Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard) &mdash; includes the water behind electricity generation and hardware manufacturing. As of the last check (2026-07-21), the only company per-query figure with a reviewed methodology.
+        <br>Sources: <a href="https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai">mistral.ai</a>, <a href="https://www.theregister.com/2025/07/24/mistral_environmental_report_ai_cost/">theregister.com</a>
       </div>
 
       <div class="ns-pin">
@@ -572,7 +604,7 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       <div class="ns-case"><strong>September 2021</strong> &mdash; The regional newspaper (The Oregonian/OregonLive) files a public-records request for Google&rsquo;s water use. <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
       <div class="ns-case"><strong>December 2021</strong> &mdash; The city of The Dalles files a reverse public-records lawsuit &mdash; against the newspaper and its reporter, to keep the figure secret. Google funds the city&rsquo;s legal costs. <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
       <div class="ns-case"><strong>2022</strong> &mdash; The Wasco County district attorney sides with the newspaper: &ldquo;the city failed to meet its burden to show that Google&rsquo;s water usage is a trade secret.&rdquo; <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
-      <div class="ns-case"><strong>14 December 2022</strong> &mdash; After 13 months in court, the city drops the case and releases ten years of data. The city&rsquo;s legal fees &mdash; more than $100,000, all paid by Google (&ldquo;Google will pay all of the city&rsquo;s legal fees associated with the case&rdquo;); local reporting puts the total at $153,000. <a href="https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian">source</a>, <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
+      <div class="ns-case"><strong>14 December 2022</strong> &mdash; After 13 months in court, the city drops the case and releases ten years of data. The city&rsquo;s legal fees: more than $100,000, all paid by Google. The published fee accounts themselves disagree &mdash; $106,000 plus a $53,000 settlement payment to the Reporters Committee for Freedom of the Press, by the city&rsquo;s own statement; $153,000 in total, by the local paper&rsquo;s. <a href="https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian">source</a>, <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a>, <a href="https://www.govtech.com/analytics/the-dalles-ore-settles-lawsuit-over-google-data-centers">source</a></div>
       <div class="ns-case"><strong>December 2022 (aftermath)</strong> &mdash; Google tells the Associated Press it will &ldquo;no longer seek to protect its site-level water-use numbers as a trade secret at any of its data centers nationwide.&rdquo; <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
 
       <p><strong>COMMENTARY</strong> (kept separate from the record above): the people who could not learn the number for those thirteen months were the town&rsquo;s residents &mdash; the suit was not against them, but the secrecy was at their expense.</p>
@@ -584,26 +616,27 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
   <script type="application/json" id="island">
 {
   "work": "one-tap",
-  "increment": 1,
-  "extracted": "2026-07-20 (session 24) — conductor first-hand, before any Builder tokens; concept spine from session 23 (opened), fact-lock research re-run and extended tonight",
-  "one_line": "You ask a machine a question. A needle tries to tell you how much water your question cost — and cannot settle, because every published number disagrees with every other one, the companies' own late answers cannot be checked, and when a newspaper asked for even one town's annual figure, the answer took thirteen months in court.",
+  "increment": 2,
+  "extracted": "2026-07-20 (session 24) — conductor first-hand, before any Builder tokens; increment 2 extracted 2026-07-21 (session 26) — the session-25 findings re-verified from primaries first-hand before any edit",
+  "one_line": "You ask a machine a question. A needle tries to tell you how much water your question cost — and cannot settle: five published numbers, spanning roughly 2,000x, and no two of them measured the same thing. One company has shown a checkable disclosure is possible; the rest have not offered one. And when a newspaper asked for even one town's annual figure, the answer took thirteen months in court.",
   "subject": "Unknowability engineered by power — not 'AI is thirsty'.",
   "tiers_on_this_work": {
-    "SOURCED": "The spine — every dial pin, every Dalles case-file line, every quotation. Each carries a real, retrievable URL, fetched first-hand at build (2026-07-20). No pin is invented, none is smoothed; the disagreement between them is the finding.",
+    "SOURCED": "The spine — every dial pin, every Dalles case-file line, every quotation. Each carries a real, retrievable URL, fetched first-hand at build (2026-07-20; re-verified and extended 2026-07-21). No pin is invented, none is smoothed; the disagreement between them is the finding.",
     "IMAGINED": "The instrument itself — the analog dial, the needle's seeded motion between the pins, the stopwatch dramaturgy, the second-person address. The needle's movement is the studio's construction and asserts nothing; the pins it moves between are the record. Marked on the work's face.",
     "cardinal_rule": "A visitor can always tell which tier an element belongs to. The needle (IMAGINED) never claims to measure; the pins (SOURCED) never move."
   },
   "core_claim": {
-    "tier": "SOURCED (the exact form matters — this replaced session 18's invented ratio and sharpened again tonight)",
-    "statement": "No verifiable, reconcilable per-query water figure exists. Independent estimates span ~70x (7.1 mL to ~519 mL). In 2025 the companies finally offered their own numbers — a median of 0.26 mL (Google, in a paper that is not peer-reviewed and counts only on-site cooling water) and 'about 0.000085 gallons' (the OpenAI CEO's blog, no methodology given) — and the spread on the dial widened to roughly 2,000x. The offered numbers cannot be checked against anything, because the inputs (per-site water efficiency, per-model energy, query mix) are not public. The needle has nowhere to rest.",
-    "honesty_note": "The work may NOT claim 'no company has ever disclosed a per-query number' — since August 2025 that is false. It claims what is true: the disclosed numbers are unauditable, scope-narrowed, contested medians that deepened the disagreement instead of resolving it."
+    "tier": "SOURCED (the exact form matters — this replaced session 18's invented ratio, sharpened at increment 1, and re-scoped at increment 2 when the Mistral figure joined the dial)",
+    "statement": "No reconcilable per-query water figure exists. Independent estimates span ~70x (7.1 mL to ~519 mL). In 2025 the companies began answering: Google offered a median of 0.26 mL (in a paper that is not peer-reviewed and counts only on-site cooling water), the OpenAI chief executive blogged 'about 0.000085 gallons' (no methodology given) — and Mistral published 45 mL per 400-token reply as a full-lifecycle figure under ISO 14040/44, externally reviewed. The dial now spans roughly 2,000x and no two pins measure the same thing — the model, the unit or the water boundary always differs — because the inputs (per-site water efficiency, per-model energy, query mix, lifecycle scope) are still not public across the industry. A disclosure that can be checked is achievable — one company produced one. The needle still has nowhere to rest.",
+    "honesty_note": "The work may NOT claim 'no company has ever disclosed a per-query number' — since August 2025 that is false. It may NOT claim 'no disclosed number can be checked at all' — since July 2025 that is false too: Mistral's figure carries a published, externally reviewed methodology. It claims what is true: the published numbers span more than three orders of magnitude, no two of them measured the same thing, they cannot be reconciled into an answer for the question you just asked — and of the companies' own three answers, only one arrives with a reviewable methodology."
   },
   "dial": {
     "unit": "mL of water per query — but the pins do not even agree on what 'a query' or 'water' means; that non-comparability is part of the finding and is printed on the face",
     "scale": "logarithmic, 0.1 mL – 1000 mL",
     "spread_statements": [
       "Between the independent estimates alone: roughly 70x (7.1 mL → ~519 mL).",
-      "Between the companies' own medians and the largest independent estimate: roughly 2,000x (0.26 mL → ~519 mL)."
+      "Between the companies' own medians and the largest independent estimate: roughly 2,000x (0.26 mL → ~519 mL).",
+      "Between the companies' own disclosures: roughly 170x (0.26 mL → 45 mL) — and no two of them measured the same thing."
     ],
     "pins": [
       {
@@ -614,12 +647,13 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
         "model": "Gemini Apps, median text prompt",
         "year": 2025,
         "scope": "On-site data-center water only; not peer-reviewed. Excludes the water consumed generating the electricity — the larger share by most accounts.",
-        "contested_by": "The UC Riverside researcher whose team produced the 2023 peer-reviewed estimate: \"They're just hiding the critical information. This really sends the wrong message to the world.\" (to PC Gamer, August 2025)",
+        "contested_by": "The UC Riverside researcher whose team produced the 2023 peer-reviewed estimate: \"They're just hiding the critical information. This really spreads the wrong message to the world.\" (to The Verge, August 2025)",
         "source_urls": [
           "https://arxiv.org/abs/2508.15734",
           "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference",
           "https://www.technologyreview.com/2025/08/21/1122288/google-gemini-ai-energy/",
-          "https://www.yahoo.com/news/articles/just-hiding-critical-information-google-110004143.html"
+          "https://www.theverge.com/report/763080/google-ai-gemini-water-energy-emissions-study",
+          "https://www.pcgamer.com/software/ai/theyre-just-hiding-the-critical-information-google-says-its-gemini-ai-sips-a-mere-five-drops-of-water-per-text-prompt-but-experts-disagree-with-its-findings/"
         ]
       },
       {
@@ -652,6 +686,20 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
         ]
       },
       {
+        "id": "mistral-2025",
+        "ml": 45,
+        "label": "45 mL",
+        "who": "Mistral — company lifecycle assessment, with France's ecological transition agency (ADEME) and Carbone 4; peer-reviewed by Resilio and Hubblo",
+        "model": "Mistral Large 2 / Le Chat, one 400-token reply",
+        "year": 2025,
+        "scope": "Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard) — includes the water behind electricity generation and hardware manufacturing. As of the last check (2026-07-21), the only company per-query figure with a reviewed methodology.",
+        "contested_by": null,
+        "source_urls": [
+          "https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai",
+          "https://www.theregister.com/2025/07/24/mistral_environmental_report_ai_cost/"
+        ]
+      },
+      {
         "id": "gpt4-email-2024",
         "ml": 519,
         "label": "≈519 mL",
@@ -669,10 +717,11 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       "id": "reported-15ml",
       "note": "A reported ~15 mL downward revision for GPT-4 exists only in secondary aggregation with no primary quote (session 23: 'primary-pending'). Per binding condition 4(d) it is NOT on the dial and NOT in the case file. Dropping it entirely is cleaner than an asterisk: the dial already carries the field's real spread from primaries."
     },
-    "non_comparability_caveat": "The pins differ by model (GPT-3 / GPT-4 / Gemini), year (2023–2025), unit (per prompt / per 100-word email / median), and scope (with vs. without electricity-generation water). That is not noise around one true value — it is the documentary state of what the public is permitted to know. Each pin is labelled with model + year + scope on the face (binding condition 2)."
+    "non_comparability_caveat": "The pins differ by model (GPT-3 / GPT-4 / Gemini / Mistral Large 2), year (2023–2025), unit (per prompt / per 100-word email / per 400-token reply / median), and scope (on-site cooling only / with electricity-generation water / full lifecycle including hardware manufacturing). That is not noise around one true value — it is the documentary state of what the public is permitted to know. Each pin is labelled with model + year + scope on the face (binding condition 2).",
+    "caveat_grounds_note": "GPT-3 pin, caveat grounds — the authors' 2025 CACM version grounds its \"could be several times higher\" caveat in: server-level inference energy measured for comparable deployed models (Llama-3-70B, Falcon-180B), deployment in third-party colocation data centers rather than the provider's own, and a deliberately conservative electricity-water-intensity factor."
   },
   "dalles_case": {
-    "tier": "SOURCED — every line checked against a retrievable source first-hand, 2026-07-20 (binding condition 4)",
+    "tier": "SOURCED — every line checked against a retrievable source first-hand, 2026-07-20; fee components re-verified 2026-07-21 from the OregonLive/Tribune Content Agency report carried by govtech (binding condition 4; session-25 order)",
     "why_it_is_here": "The per-query number is unknowable at the small end; The Dalles is what happened when a public asked at the large end — one town, one annual figure, thirteen months in court.",
     "timeline": [
       {
@@ -710,10 +759,10 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       },
       {
         "date": "14 December 2022",
-        "fact": "After 13 months in court, the city drops the case and releases ten years of data. The city's legal fees — more than $100,000, all paid by Google ('Google will pay all of the city's legal fees associated with the case'); local reporting puts the total at $153,000.",
-        "quote_verbatim": "Google will pay all of the city's legal fees associated with the case",
-        "figure_policy": "Load-bearing face line uses '>$100,000, paid by Google' (binding condition 4b); the $153,000 total appears attributed to the local reporting that states it.",
-        "source_urls": ["https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian", "https://www.rcfp.org/dalles-google-oregonian-settlement/"]
+        "fact": "After 13 months in court, the city drops the case and releases ten years of data. The city's legal fees: more than $100,000, all paid by Google. The published fee accounts themselves disagree — $106,000 plus a $53,000 settlement payment to the Reporters Committee for Freedom of the Press, by the city's own statement; $153,000 in total, by the local paper's.",
+        "quote_verbatim": "The city said Wednesday that its own legal costs total $106,000, and that Google has committed to covering those expenses as well as the $53,000 settlement.",
+        "figure_policy": "Load-bearing face line stays '>$100,000, paid by Google' (binding condition 4b). Components are etched only as attributed: $106,000 + $53,000 per the city's statement (OregonLive/Tribune Content Agency, carried by govtech), the $153,000 total per the local reporting that states it, and the disagreement between the accounts named — per the session-25 order.",
+        "source_urls": ["https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian", "https://www.rcfp.org/dalles-google-oregonian-settlement/", "https://www.govtech.com/analytics/the-dalles-ore-settles-lawsuit-over-google-data-centers"]
       },
       {
         "date": "December 2022 (aftermath)",
@@ -727,7 +776,8 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
   },
   "act2_counter": {
     "tier": "IMAGINED (the form) — carrying two real clocks",
-    "resolution_of_condition_3": "The static locked-box ritual is DROPPED. In its place: the visitor's own question gets a real, running stopwatch — TIME SINCE YOU ASKED / ANSWERED: NOT YET — which is genuinely live (the visitor's real elapsed session time, computed from the clock, not dramatized) and genuinely never resolves, because the per-query answer genuinely does not exist. Beside it, the town's own counter, closed: ASKED SEPTEMBER 2021 / ANSWERED AFTER 13 MONTHS IN COURT. No fake form, no fake delay, no aestheticized inconvenience — nothing is submitted anywhere and the page says so."
+    "resolution_of_condition_3": "The static locked-box ritual is DROPPED. In its place: the visitor's own question gets a real, running stopwatch — TIME SINCE YOU ASKED / ANSWERED: NOT YET — which is genuinely live (the visitor's real elapsed session time, computed from the clock, not dramatized) and genuinely never resolves, because the per-query answer genuinely does not exist. Beside it, the town's own counter, closed: ASKED SEPTEMBER 2021 / ANSWERED AFTER 13 MONTHS IN COURT. No fake form, no fake delay, no aestheticized inconvenience — nothing is submitted anywhere and the page says so.",
+    "increment2_rebalance": "Session 26, against the standing takedown from the session-24 gate: the clocks no longer sit at equal weight. The SOURCED counter of the record moves first and carries the large engraved type and the wider column; the visitor's IMAGINED stopwatch is demoted — second, narrower, thin and translucent — and made to state, live, its own reading as a fraction of the thirteen months ('= 1 / N OF THE NEWSPAPER'S WAIT'), recomputed every second from real elapsed time. The asymmetry is no longer a risk the layout manages; it is a reading the instrument takes. Role precision holds: the thirteen-month wait belonged to the newspaper that asked — the town sued. Basis for the arithmetic disclosed in the honesty panel: the cited figure itself is operationalized at the average month length (13 × 30.44 days = 395.72 days = 34,190,208 seconds), because any date-difference would invent day-level precision the sources do not state."
   },
   "self_test": {
     "tier": "DISCLOSED SELF-TEST (house pattern) — printed live on the page",
@@ -735,19 +785,24 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       "NO-SETTLED-NUMBER: in every reachable state, the DOM never renders an mL figure outside a source-labelled pin — the page structurally cannot present 'the cost' as one number. Asserted by scanning rendered text for mL-figures and checking each sits inside a [data-pin]-attributed node.",
       "PINS-MATCH-ISLAND: the pins rendered on the dial are exactly the pins in the JSON data island — none invented, none dropped, labels byte-equal. Asserted by rebuilding the pin list from the island and comparing.",
       "SEEDED: the needle's motion is a pure function of a fixed, printed seed — same seed, same sweep (git is the archive). Asserted by re-running the first N samples of the seeded generator against stored expected values.",
-      "REAL-CLOCK: the stopwatch equals real elapsed time within tolerance — it is a clock, not a dramatization. Asserted by comparing the rendered counter against Date deltas."
+      "REAL-CLOCK: the stopwatch equals real elapsed time within tolerance — it is a clock, not a dramatization. Asserted by comparing the rendered counter against Date deltas.",
+      "WAIT-FRACTION: the demoted clock's '1 / N' line is a pure derivation of the same real elapsed time against the disclosed 34,190,208-second basis (13 × 30.44 days) — asserted by recomputing N independently and comparing, with ±1 second of tolerance."
     ]
   },
   "binding_conditions_status": [
     { "id": 1, "condition": "Screen-first, no fabrication on faith", "status": "HONORED — this increment is the browser instrument standing alone; no fountain, no cabinet, no fabrication scheduled." },
-    { "id": 2, "condition": "State the 70x explicitly; label each pin model + year", "status": "HONORED AND EXTENDED — the face states both spreads (~70x independent, ~2,000x including the company medians); every pin carries who + model + year + scope." },
-    { "id": 3, "condition": "Act 2 live, or dropped", "status": "HONORED — locked-box ritual dropped; replaced by two honest clocks (the visitor's real running stopwatch vs. the town's closed 13-month counter) plus the cited case file." },
-    { "id": 4, "condition": "Fact-lock before publication", "status": "HONORED — defendants correction rendered (newspaper + reporter, residents-line as labelled commentary); $153k hedged to >$100k on the face with the total attributed; 2021 figure primary-confirmed tonight (The Register/AP + RCFP) and rendered with '>a quarter'; the ~15 mL revision DROPPED from the work entirely (no primary)." },
+    { "id": 2, "condition": "State the 70x explicitly; label each pin model + year", "status": "HONORED AND EXTENDED — the face states all three spreads (~70x independent; ~2,000x including the company disclosures; ~170x between the companies' own disclosures alone); every pin carries who + model + year + scope." },
+    { "id": 3, "condition": "Act 2 live, or dropped", "status": "HONORED — locked-box ritual dropped; replaced by two honest clocks (the visitor's real running stopwatch vs. the town's closed 13-month counter) plus the cited case file. Increment 2 rebalances the two clocks against the session-24 standing takedown." },
+    { "id": 4, "condition": "Fact-lock before publication", "status": "HONORED — defendants correction rendered (newspaper + reporter, residents-line as labelled commentary); $153k hedged to >$100k on the face, components now attributed with the disagreement named (session-25 order, re-verified from the OregonLive/Tribune Content Agency report); 2021 figure primary-confirmed and rendered with '>a quarter'; the ~15 mL revision DROPPED from the work entirely (no primary); the contested-by quote corrected to its origin outlet's verbatim (The Verge: 'spreads', not the pickup's 'sends')." },
     { "id": 5, "condition": "No fabrication until screen passes AND Recovery resolves", "status": "HONORED — nothing physical scheduled; the physical fountain remains behind this gate and Recovery's open fabrication question." }
   ],
   "takedown": {
     "sentence": "A FOIA-request LARP with a nice fountain attached — the audience already knows companies hide numbers, and performing bureaucratic delay for gallery-goers aestheticizes inconvenience at no cost to the artist.",
-    "refutation_in_this_increment": "(a) finding: the first instrument to put the field's published self-disagreement — now including the companies' own contested 2025 medians — on one calibrated dial, where the widening is visible as motion, not prose; (b) risk upward: it names a specific company funding a specific municipality's 13-month legal effort against a newspaper, until a DA overruled it — every line primary-sourced; (c) form: a live needle refusing to settle, a stopwatch that genuinely cannot stop. The LARP charge dies with the ritual: nothing is performed, nothing pretends to be submitted; both clocks are real."
+    "refutation_in_this_increment": "(a) finding: the first instrument to put the field's published self-disagreement — now including the companies' own contested 2025 medians and the one reviewed lifecycle figure — on one calibrated dial, where the widening is visible as motion, not prose; (b) risk upward: it names a specific company funding a specific municipality's 13-month legal effort against a newspaper, until a DA overruled it — every line primary-sourced; (c) form: a live needle refusing to settle, a stopwatch that genuinely cannot stop. The LARP charge dies with the ritual: nothing is performed, nothing pretends to be submitted; both clocks are real.",
+    "standing_takedown_session24": {
+      "sentence": "Pairing the visitor's own idle five seconds with a town's thirteen-month court fight, at equal visual weight, doesn't refuse aestheticized inconvenience — it just moved the aestheticization from a locked box to a stopwatch, and dressed up the audience's boredom as if it belonged in the same courtroom.",
+      "refutation_in_increment_2": "'Equal visual weight' is made false on four axes at once — position (the record's counter first), column width (wider), type size (larger, engraved), material (fixed plate vs. thin and translucent). And the stopwatch no longer coexists with the courtroom clock as a competing spectacle: every second, it computes and announces its own reading as a fraction of the thirteen months, so the visitor's wait is not dressed up as comparable — it is measured against the record and found microscopic, live, by disclosed arithmetic. The fraction is the refusal of comparability, spoken continuously, not a caption asserting it once."
+    }
   },
   "neighbors_daylight_carried": "From the concept gate (dossier): Crawford/Joler (diagram read vs. instrument watched), Onuoha (archival absence vs. absence dispensed live), Julian Oliver's Harvest (true-metered process vs. a process driven by the absence of a true number — formal inversion, the sharpest neighbor, named), Paglen/Burrington (infrastructure photographed vs. a number withheld), Disnovation (generalized eco-critique vs. one litigated case)."
 }
@@ -803,17 +858,17 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     document.getElementById("oneLine").textContent = island.one_line;
 
     (function renderSpread() {
-      var s0 = island.dial.spread_statements[0];
-      var s1 = island.dial.spread_statements[1];
-      var m0 = s0.match(/roughly\s+([\d,]+)x/i);
-      var m1 = s1.match(/roughly\s+([\d,]+)x/i);
-      var p0 = s0.match(/\(([^)]+)\)/);
-      var p1 = s1.match(/\(([^)]+)\)/);
-      var line = "SPREAD: " + (m0 ? m0[1] : "?") + "× BETWEEN INDEPENDENT ESTIMATES" +
-                 (p0 ? " (" + p0[1] + ")" : "") + ". " +
-                 (m1 ? m1[1] : "?") + "× ONCE THE COMPANIES ANSWERED" +
-                 (p1 ? " (" + p1[1] + ")" : "") + ".";
-      document.getElementById("spreadLine").textContent = line;
+      var labels = [
+        "BETWEEN INDEPENDENT ESTIMATES",
+        "ONCE THE COMPANIES ANSWERED",
+        "BETWEEN THE COMPANIES’ OWN ANSWERS"
+      ];
+      var parts = island.dial.spread_statements.map(function (s, i) {
+        var m = s.match(/roughly\s+([\d,]+)x/i);
+        var p = s.match(/\(([^)]+)\)/);
+        return (m ? m[1] : "?") + "× " + (labels[i] || "") + (p ? " (" + p[1] + ")" : "") + ".";
+      });
+      document.getElementById("spreadLine").textContent = "SPREAD: " + parts.join(" ");
     })();
 
     // ---------- gauge: ticks ----------
@@ -1012,6 +1067,8 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       document.getElementById("tierRule").innerHTML =
         '<span class="h-label">CARDINAL RULE</span>' + escapeHtml(island.tiers_on_this_work.cardinal_rule);
       document.getElementById("seedLine").textContent = "SEED " + SEED;
+      document.getElementById("caveatGrounds").innerHTML =
+        '<span class="h-label">CAVEAT GROUNDS</span>' + escapeHtml(island.dial.caveat_grounds_note);
 
       var urls = [];
       island.dial.pins.forEach(function (p) { (p.source_urls || []).forEach(function (u) { if (urls.indexOf(u) === -1) urls.push(u); }); });
@@ -1121,7 +1178,7 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     function transitionToWander() {
       state = "wander";
       wanderLastPick = Date.now() - measureStartTime;
-      document.getElementById("statusLine").textContent = "NO RESTING VALUE. NONE PUBLISHED.";
+      document.getElementById("statusLine").textContent = "NO RESTING VALUE. FIVE NUMBERS PUBLISHED. NONE AGREE ON WHAT THEY MEASURED.";
       document.querySelectorAll("#work .pin-plaque").forEach(function (el) { el.classList.add("revealed"); });
     }
 
@@ -1154,9 +1211,32 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     }
     var stopwatchEl = document.getElementById("stopwatch");
     var stopwatchTimerId = null;
+
+    // 13 months × 30.44 average days × 86,400 s — basis disclosed in the honesty panel
+    var TOWN_WAIT_SECONDS = 34190208;
+    var waitFractionEl = document.getElementById("waitFraction");
+    var FRACTION_PLACEHOLDER = "= — OF THE NEWSPAPER’S WAIT";
+    var lastFractionSecond = -1;
+    function formatInt(n) {
+      return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    function updateWaitFraction(elapsedMs) {
+      var s = Math.floor(elapsedMs / 1000);
+      if (s === lastFractionSecond) return;
+      lastFractionSecond = s;
+      if (s < 1) {
+        waitFractionEl.textContent = FRACTION_PLACEHOLDER;
+      } else if (s > TOWN_WAIT_SECONDS) {
+        waitFractionEl.textContent = "YOU HAVE NOW WAITED LONGER THAN THE NEWSPAPER DID.";
+      } else {
+        waitFractionEl.textContent = "= 1 / " + formatInt(Math.floor(TOWN_WAIT_SECONDS / s)) + " OF THE NEWSPAPER’S WAIT";
+      }
+    }
     function tickStopwatch() {
       if (measureStartTime == null) return;
-      stopwatchEl.textContent = formatElapsed(Date.now() - measureStartTime);
+      var elapsed = Date.now() - measureStartTime;
+      stopwatchEl.textContent = formatElapsed(elapsed);
+      updateWaitFraction(elapsed);
     }
 
     // ---------- self-test ----------
@@ -1227,6 +1307,26 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       });
     }
 
+    function testWaitFraction() {
+      var text = waitFractionEl.textContent;
+      if (measureStartTime == null) {
+        var idlePass = text === FRACTION_PLACEHOLDER;
+        return { pass: idlePass, detail: idlePass ? "not started; placeholder shown" : "unexpected text before MEASURE" };
+      }
+      var s = Math.floor((Date.now() - measureStartTime) / 1000);
+      if (s < 1) {
+        var subPass = text === FRACTION_PLACEHOLDER;
+        return { pass: subPass, detail: subPass ? "under 1s; placeholder shown" : "expected placeholder under 1s" };
+      }
+      var m = text.match(/1 \/ ([\d,]+)/);
+      if (!m) return { pass: false, detail: "no fraction rendered" };
+      var n = parseInt(m[1].replace(/,/g, ""), 10);
+      var ok = [s - 1, s, s + 1].some(function (sec) {
+        return sec >= 1 && Math.floor(TOWN_WAIT_SECONDS / sec) === n;
+      });
+      return { pass: ok, detail: "1/" + m[1] + " at ~" + s + "s against the 34,190,208 s basis" };
+    }
+
     function renderRow(list, name, result) {
       var li = document.createElement("li");
       var badge = document.createElement("span");
@@ -1249,6 +1349,7 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       renderRow(list, "NO-SETTLED-NUMBER", testNoSettledNumber());
       renderRow(list, "PINS-MATCH-ISLAND", testPinsMatchIsland());
       renderRow(list, "SEEDED", testSeeded());
+      renderRow(list, "WAIT-FRACTION", testWaitFraction());
 
       var running = document.createElement("li");
       var runningBadge = document.createElement("span");
@@ -1278,6 +1379,8 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       state = "sweeping";
       statusLine.textContent = "SEEKING A RESTING VALUE…";
       document.getElementById("answeredState").textContent = "ANSWERED: NOT YET";
+      lastFractionSecond = -1;
+      waitFractionEl.textContent = FRACTION_PLACEHOLDER;
       sweepWaypoints = buildSweepWaypoints();
       stopwatchTimerId = setInterval(tickStopwatch, 100);
       tickStopwatch();

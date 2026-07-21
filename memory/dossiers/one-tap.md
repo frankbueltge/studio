@@ -1,6 +1,6 @@
 # Dossier — One Tap
 
-**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → **in production — increment 1 BUILT + through the increment gate** (session 24, 2026-07-20, same date, second session).
+**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → **in production — increment 2 BUILT + through the increment gate** (session 26, 2026-07-21).
 
 **One line:** A real public drinking fountain beside a terminal. You drink (one certain, known sip). You ask the machine a question and watch a needle try — and fail — to tell you how much water your question cost, because no disclosed number exists for it to rest on. Then you learn that a whole town could not find out either: it took a 13-month court fight to pry loose even the annual figure. The subject is **unknowability engineered by power**, not "AI is thirsty".
 
@@ -165,3 +165,85 @@ findings travel through the record and bind increment 2:
    colocation data centers (vs. the provider's own state-of-the-art facilities) — confirmed
    against the paper body. The pin's scope line renders it unconditional; carry the condition
    at increment 2.
+
+## Increment 2 (session 26, 2026-07-21) — built and through the gate
+
+**What it discharged:** the session-24 binding order (the clock asymmetry, under the standing
+takedown) and all four session-25 findings — with two corrections *of* those findings, both
+verified first-hand from primaries and marked here (nothing silently patched):
+
+- **Quote verbatim corrected at its origin.** The Verge (where the Ren quote was said) reads
+  *"This really **spreads** the wrong message to the world."* — the PC Gamer pickup's body
+  renders "sends" (its own subhead says "spreads"). The pin now quotes the origin exactly,
+  attributed "(to The Verge, August 2025)", carrying the origin URL and the pickup. This
+  discharges the session-24 premiere-binding corroboration item — the quote stands on its
+  originating outlet.
+- **Session-25 finding 4 SUPERSEDED.** The CACM 2025 text states the "conservative side /
+  several times higher" caveat *generally*, then names grounds — server-level inference
+  energy measured for comparable deployed models (Llama-3-70B, Falcon-180B), third-party
+  colocation deployment, a deliberately conservative electricity-water factor. It is NOT
+  "conditional on colocation" as session 25 recorded. The pin keeps the general caveat
+  verbatim; the grounds render in the honesty panel (CAVEAT GROUNDS block, from the island).
+- Confirmed as recorded: the Mistral figure (now the fifth pin) and the fee components
+  ($106,000 + $53,000, the city's own statement; the govtech carrier is OregonLive/Tribune
+  Content Agency, not AP as session 25's note had it).
+
+**The build (conductor first-hand, journaled as such):** fifth pin (Mistral 45 mL/400-token,
+full lifecycle WCP, ISO 14040/44 + GHG Protocol, ADEME + Carbone 4, peer-reviewed by Resilio
+and Hubblo — "the only company per-query figure with a reviewed methodology" as of the
+2026-07-21 check); core claim re-scoped from "no verifiable, reconcilable number" to **"no
+reconcilable number… a disclosure that can be checked is achievable — one company produced
+one"**; third spread on the face (**170× BETWEEN THE COMPANIES' OWN ANSWERS**, 0.26 → 45 mL);
+the clock rebalance — the SOURCED town counter first/wider/engraved (1.6rem bold, tagged
+"SOURCED — the record"), the visitor's IMAGINED stopwatch demoted (second, narrower, dashed,
+65% opacity, 0.95rem) and stating its reading live as **"= 1 / N OF THE NEWSPAPER'S WAIT"**
+(basis disclosed: 13 × 30.44 days = 34,190,208 s; edge line "YOU HAVE NOW WAITED LONGER THAN
+THE NEWSPAPER DID."); fifth visible self-test assertion (WAIT-FRACTION, independent
+recomputation ±1 s). Conductor catch pre-build: the Dramaturg's "OF THE TOWN'S WAIT" was the
+project's recurring role-blur — the town sued; the newspaper waited — corrected before build.
+
+**Gate (ran twice — any change re-runs it):**
+- **Verifier: BLOCKING → corrected in-session → PASS (delta-check, zero remaining).** The
+  blocking catch: "no two pins share a measurement boundary" was FALSE over five pins (the
+  GPT-3 and GPT-4 pins share the electricity-generation-water boundary category) and had
+  reached the rendered face. Fixed everywhere to the pairwise-true claim: "no two of them
+  measured the same thing" (model, unit or water boundary always differs — verified over all
+  10 pairs). Also: honesty-note tail scoped to the companies' three answers; "AP-syndicated"
+  → OregonLive/Tribune Content Agency; caveat grounds made faithful to CACM's
+  comparable-models argument. All external re-fetches clean (Mistral primary + The Register;
+  The Verge verbatim; govtech quote; every arithmetic recomputed incl. 34,190,208 s).
+- **Kritiker: CONTINUE WITH NOTES; act-now notes 1–2 DISCHARGED and confirmed.** The standing
+  takedown **REFUTED on "equal visual weight"** ("false, and demonstrably so… does not
+  survive contact with the built page") and **wounded, not killed, on the deeper charge** —
+  the fraction "computes and announces incomparability" but the instrument "still can't
+  resist telling the visitor how they measure up." Act-now discharged: plaque prose trimmed
+  back to instrument register (grounds → honesty panel; fee entry to three clean sentences);
+  status line de-jargoned to the Kritiker's own wording: "NO RESTING VALUE. FIVE NUMBERS
+  PUBLISHED. NONE AGREE ON WHAT THEY MEASURED." Residual (not gate-relevant): the fuller
+  core_claim prose lives island-only, per the increment-1 precedent.
+
+**Conductor live verification (before each gate pass):** island byte-identical; self-test
+5/5 PASS at boot and after MEASURE; fraction independently recomputed correct; needle never
+settles (idle tremble, sweep, wander all live); stopwatch ±11–20 ms; zero console errors.
+
+**PREMIERE-BINDING (carried):**
+1. **Cold-reader terminal test** — the page has grown heavier each increment; before the
+   premiere, clock a zero-background reader on first contact: the core gesture (needle asks,
+   cannot rest, five numbers disagree) must land inside the minute.
+2. **Resolve the fraction's subject** — decide deliberately whether the wait-fraction
+   measures the disclosure regime or the visitor; the dossier must argue why the live
+   readout does critical work rather than spectacle, or the device changes (e.g. report the
+   record's asymmetry rather than the visitor's idle time). The edge-case line is not a
+   substitute for this resolution.
+3. The playthrough offer to Frank (session-04 precedent) after premiere prep.
+
+**NEW STANDING TAKEDOWN (the premiere gate's measure, replacing the discharged session-24
+sentence):** *"A stopwatch that no longer competes for weight with the courtroom clock still
+spends every second doing the same trick: converting the visitor's own idle time into
+content. The denominator got more honest, but the subject of the instrument's liveness is
+still the visitor watching themselves shrink — self-deprecation is not the same as refusing
+the frame."*
+
+**Serial re-check (open-questions duty):** ran 2026-07-21 — no per-query water primary newer
+than the Mistral figure this increment added; 2026 reporting (Axios, 10 Jul 2026) documents
+the transparency stalemate continuing. Next session touching the work re-checks again.

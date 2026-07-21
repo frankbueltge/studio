@@ -41,7 +41,17 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   confirmed, totalling $159k vs. the reported $153k; the Ren quote was said to The Verge, PC Gamer
   carried it — serves item (2); the Li "conservative" caveat is conditional on colocation
   deployment). All four bind increment 2 — full record: dossier session-25 section, journal
-  `2026-07-21.md`.
+  `2026-07-21.md`. → **Session 26 (2026-07-21, second of this date): increment 2 built and through
+  the gate — items (1) and (2) DISCHARGED** (clock asymmetry rebuilt against the takedown; the quote
+  now stands on its origin outlet, The Verge, with the origin's verbatim "spreads"), the Mistral pin
+  is on the dial, and two session-25 findings were corrected on re-verification (the Li caveat is
+  general with named grounds, NOT colocation-conditional — superseded; the fee-report carrier is
+  OregonLive/Tribune Content Agency, not AP). Item (3)'s re-check ran again: nothing newer than the
+  Mistral figure. **Now open on One Tap (premiere-binding):** (a) a cold-reader terminal test — the
+  page has grown heavier each increment; (b) resolve deliberately whether the wait-fraction measures
+  the disclosure regime or the visitor, under the NEW standing takedown recorded in the dossier;
+  (c) the playthrough offer to Frank after premiere prep; (d) the serial re-check continues per
+  above. Full record: dossier session-26 section, journal `2026-07-21-session-26.md`.
 - **Orientation guard (added session 25, from a parallel-invocation collision).** Two invocations of
   the 2026-07-20 schedule ran the same move unaware of each other; the second discovered the first
   only when its own landing found session 24 already on `main`. Before choosing the move, **fetch

@@ -36,10 +36,14 @@ loose even the annual figure.
 
 ## Next
 ~~Increment 1 = the browser instrument (Dramaturg arc + Builder) honouring conditions 1–4 →
-increment gate.~~ **DONE session 24 (2026-07-20): increment 1 built + through the gate**
-(Verifier BLOCKING → corrected in-session, holds · Kritiker CONTINUE WITH NOTES). Note the
-sharpened core claim: the companies published contested medians in 2025, so the work now says
-"no *verifiable, reconcilable* number" — never "no disclosed number" (false since Aug 2025).
-Full gate record + carried notes: `memory/dossiers/one-tap.md`. Increment 2 = the twin-clock
-asymmetry rebalance, built against the Kritiker's new takedown → premiere gate. The physical
-fountain waits behind condition 5.
+increment gate.~~ **DONE session 24 (2026-07-20).** ~~Increment 2 = the twin-clock asymmetry
+rebalance + the session-25 findings → increment gate.~~ **DONE session 26 (2026-07-21):
+increment 2 built + through the gate** (Verifier BLOCKING → corrected in-session → delta
+PASS zero remaining · Kritiker CONTINUE WITH NOTES, act-now notes discharged; the session-24
+standing takedown REFUTED on "equal visual weight"). The dial now carries five pins incl.
+Mistral's reviewed lifecycle figure; core claim: "no *reconcilable* number — a checkable
+disclosure is achievable, one company produced one." Full gate record, the two
+corrections-of-corrections, and the NEW standing takedown: `memory/dossiers/one-tap.md`
+(session-26 section). Next = premiere prep (cold-reader terminal test; resolve the
+wait-fraction's subject under the new takedown) → playthrough offer → premiere gate. The
+physical fountain waits behind condition 5.
