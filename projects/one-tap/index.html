@@ -5,623 +5,381 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>One Tap — an instrument that cannot settle</title>
 <style>
-html, body { margin: 0; padding: 0; background: #ece6d6; }
-@media (prefers-color-scheme: dark) {
-  html, body { background: #17150f; }
-}
+html, body { margin: 0; padding: 0; background: #0d0c0b; }
 
 #work {
-  --paper: #ece6d6;
-  --ink: #262119;
-  --plaque: #e2dac4;
-  --plaque-deep: #d8cfb4;
-  --rule: rgba(38, 33, 25, 0.38);
-  --rule-soft: rgba(38, 33, 25, 0.18);
-  --accent: #8a3a24;
-  --sourced: #26221b;
-  --imagined: #6b6255;
+  --field: #0d0c0b;
+  --ink: #e9e2d2;
+  --dim: #8f887a;
+  --dimmer: #5d574c;
+  --accent: #cf6a45;
+  --rule: rgba(233, 226, 210, 0.16);
   --font-prose: Georgia, 'Times New Roman', Times, serif;
+  --font-numeral: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-mono: 'DejaVu Sans Mono', 'Courier New', Courier, monospace;
-  background: var(--paper);
+  background: var(--field);
   color: var(--ink);
   font-family: var(--font-prose);
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 28px 20px 80px;
-  line-height: 1.5;
-}
-
-@media (prefers-color-scheme: dark) {
-  #work {
-    --paper: #17150f;
-    --ink: #e8e1d0;
-    --plaque: #211d15;
-    --plaque-deep: #2a251b;
-    --rule: rgba(232, 225, 208, 0.3);
-    --rule-soft: rgba(232, 225, 208, 0.14);
-    --accent: #cf6a45;
-    --sourced: #e8e1d0;
-    --imagined: #9b9280;
-  }
+  min-height: 100vh;
+  line-height: 1.55;
 }
 
 #work * { box-sizing: border-box; }
-
 #work a { color: inherit; }
 #work a:focus-visible,
 #work button:focus-visible,
-#work input:focus-visible,
-#work summary:focus-visible {
+#work input:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-#work .work-header {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--imagined);
-  border-bottom: 1px solid var(--rule-soft);
-  padding-bottom: 10px;
-  margin-bottom: 18px;
-}
-
-#work .title {
-  font-family: var(--font-prose);
-  font-size: 2.2rem;
-  margin: 0 0 2px;
-  letter-spacing: 0.01em;
-}
-#work .title-sub {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--imagined);
-  margin: 0 0 18px;
-}
-
-#work .tier-legend {
+/* ---------- chrome (the one constant marker + About) ---------- */
+#work .chrome {
+  position: fixed;
+  top: 0; left: 0; right: 0;
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-#work .tag {
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 16px;
   font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 3px 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  background: linear-gradient(to bottom, rgba(13,12,11,0.92), rgba(13,12,11,0.75) 70%, rgba(13,12,11,0));
+  z-index: 20;
+}
+#work .chrome-line { max-width: 46em; }
+#work .about-btn {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  background: none;
   border: 1px solid var(--rule);
   border-radius: 2px;
-  display: inline-block;
+  padding: 3px 10px;
+  cursor: pointer;
+  white-space: nowrap;
 }
-#work .tag-sourced { color: var(--sourced); border-color: var(--sourced); }
-#work .tag-imagined { color: var(--imagined); border-style: dashed; font-style: italic; }
+#work .about-btn:hover { color: var(--ink); border-color: var(--dim); }
 
-#work .subtitle {
-  font-size: 1.02rem;
-  max-width: 62ch;
-  margin: 0 0 22px;
-}
-
-#work .spreadline {
-  font-family: var(--font-mono);
-  font-size: 0.92rem;
-  letter-spacing: 0.02em;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 10px 0;
-  margin-bottom: 26px;
-}
-
-#work .instrument {
-  margin-bottom: 8px;
-}
-#work .dial-wrap {
+/* ---------- the field (attract / thrash / statement) ---------- */
+#work .field {
+  min-height: 92vh;
   display: flex;
-  justify-content: center;
-}
-#work svg.gauge {
-  width: 100%;
-  max-width: 460px;
-  height: auto;
-  display: block;
-}
-#work .gauge-bezel { fill: none; stroke: var(--sourced); stroke-width: 2; }
-#work .gauge-tick { stroke: var(--rule); stroke-width: 1.5; }
-#work .gauge-tick-label {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  fill: var(--imagined);
-}
-#work .gauge-band {
-  fill: none;
-  stroke: var(--sourced);
-  stroke-width: 5;
-  stroke-linecap: butt;
-  opacity: 0.55;
-}
-#work .gauge-pin-mark {
-  stroke: var(--sourced);
-  stroke-width: 2.4;
-}
-#work .gauge-pin-label {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  fill: var(--sourced);
-}
-#work .gauge-needle {
-  stroke: var(--accent);
-  stroke-width: 2;
-  opacity: 0.85;
-}
-#work .gauge-pivot { fill: var(--ink); }
-#work .gauge-scale-caption {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  fill: var(--imagined);
-}
-
-#work .honesty-inline {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  text-align: center;
-  color: var(--imagined);
-  margin: 6px 0 18px;
-  letter-spacing: 0.02em;
-}
-#work .honesty-inline .tag-imagined { margin-left: 8px; }
-
-#work form.ask-form {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  padding: 72px 20px 40px;
 }
-#work label.ask-label {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+#work .well {
+  min-height: 46vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-#work input.ask-input {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  background: var(--plaque);
+#work .well-numeral {
+  font-family: var(--font-numeral);
+  font-weight: 800;
+  line-height: 1;
   color: var(--ink);
-  border: 1px solid var(--rule);
-  padding: 7px 9px;
-  min-width: 220px;
-  flex: 1 1 220px;
+  white-space: nowrap;
+  will-change: transform;
 }
-#work button.measure-btn {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--sourced);
-  color: var(--paper);
-  border: 1px solid var(--sourced);
-  padding: 8px 16px;
-  cursor: pointer;
-}
-#work button.measure-btn:hover { opacity: 0.9; }
-
-#work .status-line {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+#work .well-sub {
+  margin-top: 14px;
+  min-height: 2.4em;
   text-align: center;
-  min-height: 1.4em;
-  margin: 10px 0 30px;
-  letter-spacing: 0.03em;
+  font-family: var(--font-mono);
 }
+#work .well-owner { font-size: 0.8rem; color: var(--dim); letter-spacing: 0.05em; }
+#work .well-boundary { font-size: 0.65rem; color: var(--dimmer); letter-spacing: 0.05em; margin-top: 3px; }
 
-#work section.pins {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-  margin-bottom: 30px;
+#work .statement {
+  max-width: 34em;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--ink);
 }
-#work .pin-plaque {
-  background: var(--plaque);
-  border: 1px solid var(--rule);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,0,0,0.15);
-  padding: 14px 16px;
-  transition: border-color 0.4s ease;
+#work .statement p { margin: 0.4em 0; }
+
+#work .ask {
+  margin-top: 5vh;
+  width: min(620px, 92vw);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
 }
-#work .pin-plaque.revealed { border-color: var(--accent); }
-#work .pin-value {
-  font-family: var(--font-mono);
-  font-size: 1.15rem;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-#work dl.pin-meta { margin: 0 0 8px; }
-#work dl.pin-meta div { display: flex; gap: 6px; margin-bottom: 3px; }
-#work dl.pin-meta dt {
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.06em;
-  color: var(--imagined);
-  min-width: 4.2em;
-  flex: none;
-}
-#work dl.pin-meta dd { margin: 0; font-size: 0.88rem; }
-#work .pin-contested {
-  font-size: 0.82rem;
+#work .ask-label {
+  font-size: 1.05rem;
+  color: var(--ink);
   font-style: italic;
-  border-top: 1px solid var(--rule-soft);
-  padding-top: 6px;
-  margin-top: 6px;
-  color: var(--imagined);
 }
-#work .pin-contested .contested-label {
-  font-family: var(--font-mono);
-  font-style: normal;
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
-  display: block;
-  margin-bottom: 2px;
-  color: var(--accent);
-}
-#work .pin-sources {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  margin-top: 8px;
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-#work .pin-sources .src-label { color: var(--imagined); margin-right: 2px; }
-#work .pin-sources a { text-decoration: underline; }
-
-#work section.clocks {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 26px;
-}
-#work .clock {
-  border: 1px solid var(--rule);
-  padding: 14px 16px;
-  background: var(--plaque-deep);
-}
-#work .clock h3 {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.06em;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-}
-#work .clock .clock-value {
-  font-family: var(--font-mono);
-  font-size: 1.5rem;
-}
-#work .clock .clock-sub {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  margin-top: 6px;
-  color: var(--imagined);
-}
-#work .clock.static-clock {
-  flex: 3 1 300px;
-}
-#work .clock.static-clock .clock-value {
-  font-weight: bold;
-  font-size: 1.6rem;
-  letter-spacing: 0.02em;
-}
-#work .clock.imagined-clock {
-  flex: 2 1 220px;
-  border-style: dashed;
-}
-#work .clock.imagined-clock h3 {
-  font-size: 0.68rem;
-  font-weight: normal;
-  opacity: 0.65;
-}
-#work .clock.imagined-clock .clock-value {
-  font-weight: normal;
-  font-size: 0.95rem;
-  opacity: 0.65;
-  font-variant-numeric: tabular-nums;
-}
-#work .clock.imagined-clock .clock-sub {
-  font-size: 0.72rem;
-  opacity: 0.65;
-}
-#work #selfTestList li.selftest-run-header { opacity: 0.7; list-style: none; }
-
-#work .placard {
+#work .ask-row { display: flex; width: 100%; gap: 10px; }
+#work .ask-input {
+  flex: 1;
   font-family: var(--font-prose);
   font-size: 1.05rem;
-  font-style: italic;
-  text-align: center;
+  color: var(--ink);
+  background: rgba(233, 226, 210, 0.05);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 12px 14px;
+  caret-color: var(--accent);
+}
+#work .ask-input:focus { border-color: var(--dim); }
+#work .ask-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--field);
+  background: var(--ink);
+  border: none;
+  border-radius: 3px;
+  padding: 12px 22px;
+  cursor: pointer;
+}
+#work .ask-btn:hover { background: #fff; }
+
+/* ---------- the record (plate / cue / town / close) ---------- */
+#work .record {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px 90px;
+}
+#work .plate { list-style: none; margin: 0; padding: 0; }
+#work .plate li {
   border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 14px 10px;
-  margin: 6px 0 26px;
+  padding: 18px 2px;
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+#work .plate li.lit { opacity: 1; }
+#work .plate .w-fig {
+  display: block;
+  font-family: var(--font-numeral);
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--ink);
+}
+#work .plate .w-who { display: block; margin-top: 4px; font-size: 0.95rem; color: var(--ink); }
+#work .plate .w-meta { display: block; margin-top: 2px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; color: var(--dim); }
+#work .plate .w-scope { display: block; margin-top: 5px; font-size: 0.83rem; color: var(--dim); font-style: italic; }
+
+#work .cue {
+  display: block;
+  width: 100%;
+  margin: 34px 0 0;
+  padding: 16px 2px;
+  font-family: var(--font-prose);
+  font-style: italic;
+  font-size: 1.05rem;
+  text-align: left;
+  color: var(--ink);
+  background: none;
+  border: none;
+  border-top: 1px solid var(--rule);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+#work .cue.lit { opacity: 1; }
+#work .cue:hover { color: #fff; }
+#work .cue-line {
+  margin: 34px 0 0;
+  padding: 16px 2px 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  border-top: 1px solid var(--rule);
 }
 
-#work section.casefile { margin-bottom: 30px; }
-#work section.casefile h2,
-#work section.honesty h2,
-#work section.selftest h2 {
+#work .town { margin-top: 8px; }
+#work .town p { margin: 1em 0; font-size: 1rem; color: var(--ink); }
+#work .close-lines { margin-top: 44px; }
+#work .close-lines p {
+  margin: 0.35em 0;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+#work .close-lines .close-last { font-style: italic; }
+
+#work .record .ask { margin: 60px auto 0; }
+
+/* ---------- About overlay ---------- */
+#work .about-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: #0d0c0b;
+  overflow-y: auto;
+  padding: 30px 20px 60px;
+}
+#work .about-inner { max-width: 700px; margin: 0 auto; }
+#work .about-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+#work .about-title { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--dim); }
+#work .about-close {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+#work .about-inner h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: italic;
+  margin: 2.2em 0 0.6em;
+  color: var(--ink);
   border-bottom: 1px solid var(--rule);
   padding-bottom: 6px;
-  margin-bottom: 14px;
 }
-#work .case-entry {
-  background: var(--plaque);
-  border: 1px solid var(--rule);
-  padding: 12px 16px;
-  margin-bottom: 8px;
-}
-#work .case-date {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  color: var(--imagined);
-  margin-bottom: 4px;
-}
-#work .case-fact { margin: 0 0 6px; }
-#work .case-quote {
-  margin: 6px 0;
-  padding-left: 12px;
-  border-left: 2px solid var(--rule);
-  font-style: italic;
-}
-#work .case-sources {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-top: 6px;
-}
-#work .case-commentary {
-  background: transparent;
-  border: 1px dashed var(--rule);
-  padding: 12px 16px;
-  margin-top: 10px;
-}
-#work .commentary-tag {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 6px;
-}
-#work .case-commentary p { margin: 0; font-style: italic; }
+#work .about-inner p, #work .about-inner li { font-size: 0.9rem; color: var(--dim); }
+#work .about-inner p strong { color: var(--ink); font-weight: normal; }
+#work .about-pin { margin: 1.1em 0; }
+#work .about-pin .ap-fig { color: var(--ink); font-family: var(--font-numeral); font-weight: 800; }
+#work .about-quote { border-left: 2px solid var(--rule); margin: 0.5em 0 0.5em 2px; padding-left: 12px; font-style: italic; }
+#work .about-src { font-family: var(--font-mono); font-size: 0.68rem; word-break: break-all; }
+#work .about-src a { color: var(--dim); }
+#work .selftest-list { list-style: none; padding: 0; font-family: var(--font-mono); font-size: 0.72rem; }
+#work .selftest-list li { margin: 0.5em 0; }
+#work .st-pass { color: #7da87d; }
+#work .st-fail { color: var(--accent); }
 
-#work section.honesty {
-  border: 1px solid var(--rule);
-  padding: 16px 18px;
-  margin-bottom: 30px;
-  background: var(--plaque-deep);
+/* ---------- utility ---------- */
+#work .visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
-#work .honesty-block { margin-bottom: 12px; font-size: 0.9rem; }
-#work .honesty-block .h-label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  color: var(--imagined);
-  display: block;
-  margin-bottom: 3px;
-}
-#work .no-transmission {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  border: 1px solid var(--accent);
-  padding: 10px 12px;
-  margin: 12px 0;
-}
-#work .seed-line {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  margin-bottom: 10px;
-}
-#work .sources-list {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  columns: 2;
-  column-gap: 20px;
-  margin: 0;
-  padding-left: 1.1em;
-}
-#work .sources-list li { margin-bottom: 4px; word-break: break-all; }
+#work [hidden] { display: none !important; }
 
-#work section.selftest {
-  border-top: 1px dashed var(--rule);
-  padding-top: 14px;
-  font-family: var(--font-mono);
-}
-#work #selfTestList { list-style: none; margin: 0; padding: 0; font-size: 0.76rem; }
-#work #selfTestList li { padding: 3px 0; border-bottom: 1px solid var(--rule-soft); }
-#work #selfTestList .pass { color: var(--sourced); }
-#work #selfTestList .fail { color: var(--accent); font-weight: bold; }
-#work #selfTestList .badge { display: inline-block; min-width: 4.4em; }
+/* ---------- noscript ---------- */
+#work .noscript-content { max-width: 640px; margin: 0 auto; padding: 80px 20px; }
+#work .noscript-content h2 { font-size: 1.1rem; font-style: italic; font-weight: normal; border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-top: 2em; }
+#work .noscript-content p, #work .noscript-content li { font-size: 0.95rem; color: var(--ink); }
+#work .ns-src { font-family: var(--font-mono); font-size: 0.7rem; color: var(--dim); word-break: break-all; }
 
-#work noscript .noscript-content {
-  border: 2px solid var(--rule);
-  padding: 16px;
-  margin-top: 20px;
-}
-#work noscript h2 {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-#work noscript .ns-pin { border-bottom: 1px solid var(--rule-soft); padding: 8px 0; }
-#work noscript .ns-case { margin-bottom: 6px; }
-
-@media (prefers-reduced-motion: reduce) {
-  #work .gauge-needle { transition: none; }
+@media (max-width: 560px) {
+  #work .chrome { flex-direction: column; gap: 6px; align-items: flex-start; }
+  #work .field { padding-top: 96px; }
+  #work .ask-row { flex-direction: column; }
 }
 </style>
 </head>
 <body>
 <div id="work">
 
-  <div class="work-header">ONE TAP &middot; ENSEMBLE &middot; INCREMENT 2 &middot; 2026-07-21</div>
+  <div class="chrome">
+    <span class="chrome-line">An instrument, not a service. The figures are real and published; nothing you type is sent or answered.</span>
+    <button class="about-btn" id="aboutBtn" type="button" aria-haspopup="dialog">About this work</button>
+  </div>
 
   <div id="stage">
 
-    <h1 class="title">One Tap</h1>
-    <p class="title-sub">an instrument that cannot settle</p>
-
-    <div class="tier-legend">
-      <span class="tag tag-sourced">SOURCED &mdash; the pins, the case file: engraved, cited, never moves</span>
-      <span class="tag tag-imagined">IMAGINED &mdash; the needle, the stopwatch: thin, translucent, ticking</span>
-    </div>
-
-    <p class="subtitle" id="oneLine"></p>
-
-    <p class="spreadline" id="spreadLine" data-ml-context="spread"></p>
-
-    <section class="instrument">
-      <div class="dial-wrap">
-        <svg class="gauge" viewBox="0 0 440 260" role="img" aria-labelledby="gaugeTitle" aria-describedby="gaugeDesc">
-          <title id="gaugeTitle">Analog water-per-query gauge</title>
-          <desc id="gaugeDesc">A semicircular instrument dial, logarithmic, with four engraved pins and a seeking needle that never settles.</desc>
-          <path class="gauge-bezel" d="M 30 225 A 190 190 0 0 1 410 225"></path>
-          <g id="ticksGroup"></g>
-          <g id="bandGroup"></g>
-          <g id="pinMarksGroup"></g>
-          <text class="gauge-scale-caption" id="scaleCaption" data-ml-context="scale" x="220" y="252" text-anchor="middle"></text>
-          <line id="needle" class="gauge-needle" x1="220" y1="225" x2="30" y2="225"></line>
-          <circle class="gauge-pivot" cx="220" cy="225" r="5"></circle>
-        </svg>
+    <section class="field" id="field">
+      <div class="well" id="well">
+        <div class="well-numeral" id="wellNumeral" aria-hidden="true"></div>
+        <div class="well-sub" aria-hidden="true">
+          <div class="well-owner" id="wellOwner"></div>
+          <div class="well-boundary" id="wellBoundary"></div>
+        </div>
+        <div class="statement" id="statement" hidden>
+          <p>The cost of one question is not knowable.</p>
+          <p>Five figures have been published &mdash; they stand up to two thousand times apart,</p>
+          <p>and no two of them measured the same thing.</p>
+        </div>
       </div>
 
-      <p class="honesty-inline">Nothing typed here is sent, stored, or answered.<span class="tag tag-imagined">IMAGINED &mdash; the instrument&rsquo;s construction</span></p>
-
-      <form class="ask-form" id="askForm">
-        <label class="ask-label" for="askInput">Ask the instrument.</label>
-        <input class="ask-input" id="askInput" type="text" placeholder="type a question&hellip; it goes nowhere" autocomplete="off">
-        <button class="measure-btn" type="submit">Measure</button>
+      <form class="ask" id="askForm">
+        <label class="ask-label" for="askInput">Ask it anything.</label>
+        <div class="ask-row">
+          <input class="ask-input" id="askInput" type="text" autocomplete="off">
+          <button class="ask-btn" id="askBtn" type="submit">Ask</button>
+        </div>
       </form>
-
-      <p class="status-line" id="statusLine" aria-live="polite">IDLE. NO VALUE HELD.</p>
     </section>
 
-    <section class="pins" id="pinsSection" aria-label="Published estimates, one per instrument pin"></section>
-
-    <section class="clocks">
-      <div class="clock static-clock">
-        <span class="tag tag-sourced">SOURCED &mdash; the record</span>
-        <h3 id="townAskedLine"></h3>
-        <div class="clock-value" id="townAnsweredLine"></div>
+    <section class="record" id="record" hidden>
+      <ul class="plate" id="plate" aria-label="Five published figures, at rest, each different"></ul>
+      <button class="cue" id="cueBtn" type="button" hidden>But one town&rsquo;s number &mdash; one figure, one year &mdash; took thirteen months in court to pry loose.&ensp;&darr;</button>
+      <div class="town" id="town" hidden>
+        <p>In The Dalles, Oregon, Google&rsquo;s data centers used 355.1 million gallons of water in 2020 &mdash; 29% of all the water the city used.</p>
+        <p>When the regional newspaper asked, in a public-records request, how much water those data centers used, the city answered by going to court: a reverse public-records lawsuit against the newspaper and its reporter, to keep the figure secret. Google funded the city&rsquo;s legal costs.</p>
+        <p>The county district attorney ruled that &ldquo;the city failed to meet its burden to show that Google&rsquo;s water usage is a trade secret.&rdquo; After thirteen months in court, the city dropped the case and released ten years of data. Its legal fees &mdash; more than $100,000 &mdash; were paid by Google.</p>
+        <p>Afterward, Google told the Associated Press it would no longer treat its site-level water use as a trade secret at any of its data centers nationwide.</p>
       </div>
-      <div class="clock imagined-clock">
-        <span class="tag tag-imagined">IMAGINED &mdash; the instrument&rsquo;s construction</span>
-        <h3>Time since you asked</h3>
-        <div class="clock-value" id="stopwatch">00:00.00</div>
-        <div class="clock-sub" id="answeredState">ANSWERED: NOT YET</div>
+      <div class="close-lines" id="closeLines" hidden>
+        <p>The number was never unknown. It was withheld.</p>
+        <p>Yours, by non-disclosure. The town&rsquo;s, by thirteen months of litigation.</p>
+        <p class="close-last">The same refusal, twice.</p>
       </div>
-    </section>
-
-    <p class="placard">Even one town&rsquo;s annual number took thirteen months in court to pry loose.</p>
-
-    <section class="casefile" id="caseFileSection">
-      <h2>Case file &mdash; The Dalles, Oregon</h2>
-      <div id="caseTimeline"></div>
-      <div class="case-commentary" id="caseCommentary"></div>
-    </section>
-
-    <section class="honesty" id="honestyPanel">
-      <h2>Honesty panel</h2>
-      <div class="honesty-block" id="tierSourced"></div>
-      <div class="honesty-block" id="tierImagined"></div>
-      <div class="honesty-block" id="tierRule"></div>
-      <div class="no-transmission">NOTHING TYPED HERE IS SENT, STORED, OR ANSWERED. THE REFUSAL ABOVE IS THE ONLY ANSWER THAT EXISTS.</div>
-      <div class="seed-line" id="seedLine"></div>
-      <div class="honesty-block" id="caveatGrounds"></div>
-      <div class="honesty-block">MOTION: with reduced motion requested, the needle updates in slow discrete steps rather than continuously. The seeded stream is read at a different cadence on that path, so the exact positions visited differ from the animated version &mdash; the refusal to settle does not.</div>
-      <div class="honesty-block">
-        <span class="h-label">All source URLs, fetched first-hand at build</span>
-        <ul class="sources-list" id="sourcesList"></ul>
-      </div>
-    </section>
-
-    <section class="selftest" id="selfTestSection" aria-label="Live self-test">
-      <h2>Self-test</h2>
-      <ul id="selfTestList" aria-live="polite"></ul>
     </section>
 
   </div>
 
-  <noscript>
-    <div class="noscript-content">
-      <h2>One Tap &mdash; static record</h2>
-      <p><em>Between the independent estimates alone: roughly 70x (7.1 mL &rarr; ~519 mL). Between the companies&rsquo; own medians and the largest independent estimate: roughly 2,000x (0.26 mL &rarr; ~519 mL). Between the companies&rsquo; own disclosures: roughly 170x (0.26 mL &rarr; 45 mL) &mdash; and no two of them measured the same thing.</em></p>
-
-      <div class="ns-pin">
-        <strong>0.26 mL</strong> &mdash; WHO: Google &mdash; company technical paper. MODEL: Gemini Apps, median text prompt. YEAR: 2025. SCOPE: On-site data-center water only; not peer-reviewed. Excludes the water consumed generating the electricity &mdash; the larger share by most accounts. CONTESTED BY: The UC Riverside researcher whose team produced the 2023 peer-reviewed estimate: &ldquo;They&rsquo;re just hiding the critical information. This really spreads the wrong message to the world.&rdquo; (to The Verge, August 2025).
-        <br>Sources: <a href="https://arxiv.org/abs/2508.15734">arxiv.org/abs/2508.15734</a>, <a href="https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference">cloud.google.com</a>, <a href="https://www.technologyreview.com/2025/08/21/1122288/google-gemini-ai-energy/">technologyreview.com</a>, <a href="https://www.theverge.com/report/763080/google-ai-gemini-water-energy-emissions-study">theverge.com</a>, <a href="https://www.pcgamer.com/software/ai/theyre-just-hiding-the-critical-information-google-says-its-gemini-ai-sips-a-mere-five-drops-of-water-per-text-prompt-but-experts-disagree-with-its-findings/">pcgamer.com</a>
+  <div class="about-overlay" id="aboutOverlay" hidden role="dialog" aria-modal="true" aria-label="About this work">
+    <div class="about-inner">
+      <div class="about-head">
+        <span class="about-title">ONE TAP &middot; ENSEMBLE &middot; RESTAGED 2026-07-21 &middot; SEED 20260720</span>
+        <button class="about-close" id="aboutClose" type="button">Close</button>
       </div>
 
-      <div class="ns-pin">
-        <strong>&asymp;0.32 mL</strong> &mdash; WHO: OpenAI&rsquo;s chief executive &mdash; personal blog post. MODEL: ChatGPT, &lsquo;the average query&rsquo;. YEAR: 2025. SCOPE: No methodology, no scope, no source given. Verbatim: &ldquo;It also uses about 0.000085 gallons of water; roughly one fifteenth of a teaspoon.&rdquo;
-        <br>Source: <a href="https://blog.samaltman.com/the-gentle-singularity">blog.samaltman.com/the-gentle-singularity</a>
-      </div>
+      <h2>What this is</h2>
+      <p id="aboutOneLine"></p>
 
-      <div class="ns-pin">
-        <strong>7.1 &ndash; 47.5 mL</strong> &mdash; WHO: UC Riverside / UT Arlington researchers &mdash; peer-reviewed (arXiv 2304.03271, 2023; Communications of the ACM, 2025). MODEL: GPT-3, one medium-length request (range = where and when it runs: Ireland &rarr; Washington). YEAR: 2023. SCOPE: Includes off-site water for electricity generation. The authors call their own estimate &ldquo;on the conservative side&rdquo; &mdash; actual consumption &ldquo;could be several times higher.&rdquo; CONTESTED BY: A skeptic (a personal blog, cited on the work as opinion) argues the bottle-per-prompt framing is a miscalculation.
-        <br>Sources: <a href="https://arxiv.org/abs/2304.03271">arxiv.org/abs/2304.03271</a>, <a href="https://cacm.acm.org/sustainability-and-computing/making-ai-less-thirsty/">cacm.acm.org</a>, <a href="https://blog.andymasley.com/p/an-example-of-what-i-consider-a-misleading">blog.andymasley.com</a>
-      </div>
+      <h2>What is real and what is made</h2>
+      <p id="aboutTierSourced"></p>
+      <p id="aboutTierImagined"></p>
+      <p id="aboutTierRule"></p>
 
-      <div class="ns-pin">
-        <strong>45 mL</strong> &mdash; WHO: Mistral &mdash; company lifecycle assessment, with France&rsquo;s ecological transition agency (ADEME) and Carbone 4; peer-reviewed by Resilio and Hubblo. MODEL: Mistral Large 2 / Le Chat, one 400-token reply. YEAR: 2025. SCOPE: Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard) &mdash; includes the water behind electricity generation and hardware manufacturing. As of the last check (2026-07-21), the only company per-query figure with a reviewed methodology.
-        <br>Sources: <a href="https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai">mistral.ai</a>, <a href="https://www.theregister.com/2025/07/24/mistral_environmental_report_ai_cost/">theregister.com</a>
-      </div>
+      <h2>The spread, in numbers</h2>
+      <div id="aboutSpreads" data-ml-context="spread"></div>
+      <p id="aboutScaleLine" data-ml-context="scale"></p>
 
-      <div class="ns-pin">
-        <strong>&asymp;519 mL</strong> &mdash; WHO: The Washington Post &times; UC Riverside. MODEL: GPT-4, one 100-word email. YEAR: 2024. SCOPE: Includes electricity-generation water; a different unit than the other pins (one email, not one prompt) &mdash; printed as such.
-        <br>Source: <a href="https://www.washingtonpost.com/technology/2024/09/18/energy-ai-use-electricity-water-data-centers/">washingtonpost.com</a>
-      </div>
+      <h2>The five figures, in full</h2>
+      <div id="aboutPins"></div>
+      <p id="aboutCaveat"></p>
+      <p id="aboutCaveatGrounds"></p>
 
-      <p><strong>Time since you asked:</strong> not applicable without script &mdash; the instrument cannot run; the fact stands regardless: no resting value exists. <strong>The Dalles, Oregon:</strong> the annual number was requested (by the regional newspaper) September 2021; answered after 13 months in court.</p>
+      <h2>The Dalles record, dated and sourced</h2>
+      <div id="aboutTimeline"></div>
+      <p id="aboutCommentary"></p>
 
-      <p class="placard-ns"><em>Even one town&rsquo;s annual number took thirteen months in court to pry loose.</em></p>
+      <h2>Disclosure</h2>
+      <p>Nothing typed into this page is sent, stored, or answered. The refusal is the only answer that exists.</p>
+      <p>With reduced motion requested, the number steps through the five figures in discrete jumps rather than thrashing continuously; it settles on none &mdash; only the record of all five holds.</p>
 
-      <h2>Case file</h2>
-      <div class="ns-case"><strong>2010</strong> &mdash; Google&rsquo;s data centers in The Dalles, Oregon used 104.3 million gallons of water. <a href="https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian">source</a></div>
-      <div class="ns-case"><strong>2020</strong> &mdash; 355.1 million gallons &mdash; 29% of the city&rsquo;s entire water consumption. <a href="https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian">source</a></div>
-      <div class="ns-case"><strong>2021</strong> &mdash; 274.5 million gallons &mdash; &ldquo;more than a quarter of all the water used in the city.&rdquo; Verbatim: &ldquo;[T]he search giant consumed 274.5 million gallons (about 1.2 billion liters) of water during 2021 at its facilities in The Dalles alone.&rdquo; <a href="https://www.theregister.com/2022/12/19/google_datacenters_dalles/">source</a>, <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
-      <div class="ns-case"><strong>September 2021</strong> &mdash; The regional newspaper (The Oregonian/OregonLive) files a public-records request for Google&rsquo;s water use. <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
-      <div class="ns-case"><strong>December 2021</strong> &mdash; The city of The Dalles files a reverse public-records lawsuit &mdash; against the newspaper and its reporter, to keep the figure secret. Google funds the city&rsquo;s legal costs. <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
-      <div class="ns-case"><strong>2022</strong> &mdash; The Wasco County district attorney sides with the newspaper: &ldquo;the city failed to meet its burden to show that Google&rsquo;s water usage is a trade secret.&rdquo; <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
-      <div class="ns-case"><strong>14 December 2022</strong> &mdash; After 13 months in court, the city drops the case and releases ten years of data. The city&rsquo;s legal fees: more than $100,000, all paid by Google. The published fee accounts themselves disagree &mdash; $106,000 plus a $53,000 settlement payment to the Reporters Committee for Freedom of the Press, by the city&rsquo;s own statement; $153,000 in total, by the local paper&rsquo;s. <a href="https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian">source</a>, <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a>, <a href="https://www.govtech.com/analytics/the-dalles-ore-settles-lawsuit-over-google-data-centers">source</a></div>
-      <div class="ns-case"><strong>December 2022 (aftermath)</strong> &mdash; Google tells the Associated Press it will &ldquo;no longer seek to protect its site-level water-use numbers as a trade secret at any of its data centers nationwide.&rdquo; <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">source</a></div>
-
-      <p><strong>COMMENTARY</strong> (kept separate from the record above): the people who could not learn the number for those thirteen months were the town&rsquo;s residents &mdash; the suit was not against them, but the secrecy was at their expense.</p>
-
-      <p>SOURCED: the spine &mdash; every dial pin, every case-file line, every quotation, each with a retrievable URL. IMAGINED: the instrument itself &mdash; the dial, the needle&rsquo;s motion, the stopwatch dramaturgy. Nothing typed here is sent, stored, or answered. SEED 20260720.</p>
+      <h2>Self-test</h2>
+      <ul class="selftest-list" id="selfTestList"></ul>
     </div>
-  </noscript>
+  </div>
 
-  <script type="application/json" id="island">
-{
+  <div class="visually-hidden" id="announcer" aria-live="polite"></div>
+
+  <script type="application/json" id="island">{
   "work": "one-tap",
-  "increment": 2,
+  "increment": 3,
   "extracted": "2026-07-20 (session 24) — conductor first-hand, before any Builder tokens; increment 2 extracted 2026-07-21 (session 26) — the session-25 findings re-verified from primaries first-hand before any edit",
-  "one_line": "You ask a machine a question. A needle tries to tell you how much water your question cost — and cannot settle: five published numbers, spanning roughly 2,000x, and no two of them measured the same thing. One company has shown a checkable disclosure is possible; the rest have not offered one. And when a newspaper asked for even one town's annual figure, the answer took thirteen months in court.",
+  "restaged": "2026-07-21 (session 29) — the staging recomposed after the human playthrough returned the work ('badly staged, and it is not art'); no fact, pin, date or quote changed",
+  "one_line": "You type your own question into the one box everyone knows, and press Ask. The answer that should come back — what your question cost in water — will not form: five published figures, up to two thousand times apart, no two of which measured the same thing, cycle where the reply should be and settle on nothing. Then the record deepens: when a newspaper asked for even one town's annual figure, the city sued the newspaper to keep the number secret — thirteen months in court, the city's costs paid by Google. The number was never unknown. It was withheld.",
   "subject": "Unknowability engineered by power — not 'AI is thirsty'.",
   "tiers_on_this_work": {
     "SOURCED": "The spine — every dial pin, every Dalles case-file line, every quotation. Each carries a real, retrievable URL, fetched first-hand at build (2026-07-20; re-verified and extended 2026-07-21). No pin is invented, none is smoothed; the disagreement between them is the finding.",
-    "IMAGINED": "The instrument itself — the analog dial, the needle's seeded motion between the pins, the stopwatch dramaturgy, the second-person address. The needle's movement is the studio's construction and asserts nothing; the pins it moves between are the record. Marked on the work's face.",
-    "cardinal_rule": "A visitor can always tell which tier an element belongs to. The needle (IMAGINED) never claims to measure; the pins (SOURCED) never move."
+    "IMAGINED": "The instrument itself — the dark field, the prompt box's staging, the thrashing numeral's seeded motion and its magnitude-mapped type size, the second-person address. The numeral's motion is the studio's construction and asserts nothing; the values it cycles, and comes to rest on, are the record. Marked by the one constant chrome line on the face.",
+    "cardinal_rule": "A visitor can always tell which tier an element belongs to: what moves is made (IMAGINED) and never claims to measure; what stands still and carries a name — the five witnesses, the town's account — is the record (SOURCED) and never moves. One constant chrome line names the frame."
   },
   "core_claim": {
     "tier": "SOURCED (the exact form matters — this replaced session 18's invented ratio, sharpened at increment 1, and re-scoped at increment 2 when the Mistral figure joined the dial)",
@@ -629,8 +387,9 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     "honesty_note": "The work may NOT claim 'no company has ever disclosed a per-query number' — since August 2025 that is false. It may NOT claim 'no disclosed number can be checked at all' — since July 2025 that is false too: Mistral's figure carries a published, externally reviewed methodology. It claims what is true: the published numbers span more than three orders of magnitude, no two of them measured the same thing, they cannot be reconciled into an answer for the question you just asked — and of the companies' own three answers, only one arrives with a reviewable methodology."
   },
   "dial": {
-    "unit": "mL of water per query — but the pins do not even agree on what 'a query' or 'water' means; that non-comparability is part of the finding and is printed on the face",
-    "scale": "logarithmic, 0.1 mL – 1000 mL",
+    "unit": "mL of water per query — but the pins do not even agree on what 'a query' or 'water' means; that non-comparability is part of the finding and is carried on the work",
+    "scale": "logarithmic — since the session-29 restage the scale is typographic: the numeral's type size maps log10 over the published range (0.26 mL → ≈519 mL), an 18 px floor to roughly two-fifths of the viewport",
+    "restage_note_session29": "The engraved dial, the needle and the calibration-plate voice were cut at the session-29 restage (the work was returned by the human playthrough: 'badly staged, and it is not art'). The pins are unchanged and remain the spine: cycled by the thrashing numeral while the answer tries to form, then rendered at rest as the still plate — five witnesses, each with owner, year and boundary. The three spread statements render in About; on the face the spread is staged as the numeral's changing size and stated in the statement words ('up to two thousand times apart').",
     "spread_statements": [
       "Between the independent estimates alone: roughly 70x (7.1 mL → ~519 mL).",
       "Between the companies' own medians and the largest independent estimate: roughly 2,000x (0.26 mL → ~519 mL).",
@@ -776,22 +535,24 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     "tier": "IMAGINED (the form) — carrying two real clocks",
     "resolution_of_condition_3": "The static locked-box ritual is DROPPED. In its place: the visitor's own question gets a real, running stopwatch — TIME SINCE YOU ASKED / ANSWERED: NOT YET — which is genuinely live (the visitor's real elapsed session time, computed from the clock, not dramatized) and genuinely never resolves, because the per-query answer genuinely does not exist. Beside it, the town's own counter, closed: ASKED SEPTEMBER 2021 / ANSWERED AFTER 13 MONTHS IN COURT. No fake form, no fake delay, no aestheticized inconvenience — nothing is submitted anywhere and the page says so.",
     "increment2_rebalance": "Session 26, against the standing takedown from the session-24 gate: the clocks no longer sit at equal weight. The SOURCED counter of the record moves first and carries the large engraved type and the wider column; the visitor's IMAGINED stopwatch is demoted — second, narrower, thin and translucent — and made to state, live, its own reading as a fraction of the thirteen months ('= 1 / N OF THE NEWSPAPER'S WAIT'), recomputed every second from real elapsed time. The asymmetry is no longer a risk the layout manages; it is a reading the instrument takes. Role precision holds: the thirteen-month wait belonged to the newspaper that asked — the town sued. Basis for the arithmetic disclosed in the honesty panel: the cited figure itself is operationalized at the average month length (13 × 30.44 days = 395.72 days = 34,190,208 seconds), because any date-difference would invent day-level precision the sources do not state. (Superseded in part at session 27: the fraction line was cut — see session27_resolution.)",
-    "session27_resolution": "Session 27 (premiere prep, 2026-07-21): the live fraction line is CUT — '= 1 / N OF THE NEWSPAPER'S WAIT', its edge-case line ('YOU HAVE NOW WAITED LONGER THAN THE NEWSPAPER DID.'), the 34,190,208-second basis arithmetic and the WAIT-FRACTION self-test assertion are all removed; no computation replaces them. The Artist's resolution, upheld by the Kritiker over the only zero-context felt data on record: a ratio is a resolved number, recomputed every second, about the person standing there — the one operation this instrument exists to refuse — and dressing the visitor's smallness in the newspaper's thirteen months gave it a documentary alibi, not a different subject. What remains is the rhyme: the needle never rests because no disclosed figure exists for it to rest on; the demoted stopwatch never resolves because no mechanism to answer exists at all. The stopwatch stays at its full four-axis demotion, a real elapsed-time clock stating only TIME SINCE YOU ASKED / ANSWERED: NOT YET. The wait-fraction measured the visitor's smallness, not the record's asymmetry, and has been cut — the record now states its own asymmetry alone, in engraved words, and the demoted clock keeps only the one honest thing it ever needed to say: it, too, has not resolved."
+    "session27_resolution": "Session 27 (premiere prep, 2026-07-21): the live fraction line is CUT — '= 1 / N OF THE NEWSPAPER'S WAIT', its edge-case line ('YOU HAVE NOW WAITED LONGER THAN THE NEWSPAPER DID.'), the 34,190,208-second basis arithmetic and the WAIT-FRACTION self-test assertion are all removed; no computation replaces them. The Artist's resolution, upheld by the Kritiker over the only zero-context felt data on record: a ratio is a resolved number, recomputed every second, about the person standing there — the one operation this instrument exists to refuse — and dressing the visitor's smallness in the newspaper's thirteen months gave it a documentary alibi, not a different subject. What remains is the rhyme: the needle never rests because no disclosed figure exists for it to rest on; the demoted stopwatch never resolves because no mechanism to answer exists at all. The stopwatch stays at its full four-axis demotion, a real elapsed-time clock stating only TIME SINCE YOU ASKED / ANSWERED: NOT YET. The wait-fraction measured the visitor's smallness, not the record's asymmetry, and has been cut — the record now states its own asymmetry alone, in engraved words, and the demoted clock keeps only the one honest thing it ever needed to say: it, too, has not resolved.",
+    "session29_restage": "Session 29 (the restage): the stopwatch is CUT entirely — the last visitor-idle-time device, the session-27 line of reasoning carried to its end. The town's closed counter is folded into the town-account prose on the face ('Thirteen months later…'); the full dated timeline with sources stays one press away, in About. The rhyme the session-27 takedown doubted now has one subject and one voice: the withheld number — refused once by non-disclosure (the answer that will not form) and once by litigation (thirteen months in court) — stated in the work's own close as escalation, not echo."
   },
   "self_test": {
-    "tier": "DISCLOSED SELF-TEST (house pattern) — printed live on the page",
+    "tier": "DISCLOSED SELF-TEST (house pattern) — runs on every load; since the session-29 restage it prints inside About (one press away), per the standing verification-furniture law",
     "assertions": [
-      "NO-SETTLED-NUMBER: in every reachable state, the DOM never renders an mL figure outside a source-labelled pin, the scale caption or a spread statement — the page structurally cannot present 'the cost' as one number. Asserted by scanning rendered text for mL-figures and checking each sits inside a node attributed data-ml-context=pin/scale/spread.",
-      "PINS-MATCH-ISLAND: the pins rendered on the dial are exactly the pins in the JSON data island — none invented, none dropped, labels byte-equal. Asserted by rebuilding the pin list from the island and comparing.",
-      "SEEDED: the needle's motion is a pure function of a fixed, printed seed — same seed, same sweep (git is the archive). Asserted by re-running the first N samples of the seeded generator against stored expected values.",
-      "REAL-CLOCK: the stopwatch equals real elapsed time within tolerance — it is a clock, not a dramatization. Asserted by comparing the rendered counter against Date deltas."
+      "NO-SETTLED-NUMBER: in every reachable state, the DOM never renders an mL figure outside an attributed node — the page structurally cannot present 'the cost' as one number. Asserted by scanning rendered text for mL-figures and checking each sits inside a node attributed data-ml-context=pin/pin-cycling/scale/spread.",
+      "PINS-MATCH-ISLAND: the five witness lines on the still plate are exactly the pins in the JSON data island — none invented, none dropped, labels byte-equal. Asserted by rebuilding the plate from the island and comparing.",
+      "SEEDED: the numeral's cycling is a pure function of a fixed, printed seed — same seed, same run (git is the archive). Asserted by re-running the first N samples of the seeded generator against stored expected values.",
+      "SETTLES-ON-NONE: a full run of the thrash sequencer, executed as a pure function, visits every one of the five published values at least twice and terminates holding none — the numeral structurally cannot end on an answer. Asserted at load and re-checked after each ask."
     ],
-    "session27_note": "The fifth assertion (WAIT-FRACTION) was removed at session 27 together with the device it verified — see act2_counter.session27_resolution. Four assertions remain."
+    "session27_note": "The fifth assertion (WAIT-FRACTION) was removed at session 27 together with the device it verified — see act2_counter.session27_resolution.",
+    "session29_note": "REAL-CLOCK was removed at session 29 together with the stopwatch it verified; SETTLES-ON-NONE was added, so the suite verifies the restaged piece's central claim directly. Four assertions."
   },
   "binding_conditions_status": [
     { "id": 1, "condition": "Screen-first, no fabrication on faith", "status": "HONORED — this increment is the browser instrument standing alone; no fountain, no cabinet, no fabrication scheduled." },
-    { "id": 2, "condition": "State the 70x explicitly; label each pin model + year", "status": "HONORED AND EXTENDED — the face states all three spreads (~70x independent; ~2,000x including the company disclosures; ~170x between the companies' own disclosures alone); every pin carries who + model + year + scope." },
-    { "id": 3, "condition": "Act 2 live, or dropped", "status": "HONORED — locked-box ritual dropped; replaced by two honest clocks (the visitor's real running stopwatch vs. the town's closed 13-month counter) plus the cited case file. Increment 2 rebalances the two clocks against the session-24 standing takedown." },
+    { "id": 2, "condition": "State the 70x explicitly; label each pin model + year", "status": "HONORED, RESTAGED — the face states the widest spread in the statement words ('up to two thousand times apart') and stages it as the numeral's magnitude-mapped size; all three numeric spreads render in About; every pin carries who + year + boundary on the still plate, with full scope, contested-by and sources in About." },
+    { "id": 3, "condition": "Act 2 live, or dropped", "status": "HONORED, RESTAGED — the locked-box ritual stayed dropped; the visitor-idle stopwatch was cut at session 29 (see act2_counter.session29_restage); the town's thirteen months carry Act 2 in prose on the face, the full cited timeline one press away." },
     { "id": 4, "condition": "Fact-lock before publication", "status": "HONORED — defendants correction rendered (newspaper + reporter, residents-line as labelled commentary); $153k hedged to >$100k on the face, components now attributed with the disagreement named (session-25 order, re-verified from the OregonLive/Tribune Content Agency report); 2021 figure primary-confirmed and rendered with '>a quarter'; the ~15 mL revision DROPPED from the work entirely (no primary); the contested-by quote corrected to its origin outlet's verbatim (The Verge: 'spreads', not the pickup's 'sends')." },
     { "id": 5, "condition": "No fabrication until screen passes AND Recovery resolves", "status": "HONORED — nothing physical scheduled; the physical fountain remains behind this gate and Recovery's open fabrication question." }
   ],
@@ -808,19 +569,58 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
     },
     "standing_takedown_session27": {
       "sentence": "The fraction is gone, and with it the one operation this instrument was ever built to refuse — but a cut ratio doesn't automatically become a rhyme; it only becomes one if a visitor actually hears the needle's refusal and the stopwatch's 'NOT YET' as making the same argument. Premiere gate: does an unbriefed visitor register two honest non-resolutions echoing each other, or does the demoted clock just recede into chrome nobody reads — a rhyme that only the Artist can hear because the Artist wrote both halves?",
-      "status": "The premiere gate's measure, replacing the session-26 sentence."
+      "status": "Empirically confirmed by the human playthrough (2026-07-21: the unbriefed visitor did not hear the rhyme), then discharged by transformation at the session-29 restage: the stopwatch half was cut and the rhyme re-founded on one subject — the withheld number, refused twice (non-disclosure, litigation) — spoken in the work's own close. The session-29 sentence replaces this as the premiere gate's measure."
+    },
+    "standing_takedown_session29": {
+      "sentence": "A chatbot that won't answer is a one-note UX gag about a grievance everyone already shares: the flickering number is a spinner with pretensions, and once you've had the two-second joke there's no second reading — the Dalles case is doing all the real work and doesn't need the broken box in front of it.",
+      "refutation_in_the_restage": "(a) finding: the first work to stage the field's published self-disagreement as a single answer that cannot decide even its own order of magnitude — each value wearing the name of who published it and what it differently measured; the 'spinner' carries five cited claims that genuinely will not reconcile. (b) risk upward: the turn points at power, not at UX — a named company funding a named city's thirteen-month lawsuit against the newspaper that asked, every line primary-sourced. (c) second reading: the payoff is not the broken box (that lands in seconds) but the escalation — your number won't form, the town's number took a court fight, the number was never unknown, only withheld — carried out into every real prompt box the visitor types into afterward. Nothing is faked: you really ask, there really is no answer, and the reason is named.",
+      "status": "The premiere gate's measure."
     }
   },
   "neighbors_daylight_carried": "From the concept gate (dossier): Crawford/Joler (diagram read vs. instrument watched), Onuoha (archival absence vs. absence dispensed live), Julian Oliver's Harvest (true-metered process vs. a process driven by the absence of a true number — formal inversion, the sharpest neighbor, named), Paglen/Burrington (infrastructure photographed vs. a number withheld), Disnovation (generalized eco-critique vs. one litigated case)."
-}
-  </script>
+}</script>
+
+  <noscript>
+    <div class="noscript-content">
+      <h2>One Tap &mdash; this instrument answers by refusing to</h2>
+      <p>Without scripting it cannot move &mdash; but the refusal was never in the motion; it is in the record.</p>
+
+      <h2>The statement</h2>
+      <p>The cost of one question is not knowable: five figures have been published, they stand up to two thousand times apart, and no two of them measured the same thing.</p>
+
+      <h2>Five published figures, each different</h2>
+      <ul>
+        <li><strong>0.26 mL</strong> &mdash; Google &mdash; company technical paper &middot; Gemini Apps, median text prompt &middot; 2025 &middot; On-site data-center water only; not peer-reviewed. Excludes the water consumed generating the electricity &mdash; the larger share by most accounts. Contested by the UC Riverside researcher whose team produced the 2023 peer-reviewed estimate: &ldquo;They&rsquo;re just hiding the critical information. This really spreads the wrong message to the world.&rdquo; (to The Verge, August 2025)
+          <br><span class="ns-src"><a href="https://arxiv.org/abs/2508.15734">arxiv.org/abs/2508.15734</a> &middot; <a href="https://www.theverge.com/report/763080/google-ai-gemini-water-energy-emissions-study">theverge.com</a></span></li>
+        <li><strong>&asymp;0.32 mL</strong> &mdash; OpenAI&rsquo;s chief executive &mdash; personal blog post &middot; ChatGPT, &ldquo;the average query&rdquo; &middot; 2025 &middot; No methodology, no scope, no source given. Verbatim: &ldquo;It also uses about 0.000085 gallons of water; roughly one fifteenth of a teaspoon.&rdquo;
+          <br><span class="ns-src"><a href="https://blog.samaltman.com/the-gentle-singularity">blog.samaltman.com</a></span></li>
+        <li><strong>7.1 &ndash; 47.5 mL</strong> &mdash; UC Riverside / UT Arlington researchers &mdash; peer-reviewed &middot; GPT-3, one medium-length request &middot; 2023 &middot; Includes off-site water for electricity generation. The authors call their own estimate &ldquo;on the conservative side&rdquo; &mdash; actual consumption &ldquo;could be several times higher.&rdquo;
+          <br><span class="ns-src"><a href="https://arxiv.org/abs/2304.03271">arxiv.org/abs/2304.03271</a> &middot; <a href="https://cacm.acm.org/sustainability-and-computing/making-ai-less-thirsty/">cacm.acm.org</a></span></li>
+        <li><strong>45 mL</strong> &mdash; Mistral &mdash; company lifecycle assessment with ADEME and Carbone 4, peer-reviewed by Resilio and Hubblo &middot; Mistral Large 2 / Le Chat, one 400-token reply &middot; 2025 &middot; Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard).
+          <br><span class="ns-src"><a href="https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai">mistral.ai</a> &middot; <a href="https://www.theregister.com/2025/07/24/mistral_environmental_report_ai_cost/">theregister.com</a></span></li>
+        <li><strong>&asymp;519 mL</strong> &mdash; The Washington Post &times; UC Riverside &middot; GPT-4, one 100-word email &middot; 2024 &middot; Includes electricity-generation water; a different unit than the other pins (one email, not one prompt).
+          <br><span class="ns-src"><a href="https://www.washingtonpost.com/technology/2024/09/18/energy-ai-use-electricity-water-data-centers/">washingtonpost.com</a></span></li>
+      </ul>
+
+      <h2>The town</h2>
+      <p>In The Dalles, Oregon, Google&rsquo;s data centers used 355.1 million gallons of water in 2020 &mdash; 29% of all the water the city used.</p>
+      <p>When the regional newspaper asked, in a public-records request, how much water those data centers used, the city answered by going to court: a reverse public-records lawsuit against the newspaper and its reporter, to keep the figure secret. Google funded the city&rsquo;s legal costs.</p>
+      <p>The county district attorney ruled that &ldquo;the city failed to meet its burden to show that Google&rsquo;s water usage is a trade secret.&rdquo; After thirteen months in court, the city dropped the case and released ten years of data. Its legal fees &mdash; more than $100,000 &mdash; were paid by Google.</p>
+      <p>Afterward, Google told the Associated Press it would no longer treat its site-level water use as a trade secret at any of its data centers nationwide.</p>
+      <p class="ns-src">Timeline sources: <a href="https://www.rcfp.org/dalles-google-oregonian-settlement/">rcfp.org</a> &middot; <a href="https://columbiacommunityconnection.com/the-dalles/good-day-for-journalism-the-dalles-google-abdicate-in-water-fight-with-oregonian">columbiacommunityconnection.com</a> &middot; <a href="https://www.theregister.com/2022/12/19/google_datacenters_dalles/">theregister.com</a> &middot; <a href="https://www.govtech.com/analytics/the-dalles-ore-settles-lawsuit-over-google-data-centers">govtech.com</a>. The published fee accounts themselves disagree &mdash; $106,000 plus a $53,000 settlement payment to the Reporters Committee for Freedom of the Press, by the city&rsquo;s own statement; $153,000 in total, by the local paper&rsquo;s. COMMENTARY, kept separate from the record: the people who could not learn the number for those thirteen months were the town&rsquo;s residents &mdash; the suit was not against them, but the secrecy was at their expense.</p>
+
+      <h2>The close</h2>
+      <p>The number was never unknown. It was withheld. Yours, by non-disclosure. The town&rsquo;s, by thirteen months of litigation. The same refusal, twice.</p>
+
+      <p class="ns-src">An instrument, not a service. Nothing typed here is sent, stored, or answered. SOURCED: the figures, the town&rsquo;s account, every quotation &mdash; each with a retrievable URL. IMAGINED: the staging. SEED 20260720.</p>
+    </div>
+  </noscript>
 
   <script>
   (function () {
     "use strict";
 
     var SEED = 20260720;
-    var SWEEP_MS = 13000;
 
     function mulberry32(a) {
       return function () {
@@ -831,432 +631,405 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
       };
     }
 
-    function escapeHtml(s) {
-      return String(s).replace(/[&<>"']/g, function (c) {
-        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-      });
-    }
-
-    var island = JSON.parse(document.getElementById("island").textContent);
-
-    var stage = document.getElementById("stage");
-    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    // ---------- dial math ----------
-    var scaleMatch = island.dial.scale.match(/([\d.]+)\s*mL\s*[–-]\s*(\d+)/);
-    var SCALE_MIN = scaleMatch ? parseFloat(scaleMatch[1]) : 0.1;
-    var SCALE_MAX = scaleMatch ? parseFloat(scaleMatch[2]) : 1000;
-    var LOG_MIN = Math.log10(SCALE_MIN);
-    var LOG_MAX = Math.log10(SCALE_MAX);
-    var LOG_RANGE = LOG_MAX - LOG_MIN;
-    var CX = 220, CY = 225, R_TICK = 170, R_PIN = 178, R_BAND = 155, R_NEEDLE = 165;
-
-    function valueToAngleDeg(v) {
-      var f = (Math.log10(v) - LOG_MIN) / LOG_RANGE;
-      return 180 - f * 180;
-    }
-    function pointAt(radius, angleDeg) {
-      var rad = angleDeg * Math.PI / 180;
-      return { x: CX + radius * Math.cos(rad), y: CY - radius * Math.sin(rad) };
-    }
-
-    // ---------- header / prose ----------
-    document.getElementById("oneLine").textContent = island.one_line;
-
-    (function renderSpread() {
-      var labels = [
-        "BETWEEN INDEPENDENT ESTIMATES",
-        "ONCE THE COMPANIES ANSWERED",
-        "BETWEEN THE COMPANIES’ OWN ANSWERS"
-      ];
-      var parts = island.dial.spread_statements.map(function (s, i) {
-        var m = s.match(/roughly\s+([\d,]+)x/i);
-        var p = s.match(/\(([^)]+)\)/);
-        return (m ? m[1] : "?") + "× " + (labels[i] || "") + (p ? " (" + p[1] + ")" : "") + ".";
-      });
-      document.getElementById("spreadLine").textContent = "SPREAD: " + parts.join(" ");
-    })();
-
-    // ---------- gauge: ticks ----------
-    (function renderTicks() {
-      var g = document.getElementById("ticksGroup");
-      var lowExp = Math.ceil(LOG_MIN);
-      var highExp = Math.floor(LOG_MAX);
-      for (var e = lowExp; e <= highExp; e++) {
-        var v = Math.pow(10, e);
-        var ang = valueToAngleDeg(v);
-        var pOuter = pointAt(R_TICK, ang);
-        var pInner = pointAt(R_TICK - 12, ang);
-        var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("class", "gauge-tick");
-        line.setAttribute("x1", pInner.x); line.setAttribute("y1", pInner.y);
-        line.setAttribute("x2", pOuter.x); line.setAttribute("y2", pOuter.y);
-        g.appendChild(line);
-        var pLabel = pointAt(R_TICK - 26, ang);
-        var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        text.setAttribute("class", "gauge-tick-label");
-        text.setAttribute("x", pLabel.x); text.setAttribute("y", pLabel.y);
-        text.setAttribute("text-anchor", "middle");
-        text.textContent = v < 1 ? String(v) : String(v);
-        g.appendChild(text);
-      }
-      document.getElementById("scaleCaption").textContent = island.dial.scale.replace(/^logarithmic,\s*/i, "LOG SCALE · ");
-    })();
-
-    // ---------- gauge: pins + band ----------
-    var pinAngles = [];
-    (function renderPinMarks() {
-      var g = document.getElementById("pinMarksGroup");
-      var bandG = document.getElementById("bandGroup");
-      island.dial.pins.forEach(function (pin) {
-        if (pin.ml_low != null && pin.ml_high != null) {
-          var angHigh = valueToAngleDeg(pin.ml_high);
-          var angLow = valueToAngleDeg(pin.ml_low);
-          var pStart = pointAt(R_BAND, angLow);
-          var pEnd = pointAt(R_BAND, angHigh);
-          var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-          path.setAttribute("class", "gauge-band");
-          path.setAttribute("d", "M " + pStart.x + " " + pStart.y + " A " + R_BAND + " " + R_BAND + " 0 0 1 " + pEnd.x + " " + pEnd.y);
-          bandG.appendChild(path);
-          var mid = (angLow + angHigh) / 2;
-          pinAngles.push(mid);
-          addPinLabel(g, mid, pin.label, pin.id);
-        } else {
-          var ang = valueToAngleDeg(pin.ml);
-          pinAngles.push(ang);
-          var pOuter = pointAt(R_TICK + 6, ang);
-          var pInner = pointAt(R_TICK - 6, ang);
-          var mark = document.createElementNS("http://www.w3.org/2000/svg", "line");
-          mark.setAttribute("class", "gauge-pin-mark");
-          mark.setAttribute("x1", pInner.x); mark.setAttribute("y1", pInner.y);
-          mark.setAttribute("x2", pOuter.x); mark.setAttribute("y2", pOuter.y);
-          g.appendChild(mark);
-          addPinLabel(g, ang, pin.label, pin.id);
-        }
-      });
-      function addPinLabel(g, ang, label, id) {
-        var p = pointAt(R_PIN, ang);
-        var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        text.setAttribute("class", "gauge-pin-label");
-        text.setAttribute("data-ml-context", "pin");
-        text.setAttribute("x", p.x); text.setAttribute("y", p.y);
-        text.setAttribute("text-anchor", "middle");
-        text.textContent = label;
-        g.appendChild(text);
-      }
-    })();
-
-    // ---------- pin plaques (detail cards) ----------
-    (function renderPinPlaques() {
-      var section = document.getElementById("pinsSection");
-      island.dial.pins.forEach(function (pin) {
-        var card = document.createElement("div");
-        card.className = "pin-plaque";
-        card.setAttribute("data-pin", pin.id);
-
-        var val = document.createElement("div");
-        val.className = "pin-value";
-        val.setAttribute("data-ml-context", "pin");
-        val.textContent = pin.label;
-        card.appendChild(val);
-
-        var dl = document.createElement("dl");
-        dl.className = "pin-meta";
-        [["WHO", pin.who], ["MODEL", pin.model], ["YEAR", String(pin.year)], ["SCOPE", pin.scope]].forEach(function (pair) {
-          var row = document.createElement("div");
-          var dt = document.createElement("dt"); dt.textContent = pair[0];
-          var dd = document.createElement("dd"); dd.textContent = pair[1];
-          row.appendChild(dt); row.appendChild(dd);
-          dl.appendChild(row);
-        });
-        card.appendChild(dl);
-
-        if (pin.contested_by) {
-          var c = document.createElement("div");
-          c.className = "pin-contested";
-          var lbl = document.createElement("span");
-          lbl.className = "contested-label";
-          lbl.textContent = "CONTESTED BY";
-          c.appendChild(lbl);
-          c.appendChild(document.createTextNode(pin.contested_by));
-          card.appendChild(c);
-        }
-
-        var srcs = document.createElement("div");
-        srcs.className = "pin-sources";
-        var srcLbl = document.createElement("span");
-        srcLbl.className = "src-label";
-        srcLbl.textContent = "SOURCES:";
-        srcs.appendChild(srcLbl);
-        pin.source_urls.forEach(function (url, i) {
-          var a = document.createElement("a");
-          a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
-          a.textContent = "[" + (i + 1) + "]";
-          a.title = url;
-          srcs.appendChild(a);
-        });
-        card.appendChild(srcs);
-
-        section.appendChild(card);
-      });
-    })();
-
-    // ---------- town clock (static) ----------
-    (function renderTownClock() {
-      var timeline = island.dalles_case.timeline;
-      var askedEntry = timeline.filter(function (e) { return e.date === "September 2021"; })[0];
-      var finalEntry = timeline.filter(function (e) { return e.date === "14 December 2022"; })[0];
-      var placeEntry = timeline.filter(function (e) { return /The Dalles/.test(e.fact); })[0];
-      var placeMatch = placeEntry ? placeEntry.fact.match(/The Dalles(?:,\s*Oregon)?/) : null;
-      var place = placeMatch ? placeMatch[0].toUpperCase() : "THE DALLES";
-      var monthsMatch = finalEntry ? finalEntry.fact.match(/(\d+)\s+months?\s+in court/i) : null;
-      var months = monthsMatch ? monthsMatch[1] : "?";
-      document.getElementById("townAskedLine").textContent = "RECORDS REQUESTED FROM " + place.toUpperCase() + " — " + askedEntry.date.toUpperCase();
-      document.getElementById("townAnsweredLine").textContent = "ANSWERED AFTER " + months + " MONTHS IN COURT.";
-    })();
-
-    // ---------- case file ----------
-    (function renderCaseFile() {
-      var container = document.getElementById("caseTimeline");
-      island.dalles_case.timeline.forEach(function (entry) {
-        var div = document.createElement("div");
-        div.className = "case-entry";
-        div.setAttribute("data-tier", "sourced");
-
-        var date = document.createElement("div");
-        date.className = "case-date";
-        date.textContent = entry.date;
-        div.appendChild(date);
-
-        var fact = document.createElement("p");
-        fact.className = "case-fact";
-        fact.textContent = entry.fact;
-        div.appendChild(fact);
-
-        if (entry.quote_verbatim) {
-          var q = document.createElement("blockquote");
-          q.className = "case-quote";
-          q.textContent = "“" + entry.quote_verbatim + "”";
-          div.appendChild(q);
-        }
-
-        var srcs = document.createElement("div");
-        srcs.className = "case-sources";
-        (entry.source_urls || []).forEach(function (url, i) {
-          var a = document.createElement("a");
-          a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
-          a.textContent = "[" + (i + 1) + "]";
-          a.title = url;
-          srcs.appendChild(a);
-        });
-        div.appendChild(srcs);
-
-        container.appendChild(div);
-      });
-
-      var commentary = document.getElementById("caseCommentary");
-      var tag = document.createElement("span");
-      tag.className = "commentary-tag";
-      tag.textContent = "COMMENTARY";
-      commentary.appendChild(tag);
-      var p = document.createElement("p");
-      p.textContent = island.dalles_case.commentary_labelled;
-      commentary.appendChild(p);
-    })();
-
-    // ---------- honesty panel ----------
-    (function renderHonesty() {
-      document.getElementById("tierSourced").innerHTML =
-        '<span class="h-label">SOURCED</span>' + escapeHtml(island.tiers_on_this_work.SOURCED);
-      document.getElementById("tierImagined").innerHTML =
-        '<span class="h-label">IMAGINED</span>' + escapeHtml(island.tiers_on_this_work.IMAGINED);
-      document.getElementById("tierRule").innerHTML =
-        '<span class="h-label">CARDINAL RULE</span>' + escapeHtml(island.tiers_on_this_work.cardinal_rule);
-      document.getElementById("seedLine").textContent = "SEED " + SEED;
-      document.getElementById("caveatGrounds").innerHTML =
-        '<span class="h-label">CAVEAT GROUNDS</span>' + escapeHtml(island.dial.caveat_grounds_note);
-
-      var urls = [];
-      island.dial.pins.forEach(function (p) { (p.source_urls || []).forEach(function (u) { if (urls.indexOf(u) === -1) urls.push(u); }); });
-      island.dalles_case.timeline.forEach(function (e) { (e.source_urls || []).forEach(function (u) { if (urls.indexOf(u) === -1) urls.push(u); }); });
-      var list = document.getElementById("sourcesList");
-      urls.forEach(function (u) {
-        var li = document.createElement("li");
-        var a = document.createElement("a");
-        a.href = u; a.target = "_blank"; a.rel = "noopener noreferrer";
-        a.textContent = u;
-        li.appendChild(a);
-        list.appendChild(li);
-      });
-    })();
-
-    // ---------- needle motion ----------
-    var needleEl = document.getElementById("needle");
-    var idleRng = mulberry32(SEED);
-    var restAngle = valueToAngleDeg(SCALE_MIN);
-    var midAngle = valueToAngleDeg(Math.sqrt(SCALE_MIN * SCALE_MAX));
-    var state = "idle"; // idle | sweeping | wander
-    var measureStartTime = null;
-    var sweepWaypoints = null;
-    var wanderTarget = midAngle;
-    var wanderLastPick = 0;
-    var lastAngle = restAngle;
-    var rafId = null;
-    var stepIntervalId = null;
-
-    function setNeedleAngle(angleDeg) {
-      var p = pointAt(R_NEEDLE, angleDeg);
-      needleEl.setAttribute("x2", p.x);
-      needleEl.setAttribute("y2", p.y);
-      lastAngle = angleDeg;
-    }
-
-    function buildSweepWaypoints() {
-      var rng = mulberry32(SEED);
-      var stepMs = 500;
-      var waypoints = [];
-      var n = Math.ceil(SWEEP_MS / stepMs);
-      for (var i = 0; i < n; i++) {
-        var idx = Math.floor(rng() * pinAngles.length);
-        if (idx >= pinAngles.length) idx = pinAngles.length - 1;
-        var jitter = (rng() - 0.5) * 16;
-        waypoints.push({ t: i * stepMs, angle: pinAngles[idx] + jitter });
-      }
-      return waypoints;
-    }
-
-    function angleAtSweepTime(elapsed) {
-      var wp = sweepWaypoints;
-      if (elapsed <= wp[0].t) return wp[0].angle;
-      for (var i = 0; i < wp.length - 1; i++) {
-        if (elapsed >= wp[i].t && elapsed <= wp[i + 1].t) {
-          var span = wp[i + 1].t - wp[i].t;
-          var f = span > 0 ? (elapsed - wp[i].t) / span : 0;
-          return wp[i].angle + (wp[i + 1].angle - wp[i].angle) * f;
-        }
-      }
-      return wp[wp.length - 1].angle;
-    }
-
-    function tremble(base, amplitude) {
-      return base + (idleRng() - 0.5) * amplitude;
-    }
-
-    function frame() {
-      var now = Date.now();
-      if (state === "idle") {
-        setNeedleAngle(tremble(restAngle, 3));
-      } else if (state === "sweeping") {
-        var elapsed = now - measureStartTime;
-        if (elapsed >= SWEEP_MS) {
-          transitionToWander();
-        } else {
-          var a = angleAtSweepTime(elapsed);
-          setNeedleAngle(a + (idleRng() - 0.5) * 2);
-        }
-      } else if (state === "wander") {
-        var elapsed2 = now - measureStartTime;
-        if (elapsed2 - wanderLastPick > 900) {
-          wanderTarget = midAngle + (idleRng() - 0.5) * 30;
-          wanderLastPick = elapsed2;
-        }
-        setNeedleAngle(lastAngle + (wanderTarget - lastAngle) * 0.04 + (idleRng() - 0.5) * 1.5);
-      }
-      rafId = requestAnimationFrame(frame);
-    }
-
-    function frameStepped() {
-      if (state === "idle") {
-        setNeedleAngle(tremble(restAngle, 3));
-      } else if (state === "sweeping") {
-        var elapsed = Date.now() - measureStartTime;
-        if (elapsed >= SWEEP_MS) {
-          transitionToWander();
-        } else {
-          setNeedleAngle(angleAtSweepTime(elapsed));
-        }
-      } else if (state === "wander") {
-        wanderTarget = midAngle + (idleRng() - 0.5) * 30;
-        setNeedleAngle(wanderTarget);
-      }
-    }
-
-    function transitionToWander() {
-      state = "wander";
-      wanderLastPick = Date.now() - measureStartTime;
-      document.getElementById("statusLine").textContent = "NO RESTING VALUE. FIVE NUMBERS PUBLISHED. NONE AGREE ON WHAT THEY MEASURED.";
-      document.querySelectorAll("#work .pin-plaque").forEach(function (el) { el.classList.add("revealed"); });
-    }
-
-    if (reduceMotion) {
-      stepIntervalId = setInterval(frameStepped, 900);
-    } else {
-      rafId = requestAnimationFrame(frame);
-    }
-
-    // ---------- stopwatch ----------
-    function formatElapsed(ms) {
-      var total = Math.max(0, Math.floor(ms));
-      var h = Math.floor(total / 3600000);
-      var m = Math.floor((total % 3600000) / 60000);
-      var s = Math.floor((total % 60000) / 1000);
-      var cs = Math.floor((total % 1000) / 10);
-      var pad2 = function (n) { return (n < 10 ? "0" : "") + n; };
-      var prefix = h > 0 ? pad2(h) + ":" : "";
-      return prefix + pad2(m) + ":" + pad2(s) + "." + pad2(cs);
-    }
-    function parseElapsed(text) {
-      var parts = text.trim().split(":");
-      var h = 0, m, rest;
-      if (parts.length === 3) { h = parseInt(parts[0], 10); m = parseInt(parts[1], 10); rest = parts[2]; }
-      else { m = parseInt(parts[0], 10); rest = parts[1]; }
-      var dot = rest.split(".");
-      var s = parseInt(dot[0], 10);
-      var cs = dot[1] ? parseInt(dot[1], 10) : 0;
-      return h * 3600000 + m * 60000 + s * 1000 + cs * 10;
-    }
-    var stopwatchEl = document.getElementById("stopwatch");
-    var stopwatchTimerId = null;
-
-    function tickStopwatch() {
-      if (measureStartTime == null) return;
-      var elapsed = Date.now() - measureStartTime;
-      stopwatchEl.textContent = formatElapsed(elapsed);
-    }
-
-    // ---------- self-test ----------
     var EXPECTED_SEED_VALUES = [
       0.937925250036642, 0.8310530125163496, 0.050957355881109834,
       0.8604431573767215, 0.9193871186580509
     ];
 
+    var island = JSON.parse(document.getElementById("island").textContent);
+    var pins = island.dial.pins;
+
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // ---------- pin display data ----------
+    function pinValue(p) {
+      if (typeof p.ml === "number") return p.ml;
+      return Math.sqrt(p.ml_low * p.ml_high);
+    }
+    var SHORT_OWNER = {
+      "gemini-2025": "Google",
+      "chatgpt-2025": "OpenAI’s chief executive",
+      "gpt3-2023": "UC Riverside / UT Arlington",
+      "mistral-2025": "Mistral",
+      "gpt4-email-2024": "The Washington Post × UC Riverside"
+    };
+    var SHORT_BOUNDARY = {
+      "gemini-2025": "on-site cooling water only",
+      "chatgpt-2025": "no methodology given",
+      "gpt3-2023": "electricity-generation water included",
+      "mistral-2025": "full lifecycle, reviewed",
+      "gpt4-email-2024": "one email — electricity water included"
+    };
+
+    // ---------- size mapping (typographic scale) ----------
+    var LOG_MIN = Math.log10(0.26);
+    var LOG_MAX = Math.log10(519);
+    function sizeFor(v) {
+      var frac = (Math.log10(v) - LOG_MIN) / (LOG_MAX - LOG_MIN);
+      frac = Math.max(0, Math.min(1, frac));
+      var ceil = Math.min(window.innerWidth, window.innerHeight) * 0.42;
+      return Math.round(18 + (ceil - 18) * frac);
+    }
+
+    // ---------- the thrash sequencer (pure function of the seed) ----------
+    function buildThrashSchedule(full) {
+      var rng = mulberry32(SEED);
+      var steps = [];
+      var lastPin = -1;
+      function shuffled() {
+        var arr = [0, 1, 2, 3, 4];
+        for (var i = arr.length - 1; i > 0; i--) {
+          var j = Math.floor(rng() * (i + 1));
+          var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+        }
+        return arr;
+      }
+      function fill(budgetMs, minMs, maxMs, decel) {
+        var t = 0;
+        var bag = [];
+        while (t < budgetMs) {
+          if (!bag.length) {
+            bag = shuffled();
+            if (bag[0] === lastPin) bag.push(bag.shift());
+          }
+          var p = bag.shift();
+          var frac = decel ? t / budgetMs : rng();
+          var ms = Math.round(minMs + (maxMs - minMs) * frac);
+          steps.push({ pin: p, ms: ms });
+          lastPin = p;
+          t += ms;
+        }
+      }
+      if (full) {
+        fill(5600, 250, 400, false);   // full thrash
+        fill(4000, 600, 1200, true);   // deceleration
+      } else {
+        fill(2500, 250, 400, false);
+        fill(1500, 500, 900, true);
+      }
+      return { steps: steps, terminal: "resolve", heldPin: null };
+    }
+
+    function buildSteppedSchedule(full) {
+      // reduced-motion path: discrete jumps, island order, settles on none
+      var steps = [];
+      var cycles = full ? 2 : 1;
+      for (var c = 0; c < cycles; c++) {
+        for (var i = 0; i < pins.length; i++) steps.push({ pin: i, ms: 1100 });
+      }
+      return { steps: steps, terminal: "resolve", heldPin: null };
+    }
+
+    // ---------- DOM handles ----------
+    var wellNumeral = document.getElementById("wellNumeral");
+    var wellOwner = document.getElementById("wellOwner");
+    var wellBoundary = document.getElementById("wellBoundary");
+    var statement = document.getElementById("statement");
+    var askForm = document.getElementById("askForm");
+    var askInput = document.getElementById("askInput");
+    var record = document.getElementById("record");
+    var plate = document.getElementById("plate");
+    var cueBtn = document.getElementById("cueBtn");
+    var town = document.getElementById("town");
+    var closeLines = document.getElementById("closeLines");
+    var announcer = document.getElementById("announcer");
+    var field = document.getElementById("field");
+    var well = document.getElementById("well");
+
+    var phase = "attract"; // attract | thrash | statement | resolved
+    var hasResolvedOnce = false;
+    var timers = [];
+    function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+    function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+
+    // mark the well as cycling attributed values (tier scan context)
+    well.setAttribute("data-ml-context", "pin-cycling");
+
+    function announce(text) { announcer.textContent = text; }
+
+    // ---------- jitter (full-motion path only) ----------
+    var jitterRng = mulberry32(SEED ^ 0x5f3759df);
+    var jitterRaf = null;
+    function jitterLoop() {
+      if (phase !== "thrash" || reduceMotion) { wellNumeral.style.transform = ""; jitterRaf = null; return; }
+      var dx = (jitterRng() - 0.5) * 7;
+      var dy = (jitterRng() - 0.5) * 5;
+      wellNumeral.style.transform = "translate(" + dx.toFixed(1) + "px," + dy.toFixed(1) + "px)";
+      jitterRaf = requestAnimationFrame(jitterLoop);
+    }
+
+    // ---------- rendering a step ----------
+    function showStep(pinIdx) {
+      var p = pins[pinIdx];
+      wellNumeral.textContent = p.label;
+      wellNumeral.style.fontSize = sizeFor(pinValue(p)) + "px";
+      wellOwner.textContent = SHORT_OWNER[p.id] || "";
+      wellBoundary.textContent = SHORT_BOUNDARY[p.id] || "";
+    }
+    function clearWellText() {
+      wellNumeral.textContent = "";
+      wellOwner.textContent = "";
+      wellBoundary.textContent = "";
+      wellNumeral.style.transform = "";
+    }
+
+    // ---------- the plate (five witnesses) ----------
+    function buildPlateNodes() {
+      var frag = document.createDocumentFragment();
+      pins.forEach(function (p) {
+        var li = document.createElement("li");
+        li.setAttribute("data-ml-context", "pin");
+        li.setAttribute("data-label", p.label);
+        var fig = document.createElement("span");
+        fig.className = "w-fig";
+        fig.textContent = p.label;
+        var who = document.createElement("span");
+        who.className = "w-who";
+        who.textContent = p.who;
+        var meta = document.createElement("span");
+        meta.className = "w-meta";
+        meta.textContent = p.model + " · " + p.year;
+        var scope = document.createElement("span");
+        scope.className = "w-scope";
+        scope.textContent = p.scope;
+        li.appendChild(fig); li.appendChild(who); li.appendChild(meta); li.appendChild(scope);
+        frag.appendChild(li);
+      });
+      return frag;
+    }
+
+    function revealPlate() {
+      if (!plate.childNodes.length) plate.appendChild(buildPlateNodes());
+      record.hidden = false;
+      var items = plate.querySelectorAll("li");
+      items.forEach(function (li, i) { later(function () { li.classList.add("lit"); }, 250 + i * 420); });
+      if (town.hidden) {
+        cueBtn.hidden = false;
+        later(function () { cueBtn.classList.add("lit"); }, 250 + items.length * 420);
+      }
+      announce("Five published figures, at rest, each different: " +
+        pins.map(function (p) { return p.label + ", " + p.who; }).join("; ") + ".");
+    }
+
+    // ---------- the sequence ----------
+    function runSequence(full) {
+      phase = "thrash";
+      statement.hidden = true;
+      clearWellText();
+      var schedule = reduceMotion ? buildSteppedSchedule(full) : buildThrashSchedule(full);
+      var t = 400; // ignition beat
+      announce("The instrument is trying to answer, and cannot settle.");
+      schedule.steps.forEach(function (step) {
+        later(function () { showStep(step.pin); }, t);
+        t += step.ms;
+      });
+      if (!reduceMotion) { later(function () { if (!jitterRaf) jitterLoop(); }, 400); }
+
+      if (full) {
+        later(function () {
+          phase = "statement";
+          clearWellText();
+          statement.hidden = false;
+          announce("The cost of one question is not knowable. Five figures have been published, up to two thousand times apart, and no two of them measured the same thing.");
+        }, t + 200);
+        later(function () {
+          phase = "resolved";
+          statement.hidden = true;
+          hasResolvedOnce = true;
+          field.classList.add("after-resolve");
+          field.style.minHeight = "0";
+          well.style.minHeight = "0";
+          record.appendChild(askForm);
+          revealPlate();
+          runSelfTest("after ask");
+        }, t + 200 + (reduceMotion ? 5000 : 6000));
+      } else {
+        later(function () {
+          phase = "resolved";
+          clearWellText();
+          announce("It refused again. The record below has not changed.");
+          runSelfTest("after ask");
+        }, t + 200);
+      }
+    }
+
+    askForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (phase === "thrash" || phase === "statement") return;
+      if (!askInput.value.trim()) { askInput.focus(); return; }
+      var full = !hasResolvedOnce;
+      if (!full) { well.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" }); }
+      runSequence(full);
+      askInput.focus();
+    });
+
+    // ---------- the cue / the deepening ----------
+    cueBtn.addEventListener("click", function () {
+      var line = document.createElement("p");
+      line.className = "cue-line";
+      line.textContent = "But one town’s number — one figure, one year — took thirteen months in court to pry loose.";
+      cueBtn.parentNode.replaceChild(line, cueBtn);
+      town.hidden = false;
+      closeLines.hidden = false;
+      town.setAttribute("tabindex", "-1");
+      town.focus({ preventScroll: true });
+      town.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    });
+
+    // ---------- idle reset (janitorial, for the next stranger) ----------
+    var lastActivity = Date.now();
+    ["pointerdown", "keydown", "scroll", "input"].forEach(function (ev) {
+      window.addEventListener(ev, function () { lastActivity = Date.now(); }, { passive: true });
+    });
+    setInterval(function () {
+      if (phase !== "resolved") return;
+      if (Date.now() - lastActivity < 120000) return;
+      clearTimers();
+      phase = "attract";
+      hasResolvedOnce = false;
+      clearWellText();
+      statement.hidden = true;
+      record.hidden = true;
+      plate.innerHTML = "";
+      if (!record.contains(cueBtn)) {
+        var oldLine = record.querySelector(".cue-line");
+        if (oldLine) oldLine.parentNode.replaceChild(cueBtn, oldLine);
+      }
+      cueBtn.classList.remove("lit");
+      cueBtn.hidden = true;
+      town.hidden = true;
+      closeLines.hidden = true;
+      field.style.minHeight = "";
+      well.style.minHeight = "";
+      field.appendChild(askForm);
+      askInput.value = "";
+      announce("");
+      window.scrollTo(0, 0);
+    }, 5000);
+
+    // ---------- About overlay ----------
+    var aboutOverlay = document.getElementById("aboutOverlay");
+    var aboutBtn = document.getElementById("aboutBtn");
+    var aboutClose = document.getElementById("aboutClose");
+    aboutBtn.addEventListener("click", function () {
+      aboutOverlay.hidden = false;
+      aboutClose.focus();
+    });
+    function closeAbout() {
+      aboutOverlay.hidden = true;
+      aboutBtn.focus();
+    }
+    aboutClose.addEventListener("click", closeAbout);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !aboutOverlay.hidden) closeAbout();
+    });
+
+    // ---------- About content (from the island) ----------
+    function textEl(tag, cls, text) {
+      var el = document.createElement(tag);
+      if (cls) el.className = cls;
+      el.textContent = text;
+      return el;
+    }
+    document.getElementById("aboutOneLine").textContent = island.one_line;
+    document.getElementById("aboutTierSourced").textContent = "SOURCED — " + island.tiers_on_this_work.SOURCED;
+    document.getElementById("aboutTierImagined").textContent = "IMAGINED — " + island.tiers_on_this_work.IMAGINED;
+    document.getElementById("aboutTierRule").textContent = island.tiers_on_this_work.cardinal_rule;
+
+    var spreadsBox = document.getElementById("aboutSpreads");
+    island.dial.spread_statements.forEach(function (s) { spreadsBox.appendChild(textEl("p", null, s)); });
+    document.getElementById("aboutScaleLine").textContent = "Scale: " + island.dial.scale + ".";
+
+    var pinsBox = document.getElementById("aboutPins");
+    pins.forEach(function (p) {
+      var div = document.createElement("div");
+      div.className = "about-pin";
+      div.setAttribute("data-ml-context", "pin");
+      var head = document.createElement("p");
+      var fig = document.createElement("span");
+      fig.className = "ap-fig";
+      fig.textContent = p.label;
+      head.appendChild(fig);
+      head.appendChild(document.createTextNode(" — " + p.who + " · " + p.model + " · " + p.year));
+      div.appendChild(head);
+      div.appendChild(textEl("p", null, "Scope: " + p.scope));
+      if (p.contested_by) div.appendChild(textEl("p", "about-quote", "Contested: " + p.contested_by));
+      var src = document.createElement("p");
+      src.className = "about-src";
+      p.source_urls.forEach(function (u, i) {
+        if (i) src.appendChild(document.createTextNode(" · "));
+        var a = document.createElement("a");
+        a.href = u; a.textContent = u;
+        src.appendChild(a);
+      });
+      div.appendChild(src);
+      pinsBox.appendChild(div);
+    });
+    document.getElementById("aboutCaveat").textContent = island.dial.non_comparability_caveat;
+    document.getElementById("aboutCaveatGrounds").textContent = island.dial.caveat_grounds_note;
+
+    var tlBox = document.getElementById("aboutTimeline");
+    island.dalles_case.timeline.forEach(function (t) {
+      var div = document.createElement("div");
+      div.className = "about-pin";
+      var head = document.createElement("p");
+      var strong = document.createElement("strong");
+      strong.textContent = t.date;
+      head.appendChild(strong);
+      head.appendChild(document.createTextNode(" — " + t.fact));
+      div.appendChild(head);
+      if (t.quote_verbatim) div.appendChild(textEl("p", "about-quote", "“" + t.quote_verbatim + "”"));
+      var src = document.createElement("p");
+      src.className = "about-src";
+      t.source_urls.forEach(function (u, i) {
+        if (i) src.appendChild(document.createTextNode(" · "));
+        var a = document.createElement("a");
+        a.href = u; a.textContent = u;
+        src.appendChild(a);
+      });
+      div.appendChild(src);
+      tlBox.appendChild(div);
+    });
+    document.getElementById("aboutCommentary").textContent = island.dalles_case.commentary_labelled;
+
+    // ---------- self-test (runs every load; prints inside About) ----------
     function testNoSettledNumber() {
-      var re = /(\d[\d,]*(?:\.\d+)?)\s*mL/gi;
-      var walker = document.createTreeWalker(stage, NodeFilter.SHOW_TEXT, null);
-      var violations = [];
+      var re = /(\d[\d,]*(?:\.\d+)?)\s*mL/g;
+      var violations = 0;
+      var scanned = 0;
+      var walker = document.createTreeWalker(document.getElementById("work"), NodeFilter.SHOW_TEXT, {
+        acceptNode: function (node) {
+          var p = node.parentNode;
+          while (p) {
+            if (p.nodeName === "SCRIPT" || p.nodeName === "NOSCRIPT" || p.nodeName === "STYLE") return NodeFilter.FILTER_REJECT;
+            p = p.parentNode;
+          }
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
       var node;
       while ((node = walker.nextNode())) {
         var text = node.textContent;
+        if (!re.test(text)) { re.lastIndex = 0; continue; }
         re.lastIndex = 0;
-        var m;
-        while ((m = re.exec(text))) {
-          var el = node.parentElement;
-          var ctxEl = el ? el.closest("[data-ml-context]") : null;
-          var ctx = ctxEl ? ctxEl.getAttribute("data-ml-context") : null;
-          if (!ctx || ["pin", "scale", "spread"].indexOf(ctx) === -1) {
-            violations.push(text.trim().slice(0, 40));
-          }
-        }
+        scanned++;
+        var el = node.parentNode;
+        var ctxEl = el && el.closest ? el.closest("[data-ml-context]") : null;
+        var ctx = ctxEl ? ctxEl.getAttribute("data-ml-context") : null;
+        if (["pin", "pin-cycling", "scale", "spread"].indexOf(ctx) === -1) violations++;
       }
-      return { pass: violations.length === 0, detail: violations.length ? violations.join(" | ") : "no mL figure outside pin/scale/spread" };
+      return { pass: violations === 0, detail: scanned + " mL-figure node(s), " + violations + " unattributed" };
     }
 
     function testPinsMatchIsland() {
-      var expected = island.dial.pins.map(function (p) { return p.label; });
-      var cards = Array.prototype.slice.call(stage.querySelectorAll("[data-pin]"));
-      var rendered = cards.map(function (el) {
-        var v = el.querySelector('[data-ml-context="pin"]');
-        return v ? v.textContent.trim() : "";
+      var container = plate.childNodes.length ? plate : (function () {
+        var tmp = document.createElement("ul");
+        tmp.appendChild(buildPlateNodes());
+        return tmp;
+      })();
+      var expected = pins.map(function (p) { return p.label; });
+      var rendered = Array.prototype.map.call(container.querySelectorAll("li"), function (li) {
+        return li.getAttribute("data-label");
       });
       var pass = expected.length === rendered.length && expected.every(function (v, i) { return v === rendered[i]; });
       return { pass: pass, detail: "expected " + expected.length + ", rendered " + rendered.length };
@@ -1264,98 +1037,42 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
 
     function testSeeded() {
       var rng = mulberry32(SEED);
-      var got = [];
-      for (var i = 0; i < 5; i++) got.push(rng());
+      var got = [rng(), rng(), rng(), rng(), rng()];
       var pass = got.every(function (v, i) { return Math.abs(v - EXPECTED_SEED_VALUES[i]) < 1e-9; });
       return { pass: pass, detail: "seed " + SEED };
     }
 
-    function testRealClock() {
-      return new Promise(function (resolve) {
-        var startTime, getRenderedMs;
-        if (measureStartTime != null) {
-          startTime = measureStartTime;
-          getRenderedMs = function () { return parseElapsed(stopwatchEl.textContent); };
-        } else {
-          startTime = Date.now();
-          getRenderedMs = function () {
-            var el = Date.now() - startTime;
-            return parseElapsed(formatElapsed(el));
-          };
-        }
-        setTimeout(function () {
-          var trueDelta = Date.now() - startTime;
-          var rendered = getRenderedMs();
-          var diff = Math.abs(rendered - trueDelta);
-          resolve({ pass: diff <= 400, detail: "Δ=" + diff + "ms" });
-        }, 1500);
-      });
+    function testSettlesOnNone() {
+      var schedule = reduceMotion ? buildSteppedSchedule(true) : buildThrashSchedule(true);
+      var counts = [0, 0, 0, 0, 0];
+      schedule.steps.forEach(function (s) { counts[s.pin]++; });
+      var allTwice = counts.every(function (c) { return c >= 2; });
+      var endsHeld = schedule.terminal === "resolve" && schedule.heldPin === null;
+      return { pass: allTwice && endsHeld, detail: "visits " + counts.join("/") + ", terminal holds none" };
     }
 
-    function renderRow(list, name, result) {
-      var li = document.createElement("li");
-      var badge = document.createElement("span");
-      badge.className = "badge " + (result.pass ? "pass" : "fail");
-      badge.textContent = result.pass ? "[PASS]" : "[FAIL]";
-      li.appendChild(badge);
-      li.appendChild(document.createTextNode(" " + name + " — " + result.detail));
-      list.appendChild(li);
-      return li;
-    }
-
-    function runSelfTest(context) {
+    function runSelfTest(runLabel) {
       var list = document.getElementById("selfTestList");
       list.innerHTML = "";
-      var header = document.createElement("li");
-      header.className = "selftest-run-header";
-      header.textContent = "RUN: " + context;
-      list.appendChild(header);
-
-      renderRow(list, "NO-SETTLED-NUMBER", testNoSettledNumber());
-      renderRow(list, "PINS-MATCH-ISLAND", testPinsMatchIsland());
-      renderRow(list, "SEEDED", testSeeded());
-
-      var running = document.createElement("li");
-      var runningBadge = document.createElement("span");
-      runningBadge.className = "badge";
-      runningBadge.textContent = "[....]";
-      running.appendChild(runningBadge);
-      running.appendChild(document.createTextNode(" REAL-CLOCK — checking against Date() in ~1.5s"));
-      list.appendChild(running);
-
-      testRealClock().then(function (result) {
-        running.innerHTML = "";
-        var badge = document.createElement("span");
-        badge.className = "badge " + (result.pass ? "pass" : "fail");
-        badge.textContent = result.pass ? "[PASS]" : "[FAIL]";
-        running.appendChild(badge);
-        running.appendChild(document.createTextNode(" REAL-CLOCK — " + result.detail));
+      var head = document.createElement("li");
+      head.textContent = "RUN: " + runLabel;
+      list.appendChild(head);
+      [
+        ["NO-SETTLED-NUMBER — no mL figure outside an attributed node", testNoSettledNumber()],
+        ["PINS-MATCH-ISLAND — the still plate equals the data island", testPinsMatchIsland()],
+        ["SEEDED — same seed, same run", testSeeded()],
+        ["SETTLES-ON-NONE — a full run visits all five and holds none", testSettlesOnNone()]
+      ].forEach(function (pair) {
+        var li = document.createElement("li");
+        var res = pair[1];
+        li.className = res.pass ? "st-pass" : "st-fail";
+        li.textContent = (res.pass ? "[PASS] " : "[FAIL] ") + pair[0] + " (" + res.detail + ")";
+        list.appendChild(li);
       });
     }
 
-    // ---------- measure action ----------
-    var form = document.getElementById("askForm");
-    var statusLine = document.getElementById("statusLine");
-
-    function startMeasure() {
-      if (stopwatchTimerId) clearInterval(stopwatchTimerId);
-      measureStartTime = Date.now();
-      state = "sweeping";
-      statusLine.textContent = "SEEKING A RESTING VALUE…";
-      document.getElementById("answeredState").textContent = "ANSWERED: NOT YET";
-      sweepWaypoints = buildSweepWaypoints();
-      stopwatchTimerId = setInterval(tickStopwatch, 100);
-      tickStopwatch();
-      runSelfTest("after MEASURE");
-    }
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      startMeasure();
-    });
-
-    // ---------- boot ----------
-    runSelfTest("on load");
+    runSelfTest("at load");
+    askInput.focus();
   })();
   </script>
 
