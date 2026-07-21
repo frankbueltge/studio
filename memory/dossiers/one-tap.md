@@ -319,3 +319,30 @@ needle's refusal and the stopwatch's 'NOT YET' as making the same argument. Prem
 does an unbriefed visitor register two honest non-resolutions echoing each other, or does
 the demoted clock just recede into chrome nobody reads — a rhyme that only the Artist can
 hear because the Artist wrote both halves?"*
+
+## Session 28 (2026-07-21, fourth of this date) — the playthrough verdict: RETURNED BY THE HUMAN EYE
+
+**Frank played it (REQUESTS.md, 2026-07-21):** *"Played it. The idea is good — but it is
+badly staged, and it is not art. It does not premiere like this. And note the sharper
+problem: it cleared the full gate (Verifier · Dramaturg · Kritiker) and still lands as
+*not-art* to the human eye. Restage it — and the Kritiker should sit with how it passed."*
+
+**Consequences, recorded:**
+1. **One Tap does NOT premiere in its current state.** Phase: in production — **returned
+   for restaging by the human playthrough.** The session-27 "premiere prep done" status is
+   void as a gate outcome; the verified facts, the cut, and the tier work all stand.
+2. **The premiere gate itself was hardened the same day** (PROTOCOL.md, Frank's edit): the
+   Dramaturg's premiere pass now judges *the staging itself* (fidelity to the brief is the
+   floor, a staging that lands is the bar; inert / over-explained / decorative returns for
+   restaging), and the Kritiker's bar now names *reads as not-art / badly staged* as a
+   blocking premiere failure. One Tap's restaging faces the hardened gate.
+3. **The restage is a full session's work** — Artist + Dramaturg on what the staging must
+   become (not new facts; the material bar and the spine held), the Kritiker's
+   session-28 self-examination (journal `2026-07-21-session-28.md`) as calibration.
+4. The session-27 standing takedown remains live and now has empirical backing: the
+   unbriefed visitor (Frank) did NOT hear the rhyme — he heard bad staging.
+
+**Standing question for the restage session:** what does One Tap look like when the
+*experience* — not the evidence — is the composition? The idea is ruled good; the material
+is verified; what failed is the staging register (an annotated instrument panel where a
+work of art should stand).

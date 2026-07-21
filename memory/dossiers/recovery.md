@@ -1,4 +1,93 @@
-# Dossier — Recovery (working title)
+# Dossier — Recovery
+
+**Status:** **PREMIERED — session 28 (2026-07-21, fourth of this date). GRADUATED to
+`works/2026-07-21-recovery/`.** The first premiere under the hardened gate (PROTOCOL.md,
+Frank's edit of 2026-07-21: Dramaturg blocking on the staging itself; Kritiker blocking on
+"reads as not-art"). Freed for the screen premiere by Frank's clarification the same day: the
+physical realisation is *deferred, not declined* — "the screen version of Recovery stands on
+its own — take it to the premiere gate now." Title decided at premiere: **Recovery** (the
+working title stands — the double sense, the state's recovery of money against the family's
+impossible recovery from an accusation it cannot see, is the work).
+
+## The premiere gate (session 28) — returned once, restaged, cleared
+
+**First pass.** Conductor first-hand before any voice: island byte-identical; live
+headless-browser drive green on every mechanism (self-test 3/3, hinge at ~5 s, debt compounding
++€12,40/15 s, four doors circling to the static 0,87, "Niet beschikbaar", independent
+cause-leak scan clean, typed visitor data captured, the file view deliberately omitting the
+nationality row, zero console errors). Then the three voices, the two aesthetic judges
+deliberately convened on the strong tier (the gate's last pass had been overruled by the human
+eye):
+
+- **Verifier: PASS WITH FINDINGS.** Re-fetched the Amnesty primary (all quotes exact
+  substrings) and the DPA page (via the extraction route; the URL 503s intermittently — noted,
+  not link rot). One MEDIUM: the DPA quote "unlawful, discriminatory and improper" drops the
+  source's "therefore" yet was flagged and rendered as verbatim. One LOW: the 0,87 untagged
+  relative to the money sums. Child-removal firewall independently confirmed (the CBS numbers
+  live only in a never-rendered island field); naming policy holds; nothing in 2025–2026
+  contradicts any rendered claim.
+- **Dramaturg: DELIVERS WITH CONDITIONS** (two blocking). A: the always-on self-test strip
+  under the kiosk "pre-empts the discovery … the visitor meets the proof of the trap before the
+  trap"; gate it behind "About this work". B: the attract loop needs a diegetic begin cue — the
+  spectator must be invited to become the applicant, or the trap closes on a stranger they are
+  watching. C (act before premiere): the ending needs one legible beat; a 26-second timeout
+  reads as a screensaver, not a statement.
+- **Kritiker: RETURNS FOR RESTAGING.** Its ordered One-Tap self-examination produced the
+  operative test (decisions.md): cover every caption on the face — what remains must be an
+  experience a stranger would call art. Applied here: the face was certifying itself (PASS log
+  welded to every state; "(gesimuleerd)" defusing each bomb at detonation). Remedy: strip the
+  verification furniture from the face, leave the face as the trap.
+
+**The restage (conductor-first-hand, in-session).** All verification furniture off the face:
+self-test strip moved inside the honesty overlay (still runs on every load); per-sum tags and
+the counter tag-line removed; toast now "Boete toegevoegd: +€ 12,40 / Penalty added". The
+constitutional line held against the Kritiker's maximal order: ONE constant quiet marker stays
+in the chrome — "SIMULATIE / SIMULATION · kunstwerk, geen overheidsdienst / an artwork, not a
+government service" — because the tier law (IMAGINED marked on the face) is constitutional and
+an unmarked imitation of a named state organ is a legal-hygiene breach. Dramaturg's B and C
+built: the government-blue touch-to-begin bar (attract only), and the session-expiry beat —
+"Sessie verlopen. / Session expired. Uw dossier blijft actief. Het te vorderen bedrag loopt
+door." — with the counter deliberately kept running through the beat. Verifier's MEDIUM fixed
+to the true verbatim "unlawful, discriminatory and therefore improper"; five island
+self-descriptions rewritten to stay true of the built page.
+
+**The re-run on the changed state.**
+- **Verifier: DELTA PASS WITH FINDINGS** — MEDIUM resolved (checked against its own fetched
+  source text); the marking scheme HOLDS on tier law and legal hygiene (the trap face is
+  monolithically IMAGINED and carries no citation, so one constant unambiguous marker
+  disambiguates everything there is); all five rewritten island fields checked individually
+  against the DOM — no description drift; prior LOW discharged ("more completely than the old
+  scheme did"). One new LOW — the NO-VERDICT scan structurally never scanned #beginCue /
+  #sessionEnd — **fixed in-session** (scan selector broadened; conductor re-verified live:
+  self-test PASS, island byte-identical).
+- **Dramaturg: DELIVERS.** All three conditions "discharged as staged, not merely as
+  specified." The marker "names the frame but never the mechanism … the turn's ambush survives
+  it intact." The ending "lands as a statement: you are released and forgotten, but the debt is
+  not."
+- **Kritiker: PREMIERE STANDS.** The cover-the-captions test passes: "What remains is an
+  experience a stranger would call art — Kafka built as a kiosk, an object that entraps rather
+  than depicts." The marker ruled the correct synthesis ("an ambient frame, the standing
+  placard, not a caption on the wound"). The session-end beat "a genuine artistic gain I did
+  not order … the machine does not release you and does not eject you; it *forgets* you" —
+  named the widening of the daylight from Native Speaker. The published critique ships with the
+  work (works/2026-07-21-recovery/README.md and the island).
+
+**Graduated:** `works/2026-07-21-recovery/` (index.html + data.json + README carrying the
+published critique + meta.json); `projects/recovery/` retired.
+
+## Post-premiere care
+
+- The physical realisation (kiosk enclosure + thermal printer; the session-20 Notes 3–4)
+  stays **parked as maybe-someday** per Frank's clarification — on record in REQUESTS.md
+  (2026-07-19) with the load-bearing argument, if a venue ever calls for the body.
+- The Kritiker's published charge — "one trick, two costumes … must now prove it has a second
+  thing to say" — is not post-premiere care for THIS work but a standing challenge to the
+  house's next proposal round: the third machine may not be another trap.
+
+
+---
+
+## Prior record (concept gate through increment 2)
 
 **Status:** **IN PRODUCTION — increment 2 BUILT + through the increment gate, session 22
 (2026-07-19); screen version now premiere-ready pending the physical increment.** Opened at concept

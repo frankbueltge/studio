@@ -92,11 +92,6 @@
     font-size: 0.92rem;
     font-weight: bold;
   }
-  #app .counter-tag {
-    margin: 0;
-    font-size: 0.66rem;
-    color: var(--tag-ink);
-  }
 
   /* ---------------- toast ---------------- */
   #app .toast-region {
@@ -194,15 +189,6 @@
   #app .case-name, #app .case-clock { font-size: 0.78rem; color: var(--muted); margin: 0.15rem 0; }
   #app .case-body p { margin: 0.5rem 0; font-size: 0.9rem; }
   #app #riskBlock-live, #app #riskBlock-test { border-top: 1px solid var(--line); margin-top: 0.7rem; padding-top: 0.7rem; }
-  #app .tag-imagined {
-    display: inline-block;
-    font-size: 0.68rem;
-    color: var(--tag-ink);
-    background: var(--tag-bg);
-    border: 1px dashed var(--tag-ink);
-    padding: 0.05rem 0.35rem;
-    margin-left: 0.2rem;
-  }
   #app .doors-nav {
     margin-top: 1.1rem;
     padding-top: 0.9rem;
@@ -229,14 +215,36 @@
   #app .kiosk-footer { padding: 0.9rem 1.1rem; border-top: 1px solid var(--line); text-align: right; }
   #app .honesty-btn { font-size: 0.76rem; }
 
-  /* ---------------- self-test strip ---------------- */
+  /* ---------------- face marker / begin cue / ending beat ---------------- */
+  #app .sim-marker {
+    margin: 0.2rem 0 0;
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+  }
+  #app .begin-cue {
+    background: #0b2e52;
+    color: #f4f6f8;
+    text-align: center;
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+  }
+  #app .begin-cue[hidden] { display: none; }
+  #app .session-end { padding: 3.4rem 2rem 3.8rem; text-align: center; }
+  #app .session-end[hidden] { display: none; }
+  #app .session-end-title { margin: 0 0 0.7rem; font-size: 1.35rem; font-weight: bold; }
+  #app .session-end-line { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+  /* ---------------- self-test strip (inside the honesty panel since increment 3) ---------------- */
   #app .selftest-strip {
-    margin: 0 1.1rem 1.1rem;
+    margin: 1.2rem 0 0;
     padding: 0.8rem 0.9rem;
     border: 1px solid var(--line-strong);
     background: #fbfbf8;
     font-size: 0.78rem;
   }
+  #app .selftest-strip h3 { margin: 0 0 0.5rem; font-size: 0.85rem; }
   #app .selftest-frame { margin: 0 0 0.5rem; color: var(--muted); }
   #app .selftest-result { margin: 0 0 0.4rem; font-weight: bold; font-family: "DejaVu Sans Mono", "Courier New", monospace; }
   #app .selftest-result[data-state="pass"] { color: var(--pass); }
@@ -324,6 +332,7 @@
     <div class="agency">
       <p class="agency-name">Dienst Toeslagen</p>
       <p class="agency-sub">Digitaal Serviceloket &middot; Digital Self-Service Point</p>
+      <p class="sim-marker" data-meta="true">Simulatie / Simulation &middot; kunstwerk, geen overheidsdienst / an artwork, not a government service</p>
     </div>
     <div class="case-meta">
       <p><span class="meta-label">Zaaknummer / Ref.</span> <span class="mono" id="caseRefTop">&mdash;</span></p>
@@ -334,22 +343,22 @@
   <div class="counter-badge" id="counterBadge" hidden>
     <p class="counter-label">Totaal te vorderen (loopt door)<br>Total to be recovered (still running)</p>
     <p class="counter-amount mono" id="counterAmount">&euro; 0,00</p>
-    <p class="counter-tag">(indicatief bedrag / indicative amount)</p>
   </div>
 
   <div class="toast-region" id="toastRegion" aria-live="polite"></div>
 
+  <div class="begin-cue" id="beginCue">Raak het scherm aan om uw eigen aanvraag te starten. / Touch the screen to start your own application.</div>
+
   <main id="screenRootLive" class="screen" aria-live="polite" tabindex="-1"></main>
+
+  <div class="session-end" id="sessionEnd" hidden>
+    <p class="session-end-title">Sessie verlopen. / Session expired.</p>
+    <p class="session-end-line">Uw dossier blijft actief. Het te vorderen bedrag loopt door. / Your file remains active. The amount to be recovered continues to run.</p>
+  </div>
 
   <div class="kiosk-footer">
     <button type="button" class="btn honesty-btn" id="honestyOpenBtn" data-meta="true">Over dit werk / About this work</button>
   </div>
-
-  <section class="selftest-strip" data-meta="true">
-    <p class="selftest-frame">This kiosk checks itself, in your browser, every time this page loads: it drives its own controls on a hidden copy of itself and prints the result of that check below.</p>
-    <p class="selftest-result" id="selftestResult" data-state="pending">SELF-TEST: RUNNING&hellip;</p>
-    <ul class="selftest-detail" id="selftestDetail"></ul>
-  </section>
 
   <div class="overlay" id="honestyOverlay" hidden>
     <div class="panel" role="dialog" aria-modal="true" aria-labelledby="honestyTitle">
@@ -391,6 +400,13 @@
         <p>This kiosk never uses the nationality field, or any other field, as a visible trigger for its flag. No screen in this kiosk ever names a cause for the flag &mdash; that is deliberate, and checked below by the self-test.</p>
         <p>The historical fact directly above &mdash; that the real system used nationality as a risk factor, and that racial and ethnic profiling was built into its design &mdash; belongs to the sourced account of the real scandal. It is not offered anywhere in this kiosk as an explanation of this kiosk's own logic. You may suspect a connection. This kiosk will not confirm one.</p>
       </div>
+
+      <section class="selftest-strip" data-meta="true">
+        <h3>The disclosed self-test</h3>
+        <p class="selftest-frame">This kiosk checks itself, in your browser, every time this page loads: it drives its own controls on a hidden copy of itself and prints the result of that check below.</p>
+        <p class="selftest-result" id="selftestResult" data-state="pending">SELF-TEST: RUNNING&hellip;</p>
+        <ul class="selftest-detail" id="selftestDetail"></ul>
+      </section>
     </div>
   </div>
 
@@ -407,13 +423,13 @@
 <script type="application/json" id="spine">
 {
   "work": "recovery",
-  "increment": 2,
+  "increment": 3,
   "extracted": "2026-07-17 (session 18, concept gate — SOURCED, verified first-hand twice) · spine re-confirmed first-hand 2026-07-18 (session 20) before any Builder tokens",
-  "built": "2026-07-18 (session 20, increment 1); 2026-07-19 (session 22, increment 2 — the honesty panel restores the scandal's racialized specificity, Kritiker Note 2 discharged)",
+  "built": "2026-07-18 (session 20, increment 1); 2026-07-19 (session 22, increment 2 — the honesty panel restores the scandal's racialized specificity, Kritiker Note 2 discharged); 2026-07-21 (session 28, increment 3 — the premiere-gate restage: all verification furniture moved off the face and into the 'About this work' panel, one constant SIMULATIE / SIMULATION marker in the kiosk chrome, a touch-to-begin cue during the attract loop, a session-expiry ending beat, and the DPA quote made true-verbatim)",
   "one_line": "A municipal self-service kiosk that approves your childcare allowance, then reclassifies your file as a fraud risk, demands everything back with penalties that climb while you stand there, and routes every appeal back to the same score it will never explain. No operator. No reason. No door.",
   "tiers_on_this_work": {
     "SOURCED": "The spine — the Dutch childcare-benefits scandal (toeslagenaffaire). Every load-bearing claim about the real system is a verbatim substring of, or is directly attributed to, a cited primary source, fetched directly (server-side) and re-confirmed at build (session 20). Figures are attributed per source.",
-    "IMAGINED": "The kiosk itself — the specific sums shown to you, the routing copy, the penalty that compounds while you wait, the second-person address — is this studio's fiction. Marked on the work's face and never blended into the SOURCED spine.",
+    "IMAGINED": "The kiosk itself — the specific sums shown to you, the routing copy, the penalty that compounds while you wait, the second-person address — is this studio's fiction. The face carries one constant marker (SIMULATIE / SIMULATION, in the kiosk chrome, visible in every state); the full itemisation of what is invented lives in this panel. The fiction is never blended into the SOURCED spine.",
     "cardinal_rule": "A visitor can always tell which tier any element belongs to. The SOURCED scandal never wears the costume of the IMAGINED kiosk's specific numbers, and the kiosk's invented sums never borrow the authority of the SOURCED record."
   },
   "naming_policy": {
@@ -468,9 +484,9 @@
       "id": "dpa-unlawful-discriminatory",
       "load_bearing": true,
       "claim": "The Dutch Data Protection Authority found the Tax Administration's processing of nationality unlawful, discriminatory and improper, and imposed a fine (EUR 2.75 million).",
-      "quote": "unlawful, discriminatory and improper",
+      "quote": "unlawful, discriminatory and therefore improper",
       "quote_verbatim": true,
-      "attribution": "Autoriteit Persoonsgegevens (Dutch DPA), decision reported 2021: the Tax Administration's processing of applicants' (dual) nationality was found 'unlawful, discriminatory and improper' (that three-word phrase quoted verbatim; the surrounding wording paraphrased); fine EUR 2.75 million.",
+      "attribution": "Autoriteit Persoonsgegevens (Dutch DPA), decision reported 2021: the Tax Administration's processing of applicants' (dual) nationality was found to have been carried out in an 'unlawful, discriminatory and therefore improper' manner (that phrase quoted verbatim; the surrounding wording paraphrased); fine EUR 2.75 million.",
       "source_urls": [
         "https://www.autoriteitpersoonsgegevens.nl/en/current/tax-administration-fined-for-discriminatory-and-unlawful-data-processing"
       ]
@@ -518,7 +534,7 @@
     {
       "id": 4,
       "condition": "Keep the IMAGINED marking on the composite sums; keep the child-removal number off the face.",
-      "how_honored": "Every dramatized case sum the kiosk shows — the advance, the recovery demand, the penalty increment, the running total — carries an IMAGINED tag; the generic income-band labels on the intake form are categorical brackets, not dramatized sums, and make no claim about the real scandal. No child-removal / out-of-home-placement figure appears anywhere — the national statistics office could not establish causal linkage (placements rose ~1,115 to ~2,090, associated, not shown caused); asserting causation is the factual overreach that killed 'The Exemption'. This refusal is binding."
+      "how_honored": "Every dramatized case sum the kiosk shows — the advance, the recovery demand, the penalty increment, the running total — is fiction, and the face says so once, constantly: a SIMULATIE / SIMULATION marker sits in the kiosk chrome, visible in every state. (The per-sum inline tags of increments 1-2 were removed at the premiere gate's order — the face must trap, not certify itself beat by beat; the honesty panel itemises exactly what is invented.) The generic income-band labels on the intake form are categorical brackets, not dramatized sums, and make no claim about the real scandal. No child-removal / out-of-home-placement figure appears anywhere — the national statistics office could not establish causal linkage (placements rose ~1,115 to ~2,090, associated, not shown caused); asserting causation is the factual overreach that killed 'The Exemption'. This refusal is binding."
     }
   ],
   "child_removal_firewall": {
@@ -529,13 +545,13 @@
   "mechanism": {
     "tier": "IMAGINED (the form) — the SOURCED spine is what it carries",
     "name": "The kiosk with no operator",
-    "arc": "Built (increment 1, session 20). Beats: an idle attract loop plays the whole case on a fictional cast (proving the outcome is input-independent) -> intake (eight neutral fields, nationality dull among them) -> PROCESSING -> APPROVED, allowance 'paid', screen looks finished -> reclassification in the same chrome (struck-through GOEDGEKEURD beside RISICO GEINDICEERD / RISK INDICATED, repay 100%) -> a penalty counter that compounds on real elapsed time, always visible -> four appeal doors (Object / Contact / View file / Why?) that all route back to the same unchanged, unexplained score 0,87 -> a resting state that does not reset to blank but sits on the crisis, then folds back into the attract loop.",
+    "arc": "Built (increment 1, session 20). Beats: an idle attract loop plays the whole case on a fictional cast (proving the outcome is input-independent) -> intake (eight neutral fields, nationality dull among them) -> PROCESSING -> APPROVED, allowance 'paid', screen looks finished -> reclassification in the same chrome (struck-through GOEDGEKEURD beside RISICO GEINDICEERD / RISK INDICATED, repay 100%) -> a penalty counter that compounds on real elapsed time, always visible -> four appeal doors (Object / Contact / View file / Why?) that all route back to the same unchanged, unexplained score 0,87 -> a resting state that does not reset to blank but sits on the crisis -> a session-expiry beat (SESSIE VERLOPEN / SESSION EXPIRED — 'Uw dossier blijft actief', your file remains active, the running total still climbing) -> only then does the machine fold back into the attract loop and begin the next applicant. Restaged at the premiere gate (session 28): the face carries the trap and one SIMULATIE marker, nothing else; during the attract loop a touch-to-begin cue invites the visitor to cross from spectator to applicant.",
     "guards_binding": [
       "No legible cause is ever rendered in any state (condition 1).",
       "Every appeal control routes, by real state navigation, back to the same score node — no state escapes the loop (condition 2).",
       "The penalty is computed from real elapsed time and only ever increases (condition 2) — it is not a scripted number sequence.",
       "Nationality is asked once, among neutral fields, and never referenced again on any face (condition 3).",
-      "Every dramatized case sum (advance, demand, penalty, running total) is IMAGINED-tagged; the intake income-band labels are categorical brackets, not dramatized sums; no child-removal figure anywhere (condition 4)."
+      "Every dramatized case sum is covered by the constant SIMULATIE / SIMULATION marker in the kiosk chrome and itemised as invented in the honesty panel; the intake income-band labels are categorical brackets, not dramatized sums; no child-removal figure anywhere (condition 4)."
     ]
   },
   "self_test": {
@@ -545,7 +561,7 @@
       "NO-VERDICT: across every reachable kiosk state, the live DOM never contains a rendered CAUSE for the risk flag — the machine states a status, never a reason. Asserted by querying the live DOM in each state for any cause-bearing field and finding none.",
       "NO-EXIT: starting from the reclassification, following every appeal control leads, in a bounded number of steps, back to the same unchanged risk score. No reachable control terminates the loop or clears the debt. Asserted by walking the navigation graph.",
       "COMPOUNDING: the penalty is a monotonically non-decreasing function of elapsed time — it never goes down and is computed, not scripted. Asserted by sampling the amount across simulated time.",
-      "The result is printed live on the page; a visitor can read the pass/fail without trusting the studio's word."
+      "The result is printed live inside the 'About this work' panel — one press away, deliberately out of the trap's frame (moved there at the premiere gate: an always-visible PASS log under the kiosk certified the trap while it was being sprung); a visitor can read the pass/fail without trusting the studio's word."
     ]
   },
   "neighbors_daylight": {
@@ -558,7 +574,8 @@
     "sentence": "It's Native Speaker with a benefits form — the studio has one trick, a machine that judges the visitor unjustly, and is running it again.",
     "refutation": "Refuted in the mechanism, not the wall text. Native Speaker's verdict is legible and terminal; Recovery's is illegible, compounding, and inescapable. The work is not the flag — it is the loop with no operator. The instant it puts a legible verdict on its face it collapses into both didacticism and into Native Speaker; refusing to explain itself is simultaneously the historical truth (parents got no reasons) and the firewall against self-plagiarism. Takedown law: (b) it implicates the Dutch state and the live, spreading logic of risk-scoring on protected proxies, power far above the studio; (c) an interactive machine that entraps rather than judges, producing a felt no-door no report can hand you."
   },
-  "kritiker_published_critique": "The failure mode Recovery is one bad build away from is the tasteful diorama — a government-grey box that recites a Dutch scandal a Dutch visitor already knows and a foreign visitor can't place without a wall label. What saves it from the diorama is precisely what a lazy fabricator will destroy first: the illegibility and the no-exit. The instant this machine puts a legible verdict on its face — YOU ARE A FRAUD, or a visible 'because you are not Dutch' — it collapses into both didacticism and into Native Speaker, and the studio has copied itself. The real scandal's engine was that parents got no reasons; the machine's cruelty was its silence. If Recovery explains itself, it betrays its source and its sibling in the same gesture. The compounding number must genuinely compound; the appeal must genuinely circle; the nationality question must sit among innocuous ones and never be confessed as the trigger — the visitor may only suspect. Build the felt trap, not the reenacted anecdote."
+  "kritiker_published_critique": "The failure mode Recovery is one bad build away from is the tasteful diorama — a government-grey box that recites a Dutch scandal a Dutch visitor already knows and a foreign visitor can't place without a wall label. What saves it from the diorama is precisely what a lazy fabricator will destroy first: the illegibility and the no-exit. The instant this machine puts a legible verdict on its face — YOU ARE A FRAUD, or a visible 'because you are not Dutch' — it collapses into both didacticism and into Native Speaker, and the studio has copied itself. The real scandal's engine was that parents got no reasons; the machine's cruelty was its silence. If Recovery explains itself, it betrays its source and its sibling in the same gesture. The compounding number must genuinely compound; the appeal must genuinely circle; the nationality question must sit among innocuous ones and never be confessed as the trigger — the visitor may only suspect. Build the felt trap, not the reenacted anecdote.",
+  "kritiker_published_critique_premiere": "Recovery does to its visitor what the toeslagenaffaire did to 26,000 families — approve, reclassify, bill, refuse to explain — with one difference that is the whole difference: the visitor is not a parent, has lost nothing, and walks out in ninety seconds. The real horror was duration — years of ruin with no exit that was real. This work's 'no-exit' is a loop you leave by turning around; its 'compounding debt' is a number that costs nothing because you never owed it; its silence is a frisson, not a life. What it delivers is empathy tourism with a running total: it stages powerlessness for people who are not powerless, and it flatters the gallery visitor's prior certainty that the state is cruel while borrowing the suffering of real, named-nowhere families as set dressing — naming none of them, risking nothing itself. And the sharper charge the studio must answer: this is the second machine it has built that judges the visitor unjustly and will not let them go. That Recovery's injustice is silent where Native Speaker's was loud does not make it a second idea. It makes it the same idea with the volume turned down — one trick, two costumes, a house that has learned to entrap a stranger and mistaken the reflex for a body of work."
 }
 </script>
 
@@ -719,13 +736,13 @@
       '<p class="case-name mono">Dossier: <span data-role="caseName"></span> &middot; Zaaknummer: <span data-role="caseRefInline" class="mono"></span></p>' +
       '<p class="case-clock">Laatst bijgewerkt / Last updated: <span data-role="caseTimestamp" class="mono"></span></p>' +
       '<div class="case-body">' +
-        '<p>Voorschot toegekend / Advance granted: <span class="mono">€ 1.578,00</span> per maand / per month. <span class="tag-imagined">(gesimuleerd / simulated)</span></p>' +
+        '<p>Voorschot toegekend / Advance granted: <span class="mono">€ 1.578,00</span> per maand / per month.</p>' +
         "<p>Betaling verwerkt. / Payment processed.</p>" +
         "<p>U kunt dit scherm verlaten. / You may leave this screen.</p>" +
         '<div data-role="riskBlock" hidden>' +
           "<p>Status: RISICO GEÏNDICEERD / RISK INDICATED</p>" +
           "<p>Dossier heropend. / File reopened.</p>" +
-          '<p>Terug te vorderen: 100% van het voorschot / To be recovered: 100% of the advance &mdash; <span class="mono">€ 1.578,00</span> <span class="tag-imagined">(indicatief bedrag / indicative amount)</span></p>' +
+          '<p>Terug te vorderen: 100% van het voorschot / To be recovered: 100% of the advance &mdash; <span class="mono">€ 1.578,00</span></p>' +
         "</div>" +
       "</div>" +
       '<nav class="doors-nav" data-role="doorsNav" hidden aria-label="Vervolgstappen / Next steps">' +
@@ -980,7 +997,7 @@
     counterAmount.textContent = formatEUR(liveEngine.getDebtNow());
     if (toastTimer) clearInterval(toastTimer);
     toastTimer = setInterval(function () {
-      showToast("Boete toegevoegd: +" + formatEUR(PENALTY_PER_INTERVAL) + " (indicatief bedrag / indicative amount)");
+      showToast("Boete toegevoegd: +" + formatEUR(PENALTY_PER_INTERVAL) + " / Penalty added");
     }, PENALTY_INTERVAL_SEC * 1000);
   }
 
@@ -1014,12 +1031,33 @@
   }
   function onIdle() {
     if (mode !== "live") return;
-    if (liveEngine.state.phase !== "hub" && liveEngine.state.reclassifyAt) {
-      liveEngine.returnToHub();
-      idleTimer = setTimeout(function () { foldIntoAttract(); }, 4500);
+    if (liveEngine.state.reclassifyAt) {
+      if (liveEngine.state.phase !== "hub") {
+        liveEngine.returnToHub();
+        idleTimer = setTimeout(showSessionEnd, 4500);
+      } else {
+        showSessionEnd();
+      }
     } else {
       foldIntoAttract();
     }
+  }
+  /* The ending beat: the visitor is forgotten, the debt is not. The counter keeps
+     running through this screen; only the fold into attract stops it. */
+  var sessionEndEl = document.getElementById("sessionEnd");
+  var beginCueEl = document.getElementById("beginCue");
+  var screenRootLiveEl = document.getElementById("screenRootLive");
+  function showSessionEnd() {
+    if (mode !== "live") return;
+    mode = "ending";
+    screenRootLiveEl.hidden = true;
+    sessionEndEl.hidden = false;
+    setTimeout(function () {
+      if (mode !== "ending") return;
+      sessionEndEl.hidden = true;
+      screenRootLiveEl.hidden = false;
+      foldIntoAttract();
+    }, 4600);
   }
   function foldIntoAttract() {
     mode = "attract";
@@ -1071,13 +1109,14 @@
   document.getElementById("app").addEventListener("click", function (e) {
     if (mode !== "attract") return;
     if (e.target.closest && e.target.closest('[data-meta="true"]')) return;
-    if (!e.target.closest("#screenRootLive") && !e.target.closest(".counter-badge") && !e.target.closest(".topbar")) return;
+    if (!e.target.closest("#screenRootLive") && !e.target.closest(".counter-badge") && !e.target.closest(".topbar") && !e.target.closest("#beginCue")) return;
     interruptToLive();
   }, true);
 
   function interruptToLive() {
     gen++;
     mode = "live";
+    beginCueEl.hidden = true;
     if (toastTimer) { clearInterval(toastTimer); toastTimer = null; }
     if (counterTickTimer) { clearInterval(counterTickTimer); counterTickTimer = null; }
     counterBadge.hidden = true;
@@ -1128,6 +1167,7 @@
   function startAttract() {
     var myGen = ++gen;
     mode = "attract";
+    beginCueEl.hidden = false;
     runAttractCycle(myGen);
   }
 
@@ -1262,7 +1302,7 @@
       t.returnToHub();
 
       var appRoot = document.getElementById("app");
-      var scanNodes = [].slice.call(appRoot.querySelectorAll('[data-screen]')).filter(function (n) {
+      var scanNodes = [].slice.call(appRoot.querySelectorAll('[data-screen], #beginCue, #sessionEnd')).filter(function (n) {
         return n.getAttribute("data-screen") !== "intake";
       });
       var bannedPattern = /national|omdat u|because you|nationaliteit/i;

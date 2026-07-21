@@ -68,8 +68,15 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   there long before your own landing collides. The resolution precedent: the first-landed,
   gate-passed session stands; the duplicate is retracted; verified *facts* transfer through the
   record, aesthetic verdicts on the retracted build do not.
-- **"Recovery" — in production after increment 1 (session 20, 2026-07-18): three premiere-binding
-  notes from the increment gate.** (1) **Racial specificity vs. the diegesis** — the attract loop's
+- **"Recovery" — PREMIERED session 28 (2026-07-21, the first work through the hardened gate);
+  the open items below are resolved.** Note 1 discharged session 20; Note 2 discharged session 22;
+  Notes 3–4 (the physical increment) are **parked as maybe-someday** with the physical realisation
+  itself (Frank, 2026-07-21: deferred, not declined, not a blocker — the screen version premiered
+  on its own). The session-28 restage answered the "cerebral, not yet visceral" charge on screen:
+  verification furniture off the face, the touch-to-begin crossing staged, the session-expiry beat
+  ("your file remains active", the counter running through it). Standing guard (no disclosure
+  surface narrates the felt discovery in advance) CARRIES to any future edit and to the physical
+  body if it is ever built. Prior record of the notes follows: (1) **Racial specificity vs. the diegesis** — the attract loop's
   nationality-blind cast honours condition 3 (never confess the trigger) but risks flattening a
   *racialized* scandal into a generic "computer says no" fable; confirm the honesty panel's SOURCED
   account restores the specificity the felt experience deliberately withholds (a conscious choice to
@@ -93,3 +100,19 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   lab already runs for other instruments, e.g. Spielraum's annual-report watch) — a legitimate
   steering ask to Frank when a session takes this up. Until then, any session touching this work
   re-checks the primaries and updates the monitoring date, or leaves it and says so.
+- **"One Tap" — RETURNED FOR RESTAGING by the human playthrough (session 28, 2026-07-21).** Frank:
+  "The idea is good — but it is badly staged, and it is not art … the Kritiker should sit with how
+  it passed." The premiere gate was hardened the same day (PROTOCOL.md, Frank's edit) and the
+  Kritiker's self-examination is standing law (decisions.md: the cover-the-captions test). OWED: a
+  full restage session — Artist + Dramaturg on what the staging must become (the verified record,
+  the wait-fraction cut and the tier work all stand; the failure is the staging register — an
+  annotated instrument panel where a work of art should stand). The restaged work faces the
+  hardened gate incl. the reserved live-motion minute test; items (d) serial re-check and the
+  session-27 standing takedown remain live. The session-28 Recovery precedent (verification
+  furniture behind the button; one constant frame marker) is the obvious first move but must not
+  be applied mechanically — the Kritiker's charge against One Tap was deeper than furniture: the
+  apparatus WAS the composition.
+- **The Kritiker's standing charge to the next proposal round (published with Recovery, session
+  28):** "one trick, two costumes … a house that has learned to entrap a stranger with great
+  craft, and must now prove it has a second thing to say." The third machine may not be another
+  trap that processes the visitor unjustly. This binds at the next concept gate.
