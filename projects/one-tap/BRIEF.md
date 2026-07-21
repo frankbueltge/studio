@@ -47,3 +47,16 @@ corrections-of-corrections, and the NEW standing takedown: `memory/dossiers/one-
 (session-26 section). Next = premiere prep (cold-reader terminal test; resolve the
 wait-fraction's subject under the new takedown) → playthrough offer → premiere gate. The
 physical fountain waits behind condition 5.
+
+## The restage (session 29, 2026-07-21)
+
+Frank played the increment and returned it ("badly staged, and it is not art"). Session 29
+restaged it wholesale: the dial, clocks and all face furniture died; the piece became the
+prompt box whose answer — the water cost — refuses to form (a thrashing, magnitude-sized
+numeral over the five published values), stills into five named witnesses, deepens into the
+Dalles account in prose, and closes: "The number was never unknown. It was withheld. …
+The same refusal, twice." Verification furniture lives behind "About this work" (self-test
+still runs every load); one constant chrome line marks the frame. Kritiker: **RESTAGE
+STANDS** (act-now conditions executed in-session). Full record and the premiere-binding
+set: `memory/dossiers/one-tap.md` (session-29 section). Next = the hardened premiere gate;
+the fountain still waits behind condition 5.

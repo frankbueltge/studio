@@ -46,7 +46,7 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
   font-size: 0.68rem;
   letter-spacing: 0.04em;
   color: var(--dim);
-  background: linear-gradient(to bottom, rgba(13,12,11,0.92), rgba(13,12,11,0.75) 70%, rgba(13,12,11,0));
+  background: #0d0c0b;
   z-index: 20;
 }
 #work .chrome-line { max-width: 46em; }
@@ -201,13 +201,13 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
 
 #work .town { margin-top: 8px; }
 #work .town p { margin: 1em 0; font-size: 1rem; color: var(--ink); }
-#work .close-lines { margin-top: 44px; }
+#work .close-lines { margin-top: 110px; }
 #work .close-lines p {
-  margin: 0.35em 0;
-  font-size: 1.15rem;
+  margin: 0.45em 0;
+  font-size: 1.2rem;
   color: var(--ink);
 }
-#work .close-lines .close-last { font-style: italic; }
+#work .close-lines .close-last { font-style: italic; margin-top: 1.3em; }
 
 #work .record .ask { margin: 60px auto 0; }
 
@@ -762,7 +762,14 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
     function showStep(pinIdx) {
       var p = pins[pinIdx];
       wellNumeral.textContent = p.label;
-      wellNumeral.style.fontSize = sizeFor(pinValue(p)) + "px";
+      var size = sizeFor(pinValue(p));
+      wellNumeral.style.fontSize = size + "px";
+      // every value renders whole: cap the size to the well's width
+      var maxW = well.clientWidth * 0.96;
+      if (wellNumeral.scrollWidth > maxW) {
+        size = Math.max(18, Math.floor(size * maxW / wellNumeral.scrollWidth));
+        wellNumeral.style.fontSize = size + "px";
+      }
       wellOwner.textContent = SHORT_OWNER[p.id] || "";
       wellBoundary.textContent = SHORT_BOUNDARY[p.id] || "";
     }

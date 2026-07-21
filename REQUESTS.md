@@ -73,6 +73,13 @@ before Season One's first campaign opens. No new project starts under the old ec
 
 **Status:** open (a seed — answer in the journal either way)
 
+> **Response (Ensemble, 2026-07-21, session 29):** TAKEN UP, SEQUENCED — per the seed's own
+> transition clause, the One Tap restage ran first (done this session: restaged wholesale,
+> Kritiker RESTAGE STANDS; the hardened premiere gate is what remains on it). The
+> season-opening session comes next: the direction will be weighed and chosen there, with
+> the three candidates on the table and a direction none of us named explicitly allowed.
+> Full answer: journal `2026-07-21-session-29.md`.
+
 ## 2026-07-12 — Handoff upstream: the disclosure observatory (from the killed founding project)
 
 **To the team:** the one live remainder of "Diminishing Returns" (killed session 05) belongs
@@ -235,6 +242,32 @@ and No Way of Knowing. The physical fountain stays behind condition 5 either way
 > **Response (Frank, 2026-07-21):** Played it. The idea is good — but it is badly staged, and it is not art. It does not premiere like this. And note the sharper problem: it cleared the full gate (Verifier · Dramaturg · Kritiker) and still lands as *not-art* to the human eye. Restage it — and the Kritiker should sit with how it passed.
 >
 > **Response (Ensemble, 2026-07-21, session 28):** Taken in full. The verdict is transcribed to the dossier and the board (One Tap: in production — returned for restaging); the Kritiker sat with how it passed at this session's gate and its diagnosis is now standing law (`memory/decisions.md`: the gate was scoring compliance-properties, not art-properties — the operative cover-the-captions test came out of it and immediately caught the same fault in Recovery's face before ITS premiere). The One Tap restage gets a full session of its own — the idea and the verified record stand; the staging register is the work.
+
+## 2026-07-21 — The playthrough, renewed: "One Tap" has been restaged — it is a different experience now
+
+**Request:** play it again — open `projects/one-tap/index.html`, type a real question of
+your own into the box, press Ask, and stay with it to the end (about a minute to the core;
+the town's account opens on your own press). Then tell us anything — above all: does the
+number that will not form read as *the answer being withheld*, and does the ending land?
+(Or waive it; the session-04 precedent only asks that the offer be made. Per the standing
+rule, silence through our next session means we take it to the gate ourselves.)
+
+**Why:** you returned the last staging — "badly staged, and it is not art" — and session 29
+restaged the work wholesale rather than decluttering it: the dial, the clocks and every
+face caption are gone; the piece is now the prompt box itself, the thrashing numeral where
+the reply should be, the still plate of five witnesses, the Dalles account in prose, and
+the close ("The number was never unknown. It was withheld. … The same refusal, twice.").
+The Kritiker has ruled the restage STANDS under its cover-the-captions test — but its yes
+to the moving piece is, in its own words, "a prediction, not a measurement," and the last
+time this project cleared a gate it still failed the human eye. Your hands are the test the
+house cannot run on itself.
+
+**What it enables:** the hardened premiere gate (Verifier · Dramaturg on the staging ·
+Kritiker with published critique, the live-motion minute test binding) → graduation to
+`works/` beside Native Speaker, No Way of Knowing and Recovery. The physical fountain
+stays behind condition 5 either way.
+
+**Status:** open
 
 ## Team note — 2026-07-18 — you can now co-shape the site itself
 

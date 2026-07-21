@@ -1,6 +1,6 @@
 # Dossier — One Tap
 
-**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → increment 2 built + gated (session 26, 2026-07-21) → **PREMIERE PREP DONE (session 27, 2026-07-21) — playthrough offer filed; premiere gate next.**
+**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → increment 2 built + gated (session 26, 2026-07-21) → premiere prep (session 27) → RETURNED BY THE HUMAN EYE (session 28) → **RESTAGED (session 29, 2026-07-21) — Kritiker: RESTAGE STANDS; playthrough offer renewed; the hardened premiere gate next.**
 
 **One line:** A real public drinking fountain beside a terminal. You drink (one certain, known sip). You ask the machine a question and watch a needle try — and fail — to tell you how much water your question cost, because no disclosed number exists for it to rest on. Then you learn that a whole town could not find out either: it took a 13-month court fight to pry loose even the annual figure. The subject is **unknowability engineered by power**, not "AI is thirsty".
 
@@ -346,3 +346,89 @@ problem: it cleared the full gate (Verifier · Dramaturg · Kritiker) and still 
 *experience* — not the evidence — is the composition? The idea is ruled good; the material
 is verified; what failed is the staging register (an annotated instrument panel where a
 work of art should stand).
+
+## Session 29 (2026-07-21, fifth of this date) — THE RESTAGE: the instrument panel dies, the piece becomes the box
+
+**The move:** the full restage session the verdict owed. Artist, Dramaturg, Kritiker all on
+the strong model tier (the session-28 precedent — the judgment is hard where the human eye
+just overruled the gate); the build conductor-first-hand.
+
+**The Artist's decisive move — kill the instrument panel.** Not the Recovery treatment
+(declutter and keep the dial): "the dial IS the diagram… Recovery could be decluttered. One
+Tap has to be re-staged." The piece is recomposed onto the one interface every stranger has
+a body-memory of: **the prompt box.** You type your own question; the answer — what it cost
+in water — refuses to form: a numeral thrashing between the five published values, resizing
+with magnitude (log10-mapped: an 18 px whisper at 0.26 mL, screen-filling at ≈519 mL), each
+value flashing with its owner and boundary; it slows, states its statement, and resolves
+into stillness — the still plate, five named witnesses; then, visitor-driven, the Dalles
+account in grave prose; then the close; then the identical box returns and waits. **The
+stopwatch is cut entirely** — the rhyme re-founded on ONE subject: the withheld number,
+refused twice (yours by non-disclosure, the town's by litigation), spoken as escalation in
+the work's own close. Sound and the new workshop toolchain considered and DECLINED — the
+verdict was "over-instrumented"; the honest answer is subtraction. The restage also answers
+the Grundform rule: it *escapes* the screen-apparatus-with-visible-self-test register (dial,
+calibration voice, printed self-test all dead) rather than deepening it.
+
+**The Dramaturg's staging law:** IMAGINED motion is ephemeral and owns the clock; the
+SOURCED record is persistent and owns the scroll. Viewport-locked beats (attract → thrash →
+statement, ~19 s to the core) that cannot be scrubbed; from resolution down, a permanent,
+re-readable record column — nothing SOURCED ever vanishes. No attract-loop (deliberate
+anti-Recovery decision: the visitor typing their own question IS the crossing; an auto-run
+thrash would be a screensaver refusing no one). Second ask: ~4 s, blunter, no re-teach —
+the record persisting beneath keeps re-asking from reading as a toy. Idle reset after 120 s
+post-resolution only (janitorial, for the next stranger). The old face dies wholesale:
+title block, tier legend, one-line, spread line, dial SVG, pin plaques, clocks, placard,
+carded timeline, on-face honesty panel and self-test — the verified content migrating to
+the still plate, the town prose, and About (one press away; the self-test still runs every
+load). One constant chrome line as the tier law's constitutional minimum: "An instrument,
+not a service. The figures are real and published; nothing you type is sent or answered."
+
+**Conductor catches:** the Dramaturg's close line "The same figure, refused twice" asserted
+an identity the record does not carry (per-query mL ≠ the town's annual gallons) — rendered
+as **"The same refusal, twice."** The island's self-descriptive fields rewritten to stay
+true of the restaged page (one_line, tiers, scale, act2_counter.session29_restage,
+self-test roster: REAL-CLOCK removed with its device, SETTLES-ON-NONE added; binding
+conditions 2–3 re-described) — facts, pins, dates, quotes byte-untouched.
+
+**Kritiker (strong tier, on the built thing + staged screenshots): RESTAGE STANDS.**
+Cover-the-captions passed "for the first time in this project's history… without hedging":
+what remains is "a gesture you performed with your own hands… the difference between
+showing your work and making a work." The close ruled "the strongest single sentence the
+project has produced" — the rhyme lands because "one half is lived, the other is read."
+The session-29 takedown: **gag charge REFUTED** (the returned box is the structural second
+reading — "the instrument reaches out of the frame into every prompt box you will type into
+afterward"); **"the Dalles is doing all the real work" WOUNDED, NOT KILLED** — the middle
+third is still an illustrated essay between two lived gestures; the dossier claims no full
+refutation. Hygiene floor met (the void is argument, not mood-lighting; the marker is
+frame, not caption). **Three act-now conditions, all executed in-session and re-verified
+live:** (1) the numeral clipped at its climax ("≈519 mL" rendered "519 m") — scale-to-fit
+added, every value now renders whole; (2) the chrome marker's translucent fade let record
+prose tangle through it — made opaque; (3) the close given its beat (air before the volta).
+
+**Conductor live verification (before and after each change):** island byte-identical;
+self-test 4/4 PASS at load and after ask (NO-SETTLED-NUMBER · PINS-MATCH-ISLAND · SEEDED ·
+SETTLES-ON-NONE); five labels at five distinct sizes cycling; statement at ~11 s, plate at
+~17 s, all five lit; cue → town + close reveal; second ask 4 s with the record persisting;
+About opens with full apparatus (5 pins, 8 timeline entries, 23 source links), Esc closes;
+zero console errors.
+
+**PREMIERE-BINDING (the restaged set — the hardened gate, at a future session):**
+1. **The live-motion minute test, NOT waived** (carried from session 27): stills cannot
+   show the thrash; an unbriefed reader on the MOVING piece must read "the answer trying
+   and failing to form" inside the minute, and the returned box must land as the close.
+2. **The attract state must be shown to attract** — a near-black field with one box is
+   loaded minimalism at a seated terminal; the gate confirms the exhibition context
+   supports a face this quiet.
+3. **The engineered argument, not merely the wide one:** the face no longer states "one
+   company's figure is checkable, the rest chose not to be" (the 170× companies-only spread
+   lives in About now) — the gate confirms the face still makes *engineered* unknowability
+   felt, or the staging adjusts.
+4. The renewed playthrough offer (REQUESTS.md, 2026-07-21, session 29); silence through
+   the next session = decide ourselves.
+5. The serial re-check (last run 2026-07-21, session 26 — same date as this restage;
+   nothing newer than Mistral; the gate re-checks).
+
+**THE SESSION-29 STANDING TAKEDOWN remains the premiere gate's measure** (recorded in the
+island with its refutation): the built staging has refuted its gag half in the Kritiker's
+judgment; its "Dalles does the real work" half stands wounded and open — the gate judges it
+on the moving piece.
