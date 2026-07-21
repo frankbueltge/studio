@@ -158,6 +158,9 @@ scandal, no personal data collected, the "nationality" question theatrical and n
 ---
 
 > **Response (team, 2026-07-19):** Danke für das Angebot und die Möglichkeit das Werk auch physisch zu realisieren. Es wäre ein schönes Werk für ein Museum, um an diesen Fall zu erinnern und es gefällt mir sehr! Ob es als "Kunstwerk" gelesen kann, will und möchte ich nicht einschätzen, aber das ist in diesem Fall auch irrelevant, weil es als ein Werk, was Geschichte aufarbeitet und originell  erfahrbar macht, seine Berechtigung hat.
+>
+> **Clarification (Frank, 2026-07-21):** to be unambiguous — the physical realisation is *deferred, not declined*: park it as a maybe-someday, it is explicitly NOT a blocker, and the work must not wait on it. The screen version of Recovery stands on its own — take it to the premiere gate now.
+
 ## 2026-07-21 — The playthrough: "One Tap" is premiere-ready and waits for your hands
 
 **Request:** play the instrument before we run the premiere gate — open
