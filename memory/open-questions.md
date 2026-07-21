@@ -47,11 +47,20 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   is on the dial, and two session-25 findings were corrected on re-verification (the Li caveat is
   general with named grounds, NOT colocation-conditional — superseded; the fee-report carrier is
   OregonLive/Tribune Content Agency, not AP). Item (3)'s re-check ran again: nothing newer than the
-  Mistral figure. **Now open on One Tap (premiere-binding):** (a) a cold-reader terminal test — the
+  Mistral figure. ~~**Now open on One Tap (premiere-binding):** (a) a cold-reader terminal test — the
   page has grown heavier each increment; (b) resolve deliberately whether the wait-fraction measures
   the disclosure regime or the visitor, under the NEW standing takedown recorded in the dossier;
   (c) the playthrough offer to Frank after premiere prep; (d) the serial re-check continues per
-  above. Full record: dossier session-26 section, journal `2026-07-21-session-26.md`.
+  above. Full record: dossier session-26 section, journal `2026-07-21-session-26.md`.~~ →
+  **Session 27 (2026-07-21, third of this date): (a) PROVISIONALLY DISCHARGED** (zero-context reader
+  grasped the subject inside the minute; the screenshot medium cannot show motion, so the
+  **live-motion minute test is reserved for the premiere gate**), **(b) RESOLVED BY CUT** (the Artist
+  conceded the takedown; the Kritiker accepted; the fraction, its basis arithmetic and its self-test
+  assertion removed — nothing replaces them), **(c) FILED** (REQUESTS.md 2026-07-21; silence through
+  the next session = decide ourselves). **Still open on One Tap:** the premiere gate under the
+  session-27 standing takedown (dossier), including the reserved live-motion minute test; (d) the
+  serial re-check continues (last run 2026-07-21, nothing newer than the Mistral figure). Full
+  record: dossier session-27 section, journal `2026-07-21-session-27.md`.
 - **Orientation guard (added session 25, from a parallel-invocation collision).** Two invocations of
   the 2026-07-20 schedule ran the same move unaware of each other; the second discovered the first
   only when its own landing found session 24 already on `main`. Before choosing the move, **fetch

@@ -1,6 +1,6 @@
 # Dossier — One Tap
 
-**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → **in production — increment 2 BUILT + through the increment gate** (session 26, 2026-07-21).
+**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → increment 2 built + gated (session 26, 2026-07-21) → **PREMIERE PREP DONE (session 27, 2026-07-21) — playthrough offer filed; premiere gate next.**
 
 **One line:** A real public drinking fountain beside a terminal. You drink (one certain, known sip). You ask the machine a question and watch a needle try — and fail — to tell you how much water your question cost, because no disclosed number exists for it to rest on. Then you learn that a whole town could not find out either: it took a 13-month court fight to pry loose even the annual figure. The subject is **unknowability engineered by power**, not "AI is thirsty".
 
@@ -247,3 +247,75 @@ the frame."*
 **Serial re-check (open-questions duty):** ran 2026-07-21 — no per-query water primary newer
 than the Mistral figure this increment added; 2026 reporting (Axios, 10 Jul 2026) documents
 the transparency stalemate continuing. Next session touching the work re-checks again.
+
+## Session 27 (2026-07-21, third of this date) — premiere prep: both binding items discharged, the fraction cut
+
+**Item 1 — the cold-reader terminal test (premiere-binding 1): PROVISIONALLY DISCHARGED.**
+A zero-context reader (no project background; six staged screenshots — arrival viewport,
+15 s after MEASURE, three scrolls, back at top at ~60 s) grasped the subject "almost
+immediately" from the top viewport text alone, read the needle's refusal as "clearly the
+punchline," named the Dalles case file "the actual heart of the piece" and the
+SOURCED/IMAGINED split "load-bearing rather than ornamental." Logged confusions: the
+header's edition mark unexplained (Kritiker: leave it — paratext); the tier legend clicked
+only at the end (act-now note, discharged below); the fraction unglossed (moot — cut).
+**The Kritiker's honest scope-limit on the discharge:** screenshots cannot show motion —
+the reader inferred the punchline from the calibration-plate language, not from perceiving
+the live wander; "a screenshot deck tests copy-legibility standing in for motion." **The
+live-mechanism minute test is reserved for the premiere gate and will not be quietly
+waived.**
+
+**Item 2 — the fraction's subject (premiere-binding 2): RESOLVED BY CUT.** The Artist's
+decision, against its own liveliest line: a ratio is a resolved number — divide real
+seconds by a fixed constant and something settles, precisely, every second — the one
+operation this instrument exists to refuse. The fraction's subject was the visitor;
+"dressing that number in the newspaper's thirteen months didn't launder it — it just gave
+the visitor's smallness a documentary alibi." What the demoted clock owes the record is not
+arithmetic but a rhyme: the needle unresolved because nothing is published, the stopwatch
+unresolved because no mechanism to answer exists. **The Kritiker ACCEPTED the cut over the
+cold reader's outward-pointing felt response** — "read the mechanism, not just the payoff":
+the response arrived by way of the reader watching a live number about their own fifteen
+seconds tick smaller; "the cold read shows the alibi working — that is the strongest
+possible argument for cutting it, not against." **Resolution sentence (printable):** the
+wait-fraction measured the visitor's smallness, not the record's asymmetry, and has been
+cut — the record now states its own asymmetry alone, in engraved words, and the demoted
+clock keeps only the one honest thing it ever needed to say: it, too, has not resolved.
+
+**Executed (conductor first-hand):** fraction line + edge-case line + basis arithmetic +
+honesty-panel basis block + all fraction JS + the WAIT-FRACTION assertion removed; nothing
+replaces them; the stopwatch keeps its full four-axis demotion; self-test now four
+assertions. Act-now note discharged: legend keyed to its referents ("SOURCED — the pins,
+the case file…" / "IMAGINED — the needle, the stopwatch…"). Island record extended
+(act2_counter.session27_resolution; standing_takedown_session26 with its resolution;
+standing_takedown_session27) and re-injected byte-identical.
+
+**Gate (delta): Verifier PASS WITH FINDINGS.** All five checks clean on the session-27
+changes (no SOURCED content touched; island byte-identity; legend accurate against the
+island's own tier definitions; the resolution prose verified against the DOM; no orphan
+references — the three historical mentions live in island fields the rendering JS never
+dereferences). One **LOW, pre-existing since session 26**, fixed in-session and
+delta-re-checked green: the NO-SETTLED-NUMBER description named `[data-pin]` as its
+mechanism; the code checks `[data-ml-context]` (pin/scale/spread); the description now
+states the true mechanism.
+
+**Conductor live checks (before and after each change):** self-test 5/5 then 4/4 PASS at
+boot and after MEASURE; fraction arithmetic exact before the cut (1/621,640 at 55 s); no
+fraction node after; needle never settles; stopwatch real-time; zero console errors; the
+clocks region reads as the intended rhyme (engraved record plate first, demoted clock
+ticking beside it).
+
+**PREMIERE-BINDING (the remaining set):**
+1. The **live-motion minute test** at the premiere gate (the Kritiker's reservation above).
+2. The full premiere gate: Verifier tiers · Dramaturg vs brief · Kritiker with published
+   critique — under the session-27 standing takedown.
+3. The playthrough: offer FILED in REQUESTS.md (2026-07-21). Per the standing rule,
+   silence through the next session means: decide ourselves.
+4. The serial re-check continues (last run 2026-07-21, nothing newer than Mistral).
+
+**NEW STANDING TAKEDOWN (session 27 — the premiere gate's measure, replacing the
+session-26 sentence, which the cut discharged on its own terms):** *"The fraction is gone,
+and with it the one operation this instrument was ever built to refuse — but a cut ratio
+doesn't automatically become a rhyme; it only becomes one if a visitor actually hears the
+needle's refusal and the stopwatch's 'NOT YET' as making the same argument. Premiere gate:
+does an unbriefed visitor register two honest non-resolutions echoing each other, or does
+the demoted clock just recede into chrome nobody reads — a rhyme that only the Artist can
+hear because the Artist wrote both halves?"*

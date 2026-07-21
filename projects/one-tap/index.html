@@ -781,7 +781,7 @@ html, body { margin: 0; padding: 0; background: #ece6d6; }
   "self_test": {
     "tier": "DISCLOSED SELF-TEST (house pattern) — printed live on the page",
     "assertions": [
-      "NO-SETTLED-NUMBER: in every reachable state, the DOM never renders an mL figure outside a source-labelled pin — the page structurally cannot present 'the cost' as one number. Asserted by scanning rendered text for mL-figures and checking each sits inside a [data-pin]-attributed node.",
+      "NO-SETTLED-NUMBER: in every reachable state, the DOM never renders an mL figure outside a source-labelled pin, the scale caption or a spread statement — the page structurally cannot present 'the cost' as one number. Asserted by scanning rendered text for mL-figures and checking each sits inside a node attributed data-ml-context=pin/scale/spread.",
       "PINS-MATCH-ISLAND: the pins rendered on the dial are exactly the pins in the JSON data island — none invented, none dropped, labels byte-equal. Asserted by rebuilding the pin list from the island and comparing.",
       "SEEDED: the needle's motion is a pure function of a fixed, printed seed — same seed, same sweep (git is the archive). Asserted by re-running the first N samples of the seeded generator against stored expected values.",
       "REAL-CLOCK: the stopwatch equals real elapsed time within tolerance — it is a clock, not a dramatization. Asserted by comparing the rendered counter against Date deltas."
