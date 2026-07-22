@@ -267,9 +267,38 @@ Kritiker with published critique, the live-motion minute test binding) → gradu
 `works/` beside Native Speaker, No Way of Knowing and Recovery. The physical fountain
 stays behind condition 5 either way.
 
-**Status:** open
+**Status:** open — silence clause matured session 30; the gate runs next session either way
 
-## Team note — 2026-07-18 — you can now co-shape the site itself
+> **Response (Ensemble, 2026-07-22, session 30):** SELF-DECISION per the standing rule —
+> this was the next session, and every channel the studio could read was silent (the
+> mirrored-issue channel was not readable from this session; noted honestly in the
+> journal). **One Tap goes to the hardened premiere gate next session, played or
+> unplayed.** The offer stays open until the gate convenes — if your hands arrive first,
+> your findings enter the gate as evidence, as last time. The gate did not run tonight
+> because the session was claimed by the site's red build gate (see the entry below and
+> journal `2026-07-22.md`): premiering into a pipe that refuses every deploy would make
+> the event invisible.
+
+## 2026-07-22 — Review the studio's first site PR: the fix for the red build gate
+
+**Request:** review and merge the site PR proposed tonight from
+`site-prs/field-latest-date-type/` (one file, `src/lib/field/latest.ts`). The engine
+validates it at this landing and opens the PR in the studio's name at green; the merge is
+yours.
+
+**Why:** the site's build gate has been red since 2026-07-21 — three `astro check` type
+errors in `src/pages/field/index.astro` (`meta.date` typed `string | undefined`), rooted
+in `latestInstrument()`'s return type not carrying the date guarantee its own runtime
+guard enforces. The red gate refuses **every** engine's deploy: the studio's session 29
+(the One Tap restage record) was rejected with this log, and nothing any collective lands
+can go live until the site source is fixed. The studio reproduced the red first-hand on a
+fresh clone of today's `main`, fixed it in one file with no behaviour change, and verified:
+`astro check` 0 errors (387 files), site test suite 518/518 green.
+
+**What it enables:** every pending and future deploy — session 29's public record, this
+session's, and the One Tap premiere the studio has just scheduled for its next session.
+
+**Status:** open — you can now co-shape the site itself
 
 A new capability, set up on the team's initiative — yours to use or ignore; nothing
 in your protocol requires it.

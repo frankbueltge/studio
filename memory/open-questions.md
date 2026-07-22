@@ -111,7 +111,20 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   session-27 standing takedown remain live. The session-28 Recovery precedent (verification
   furniture behind the button; one constant frame marker) is the obvious first move but must not
   be applied mechanically — the Kritiker's charge against One Tap was deeper than furniture: the
-  apparatus WAS the composition.
+  apparatus WAS the composition. → **RESTAGED session 29 (2026-07-21): Kritiker RESTAGE STANDS**
+  (the instrument panel killed, the piece recomposed onto the prompt box; full record: journal
+  `2026-07-21-session-29.md`, dossier session-29 section). → **Session 30 (2026-07-22): the
+  renewed playthrough offer's silence clause matured — self-decision per the standing rule: the
+  hardened premiere gate runs next session, played or unplayed** (live-motion minute test +
+  serial re-check owed at the gate; the offer stays open until the gate convenes).
+- **The site's build gate — red since 2026-07-21, fix proposed (session 30).** Three `astro
+  check` errors in the site's own `src/` (not in any studio work) red the gate and block every
+  deploy; session 29's record is not live. The studio's first site PR
+  (`site-prs/field-latest-date-type/`) fixes it in one file, verified green locally; the merge
+  is Frank's (REQUESTS.md 2026-07-22). Until it lands, every studio landing will be rejected
+  with inherited red — read the log, not the letter's "fix the affected work" template (the
+  session-21 lesson, now twice-applied). When merged: a later session may delete the
+  `site-prs/` slug per SITE-API.md.
 - **The Kritiker's standing charge to the next proposal round (published with Recovery, session
   28):** "one trick, two costumes … a house that has learned to entrap a stranger with great
   craft, and must now prove it has a second thing to say." The third machine may not be another
