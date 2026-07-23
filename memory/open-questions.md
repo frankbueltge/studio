@@ -107,6 +107,34 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   JS-rendered surfaces and the noscript mirrors, the SOURCED spine untouched, re-verified live
   (self-test PASS, 0 co-render / 50 samples, island byte-identical); Verifier PASS. The next re-check
   falls due whenever the investigation moves.
+- **"Native Speaker" — post-premiere live-status re-check ran session 35 (2026-07-23); the VERIFIED spine
+  HOLDS.** The house's one VERIFIED-tier work (premiered session 10, 2026-07-13) had never been re-checked
+  against its upstream in the ten days since — the accepted Meridian condition binds it (*live status
+  travels; if upstream revises or discards, this work updates on the same cycle or pauses*). **Unlike No
+  Way of Knowing, Native Speaker makes NO serial promise on its face** — this is discretionary
+  VERIFIED-hygiene, not a recurring debt; the next re-check falls due only if the upstream moves, if the
+  Yale case resolves, or when a post-premiere-care increment takes up the new field material below.
+  **Findings (session 35, conductor first-hand + Verifier PASS WITH FINDINGS):** upstream Instrument 001
+  (Meridian `2026-07-01-calibration-gap`) shows no post-premiere revision/discard — its last touch is the
+  2026-07-12 Minnesota correction Native Speaker *itself* triggered and already reflects
+  (*confirmed-on-a-partial-scan*: the feed 403'd the direct fetcher, was reached server-side via the
+  web-research fallback, and the reranked extract was partial — **close this gap if a clean chronicle tail
+  becomes reachable**; Instrument 011/card 001 is not displayed on the face, so its grade is not
+  load-bearing there); the Yale detector case (Rignol v. Yale, D. Conn. 3:25-cv-00159) is **still
+  PENDING**; the Minnesota boundary case (Yang — affirmed Feb 2026, federal suit dismissed *without
+  prejudice* Oct 2025 → do not read "dismissed" as final/with-prejudice), ACU, and the Liang figures are
+  all current. **The scoped legal claim ("in the cases retrieved here, no court reviewed the machine's
+  judgment itself") is not falsified but corroborated** — even the lone student win turned on procedure;
+  keep it *scoped-and-corroborated*, **never upgrade it to "world-true"** (its own discipline forbids
+  universalizing the negative). **NEW field movement — SOURCED / UNVERIFIED future-increment candidates
+  (must be re-verified from primary sources before any reaches the work's face; a full-crew form/content
+  decision, NOT a maintenance patch):** *Newby v. Adelphi* (NY CPLR Article 78, *2026 NY Slip Op 26021*,
+  Jan 2026 — student won, misconduct finding annulled "without valid basis"; a rare student win, still
+  procedural not a detector-reliability ruling); *Doe v. U. of Michigan* (E.D. Mich., pending); *Kato v.
+  Palo Alto USD* (N.D. Cal., newly filed); "more than 50 universities worldwide have banned or restricted
+  AI detection tools as of March 2026." ACU holds on its existing citation (abc.net.au) alone — do not
+  cite the popular video that also surfaced it. Full record: journal `2026-07-23-session-35.md`, dossier
+  `memory/dossiers/native-speaker.md` (session-35 row).
 - **"One Tap" — RETURNED FOR RESTAGING by the human playthrough (session 28, 2026-07-21).** Frank:
   "The idea is good — but it is badly staged, and it is not art … the Kritiker should sit with how
   it passed." The premiere gate was hardened the same day (PROTOCOL.md, Frank's edit) and the

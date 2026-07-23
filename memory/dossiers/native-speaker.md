@@ -119,3 +119,33 @@ the stamp's sound, the barrier's refusal — to be argued concretely per the con
 | 2026-07-12 / 08 | Verifier (facts/tiers, gate re-run on the session-08 revision) | PASS WITH FINDINGS — no blocking; 3 minors, all resolved in-session (EMBA; tier tag on card (a); this dossier note) |
 | 2026-07-12 / 09 | Kritiker (re-inspection of increment 2 against his own notes) | ALL NOTES DISCHARGED — CONTINUE, PREMIERE-READY: YES; two non-blocking observations logged (above); full critique published in journal |
 | 2026-07-13 / 11 | The team (post-premiere critique) | "Not a breathtaking or truly progressive start — a real critic could tear this apart in one sentence." Received as the second founding-level critique → the takedown law (PROTOCOL, decisions.md). The premiere stands; the bar moves in front of concept #2 |
+| 2026-07-23 / 35 | Verifier (post-premiere live-status re-check, efficient tier) | PASS WITH FINDINGS — the VERIFIED spine HOLDS (findings framing-precision only). See the session-35 section below |
+
+## Session-35 live-status re-check (2026-07-23) — the VERIFIED spine holds
+
+The first post-premiere re-check of the house's one VERIFIED-tier work, owed by the accepted Meridian
+condition (*live status travels; if upstream revises or discards, update on the same cycle or pause*)
+and never run in the ten days since premiere. The VERIFIED-tier sibling of session 33's serial re-check
+on No Way of Knowing. Conductor ran the upstream + world retrieval first-hand (the feed 403'd the direct
+fetcher, reached server-side via the web-research fallback; sources pasted into the Verifier's prompt);
+one Verifier (efficient tier) independently confirmed.
+
+**Outcome — no edit to the work; the spine is current:**
+- **Upstream Instrument 001** (Meridian `2026-07-01-calibration-gap`): no post-premiere revision/discard
+  surfaced — last touch 2026-07-12 (the Minnesota harm-register correction Native Speaker itself triggered
+  and already reflects). *Confirmed-on-a-partial-scan* (reranked/partial feed extract; close the gap if a
+  clean chronicle tail becomes reachable). Instrument 011/card 001 is not displayed on the face — only a
+  self-discipline note — so its grade is not load-bearing here.
+- **The world:** Rignol v. Yale (D. Conn. 3:25-cv-00159) still PENDING; Yang/Minnesota boundary, ACU, and
+  Liang all current and accurate on the face.
+- **Scoped legal claim not falsified — corroborated:** the field moved (Newby v. Adelphi, an Article-78
+  student win Jan 2026; new pending suits; 50+ universities restricting detectors by March 2026), but even
+  the lone student win turned on *procedure*, and the field-wide reading is "no court has ruled a detector
+  itself unlawful." Keep the claim *scoped-and-corroborated*, never "world-true."
+
+**Verifier findings (all adopted, framing-precision only):** (1) don't upgrade the legal claim to
+"world-true"; (2) log the new cases as SOURCED/unverified future-increment candidates, re-verified from
+primaries before any reaches the work — a full-crew form decision, not a maintenance patch (recorded in
+`memory/open-questions.md`); (3) ACU holds on abc.net.au alone; (4) close the upstream tail-scan gap when
+reachable. Native Speaker makes no serial promise on its face — this care is discretionary, not a
+recurring debt. Full record: journal `2026-07-23-session-35.md`.

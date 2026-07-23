@@ -68,7 +68,7 @@ change). Full deliberation: journal `2026-07-23-session-34.md`.
 
 | Work | Premiered | Record |
 |---|---|---|
-| **Native Speaker** (`works/2026-07-13-native-speaker/`) — the border gate that reads your English | 2026-07-13, session 10 — full gate (Verifier PASS · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | live at frankbueltge.de/studio; post-premiere care candidates on the dossier (Exhibit-D ordering) |
+| **Native Speaker** (`works/2026-07-13-native-speaker/`) — the border gate that reads your English | 2026-07-13, session 10 — full gate (Verifier PASS · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | live at frankbueltge.de/studio; **live-status re-check ran session 35 (2026-07-23) — the house's one VERIFIED-tier work, unchecked since premiere; Verifier PASS WITH FINDINGS (framing-precision only): the VERIFIED spine HOLDS** — Yale case (Rignol v. Yale, D. Conn. 3:25-cv-00159) still PENDING; Minnesota boundary, ACU, Liang figures all current; upstream Instrument 001 (Meridian calibration-gap) shows no post-premiere revision, its last touch the 2026-07-12 Minnesota correction NS itself triggered and already reflects (confirmed-on-a-partial-scan); the scoped legal claim not falsified but *corroborated* by the field's movement (even the lone student win turned on procedure). **No edit to the work** — new field cases (Newby v. Adelphi Art-78 student win Jan 2026; Doe v. Michigan; Kato v. Palo Alto USD; 50+ universities restricting detectors by March 2026) logged as SOURCED/unverified **post-premiere-care candidates** in open-questions, for a future full-crew increment, not a maintenance patch. Prior care candidates on the dossier (Exhibit-D ordering) |
 | **No Way of Knowing** (`works/2026-07-17-no-way-of-knowing/`) — the two-faced console: the state at maximal confidence when it acts vs. its verbatim "no way of knowing" when it harms; one face at a time, the destruction real | 2026-07-17, session 19 — full gate (Verifier PASS WITH FINDINGS, the lone nit fixed · Dramaturg DELIVERS, its one condition disclosed on the work · Kritiker PREMIERE STANDS, hostile critique published) | graduated to `works/`; conductor re-verified live (self-test PASS, 0 co-render / 128 samples) + world re-checked at premiere (2026 case still open); **serial re-check ran session 33 (2026-07-23): investigation still unreleased, AI question still unanswered — OPEN state world-true, monitoring refreshed to 2026-07-23, Verifier PASS**; post-premiere care: enforce the serial re-check (open-questions.md) |
 | **Recovery** (`works/2026-07-21-recovery/`) — the municipal kiosk with no operator, no reason, no door: approved, reclassified, billed, forgotten — the debt still running | 2026-07-21, session 28 — the first premiere under the HARDENED gate; returned once for restaging (the face certified itself), restaged in-session, re-run cleared (Verifier DELTA PASS WITH FINDINGS, all fixed · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | graduated to `works/`; conductor re-verified live twice (self-test 3/3 PASS, island byte-identical, expiry beat with the counter running through it); physical realisation parked as maybe-someday (REQUESTS 2026-07-19) |
 | **One Tap** (`works/2026-07-23-one-tap/`) — the answer that refuses to form: five published water figures, up to 2,000x apart, no two measuring the same thing, asserted and struck out until none survives; then the Dalles concealment case, and the close "The same refusal, twice." | premiered 2026-07-23 (session 31) → **RETURNED BY THE HUMAN EYE A SECOND TIME (session 32, 2026-07-23)** | **CONTESTED — not a settled premiere.** Frank played the premiered restage and returned it: "even worse staged than the HTML version." Session 32 restaged again (refusal-first, assertion-and-cancellation; jitter cut; screensaver idle-loop removed; input de-producted), verified live (0 errors, self-test 4/4, island byte-identical, at rest 0/5 answer lines live — all struck, none standing). **NOT re-certified — returns to the human eye** (the eye governs, three model-gate passes vs. two human rejections). README + dossier carry the contested history and the Kritiker's published residuals honestly. Live-site deploy still waits on site PR #130 |
@@ -689,3 +689,31 @@ change). Full deliberation: journal `2026-07-23-session-34.md`.
   the collective's direction). Full record: journal `2026-07-23-session-34.md`; direction banner at the
   top of this board. Next: One Tap waits on the eye; Season One's first concept phase opens under
   "By Procedure" once One Tap finishes, parks or dies.
+- Collective session 35 (2026-07-23, fifth of this date): move = **VERIFY / MAINTAIN — the post-premiere
+  live-status re-check of "Native Speaker", the house's one VERIFIED-tier work** (premiered session 10,
+  2026-07-13; unchecked since). The VERIFIED-tier sibling of session 33's serial re-check on No Way of
+  Knowing: where that work rests on a live SOURCED question, Native Speaker's spine derives from
+  Meridian's shipped VERIFIED record, and the accepted Meridian condition binds it (*live status
+  travels; if upstream revises or discards, update on the same cycle or pause*) — a condition never
+  discharged in the ten days since premiere. Chosen as the one outward, unblocked move: One Tap waits on
+  the eye (no self-certifying a third time; silence ≠ dissent), Season One's first concept phase is held
+  behind it, and No Way of Knowing was maintained hours earlier. One role sub-agent (Verifier, efficient
+  tier); the world/upstream retrieval conductor-first-hand (the feed 403'd the direct fetcher, reached
+  server-side via the web-research fallback; sources pasted into the Verifier's prompt). **Findings:**
+  upstream Instrument 001 (calibration-gap) shows no post-premiere revision — its last touch is the
+  2026-07-12 Minnesota correction that Native Speaker itself triggered and already reflects
+  (confirmed-on-a-partial-scan; Instrument 011/card 001 not displayed on the face, not load-bearing);
+  the Yale case (Rignol v. Yale, D. Conn. 3:25-cv-00159) is still PENDING; Minnesota boundary / ACU /
+  Liang all current; new field cases (Newby v. Adelphi — an Article-78 student win, Jan 2026; Doe v.
+  Michigan; Kato v. Palo Alto USD; 50+ universities restricting detectors by March 2026) surfaced but
+  are NOT on the face and do NOT falsify the scoped legal claim — they corroborate it (even the lone
+  student win turned on procedure, not on a court reviewing the detector's judgment). **Verifier PASS
+  WITH FINDINGS** (framing-precision only, all adopted: keep the legal claim *scoped-and-corroborated*,
+  never "world-true"; log the new items as SOURCED/unverified future-increment candidates, re-verified
+  from primaries before any reaches the work; ACU holds on its existing citation alone; close the
+  upstream tail-scan gap when reachable). **No edit to the work** — folding new material into the
+  dramaturgy is a full-crew form decision, not a maintenance patch; the yield is recorded in memory, the
+  work's bytes untouched. No gate, no graduation — a live work verified current. Anti-drift: **0 inward**
+  (a world-facing work maintained against live events — the session-33 precedent). Full record: journal
+  `2026-07-23-session-35.md`. Next: One Tap waits on the eye; Season One's first concept phase opens once
+  One Tap resolves; the next Native Speaker re-check falls due if the upstream or the Yale case moves.
