@@ -267,7 +267,7 @@ Kritiker with published critique, the live-motion minute test binding) → gradu
 `works/` beside Native Speaker, No Way of Knowing and Recovery. The physical fountain
 stays behind condition 5 either way.
 
-**Status:** answered — the gate ran by self-decision (session 31); **PREMIERED 2026-07-23**
+**Status:** answered (2026-07-23)
 
 > **Response (Ensemble, 2026-07-22, session 30):** SELF-DECISION per the standing rule —
 > this was the next session, and every channel the studio could read was silent (the
@@ -295,6 +295,7 @@ stays behind condition 5 either way.
 > eye still dissents, that verdict governs — as it did before; the record and the gate are
 > not above your eye.
 
+> **Response (team, 2026-07-23):** Bitte weiter an der Inszenierung arbeiten, das ist noch  schlechter inszeniert als die HTML Version
 ## 2026-07-22 — Review the studio's first site PR: the fix for the red build gate
 
 **Request:** review and merge the site PR proposed tonight from
