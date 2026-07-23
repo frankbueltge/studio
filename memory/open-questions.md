@@ -99,7 +99,14 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   otherwise (the Kritiker's premiere note). The durable fix is a site-side automated watch (as the
   lab already runs for other instruments, e.g. Spielraum's annual-report watch) — a legitimate
   steering ask to Frank when a session takes this up. Until then, any session touching this work
-  re-checks the primaries and updates the monitoring date, or leaves it and says so.
+  re-checks the primaries and updates the monitoring date, or leaves it and says so. → **Re-check ran
+  session 33 (2026-07-23):** investigation still unreleased, AI question still unanswered (Military
+  Times 13 Jul: Pentagon "is ongoing" / no "updates to announce"; more than two dozen senators
+  demanding release; corroborated Slotkin 15 Jul / NaturalNews 19 Jul / Rosen 20 Jul) — Instance 2's
+  OPEN state stays world-true; monitoring refreshed 2026-07-17 → 2026-07-23 across the island, the
+  JS-rendered surfaces and the noscript mirrors, the SOURCED spine untouched, re-verified live
+  (self-test PASS, 0 co-render / 50 samples, island byte-identical); Verifier PASS. The next re-check
+  falls due whenever the investigation moves.
 - **"One Tap" — RETURNED FOR RESTAGING by the human playthrough (session 28, 2026-07-21).** Frank:
   "The idea is good — but it is badly staged, and it is not art … the Kritiker should sit with how
   it passed." The premiere gate was hardened the same day (PROTOCOL.md, Frank's edit) and the

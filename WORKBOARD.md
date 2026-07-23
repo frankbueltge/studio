@@ -21,7 +21,7 @@ parked / killed*.
 | Work | Premiered | Record |
 |---|---|---|
 | **Native Speaker** (`works/2026-07-13-native-speaker/`) — the border gate that reads your English | 2026-07-13, session 10 — full gate (Verifier PASS · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | live at frankbueltge.de/studio; post-premiere care candidates on the dossier (Exhibit-D ordering) |
-| **No Way of Knowing** (`works/2026-07-17-no-way-of-knowing/`) — the two-faced console: the state at maximal confidence when it acts vs. its verbatim "no way of knowing" when it harms; one face at a time, the destruction real | 2026-07-17, session 19 — full gate (Verifier PASS WITH FINDINGS, the lone nit fixed · Dramaturg DELIVERS, its one condition disclosed on the work · Kritiker PREMIERE STANDS, hostile critique published) | graduated to `works/`; conductor re-verified live (self-test PASS, 0 co-render / 128 samples) + world re-checked at premiere (2026 case still open); post-premiere care: enforce the serial re-check (open-questions.md) |
+| **No Way of Knowing** (`works/2026-07-17-no-way-of-knowing/`) — the two-faced console: the state at maximal confidence when it acts vs. its verbatim "no way of knowing" when it harms; one face at a time, the destruction real | 2026-07-17, session 19 — full gate (Verifier PASS WITH FINDINGS, the lone nit fixed · Dramaturg DELIVERS, its one condition disclosed on the work · Kritiker PREMIERE STANDS, hostile critique published) | graduated to `works/`; conductor re-verified live (self-test PASS, 0 co-render / 128 samples) + world re-checked at premiere (2026 case still open); **serial re-check ran session 33 (2026-07-23): investigation still unreleased, AI question still unanswered — OPEN state world-true, monitoring refreshed to 2026-07-23, Verifier PASS**; post-premiere care: enforce the serial re-check (open-questions.md) |
 | **Recovery** (`works/2026-07-21-recovery/`) — the municipal kiosk with no operator, no reason, no door: approved, reclassified, billed, forgotten — the debt still running | 2026-07-21, session 28 — the first premiere under the HARDENED gate; returned once for restaging (the face certified itself), restaged in-session, re-run cleared (Verifier DELTA PASS WITH FINDINGS, all fixed · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | graduated to `works/`; conductor re-verified live twice (self-test 3/3 PASS, island byte-identical, expiry beat with the counter running through it); physical realisation parked as maybe-someday (REQUESTS 2026-07-19) |
 | **One Tap** (`works/2026-07-23-one-tap/`) — the answer that refuses to form: five published water figures, up to 2,000x apart, no two measuring the same thing, asserted and struck out until none survives; then the Dalles concealment case, and the close "The same refusal, twice." | premiered 2026-07-23 (session 31) → **RETURNED BY THE HUMAN EYE A SECOND TIME (session 32, 2026-07-23)** | **CONTESTED — not a settled premiere.** Frank played the premiered restage and returned it: "even worse staged than the HTML version." Session 32 restaged again (refusal-first, assertion-and-cancellation; jitter cut; screensaver idle-loop removed; input de-producted), verified live (0 errors, self-test 4/4, island byte-identical, at rest 0/5 answer lines live — all struck, none standing). **NOT re-certified — returns to the human eye** (the eye governs, three model-gate passes vs. two human rejections). README + dossier carry the contested history and the Kritiker's published residuals honestly. Live-site deploy still waits on site PR #130 |
 
@@ -592,3 +592,25 @@ parked / killed*.
   sharpening question filed (REQUESTS.md). Anti-drift: **0 inward** (advanced/reworked a live work on a
   binding human steer). Next: Frank plays; if the eye dissents again, the screen is conceded to the
   physical fountain as a study (the Artist's and Kritiker's shared honest fork).
+- Collective session 33 (2026-07-23, third of this date): move = **MAINTAIN — the serial re-check on
+  "No Way of Knowing".** One role sub-agent (Verifier, efficient tier); the world research + edits
+  conductor-first-hand (session-22/29 precedent). Orientation guard held (origin/main fetched first —
+  `e006789`, clean). The house's one *serial* work carries a live/open premise that goes stale
+  silently (standing open-question): Instance 2 (the 2026 Minab school strike) is shown OPEN only while
+  someone re-verifies it, and `last_checked` read 2026-07-17 (premiere day, six days stale). Chosen
+  because One Tap waits on the eye and the season waits on One Tap — a shipped work's live promise is
+  not self-maintenance to keep. **Re-check (first-hand):** the Pentagon investigation is **still
+  unreleased** and the AI question **still unanswered** — newest primary Military Times 13 Jul 2026
+  (Pentagon "is ongoing" / no "updates to announce"; more than two dozen senators demanding release),
+  corroborated Slotkin 15 Jul / NaturalNews 19 Jul / Rosen 20 Jul; no new confidence/denial pair, none
+  manufactured. **OPEN state stays world-true.** Refresh (minimal dose, SOURCED spine untouched):
+  `last_checked` + serial line + the Face-Two answer label + the honesty statement + the three
+  static/noscript mirrors moved 2026-07-17 → **2026-07-23**; "being finalised" → "still unreleased";
+  the Military Times URL added as the new primary; island regenerated **byte-identical**. Live
+  re-verify: self-test PASS, **0 co-render / 50 samples**, empty midpoint, no stale 07-17 strings, 0
+  errors. **Verifier PASS** (quotes verbatim; open state world-true; no new pair; no overclaim; one
+  non-blocking note — senators number exactly 25, "more than two dozen" tight but true, and the work
+  carries the source's own phrasing). No gate, no graduation — a live work maintained, not
+  re-premiered. Serial promise kept. Anti-drift: **0 inward** (a live, world-facing work maintained
+  against live events — the one serial form the house holds). Next: One Tap waits on the eye; the
+  season opens once One Tap resolves; the next NWOK re-check falls due whenever the investigation moves.
