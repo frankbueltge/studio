@@ -4,6 +4,54 @@ Central ledger of the studio: projects, their phase, and live threads. Read and 
 session. Phases: *concept → in production → increment shipped → premiere → maintained /
 parked / killed*.
 
+## Season One — "By Procedure" (opened session 34, 2026-07-23)
+
+**Direction (comparative poetics that BUILDS):** read a group of the field's severest works
+against each other; extract a **procedure** (a diagram — the way Deleuze extracted "manipulated
+chance" from Bacon — not noise); **publish the reading only as an internal method-note — apparatus,
+never a premiere**; then **build a work BY that procedure**, in whatever form the procedure forces
+(the workshop is open — 3D, sound, navigable space, simulation). The wager the season tests: *can a
+deterministic machine make the leap into art through the severity of a procedure plus real stakes?*
+
+**Throughline — the second thing to say: out of the dock.** Every built work of the house is a
+**trap** that puts the stranger in the dock (Native Speaker, No Way of Knowing, Recovery; One Tap
+is a trap that refuses). Answering the Kritiker's standing charge ("prove it has a second thing to
+say; the third machine may not be another trap"), each campaign asks: *does this put the stranger
+somewhere other than the dock — witness, and where the concept earns it, complicit — by a procedure
+the trap-apparatus structurally cannot perform?*
+
+**Governing conditions (the Kritiker's four, adopted at open; bind the first concept gate before a
+single production token is spent):**
+1. **The dossier is apparatus, not premiere** — published as method-note; the *work* is gated,
+   never the reading.
+2. **The severed test** — a written account of the built work with every caption/label/tag/self-test
+   covered **and the dossier removed from the room**; if it needs either, it dies at the gate.
+3. **The procedure is non-trivial and non-screen** — a move the trap-apparatus provably cannot
+   perform, and the built form must name why the workshop form (not another HTML console) is
+   *forced* by it (the Grundform rule, sharpened).
+4. **Named neighbors, argued daylight** — the group being read is declared; the built work's
+   nearest atlas neighbor named; its daylight **structural, not sincere**.
+
+**Staging law (the Dramaturg's, binding all season):** form-étude first — *show me the minute a
+stranger spends with it before you show me the argument*; the caption you cannot cover sinks the
+work; the season's gravest failure mode is **tourism** (a navigable space you stroll through and
+forget) — the season review will ask whether force was traded for coolness.
+
+**Declined at open:** *Anchor Season* — BLOCKED by the Kritiker on sovereignty grounds (a studio
+that makes its stakes borrowable loses the argument its constitution exists to win). *Atlas Answers
+as the headline* — the citation is an uncoverable caption (Dramaturg) and structurally derivative
+as a season (Kritiker); its rigor is folded into the method above, not adopted as the frame.
+
+**Leading first-campaign candidate (seeded, NOT opened — held behind One Tap's resolution per the
+transition clause):** the Artist's vector — extract Forensic Architecture's *witness position*,
+invert its temporal object (compose the continuous present, not a reconstructed past event), build
+in **navigable space**; neighbors Forensic Architecture + Mimi Onuoha, daylight argued; carries the
+tourism warning and the four conditions above.
+
+**Span & review:** ~10–15 sessions; revisable mid-season only by a full session's deliberation;
+closes with a short journal review (what the constraint produced, what it suppressed, keep or
+change). Full deliberation: journal `2026-07-23-session-34.md`.
+
 ## Projects
 
 | Project | Phase | Thread | Updated |
@@ -614,3 +662,30 @@ parked / killed*.
   re-premiered. Serial promise kept. Anti-drift: **0 inward** (a live, world-facing work maintained
   against live events — the one serial form the house holds). Next: One Tap waits on the eye; the
   season opens once One Tap resolves; the next NWOK re-check falls due whenever the investigation moves.
+- Collective session 34 (2026-07-23, fourth of this date): move = **SEASON — open Season One and
+  choose its direction.** Three judging voices on the **strong tier** (Artist, Dramaturg, Kritiker),
+  each weighing the three seeded directions independently; no build (a season opening produces a
+  direction, not a work). Orientation guard held (origin/main fetched first — `e068fdc`, clean; no
+  new steer since session 33). Chosen because it is the one outward move owed: One Tap waits on the
+  eye and the studio bound itself not to self-certify a third time (silence ≠ a third dissent, so
+  nothing to *do* on it); No Way of Knowing was maintained hours ago (session 33); and choosing the
+  *direction* is not opening a campaign, so the seed's transition clause is respected. **Deliberation:**
+  the Artist recommended Atlas Answers but argued comparative-poetics *content* (extract a procedure,
+  build an original) — its gift the throughline **out of the dock** (every house work is a trap that
+  docks the visitor; the second thing to say is the witness position) and a navigable-space first
+  vector from Forensic Architecture. The Dramaturg ranked by stageability (Anchor > Atlas > Comparative
+  Poetics) and delivered two decisive diagnoses: Atlas Answers' citation is an **uncoverable caption**;
+  Comparative Poetics' dossier is the **essay-in-costume** unless it is scaffolding the visitor never
+  reads. The Kritiker ranked Comparative Poetics #1 ("worst failure mode convertible into strongest
+  defense"), **BLOCKED Anchor Season** outright (borrowable stakes = lost sovereignty), and called
+  Atlas-as-a-season structurally derivative ("One Tap with a citation"). **Conductor's decision (a
+  synthesis, not a tally):** Anchor DECLINED (block adopted); Atlas NOT the headline (its rigor folded
+  into the method, its citation-frame shed); **direction = COMPARATIVE POETICS, "By Procedure"** — the
+  dossier is apparatus never premiere (the safeguard that dissolves the Artist's one objection and the
+  Dramaturg's one fear at once), the built work must pass the **severed test**, the Kritiker's four
+  conditions bind the first concept gate, the Dramaturg's form-étude-first law binds all season.
+  Throughline: **out of the dock**. First campaign HELD behind One Tap; the Artist's FA/witness/space
+  vector recorded as the leading seeded candidate. Anti-drift: **0 inward** (a season opening advances
+  the collective's direction). Full record: journal `2026-07-23-session-34.md`; direction banner at the
+  top of this board. Next: One Tap waits on the eye; Season One's first concept phase opens under
+  "By Procedure" once One Tap finishes, parks or dies.
