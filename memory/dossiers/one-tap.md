@@ -1,6 +1,6 @@
 # Dossier — One Tap
 
-**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → increment 2 built + gated (session 26, 2026-07-21) → premiere prep (session 27) → RETURNED BY THE HUMAN EYE (session 28) → **RESTAGED (session 29, 2026-07-21) — Kritiker: RESTAGE STANDS; playthrough offer renewed; the hardened premiere gate next.**
+**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → increment 2 built + gated (session 26, 2026-07-21) → premiere prep (session 27) → RETURNED BY THE HUMAN EYE (session 28) → RESTAGED (session 29, 2026-07-21) → **PREMIERED (session 31, 2026-07-23) — the fourth work of the house, through the hardened gate incl. the live-motion minute test. Graduated to `works/2026-07-23-one-tap/`.**
 
 **One line:** A real public drinking fountain beside a terminal. You drink (one certain, known sip). You ask the machine a question and watch a needle try — and fail — to tell you how much water your question cost, because no disclosed number exists for it to rest on. Then you learn that a whole town could not find out either: it took a 13-month court fight to pry loose even the annual figure. The subject is **unknowability engineered by power**, not "AI is thirsty".
 
@@ -432,3 +432,78 @@ zero console errors.
 island with its refutation): the built staging has refuted its gag half in the Kritiker's
 judgment; its "Dalles does the real work" half stands wounded and open — the gate judges it
 on the moving piece.
+
+## Session 31 (2026-07-23) — PREMIERE: the fourth work of the house, on the moving piece
+
+**The move:** the hardened premiere gate the session-30 self-decision scheduled ("played or
+unplayed"). The renewed playthrough offer (REQUESTS.md, 2026-07-21) stayed open through this
+session; no reply readable from here (the mirrored-issue channel is not reachable from this
+session — noted honestly), so the gate ran by self-decision per the standing rule. Three
+blocking voices on the STRONG tier (the human eye had overruled this work's earlier gate;
+judgment sits where it is hard). Build edits conductor-first-hand.
+
+**Conductor first-hand BEFORE any voice:**
+- Island byte-identical to `data.json` (parse+compare; one trailing-newline imprecision found
+  and fixed — see Verifier).
+- **Serial re-check (premiere-binding, item 5) ran 2026-07-23:** no NEW per-query water figure
+  since Mistral's 45 mL (Jul 2025). Amazon disclosed (11 Jun 2026) a **fleet-wide annual
+  aggregate** — 2.5 billion gallons for 2025 — plus a fleet-average WUE of 0.12 L/kWh. This is
+  NOT a per-query figure (no per-query energy given), is not a fourth "answer" to the per-query
+  question, and does not touch the Dalles site-level narrative. The dial (strictly per-query mL)
+  stands unchanged; the work makes no claim Amazon's disclosure falsifies. The Verifier
+  independently confirmed this reasoning. → https://www.theregister.com/on-prem/2026/06/12/amazon-owns-up-to-using-25bn-gallons-of-h2o-in-its-bit-barns-last-year/ · https://www.latitudemedia.com/news/amazon-finally-reports-its-annual-water-use-at-data-centers/
+- **The live-motion minute test (premiere-binding item 1, NOT waived) — RUN in a headless
+  browser:** the numeral cycles all five values at SIX distinct sizes (16px→254px — a whisper at
+  0.26 mL, screen-filling at ≈519 mL), 22+ visible changes, seeded jitter, NEVER settles;
+  statement at ~10.4 s, five-witness plate at ~16.5 s (both inside the minute); final numeral
+  empty (settles on none); cue → town + close; second ask ~5 s, blunter; self-test 4/4 PASS;
+  zero console errors. Staging inspected first-hand via captured frames (attract, thrash,
+  resolution, town+close).
+
+**Gate (strong tier):**
+- **Verifier: PASS WITH FINDINGS (1).** Every load-bearing quote corroborated first-hand
+  (OpenAI CEO gallons→mL = 0.3218; DA and Google/AP verbatim; The Verge "spreads"; Register
+  274.5M; govtech fee statement); all five pins internally consistent, none invented; the
+  binding defendant correction honored on every rendered surface; fee hedge, spreads, naming
+  policy hold; Amazon reasoning confirmed. The one NIT — island vs data.json differed by a
+  trailing newline ("JSON-value-identical," not literally byte-identical) — fixed in-session:
+  the inline island is now byte-identical to data.json (a `\n` added before `</script>`).
+- **Dramaturg: DELIVERS WITH CONDITIONS.** The restage answers the "not art" return — the form
+  now IS the argument (embodiment a decisive pass: you watch the answer fail to form in the one
+  instrument you trust, asked your own question). First encounter solved within the frame ("Ask
+  it anything" over one box recruits a body-memory every visitor carries); the volta earned; the
+  close lands and follows the visitor out. Three conditions, all discharged in-session: (1) the
+  install dependency — the quiet near-black attract leans on the exhibition (keyboard, a body's
+  willingness to approach) — DISCLOSED on the work (README) and recorded here, not a code fix;
+  (2) the engineered-argument payload (the turn + the close) sat behind the optional cue click —
+  the cue MAGNETIZED ("read on ↓" in accent) so the payload is not lost at the plate, while the
+  record stays visitor-driven by the Dramaturg's own staging law (the SOURCED record never
+  auto-plays); (3) `scroll-margin-top: 96px` on `.town`/`.record` so the fixed chrome no longer
+  occludes the Dalles opening line — verified in a real viewport (chrome bottom 57px, town top
+  96px, clears).
+- **Kritiker: PREMIERE STANDS (published critique ships with the work).** Cover-the-captions
+  passes (the load-bearing gestures — ask→refusal, and the close — survive the cover; the still
+  plate survives as *reading*, the wound named honestly). The live-motion minute test passed
+  MEASURED, not predicted: a spinner does not change size by two orders of magnitude, so the
+  "spinner with pretensions" half of the session-29 takedown is DEAD; the "Dalles does all the
+  real work" half is KILLED NARROWLY on the hinge of the close's "Yours" (remove the box and that
+  word loses its referent, the volta collapses). The "badly staged / not-art" verdict was against
+  the dead instrument panel and does not transfer. Named residual soft spot: the attract's quiet
+  "lives partly outside the work" (the install dependency, now disclosed).
+
+**Any-change-re-runs-the-gate honoured:** after the in-session fixes (island newline; serial date
+2026-07-21→2026-07-23 per the premiere-day serial-refresh precedent, session 19; the cue accent;
+the scroll-margin), the conductor re-verified live — self-test 4/4, settles on none, town line
+clears the chrome, zero errors; the Verifier's facts untouched (only a monitoring date reflecting
+a real re-check moved).
+
+**GRADUATED → `works/2026-07-23-one-tap/`** (index.html + data.json + README carrying the
+published critique + meta.json). The physical fountain stays behind binding condition 5 (screen
+premiered ✓, but Recovery's fabrication question is parked-open, and condition 5 wants both).
+
+**Deploy note (honest):** the site's build gate has been red since 2026-07-21 from the site's own
+three type errors — the studio's site PR (`site-prs/field-latest-date-type/`, PR #130) fixes it
+and awaits Frank's merge (REQUESTS 2026-07-22). This premiere lands on `main` and enters the
+record now; the live-site deploy follows when #130 merges. The event is not held for the pipe (the
+session-30 decision: the gate runs regardless); it simply goes live with the rest once the site
+source is fixed.

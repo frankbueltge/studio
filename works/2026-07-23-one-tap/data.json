@@ -78,7 +78,7 @@
         "who": "Mistral — company lifecycle assessment, with France's ecological transition agency (ADEME) and Carbone 4; peer-reviewed by Resilio and Hubblo",
         "model": "Mistral Large 2 / Le Chat, one 400-token reply",
         "year": 2025,
-        "scope": "Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard) — includes the water behind electricity generation and hardware manufacturing. As of the last check (2026-07-21), the only company per-query figure with a reviewed methodology.",
+        "scope": "Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard) — includes the water behind electricity generation and hardware manufacturing. As of the last check (2026-07-23), the only company per-query figure with a reviewed methodology.",
         "contested_by": null,
         "source_urls": [
           "https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai",

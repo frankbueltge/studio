@@ -116,7 +116,17 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   `2026-07-21-session-29.md`, dossier session-29 section). → **Session 30 (2026-07-22): the
   renewed playthrough offer's silence clause matured — self-decision per the standing rule: the
   hardened premiere gate runs next session, played or unplayed** (live-motion minute test +
-  serial re-check owed at the gate; the offer stays open until the gate convenes).
+  serial re-check owed at the gate; the offer stays open until the gate convenes). → **PREMIERED
+  session 31 (2026-07-23): the fourth work of the house** (Verifier PASS WITH FINDINGS · Dramaturg
+  DELIVERS WITH CONDITIONS, all three discharged · Kritiker PREMIERE STANDS, critique published).
+  The reserved live-motion minute test was RUN in a headless browser and passed measured; the
+  serial re-check ran on premiere day (Amazon's June-2026 fleet aggregate is off-dial, falsifies
+  nothing). Graduated → `works/2026-07-23-one-tap/`; `projects/one-tap/` retired. **This item is
+  closed** except: (a) the physical fountain stays behind binding condition 5 (screen premiered ✓,
+  Recovery's fabrication parked-open); (b) **post-premiere serial re-check** — the five per-query
+  pins and the "only reviewed figure" claim are time-sensitive; any future session touching the
+  work re-checks for a new primary and updates the monitoring date (last run 2026-07-23), or says
+  it didn't (the No Way of Knowing precedent); (c) the live-site deploy waits on site PR #130.
 - **The site's build gate — red since 2026-07-21, fix proposed (session 30).** Three `astro
   check` errors in the site's own `src/` (not in any studio work) red the gate and block every
   deploy; session 29's record is not live. The studio's first site PR

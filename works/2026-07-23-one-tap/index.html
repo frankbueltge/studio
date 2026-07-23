@@ -152,6 +152,7 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
   max-width: 640px;
   margin: 0 auto;
   padding: 0 20px 90px;
+  scroll-margin-top: 96px;
 }
 #work .plate { list-style: none; margin: 0; padding: 0; }
 #work .plate li {
@@ -191,6 +192,14 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
 }
 #work .cue.lit { opacity: 1; }
 #work .cue:hover { color: #fff; }
+#work .cue-arrow {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  white-space: nowrap;
+}
 #work .cue-line {
   margin: 34px 0 0;
   padding: 16px 2px 0;
@@ -199,7 +208,7 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
   border-top: 1px solid var(--rule);
 }
 
-#work .town { margin-top: 8px; }
+#work .town { margin-top: 8px; scroll-margin-top: 96px; }
 #work .town p { margin: 1em 0; font-size: 1rem; color: var(--ink); }
 #work .close-lines { margin-top: 110px; }
 #work .close-lines p {
@@ -314,7 +323,7 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
 
     <section class="record" id="record" hidden>
       <ul class="plate" id="plate" aria-label="Five published figures, at rest, each different"></ul>
-      <button class="cue" id="cueBtn" type="button" hidden>But one town&rsquo;s number &mdash; one figure, one year &mdash; took thirteen months in court to pry loose.&ensp;&darr;</button>
+      <button class="cue" id="cueBtn" type="button" hidden>But one town&rsquo;s number &mdash; one figure, one year &mdash; took thirteen months in court to pry loose.&ensp;<span class="cue-arrow">read on&nbsp;&darr;</span></button>
       <div class="town" id="town" hidden>
         <p>In The Dalles, Oregon, Google&rsquo;s data centers used 355.1 million gallons of water in 2020 &mdash; 29% of all the water the city used.</p>
         <p>When the regional newspaper asked, in a public-records request, how much water those data centers used, the city answered by going to court: a reverse public-records lawsuit against the newspaper and its reporter, to keep the figure secret. Google funded the city&rsquo;s legal costs.</p>
@@ -449,7 +458,7 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
         "who": "Mistral — company lifecycle assessment, with France's ecological transition agency (ADEME) and Carbone 4; peer-reviewed by Resilio and Hubblo",
         "model": "Mistral Large 2 / Le Chat, one 400-token reply",
         "year": 2025,
-        "scope": "Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard) — includes the water behind electricity generation and hardware manufacturing. As of the last check (2026-07-21), the only company per-query figure with a reviewed methodology.",
+        "scope": "Full lifecycle Water Consumption Potential (ISO 14040/44 + GHG Protocol Product Standard) — includes the water behind electricity generation and hardware manufacturing. As of the last check (2026-07-23), the only company per-query figure with a reviewed methodology.",
         "contested_by": null,
         "source_urls": [
           "https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai",
@@ -578,7 +587,8 @@ html, body { margin: 0; padding: 0; background: #0d0c0b; }
     }
   },
   "neighbors_daylight_carried": "From the concept gate (dossier): Crawford/Joler (diagram read vs. instrument watched), Onuoha (archival absence vs. absence dispensed live), Julian Oliver's Harvest (true-metered process vs. a process driven by the absence of a true number — formal inversion, the sharpest neighbor, named), Paglen/Burrington (infrastructure photographed vs. a number withheld), Disnovation (generalized eco-critique vs. one litigated case)."
-}</script>
+}
+</script>
 
   <noscript>
     <div class="noscript-content">
