@@ -1,52 +1,56 @@
 # One Tap
 
-*An Ensemble work. Premiered 2026-07-23 (collective session 31), through the full house gate —
-Verifier PASS WITH FINDINGS · Dramaturg DELIVERS WITH CONDITIONS · Kritiker PREMIERE STANDS. The
-work was returned once by the human eye ("badly staged, and it is not art"), restaged wholesale
-(session 29), and cleared the hardened premiere gate — including the reserved live-motion minute
-test — on the moving piece.*
+*An Ensemble work — its staging still contested. It went through the full house gate and
+premiered (2026-07-23, collective session 31); the human eye (Frank, the studio's critic with
+final authority) then played it and **returned it a second time** — "keep working on the
+staging — this is even worse staged than the HTML version." Session 32 (2026-07-23) restaged it
+again. **This work stands pending the human eye, not as a settled premiere.** The record and
+the gate are not above that eye — the studio's own standing rule. The verified spine — five real
+per-query water figures and the documented Dalles concealment case — has never been in question;
+what has failed, twice, is the staging.*
 
-**One line.** You type your own question into the one box everyone knows and press Ask. The
-answer — what your question cost in water — refuses to form: five published figures, up to two
-thousand times apart, no two of which measured the same thing, cycle where the reply should be
-and settle on nothing. Then you learn a whole town could not find out either: it took thirteen
-months in court to pry loose even one annual figure. The subject is **unknowability engineered
-by power**, not "AI is thirsty."
+**One line.** The screen opens already trying to answer, before you touch anything. To its own
+question — *how much water did one question to a machine just cost?* — it asserts a published
+figure as if it were the reply, holds it a beat, then strikes it through and overwrites it with a
+contradicting one, and another, until five named answers stand crossed out and none survives; no
+two of them measured the same thing. Then you learn a whole town could not find out either: a
+city sued its newspaper for thirteen months in court to keep even one annual figure secret. The
+subject is **unknowability engineered by power**, not "AI is thirsty."
 
 **How to run.** Open `index.html` in a browser. Self-contained: no build, no external requests,
-nothing you type is sent, stored, or answered. Composed for a seated terminal with a keyboard.
-Type a question, press Ask, watch the answer fail to form, read the five witnesses, follow the
-cue down to the town's account, reach the close — then the identical box returns and waits. The
-"About this work" button opens the honesty panel: the full sourcing, the three numeric spreads,
-the five figures in full with scopes and sources, the dated Dalles record, and the disclosed
-self-test that runs on every load.
+nothing you type is sent, stored, or answered. The refusal runs once on load — it is not
+re-performed to an empty screen. The "About this work" button opens the honesty panel: the full
+sourcing, the three numeric spreads, the five figures in full with scopes and sources, the dated
+Dalles record, and the disclosed self-test that runs on every load.
 
 ---
 
-## What it is
+## What it is (the session-32 staging)
 
-The instrument answers by refusing to. Ask it your own question and the numeral that should
-give you the water cost thrashes between the five real figures the world has published — a
-whisper at 0.26 mL, a wall at ≈519 mL — resizing across three orders of magnitude, each value
-flashing the name of who published it and what it differently measured. It decelerates as if
-converging, and refuses to converge: it settles on none, because no reconcilable per-query
-number exists for it to rest on. It stills into a plate of five named witnesses; a cue offers
-the turn ("But one town's number — one figure, one year — took thirteen months in court to pry
-loose"); at your press, the Dalles account opens in grave prose; then the close. Then the same
-"Ask it anything." box returns — and every real prompt box you type into afterward is now
-haunted.
+The work opens **in the middle of its own failure**, before any tap — because the previous
+staging, a quiet prompt box awaiting input, read at a desk as a minimal AI-product page, and
+under that genre its refusal read as its opposite (a thorough answer). Now the screen poses the
+question in its own voice and the answer beneath it will not form: it asserts a real published
+figure — "0.26 mL — Google" — at a size mapped to its magnitude, holds it a readable instant,
+then **strikes it through** and asserts a contradicting one — "45 mL — Mistral", "≈519 mL — The
+Washington Post" — the strikes accumulating until five named answers stand crossed out and none
+is left standing. It is never a loader resolving to a result: its terminal state is the wreckage
+itself — five contradictory, sourced, named claims held struck at once, no answer produced. Then
+a verdict, in words: *the cost of one question is not knowable.* The five figures then come to
+rest, in full, on a plate — a record that never moves and is never struck. A quiet box invites
+you to watch it refuse your own question too. A cue opens the Dalles account in prose, and the
+close: *"The number was never unknown. It was withheld. Yours, by non-disclosure. The town's, by
+thirteen months of litigation. The same refusal, twice."*
 
-The finding is not that the number is large. It is that five funded, published, cited parties
-cannot agree on it within three orders of magnitude, no two of them measured the same water —
-and when a public tried to learn even the large-scale figure, a company paid a city to sue the
-newspaper that asked. Disagreement at the small end; litigation at the large end; the same
-refusal, twice.
+The strike is the work's unifying grammar: a figure written and then struck out (the answer that
+cannot stand), a figure written and then litigated into secrecy (the Dalles case). The same act —
+a number asserted and then withheld — at two scales.
 
 ## The spine (SOURCED — real figures, a real concealment case)
 
-Every factual claim carries a real, retrievable URL (in `data.json`; all re-fetched and
-confirmed at the premiere gate). The per-query figures are a **contested range** — the point is
-the disagreement, never a single settled number:
+Every factual claim carries a real, retrievable URL (in `data.json`; all fetched and confirmed
+first-hand). The per-query figures are a **contested range** — the point is the disagreement,
+never a single settled number:
 
 - **0.26 mL** — Google, Gemini Apps median text prompt, 2025; on-site cooling water only, not
   peer-reviewed. Contested by the UC Riverside researcher whose team produced the 2023
@@ -76,20 +80,18 @@ site-level water use as a trade secret at any of its data centers nationwide.
 
 ## The tiers (honest labeling — this studio's cardinal value)
 
-- **SOURCED** — the spine above: every dial figure, every Dalles case-file line, every quotation,
-  each with a retrievable URL, fetched first-hand at build and re-confirmed at the gate. No figure
-  is invented, none smoothed; the disagreement between them is the finding.
-- **IMAGINED** — the instrument itself: the dark field, the prompt box's staging, the thrashing
-  numeral's seeded motion and its magnitude-mapped type size, the second-person address. The
-  motion asserts nothing; the values it cycles, and comes to rest on, are the record. Marked by
-  the one constant chrome line on the face: *"An instrument, not a service. The figures are real
-  and published; nothing you type is sent or answered."*
-- **The cardinal rule, held on the face** — what moves is made (IMAGINED) and never claims to
-  measure; what stands still and carries a name — the five witnesses, the town's account — is the
-  record (SOURCED) and never moves.
-- **Non-comparability is carried, not hidden.** The five pins differ by model, year, unit, and
-  water boundary; that is not noise around one true value but the documentary state of what the
-  public is permitted to know. Each pin is labelled with its model, year, and scope.
+- **SOURCED** — the spine above: every figure, every Dalles case-file line, every quotation, each
+  with a retrievable URL. No figure is invented, none smoothed; the disagreement between them is
+  the finding.
+- **IMAGINED** — the instrument: the dark field, the work's own posed question, the answers that
+  assert-and-cancel, their seeded order and magnitude-mapped size, the second-person address. The
+  motion and the strikes assert nothing; the values asserted, and the fact that none survives,
+  are the record. Marked by the one constant tier line on the face.
+- **The cardinal rule, held on the face** — what moves and strikes itself out is made (IMAGINED)
+  and never claims a value is *false*, only that no single one can *stand*; what stands still and
+  carries a name — the five witnesses on the plate, the town's account — is the record (SOURCED),
+  is never struck, and never moves. Striking a real figure would imply it is untrue; it is not —
+  the figures are all real and irreconcilable.
 - **Fee discipline.** The load-bearing face line stays ">$100,000, paid by Google"; the component
   figures ($106,000 + $53,000 by the city's statement; $153,000 total by the local paper's) and
   the disagreement between the accounts appear only in the honesty panel.
@@ -100,78 +102,50 @@ site-level water use as a trade secret at any of its data centers nationwide.
 ## The disclosed self-test
 
 Behind the About button (the house verification-furniture law: a work's face must move and stage,
-not certify itself). It runs on every load, driving the same engine the visitor uses, and asserts:
-**NO-SETTLED-NUMBER** (no mL figure ever renders outside an attributed node — the page structurally
-cannot present "the cost" as one number), **PINS-MATCH-ISLAND** (the five witnesses equal the JSON
-data island exactly), **SEEDED** (the numeral's motion is a pure function of the printed seed
-20260720 — same seed, same run), **SETTLES-ON-NONE** (a full run visits every one of the five values
-at least twice and terminates holding none).
+not certify itself). It runs on every load and asserts: **NO-SETTLED-NUMBER** (no mL figure ever
+renders outside an attributed node), **PINS-MATCH-ISLAND** (the five witnesses equal the JSON data
+island exactly), **SEEDED** (the motion is a pure function of the printed seed 20260720),
+**SETTLES-ON-NONE** (a full run asserts every one of the five values at least twice and terminates
+holding none).
 
-## The premiere gate (session 31, 2026-07-23)
+## The contested history (honest — the gate and the eye disagree on this work)
 
-The reserved live-motion minute test was the binding measure — stills cannot show the thrash, so the
-conductor drove the moving piece in a browser: the numeral cycles all five values at six distinct
-sizes (16px → 254px), never settling; the statement lands at ~10 s, the plate at ~16 s; the self-test
-runs 4/4; zero console errors. A serial re-check ran on premiere day (2026-07-23): no new per-query
-figure has been published since Mistral's; Amazon's June-2026 disclosure is a fleet-wide annual
-aggregate plus an efficiency ratio, not a per-query figure, and does not disturb the dial.
+This work is the studio's hardest case: **the model-run gate has passed it three times, and the
+human eye has rejected it twice.** That divergence is on the record, not hidden.
 
-- **Verifier: PASS WITH FINDINGS.** Every load-bearing quote corroborated first-hand; all five pins
-  internally consistent and non-invented; the binding defendant correction (the newspaper and its
-  reporter, not the residents) honored on every rendered surface; the fee hedge, spreads, and naming
-  policy all hold. One NIT — a trailing-newline imprecision in the "byte-identical" characterization —
-  fixed in-session (the inline island is now byte-identical to `data.json`).
-- **Dramaturg: DELIVERS WITH CONDITIONS.** The form now *is* the argument (embodiment a decisive pass):
-  you do not read about engineered unknowability, you watch the answer fail to form in the one
-  instrument you trust to answer, asked your own question. Conditions discharged: the continuation cue
-  was magnetized ("read on ↓" in accent) so the payload — the turn and the close — is not lost at the
-  plate, while the record stays visitor-driven by design (it never auto-plays); a `scroll-margin` fix
-  so the fixed chrome no longer occludes the Dalles opening line; and the install dependency below.
-- **Kritiker: PREMIERE STANDS.** On the moving piece the "spinner with pretensions" charge is dead
-  (a spinner does not change size by two orders of magnitude), and the "Dalles does all the real work"
-  charge is killed narrowly on the hinge of the close's "Yours" — remove the box and that word loses
-  its referent and the volta collapses. The "badly staged / not-art" verdict was rendered against the
-  dead instrument panel and does not transfer to the restaged box.
+- **Session 28.** The human eye returned an "instrument-panel" staging: *"the idea is good — but
+  it is badly staged, and it is not art."* The premiere gate was hardened the same day; the
+  Kritiker's self-examination produced the **cover-the-captions test** (cover every label — if
+  what remains needs them to mean anything, it is a diagram, not art).
+- **Session 29.** The studio restaged it wholesale onto a prompt box.
+- **Session 31.** That restage cleared the hardened gate on the strong tier — including a
+  live-motion test — and premiered. The gate's own voices flagged an "install dependency" (the
+  quiet opening "risks reading as a login screen no one approaches") and discharged it with a
+  disclosure rather than a fix.
+- **Session 32.** The human eye played the premiered restage and returned it again: *"even worse
+  staged than the HTML version."* Played at a desk — not in a gallery — it hit exactly the
+  flagged failure. The diagnosis: the quiet prompt box borrows "this is art" from the exhibition;
+  at a desk that context is absent, so its only available genre is "AI product," under which the
+  refusal reads as a thorough answer. The fix (this staging) puts the refusal **in front of the
+  tap** and makes the answer visibly strike itself out, so the resting image is crossed-out
+  numbers holding none — never a clean figure standing as "the answer." **This staging returns to
+  the human eye; it has not been re-certified.**
 
-**Any change re-runs the gate:** after the in-session fixes the conductor re-verified live (self-test
-4/4, settles on none, the town's opening line clearing the chrome, zero errors).
+## The Kritiker's standing charge (session 32, published — an adversarial assessment, not a blessing)
 
-## The install dependency (disclosed, per the Dramaturg's condition)
-
-The attract state is a near-black field with one prompt box — loaded minimalism that leans on the
-exhibition: a keyboard, and a stranger's willingness to approach. The affordance is deliberate (the
-prompt box is the most-approached interface of the decade, and its familiarity is the lure), but
-room-scale draw is a curatorial dependency this file cannot self-resolve. When exhibited, the work
-wants a seated terminal with a keyboard and enough context (placement, a barker card, terminal
-density) to bring a body across the floor into the seat. The work does its half; the exhibition must
-do the other.
-
-## The published critique (the Kritiker's, ships with the work)
-
-> **One Tap** stakes everything on a single act of nerve: it hands you the one interface you trust
-> most — the prompt box — and then breaks the one thing it exists to do. What could have been a
-> tech-art one-liner ("ha, the chatbot won't answer") is saved by a decision most artists would have
-> missed: the refusing numeral does not merely flicker, it *resizes*, a whisper at a quarter-milliliter
-> and a wall at half a liter, so that the industry's two-thousand-fold disagreement about what a single
-> question costs is delivered to your body before it is stated to your mind. That is the work's real
-> finding, and it is a genuine one: not that the number is large, but that five funded, published,
-> cited parties cannot agree on it within three orders of magnitude, and no two of them measured the
-> same water. The turn to The Dalles — a named company paying a named city to sue its own newspaper
-> into silence for thirteen months — lifts the piece from grievance to indictment, and the close ("The
-> number was never unknown. It was withheld. Yours, by non-disclosure. The town's, by thirteen months
-> of litigation.") is the sharpest sentence in the room; it retroactively converts the town's story
-> from a case study into your own second instance. And yet the work is not without seams. Its middle
-> third — the plate of five sourced figures, the grave Dalles prose — is, in form, an illustrated essay
-> bracketed by two lived gestures; you *read* it where you *experienced* the thrash and will experience
-> the returned box, and only the strength of that final sentence redeems the flatness. The subject, too,
-> arrives pre-chewed: everyone at the terminal already suspects AI is thirsty and companies are cagey,
-> and the piece must do continuous work to keep its true subject — *unknowability manufactured by power*
-> — from collapsing back into that familiar shrug. It mostly wins that fight, on the back of one word
-> and one interface. The quiet of its opening is a wager on the room: at a keyboard it is an
-> irresistible invitation; on a wall from ten feet it risks reading as a login screen no one approaches.
-> This is a work that survives its own cleverness — barely, deliberately, and by subtraction rather than
-> accumulation. It is the rare gallery piece that follows you out the door and into the next thing you
-> type.
+> An interface that theatrically crosses out its own answers risks being read as a fancier
+> spinner — "loading, dramatically" — and a cold desk eye can file animated strike-throughs as a
+> slick product transition, because brands ship precisely that. The restage answers this where it
+> can: unlike every loader, this sequence's terminal state is the wreckage itself — five
+> contradictory, sourced, named claims held struck at once, no answer produced — which is the one
+> thing no product interface will ever ship, and the tell that reads as art without a caption. The
+> named-owner contradiction, the refusal-first opening, the wreckage that holds none, and the
+> close (with the Dalles prose, the strongest material in the piece) are real gains. The honest
+> residuals: the still plate carries its "five that cancel" reading in a caption more than in its
+> composition, because tier-discipline rightly forbids striking a real figure; and the optional
+> input, however quieted, is still the most product-shaped element the work contains. **Whether
+> this staging finally reads as art at a desk is the human eye's judgment to make — the studio
+> does not claim it here.**
 
 ## Neighbors, with daylight (from the concept gate)
 
@@ -188,4 +162,4 @@ The concept was proposed with a physical extension — a real public drinking fo
 terminal, so a certain, known sip of real water stands against the uncertain, withheld cost of the
 question. That fabrication stays behind binding condition 5 (no fountain until the screen work has
 premiered *and* Recovery's fabrication question is resolved) and is not this work's condition: the
-screen instrument premieres as a complete work standing on its own.
+screen instrument must first stand on its own to the human eye.

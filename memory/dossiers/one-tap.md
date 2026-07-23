@@ -1,6 +1,6 @@
 # Dossier — One Tap
 
-**Phase:** concept → OPENED (recast) session 23, 2026-07-20 → increment 1 built + gated (session 24, 2026-07-20) → increment 2 built + gated (session 26, 2026-07-21) → premiere prep (session 27) → RETURNED BY THE HUMAN EYE (session 28) → RESTAGED (session 29, 2026-07-21) → **PREMIERED (session 31, 2026-07-23) — the fourth work of the house, through the hardened gate incl. the live-motion minute test. Graduated to `works/2026-07-23-one-tap/`.**
+**Phase:** concept → OPENED (recast) session 23 → increment 1 (session 24) → increment 2 (session 26) → premiere prep (session 27) → RETURNED BY THE HUMAN EYE (session 28) → RESTAGED (session 29) → PREMIERED (session 31, 2026-07-23) → **RETURNED BY THE HUMAN EYE A SECOND TIME (session 32, 2026-07-23) — Frank played the premiered restage: "keep working on the staging — this is even worse staged than the HTML version." RESTAGED AGAIN in-session (refusal-first, assertion-and-cancellation). The work stands in `works/2026-07-23-one-tap/`, reworked in place, PENDING THE HUMAN EYE — not a settled premiere. The model-run gate has now passed this work three times; the human eye has rejected it twice; the eye governs.**
 
 **One line:** A real public drinking fountain beside a terminal. You drink (one certain, known sip). You ask the machine a question and watch a needle try — and fail — to tell you how much water your question cost, because no disclosed number exists for it to rest on. Then you learn that a whole town could not find out either: it took a 13-month court fight to pry loose even the annual figure. The subject is **unknowability engineered by power**, not "AI is thirsty".
 
@@ -507,3 +507,89 @@ and awaits Frank's merge (REQUESTS 2026-07-22). This premiere lands on `main` an
 record now; the live-site deploy follows when #130 merges. The event is not held for the pipe (the
 session-30 decision: the gate runs regardless); it simply goes live with the rest once the site
 source is fixed.
+
+## Session 32 (2026-07-23) — RETURNED BY THE HUMAN EYE A SECOND TIME → restaged again
+
+**The steer (Frank, on the premiered restage, REQUESTS.md 2026-07-23):** *"Bitte weiter an der
+Inszenierung arbeiten, das ist noch schlechter inszeniert als die HTML Version"* — "Please keep
+working on the staging — this is even worse staged than the HTML version." Session 31 had bound
+itself in writing: *if the human eye still dissents, that verdict governs — the record and the
+gate are not above your eye.* It dissented. So this session: **the eye's verdict is taken as
+governing; the premiere does not stand as settled; the work returns to production and is restaged
+again — and NOT re-certified** (self-certification is exactly what the eye has now overruled
+twice; three model-run gate passes vs. two human rejections).
+
+**The move:** a genuine restage session — Artist + Dramaturg (strong tier, independent, parallel)
+to diagnose *why the gate keeps passing what the eye rejects*; conductor-first-hand build; Kritiker
+(strong tier) as an adversarial stress-test explicitly **not** a premiere gate.
+
+**The diagnosis (Artist, sharpening the conductor's hypothesis — the deeper account):**
+**genre-assignment at t=0.** The session-29 quiet prompt box is a *gallery* staging — it borrows
+"this is art" from the room, the plinth, the approach ritual. At a desk none of that is present,
+so the only available genre is **minimal AI-product page**, and under it every gesture inverts: the
+empty field → loading whitespace; the cycling numeral → a spinner; the tidy five-figure result-list
+→ "it returned five well-cited results" — so **the refusal reads as its own opposite, a thorough
+answer.** And every artistic gesture sat *behind a tap the clean opening gave no reason to perform.*
+The gate itself had flagged this ("install dependency", "risks reading as a login screen no one
+approaches") and discharged it with a README — a README is not staging; Frank at a desk hit the
+undisclosed truth. (The Dramaturg's independent read agreed on the failure and added: cut the
+malfunction-coded pixel jitter, echo/bond the visitor's own question, isolate the close, quiet the
+returned box.)
+
+**The decisive move (conductor's synthesis — the Artist's over the Dramaturg's "composed em-dash
+at rest", because no resting composition of a search box escapes the product genre at a desk):**
+**put the refusal in front of the tap.** The piece now opens already failing, in the work's own
+art-voice, and the answer is staged as **assertion-and-cancellation**: each published figure
+asserted as THE reply, held a readable beat, then STRUCK THROUGH and overwritten by a contradicting
+one, the strikes accumulating into a wreckage of five crossed-out named answers that holds none.
+Redaction, not spinner — and the strike **rhymes with the Dalles case** (a figure written, then
+struck, then litigated into secrecy), so Act 1 and Act 2 become one gesture at two scales, which is
+what the close has always claimed. Conductor's tier-integrity correction: the strike belongs to the
+IMAGINED overture only; the SOURCED plate stands still and is **never struck** (striking a real
+figure would imply falseness — the figures are all real and irreconcilable).
+
+**Build (conductor-first-hand), verified live (headless Chromium, 1280px):** zero console errors;
+self-test 4/4 on both the load run and the ask re-run; island byte-identical to `data.json`;
+**at rest, 0 of 5 answer lines are live — all five struck, none standing** (the resting image is
+crossed-out numbers holding none); the plate reveals five witnesses; the optional "Ask it your own
+question. It will refuse you too." echoes the visitor's question and re-runs; cue → town → close →
+quieted returned box all reveal.
+
+**Kritiker (strong tier, adversarial stress-test, NOT a gate):** went in to prove it still fails
+and found a real governing flaw in the *first* build — for ~90% of the overture a clean, bold,
+magnitude-sized figure sat ON TOP with struck ones demoted below, reading as "best answer +
+superseded estimates", the same inversion that got session 29 rejected; and the idle `setInterval`
+re-ran the whole refusal to an empty desk — a literal screensaver loop, the very charge session 29
+was returned for. Put the odds the eye still rejects at ~65–70%, primary reason = the clean hero.
+**Both were fixed in-session** (any-change-re-runs-the-check): the answer now strikes each figure in
+place, deduped to five named lines, each clean only for a brief moving instant, the resting image
+all-struck (verified: 0/5 live at rest); the screensaver idle-loop was removed entirely (the refusal
+runs once on load, is not re-performed to an empty screen); the input was de-producted. Named
+residuals carried honestly (published on the work): the still plate carries its "five that cancel"
+reading in a caption more than in composition (tier-discipline forbids striking a real figure), and
+the optional input is still the most product-shaped element — both surfaced for the eye, not hidden.
+
+**Standing takedown (session 32, the measure the eye is asked to judge next):** *"An interface that
+theatrically crosses out its own answers is still just a fancier spinner… a cold eye reads animated
+strike-throughs as a slick product transition, because brands ship precisely that."* Answered where
+it can be (the terminal state is wreckage, not a resolved result — the one thing no product ships)
+and CONCEDED honestly: if even refusal-first + contradiction-grammar + wreckage-terminal still reads
+as product motion to a cold desk eye, the takedown wins and the concept's body is the physical
+install, the screen a study. That judgment is the eye's, on THIS staging — which neither of the two
+prior rejections tested (an annotated diagram, then a quiet product; never a screen work that opens
+by visibly breaking).
+
+**Structural decision (journalled):** the work was reworked **in place in `works/`** rather than
+un-graduated to `projects/`, to avoid destabilising the site's chronicle/stage record (session 31's
+entry references the slug; the site gate's slug↔dir checks are not verifiable from here, and the
+studio does not risk reddening the shared build gate on its own initiative). The board, dossier and
+journal carry the true status transparently: premiered session 31, returned by the eye session 32,
+restaged, **pending the eye**. If Frank wants it pulled from the surface, that is his to say.
+
+**Next:** the playthrough — offered again (REQUESTS.md). Per the standing rule, silence through the
+next session means the studio decides; but after two human-eye rejections the studio will **not**
+self-certify this into a settled premiere — a third gate pass is worth nothing against the eye. If
+the eye passes it, it stands; if it dissents again, the honest question the Artist and Kritiker both
+put on the table — screen work vs. physical install — is answered, and the screen is conceded to the
+fountain as a study. A sharpening question was filed with Frank (what specifically read as badly
+staged) so the next verdict is diagnostic.

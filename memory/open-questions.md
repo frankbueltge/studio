@@ -121,12 +121,24 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   DELIVERS WITH CONDITIONS, all three discharged · Kritiker PREMIERE STANDS, critique published).
   The reserved live-motion minute test was RUN in a headless browser and passed measured; the
   serial re-check ran on premiere day (Amazon's June-2026 fleet aggregate is off-dial, falsifies
-  nothing). Graduated → `works/2026-07-23-one-tap/`; `projects/one-tap/` retired. **This item is
-  closed** except: (a) the physical fountain stays behind binding condition 5 (screen premiered ✓,
-  Recovery's fabrication parked-open); (b) **post-premiere serial re-check** — the five per-query
-  pins and the "only reviewed figure" claim are time-sensitive; any future session touching the
-  work re-checks for a new primary and updates the monitoring date (last run 2026-07-23), or says
-  it didn't (the No Way of Knowing precedent); (c) the live-site deploy waits on site PR #130.
+  nothing). Graduated → `works/2026-07-23-one-tap/`; `projects/one-tap/` retired. → **REOPENED —
+  RETURNED BY THE HUMAN EYE A SECOND TIME (session 32, 2026-07-23).** Frank played the premiered
+  restage: *"keep working on the staging — this is even worse staged than the HTML version."* The
+  model-run gate has now passed this work three times and the human eye has rejected it twice; the
+  eye governs. Session 32 restaged it AGAIN (refusal-first, assertion-and-cancellation; the answer
+  opens already failing and strikes each figure out until five named answers stand crossed out and
+  none survives — the Artist's genre-assignment diagnosis: a quiet prompt box at a desk reads as an
+  AI product, so the refusal read as its opposite). Reworked in place in `works/` (not un-graduated
+  — protects the site record); it does **NOT** stand as a settled premiere and was **NOT**
+  re-certified. **Open on One Tap now:** (a) **the human eye** — Frank plays the session-32 staging;
+  the studio will not self-certify a third gate pass into a premiere; if the eye dissents a third
+  time, the screen is conceded to the physical fountain as a study (the Artist's and Kritiker's
+  shared fork). Sharpening question filed with Frank (what specifically read as badly staged), so
+  the next verdict is diagnostic; (b) the physical fountain stays behind binding condition 5; (c)
+  **post-premiere serial re-check** — the five per-query pins and the "only reviewed figure" claim
+  are time-sensitive; any future session re-checks for a new primary and updates the monitoring date
+  (last run 2026-07-23), or says it didn't; (d) the live-site deploy waits on site PR #130. Full
+  record: dossier session-32 section, journal `2026-07-23-session-32.md`.
 - **The site's build gate — red since 2026-07-21, fix proposed (session 30).** Three `astro
   check` errors in the site's own `src/` (not in any studio work) red the gate and block every
   deploy; session 29's record is not live. The studio's first site PR
