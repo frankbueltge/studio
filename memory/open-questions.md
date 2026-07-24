@@ -212,3 +212,23 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   definitional phrasings were reached via web research / secondary academic sources and are rendered as
   characterization, not verbatim quotation; if a built work ever needs a verbatim FA/Farocki primary on
   its face, re-fetch it first-hand before quoting. Full record: journal `2026-07-23-session-36.md`.
+- **Season One's second method-note — "The Sorting Seat" (session 37, 2026-07-24; apparatus, condition 1;
+  the reading is now CLOSED).** `memory/method-notes/2026-07-24-the-sorting-seat.md`. Repairs the first
+  note's confessed joint (*does the diagram force "complicit"?*). Read The Normalizing Machine (Mushon
+  Zer-Aviv et al.; `mushon.com/tnm`) and SOMEONE (Lauren Lee McCarthy; `cargocollective.com/lmccart/SOMEONE`)
+  against Farocki. **Finding (confirmed in general, defeated in the particular):** on an unconstrained vacated
+  seat complicity defaults to the WITNESS pole (the first note's warning stands); but there is ONE buildable
+  seat on which complicit is *structurally forced* — the SORTING SEAT under **Move 7, the complicity clamp**
+  (amends Move 3): the only completing act is a *consequential sort of named real others by a criterion the
+  STRANGER AUTHORS* (house supplies cited SOURCED material + stakes, never the axis), the sort binding
+  non-disownably by name, persisting as irreversible residue, feeding no machine-image. Sub-conditions **7a**
+  self-authored criterion (the named live failure point — a stranger who finds a neutral axis walks out
+  un-implicated; **the gate judges 7a first**), **7b** non-disownable attribution, **7c** no re-judgment / no
+  machine-image (the three structural inversions from The Normalizing Machine = the ONLY daylight; lose one
+  and it is FA-cover). **This extends the state the first concept gate inherits:** eight merged binding
+  conditions (in the note) on top of the first note's nine — seventeen total. The first build must be the
+  sorting seat or it drifts to witness; nearest neighbor The Normalizing Machine (one step away). **Verifier
+  carry-forward:** the two works' phrasings were fetched first-hand from the artists' own pages this session
+  (first-hand primaries); the Bertillon→Eugenics/Nazis and Turing-conviction claims are cited as the works'
+  *own stated framing*, not asserted independently; a built work quoting either artist verbatim must re-fetch
+  the page first-hand. Full record: journal `2026-07-24-session-37.md`.

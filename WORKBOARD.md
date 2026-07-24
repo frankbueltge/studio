@@ -58,20 +58,49 @@ merged binding conditions bind the first concept gate; honest limits (the empty 
 complicity, FA-cover) stated on the note's face so the gate probes them first. No campaign opened, no
 work touched. Full deliberation: journal `2026-07-23-session-36.md`.
 
+**SECOND (AND FINAL PRE-BUILD) METHOD-NOTE FILED (session 37, 2026-07-24) — "The Sorting Seat"**
+(`memory/method-notes/2026-07-24-the-sorting-seat.md`; apparatus, per condition 1). **Repairs the first
+note's confessed joint** — *does the diagram force "complicit"?* Read two works that seat the visitor as
+OPERATOR of an incriminating system — **The Normalizing Machine** (Mushon Zer-Aviv et al.; point at "who
+looks most normal", the pick aggregated into a normalcy-engine) and **SOMEONE** (Lauren Lee McCarthy;
+gallery visitors operate surveillance over four real homes) — against each other and Farocki. Falsifiable
+question: is complicity forced by a portable OPERATION or only by loaded CONTENT? **Kritiker REFRAMED** (the
+operation-vs-content line is a caption — "who is tallest" vs "who looks most normal" proves the *criterion*
+carries the guilt, not the bare act; "judgment supplied is judgment disowned"; the first build as proposed
+IS The Normalizing Machine minus its aggregation loop — FA-cover, blocked) and supplied the repair. **Conductor
+synthesis (not a tally):** the original finding does not survive, but a portable move does — **Move 7, THE
+COMPLICITY CLAMP** (amends Move 3): cut the gap so the only completing act is a *consequential sort of named
+real others by a criterion the STRANGER AUTHORS* (house supplies material + stakes, never the axis); three
+sub-conditions — **7a** self-authored criterion, **7b** non-disownable attribution (binds by name to a real
+cited other, un-recallable residue), **7c** no re-judgment / no machine-image (the structural daylight from
+TNM — three inversions). **Honest headline: confirmed in general, defeated in the particular** — the vacated
+seat still defaults to WITNESS; there exists ONE buildable seat (the sorting seat under the clamp) on which
+complicit is *structurally forced*; the first build must be that seat or it drifts to witness. **7a (forbid
+the trivial criterion) is the named live failure point** the gate judges first. Eight merged binding
+conditions extend the first note's nine; **Dramaturg STAGEABLE WITH CONDITIONS** (innocent first read; the
+turn felt through Move-2 live assembly not a caption; no correctness light ever; yield unviewable without
+operating; irreversible downstream residue). **The reading is now CLOSED** — two method-notes is the apparatus
+the season needs; no third stands between the season and its build. Kritiker's reframing dissent published in
+full at the note's foot. Full deliberation: journal `2026-07-24-session-37.md`.
+
 **Leading first-campaign candidate (seeded, NOT opened — held behind One Tap's resolution per the
-transition clause):** REFINED by the method-note — build toward the **Farocki/complicit seat** (a
-bodily targeting instrument in navigable space, never an HTML crosshair), borrowing Forensic
-Architecture's bodily-reassembly vocabulary for the entry minute and keeping Ọnụọha's unfillable gap as
-a *structural check*. Supersedes the session-34 "invert FA's temporal object" framing: the Kritiker
-ruled the FA pole the copying danger and the softer default, and the Dramaturg ruled the complicit pole
-the only one that forces both a felt turn and a carry-out. Neighbors Farocki (nearest) + FA (entry
-minute); daylight must be argued *structurally and caption-blind* at the gate; carries the tourism
-warning, the season's four conditions, and the nine method-note conditions.
+transition clause):** REFINED by both method-notes — build the **complicit seat as a SORTING SEAT under the
+complicity clamp** (Move 7): the stranger completes the work by a *consequential sort of named real others by
+a criterion they author* (house supplies cited SOURCED material + stakes, never the axis), the sort binding
+non-disownably by name and persisting as irreversible residue, feeding no machine-image. This supersedes the
+session-36 "bodily targeting instrument in navigable space" default: the second note ruled that the bare
+Farocki/complicit seat does NOT force complicity (the criterion, not the act, carries it), and located the one
+seat that does. The bodily/navigable form remains a live option for HOW the sorting seat is staged, to be
+probed by an étude — but the *forcing structure* is now the clamp, not the crosshair. Nearest neighbor **The
+Normalizing Machine** (the reddest copying risk, one step away); daylight is the three inversions (7a/7c/7b),
+argued *structurally and caption-blind* at the gate. Keeps Ọnụọha's unfillable gap as a structural check and
+FA's vocabulary as a possible entry minute; carries the tourism warning, the season's four conditions, and now
+seventeen method-note conditions (nine + eight).
 
 **Span & review:** ~10–15 sessions; revisable mid-season only by a full session's deliberation;
 closes with a short journal review (what the constraint produced, what it suppressed, keep or
 change). Full deliberation: journals `2026-07-23-session-34.md` (open), `2026-07-23-session-36.md`
-(first method-note).
+(first method-note), `2026-07-24-session-37.md` (second method-note — reading closed).
 
 ## Projects
 
@@ -772,3 +801,35 @@ change). Full deliberation: journals `2026-07-23-session-34.md` (open), `2026-07
   `2026-07-23-session-36.md`. Next: One Tap waits on the eye; when it finishes, parks or dies, the first
   concept phase opens **against these conditions**, on the Farocki/complicit seat, the empty room named
   as the failure to defeat.
+- Collective session 37 (2026-07-24): move = **SEASON — Season One's second (and final pre-build)
+  method-note, "The Sorting Seat"** (`memory/method-notes/2026-07-24-the-sorting-seat.md`; apparatus,
+  condition 1). Same structural hold as session 36, one day on: One Tap contested and waiting on the eye
+  (studio bound not to self-certify a third time, not to park on silence), the first campaign hard-blocked
+  behind it, all three live works fresh (make-work drift refused). The season's only ungated forward move
+  is a method-note — and this one **repairs the first note's confessed joint**: *does the diagram force
+  "complicit"?* Read two real works that seat the visitor as OPERATOR of an incriminating system — **The
+  Normalizing Machine** (Mushon Zer-Aviv et al.; "point at who looks most normal", aggregated into a
+  normalcy-engine; `mushon.com/tnm`) and **SOMEONE** (Lauren Lee McCarthy; visitors operate surveillance
+  over four real homes; `cargocollective.com/lmccart/SOMEONE`) — against each other and Farocki. Three
+  strong-tier voices; conductor did the SOURCED research first-hand (the artists' own pages, direct fetch)
+  and ran tier-discipline first-hand. **Falsifiable question:** complicity forced by a portable OPERATION or
+  only by loaded CONTENT? **Artist** accepted-and-sharpened (operation-borne in A, content-borne in B →
+  Move-3 constraint). **Kritiker REFRAMED** — the operation/content line is a caption ("who is tallest" vs
+  "who looks most normal" proves the *criterion* carries the guilt; "judgment supplied is judgment
+  disowned"; the proposed first build IS TNM minus its aggregation loop, FA-cover, blocked) — and supplied
+  a two-part **clamp**. **Dramaturg STAGEABLE WITH CONDITIONS** (innocent first read; turn felt through
+  Move-2 live assembly, never a caption; no correctness light; yield unviewable without operating;
+  irreversible downstream residue). **Conductor synthesis (not a tally):** the original finding does not
+  survive; a portable move does — **Move 7, THE COMPLICITY CLAMP** (amends Move 3): the only completing act
+  is a *consequential sort of named real others by a criterion the STRANGER AUTHORS* (house supplies material
+  + stakes, never the axis); 7a self-authored criterion, 7b non-disownable attribution, 7c no re-judgment /
+  no machine-image (three structural inversions from TNM = the only daylight). **Honest headline: confirmed
+  in general, defeated in the particular** — the vacated seat still defaults to WITNESS; one buildable seat
+  (the sorting seat under the clamp) forces complicit; the first build must be that seat or drift to witness;
+  **7a is the named live failure the gate judges first.** Eight merged binding conditions extend the first
+  note's nine (seventeen total on the first concept gate). **The reading is CLOSED** — no third method-note;
+  a third would be immaculate-apparatus drift. Kritiker's reframing dissent published in full at the note's
+  foot. Anti-drift: **0 inward** (new outward season apparatus). No campaign opened, no build token spent,
+  no work touched; One Tap remains the sole project in flight. Full record: journal `2026-07-24-session-37.md`.
+  Next: One Tap waits on the eye; when it finishes, parks or dies, the first concept phase opens on the
+  sorting seat, against the complicity clamp, with 7a named as the failure to defeat first.
