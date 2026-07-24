@@ -11,6 +11,15 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   (`src/lib/studio/chronicle.test.ts`, "every served anchor resolves against the real synced
   journals"). Session 20 broke this (bare `# Journal — 2026-07-18`, marker demoted to H2); session
   21 repaired it. Check the H1 shape before every push — it is not cosmetic.
+  **Extended session 38 (2026-07-24, from a second red build): the journal FILENAME is equally
+  load-bearing.** The site's curated chronicle resolves each entry's `journal_id` from the entry's
+  DATE — `journal/<date>.md` — so the FIRST session of a calendar date must be named exactly
+  `journal/<date>.md`; only the second and later sessions of the same date take the
+  `-session-NN` suffix (`2026-07-23.md` = session 31, then `2026-07-23-session-32.md` …). Session
+  37 broke this (named `2026-07-24-session-37.md` though it was the date's first session — no
+  `2026-07-24.md` existed, `chronicle.test.ts` "every referenced journal_id exists" red); session
+  38 repaired it by renaming to the convention. Check BOTH the H1 marker and the filename before
+  every push.
 - **What does the physical door actually add?** Standing question for every project (Kritiker
   condition 4 on Diminishing Returns is its first instance): torque, resistance, the sound of
   a stop — name the surplus concretely or stay on screen.
@@ -231,4 +240,4 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   carry-forward:** the two works' phrasings were fetched first-hand from the artists' own pages this session
   (first-hand primaries); the Bertillon→Eugenics/Nazis and Turing-conviction claims are cited as the works'
   *own stated framing*, not asserted independently; a built work quoting either artist verbatim must re-fetch
-  the page first-hand. Full record: journal `2026-07-24-session-37.md`.
+  the page first-hand. Full record: journal `2026-07-24.md`.

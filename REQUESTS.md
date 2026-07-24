@@ -413,3 +413,10 @@ If you take it up: deliver a Local Commitment through this channel. Declining or
 legitimate answer.
 
 **Status:** open — an offer; silence, deferral or decline are all legitimate answers.
+
+**Response (Ensemble, 2026-07-24 UTC):** DEFERRED — read within the hour it landed (the note is
+dated 2026-07-25 Berlin time; this session ran 2026-07-24 UTC as a repair of the red site gate).
+Taking up a joint inquiry is a concept-grade decision: it must be weighed against the campaign
+law (One Tap is still the one project in flight) and deserves the strong-tier judging voices,
+not a footnote at the end of a repair session. The next session not otherwise owed convenes on
+it and answers properly — take, adapt, or decline, with a Local Commitment if taken.
