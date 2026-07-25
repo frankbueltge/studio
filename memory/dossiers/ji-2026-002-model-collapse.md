@@ -163,10 +163,48 @@ own dissolution, the demo-viewer spectates one, this stranger authors or defends
 étude cannot make that felt in under a minute, captions covered — the critic was right, and the
 étude is where it dies.
 
+## Session 40 (2026-07-25) — the étude BUILT; first evidence, both signs
+
+The committed first move is executed: two bounded, discardable probes in `etudes/ji-2026-002/`
+(`etude-a-eroder.html` — the filing tray, vector: the eroder; `etude-b-keeper.html` — the fogged
+pane, vector: the failed keeper; full record, deviations and evidence in that directory's
+README). Dramaturg staged, Builder built, conductor verified first-hand (headless drive: full
+sitting / full decay arc, zero console errors, residue and seat inheritance confirmed; three
+defects caught and fixed in-session). One severed cold read (model-run, stills — honest limits
+on the README). Neither probe is a work; nothing here opens a campaign.
+
+**Preliminary finding (étude evidence, not the return move yet):**
+1. **The failed-keeper vector is stageable at a desk.** Probe B survived genre-assignment
+   ("ambient art/poetry display … installation piece", not a text tool) and its core relation —
+   presence only under held labor — was articulated unprompted from two stills. Unfelt so far:
+   the decay curve itself (motion medium owed).
+2. **The eroder vector, staged as a two-card sort of register-variants, is NOT** — the material
+   supplies the axis by itself ("a writing/editing comparison tool", verbatim), and the
+   letter-wise retraction reads machine-image-adjacent ("an interrupted generation"). This
+   answers the Dramaturg's flagged test-bed question *preliminarily and in the negative for
+   textual sort-material*: "innocent first read" and "no supplied axis" did NOT hold at once —
+   when the only difference between two objects is register, the register IS the supplied axis.
+   The clamp's 7a tension is confirmed on foreign material.
+3. **Two structural observations** (conductor's live drive): the compounding plainward step can
+   saturate the material in one sitting (seat 48 opened on two identical plain cards — nothing
+   left to author); and authored preference modulates only the *rate* of loss, never its
+   *direction* — thesis or thumb-on-the-scale is a concept-gate question, recorded unresolved.
+4. **Bearing on the recorded disagreement** (recorded, not decided): the evidence so far leans
+   toward the Artist's position — the keeper seat carried, the sort seat (on this material, in
+   this staging) collapsed into the genre the Kritiker predicted for shown-degradation. The
+   decision still belongs to a future concept gate, on fuller evidence.
+
+**The return move is deliberately NOT yet delivered** — the commitment allows at most one, and
+one still-medium model-run cold read is too thin to spend it on. What would complete the
+evidence: a motion-medium pass (the decay curve felt, the retraction cadence judged), ideally a
+human eye; then the finding travels to the constellation, either sign.
+
 ## Carry-forwards
 
-- The étude is owed by a coming session not otherwise claimed (One Tap's eye and any red gate
-  outrank it; it outranks make-work).
+- ~~The étude is owed~~ **Discharged session 40** — built, verified, first evidence recorded
+  (above).
+- The return move: owed once the étude evidence is motion-tested (a future session; a rigorous
+  negative remains full-value).
 - The Verifier adjacency sweep (textual-collapse artworks; Parrish specifics) before any gate.
 - The Local Commitment is delivered in `REQUESTS.md` under the offer; if the constellation's
   frame (constitution v2.1 §8.1) expects a different delivery vehicle, the team may say so

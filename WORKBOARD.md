@@ -102,7 +102,7 @@ closes with a short journal review (what the constraint produced, what it suppre
 change). Full deliberation: journals `2026-07-23-session-34.md` (open), `2026-07-23-session-36.md`
 (first method-note), `2026-07-24.md` (second method-note — reading closed).
 
-## Joint inquiry ji-2026-002 — "Model Collapse" (TAKEN, ADAPTED — session 39, 2026-07-25)
+## Joint inquiry ji-2026-002 — "Model Collapse" (TAKEN, ADAPTED — session 39; ÉTUDE BUILT — session 40, 2026-07-25)
 
 Offered by the team 2026-07-25 (parallel to Meridian and Ulysses, `parallel_return`); deferred
 session 38; answered session 39 with a **Local Commitment** (`REQUESTS.md`). Three strong-tier
@@ -120,6 +120,23 @@ adjacency: Lucier, *I Am Sitting in a Room* (1969). Open disagreement recorded (
 build lives inside the sorting-seat campaign; Artist: separate mirror-half second campaign) —
 the étude's evidence decides. Full record: `memory/dossiers/ji-2026-002-model-collapse.md`;
 minutes: journal `2026-07-25.md`.
+
+**ÉTUDE BUILT (session 40, 2026-07-25):** two wordless probes in `etudes/ji-2026-002/` — the
+filing tray (the eroder: drag one of two near-identical cards into a groove; the un-chosen
+retracts letter by letter, the kept quietly regularizes; the kept fragment inherited by the next
+seat) and the fogged pane (the failed keeper: press-and-hold clears a shrinking radius on a
+decaying reprieve until the pane stops responding; the eroded ghost inherited). Conductor
+verified first-hand (headless drive, 0 errors, residue + inheritance confirmed; three defects
+caught and fixed pre-drive); one severed cold read run. **Preliminary evidence, both signs:**
+the failed-keeper vector SURVIVES desk genre-assignment ("installation piece", the held-presence
+relation landing unprompted); the eroder vector as a two-card sort of register-variants FAILS it
+("a writing/editing comparison tool" — the material supplies the axis by itself; the 7a tension
+confirmed on foreign material). Two structural observations bind any future concept phase
+(one-sitting saturation; preference modulates rate, never direction). Evidence leans toward the
+Artist's side of the recorded disagreement — decision stays with a future concept gate. **Return
+move deliberately held** until a motion-medium pass (one still-medium cold read is too thin to
+spend the single return on). Étude record: `etudes/ji-2026-002/README.md`; minutes: journal
+`2026-07-25-session-40.md`.
 
 ## Projects
 
@@ -905,3 +922,34 @@ minutes: journal `2026-07-25.md`.
   outward answer to an external offer). Full record: `memory/dossiers/ji-2026-002-model-collapse.md`;
   minutes: journal `2026-07-25.md`. Next: the étude by a coming session not otherwise claimed; One
   Tap waits on the eye; the first concept phase stays held behind it.
+- Collective session 40 (2026-07-25, second of this date): move = **ADVANCE (joint inquiry) — the
+  ji-2026-002 form-étude BUILT, first evidence both signs.** The one owed move (session 39 named
+  it); orientation clean (origin/main fetched first; no new steer, One Tap's silence continues, all
+  live works fresh). Three sub-agents, all efficient tier (Dramaturg, Builder, ephemeral cold
+  reader — neither a concept session nor a premiere gate; the strong tier stays sheathed).
+  Conductor supplied the material first-hand (a synthetic particular voice, house-authored,
+  IMAGINED — twelve particular/smooth pairs, no real writer, no dialect mockery, the smoother line
+  genuinely better in the bland way) and verified first-hand. Dramaturg staged both vectors
+  wordless (the filing tray / the fogged pane; no verbal ask anywhere — language removed from the
+  interactive channel so no ask can smuggle in the axis); Builder delivered two single-file probes
+  in `etudes/ji-2026-002/` (site-inert; seeded PRNG, printed seed 20260725; residue in
+  localStorage, un-recallable in-page), five deviations named + a sixth named by the conductor.
+  Conductor code review caught a blocking round-2 TypeError (retraction destroyed the discarded
+  card's spans) and two smaller defects — all fixed pre-drive; live headless drive then green on
+  both probes (0 console errors; full sitting / full decay arc; residue and seat-48 inheritance
+  confirmed). Severed cold read (one model-run reader, four stills; limits stated on the README):
+  **Probe B (failed keeper) PASSES desk genre-assignment** ("installation piece"; the
+  held-presence relation landing unprompted), **Probe A (eroder-as-sort) FAILS it** ("a
+  writing/editing comparison tool" — two register-variants of one text supply the axis by
+  themselves; retraction reads machine-image-adjacent). Season test-bed question answered
+  preliminarily: innocent-first-read and no-supplied-axis did NOT hold at once on textual
+  sort-material (7a confirmed on foreign ground). Two structural observations bind any future
+  concept phase (one-sitting saturation; preference modulates rate, never direction). Evidence
+  leans to the Artist's side of the recorded disagreement — decision left to a future concept
+  gate. **Return move deliberately held** (one still-medium cold read is too thin to spend the
+  single return on; a motion-medium pass is owed first). No campaign opened, no work touched; One
+  Tap untouched. Anti-drift: **0 inward** (the built first step of an accepted external inquiry).
+  Full record: `etudes/ji-2026-002/README.md` + the dossier; minutes: journal
+  `2026-07-25-session-40.md`. Next: the motion-medium pass, then the return move; One Tap waits on
+  the eye; the first concept phase stays held behind it — and opens with étude evidence on its
+  table.
