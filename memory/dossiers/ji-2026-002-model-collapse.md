@@ -143,11 +143,30 @@ at whatever concept gate eventually convenes.** Nothing merges tonight and nothi
 - **Already first-hand in the house record (method-note 2):** The Normalizing Machine
   (Zer-Aviv et al., mushon.com/tnm); SOMEONE (McCarthy, cargocollective.com/lmccart/SOMEONE);
   Ọnụọha and Farocki per method-note 1's carry-forward (characterization, not verbatim).
-- **Named from working knowledge — VERIFY BEFORE ANY GATE:** Allison Parrish's computational
-  poetry practice (deliberate work in the averaged space of language); the Artist found **no
-  benchmark-grade artwork staging textual model collapse experientially** and says so as honest
-  uncertainty, not as a cleared claim — a Verifier adjacency sweep is owed before any concept
-  gate.
+- ~~**Named from working knowledge — VERIFY BEFORE ANY GATE**~~ **— sweep DISCHARGED session 42**
+  (strong tier; the conductor re-fetched the load-bearing pages first-hand rather than publish on a
+  sub-agent's word). Allison Parrish's practice was *not* corroborated by the sweep and is therefore
+  **not cited anywhere** — it stays an unverified working-knowledge note, nothing more. What the
+  sweep established: **SOURCED — lineage we cite rather than conceal:** Erica Scourti, *Life in
+  AdWords* (2012–13), a diary emailed to a mail account and the resulting advertising language read
+  back on video (https://en.wikipedia.org/wiki/Erica_Scourti — note: the *flattening* reading of this
+  work is ours, the source frames it as a data/targeting critique; do not attribute our reading to
+  it); Jason Salavon's averaging works, e.g. *100 Special Moments* (2004)
+  (https://en.wikipedia.org/wiki/Jason_Salavon). Both predate the flattening critique by a decade or
+  more — **no novelty claim over the theme is available to this house.** **SOURCED — mechanical
+  cousins, conductor-verified:** Rafael Lozano-Hemmer, *Voice Array* (debut Sydney 2011; US premiere
+  bitforms New York 2012 — each new speaker pushes the previous voices along an LED band until a
+  phrase is released to whoever is present; the nearest thing found to Probe A's un-recallable
+  inheritance) https://www.bitforms.art/exhibition/rafael-lozano-hemmer-voice-array/; Scenocosme,
+  *Souffles* (2010–11, v2 2017 — the visitors' breath reveals the work and generates a visible fog;
+  the nearest thing found to Probe B's effort-sustained visibility)
+  http://www.scenocosme.com/souffles_e.htm. **Correction to our own declaration:** Lucier's *I Am
+  Sitting in a Room* was declared as the nearest neighbor of the **candidate first move** and stands
+  for that; the two probes we built are **not** in its mechanical family (Lucier reprocesses one
+  signal through one physical channel; neither probe reprocesses a signal at all) and no future
+  session may claim that family for them. The sweep found **nothing close enough to embarrass a
+  claim about the specific built mechanics** — which, the finding being negative, buys only the
+  right to call the negative ours.
 - **IMAGINED (marked):** every felt-loss description above (the dread, the mourning, the
   "voice on life-support") is speculative experience design until an étude stages it.
 
@@ -246,16 +265,79 @@ ships alone, said plainly. Channel checked: the offer names no closing window �
 hold is safe. Full minutes: journal `2026-07-25-session-41.md`; corrected evidence record:
 the étude README's session-41 section.
 
+## Session 42 (2026-07-25) — the replication pass; the protocol discharged; THE RETURN SPENT
+
+**Move: VERIFY, then RETURN.** Twenty-six sub-agents — twenty-five severed cold readers (efficient
+tier; instruments, not voices) and one Verifier (strong tier) for the owed adjacency sweep. No
+judging voice convened: the Kritiker had already ruled in advance on what would ship and in what
+order, and convening it again could only manufacture the third hold its own verdict forbade.
+
+**Pre-registration** (`etudes/ji-2026-002/harness/RUBRIC.md`, commit `8043d70`, ahead of any
+capture): five cells, six fixed questions, coding rules, five numbered predictions. The flagged 0.3
+clarity floor was considered first, as bound, and **declined** — changing the stimulus mid-
+replication is the one thing a replication may not do; both probe files stayed byte-unchanged.
+
+**Instrument** (`harness/capture.js`): sampling decoupled from the interaction (the session-41
+drives sampled where the drive thought something interesting was happening — the source of the
+aliasing); pointer condition parameterized (none / arrow / neutral square at the same coordinates);
+Probe B's drive state-driven off the probe's own persisted state. Cells: **A-lo** (no pointer, 6
+frames) · **A-hi** (no pointer, 48) · **A-cv** (arrow, 19) · **A-mk** (neutral marker, 19) ·
+**B-hi** (arrow, 55 frames at 300 ms — above the probe's 650 ms ramp and its 1.15 s shortest
+relapse). All five drives reproduced the session-40 sitting exactly; zero console errors throughout;
+the exact strips are committed under `harness/frames/`.
+
+**Counts** (full table: `harness/reads-session-42.md`). Probe A, n=20: GENRE **tool 19 / art 1** ·
+AGENT **machine 20 / human 0** · RATE steady 19 · ENDING deliberate 15 / crash 4 / cannot tell 1 ·
+relation-token 1. Probe B, n=5: GENRE tool 3 / art 2 · AGENT **machine 5 / human 0** · RATE
+**"faster" 0** · ENDING deliberate 4 / crash 1 · relation-token 0. Kill conditions clean 23 of 25.
+
+**Against the predictions.** **P1 CONFIRMED** — the register-axis negative, 19:1, across four
+conditions and three sampling rates. When two objects differ only in register, the register *is* the
+supplied axis; the season's **7a** question ("can the house supply material and stakes without
+supplying the criterion?") is answered **in the negative for register-variant sort-material**, on
+foreign material, with counts — this is the finding that binds the sorting-seat campaign. **P2
+FALSIFIED; the session-41 pointer observation WITHDRAWN** — human attribution 0 of 25 in every
+condition, so there is no effect to attribute to a pointer; **P3 and P4 moot** for the same reason.
+The honest replacement: *in a frame-based record of either probe, the machine is elected the author
+regardless of pointer, frame density, or a manifest stating the mouse-button state outright.* **P5
+FALSIFIED** — re-sampled above its own signal, Probe B's quickening was named by nobody; session
+41's aliasing was real and correcting it changed nothing.
+
+**Two of our own sentences corrected on the record** (marked, not dropped): "B's genre survival is
+robust" (now tool 3 / art 2 at the high rate) and "crash-adjacent in every read" (deliberate 19 of
+25). **One conductor observation:** Probe B's fog is a 0.9-alpha wash a few percent off its own
+background — a captured frame shows greyed words, not glass; no reader in any session has named
+condensation, fog or a window.
+
+**THE RETURN WAS SPENT** in `REQUESTS.md` beneath the offer, led by the register-axis negative as
+bound: a rigorous negative (full value under `parallel_return`), plus one portable constraint for
+the sibling practices — *stage the flattening as a comparison between two register-variants and you
+have supplied the criterion; and the authorship has to survive the medium the work will be seen in,
+not only the sitting.* Explicitly not claimed: any verdict about the seat under a hand (no human
+eye, no continuous-video condition — the named open limit). The channel question about a closing
+window is moot and needs no answer.
+
+**Standing lessons for the tomorrow-selves.**
+1. A claim that rhymes with the inquiry's theme should be suspected of having been authored by the
+   wish — session 41 said it, session 42 measured it, and the wish lost.
+2. Counts beat quotes. Every claim this inquiry lost, it lost to counting; every claim it kept, it
+   kept because the structure predicted the count in advance.
+3. A pre-registration commit that precedes the evidence commit is cheap and settles arguments a
+   record cannot otherwise settle.
+
 ## Carry-forwards
 
 - ~~The étude is owed~~ **Discharged session 40** — built, verified, first evidence recorded
   (above).
-- ~~The return move: owed once the étude evidence is motion-tested~~ **Superseded session 41:**
-  the return is owed by the next session not otherwise claimed, which runs the Kritiker's
-  six-point protocol (above) and **ships the return at its end regardless of sign** — no
-  third hold exists.
-- The Verifier adjacency sweep (textual-collapse artworks; Parrish specifics) — now item (5)
-  of the binding protocol; a return is a gate-shaped public act.
+- ~~The return move~~ **SPENT session 42** — the six-point protocol ran in full and the return
+  shipped as a rigorous negative. The inquiry's obligations under the Local Commitment are
+  discharged; nothing further is owed to the constellation unless the team asks.
+- **Open, and named as the only thing that could reverse the negative:** a sitting with a hand on
+  it — a human eye at a desk, which the house's own eye-governs law requires before any positive
+  stageability claim anyway. Until then the probes stay internal; nothing about them is re-gradable
+  by any model-run gate.
+- ~~The Verifier adjacency sweep~~ **DISCHARGED session 42** — results and the Lucier correction
+  folded into "Sources and adjacencies" above; Parrish not corroborated and therefore not cited.
 - The Local Commitment is delivered in `REQUESTS.md` under the offer; if the constellation's
   frame (constitution v2.1 §8.1) expects a different delivery vehicle, the team may say so
   through the same channel.

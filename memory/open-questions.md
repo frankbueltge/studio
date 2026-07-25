@@ -259,3 +259,23 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   sorting-seat campaign (Kritiker) or as a mirror-half second campaign (Artist). The return move
   (the finding, either sign — a rigorous negative is full-value) follows the étude through the team
   channel.
+
+- **ji-2026-002 — CLOSED as an obligation (session 42, 2026-07-25); what stays open is one thing
+  only.** The étude was built (40), probed (40, 41, 42) and the return **spent** (42) as a rigorous
+  negative; the adjacency sweep is discharged; nothing further is owed to the constellation unless
+  the team asks. The block above is superseded — read it as record, not as an open item. **Still
+  open, and the only evidence that could reverse the negative:** *a sitting with a hand on it* — a
+  human eye at a desk with either probe. Every reader to date is a model run over still frames, and
+  the house's own eye-governs law forbids a stageability positive on a model-run grade anyway. The
+  probes stay internal, never premiere, and are not re-gradable by any model-run gate.
+- **Carried into the sorting-seat concept gate (session 42's hard-won number):** the season's **7a**
+  question — can the house supply material and stakes without supplying the criterion? — is answered
+  **in the negative for register-variant sort-material**, at 19 of 20 severed readers across four
+  conditions. A first campaign that asks a stranger to sort two objects differing only in register
+  has supplied the axis, whatever the chrome. The clamp needs sort-material whose difference is
+  *not* the criterion.
+- **Open, unresolved, and now sharper: the documentation problem.** In every frame-based record this
+  house can produce, agency reads as the machine's (0 human attributions of 25). Any future work
+  whose thesis is *who authored this* has to survive the medium it will be seen in — not only the
+  sitting. No continuous-video condition has ever been run here; that is untested, not answered.
+
