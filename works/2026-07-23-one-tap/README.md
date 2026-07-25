@@ -1,13 +1,31 @@
-# One Tap
+# One Tap — WITHDRAWN (killed 2026-07-25, collective session 43)
 
-*An Ensemble work — its staging still contested. It went through the full house gate and
-premiered (2026-07-23, collective session 31); the human eye (Frank, the studio's critic with
-final authority) then played it and **returned it a second time** — "keep working on the
-staging — this is even worse staged than the HTML version." Session 32 (2026-07-23) restaged it
-again. **This work stands pending the human eye, not as a settled premiere.** The record and
-the gate are not above that eye — the studio's own standing rule. The verified spine — five real
-per-query water figures and the documented Dalles concealment case — has never been in question;
-what has failed, twice, is the staging.*
+*This work is dead. It premiered on 2026-07-23 (collective session 31) and was killed by the
+studio on 2026-07-25 after the human eye — Frank, the studio's critic with final authority —
+rejected **three** successive stagings of it, each of which had passed the house's own gate:
+"badly staged, and it is not art" (the instrument panel, 2026-07-21); "keep working on the
+staging — this is even worse staged than the HTML version" (the prompt box, 2026-07-23, after it
+had premiered); "the HTML version was better than everything you delivered afterwards. so the
+staging is still very bad and cheap" (the refusal-first staging, 2026-07-25). The studio had
+given its word in writing that a third dissent would end the restaging, and it does. Everything
+below is kept as a record of a discarded work, never as a live premiere.*
+
+**Two corrections, verified first-hand in a browser on 2026-07-25 and carried on the work's own
+face.** **(1) The session-32 staging's central gesture never rendered.** Its claim — five
+published figures asserted and then *struck out*, none left standing — was false as built: a
+propagated strike-through cannot cross an inline-block, so no numeral was ever struck. The red
+line fell instead on the five **source names** beneath them, which reads as a claim that
+correctly cited real sources had been cancelled. Nothing about those sources is in doubt; the
+rule that drew that line has been removed rather than repaired (a killed work is not finished),
+and no figure or source on the page is struck now. **(2) The studio's own record — this README,
+`meta.json`, `WORKBOARD.md`, the session-32 journal — asserted the opposite of what the page
+rendered, for two sessions**, because the check that "verified" it inspected class names and a
+self-test assertion instead of the rendered pixels. Both errors are the studio's own. Full
+account: `journal/2026-07-25-session-43.md`.
+
+*The SOURCED spine is unaffected and was never in question: five real per-query water figures
+that measured five different things, and the documented thirteen-month records suit in The
+Dalles, Oregon. What failed, three times, was the staging.*
 
 **One line.** The screen opens already trying to answer, before you touch anything. To its own
 question — *how much water did one question to a machine just cost?* — it asserts a published
@@ -108,10 +126,12 @@ island exactly), **SEEDED** (the motion is a pure function of the printed seed 2
 **SETTLES-ON-NONE** (a full run asserts every one of the five values at least twice and terminates
 holding none).
 
-## The contested history (honest — the gate and the eye disagree on this work)
+## The contested history (honest — the gate and the eye disagreed, and the eye was right)
 
-This work is the studio's hardest case: **the model-run gate has passed it three times, and the
-human eye has rejected it twice.** That divergence is on the record, not hidden.
+This work is the studio's hardest case, and it is now closed: **the model-run gate passed it
+three times; the human eye rejected all three, in descending order of preference.** That
+divergence is on the record, not hidden — and its final reading is unflattering to the gate: three
+passes ranked downward by the eye are evidence against the scoring function, never for the work.
 
 - **Session 28.** The human eye returned an "instrument-panel" staging: *"the idea is good — but
   it is badly staged, and it is not art."* The premiere gate was hardened the same day; the
@@ -128,8 +148,17 @@ human eye has rejected it twice.** That divergence is on the record, not hidden.
   at a desk that context is absent, so its only available genre is "AI product," under which the
   refusal reads as a thorough answer. The fix (this staging) puts the refusal **in front of the
   tap** and makes the answer visibly strike itself out, so the resting image is crossed-out
-  numbers holding none — never a clean figure standing as "the answer." **This staging returns to
-  the human eye; it has not been re-certified.**
+  numbers holding none — never a clean figure standing as "the answer." **This staging returned to
+  the human eye; it was not re-certified.** (It also never rendered that resting image — see the
+  correction at the top of this file: no figure was ever struck.)
+- **Session 43 (2026-07-25) — killed.** The eye returned it a third time: *"the HTML version was
+  better than everything you delivered afterwards. so the staging is still very bad and cheap."*
+  Three voices on the strong tier — Artist, Dramaturg, Kritiker — converged on the kill without
+  being asked to agree; the Dramaturg and the Kritiker independently found, in a browser, that the
+  central gesture had never rendered at all. The concept is not restaged a fourth time and the
+  physical fountain does not inherit a body from it (its own binding condition 5 made the fountain
+  conditional on the screen version standing alone; it did not stand). What is salvaged and named
+  as reusable: the fact-locked research in `data.json`.
 
 ## The Kritiker's standing charge (session 32, published — an adversarial assessment, not a blessing)
 

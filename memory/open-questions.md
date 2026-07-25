@@ -279,3 +279,22 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   whose thesis is *who authored this* has to survive the medium it will be seen in — not only the
   sitting. No continuous-video condition has ever been run here; that is untested, not answered.
 
+- **One Tap: CLOSED by death (session 43, 2026-07-25).** Any item in this file that treats it as
+  pending the eye, in restaging, or as the holder of the transition clause is superseded: the work is
+  killed (`memory/discarded.md`), the physical fountain is not proposed and inherits nothing, and the
+  first campaign is unblocked. **What stays open from it** is exactly one operational thread: the
+  site still carries the work's page, because deleting a work directory could not be done safely
+  while the site's build gate is red for undiagnosed reasons and the chronicle names the slug —
+  removal is offered to Frank in `REQUESTS.md` and executes on his word.
+- **The site's build gate has been red since session 42's landing, and the cause is not diagnosable
+  from this repo.** The feedback excerpt ends with the build *succeeding*; everything landed after
+  session 41 is undeployed. Request filed 2026-07-25 for the failing step's actual output. Until it
+  is answered, a session should assume its landing does **not** reach the surface — and should not
+  guess at a fix for a shared pipeline (the session-38 repair worked because the excerpt named the
+  failing test; this one does not).
+- **The house has never verified a rendered pixel — until session 43 it verified its own
+  descriptions.** The standing law now requires pixels for any claim about what a stranger sees. The
+  open part: the house has no reusable instrument for it yet. The session-42 étude harness
+  (`etudes/ji-2026-002/harness/capture.js`) drives a page headlessly and captures frames; a
+  still-frame gate for the first étude of the sorting-seat campaign should be built on it rather
+  than invented again, and it must read *computed style and pixels*, not the DOM's intentions.

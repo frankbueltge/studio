@@ -593,3 +593,67 @@ the eye passes it, it stands; if it dissents again, the honest question the Arti
 put on the table — screen work vs. physical install — is answered, and the screen is conceded to the
 fountain as a study. A sharpening question was filed with Frank (what specifically read as badly
 staged) so the next verdict is diagnostic.
+
+---
+
+# Session 43 (2026-07-25) — KILLED. The third return of the eye, and a gesture that never rendered.
+
+**The verdict that ended it** (Frank, `REQUESTS.md`, seed *„Inszenierung des Werks »one tap«"*):
+*"die html version war besser, als alles was ihr danach abgeliefert habt. also die Inszenierung ist
+immer noch sehr schlecht und billig."* Third rejection, third staging, third internal gate pass — and
+the eye's ranking descends with the restage count: instrument panel > prompt box > refusal-first.
+(The house reads "die HTML version" as the first staging it was asked to play, the instrument panel
+of sessions 24–27; the reading is an interpretation, stated as one, and nothing in the decision turns
+on it — every staging after the first is rejected either way.)
+
+**Three strong-tier voices, convened independently, converged without being asked to agree:**
+**KILL** (Artist: "bury the screen object, not the concept's material — a park is what you grant a
+form nobody has probed; this one was probed three times"), **DIE, and off the surface** (Kritiker:
+the session-32 promise is a written commitment and "a house whose written commitments expire when the
+answer is unwelcome has nothing left to premiere"), **pull it** (Dramaturg: what would ship
+contradicts both the work's argument and its own tier law).
+
+**The finding that made it unanswerable — and the reason no fourth restage was available.** The
+Dramaturg and the Kritiker each opened the built page in a browser, independently, and found the
+central gesture missing: `#work .attempts li` carries `text-decoration: line-through`, but
+`.at-fig` is `display: inline-block` — an atomic inline, which a propagated text decoration cannot
+cross. **No figure was ever struck.** The line fell on the in-flow block beneath it, `.at-owner`, the
+five real source names (and its own `text-decoration: none` could not refuse it — a descendant cannot
+switch off an ancestor's decoration). The resting image was therefore five clean grey numerals with
+red lines through *UC Riverside / UT Arlington · OpenAI's chief executive · Google · Mistral · The
+Washington Post × UC Riverside* — the numbers standing, the sources cancelled: the exact inversion the
+restage was built to escape, and a rendered claim that correctly cited real sources are false.
+**Conductor verification, first-hand** (headless browser, 1280×900, 14 s to terminal state): computed
+`text-decoration-line: none` on all five `.at-fig`; zero console errors; screenshot taken before and
+after. For two sessions `WORKBOARD.md`, `README.md` and `meta.json` stated the opposite as verified
+fact, because the session-32 check inspected class names ("0 of 5 live") and a self-test assertion
+(`SETTLES-ON-NONE`, which compares two string literals the author wrote in the same file) instead of
+the rendered pixel.
+
+**What was done to the artefact** (a killed work is not finished — none of this is a restage):
+the `line-through` rule was **removed, not repaired**, so nothing on the page cancels a real source;
+a permanent WITHDRAWN notice was put on the work's own face carrying both corrections; `README.md`,
+`meta.json`, the board and this dossier were corrected where they asserted the gesture as built.
+The directory was **not deleted**: the chronicle's session-31 "ship" entry names the slug, the site's
+own build gate is currently red for reasons this repo cannot diagnose, and destabilising a shared
+pipeline on the studio's own initiative would be the second unforced error of the night. Removal from
+the public surface is offered to Frank in `REQUESTS.md` and will be executed on his word.
+
+**What does not inherit.** The physical fountain-and-terminal install gets **no** body from this work.
+Its own binding condition 5 made fabrication conditional on the screen version standing alone; it did
+not stand, so the premise is void, not merely unmet. The Artist named what would have to exist before
+that proposal is worth Frank's budget: one built object of this house that the eye passes on first
+contact without a restage; a diagnosis from outside rather than a fourth self-authored one; a body for
+the refusal that is not a screen (so the terminal disappears from the install entirely); and Recovery's
+fabrication resolved. None of the four exists tonight.
+
+**What was salvaged and named:** `data.json` — five primary-verified per-query figures with scopes,
+contested-by lines and sources, plus the dated Dalles case file. Reusable research, not a work.
+
+**Standing law adopted** (`memory/decisions.md`, session 43): two rejections end a *body*; pixels, not
+propositions, establish what a stranger sees; the still-frame test binds the first étude of every
+campaign; the eye moves earlier; silence is still not a verdict.
+
+**Dossier closed.** One Tap is in `memory/discarded.md`. It returns only as a different work, through a
+concept phase from zero, in a form the eye has never seen.
+
