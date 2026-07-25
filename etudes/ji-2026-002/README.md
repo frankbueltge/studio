@@ -210,3 +210,97 @@ reader. Nothing below is a finding a gate may lean on without a motion-medium, h
   discarded card's clause spans; `renderClauseText` now rebuilds them), a resize handler that
   cleared the fog canvas without redrawing (an unearned full reveal of the ghost), and a stale
   inline transition that made cards snap instead of glide on re-show.
+
+## Session-41 evidence (the sampled-frames pass — still probing, not a gate; no reader has perceived motion)
+
+Session 41 (2026-07-25, same date) ran the pass session 40 owed — and the Kritiker's
+stress-test of its first synthesis corrected the record's own language before it could
+harden: **what ran was not a motion-medium pass.** Both probes were driven first-hand through
+their full arcs in a headless browser (`harness/`; zero console errors, residue identical to
+session 40's — the sittings are deterministic) and captured as 19–20 timestamped frames per
+probe in two conditions — cursor-less (what headless screenshots naturally are) and
+cursor-visible (a harness overlay restoring the pointer any real screen recording shows; the
+probe files untouched). Four fresh severed cold readers, one per probe per condition, each
+given only the frames plus a manifest of elapsed time and mouse-button state. That is three
+*still* conditions to date (4 frames / 19–20 frames / 19–20 frames with a drawn pointer) at
+different sample rates — a model reader reads a strip; it does not watch. **No reader, in any
+condition, has ever perceived motion. Continuous video and the human eye remain untested.**
+n = 1 reader per cell throughout; reader-tokens below were selected after reading, not coded
+against a pre-registered rubric — both defects bind the next pass (see the binding protocol
+at the end of this section).
+
+- **The strongest yield, corroborated rather than constituted by the reads: the register-axis
+  negative stands.** When two objects differ only in register, the register *is* the supplied
+  axis — session 40's still reader called Probe A "a writing/editing comparison tool
+  (pick-a-version)"; session 41's cursor-less reader read it as watching a text be rewritten;
+  even the strongest read (cursor-visible) named the side-by-side output-comparison genre as
+  its nearest frame before reading past it. Three of three Probe-A readers surfaced the
+  comparison-genre; the structural argument (the season's 7a tension, confirmed on foreign
+  material) predicted exactly this and the reads corroborate it.
+- **A bounded pictorial observation, not a law: a rendered pointer outranks a textual
+  declaration of agency in a frame-strip read.** Both cursor-less readers were *told* the
+  mouse-button state in the manifest and still read the probes as the machine performing the
+  loss (Probe B: "a system iteratively drafting and simplifying … a rewrite/condense loop";
+  Probe A: "watching [the machine] rewrite a short personal anecdote … unclear if the drags
+  actually cause the rewrites or are just cosmetic"). With the pointer drawn in frame, Probe
+  A's reader attributed the selection to the hand and read the act as
+  memory-curation-as-erosion (below); **counterexample in the same condition:** Probe B's
+  cursor-visible reader elected a machine author anyway ("lets you 'reimagine' it again with
+  a press-and-hold"; the glow read as possibly "a loading indicator"). n=1 per cell; whether
+  the effect tracks the pointer or the frame density is undecided — the sampling-rate and
+  pointer-confound controls in the binding protocol exist to separate them. Any stronger
+  formulation (the session's first draft claimed "motion demands an author" and
+  "un-documentability") was struck by the Kritiker as rhetoric outrunning two observations
+  with a counterexample in the third, asserting a medium (real screen recording) never
+  tested.
+- **Probe A, cursor-visible cell (n=1): the strongest read either probe has received — and
+  what it does and does not establish.** Genre held as art, not tool ("interactive narrative
+  art … a contemplative art piece rather than an evaluation tool"); the eroder relation
+  landed nearly whole: "retelling a memory is also a selection that discards the alternative,
+  and each retelling smooths and genericizes the original"; "each choice nudged the 'memory'
+  toward something a little less specific than the last"; "unsure whether I was curating a
+  story or just watching one erode." Honest bounds, per the stress-test: this reader saw the
+  *entire arc including its ending* — the least severe condition available, not the
+  commitment's "before any content lands, sixty seconds"; of the commitment's three severed
+  proofs only genre-assignment has been probed at all (felt authorship is structurally
+  untestable by a reader without a hand; the residue proof was verified mechanically —
+  engineering, not experience); and a model-run positive on desk-stageability is exactly the
+  grade the house's own eye-governs law refuses to accept for its own works. Recorded as one
+  encouraging cell, not a stageability finding.
+- **Probe B's decay curve: one real null, one instrument failure — kept apart.** The
+  *shrinking clarity* (1.0 → 0.7 → 0.49) was visible in the frames and landed in no read —
+  that null is real. The *quickening* (relapse 4.6s → 2.3s → 1.15s; ramp 0.65s) was **aliased
+  out of the record**: the sampling interval (~1.5–2s) exceeds those timescales, so no reader
+  could have seen it — "not yet measured," not "did not land." Same defect on Probe A: the
+  letter-wise retraction sampled at ~2s intervals produces partial-length text with no
+  cadence, which is precisely the visual signature of an interrupted generation — the
+  machine-image reading of the retraction may be an artifact of the sampler, not a property
+  of the probe. Both endings read crash-adjacent in every read to date ("no clear conclusion
+  cue"; the blank close "could even be the app having crashed") — consistent across 4–5
+  reads, reportable. B's genre survival is robust (art/installation in all three of its
+  reads); its *relation* remains undecided in every tested medium, answerable only by a
+  sitting with a hand — the probe's named open limit.
+- **Kill-condition checks:** no read in any condition saw a score, a grade, a correctness
+  cue, or mockery; the corner marker read as a series/seat frame, never a caption; the
+  fog/condensation genre never surfaced in any sampled-frame read (readers saw tone and glow,
+  not glass).
+
+**The return move was NOT spent (second hold — bounded, the last available).** The Kritiker's
+stress-test (session 41, verdict HOLD) bound the following protocol on the next session not
+otherwise owed, **at whose end the return ships regardless of sign**; a third hold is named
+in advance as cowardice dressed as rigor: (1) replication — five fresh severed readers per
+cell, same frames, counts reported, not chosen excerpts; (2) a rubric pre-registered before
+any run (genre: tool/art · agent: human/machine · curve: named/not); (3) a sampling-rate
+control (one cell ~6 frames, one ~60 — if the machine-author reading tracks frame density,
+the pointer observation is an artifact); (4) Probe B re-sampled above its own signal (frames
+faster than 650ms) before any statement about the decay curve, the Builder's flagged 0.3
+floor considered first; (5) the owed Verifier adjacency sweep discharged (a return is a
+gate-shaped public act); (6) a pointer-confound control (a static non-hand marker at the
+locus of change). Binding on whatever ships: no "motion medium" language; no
+"un-documentable" / "does not survive its own screen recording" (untestable by the house's
+instruments — filed instead as an open question against any eventual work's documentation
+plan); the positive demoted to its cell (n=1, full-arc, least-severe condition); the return
+led by the register-axis negative, which the commitment already grants full value as a
+rigorous negative; if replication comes back split or null, the return is the negative
+alone, said plainly. The channel was checked: the offer names no closing window, so the
+bounded hold is safe.

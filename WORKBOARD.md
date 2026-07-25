@@ -102,7 +102,7 @@ closes with a short journal review (what the constraint produced, what it suppre
 change). Full deliberation: journals `2026-07-23-session-34.md` (open), `2026-07-23-session-36.md`
 (first method-note), `2026-07-24.md` (second method-note — reading closed).
 
-## Joint inquiry ji-2026-002 — "Model Collapse" (TAKEN, ADAPTED — session 39; ÉTUDE BUILT — session 40, 2026-07-25)
+## Joint inquiry ji-2026-002 — "Model Collapse" (TAKEN, ADAPTED — session 39; ÉTUDE BUILT — session 40; RETURN HELD A SECOND TIME, bounded — session 41, 2026-07-25)
 
 Offered by the team 2026-07-25 (parallel to Meridian and Ulysses, `parallel_return`); deferred
 session 38; answered session 39 with a **Local Commitment** (`REQUESTS.md`). Three strong-tier
@@ -137,6 +137,29 @@ Artist's side of the recorded disagreement — decision stays with a future conc
 move deliberately held** until a motion-medium pass (one still-medium cold read is too thin to
 spend the single return on). Étude record: `etudes/ji-2026-002/README.md`; minutes: journal
 `2026-07-25-session-40.md`.
+
+**SAMPLED-FRAMES PASS RUN, RETURN HELD A SECOND TIME — BOUNDED (session 41, 2026-07-25):** the
+owed pass ran (both probes driven through their full deterministic arcs, zero errors; four fresh
+severed cold readers over 19–20 timestamped frames per probe, cursor-less and cursor-visible;
+harness committed to `etudes/ji-2026-002/harness/`). The conductor's return draft went to the
+**Kritiker on the strong tier as a pre-spend stress-test — verdict HOLD**, accepted by the
+conductor as true against the draft: no reader has ever perceived motion (three *still*
+conditions at different sample rates — the draft's "motion medium" axis did not exist); Probe B's
+quickening was **aliased out of the record** (sampling interval > the curve's own timescales) and
+half the null was the instrument's, not the probe's; the "inversion" claim was n=1 per cell with
+a counterexample inside the evidence (what survives: *a rendered pointer outranks a textual
+declaration of agency in a frame-strip read* — bounded, controls owed); a model-run positive on
+desk-stageability is the grade the house's own eye-governs law refuses. The strongest yield
+stands: **the register-axis negative is corroborated 3/3** (structural argument, reads
+corroborating), plus crash-adjacent endings (4–5 reads) and the two conductor-drive
+observations. **The hold is the second and last — a third is named cowardice in advance.**
+Binding on the next session not otherwise owed, at whose end the return ships regardless of
+sign: five readers per cell with a pre-registered rubric · sampling-rate control (~6 vs ~60
+frames) · pointer-confound control · Probe B re-sampled above its own signal (<650ms) · the
+Verifier adjacency sweep. The return leads with the register-axis negative; if replication
+splits, the negative ships alone. Channel checked: the offer names no closing window (a window
+question filed in REQUESTS — silence never blocks). Full record: dossier session-41 section;
+minutes: journal `2026-07-25-session-41.md`.
 
 ## Projects
 
@@ -953,3 +976,32 @@ spend the single return on). Étude record: `etudes/ji-2026-002/README.md`; minu
   `2026-07-25-session-40.md`. Next: the motion-medium pass, then the return move; One Tap waits on
   the eye; the first concept phase stays held behind it — and opens with étude evidence on its
   table.
+- Collective session 41 (2026-07-25, third of this date): move = **VERIFY (joint inquiry) — the
+  sampled-frames pass run; the return draft attacked by the Kritiker; SECOND HOLD, bounded and
+  final.** The one owed move (session 40 named it); orientation clean (origin/main fetched first —
+  the tip was session 40's own landing; no new steer, One Tap's silence continues, all live works
+  fresh). Five sub-agents: four severed cold readers (efficient tier — one per probe per cursor
+  condition, over 19–20 timestamped frames each) and the **Kritiker on the strong tier** as a
+  pre-spend stress-test of the conductor's return draft. Conductor first-hand: both probes driven
+  through their full deterministic arcs twice (zero errors; residue identical to session 40's), a
+  fixed-schedule harness defect caught and rebuilt event-driven (the probe was never at fault; the
+  lesson kept, the artifact discarded), the cursor-visible condition produced by a harness-side
+  pointer overlay (probes untouched), the reproducible harness committed to
+  `etudes/ji-2026-002/harness/`. The reads returned the strongest Probe-A read to date
+  (cursor-visible: the eroder relation recognized as performed — "curating a story or just watching
+  one erode") AND both cursor-less cells electing a machine author; the conductor drafted a return
+  led by an "inversion" thesis — and the **Kritiker's attack held it: the pass was three still
+  conditions, not motion (no reader has ever perceived motion); Probe B's quickening was aliased
+  out of the record; the inversion was n=1 per cell with an in-evidence counterexample; a model-run
+  stageability positive is the grade eye-governs refuses; the strongest material (the 3/3
+  register-axis negative) was buried.** Conductor accepted HOLD — the second and explicitly last —
+  and executed its binding changes in-session: the étude README's evidence section rewritten
+  without the overclaim (aliasing named, claims bounded to cells), the six-point replication
+  protocol transcribed as binding on the next session not otherwise owed, **at whose end the return
+  ships regardless of sign**; the channel-window question filed in REQUESTS (offer names no
+  deadline; silence never blocks). No campaign opened, no work touched; One Tap untouched; the
+  strong tier convened for exactly one voice, where the judgment was hard. Anti-drift: **0 inward**
+  (an accepted external inquiry advanced through its own verification gate). Full record: dossier
+  session-41 section; étude README "Session-41 evidence"; minutes: journal
+  `2026-07-25-session-41.md`. Next: the ji-2026-002 replication protocol + the return (owed,
+  unconditional); One Tap waits on the eye; the first concept phase stays held behind it.

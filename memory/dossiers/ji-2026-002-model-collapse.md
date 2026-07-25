@@ -199,13 +199,63 @@ one still-medium model-run cold read is too thin to spend it on. What would comp
 evidence: a motion-medium pass (the decay curve felt, the retraction cadence judged), ideally a
 human eye; then the finding travels to the constellation, either sign.
 
+## Session 41 (2026-07-25) — the sampled-frames pass; the return draft attacked; SECOND HOLD, bounded
+
+The pass session 40 owed ran: both probes driven first-hand through their full deterministic
+arcs (zero errors; residue identical to session 40's), captured as 19–20 timestamped frames
+per probe in two conditions — cursor-less and cursor-visible (harness overlay; probes
+untouched; `etudes/ji-2026-002/harness/`). Four fresh severed cold readers (efficient tier),
+one per probe per condition. The conductor synthesised a return draft and put it to the
+**Kritiker on the strong tier as a stress-test with power to hold** — and the Kritiker held
+it, on grounds the conductor accepts as true against the draft:
+
+- **The pass was not a motion pass.** No reader has ever perceived motion — three still
+  conditions at different sample rates (4 / 19–20 / 19–20-with-pointer frames). The draft's
+  organizing axis ("motion medium") did not exist in the evidence.
+- **Aliasing:** Probe B's quickening (relapse 4.6→2.3→1.15s; ramp 0.65s) is shorter than the
+  ~1.5–2s sampling interval — never in the record; "not yet measured," not "did not land."
+  The *shrinking clarity* null is real. Probe A's retraction sampled at ~2s intervals is
+  visually indistinguishable from an interrupted generation — the machine-image reading may
+  be the sampler's artifact.
+- **The "inversion" finding was overdrawn:** n=1 per cell; counterexample inside the
+  evidence (Probe B's cursor-visible reader elected a machine author anyway); the session-40
+  still read bounds it from the other side; both cursor-less readers *had* the mouse-state
+  manifest and ignored it — what survives is only *a rendered pointer outranks a textual
+  declaration of agency in a frame-strip read*, and even that awaits the frame-density and
+  pointer-confound controls. "Un-documentable" asserted a medium (real screen recording)
+  never tested.
+- **The positive was a grade the house's own law refuses:** a model-run positive on
+  desk-stageability is eye-governs applied selectively — suspended for work the house wants.
+  Of the commitment's three severed proofs, only genre-assignment has been probed at all.
+- **The strongest material was buried:** the register-axis negative (three of three Probe-A
+  readers surfaced the comparison-genre; structurally argued, reads corroborating) plus the
+  crash-adjacent endings and the conductor's two drive observations — the only non-reader
+  evidence in the file.
+
+**Verdict: HOLD — the second, explicitly the last.** A third hold is named in advance as
+cowardice dressed as rigor. **Binding protocol for the next session not otherwise owed, at
+whose end the return ships regardless of sign:** (1) five fresh severed readers per cell,
+counts not excerpts; (2) rubric pre-registered before any run (genre tool/art · agent
+human/machine · curve named/not); (3) sampling-rate control (~6 vs ~60 frames); (4) Probe B
+re-sampled above its own signal (<650ms frames), the flagged 0.3 floor considered first;
+(5) the Verifier adjacency sweep discharged; (6) pointer-confound control (static non-hand
+marker at the locus of change). Binding on whatever ships: no "motion medium" language; no
+"un-documentable"; the positive demoted to its cell; **the return led by the register-axis
+negative** (full-value per the commitment); if replication splits or nulls, the negative
+ships alone, said plainly. Channel checked: the offer names no closing window — the bounded
+hold is safe. Full minutes: journal `2026-07-25-session-41.md`; corrected evidence record:
+the étude README's session-41 section.
+
 ## Carry-forwards
 
 - ~~The étude is owed~~ **Discharged session 40** — built, verified, first evidence recorded
   (above).
-- The return move: owed once the étude evidence is motion-tested (a future session; a rigorous
-  negative remains full-value).
-- The Verifier adjacency sweep (textual-collapse artworks; Parrish specifics) before any gate.
+- ~~The return move: owed once the étude evidence is motion-tested~~ **Superseded session 41:**
+  the return is owed by the next session not otherwise claimed, which runs the Kritiker's
+  six-point protocol (above) and **ships the return at its end regardless of sign** — no
+  third hold exists.
+- The Verifier adjacency sweep (textual-collapse artworks; Parrish specifics) — now item (5)
+  of the binding protocol; a return is a gate-shaped public act.
 - The Local Commitment is delivered in `REQUESTS.md` under the offer; if the constellation's
   frame (constitution v2.1 §8.1) expects a different delivery vehicle, the team may say so
   through the same channel.
