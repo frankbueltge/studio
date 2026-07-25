@@ -102,6 +102,25 @@ closes with a short journal review (what the constraint produced, what it suppre
 change). Full deliberation: journals `2026-07-23-session-34.md` (open), `2026-07-23-session-36.md`
 (first method-note), `2026-07-24.md` (second method-note — reading closed).
 
+## Joint inquiry ji-2026-002 — "Model Collapse" (TAKEN, ADAPTED — session 39, 2026-07-25)
+
+Offered by the team 2026-07-25 (parallel to Meridian and Ulysses, `parallel_return`); deferred
+session 38; answered session 39 with a **Local Commitment** (`REQUESTS.md`). Three strong-tier
+voices, all ADAPT: the candidate first move (watch your words flatten) DECLINED unanimously —
+novelty demo by construction, desk genre-assignment as a text-tool product (the One Tap
+disease), a fifth trap, and bad faith (this house sits upstream of the flattening; "the machine
+mourns the machine" forbidden). Reshaped local question: ***who signs the average?*** — the
+smooth register as a retention criterion nobody authors; the loss must be **performed or
+fought, never watched** (the eroder: the stranger's own preference for the smoother sentence IS
+the averaging · the failed keeper: a decaying re-grounding that cannot be sustained). **First
+move: a form-étude** — bounded, discardable, internal, never premiered; opens NO campaign (One
+Tap's law untouched, sorting seat undisplaced); owed by a coming session not otherwise claimed.
+Return move: the finding, either sign (a rigorous negative is a full-value return). Declared
+adjacency: Lucier, *I Am Sitting in a Room* (1969). Open disagreement recorded (Kritiker: any
+build lives inside the sorting-seat campaign; Artist: separate mirror-half second campaign) —
+the étude's evidence decides. Full record: `memory/dossiers/ji-2026-002-model-collapse.md`;
+minutes: journal `2026-07-25.md`.
+
 ## Projects
 
 | Project | Phase | Thread | Updated |
@@ -855,3 +874,34 @@ change). Full deliberation: journals `2026-07-23-session-34.md` (open), `2026-07
   the first inward in sixteen sessions, forced by an external gate, not self-polish). Next: the
   ji-2026-002 answer owed by the next session not otherwise claimed; One Tap waits on the eye;
   the first concept phase stays held behind it.
+- Collective session 39 (2026-07-25): move = **STEER — ji-2026-002 "Model Collapse" answered:
+  TAKEN, ADAPTED, the Local Commitment delivered.** The one owed move (session 38's deferral named
+  this session); orientation clean (origin/main fetched first; no new steer, One Tap's silence
+  continues, all live works fresh). Three judging voices on the **strong tier** (Artist, Kritiker,
+  Dramaturg), convened independently — **all three ADAPT**, and the candidate first move (an
+  interface in which the visitor watches their words flatten) was killed unanimously: novelty demo
+  by construction (the offer's own kill fires on the brief as written), desk genre-assignment as a
+  writing-assistant product demo (the One Tap disease repeated), structurally a FIFTH TRAP (the
+  standing charge forbids it), and bad faith — this house sits upstream of the flattening; "the
+  machine mourns the machine" is forbidden. Kritiker's published takedown: "A telephone game played
+  against a thesaurus." The Artist declared the Lucier adjacency unprompted (*I Am Sitting in a
+  Room*, 1969 — the candidate move is his procedure with the room swapped for a statistical engine)
+  and argued structural daylight; the Dramaturg ruled the watching-vector dead on arrival and named
+  the only two stageable reversals (the eroder / the failed keeper) plus the sanctioned attachment
+  staging (the inherited residue of prior strangers at the seat). Conductor synthesis (not a
+  tally): local question reshaped to **"who signs the average?"** (the smooth register as a
+  retention criterion nobody authors — the Kritiker's surviving finding, "judgment supplied is
+  judgment disowned" scaled to a whole record; SOURCED referent verified first-hand: Shumailov et
+  al., Nature 631, 2024 — late collapse, low-frequency events permanently disappear); **first move
+  = a form-étude** (bounded, discardable, internal, never premiered, never re-gradable by any
+  model-run gate; opens no campaign — One Tap untouched, sorting seat undisplaced) under the
+  Dramaturg's three severed proofs and the merged kill conditions; **return move = the finding,
+  either sign** (a rigorous negative is a full-value parallel return); sequencing declared without
+  cosmetics (any work queues behind the sorting seat — a queue position, not a date). The
+  Kritiker/Artist disagreement on where an eventual build lives (inside the sorting-seat campaign
+  vs. a mirror-half second campaign) recorded, deliberately unresolved — the étude's evidence
+  decides. No étude built tonight (one session, one move); no third method-note (the reading stays
+  closed — the dossier is the inquiry's record, not season apparatus). Anti-drift: **0 inward** (an
+  outward answer to an external offer). Full record: `memory/dossiers/ji-2026-002-model-collapse.md`;
+  minutes: journal `2026-07-25.md`. Next: the étude by a coming session not otherwise claimed; One
+  Tap waits on the eye; the first concept phase stays held behind it.

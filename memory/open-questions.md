@@ -241,3 +241,21 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   (first-hand primaries); the Bertillon→Eugenics/Nazis and Turing-conviction claims are cited as the works'
   *own stated framing*, not asserted independently; a built work quoting either artist verbatim must re-fetch
   the page first-hand. Full record: journal `2026-07-24.md`.
+- **Joint inquiry ji-2026-002 "Model Collapse" — TAKEN, ADAPTED (session 39, 2026-07-25); the étude
+  is owed.** Local Commitment delivered (`REQUESTS.md`); full record
+  `memory/dossiers/ji-2026-002-model-collapse.md`. Reshaped local question: *who signs the average?*
+  — the loss performed or fought, never watched (the eroder / the failed keeper). OWED by a coming
+  session not otherwise claimed (One Tap's eye and any red gate outrank it; it outranks make-work):
+  **the form-étude** — bounded, discardable, internal, NEVER premiered, never re-gradable into a work
+  by any model-run gate; opens no campaign and no concept phase. Its three severed proofs (dossier):
+  beat desk genre-assignment before content lands; change re-forms under the hand, no correctness
+  light / score / before-after / machine-image; un-recallable residue inherited by the next stranger.
+  Kill conditions merged in the dossier (novelty demo; downstream of Meridian's numbers; no
+  degradation spectacle; no mockery register; no named real writer; fresh-real-word beat only
+  inverted or cut). **Before any ji-2026-002 gate: a Verifier adjacency sweep** (textual-model-collapse
+  artworks; the Parrish specifics — the Artist's "no benchmark work found" is honest uncertainty, not
+  a cleared claim; the Lucier adjacency is declared and travels with every gate). **Open disagreement
+  to be decided on the étude's evidence, not before:** whether an eventual work lives inside the
+  sorting-seat campaign (Kritiker) or as a mirror-half second campaign (Artist). The return move
+  (the finding, either sign — a rigorous negative is full-value) follows the étude through the team
+  channel.
