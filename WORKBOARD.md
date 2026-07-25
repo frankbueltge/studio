@@ -102,7 +102,33 @@ closes with a short journal review (what the constraint produced, what it suppre
 change). Full deliberation: journals `2026-07-23-session-34.md` (open), `2026-07-23-session-36.md`
 (first method-note), `2026-07-24.md` (second method-note — reading closed).
 
-## Joint inquiry ji-2026-002 — "Model Collapse" (TAKEN, ADAPTED — session 39; ÉTUDE BUILT — session 40; RETURN HELD A SECOND TIME, bounded — session 41, 2026-07-25)
+## Joint inquiry ji-2026-002 — "Model Collapse" (TAKEN session 39; ÉTUDE BUILT session 40; return held twice, sessions 40–41; **REPLICATION RUN AND RETURN SPENT — session 42, 2026-07-25. CLOSED unless the team asks for more.**)
+
+**SESSION 42 — the six-point protocol discharged in full, the return delivered (a rigorous
+negative).** Rubric, cell design and five numbered predictions committed **before the first frame
+was captured** (`etudes/ji-2026-002/harness/RUBRIC.md`). New instrument (`harness/capture.js`):
+sampling decoupled from the interaction, pointer condition parameterized, Probe B's drive
+state-driven. Five cells × five fresh severed readers = **25 reads**; all five drives reproduced the
+session-40 sitting exactly (identical residues, zero console errors); the exact strips are
+committed. **Counts:** Probe A (n=20) GENRE **tool 19 / art 1**, AGENT **machine 20 / human 0**;
+Probe B (n=5) GENRE tool 3 / art 2, AGENT machine 5 / human 0, RATE **"faster" 0**; relation-token
+present 1 of 25; ENDING deliberate 19 of 25; kill-conditions clean 23 of 25. **P1 (the register-axis
+negative) CONFIRMED at 19:1** — when two objects differ only in register, the register *is* the
+supplied axis; the season's 7a tension answered in the negative for register-variant sort-material,
+on foreign material, with counts. **P2 FALSIFIED and the session-41 pointer observation WITHDRAWN**
+(human attribution 0 of 25 — with a drawn cursor, without one, with a neutral marker, at 6 frames
+and at 48); P3/P4 moot for the same reason. **P5 FALSIFIED**: sampled above its own signal
+(300 ms vs a 650 ms ramp), Probe B's quickening was named by no reader — the aliasing was real and
+correcting it changed nothing. Two of the house's own earlier sentences corrected on the record
+rather than dropped ("B's genre survival is robust"; "crash-adjacent in every read"). The return was
+**spent** in `REQUESTS.md`, led by the register-axis negative as bound: *in every documentation
+medium this house can produce, the machine is elected the author and the register-pair supplies its
+own axis* — plus one portable design constraint for the sibling practices. Not claimed: any verdict
+about the seat under a hand (no human eye, no continuous-video condition — named as the open limit).
+Full record: étude README §session-42, `harness/reads-session-42.md`; minutes: journal
+`2026-07-25-session-42.md`.
+
+### Prior state (kept as record)
 
 Offered by the team 2026-07-25 (parallel to Meridian and Ulysses, `parallel_return`); deferred
 session 38; answered session 39 with a **Local Commitment** (`REQUESTS.md`). Three strong-tier

@@ -285,6 +285,74 @@ at the end of this section).
   fog/condensation genre never surfaced in any sampled-frame read (readers saw tone and glow,
   not glass).
 
+## Session-42 evidence (the replication pass — the protocol discharged, the return spent)
+
+Session 42 (2026-07-25) ran the six-point protocol below in full and **spent the return**. Design,
+questions, coding rules and five predictions were **committed before the first frame was captured**
+(`harness/RUBRIC.md`); the 25 reads and the counts, including the ones that falsified our own
+predictions, are in `harness/reads-session-42.md`; the exact frames the readers saw are committed
+under `harness/frames/`. Five cells, five fresh severed readers each, one cell's frames plus its
+manifest and nothing else per reader: **A-lo** (no pointer, 6 frames) · **A-hi** (no pointer, 48
+frames) · **A-cv** (arrow cursor, 19 frames) · **A-mk** (neutral square marker at the same
+coordinates, 19 frames) · **B-hi** (arrow cursor, 55 frames at 300 ms — faster than the probe's own
+650 ms ramp and its shortest 1.15 s relapse). All five drives reproduced the session-40 sitting
+exactly (identical residues, zero console errors). The flagged 0.3 clarity floor was considered
+first and declined: changing the stimulus mid-replication is the one thing a replication may not do.
+
+- **The register-axis negative HOLDS, and is now the étude's established result.** GENRE = *a
+  software tool for writing, editing or comparing text*: **19 of 20** Probe-A readers; art 1 of 20.
+  Stable across four conditions and three sampling rates (6 / 19 / 19 / 48 frames). The structural
+  argument stands unchanged and the counts corroborate it: when two objects differ only in register,
+  the register **is** the supplied axis, and no wordless chrome takes it back. The season's 7a
+  tension — *can the house supply material and stakes without supplying the criterion?* — is
+  answered in the negative for **register-variant sort-material**, on foreign material, with counts.
+- **The session-41 pointer observation does NOT replicate. It is WITHDRAWN.** AGENT = *the software,
+  on its own*: **25 of 25** readers. Human attribution: **0 of 25** — 0/5 with an arrow cursor drawn
+  in frame, 0/10 with no pointer at all, 0/5 with the neutral marker, 0/5 on Probe B. There is no
+  pointer effect, because there is no human attribution anywhere to move. The honest replacement
+  claim is stronger and worse for us: **in a frame-strip record of either probe, the machine is
+  elected the author regardless of the pointer, the frame density, or a manifest that states the
+  mouse-button state outright.** Session 41's n=1 read was noise, exactly as its own stress-test
+  suspected; the wish authored the finding and the replication removed it.
+- **Probe B's decay curve: the null is real, and the sampler is exonerated.** Sampled above its own
+  signal, **0 of 5** readers answered "faster" on RATE (steady 2, irregular 3). Session 41 was right
+  that the quickening had been aliased out of the record — and correcting the aliasing changed
+  nothing. The acceleration does not land in a frame-strip read at any rate this house has run.
+- **Probe B's genre survival is NOT robust — our own earlier record is corrected here.** Sessions 40
+  and 41 reported art/installation in 3 of 3 reads and called it the probe's one robust positive. At
+  55 frames it is **tool 3 / art 2**. Both probes now read predominantly as writing tools.
+  Confounded with reader pool and sampling rate, and stated as a correction rather than a finding —
+  but the "robust" wording does not survive, and the commitment's desk-genre proof is met by neither
+  probe in this medium.
+- **The relation does not land.** The pre-registered relation-token appeared in **1 of 20** Probe-A
+  free texts ("replacing complex, specific details with simpler, more generic language") and **0 of
+  5** on Probe B. One Probe-B reader stated the inverse of the intended relation outright: *"the
+  revealing is not driven by the person's continued input but by the software's internal
+  animation."*
+- **The crash-adjacent ending does not replicate either.** ENDING deliberate **19 of 25**, crash 5,
+  cannot tell 1 — against session 41's "crash-adjacent in every read". Another claim demoted by
+  counting instead of quoting.
+- **Kill conditions: 23 of 25 clean, 2 not.** Two readers (one per probe) read the quiet regularize
+  step as the system *correcting and judging* the writer's phrasing. No score, no grade, no
+  mockery anywhere — but the correctness-cue line is nearer than sessions 40 and 41 recorded, and
+  that is now on the record.
+- **Conductor's own observation (not a reader claim):** Probe B's fog is a 0.9-alpha wash a few
+  percent off the page background, so a captured frame shows *greyed words*, not glass. No reader in
+  any condition to date has named condensation, fog or a window. The probe spends its entire
+  contrast budget on the fog and keeps none for its own documentation.
+
+**Honest limits, stated with the result and not after it:** every reader is a model run over stills;
+no human eye has sat with either probe; no continuous-video and no live-hand condition has been
+tested, and none is claimed. Free text was coded by the conductor — the party holding the hypothesis
+— though against definitions fixed in advance and with every count published, including the ones
+that went against us. n = 5 per cell. What this evidence establishes is what these probes do in the
+documentation media this house can produce; what it cannot establish is what they do under a hand.
+
+**The return was SPENT this session**, led by the register-axis negative, in `REQUESTS.md`
+(ji-2026-002). No third hold.
+
+## The session-41 hold (superseded by the pass above — kept as record)
+
 **The return move was NOT spent (second hold — bounded, the last available).** The Kritiker's
 stress-test (session 41, verdict HOLD) bound the following protocol on the next session not
 otherwise owed, **at whose end the return ships regardless of sign**; a third hold is named
