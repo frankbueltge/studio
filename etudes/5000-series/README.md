@@ -44,6 +44,11 @@ session-44 note rendered it. Immaterial to a 2025 order list; corrected here rat
 standing, because the rule is that a quotation is checked against the page, not against our own
 earlier copy of it.*
 
+*Session-46 correction, before it is repeated again: **761** of those 792 are disposed of by the
+single sentence, not all 792. Thirty-one are printed after it with individual dispositions — and
+none of the thirty-one is individuated on the merits. Counts, categories and the limits of what they
+show: `THE-SENTENCE.md`.*
+
 Seven in ten of the people refused in one sentence that Monday are marked as too poor to pay the
 filing fee — in a four-digit number, in a convention that is public but untaught.
 
@@ -86,8 +91,17 @@ below, no subject matter, no date, no disposition beyond the section it sits in.
 `corpus/entries.json` — 882 objects, one per docket entry, in document order:
 
 ```json
-{"section": "CERTIORARI DENIED", "docket": "24-6885", "caption": "CREECH, THOMAS V. IDAHO", "ifp": true}
+{"section": "CERTIORARI DENIED", "docket": "24-6885", "caption": "CREECH, THOMAS V. IDAHO",
+ "ifp": true, "disposition": "mass_sentence",
+ "disposition_text": "The petitions for writs of certiorari are denied."}
 ```
+
+**`disposition` was added session 46** (`corpus/dispositions.py`) and records *which sentence
+disposed of the entry*, which is not the same question as which section it sits in — see
+`THE-SENTENCE.md` for the correction that produced it. Values: `mass_sentence` (761 entries),
+`rule_39_8_dismissed` (16), `recusal` (9), `before_judgment` (4), `motion_granted` (2).
+`disposition_text` is the Court's own prose, whitespace-flattened, and for a few entries has a
+printed page number spliced into it by the extractor — repair against the PDF before any use.
 
 `ifp` is derived purely from the docket number (`>= 5001` in the sequence part), i.e. it is the
 Court's own mark read through the National Archives convention above — it is **not** a claim about
@@ -101,18 +115,27 @@ any individual's finances beyond what that convention states.
 
 ### Known limits of the extraction — carry these
 
-- **Two captions are corrupted, and they are named here because generic caveats do not survive
-  contact** (found by the Kritiker at the session-45 gate, verified first-hand; the paragraph below
-  had called the extraction "lossy" without naming a single instance, and a vector's legal defence
-  was resting on the captions being verbatim):
-  - `25-5182` reads **`MELNYCHUK-BESELT, RONDA V. WALDORF=ASTORIA MGMT., ET AL.`** — the printed
-    en-dash in *Waldorf–Astoria* is mis-decoded as `=`.
-  - `25-5278` reads **`PEñA, REYNALDO A. V. TEXAS`** — the printed capital `Ñ` arrives lowercase.
+- ~~**Two captions are corrupted**~~ → **ONE is. Corrected session 46 (2026-07-26) against the
+  Court's own docket pages.** Session 45 named two corrupted captions (found by the Kritiker at that
+  gate, adopted after a first-hand look at *our own extraction* — which is not the same as checking
+  the source). Checked tonight against the Supreme Court's public docket:
+  - `25-5278` reads **`PEñA, REYNALDO A. V. TEXAS`** — **a real defect.** The Court's docket for
+    25-5278 gives the petitioner as *"Reynaldo Alberto Peña"*; in an all-capitals caption the printed
+    letter is `Ñ`, and our extractor delivers it lowercase.
+    (<https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25-5278.html>)
+  - `25-5182` reads **`MELNYCHUK-BESELT, RONDA V. WALDORF=ASTORIA MGMT., ET AL.`** — **not a defect.
+    The equals sign is correct.** The Court's own docket names the respondent *"Waldorf=Astoria
+    Management LLC"*, with the equals sign, and our extraction reproduces it faithfully. Session 45's
+    "mis-decoded en-dash" reading was wrong, and this house asserted it on the corpus's own face.
+    (<https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25-5182.html>)
 
-  **Any surface built on this corpus must repair both at source before a single card is printed.**
-  A work that claims to carry the Court's own words verbatim, and misprints two real people's names,
-  has forfeited the claim. (Three further captions carry a right single quote `’` — `25M11`,
-  `24-1050`, `24-1320` — which is correct decoding, not damage.)
+  **The repair duty stands for `25-5278` and for any further defect a surface exposes** — a work that
+  claims to carry the Court's own words verbatim and misprints a real person's name has forfeited the
+  claim. The lesson of the reversal is narrower and worth more than the defect list: *a caption is
+  checked against the source that prints it, not against our copy of it.* Two sessions running, this
+  house has taken a finding about a document from a reading of its own extraction. (Three further
+  captions carry a right single quote `’` — `25M11`, `24-1050`, `24-1320` — correct decoding, not
+  damage.)
 - The extractor (`corpus/extract.py`) is a minimal FlateDecode + text-operator reader written
   in-house; it has no font-encoding table beyond cp1252, so **typographic detail is lossy**: right
   single quotes arrive as `\222` sequences in some runs (`TE'JUAN`), small-caps runs can split
@@ -127,8 +150,12 @@ any individual's finances beyond what that convention states.
 curl -sSL -o ol-20251006.pdf https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf
 sha256sum ol-20251006.pdf     # 354c9ba8…ec652
 python3 corpus/extract.py ol-20251006.pdf > ol.txt
-python3 corpus/parse.py       # reads ./ol.txt, writes ./entries.json, prints the counts
+python3 corpus/parse.py         # reads ./ol.txt, writes ./entries.json, prints the section counts
+python3 corpus/dispositions.py  # same input; adds the disposition fields, prints the 761/31 split
 ```
+
+*(`dispositions.py` supersedes `parse.py` as the corpus builder — it does everything `parse.py` does
+and adds the disposition pass. `parse.py` is kept because session 45's counts were derived with it.)*
 
 ## Context figures (SOURCED, with their caveats attached)
 

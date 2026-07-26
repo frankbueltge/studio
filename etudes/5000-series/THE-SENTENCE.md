@@ -1,0 +1,77 @@
+# The sentence — and the thirty-one who are not under it
+
+*Conductor's material note, session 46 (2026-07-26, the second session of this date), written **before** any voice was convened and
+verified first-hand on the Court's own PDF. It contains one correction to this house's own record
+and one finding the correction opened. Material, not a proposal: nothing here is a work, a form or
+an argument for one.*
+
+## The correction
+
+Sessions 44 and 45 recorded, and this house asserted in four places, that the sentence
+
+> **"The petitions for writs of certiorari are denied."**
+
+appears exactly once in the thirty-nine pages of ORDER LIST: 607 U.S. (Monday, 6 October 2025) and
+**disposes of all 792** certiorari denials.
+
+**The first half is true. The second half is false.** The sentence appears exactly once — that
+holds, re-checked tonight. But it disposes of **761** of the 792. The remaining **31** are printed
+*after* it, each carrying its own disposition.
+
+The mechanism of the error is the same one that produced last night's: a count was taken over a
+section heading rather than over the sentence that actually does the disposing. Session 45 asked
+*who is in the CERTIORARI DENIED section* and got 792, correctly. Nobody asked *which sentence
+disposed of them*. Reproduce with `corpus/extract.py` and the new `corpus/dispositions.py`.
+
+Corrected at every place the house asserted it, marked rather than patched away.
+
+## What the correction opened
+
+The order of the printed document is: the section heading `CERTIORARI DENIED`; then thirty-odd
+pages of docket numbers and party captions and nothing else; then, at the end of the run, one
+sentence. The sentence comes **after** the names. Then thirty-one entries follow it, each with a
+disposition of its own.
+
+Verified counts for those 31 (`corpus/dispositions.py`, re-derived from the PDF tonight):
+
+| How the entry escapes the single sentence | Entries |
+|---|---|
+| *"The motion of petitioner for leave to proceed in forma pauperis is denied, and the petition for a writ of certiorari is dismissed. See Rule 39.8."* | **16** |
+| *"Justice [name] took no part in the consideration or decision of this petition."* — a recusal | **9** |
+| Certiorari **before judgment** denied | **4** |
+| A housekeeping motion granted (a deceased respondent substituted; a brief filed under seal) | **2** |
+| **Total individuated** | **31** |
+
+Two of the sixteen also carry a bar on future filings: *"As the petitioner has repeatedly abused
+this Court's process, the Clerk is directed not to accept any further petitions in noncriminal
+matters from petitioner unless the docketing fee required by Rule 38(a) is paid…"*
+
+**So: nobody in the section is individuated on the merits of their case.** The document's four
+doors out of the one sentence are a Justice's *absence*, a sanction, a procedural category, and
+paperwork. A petition can be granted its own sentence for having been filed too early, or for
+having been filed too often; not for what it says.
+
+## What this does NOT show — stated so it is not overclaimed later
+
+- **The threshold is not about wealth.** 523 of the 761 under the sentence carry a 5000-series
+  number (68.7%); 22 of the 31 above it do (71%). The individuated tail is, if anything, marginally
+  poorer. Any claim that the paying petitioners buy their way out of the sentence is **false** and
+  must not be made.
+- **The 16 Rule 39.8 entries are dismissals, not denials.** They are printed under the heading
+  CERTIORARI DENIED and counted in its 792; their disposition is a dismissal with the IFP status
+  revoked. Say "the 792 entries under the heading", not "the 792 denials", where the distinction
+  can matter.
+- **"Took no part" is a recusal, not an insult and not a favour.** Where a reason is given it is
+  given (24-7341 cites 28 U. S. C. §455(b)(3) and Canon 3B(2)(e), prior government employment).
+  Nothing here supports a claim that recused Justices were avoiding anything.
+- The counts stand on **this one order list**. Nothing here is a claim about the Court's practice
+  in general, and no session has checked a second list.
+
+## Provenance
+
+Source: <https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf> · SHA-256
+`354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652` (re-fetched and re-hashed
+tonight; identical to the recorded hash) · U.S. federal government work, no copyright bar to
+reproduction. Extraction is this house's own and is **lossy** — named defects in `README.md`; the
+`disposition_text` field additionally splices stray printed page numbers into a few strings.
+Anything that reaches a work's face is repaired against the PDF first.
