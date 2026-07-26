@@ -30,21 +30,21 @@ const CONF = {
   cardW: 200,
   cardH: 310,
   gutter: 12,
-  perspective: 2600,
+  perspective: 1000,
   perspectiveOriginX: '15%',
   perspectiveOriginY: '15%',
   rotateX: 8,    // small: top tips back slightly (standing-height cue) — this is a WALL, not a floor
-  rotateY: -60,   // dominant recession: right (near the ledge) is close, left swings away into depth
+  rotateY: -30,   // dominant recession: right (near the ledge) is close, left swings away into depth
   wallTranslateZ: 0,
-  pivotTargetX: 2500,  // desired on-screen position of the wall's near (bottom-right) pivot corner
-  pivotTargetY: 1700,
+  pivotTargetX: 3200,  // desired on-screen position of the wall's near (bottom-right) pivot corner
+  pivotTargetY: 3500,
   // ledge / foreground object, in screen space, positioned empirically after look-and-fix
-  ledgeColIndex: 30,  // column in the grid whose slot is left empty (the gap)
-  ledgeGapRow: 18,      // row (0 = top/far, rows-1 = bottom/near) of the empty slot — near the bottom, by the ledge
-  ledgeLeft: 1350,
-  ledgeTop: 665,
-  ledgeW: 370,
-  ledgeH: 280,
+  ledgeColIndex: 32,  // column in the grid whose slot is left empty (the gap)
+  ledgeGapRow: 13,      // row (0 = top/far, rows-1 = bottom/near) of the empty slot — near the bottom, by the ledge
+  ledgeLeft: 1400,
+  ledgeTop: 690,
+  ledgeW: 400,
+  ledgeH: 420,
 };
 
 function esc(s) {
@@ -95,7 +95,7 @@ function main() {
       <div class="cap">${esc(entry.caption)}</div>
       <div class="sentence">${esc(SENTENCE)}</div>
       <div class="ruled">
-        ${Array.from({ length: big ? 9 : 6 }).map(() => '<div class="rule"></div>').join('')}
+        ${Array.from({ length: big ? 5 : 6 }).map(() => '<div class="rule"></div>').join('')}
       </div>
       <div class="foot"><span class="footrule"></span></div>
     `;
@@ -175,14 +175,14 @@ function main() {
     text-overflow: ellipsis;
   }
   .cap {
-    font-size: 12.5px;
+    font-size: 10px;
     font-weight: 700;
     color: #17130a;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 2px;
+    letter-spacing: 0.005em;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.22;
+    margin-top: 3px;
   }
   .sentence {
     font-size: 9px;
@@ -237,11 +237,18 @@ function main() {
     font-family: 'Liberation Mono', monospace;
     padding: 14px 13px 11px 13px;
     transform: rotate(-1.2deg);
+    overflow: hidden;
   }
   .ledge-card .doc { font-size: 21px; }
-  .ledge-card .cap { font-size: 17px; margin-top: 4px; }
+  .ledge-card .cap {
+    font-size: 17px;
+    line-height: 1.2;
+    margin-top: 5px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
   .ledge-card .sentence { font-size: 12px; margin-top: 12px; }
-  .ledge-card .rule { height: 20px; }
+  .ledge-card .rule { height: 18px; }
   .ledge-card .foot { bottom: 14px; }
   .pen {
     position: absolute;

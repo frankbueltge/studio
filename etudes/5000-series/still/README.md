@@ -160,3 +160,159 @@ The brief didn't ask for that explicitly ("ordinary stock, ordinary pale,
 matte" is satisfied by a flat matte color), so I don't count it as a miss,
 but it's the most obvious place a second pass would go before this stopped
 being a first sketch.
+
+## Corrective pass — session 45 continuation
+
+Taken over mid-session to fix three defects the conductor found on
+`still-1x.png`: every caption ellipsis-truncated (deleting the respondent),
+a large black wedge bottom-left where the wall didn't reach the frame, and
+a `rotateY: -60deg` raking angle far more oblique than "slightly off-square
+from standing height." Fixed all three in one pass. Method: render, `Read`
+the PNG, write down what's wrong, fix, repeat — more than three rounds,
+documented below. Did not touch the ledge card's identity (`24-796
+MISSOURI, ET AL. V. UNITED STATES`, the Court's own first entry) or any of
+the kept elements (flat light, khaki/pale palette, Liberation Mono, the
+gap, the pen, unwritten cards, no title/label/wall text/gradients).
+
+**Truncation.** `.cap` was `white-space: nowrap; text-overflow: ellipsis`.
+Changed to `white-space: normal; overflow-wrap: break-word` and dropped the
+font from 12.5px to 10px, so captions wrap to two or three lines instead of
+clipping. Checked the actual corpus distribution first — caption length
+ranges 17–65 characters (median 36, longest word 21 characters) — and
+confirmed by rendering the two longest real captions in the set
+(`NURSING HOME CARE MGMT., ET AL. V. CHAVEZ-DeREMER, SEC. OF LABOR`, 64
+chars, and `KENSINGER, CHRISTINE L. V. BISIGNANO, COMM'R, SOCIAL SEC., ET
+AL.`, 65 chars) that even the worst case wraps cleanly inside the card
+without touching the ruled lines below it. The ledge card had the same
+problem at a bigger font (17px, one line, ellipsis) — same fix
+(`white-space: normal`), plus I grew the ledge card itself (`ledgeW`
+370→400, `ledgeH` 280→420) since the caption now needs two lines
+(`MISSOURI, ET AL. V.` / `UNITED STATES`) and the original box was sized
+for a single truncated line. Also dropped the ledge's ruled-line count from
+9 to 5 — at the old 9-line count the rules were already overflowing past
+the card's own bottom edge before this pass touched anything, which I only
+noticed once I zoomed in to check the fix; 5 lines actually fits the box.
+
+**Wall coverage and angle — solved together, analytically.** These two
+defects turned out to be the same underlying problem: the corner-pivot
+camera scheme from the first pass ties the far-corner vanishing behavior
+directly to how oblique the rotation is, so blind trial-and-error on
+`rotateY` alone kept trading one defect for the other (shallower angle →
+uniform oversized cards with the black wedge still there; enough
+perspective compression to hide the wedge → right back to a raking
+corridor). Rather than keep guessing render-by-render, I wrote a small
+script (`project.js`/`search.js` in scratch, matrix math matching CSS's
+actual `perspective`/`rotateX`/`rotateY`/`perspective-origin` semantics)
+that computes where the wall's four corners land on screen for a given
+parameter set, checks whether the frame's full perimeter falls inside that
+projected quadrilateral (= no background wedge anywhere), and reports the
+scale range actually visible in-frame (= the legibility gradient). That
+turned "which of these thousands of combinations works" from a rendering
+problem into a search problem — I swept perspective, rotateX, rotateY, and
+pivot placement, filtered to configs with zero uncovered frame area, then
+picked the shallowest rotateY that still gave a real near/far scale spread.
+Landed on `perspective: 1000, rotateX: 8, rotateY: -30` (was `2600, 8,
+-60`), pivoted from off-canvas screen (3200, 3500) instead of (2500, 1700).
+Verified the analytic prediction against the actual browser render at each
+candidate — the math and Playwright's output agreed once I had the
+transform order right (`rotateX(...) rotateY(...) translateZ(...)`,
+composed as the CSS spec applies it).
+
+Moving the pivot broke the gap/ledge alignment again (expected — the first
+pass's README flagged this as a recurring cost of any geometry change). I
+reused the same projection code to find, for the new geometry, which grid
+cell projects nearest a point just above the ledge card, instead of
+flooding cells red and eyeballing it: `ledgeGapRow`/`ledgeColIndex` moved
+from (18, 30) to (13, 32), `ledgeTop` 610→690. Confirmed the alignment by
+rendering and reading the PNG, not by trusting the arithmetic — the two
+disagreed by about 80px on the first try (search targeted a point that
+wasn't quite where the ledge card visually needed it), so I retargeted and
+re-checked.
+
+**Round-by-round, condensed** (full history is longer; this is what
+changed the picture):
+1. `rotateY -60 → -25`, same pivot/perspective: wedge gone, but cards
+   uniform and oversized — no legibility gradient at all, over-zoomed.
+2. `-25`, perspective `2600 → 1100`: gradient came back, but so did the
+   wedge, worse than the original — confirmed perspective distance and
+   rotation angle were fighting each other, not independent levers.
+3. Switched to the projection-math search instead of guessing. First
+   accepted config (`rotateY -25, perspective 900`, bigger physical wall
+   at first, then confirmed it also works at the original 200×310 card
+   size) gave full coverage with a real but modest gradient (scale 0.34
+   far / 0.78 near) — kept it as a floor, then searched again for stronger
+   falloff while still keeping the frame fully covered, which is how I got
+   to `rotateY -30, perspective 1000` (scale 0.26 far / 0.57 near).
+4. Re-solved the gap/ledge position for the new geometry (see above);
+   confirmed by zoomed crop that the gap sits directly above the ledge
+   card, not floating in open wall.
+5. Zoomed into all four frame edges individually (`zoom.js`, clipped
+   Playwright screenshots at native scale) — bottom, left, right, and top
+   strips all show cards to the pixel edge, no background showing anywhere.
+   Zoomed into the two longest real captions in the corpus to confirm the
+   wrap fix holds at the extreme, not just on short captions.
+
+## The five questions, re-answered from the corrected render
+
+**1. Is truncation fully gone?** Yes — checked by reading `.cap`'s CSS (no
+`overflow: hidden` / `text-overflow: ellipsis` remain on it) and, more to
+the point, by reading the rendered PNG directly. Three captions, complete,
+respondent included, read straight off `still-1x.png`: **25-5187, LEWIS,
+SHANTELL V. CASTRO, HERNAN, ET AL.**; **25-5188, SAFIER, BETHZAELI V.
+WOOLRIDGE, THELMA**; and the ledge card itself, **24-796, MISSOURI, ET AL.
+V. UNITED STATES**, now wrapping to two full lines instead of ending in
+"V…". Also confirmed against the two longest captions in the entire
+corpus (64 and 65 characters) that the wrap holds without spilling into
+the ruled lines beneath it.
+
+**2. Does the wall now meet all four frame edges?** Yes, verified by
+zooming into each edge individually rather than trusting the full-frame
+view. Top, bottom, left, and right strips are all cards to the pixel edge;
+no stage background is visible anywhere in the frame. This was checked
+with the analytic projection model first (every point on the frame's
+perimeter falls inside the wall's projected quadrilateral) and then
+confirmed against the actual Chromium render, which agreed.
+
+**3. What angle, and does the gradient hold?** `rotateY: -30deg`,
+`rotateX: 8deg` (was -60/8). Near field (bottom-right, around the ledge)
+projects at roughly 0.55–0.7× card scale — legible at a glance, e.g. the
+two full captions quoted above. Far field (top-left corner) projects down
+to roughly 0.22–0.26× scale, which at a 10px base caption font renders
+letterforms at roughly 2.5px — individual characters don't resolve; it
+reads as a grey band, same as the previous pass's intent, just re-tuned
+for the shallower angle. The gradient is real, not cosmetic: I measured it
+(scale range in-frame) before rendering, then confirmed the rendered PNG
+matched.
+
+**4. Does the shallower angle change the administrative-vs-memorial
+reading?** Being direct about this since a flattering answer isn't useful
+here: I don't think it does, and if anything I'd guess it nudges slightly
+further toward administrative, not away from it. The -60° version read as
+a raking architectural shot — closer to something a cinematographer would
+frame, which has its own kind of drama/composure to it. At -30°, with a
+shallow rotateX for the standing-height cue, the wall reads more like what
+you'd actually glimpse walking past a filing wall at a practical angle —
+less composed, more incidental. The things that were doing the real work
+against solemnity in the previous pass — flat khaki, no vignette, the
+single card-sized gap instead of a black field, the real unglamorous
+docket data — are all untouched. I'd flag one thing honestly rather than
+bury it: the far corner is now *more* legible than the -60° version's
+was (that version's true minimum scale was more extreme, it just also
+happened to be hidden behind the wedge bug), so the "hundreds of cards as
+texture, resolving to grey at distance" effect is present but a little
+gentler than before. I don't think that's enough to read as memorial — it's
+still a legibility gradient, not a glow or a blur — but it's a real
+trade-off from chasing "not too oblique," not a change I'd claim is free.
+
+**5. Anything I could not achieve?** The previous pass's honest gap (thin
+dark strip at the very bottom edge) is fully resolved now — that's a
+side-effect of solving the coverage problem properly rather than something
+I targeted directly. Two new honest notes for this pass: first, the
+near-field scale (~0.55–0.7×) is lower than "true size" (1.0× at the
+mathematical pivot corner, which sits off-canvas by design) — near
+captions are legible but not large the way a photograph of someone
+standing right up against a wall would render the nearest card; pushing
+the pivot closer to the frame to fix that reopens the coverage-vs-gradient
+tension the search was solving, so I treated "legible" as the bar rather
+than "large." Second, I did not re-examine card-face texture or the drop
+shadow treatment — out of scope for this pass, unchanged from before.

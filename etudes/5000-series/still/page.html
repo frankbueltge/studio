@@ -15,7 +15,7 @@
     position: relative;
     overflow: hidden;
     background: #1c1a13;
-    perspective: 2600px;
+    perspective: 1000px;
     perspective-origin: 15% 15%;
   }
   .wall {
@@ -23,13 +23,13 @@
     width: 7632px;
     height: 7084px;
     left: 50%; top: 50%;
-    margin-left: -6132px;
-    margin-top: -6009px;
+    margin-left: -5432px;
+    margin-top: -4209px;
     transform-style: preserve-3d;
     transform-origin: 100% 100%;
     transform:
       rotateX(8deg)
-      rotateY(-60deg)
+      rotateY(-30deg)
       translateZ(0px);
     background: #b8ae98;
   }
@@ -57,14 +57,14 @@
     text-overflow: ellipsis;
   }
   .cap {
-    font-size: 12.5px;
+    font-size: 10px;
     font-weight: 700;
     color: #17130a;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 2px;
+    letter-spacing: 0.005em;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.22;
+    margin-top: 3px;
   }
   .sentence {
     font-size: 9px;
@@ -91,17 +91,17 @@
   /* ---- foreground ledge (near-camera, not part of the receding plane) ---- */
   .ledge-backing {
     position: absolute;
-    left: 1340px;
-    top: 655px;
-    width: 390px;
-    height: 209.6px;
+    left: 1390px;
+    top: 680px;
+    width: 420px;
+    height: 296.4px;
     background: #a89a7c;
   }
   .ledge-shelf {
     position: absolute;
-    left: 1340px;
-    top: 838.6px;
-    width: 390px;
+    left: 1390px;
+    top: 950.4px;
+    width: 420px;
     height: 26px;
     background: #97896a;
     border-top: 1px solid #cabf9e;
@@ -109,26 +109,33 @@
   }
   .ledge-card {
     position: absolute;
-    left: 1376px;
-    top: 665px;
-    width: 229.4px;
-    height: 173.6px;
+    left: 1426px;
+    top: 690px;
+    width: 248px;
+    height: 260.4px;
     background: #eee6d5;
     border: 1px solid #a89f8a;
     box-shadow: 0 9px 16px rgba(0,0,0,0.5);
     font-family: 'Liberation Mono', monospace;
     padding: 14px 13px 11px 13px;
     transform: rotate(-1.2deg);
+    overflow: hidden;
   }
   .ledge-card .doc { font-size: 21px; }
-  .ledge-card .cap { font-size: 17px; margin-top: 4px; }
+  .ledge-card .cap {
+    font-size: 17px;
+    line-height: 1.2;
+    margin-top: 5px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
   .ledge-card .sentence { font-size: 12px; margin-top: 12px; }
-  .ledge-card .rule { height: 20px; }
+  .ledge-card .rule { height: 18px; }
   .ledge-card .foot { bottom: 14px; }
   .pen {
     position: absolute;
-    left: 1613.4px;
-    top: 788.2px;
+    left: 1682px;
+    top: 874.8px;
     width: 96px;
     height: 8px;
     background: #2b2b2e;
@@ -4656,7 +4663,8 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6784px;top:4186px;width:200px;height:310px;">
+<div class="card gap" style="left:6784px;top:4186px;width:200px;height:310px;"></div>
+<div class="card" style="left:6996px;top:4186px;width:200px;height:310px;">
       <div class="doc">25-5014</div>
       <div class="cap">DURACHINSKY, PHILLIP R. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4665,7 +4673,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6996px;top:4186px;width:200px;height:310px;">
+<div class="card" style="left:7208px;top:4186px;width:200px;height:310px;">
       <div class="doc">25-5015</div>
       <div class="cap">LITTLE, JUSTIN D. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4674,7 +4682,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7208px;top:4186px;width:200px;height:310px;">
+<div class="card" style="left:7420px;top:4186px;width:200px;height:310px;">
       <div class="doc">25-5016</div>
       <div class="cap">PARKER, GENERAL V. HUD, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4683,7 +4691,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7420px;top:4186px;width:200px;height:310px;">
+<div class="card" style="left:0px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5017</div>
       <div class="cap">DAVIS, BRANT V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4692,7 +4700,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:0px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:212px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5018</div>
       <div class="cap">WASHINGTON, LAKEITH L. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4701,7 +4709,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:212px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:424px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5019</div>
       <div class="cap">LOWE, CHAT V. PALM TRAN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4710,7 +4718,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:424px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:636px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5020</div>
       <div class="cap">BOZEMAN, DAN L. V. SCHIEBNER, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4719,7 +4727,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:636px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:848px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5021</div>
       <div class="cap">SPEAKS, DAJAVAN V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4728,7 +4736,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:848px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:1060px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5022</div>
       <div class="cap">TAYLOR, SHEMICA V. CIRCUIT COURT OF IL, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4737,7 +4745,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1060px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:1272px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5023</div>
       <div class="cap">REED, MYCHAL A. V. SUPERIOR COURT OF CA, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4746,7 +4754,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1272px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:1484px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5024</div>
       <div class="cap">REAY, ROY G. V. NORRIS, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4755,7 +4763,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1484px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:1696px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5025</div>
       <div class="cap">HUETE-TORRES, SANTOS ISABEL V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4764,7 +4772,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1696px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:1908px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5026</div>
       <div class="cap">C. M. C. V. TX DEPT. OF FAMILY SERVICES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4773,7 +4781,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1908px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:2120px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5027</div>
       <div class="cap">STEVENS, GREGORY V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4782,7 +4790,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2120px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:2332px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5028</div>
       <div class="cap">DeFRANCE, MICHAEL B. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4791,7 +4799,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2332px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:2544px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5029</div>
       <div class="cap">WILLIAMS, DAMON D. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4800,7 +4808,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2544px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:2756px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5030</div>
       <div class="cap">LOPEZ-VILLEGAS, BRANDON V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4809,7 +4817,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2756px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:2968px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5031</div>
       <div class="cap">ODOM, MICHAEL V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4818,7 +4826,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2968px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:3180px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5034</div>
       <div class="cap">BORNE, SHAWN T. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4827,7 +4835,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3180px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:3392px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5035</div>
       <div class="cap">DEES, JENNIFER L., ET AL. V. KNOX, JILLIAN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4836,7 +4844,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3392px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:3604px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5037</div>
       <div class="cap">FRANIZER, JAMES V. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4845,7 +4853,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3604px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:3816px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5041</div>
       <div class="cap">HERNANDEZ, GEOVANI V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4854,7 +4862,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3816px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:4028px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5042</div>
       <div class="cap">HOUSE, DESHAWN D. V. LONG, WARDEN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4863,7 +4871,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4028px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:4240px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5043</div>
       <div class="cap">QUINN, CECIL J. V. SC MARSHALS, SPARTANBURG, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4872,7 +4880,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4240px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:4452px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5044</div>
       <div class="cap">BAISE, ROBERT V. MITCHELL, WARDEN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4881,7 +4889,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4452px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:4664px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5045</div>
       <div class="cap">ORDOUKHANIAN, RAYMOND D. V. CHANEY, LEAH W., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4890,7 +4898,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4664px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:4876px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5046</div>
       <div class="cap">HAOBSH, PIERRE V. SANTA BARBARA SHERIFF, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4899,7 +4907,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4876px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:5088px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5047</div>
       <div class="cap">FRANCIS, MICHAEL V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4908,7 +4916,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5088px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:5300px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5048</div>
       <div class="cap">HOLT, JEREMY W. V. OKLAHOMA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4917,7 +4925,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5300px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:5512px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5049</div>
       <div class="cap">HYMES, DaJOHN M. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4926,7 +4934,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5512px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:5724px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5050</div>
       <div class="cap">CARABALLO, CARLOS V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4935,7 +4943,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5724px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:5936px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5051</div>
       <div class="cap">MOORE, KRISTIAN D. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4944,7 +4952,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5936px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:6148px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5052</div>
       <div class="cap">AQUINO-DOLORES, VERONICA V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4953,7 +4961,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6148px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:6360px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5057</div>
       <div class="cap">DOE, JOHN V. GLASS, COMM'R, FDLE</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4962,7 +4970,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6360px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:6572px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5058</div>
       <div class="cap">AYALA-ALAS, JOSE M. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4971,7 +4979,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6572px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:6784px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5059</div>
       <div class="cap">LOWE, JAMES R. V. ND WORKFORCE SAFETY AND INS.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4980,7 +4988,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6784px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:6996px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5060</div>
       <div class="cap">CAMPBELL, HAROLD A. V. LOUISIANA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4989,7 +4997,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6996px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:7208px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5061</div>
       <div class="cap">JOHNSON, RONALD V. KANSAS</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -4998,7 +5006,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7208px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:7420px;top:4508px;width:200px;height:310px;">
       <div class="doc">25-5064</div>
       <div class="cap">KIRUI, KENNETH K. V. LeMAIRE, JUDGE, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5007,7 +5015,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7420px;top:4508px;width:200px;height:310px;">
+<div class="card" style="left:0px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5066</div>
       <div class="cap">SPOSITO, DANIELLE V. ROLLINS-THREATS, LINDA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5016,7 +5024,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:0px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:212px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5068</div>
       <div class="cap">ANDERSON, DWAYNE V. OHIO</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5025,7 +5033,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:212px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:424px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5069</div>
       <div class="cap">ANDERSON, ARNOLD V. ROYAL, WARDEN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5034,7 +5042,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:424px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:636px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5070</div>
       <div class="cap">JOHNSON, KEDRICK V. LOUISIANA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5043,7 +5051,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:636px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:848px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5071</div>
       <div class="cap">MASON, MARTEZ D. V. TANNER, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5052,7 +5060,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:848px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:1060px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5072</div>
       <div class="cap">MIAH, KHALED V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5061,7 +5069,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1060px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:1272px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5073</div>
       <div class="cap">MENTER, WILLIAM V. NEW JERSEY</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5070,7 +5078,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1272px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:1484px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5075</div>
       <div class="cap">JABBEN, MARK V. TEXAS</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5079,7 +5087,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1484px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:1696px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5076</div>
       <div class="cap">LEGGHETTE, SHOMARI V. ILLINOIS</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5088,7 +5096,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1696px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:1908px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5078</div>
       <div class="cap">TURNER, LAWRENCE J. V. WISCONSIN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5097,7 +5105,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1908px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:2120px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5079</div>
       <div class="cap">CARTER, LEON V. MLODZIK, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5106,7 +5114,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2120px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:2332px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5080</div>
       <div class="cap">COLES, KEVIN V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5115,7 +5123,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2332px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:2544px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5081</div>
       <div class="cap">POOLE, ERIC V. V. ARNOLD, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5124,7 +5132,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2544px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:2756px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5085</div>
       <div class="cap">PERRY, DONALD V. DIXON, SEC., FL DOC</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5133,7 +5141,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2756px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:2968px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5086</div>
       <div class="cap">CARR, JIMMY J. V. IOWA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5142,7 +5150,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2968px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:3180px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5087</div>
       <div class="cap">BURNS, TASHAWN V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5151,7 +5159,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3180px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:3392px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5088</div>
       <div class="cap">MENDEZ, LORENZO E. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5160,7 +5168,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3392px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:3604px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5089</div>
       <div class="cap">JOHNSON, VERONICA M. V. MOORE, JUDGE, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5169,7 +5177,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3604px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:3816px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5090</div>
       <div class="cap">ZINNERMAN, JOSEPH A. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5178,7 +5186,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3816px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:4028px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5092</div>
       <div class="cap">YOUSIF, HUSSEIN S. V. CHRISTENSEN, SUSAN L., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5187,7 +5195,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4028px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:4240px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5093</div>
       <div class="cap">NUNEZ-CARDENAS, HECTOR M. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5196,7 +5204,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4240px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:4452px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5094</div>
       <div class="cap">MUSTAFA, AWAD V. HTS SERVICES, INC., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5205,7 +5213,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4452px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:4664px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5095</div>
       <div class="cap">REED, PATRICK D. V. FREDRICK, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5214,7 +5222,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4664px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:4876px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5099</div>
       <div class="cap">RAY, FRANKLIN V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5223,7 +5231,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4876px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:5088px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5100</div>
       <div class="cap">PETERSON, DAVID J. V. BLACK BODY CORP., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5232,7 +5240,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5088px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:5300px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5102</div>
       <div class="cap">BRASHEAR, DANNIE C. V. WASHINGTON</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5241,7 +5249,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5300px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:5512px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5104</div>
       <div class="cap">MOORE, MARCUS V. ACE INSURED/CHUBB, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5250,7 +5258,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5512px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:5724px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5105</div>
       <div class="cap">LAPORTE, ANTHONY M. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5259,7 +5267,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5724px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:5936px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5138</div>
       <div class="cap">MYKONOS, STEPHANIE V. AXINN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5268,7 +5276,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5936px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:6148px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5140</div>
       <div class="cap">PICKETT, AMY V. TTUHSC, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5277,7 +5285,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6148px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:6360px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5141</div>
       <div class="cap">MAYFIELD, DEDRIC V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5286,7 +5294,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6360px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:6572px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5143</div>
       <div class="cap">TAYLOR, MARY L. V. MICHIGAN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5295,7 +5303,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6572px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:6784px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5144</div>
       <div class="cap">HAWES, GREGORY M. V. NORRIS, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5304,7 +5312,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6784px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:6996px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5145</div>
       <div class="cap">ACKLIN, NICHOLAS B. V. HAMM, COMM'R, AL DOC, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5313,7 +5321,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6996px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:7208px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5148</div>
       <div class="cap">COSSIO, JOSE A. V. AFCCA, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5322,7 +5330,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7208px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:7420px;top:4830px;width:200px;height:310px;">
       <div class="doc">25-5149</div>
       <div class="cap">SIMS, JERRELL V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5331,7 +5339,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7420px;top:4830px;width:200px;height:310px;">
+<div class="card" style="left:0px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5151</div>
       <div class="cap">RUIZ-RIVERA, J. INES V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5340,7 +5348,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:0px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:212px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5152</div>
       <div class="cap">FOWLER, ZACHARY C. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5349,7 +5357,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:212px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:424px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5154</div>
       <div class="cap">MUHAMMAD, ELIJAH V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5358,7 +5366,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:424px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:636px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5211</div>
       <div class="cap">MUHAMMAD, KAREEM V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5367,7 +5375,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:636px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:848px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5155</div>
       <div class="cap">PAYANO-PEREZ, LUIS V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5376,7 +5384,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:848px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:1060px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5156</div>
       <div class="cap">ROYAL, MARLIN L. V. GUZMAN, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5385,7 +5393,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1060px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:1272px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5157</div>
       <div class="cap">TYLER, JUAN T. V. MARTINEZ, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5394,7 +5402,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1272px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:1484px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5158</div>
       <div class="cap">CHERMER, BEAU V. MASON, SUPT., MAHONOY, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5403,7 +5411,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1484px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:1696px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5159</div>
       <div class="cap">GREGORY, LARON V. OHIO</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5412,7 +5420,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1696px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:1908px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5160</div>
       <div class="cap">HOLDER, BRUCE V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5421,7 +5429,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1908px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:2120px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5161</div>
       <div class="cap">CROUCH, ZACHARY C. V. IRS</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5430,7 +5438,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2120px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:2332px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5162</div>
       <div class="cap">BINETTI, CHRISTOPHER V. NEW JERSEY, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5439,7 +5447,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2332px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:2544px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5163</div>
       <div class="cap">OAKLIEF, SHAWN V. MESA, AZ, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5448,7 +5456,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2544px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:2756px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5186</div>
       <div class="cap">ELLAR, DONNA V. MESA, AZ, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5457,7 +5465,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2756px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:2968px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5164</div>
       <div class="cap">AMERSON, PIERRE A. V. DISMUKES, SEC., NC DOC, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5466,7 +5474,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2968px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:3180px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5165</div>
       <div class="cap">BEEMAN, BROCK V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5475,7 +5483,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3180px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:3392px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5166</div>
       <div class="cap">CAMARDA, THOMAS E. V. WHITEHORN, ELIZABETH M., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5484,7 +5492,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3392px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:3604px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5167</div>
       <div class="cap">WALLACE, MONIQUE C. V. CEDAR HILL DENTAL</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5493,7 +5501,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3604px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:3816px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5169</div>
       <div class="cap">EVENSEN, RICHARD P. V. CALIFORNIA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5502,7 +5510,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3816px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:4028px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5170</div>
       <div class="cap">WALTERS, MARK R. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5511,7 +5519,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4028px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:4240px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5171</div>
       <div class="cap">HITCHCOCK, REGINALD V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5520,7 +5528,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4240px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:4452px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5172</div>
       <div class="cap">WIDMYER, WILLIAM T. V. FRAME, SUPT., MOUNT OLIVE</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5529,7 +5537,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4452px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:4664px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5173</div>
       <div class="cap">WELSH, DOUGLAS D. V. SALAMON, SUPT., ROCKVIEW, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5538,7 +5546,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4664px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:4876px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5174</div>
       <div class="cap">HAMMOND, JAMES B. V. GUERRERO, DIR., TX DCJ</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5547,7 +5555,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4876px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:5088px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5176</div>
       <div class="cap">RODGERS, MARIO G. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5556,7 +5564,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5088px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:5300px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5177</div>
       <div class="cap">MEIER, AARON E. V. WILLIAMS, AARON, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5565,7 +5573,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5300px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:5512px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5178</div>
       <div class="cap">MARTINEZ-LARA, PABLO V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5574,7 +5582,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5512px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:5724px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5179</div>
       <div class="cap">CAMPBELL, GERALD L. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5583,7 +5591,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5724px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:5936px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5180</div>
       <div class="cap">WRIGHT, SHERROD A. V. FLORIDA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5592,7 +5600,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5936px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:6148px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5181</div>
       <div class="cap">SANCHEZ-TENA, SAMUEL A. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5601,7 +5609,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6148px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:6360px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5182</div>
       <div class="cap">MELNYCHUK-BESELT, RONDA V. WALDORF=ASTORIA MGMT., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5610,7 +5618,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6360px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:6572px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5185</div>
       <div class="cap">SMITH, GEORGE W. V. FLORIDA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5619,7 +5627,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6572px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:6784px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5187</div>
       <div class="cap">LEWIS, SHANTELL V. CASTRO, HERNAN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5628,7 +5636,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6784px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:6996px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5188</div>
       <div class="cap">SAFIER, BETHZAELI V. WOOLRIDGE, THELMA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5637,7 +5645,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6996px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:7208px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5190</div>
       <div class="cap">DICKERSON, CURTIS V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5646,7 +5654,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7208px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:7420px;top:5152px;width:200px;height:310px;">
       <div class="doc">25-5192</div>
       <div class="cap">FLETCHER, JOHN P. V. COLEMAN, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5655,7 +5663,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7420px;top:5152px;width:200px;height:310px;">
+<div class="card" style="left:0px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5193</div>
       <div class="cap">SAN MIGUEL, SAMUEL V. ABBOTT, GOV. OF TX, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5664,7 +5672,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:0px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:212px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5195</div>
       <div class="cap">MO, EX REL. MARTIN, STEVEN A. V. HANSBROUGH, JUDGE, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5673,7 +5681,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:212px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:424px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5196</div>
       <div class="cap">MANNING, ANTWON V. BRADFORD, KARL R., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5682,7 +5690,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:424px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:636px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5197</div>
       <div class="cap">MANNING, ANTWON V. KILDUFF, RYAN A.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5691,7 +5699,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:636px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:848px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5198</div>
       <div class="cap">BUTTS, COREY L. V. DOTSON, DIR., VA DOC</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5700,7 +5708,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:848px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:1060px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5199</div>
       <div class="cap">ASHFORD, BURK N. V. COURT OF APPEAL OF CA, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5709,7 +5717,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1060px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:1272px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5200</div>
       <div class="cap">NUNEZ, ISAIAS L. V. GAMBOA, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5718,7 +5726,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1272px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:1484px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5201</div>
       <div class="cap">GREEN, BRANT A. V. RIOS, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5727,7 +5735,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1484px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:1696px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5202</div>
       <div class="cap">MILLS, JACOB M. V. BISIGNANO, COMM'R, SOCIAL SEC.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5736,7 +5744,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1696px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:1908px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5203</div>
       <div class="cap">TAYLOR, RHONDA D. V. BASKETT, OFFICER</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5745,7 +5753,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1908px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:2120px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5204</div>
       <div class="cap">GONZALEZ, MARIO O. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5754,7 +5762,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2120px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:2332px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5205</div>
       <div class="cap">GARCIA, JESUS V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5763,7 +5771,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2332px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:2544px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5206</div>
       <div class="cap">NWANERI, NGOZIKA J. V. GEORGE WASHINGTON UNIV. HOSP.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5772,7 +5780,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2544px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:2756px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5207</div>
       <div class="cap">SALAZAR, JESSICA V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5781,7 +5789,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2756px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:2968px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5208</div>
       <div class="cap">BULLOCK, JESSIE V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5790,7 +5798,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2968px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:3180px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5209</div>
       <div class="cap">WEETLY, ANDREA N. V. SUPERIOR COURT OF CA, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5799,7 +5807,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3180px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:3392px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5210</div>
       <div class="cap">PEREZ, LISA M. V. PARKER, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5808,7 +5816,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3392px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:3604px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5212</div>
       <div class="cap">O'NEAL, JACQUEL V. TEXAS</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5817,7 +5825,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3604px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:3816px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5213</div>
       <div class="cap">WILLIAMS, CIMEON D. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5826,7 +5834,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3816px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:4028px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5215</div>
       <div class="cap">CORNEJO, OTONIEL V. CALIFORNIA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5835,7 +5843,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4028px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:4240px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5216</div>
       <div class="cap">NOBLE, RICARDO L. V. PENNSYLVANIA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5844,7 +5852,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4240px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:4452px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5217</div>
       <div class="cap">JACKSON, WILLIAM R. V. GEORGIA, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5853,7 +5861,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4452px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:4664px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5218</div>
       <div class="cap">LoRUSSO, MICHAEL A. V. DIXON, SEC., FL DOC, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5862,7 +5870,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4664px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:4876px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5219</div>
       <div class="cap">HIN, MAO V. CALIFORNIA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5871,7 +5879,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4876px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:5088px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5221</div>
       <div class="cap">GRISTINA, ANNA V. MERCHAN, FORMER JUDGE, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5880,7 +5888,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5088px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:5300px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5222</div>
       <div class="cap">REYNOLDS, DAHRYL L. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5889,7 +5897,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5300px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:5512px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5223</div>
       <div class="cap">RHODES, BURTE G. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5898,7 +5906,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5512px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:5724px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5224</div>
       <div class="cap">UMEH, KELECHI C. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5907,7 +5915,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5724px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:5936px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5225</div>
       <div class="cap">VEGA, MANUEL V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5916,7 +5924,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5936px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:6148px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5226</div>
       <div class="cap">DRAKE, NASHAUN V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5925,7 +5933,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6148px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:6360px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5227</div>
       <div class="cap">MITCHELL, DERRICK K. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5934,7 +5942,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6360px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:6572px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5228</div>
       <div class="cap">SOTO, GEBER V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5943,7 +5951,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6572px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:6784px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5229</div>
       <div class="cap">WALDECK, DAVID L. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5952,7 +5960,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6784px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:6996px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5230</div>
       <div class="cap">BRITO, VICTOR S. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5961,7 +5969,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6996px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:7208px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5231</div>
       <div class="cap">DAVIS, JOSEPH-ALLEN V. OM SRP, LLC</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5970,7 +5978,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7208px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:7420px;top:5474px;width:200px;height:310px;">
       <div class="doc">25-5232</div>
       <div class="cap">ALMAZON, DOINA R. V. OYSTER BAY, NY</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5979,7 +5987,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:7420px;top:5474px;width:200px;height:310px;">
+<div class="card" style="left:0px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5234</div>
       <div class="cap">BUTLER, CATHY E. V. ESTATE OF DANA G. BUTLER, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5988,7 +5996,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:0px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:212px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5235</div>
       <div class="cap">VOSE, CARLTON V. NERONHA, ATT'Y GEN. OF RI</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -5997,7 +6005,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:212px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:424px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5236</div>
       <div class="cap">ANNABEL, ROBERT V. CAMPBELL, WARDEN, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6006,7 +6014,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:424px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:636px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5237</div>
       <div class="cap">ROONEY, TENISHA V. UNEMPLOYMENT COMPENSATION BD.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6015,7 +6023,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:636px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:848px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5239</div>
       <div class="cap">LARGO, ROBERT V. NEW YORK</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6024,7 +6032,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:848px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:1060px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5240</div>
       <div class="cap">SHORTRIDGE, JASON V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6033,7 +6041,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1060px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:1272px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5242</div>
       <div class="cap">RITCHIE, CHRISTINE V. LAVIN, CEDRONE, GRAVER, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6042,7 +6050,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1272px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:1484px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5244</div>
       <div class="cap">RICHARD, KRISTY V. DIXON, SEC., FL DOC, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6051,7 +6059,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1484px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:1696px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5247</div>
       <div class="cap">RINALDI, MICHAEL V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6060,7 +6068,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1696px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:1908px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5250</div>
       <div class="cap">ROMERO-ROSALES, EDGARDO A. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6069,7 +6077,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:1908px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:2120px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5252</div>
       <div class="cap">MARRUFO, ERIC D. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6078,7 +6086,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2120px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:2332px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5257</div>
       <div class="cap">ROLOSON, ERIC S. V. WASHINGTON</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6087,7 +6095,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2332px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:2544px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5258</div>
       <div class="cap">BRYANT, JAMES J. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6096,7 +6104,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2544px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:2756px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5263</div>
       <div class="cap">GIPSON, MARVIN V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6105,7 +6113,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2756px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:2968px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5264</div>
       <div class="cap">SANDHAUS, CRAIG A. V. FLORIDA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6114,7 +6122,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:2968px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:3180px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5265</div>
       <div class="cap">GRAULAU MALDONADO, JESSICA M. V. ORANGE CTY. PUB. LIBRARY SYS.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6123,7 +6131,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3180px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:3392px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5267</div>
       <div class="cap">NASCIMENTO-DEPINA, ANTONIO B. V. MASSACHUSETTS</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6132,7 +6140,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3392px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:3604px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5269</div>
       <div class="cap">MILLER, MICHAEL D. V. FLORIDA</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6141,7 +6149,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3604px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:3816px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5271</div>
       <div class="cap">MOBARAK, SOLEIMAN V. FORSHEY, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6150,7 +6158,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:3816px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:4028px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5273</div>
       <div class="cap">PADILLA, JORDAN V. NEW MEXICO</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6159,7 +6167,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4028px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:4240px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5274</div>
       <div class="cap">ZUBIA-MELENDEZ, ELEUTERIO V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6168,7 +6176,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4240px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:4452px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5275</div>
       <div class="cap">WILLIAMS, KAYLA V. PA STATE UNIV., ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6177,7 +6185,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4452px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:4664px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5276</div>
       <div class="cap">EARLS, DAVID L. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6186,7 +6194,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4664px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:4876px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5277</div>
       <div class="cap">HERNANDEZ-VILLALOBOS, OLISER V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6195,7 +6203,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:4876px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:5088px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5278</div>
       <div class="cap">PEñA, REYNALDO A. V. TEXAS</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6204,7 +6212,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5088px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:5300px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5281</div>
       <div class="cap">GOOCH, TONY L. V. TENNESSEE</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6213,7 +6221,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5300px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:5512px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5282</div>
       <div class="cap">BOWERS, JACKSON D. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6222,7 +6230,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5512px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:5724px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5283</div>
       <div class="cap">BLACKMAN, DEANDRE V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6231,7 +6239,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5724px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:5936px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5284</div>
       <div class="cap">EDWARDS, BOBBIE RAY V. GRAHAM, WARDEN</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6240,7 +6248,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:5936px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:6148px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5287</div>
       <div class="cap">BELL, ANDREW W. V. SWIFT, KARLI, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6249,7 +6257,7 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card" style="left:6148px;top:5796px;width:200px;height:310px;">
+<div class="card" style="left:6360px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5288</div>
       <div class="cap">MEKASHA, EDDIE V. CHAPPLEAR, CHRISTY, ET AL.</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
@@ -6258,7 +6266,6 @@
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
-<div class="card gap" style="left:6360px;top:5796px;width:200px;height:310px;"></div>
 <div class="card" style="left:6572px;top:5796px;width:200px;height:310px;">
       <div class="doc">25-5289</div>
       <div class="cap">OLIVER, MICHAEL V. UNITED STATES</div>
@@ -7286,7 +7293,7 @@
       <div class="cap">MISSOURI, ET AL. V. UNITED STATES</div>
       <div class="sentence">The petitions for writs of certiorari are denied.</div>
       <div class="ruled">
-        <div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div>
+        <div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div>
       </div>
       <div class="foot"><span class="footrule"></span></div>
     </div>
