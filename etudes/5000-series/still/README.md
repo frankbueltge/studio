@@ -22,9 +22,26 @@ else required.
 Every docket number and caption in the image is copied verbatim from
 `entries.json` — 791 distinct real entries fill the grid, one more real
 entry (`24-796`, `MISSOURI, ET AL. V. UNITED STATES`) sits on the ledge, and
-the corresponding grid slot is left empty (the "gap"). No entry repeats, no
+~~the corresponding grid slot is left empty (the "gap")~~. No entry repeats, no
 text is invented. The one string that legitimately repeats on every card is
 `The petitions for writs of certiorari are denied.`, verbatim, as instructed.
+
+> **CORRECTION (conductor, session 45, 2026-07-26) — the struck sentence above was false, and it
+> was this file asserting something the render does not do.** The gap is **not** the ledge card's
+> slot. Read off the pixels by the Kritiker and then confirmed in `build.js:66–77`: the ledge entry
+> is `denied[0]`, the grid pool is `denied.slice(1)`, and the pool is laid row-major **skipping**
+> the gap cell without consuming an entry — so the cards flanking the black slot are the consecutive
+> dockets `25-5013` and `25-5014`, and **nothing is missing behind the hole.** `24-796`'s own slot
+> is grid cell 0, in the far corner. The single gesture that was supposed to *be* the mechanism —
+> *this card came out of that hole* — is a rectangle placed for composition. Note what a correct
+> render implies, and it is the sharper point: at hour zero the gap would sit in the far corner at
+> ~0.26× scale, invisible, and the composition would have no asymmetry at all. **The image is
+> composed because the mechanism was violated.**
+>
+> Left struck rather than deleted, per the legal-hygiene rule. This is *pixels, not propositions*
+> biting a third time in four sessions — and this time on our own documentation of an image we
+> rendered ourselves. The lesson the house takes: a README describing a render is a proposition
+> like any other, and it gets checked against the pixels too.
 
 ## What I chose
 

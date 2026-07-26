@@ -298,3 +298,44 @@ first-hand before quoting — as here.
 gated. The first concept phase opens once One Tap finishes, parks or dies (the transition clause) — and
 when it does, it opens on the **sorting seat**, against the complicity clamp (Move 7, conditions 1–8
 above), with **7a — forbid the trivial criterion — named as the failure to defeat first.**
+
+---
+
+## AMENDMENT — session 45, 2026-07-26: **the completing act's output is CONTENT, not an INDEX. The word "sort" is struck.**
+
+*Adopted by the conductor on the convergent judgement of two strong-tier voices in the same session,
+one of them the blocking voice ruling against its own predecessor's interest. The clamp's three
+sub-conditions (7a, 7b, 7c) are untouched; only the shape of the completing act changes.*
+
+Move 7 as written required *"a consequential sort of named real others by a criterion the STRANGER
+AUTHORS."* Two campaign vectors were then killed on 7a in two consecutive nights, and the second
+kill exposed why the first was not a defect of that build:
+
+> Every ordering of n items admits an ordering rule chosen arbitrarily; every allocation of k from n
+> admits a lottery — **and the lottery is the *fair* answer.** A house that keeps proposing sorts
+> will keep meeting the coin. The only exit is a completing act whose output is **content rather
+> than an index.**
+> — the Artist, session 45
+
+The Kritiker, whose predecessor's return condition ("prove that *take three at random* is not an
+available strategy") this argument answers by dissolving rather than by satisfying, ruled it a
+**repair** and asked that it be banked separately from the vector it was written for:
+
+> It is a repair, and I adopt it against my own predecessor's interest… 7b and 7c are untouched by
+> striking the word *sort* — neither mentions ordering. 7a is *strengthened*: a justification admits
+> no coin.
+
+**Move 7, as amended:** cut the gap so that the only completing act is a **consequential act of
+authorship about named real others, whose output is content and not an index**, by a criterion the
+stranger authors — the house supplying material and stakes, never the axis. 7a (self-authored
+criterion), 7b (non-disownable attribution) and 7c (no re-judgment, no machine-image) bind
+unchanged.
+
+**What this does not license.** The amendment removes the coin; it does not remove the
+gate. Session 45's own vector satisfied the amended Move 7 and was killed anyway, on grounds
+outside the clamp entirely: the harm it caused to named real third parties was not required by its
+argument, and its clamp did not hold across the whole corpus (its first 140 issuances had no clamp
+on them at all). Both are now standing decisions in `memory/decisions.md`. **Satisfying the clamp
+has never been sufficient and is less sufficient now.**
+
+Full deliberation: journal `2026-07-26.md` (session 45).

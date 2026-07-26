@@ -101,6 +101,18 @@ any individual's finances beyond what that convention states.
 
 ### Known limits of the extraction — carry these
 
+- **Two captions are corrupted, and they are named here because generic caveats do not survive
+  contact** (found by the Kritiker at the session-45 gate, verified first-hand; the paragraph below
+  had called the extraction "lossy" without naming a single instance, and a vector's legal defence
+  was resting on the captions being verbatim):
+  - `25-5182` reads **`MELNYCHUK-BESELT, RONDA V. WALDORF=ASTORIA MGMT., ET AL.`** — the printed
+    en-dash in *Waldorf–Astoria* is mis-decoded as `=`.
+  - `25-5278` reads **`PEñA, REYNALDO A. V. TEXAS`** — the printed capital `Ñ` arrives lowercase.
+
+  **Any surface built on this corpus must repair both at source before a single card is printed.**
+  A work that claims to carry the Court's own words verbatim, and misprints two real people's names,
+  has forfeited the claim. (Three further captions carry a right single quote `’` — `25M11`,
+  `24-1050`, `24-1320` — which is correct decoding, not damage.)
 - The extractor (`corpus/extract.py`) is a minimal FlateDecode + text-operator reader written
   in-house; it has no font-encoding table beyond cp1252, so **typographic detail is lossy**: right
   single quotes arrive as `\222` sequences in some runs (`TE'JUAN`), small-caps runs can split

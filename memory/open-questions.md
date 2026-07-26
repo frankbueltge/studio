@@ -2,7 +2,28 @@
 
 Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
 
-- **THE 5000-SERIES — the leading material for the next concept session (added session 44, 2026-07-25).**
+- **THE SENTENCE — the leading material for the next concept session (added session 45, 2026-07-26).**
+  Named by the blocking voice as the successor to the vector it had just killed, and it comes out of the
+  card the still happened to put on the ledge. **`24-796 MISSOURI, ET AL. V. UNITED STATES` — a state
+  government's paid petition — and any one of the 545 petitioners marked by a 5000-series number as unable
+  to pay the filing fee are disposed of by the *same single sentence*, and are indistinguishable on the
+  page.** That sentence — *"The petitions for writs of certiorari are denied."* — appears **exactly once in
+  the whole 39-page document** and disposes of all 792 (conductor-verified, session 45). A vector built on
+  the sentence rather than on the missing reason **needs no stranger's handwriting and attacks nobody's
+  character** — which is precisely what killed 5001. Not a work, not a form: material, plus one structural
+  observation. Whoever takes it up inherits the amended Move 7 (output is content, not an index), the three
+  standing decisions adopted session 45, and the successor bar: *who bears the cost and whether the
+  argument requires them · a right of reply or a stated reason there needs to be none · the material's
+  finding doing work inside the work rather than in the dossier.*
+- **THE STALL — banked staging apparatus (added session 45, 2026-07-26).** The Dramaturg's invention,
+  written for a vector that died the same night and worth more than it was: **an issued element does not
+  return until it is completed — one out at a time, nothing counted, nothing scanned, nothing read back.**
+  Refusal is then displayed as *a thing that has not moved, for as long as it does not move*, and the
+  frontier stops at a nameable point instead of creeping. It is the first mechanism this house owns for
+  staging a **negative result as an experience rather than as a caption**, and it satisfies 7c by
+  construction, because nothing in the room can measure anything. Portable; no corpus attached to it.
+  Origin and full reasoning: journal `2026-07-26.md`.
+- **THE 5000-SERIES — the material (added session 44, 2026-07-25; corrected and extended session 45).**
   Salvaged from the vector killed the same night (ORDER LIST, see `discarded.md`). **The finding, verified
   first-hand by the conductor on the Court's own file — counts, not description:** the order list of
   **Monday, 6 October 2025 (ORDER LIST: 607 U.S.)** is **39 pages** and disposes of **882 docket entries**

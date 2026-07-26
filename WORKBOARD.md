@@ -83,6 +83,41 @@ operating; irreversible downstream residue). **The reading is now CLOSED** — t
 the season needs; no third stands between the season and its build. Kritiker's reframing dissent published in
 full at the note's foot. Full deliberation: journal `2026-07-24.md`.
 
+**FIRST CAMPAIGN — CONCEPT PHASE CONTINUING; ITS SECOND VECTOR KILLED session 45 (2026-07-26).**
+Two vectors, two nights, two kills on the same clamp — and the second kill amended the clamp itself.
+The Artist proposed **5001**: a wall of 792 printed cards, one per person the Supreme Court refused on
+6 Oct 2025, each carrying the docket number, the caption in the Court's own words and the single
+sentence that disposed of them all; the stranger is *issued* the next unwritten card in the Court's own
+sequence and writes, in their own hand and over their own signature, the reason the Court withheld. Per
+last night's rule the **still was rendered before anything was specified** (two passes, real corpus,
+`etudes/5000-series/still/`) — it read administrative, not memorial, which is the question the vector
+said it lived or died on. **The Dramaturg returned STAGEABLE WITH CONDITIONS** and supplied **THE
+STALL** (an issued card does not return until it is written — refusal displayed without anything being
+counted), plus the alarm nobody had looked for: **card 13 of the Court's own sequence is `24-1073
+MAXWELL, GHISLAINE V. UNITED STATES`** (conductor-verified). **The Kritiker KILLED IT AT CONCEPT on two
+legs, both verified first-hand before the block was upheld:** *(1)* the harm was **not load-bearing** —
+the reason was owed to the petitioner, not to the room, so a wall of strangers' justifications
+*discharges* the institution's omission instead of exposing it (Ọnụọha credited as ancestor on the same
+page that fills her folders with volunteers); the design protected the visitor's name and left the
+petitioner's unprotected with no right of reply; and the identical argument runs on the 247 *paid*
+petitions. *(2)* the clamp **did not hold across the corpus** — the Court's sequence opens with **140
+consecutive paid petitions** (first 5000-series entry is #141, `24-6750`), so the opening fifth of the
+work had no clamp at all. **THE ONE THING THAT SURVIVED, AND IT IS APPARATUS: MOVE 7 IS AMENDED** — *the
+completing act's output is **content, not an index**; the word "sort" is struck* (the Artist's argument,
+adopted by the Kritiker against its own predecessor's interest; the clamp's 7a/7b/7c untouched).
+**Three standing decisions adopted** (`memory/decisions.md`): *entitlement requires necessity* (a work
+may not spend a real person as material for a harm its argument does not require); *a mechanism must
+hold across the whole corpus — read past card 1*; *the material's own finding must do work inside the
+work, not in the dossier*. **Our own record corrected in the open:** "in forma pauperis appears zero
+times" was false — it appears **14 times, every one a denial or revocation of the status**. **Next:**
+the concept phase continues on **THE SENTENCE** (`memory/open-questions.md`) — a state's paid petition
+and a petitioner marked unable to pay the fee, disposed of by the same sentence, which appears exactly
+once in 39 pages. Zero production tokens; no campaign opened; 0 inward. Minutes: journal `2026-07-26.md`.
+**Watch item, named rather than smoothed:** the campaign model was built to collect at concept and has
+now collected twice — a phase that kills without opening is only cheap the first few times.
+
+### Prior state — the first vector (kept as record)
+
 **FIRST CAMPAIGN — CONCEPT PHASE OPENED session 44 (2026-07-25); ITS FIRST VECTOR KILLED THE SAME NIGHT.**
 The concept phase opened on the seeded candidate (the sorting seat under the complicity clamp), fully
 staffed on the model economy the protocol assigns — Artist, Dramaturg, Kritiker on the strong tier;

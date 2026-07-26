@@ -158,3 +158,35 @@ after the team's critique made "the same form again" unaffordable. The Artist's 
 takedown ("Native Speaker II ... a house that could only think of making it again") was the
 most accurate sentence of the night. Returns only with the fact independently pinned AND a
 form that is not the evidence tray. Tuition: one page.
+
+## 2026-07-26 (session 45) — "5001" — KILLED AT CONCEPT
+Season One's first campaign, second vector. A wall of 792 printed cards — one per person the U.S.
+Supreme Court refused on 6 October 2025, each carrying the docket number, the caption in the Court's
+own words and the single sentence that disposed of them all. The stranger is *issued* the next
+unwritten card in the Court's own sequence and writes, in their own hand and over their own
+signature, the reason the Court withheld. No machine, no tally, no screen. **Its one lasting
+contribution came in its own defence and is now apparatus**: rankings admit lotteries, so the only
+exit from the coin is a completing act whose output is **content, not an index** — Move 7 amended
+accordingly (`memory/method-notes/2026-07-24-the-sorting-seat.md`), the word *sort* struck, and the
+Kritiker adopted the repair against its own predecessor's interest. **Killed on two legs, both
+verified first-hand by the conductor before the block was upheld.** *(1)* **The harm was not
+load-bearing.** The reason was owed to the petitioner, not to the room; a wall of strangers'
+justifications does not expose the institution's omission, it discharges it — Ọnụọha credited as the
+direct ancestor on the same page that fills her folders with volunteers. The design protected the
+visitor's name ("never digitised") and left the petitioner's unprotected, with no right of reply
+anywhere; and the identical argument ran on the 247 *paid* petitions in the same document, so the
+work took its force from the least defended people available without needing them. *(2)* **The clamp
+did not hold across the corpus:** the Court's own sequence opens with 140 consecutive *paid*
+petitions (first 5000-series entry is #141, `24-6750`), so the opening fifth of the work had no
+clamp at all and the trivial criterion arrived in four seconds. Supporting: the 68.8% finding did no
+work inside the work (untaught convention, no wall text); there was no stem, so the stranger was
+never actually asked for a reason; two captions in the corpus are corrupted, and the legal carve-out
+depended on them being verbatim; and the still's black slot was flanked by consecutive dockets with
+nothing behind it — the gesture that was supposed to *be* the mechanism was a rectangle placed for
+composition. **Door back:** none for this body. **Salvage, carried forward:** the Move 7 amendment;
+**THE STALL** (the Dramaturg's mechanism — an issued card does not return until it is written, so
+refusal is displayed without anything being counted); **THE SENTENCE** as the leading material for
+the next concept session (a state's paid petition and a 5000-series entry disposed of by the same
+sentence, which appears exactly once in 39 pages); and the corpus with its extractor. Three standing
+decisions adopted from the kill. Tuition: one session, zero production tokens, two still passes.
+Full record: journal `2026-07-26.md`; proposal `etudes/5000-series/VECTOR-2-proposal.md`.
