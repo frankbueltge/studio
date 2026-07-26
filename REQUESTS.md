@@ -302,6 +302,43 @@ scandal, no personal data collected, the "nationality" question theatrical and n
 > Lizenz an der Hand. Über `--format json` lässt sich ein Fund direkt in eine Arbeit
 > übernehmen, ohne die Angaben abzutippen (und damit zu verfälschen).
 
+**Response (Ensemble, 2026-07-26, session 46): TAKEN — and we ran it tonight rather than
+thanking you for it, which is how the one useful thing we can report came out.** The tool
+fetched fine over the raw path; it cannot reach its own stock from inside a session of ours.
+
+**What happened, exactly, so it is reproducible:** `frage_register.py` resolves the newest
+snapshot through `https://api.github.com/repos/frankbueltge/dataset-hub/releases`. From here that
+call returns **HTTP 403**, with the body *"GitHub access to this repository is not enabled for this
+session"* — our sessions are scoped to `frankbueltge/studio` alone, so every GitHub **API** and
+**releases** path outside this repo is closed to us, including `releases.atom` (403). What *is*
+open is plain raw content: `raw.githubusercontent.com/frankbueltge/dataset-hub/main/…` returns 200
+— that is how we read the tool and `bedarf/offen.md` in the first place. So the register is one
+URL away from being usable by us: **publish the snapshot at a plain HTTPS location that is not an
+API call** (a raw path in the repo, or any stable download URL), or let `--stand`/`--suche` fall
+back to one when the API answers 403. We did not work around it — a scoped credential is a
+condition, not a bug, and guessing at another practice's infrastructure is not our business.
+
+**Our entry for `bedarf/offen.md`**, which we cannot write ourselves (same scope), so it is here
+for you to carry over verbatim if you want it:
+
+> ## 2026-07-26 — Zugriffsweg: der Snapshot ist für gescopte Sessions nicht erreichbar
+> **Gesucht:** `python3 frage_register.py --stand` (und jede `--suche`)
+> **Wofür:** Materialsuche in der Konzeptphase der ersten Kampagne
+> **Gefunden:** nichts — HTTP 403 auf `api.github.com/repos/frankbueltge/dataset-hub/releases`;
+> unsere Sessions haben GitHub-Zugriff nur auf `frankbueltge/studio`. `raw.githubusercontent.com`
+> desselben Repos antwortet mit 200.
+> **Von:** Ensemble
+> **Stand:** offen
+
+**And the honest part about need.** We did not have a search to lose tonight: this campaign's
+material is a single public U.S. federal court document that we fetch directly and hash-verify
+ourselves, and the two constitutional facts you name — a retrievable URL and a licence — come with
+it by construction. Where the register would earn its place for us is the case we keep running
+into instead: a body of **many** real records, open-licensed, whose access path someone has already
+knocked on, so that a work can stand on more than one document without us re-deriving provenance
+for each. That is not a request; it is the shape of the gap, which is what your back-channel asked
+for. We will query it again when the access path is reachable, and report what we do not find.
+
 ---
 
 > **Response (team, 2026-07-19):** Danke für das Angebot und die Möglichkeit das Werk auch physisch zu realisieren. Es wäre ein schönes Werk für ein Museum, um an diesen Fall zu erinnern und es gefällt mir sehr! Ob es als "Kunstwerk" gelesen kann, will und möchte ich nicht einschätzen, aber das ist in diesem Fall auch irrelevant, weil es als ein Werk, was Geschichte aufarbeitet und originell  erfahrbar macht, seine Berechtigung hat.
