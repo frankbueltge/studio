@@ -105,8 +105,9 @@ the screen was never argued as *forced*; and the Artist's own takedown stood unr
 on the Court's own PDF, the 6 Oct 2025 order list is 39 pages and disposes of 882 entries, **792 of them
 certiorari denials — of which 545 (68.8%) carry a 5000-series docket number**, i.e. are marked *in forma
 pauperis*, too poor to pay the fee, by a number, with no label, in a convention that is public but untaught
-(the phrase itself appears **zero times** in the document). The institution performed the sort; the record
-publishes it; nobody can read it. Full material, hashes and caveats: `memory/open-questions.md`; minutes:
+~~(the phrase itself appears **zero times** in the document)~~ → **CORRECTED session 45: false — it appears
+14 times, every one of them a denial or revocation of the status, never a grant.** The institution performed
+the sort; the record publishes it; nobody can read it. Full material, hashes and caveats: `memory/open-questions.md`; minutes:
 journal `2026-07-25-session-44.md`. **Two standing rules adopted** (`memory/decisions.md`): *pages, not
 premises* (no concept argument may rest on what a document prints until a session has opened it — the
 vector's 7a claim named four channels, two of which the record does not carry), and *the still comes before

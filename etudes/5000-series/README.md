@@ -44,9 +44,39 @@ session-44 note rendered it. Immaterial to a 2025 order list; corrected here rat
 standing, because the rule is that a quotation is checked against the page, not against our own
 earlier copy of it.*
 
-**The phrase "in forma pauperis" appears zero times in the document.** There is no label anywhere on
-its face. Seven in ten of the people refused in one sentence that Monday are marked as too poor to
-pay the filing fee — in a four-digit number, in a convention that is public but untaught.
+Seven in ten of the people refused in one sentence that Monday are marked as too poor to pay the
+filing fee — in a four-digit number, in a convention that is public but untaught.
+
+### CORRECTION (session 45, 2026-07-26) — "appears zero times" was false
+
+**This house's session-44 record states that the phrase "in forma pauperis" appears zero times in
+the document. That is wrong. It appears 14 times.** Found by the Artist on reopening the file,
+then verified independently by the conductor on the same extraction. The error's mechanism is
+known and instructive: the phrase breaks across a line in the printed columns, so a literal search
+over the raw extraction misses it; flattening whitespace first finds all 14. Session 44 searched
+the unflattened text. Corrected here, in `memory/open-questions.md`, on `WORKBOARD.md`, and marked
+at the point of error in `journal/2026-07-25-session-44.md` — the wrong claim stays in the record
+where it was made, marked as superseded, per the legal-hygiene rule.
+
+**And the corrected fact is sharper than the error it replaces.** All 14 occurrences are a
+**denial or revocation** of the status, never a grant:
+
+- *"The motions of petitioners for leave to proceed in forma pauperis are denied. Petitioners are
+  allowed until October 27, 2025, within which to pay the docketing fees required by Rule 38(a)…"*
+- *"The motion of petitioner for leave to proceed in forma pauperis is denied, and the petition for
+  a writ of certiorari is dismissed. See Rule 39.8."*
+
+Rule 39.8 is cited **11 times**; Rule 38(a) **6 times**. **Four orders** carry the sentence *"As the
+petitioner has repeatedly abused this Court's process, the Clerk is directed not to accept any
+further petitions in noncriminal matters from petitioner unless the docketing fee required by Rule
+38(a) is paid…"* — naming **three** distinct people (dockets 24-7281, 24-7381, 25-5294 and 25-5109,
+the last two the same petitioner).
+
+So the finding is **not** that the label is absent. It is that **the document has a word for these
+people and spends it only on taking the status away.** The 545 granted *in forma pauperis* are never
+named as poor; the handful stripped of it are named in the phrase, in full sentences, with a rule
+number attached. Counts re-derived first-hand in session 45; reproducible with the commands below
+plus a whitespace flatten.
 
 An entry in the denied list is **a docket number and a party caption, and nothing else**: no court
 below, no subject matter, no date, no disposition beyond the section it sits in.

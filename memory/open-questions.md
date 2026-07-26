@@ -8,8 +8,15 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   **Monday, 6 October 2025 (ORDER LIST: 607 U.S.)** is **39 pages** and disposes of **882 docket entries**
   in five sections — ORDERS IN PENDING CASES 43 · **CERTIORARI DENIED 792** · HABEAS CORPUS DENIED 26 ·
   MANDAMUS DENIED 11 · REHEARINGS DENIED 10. An entry in the denied list is **a docket number and a party
-  caption, nothing else** — no court below, and the phrase "in forma pauperis" appears **zero times in the
-  whole document**. And yet: **545 of the 792 denials (68.8%) carry a 5000-series docket number.** The
+  caption, nothing else** — no court below. ~~and the phrase "in forma pauperis" appears **zero times in the
+  whole document**~~ → **CORRECTED session 45 (2026-07-26): that claim is FALSE. The phrase appears 14
+  times**, and every occurrence is a *denial or revocation* of the status — never a grant (Rule 39.8 cited
+  11×, Rule 38(a) 6×; four orders bar three named petitioners from filing without paying). Session 44
+  searched the raw extraction, in which the phrase breaks across a printed line; flattening whitespace
+  first finds all 14. The corrected fact is sharper than the error: **the document has a word for these
+  people and spends it only on taking the status away** — the 545 granted IFP are never named as poor.
+  Verified first-hand in session 45; full quotations, counts and the reproduction command:
+  `etudes/5000-series/README.md`. And: **545 of the 792 denials (68.8%) carry a 5000-series docket number.** The
   Court numbers paid petitions from 1 and *in forma pauperis* petitions from 5,001 — National Archives,
   verbatim: *"in forma pauperis (IFP) cases are numbered in a continuous sequence beginning with 5,001"*,
   all remaining cases *"in a continuous sequence beginning with 1"*, "From 1970 to the present"
