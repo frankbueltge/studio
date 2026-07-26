@@ -79,6 +79,12 @@ for l in lines[mass_line + 1:end]:
         continue
     if (' V. ' in s or s.startswith('IN RE')) and not cur['prose']:
         continue                      # caption line, already captured above
+    if re.fullmatch(r'\d{1,2}', s):
+        continue                      # a printed folio spliced into the middle of a sentence.
+        # Session 46: this line is the bug fix, and it is the third time this house has been bitten
+        # by the same thing — a phrase broken across a printed line ("repeatedly / 33 / abused")
+        # defeats a literal search. Without it this script counted 2 Rule 38(a) filing bars in
+        # CERTIORARI DENIED where there are 3 (24-7281, 24-7381, 25-5294).
     cur['prose'] += ' ' + s
 if cur:
     tail.append(cur)

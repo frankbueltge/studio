@@ -42,9 +42,22 @@ Verified counts for those 31 (`corpus/dispositions.py`, re-derived from the PDF 
 | A housekeeping motion granted (a deceased respondent substituted; a brief filed under seal) | **2** |
 | **Total individuated** | **31** |
 
-Two of the sixteen also carry a bar on future filings: *"As the petitioner has repeatedly abused
-this Court's process, the Clerk is directed not to accept any further petitions in noncriminal
-matters from petitioner unless the docketing fee required by Rule 38(a) is paid…"*
+**Three** of the sixteen also carry a bar on future filings: *"As the petitioner has repeatedly
+abused this Court's process, the Clerk is directed not to accept any further petitions in
+noncriminal matters from petitioner unless the docketing fee required by Rule 38(a) is paid…"* —
+`24-7281 WATSON, LAWRENCE B.`, `24-7381 ROSA, CHARLENE`, `25-5294 NAVARRO MARTIN, MARIA`. A fourth
+order carrying that sentence is `25-5109 IN RE MARIA D. NAVARRO MARTIN`, in HABEAS CORPUS DENIED —
+the same person again. So: four orders, three people, and the section-level count (3) and the
+document-level count (4) diverge for that reason.
+
+> *This paragraph first said **two**, and the script that produced it counted two. The Artist found
+> the third and the conductor verified it. The cause is **the same trap for the third time in three
+> sessions**: the phrase breaks across a printed line and a printed folio — "repeatedly / 33 /
+> abused" — is spliced into the middle of the sentence, so a literal search misses it. Session 44
+> missed "in forma pauperis" this way; session 45 diagnosed that mechanism in writing; session 46's
+> own script then walked into it again. `dispositions.py` now drops bare folio lines when it joins a
+> disposition, and the fix is commented at the point of the bug. The house rule this earns: **a
+> count over this document is not final until it has been run with the line breaks removed.***
 
 **So: nobody in the section is individuated on the merits of their case.** The document's four
 doors out of the one sentence are a Justice's *absence*, a sanction, a procedural category, and
