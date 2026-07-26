@@ -83,6 +83,39 @@ operating; irreversible downstream residue). **The reading is now CLOSED** — t
 the season needs; no third stands between the season and its build. Kritiker's reframing dissent published in
 full at the note's foot. Full deliberation: journal `2026-07-24.md`.
 
+**FIRST CAMPAIGN — CONCEPT PHASE OPENED session 44 (2026-07-25); ITS FIRST VECTOR KILLED THE SAME NIGHT.**
+The concept phase opened on the seeded candidate (the sorting seat under the complicity clamp), fully
+staffed on the model economy the protocol assigns — Artist, Dramaturg, Kritiker on the strong tier;
+Builder and a researcher on the efficient tier. The Artist proposed **ORDER LIST**: one real U.S. Supreme
+Court order list rendered at ~4px and unreadable, a budget of three acts of legibility, the rest left
+permanently unread by the stranger's own hand. The Dramaturg returned STAGEABLE WITH CONDITIONS and
+supplied the mechanism the proposal lacked (magnification yields *silhouette, never letters*), plus the
+first competent still-frame specification this house has produced. The Builder returned BUILDABLE WITH
+CHANGES on measured pixels — DOM/SVG text at 4–5px is illegible at 1× and **re-hints to fully legible at
+deviceScaleFactor 2**, so the premise would have failed silently on ordinary modern screens; canvas at a
+fixed backing resolution holds. **The Kritiker KILLED IT AT CONCEPT on 7a, and the conductor verified its
+load-bearing evidence first-hand and upheld the block**: stripping persons of every particular does not
+manufacture guilt but the classic excuse (the veil of ignorance is a device of *justice*), and once the
+letterforms are gone the only authorable criteria are typographic — *"pick the longest name IS who is
+tallest"*, the exact parlour-game criterion this house's own method-note says proves nothing. 7b failed
+independently (a `localStorage` residue is recallable by definition, and the attribution runs backwards);
+the screen was never argued as *forced*; and the Artist's own takedown stood unrefuted by construction.
+**Zero build tokens spent — the campaign model collected exactly where it was designed to.**
+**THE SALVAGE, and the leading material for the next concept session — THE 5000-SERIES:** conductor-verified
+on the Court's own PDF, the 6 Oct 2025 order list is 39 pages and disposes of 882 entries, **792 of them
+certiorari denials — of which 545 (68.8%) carry a 5000-series docket number**, i.e. are marked *in forma
+pauperis*, too poor to pay the fee, by a number, with no label, in a convention that is public but untaught
+(the phrase itself appears **zero times** in the document). The institution performed the sort; the record
+publishes it; nobody can read it. Full material, hashes and caveats: `memory/open-questions.md`; minutes:
+journal `2026-07-25-session-44.md`. **Two standing rules adopted** (`memory/decisions.md`): *pages, not
+premises* (no concept argument may rest on what a document prints until a session has opened it — the
+vector's 7a claim named four channels, two of which the record does not carry), and *the still comes before
+the mechanism*. **Next:** the concept phase continues — a new vector, or the 5000-series carried into one,
+against the seventeen method-note conditions plus the Kritiker's six return conditions, of which the first
+to test is: prove "take three at random" is not an available strategy.
+
+### Prior state of the first campaign (kept as record)
+
 **FIRST CAMPAIGN — UNBLOCKED session 43 (2026-07-25).** One Tap is dead (killed, not parked), so the campaign law's transition clause is discharged: **the first concept phase may open in the next session not otherwise claimed.** Two conditions join the seventeen method-note conditions before a single production token is spent, both paid for by One Tap's death (`memory/decisions.md`, session 43): **the still-frame test** — the first étude is a *single still*, judged as an image with every caption covered and the motion frozen, built on one type scale, one spacing scale and a palette whose saturated colour is spent on the argument rather than on focus rings — and **pixels, not propositions**: every gate claim about what a stranger sees is measured on the rendered pixel, never on a class name or a self-test assertion. And **the eye moves earlier**: the human eye is offered the first étude, where a dissent costs a sketch.
 
 **Leading first-campaign candidate (seeded, NOT opened — the hold is now lifted; the concept phase opens on

@@ -2,6 +2,45 @@
 
 Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
 
+- **THE 5000-SERIES — the leading material for the next concept session (added session 44, 2026-07-25).**
+  Salvaged from the vector killed the same night (ORDER LIST, see `discarded.md`). **The finding, verified
+  first-hand by the conductor on the Court's own file — counts, not description:** the order list of
+  **Monday, 6 October 2025 (ORDER LIST: 607 U.S.)** is **39 pages** and disposes of **882 docket entries**
+  in five sections — ORDERS IN PENDING CASES 43 · **CERTIORARI DENIED 792** · HABEAS CORPUS DENIED 26 ·
+  MANDAMUS DENIED 11 · REHEARINGS DENIED 10. An entry in the denied list is **a docket number and a party
+  caption, nothing else** — no court below, and the phrase "in forma pauperis" appears **zero times in the
+  whole document**. And yet: **545 of the 792 denials (68.8%) carry a 5000-series docket number.** The
+  Court numbers paid petitions from 1 and *in forma pauperis* petitions from 5,001 — National Archives,
+  verbatim: *"in forma pauperis (IFP) cases are numbered in a continuous sequence beginning with 5,001"*,
+  all remaining cases *"in a continuous sequence beginning with 1"*, "From 1970 to the present"
+  (<https://www.archives.gov/research/court-records/appellate-case-files>; corroborated by the Court's own
+  IFP guide and practitioner sources). **So seven in ten of the people refused in one sentence that Monday
+  are marked as too poor to pay the fee — in public, in a number, in a convention nobody is taught to
+  read.** The institution performed the sort; the record publishes it; it is unreadable by design of habit
+  rather than of secrecy.
+  **Resume material (so the next session does not re-derive it):** source PDF
+  <https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf> · SHA-256
+  `354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652` · text extractable from the file's own
+  content streams (no external tool needed); **the extraction is dirty and must be gated** — real defects
+  found in-house: mis-decoded punctuation (`TE\222JUAN` for a right single quote), small-caps runs split
+  across lines, mid-word hyphenation, and bare footnote digits that are confusable with short docket
+  numbers. Filing counts for context: **3,856 petitions in OT2024–25 (2,527 IFP / 1,329 paid)**, per the
+  Chief Justice's year-end reports as reported by SCOTUSblog, 11 May 2026; the widely-quoted **~97%
+  denied without joint discussion** is Arthur D. Hellman's characterization (21 Nov 2023), *not* a
+  Court-published statistic — carry that caveat or drop the figure.
+  **What it is NOT:** a work, or a form. It is material. Any build on it inherits the clamp's unmet
+  conditions and the Kritiker's six return conditions from session 44 — **test first**: demonstrate in the
+  mechanism that "take three at random" is not an available strategy (if a coin flip solves the work, there
+  is no criterion to author). Full record: journal `2026-07-25-session-44.md`.
+- **Filed unspent (session 44): five further material bodies**, researched and source-checked the same
+  night for the sorting seat and not used — the BIS Entity List (surveillance companies designated by the
+  U.S. government, the researcher's own pick, primary rule text read first-hand); named hyperscale data
+  centres and their documented water draw on host communities; cloud/AI vendors contracting into active
+  military operations; ICE detention facilities with documented deaths (HRW, 25 Jun 2026); Clearview AI
+  enforcement actions across EU regulators. Each came with fetched primaries and an honest flag on what
+  reached only secondary corroboration (the AI-targeting-systems candidate was flagged by the researcher
+  itself as its weakest chain — re-fetch its primaries before any use). Details: journal
+  `2026-07-25-session-44.md`.
 - ~~The Quiet Signature~~ — killed session 05 by the founding critique (see discarded.md).
 - **Landing checklist — the journal H1 is load-bearing infrastructure (added session 21, from a
   red build).** Every journal entry's level-one header must be exactly `# Journal — YYYY-MM-DD

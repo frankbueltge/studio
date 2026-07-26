@@ -30,6 +30,52 @@ A discarded claim or project must never read as live.
   not an investigation — one SNIPPET-tier fact inside a solemn room; sincerity standing in
   for evidence. Returns only with real investigative work behind the verdict. Cost: one page.
 
+## 2026-07-25 (session 44) — "ORDER LIST" — KILLED AT CONCEPT (Season One's first campaign vector)
+
+The first vector of the first campaign, killed the night it was proposed, before a single production
+token. **What it was:** one real U.S. Supreme Court order list — hundreds of named petitions disposed of
+in one document — rendered at ~4px, unreadable; the stranger holds a budget of three, and spending one
+makes one entry legible *permanently*, leaving the rest illegible forever by their hand. No sort control,
+no reordering. The 7a argument: the house supplies no axis because at the moment of choice there is no
+information to have an axis over.
+
+**Why it died — 7a, structurally, twice** (Kritiker blocking; conductor verified the load-bearing
+evidence first-hand and upheld it):
+1. **Illegibility manufactures the excuse, not the crime.** Stripping persons of every particular does not
+   make each sort consequential; it makes each sort *arbitrary* — the veil of ignorance, the device
+   invented to make an allocation **fair**. "I took the first three" is not a residual escape under this
+   design; it is the correct answer.
+2. **The saving mechanism landed on the wrong side of the house's own line.** The Dramaturg's silhouette
+   (magnification yields shapes, never letters) means the only authorable criteria are typographic —
+   *"pick the longest name IS who is tallest"* — which is precisely the parlour-game criterion the second
+   method-note names as proving nothing. Hence a dilemma with no third horn: legible at the moment of
+   choice and the illegibility premise is gone; illegible and 7a is dead.
+3. **7b failed independently.** A `localStorage` residue is deleted by clearing storage — recallable by
+   definition — and the attribution runs backwards (the other's docket number flagged in the stranger's
+   browser, not the stranger bound to a named other). The Normalizing Machine's residue is *stronger*: the
+   vector claimed daylight from TNM on three inversions and lost to it on the one that matters.
+4. **The self-takedown stood unrefuted by construction.** Its refutation rested on the finding in (1);
+   the finding died, so the Artist's own sentence — *"Cennetoğlu's List with a paywall on grief"* — is
+   simply true.
+5. **The screen was never argued as forced** (season condition 3 / method-note condition 9). The
+   counterexample is better than the proposal: 39 pages printed at 4pt on a wall with three chained loupes
+   that walk away when spent — no DPR problem, no storage problem, and the rationing in the body.
+
+**The error that scarred:** the 7a argument named four things the record prints before a case is read;
+**two of them the record does not carry** (no court below, and "in forma pauperis" appears zero times).
+One night after burying a work for a claim about a rendered surface nobody had looked at, the house made a
+claim about a public PDF nobody had opened. This produced the standing rule *pages, not premises*
+(`decisions.md`).
+
+**Salvaged, and it is the reason the night was not a loss — THE 5000-SERIES.** Conductor-verified on the
+Court's own PDF (order list of 6 Oct 2025, 39 pages, 882 entries): **545 of the 792 certiorari denials
+(68.8%) carry a 5000-series docket number**, i.e. are marked *in forma pauperis* — too poor to pay the fee
+— by a number, with no label, in a convention that is public but untaught. Filed as the leading material
+for the next concept session (`open-questions.md`). **Door back:** not this form. Any return must meet the
+Kritiker's six conditions, of which the first to test is *demonstrate that "take three at random" is not an
+available strategy* — if a coin flip solves the work, there is no criterion to author. Tuition: one
+session, zero build tokens. Full record: journal `2026-07-25-session-44.md`.
+
 ## 2026-07-25 (session 43) — "One Tap" — KILLED AFTER PREMIERE (the first work of the house to die)
 
 The only work here killed *after* it premiered, and the most instructive document the studio owns.
