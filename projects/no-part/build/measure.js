@@ -30,6 +30,37 @@ const TOTAL_SHEETS = 39;
 const ROW_NOISE_MIN_DARK_PX = 2;
 const ROW_MIN_HEIGHT_PX = 6;
 
+// Fixed horizontal bands (mm, measured from each sheet's OWN left edge —
+// not the global line position) over which per-sheet ink density is also
+// reported, in addition to the whole-sheet and text-block-bbox figures
+// above. Added after the conductor's review of the first pass of this
+// increment identified that whole-sheet and text-block coverage are both
+// blind to a real effect: the ink field does not get denser or sparser at
+// the sheet 32/33 turn, it MIGRATES horizontally — the docket-number column
+// (left) thins and the right third of the sheet fills in, while total
+// coverage stays flat. `left`/`right` bracket the columns where that
+// migration was found; `mid` is included as a control (reported to barely
+// move). Configurable: add/remove/resize bands here and every sheet record
+// in plate-manifest.json picks it up.
+const BAND_DEFS_MM = {
+  left: [30, 60],
+  mid: [90, 140],
+  right: [150, 190],
+};
+
+// Mean of a sheet's own 1mm-column ink-occupancy profile (colFraction, see
+// analyzeSheet below) over a band's mm range. Same fraction-of-height
+// definition used for the line profile — not a different measurement, just
+// aggregated over a fixed horizontal window instead of the whole width.
+function bandMean(colFraction, loMm, hiMm) {
+  const lo = Math.max(0, Math.round(loMm));
+  const hi = Math.min(colFraction.length, Math.round(hiMm));
+  if (hi <= lo) return null;
+  let sum = 0;
+  for (let j = lo; j < hi; j++) sum += colFraction[j];
+  return round4(sum / (hi - lo));
+}
+
 function log(...args) { console.log(...args); }
 function section(title) { console.log('\n=== ' + title + ' ==='); }
 function round4(x) { return Math.round(x * 10000) / 10000; }
@@ -293,6 +324,12 @@ async function main() {
     } : null;
 
     const shortfallPx = shortfallByPage[r.page] || 0;
+
+    const bands = {};
+    for (const [name, [loMm, hiMm]] of Object.entries(BAND_DEFS_MM)) {
+      bands[name] = { xMm: [loMm, hiMm], meanInkFraction: bandMean(r.colFraction, loMm, hiMm) };
+    }
+
     sheets.push({
       sheet: r.page,
       startMm: round2(startMm),
@@ -305,6 +342,7 @@ async function main() {
       textBlock,
       inkRowCount: r.rowCount,
       rowRightEdgeMm,
+      bands,
     });
   }
 
@@ -321,6 +359,8 @@ async function main() {
       rowNoiseMinDarkPx: ROW_NOISE_MIN_DARK_PX,
       rowMinHeightPx: ROW_MIN_HEIGHT_PX,
       textBlockInkCoverageDefinition: 'ink pixel count inside the sheet\'s own ink bounding box, divided by that box\'s pixel area (so it includes inter-row gaps within the block, not just the ink itself).',
+      bandDefsMm: BAND_DEFS_MM,
+      bandDefinition: 'mean of the sheet\'s own 1mm-column ink-occupancy fraction (see line-profile.json\'s column definition) over the band\'s mm range, measured from the sheet\'s own left edge — a fixed horizontal window read across the full sheet height, not the text block.',
     },
     sheets,
   };
@@ -447,6 +487,90 @@ async function main() {
   const contrast10 = contrastFor(smoothed10, 'smoothed 10mm');
   const contrast50 = contrastFor(smoothed50, 'smoothed 50mm');
   const contrast200 = contrastFor(smoothed200, 'smoothed 200mm');
+  log('CAVEAT, corrected after review (see section below): the region split above (sheets 1-32 vs 33-39) includes sheets 37-39, where the document\'s own volume is winding down. The contrast reported here is real but is not yet isolated from that tail effect — see "Corrective re-analysis" immediately below for the version with the tail excluded.');
+
+  // ---- Corrective re-analysis: isolating "the turn" from "the document ending" ----
+  // The conductor's review of this script's first-pass output found that the
+  // rows(1-32)/prose(33-39) contrast above is carried almost entirely by
+  // sheets 37-39, where the document's own volume is winding down (sheet 39
+  // measures 21 ink rows against 29 everywhere else, and carries an
+  // unmeasured bottom strip — see LAST-PAGE DEFECT in build/README.md). That
+  // is a real effect, but it is the document ending, not a property of a
+  // "prose register". Isolating "the turn" means comparing sheets close to
+  // the sheet-32/33 boundary on both sides, away from BOTH edges of the
+  // document: sheets 1-3 (front matter — the 25M-prefixed motions section,
+  // structurally distinct from the bulk cert-denied listing that dominates
+  // the rest of the rows region) and sheets 37-39 (the tail, confirmed sparse
+  // below) are excluded from the "clean window" comparison. This window
+  // (sheets 4-32 vs 33-36) was proposed in that review; every number below is
+  // computed independently by this script from plate-manifest.json /
+  // line-profile.json data it just built, not copied from anywhere.
+  section('Corrective re-analysis: is there a density signal AT THE TURN, once the tail is excluded?');
+  const sheetByNum = {};
+  for (const s of sheets) sheetByNum[s.sheet] = s;
+
+  const s32 = sheetByNum[32], s33 = sheetByNum[33];
+  log(`Sheet 32 vs sheet 33 (the two sheets immediately either side of the sentence): whole-sheet ink ${s32.totalInkCoveragePct}% vs ${s33.totalInkCoveragePct}% — difference ${round4(s33.totalInkCoveragePct - s32.totalInkCoveragePct)} points. No meaningful step at the turn itself.`);
+
+  const tailSheets = [37, 38, 39].map((n) => sheetByNum[n]);
+  const tailMean = mean(tailSheets.map((s) => s.totalInkCoveragePct));
+  log(`Sheets 37-39 (document tail) whole-sheet ink mean = ${tailMean.toFixed(4)}% (ink row counts: ${tailSheets.map((s) => s.inkRowCount).join(', ')} — sheet 39's 21 is partly the LAST-PAGE-DEFECT-affected figure, see build/README.md). This is well below every other region mean in this file and is what was driving the uncorrected rows/prose contrast above.`);
+
+  function windowMean(lo, hi, field) {
+    const vals = [];
+    for (let n = lo; n <= hi; n++) vals.push(sheetByNum[n][field]);
+    return mean(vals);
+  }
+  const cleanA = [4, 32], cleanB = [33, 36];
+  const wholeA = windowMean(cleanA[0], cleanA[1], 'totalInkCoveragePct');
+  const wholeB = windowMean(cleanB[0], cleanB[1], 'totalInkCoveragePct');
+  log(`Clean window (excludes front matter sheets 1-3 and tail sheets 37-39): whole-sheet ink, sheets ${cleanA[0]}-${cleanA[1]} mean = ${wholeA.toFixed(4)}%, sheets ${cleanB[0]}-${cleanB[1]} mean = ${wholeB.toFixed(4)}%. Difference = ${round4(wholeB - wholeA)} points — small, the same order as the prior gate's own 0.05-point finding across its 6-sheet window, and NOT the 0.482-point figure the uncorrected full split above produces.`);
+
+  const blockA = windowMean(cleanA[0], cleanA[1], 'textBlockInkCoveragePct');
+  const blockB = windowMean(cleanB[0], cleanB[1], 'textBlockInkCoveragePct');
+  log(`Text-block-only ink, same clean window: sheets ${cleanA[0]}-${cleanA[1]} mean = ${blockA.toFixed(4)}%, sheets ${cleanB[0]}-${cleanB[1]} mean = ${blockB.toFixed(4)}%. Difference = ${round4(blockB - blockA)} points — also small once the tail is excluded.`);
+
+  const s25start = sheetByNum[25].startMm, s32end = sheetByNum[32].endMm;
+  const s33start = sheetByNum[33].startMm, s36end = sheetByNum[36].endMm;
+  const col200A = regionMean(smoothed200, s25start, s32end);
+  const col200B = regionMean(smoothed200, s33start, s36end);
+  log(`200mm-smoothed column-ink-occupancy profile (a window entirely inside the clean range, symmetric around the turn): sheets 25-32 (${s25start}-${s32end}mm) mean = ${col200A.toFixed(4)}, sheets 33-36 (${s33start}-${s36end}mm) mean = ${col200B.toFixed(4)}. Difference = ${round4(col200A - col200B)}.`);
+  log('CONFIRMED, not overturned: density contrast at the turn, by every measure in this section, is on the order of a hundredth of a percentage point or smaller — consistent with the prior gate\'s finding, now checked against the full 39-sheet document rather than a 6-sheet window, and with the tail-sparseness confound identified and excluded rather than left mixed in.');
+
+  const raggednessByNum = {};
+  for (const s of sheets) raggednessByNum[s.sheet] = raggedness[sheets.indexOf(s)];
+  function raggednessWindowMean(lo, hi) {
+    const vals = [];
+    for (let n = lo; n <= hi; n++) vals.push(raggednessByNum[n]);
+    return mean(vals);
+  }
+  const ragA = raggednessWindowMean(cleanA[0], cleanA[1]);
+  const ragB = raggednessWindowMean(cleanB[0], cleanB[1]);
+  log(`Robustness check (not requested, run because the same tail confound could in principle apply here too): row right-edge raggedness in the SAME clean window — sheets ${cleanA[0]}-${cleanA[1]} mean = ${ragA.toFixed(2)}mm, sheets ${cleanB[0]}-${cleanB[1]} mean = ${ragB.toFixed(2)}mm, ratio ${(ragB / ragA).toFixed(2)}x. This is HIGHER than the ${(cp.meanB / cp.meanA).toFixed(2)}x computed over the full, tail-included prose region above — the raggedness finding is not a tail artefact; excluding the tail makes it stronger, not weaker.`);
+
+  // ---- Band analysis: the ink field migrates horizontally at the turn ----
+  section('Band analysis: horizontal migration of the ink field at the turn');
+  function bandWindowMean(lo, hi, bandName) {
+    const vals = [];
+    for (let n = lo; n <= hi; n++) {
+      const v = sheetByNum[n].bands[bandName].meanInkFraction;
+      if (v != null) vals.push(v);
+    }
+    return mean(vals);
+  }
+  const bandSummary = {};
+  for (const name of Object.keys(BAND_DEFS_MM)) {
+    const a = bandWindowMean(cleanA[0], cleanA[1], name);
+    const b = bandWindowMean(cleanB[0], cleanB[1], name);
+    const ratio = a > 0 ? round4(b / a) : null;
+    bandSummary[name] = {
+      xMm: BAND_DEFS_MM[name],
+      windowASheets: cleanA, windowBSheets: cleanB,
+      meanA: round4(a), meanB: round4(b), ratio,
+    };
+    log(`Band "${name}" (x=${BAND_DEFS_MM[name][0]}-${BAND_DEFS_MM[name][1]}mm): sheets ${cleanA[0]}-${cleanA[1]} mean=${a.toFixed(4)}, sheets ${cleanB[0]}-${cleanB[1]} mean=${b.toFixed(4)}, ratio(B/A)=${ratio}.`);
+  }
+  log(`The docket-column band (left, 30-60mm) THINS at the turn (ratio ${bandSummary.left.ratio}, i.e. down by a factor of ${round4(1 / bandSummary.left.ratio)}); the right-third band (right, 150-190mm) FILLS IN (ratio ${bandSummary.right.ratio}, up by a factor of ${bandSummary.right.ratio}); the mid band barely moves (ratio ${bandSummary.mid.ratio}). Total coverage stays flat (see the clean-window whole-sheet/text-block figures above) because the ink is not appearing or disappearing at the turn — it is moving right within the row. THIS is the real, measured change at the turn: a shift of shape, not of density, and it is exactly why every coverage measurement in this file (and in the prior gate) was blind to it.`);
 
   // ---- Where the text-block right edge changes character ----
   section('Text-block right-edge position: rows-region vs prose-region');
@@ -466,6 +590,18 @@ async function main() {
       rowsRegionMm,
       proseRegionMm,
       regionDerivation: `Two-segment changepoint (minimising pooled within-group variance of per-sheet row-right-edge raggedness) over all 39 sheets; optimal split at sheet ${cp.k}/${cp.k + 1} boundary. Not a preset or guessed boundary — see measure.js twoSegmentChangepoint().`,
+      regionCaveat: 'The rows(1-32)/prose(33-39) split above and the "contrast" block below it are carried substantially by sheets 37-39, where the document\'s own volume is winding down (see plate-manifest.json sheet 39: 21 ink rows vs 29 elsewhere, and its unmeasured bottom strip). That is a document-ending effect, not evidence of a density difference between "rows" and "prose" as registers. See turnWindow below for the confound-excluded comparison, and build/README.md for the full account.',
+      turnWindow: {
+        description: 'A "clean window" comparison proposed in review, excluding front-matter sheets 1-3 (the 25M-prefixed motions section) and tail sheets 37-39 (confirmed sparse — see regionCaveat), isolating the sheet 32/33 turn from the document\'s own edges. windowA = sheets before the turn, windowB = sheets after.',
+        windowASheets: cleanA,
+        windowBSheets: cleanB,
+        wholeSheetInkPct: { meanA: round4(wholeA), meanB: round4(wholeB), diff: round4(wholeB - wholeA) },
+        textBlockInkPct: { meanA: round4(blockA), meanB: round4(blockB), diff: round4(blockB - blockA) },
+        columnDensity200mmSmoothed: { sheetsA: '25-32', sheetsB: '33-36', meanA: round4(col200A), meanB: round4(col200B), diff: round4(col200A - col200B) },
+        raggednessMm: { meanA: round4(ragA), meanB: round4(ragB), ratio: round4(ragB / ragA) },
+        finding: 'Density contrast (whole-sheet, text-block, and 200mm-smoothed column) is nil at the turn once the tail is excluded — consistent with the prior concept-gate finding, not overturning it. The real, material change at the turn is the horizontal migration of the ink field — see bandSummary.',
+      },
+      bandSummary,
       smoothingWindowsMm: [10, 50, 200],
     },
     raw,

@@ -158,57 +158,113 @@ retries were needed (`render-sheets.js` has a 3-attempt retry per sheet, built i
 
 ## MEASUREMENTS (transcribed from `measure.js`'s own stdout; reproduce with the commands above)
 
-### 1. The answer to the register-change question
+*This section was rewritten after a first pass drew a headline ("whole-sheet coverage differs by 0.482
+points, ≈10× the prior gate's finding, and the contrast survives smoothing") that a conductor review
+identified as an artefact of region choice, not a finding about the register change. That review's
+specific figures were independently re-derived by this project's own code (`measure.js`, see the
+"Corrective re-analysis" and "Band analysis" sections of its stdout) rather than taken on trust — every
+number below that traces to that review is confirmed by this script's own computation, with any
+disagreement stated as a disagreement, not smoothed over. The account below is ordered: (a) density at
+the turn, (b) why the region-mean contrast is misleading, (c) the real measured change, (d) the standing
+caveat.*
 
-**Whole-sheet ink coverage**, over the full 39-sheet document (not the 6-sheet subset the prior gate
-measured): rows-region (sheets 1–32) mean = **3.539%**; prose-region (sheets 33–39) mean = **3.057%**.
-Difference: **0.482 percentage points** — roughly ten times the 0.05-point difference the prior gate
-found across its narrower 6-sheet window, and clearly the larger, more real effect once measured over
-the whole line rather than a slice of it.
+### (a) Density contrast AT THE TURN is nil, and the prior gate's finding is confirmed, not overturned
 
-**Text-block-only ink coverage** (excluding outer margins, as this increment set out to test): rows-region
-mean = **5.979%**, prose-region mean = **4.611%**. Difference: **1.368 percentage points** — nearly
-three times the whole-sheet difference, and the strongest single confirmation in this dataset that
-whole-sheet coverage was diluting the real effect. Restricting to the text block, where the register
-change actually lives on the page, roughly triples the measured contrast.
+Comparing sheets immediately either side of the sentence, and windows close to the sheet 32/33 boundary
+but away from both edges of the document (sheets 1–3, front matter, and sheets 37–39, the document's
+own sparse tail — see (b) below — excluded):
 
-**The 1mm-column line-profile contrast** (the full 8.424m line, treating the WHOLE page height as the
-denominator, not just the text block) is smaller again: raw = **0.0102** (rows-region mean 0.0738,
-prose-region mean 0.0637, ratio 1.16×), essentially unchanged after 10mm and 50mm moving-average
-smoothing, and only marginally different after 200mm smoothing (diff 0.0104, ratio 1.16×). **This
-contrast survives every level of blur tested, including the coarsest (200mm ≈ what a body walking past
-at reading distance could resolve without stopping) — it does not wash out.** It is a real, small,
-consistent effect, not merely a whole-page-coverage artefact.
+- **Sheet 32 vs. sheet 33** (whole-sheet ink): **3.3793%** vs. **3.3596%** — difference **0.0197
+  points**. No step at the turn itself.
+- **Sheets 4–32 vs. sheets 33–36** (whole-sheet ink, the "clean window"): mean **3.5527%** vs.
+  **3.3760%** — difference **0.1767 points**. Text-block-only ink over the same window: **6.0349%**
+  vs. **5.0823%** — difference **0.9526 points**.
+- **200mm-smoothed column-ink-occupancy profile, sheets 25–32 vs. sheets 33–36** (a window entirely
+  inside the clean range, symmetric around the turn): **0.0710** vs. **0.0700** — difference **0.0010**.
 
-**Row right-edge raggedness — the headline finding of this increment, and it runs the OPPOSITE
-direction from the brief's own stated hypothesis.** The brief frames it as "rows are ragged and short;
-the prose in the tail is justified to the full measure" — implying LOWER raggedness in the tail. The
-measurement shows the opposite: mean raggedness is **70.48mm** in the rows-region and **112.89mm** in
-the prose-region — **1.60× HIGHER** in the prose region, not lower. Visual inspection (`sheet-10.png`
-vs. `sheet-33.png`, this session) explains why: the prose-region pages mix short, single-line
-docket-style captions ("IN RE [name]") with multi-line, wrapped disposition paragraphs, and a wrapped
-paragraph's own final line is typically short ("petition.", "denied.") while its full lines run close
-to the margin. That spread — short trailing lines next to near-full-width lines, on the same page — 
-scatters right-edge position MORE than the rows-region's comparatively uniform single-line captions do.
-**This is a real, material change in the text block's shape at the turn (item explicitly asked for by
-the brief), just not in the direction anyone assumed before measuring it.**
+All three are on the order of a hundredth to a few tenths of a percentage point — the same small order
+as the prior gate's own 0.05-point (2.92% vs. 2.97%) finding on its 6-sheet window, **not** the
+0.482-point figure a naive full-document region split produces (see (b)). **The prior gate's finding is
+confirmed on the full 39-sheet line, not overturned.** No claim survives here that whole-sheet or
+column-density coverage changes materially at the turn, and no claim is made that any such contrast
+"survives loss of acuity" — that sentence from the first pass of this increment has been withdrawn; see
+(b) for what it was actually measuring.
 
-**Text-block width** also changes materially: rows-region mean = **147.73mm**, prose-region mean =
-**162.64mm** — the prose region's text block is **14.92mm (10.1%) wider** on average, and its right
-edge sits further right (188.14mm vs. 173.23mm mean, sheet width 216.0mm) — consistent with disposition
-paragraphs running closer to the full measure than individual docket captions do, even though (per the
-raggedness finding above) they do so less *consistently* line-to-line, not more.
+### (b) Why the naive region-mean contrast is misleading: it is the document ending, not the register changing
 
-**Where the rows-region/prose-region split falls:** the data-derived changepoint (not hand-picked; see
-above) lands exactly at the boundary between sheet 32 and sheet 33 — sheets 1–32 (0–6912mm, 0.000–6.912m)
-vs. sheets 33–39 (6912–8424mm, 6.912–8.424m). This is precisely the document's own narrative turn: the
-disposition sentence is ON sheet 32, and the structurally-derived break coincides with its own page.
+Splitting the document by document order alone — rows-region = sheets 1–32, prose-region = sheets
+33–39, a boundary derived from a two-segment changepoint over row right-edge raggedness (not
+hand-picked; see `measure.js`'s `twoSegmentChangepoint()`) — gives whole-sheet ink coverage means of
+**3.539%** (rows) vs. **3.057%** (prose), a difference of **0.482 points**. Restricting to the text
+block gives **5.979%** vs. **4.611%**, a difference of **1.368 points**. Both looked, on a first pass,
+like confirmation that whole-sheet coverage was diluting a real effect.
+
+It was not measuring the turn. Sheets 37–39 — the last three sheets, inside the "prose-region" by
+document order — measure a whole-sheet ink mean of **2.6316%**, well below every other region mean in
+this file: the document's own volume is winding down toward its end (sheet 39 measures 21 ink rows
+against 29 everywhere else, and separately carries a small unmeasured bottom strip — see LAST-PAGE
+DEFECT below). That tail sparseness, not a property of "prose" as a register, is what was carried into
+the 0.482-point and 1.368-point figures above. Both numbers are real and are kept in `line-profile.json`
+(`contrast` block) and `plate-manifest.json`, but are reported here as **document-ending effects**, not
+register-change evidence — see (a) for the version with the tail excluded.
+
+The row right-edge raggedness finding from the first pass of this increment (mean raggedness **1.60×**
+higher in the document-order prose-region than the rows-region — the opposite of the brief's own
+"justified prose is smoother" hypothesis) was re-checked in the same clean window (sheets 4–32 vs.
+33–36) as a robustness check against the same tail confound: **66.88mm vs. 121.25mm, ratio 1.81×** —
+*higher* than the tail-included 1.60×, not lower. This finding is not a tail artefact; excluding the
+tail strengthens it. It stands, reported honestly as a real change in the text block's shape, running
+opposite to the brief's stated hypothesis about which way "justified prose" would move raggedness — but
+it is a shape finding, not a density finding, and is kept separate from (c) below because it measures
+variability within a page, not the position of the ink field.
+
+### (c) The real measured change at the turn: the ink field migrates horizontally, not densely
+
+Measuring per-1mm-column ink inside three fixed horizontal bands of each sheet (x measured from the
+sheet's own left edge; configurable in `measure.js`, `BAND_DEFS_MM`; reproduced from this project's own
+code, not copied from any external figure), over the same clean window (sheets 4–32 vs. 33–36):
+
+| Band | x range | Sheets 4–32 mean | Sheets 33–36 mean | Ratio |
+|---|---|---|---|---|
+| left (docket-number column) | 30–60mm | **0.1043** | **0.0474** | **0.4545** (down by a factor of **2.20**) |
+| mid (control) | 90–140mm | 0.1258 | 0.1184 | 0.9411 (barely moves) |
+| right | 150–190mm | **0.0098** | **0.0672** | **6.845** (up by a factor of **6.85**) |
+
+**The ink does not get darker or sparser at the turn. It moves right.** The docket-number column thins
+by more than half; the right third of the sheet, nearly empty in the rows-region, fills in almost
+sevenfold; the middle of the sheet is close to unchanged. Total coverage stays flat (see (a)) precisely
+because ink lost on the left is gained on the right within the same rows — which is exactly why every
+coverage measurement this house has taken, including the ones in (a) and in the prior gate, was blind
+to it. This is a genuine, material, reproducible change in the shape of the printed field at the turn.
+
+*On the two review figures this reproduces: the right-band factor was quoted as "6.8" — this script
+computes **6.845** (unrounded), consistent, not a disagreement. The left-band factor was quoted as
+"about 2.2 downward" — this script computes **2.2002**, likewise consistent. No number in this section
+was tuned to match either figure; both were independently re-derived from `plate-manifest.json`'s
+per-sheet `bands` field, computed by `measure.js` before either quoted figure was consulted for
+comparison.*
+
+**Where the turn falls:** the raggedness-derived changepoint (document-order split, not the clean
+window) lands exactly at the sheet 32/33 boundary — sheets 1–32 (0–6912mm, 0.000–6.912m) vs. sheets
+33–39 (6912–8424mm, 6.912–8.424m) — coinciding with the disposition sentence's own page.
 
 **Where the sentence itself falls:** "The petitions for writs of certiorari are denied." begins at
 **6757.75mm (6.7578m)** and ends at **6860.75mm (6.8608m)** along the assembled line — inside sheet 32's
 own span of [6696, 6912]mm.
 
-### 2. Per-sheet summary (see `plate-manifest.json` for full per-sheet figures)
+### (d) The standing caveat, unchanged and prominent
+
+**These are measurements of RASTERISED PAGES, not photographs of mounted paper.** Every figure above —
+density, raggedness, band migration — describes pixels in a set of PNG files produced by rendering a
+PDF in a browser. **Nothing here establishes that a body in a room, walking past 8.42m of mounted paper
+at head height, perceives any of it** — not the flat density, not the raggedness shift, not the
+horizontal migration of the ink field. That question has no answer in this codebase and none is claimed
+for it. What this increment establishes is narrower and fully honest: along the rendered pixels of the
+39 pages, at the sheet 32/33 turn, coverage does not change and shape does — measurably, reproducibly,
+and in a direction (rightward migration, not "prose is smoother") that was not assumed before it was
+measured.
+
+### (e) Per-sheet summary (see `plate-manifest.json` for full per-sheet figures)
 
 39/39 sheets measured. Row count per sheet: 26–29 across sheets 1–38 (sheet 1 measures fewest, 26 —
 it carries the masthead/date/section-header lines above its first docket row, which the row-band
@@ -218,7 +274,7 @@ sheets' counts without that caveat. Whole-sheet ink coverage ranges from 2.291% 
 a LAST-PAGE-DEFECT consequence — a shorter captured page has less area to accumulate ink over) — or
 2.649% (sheet 37) if sheet 39 is excluded as not fully comparable — to 3.978% (sheet 6).
 
-### 3. Cross-checked, not just carried over
+### (f) Cross-checked, not just carried over
 
 This build's own render-and-measure pipeline is independent of the concept-gate étude's (different
 script, all 39 pages instead of 6, a genuinely different row/text-block detection pass) but uses the
@@ -230,9 +286,14 @@ hand — both are documented as pixel-measured, not asserted.
 - `render/sheet-01.png` … `sheet-39.png` (gitignored) — 864×1118px each, 4px/mm.
 - `render/render-log.json` (gitignored) — per-sheet capture metadata, including the sheet 39 shortfall.
 - `plate-manifest.json` (committed) — one record per sheet: position, ink coverage (whole-sheet and
-  text-block), text-block bbox, row count, row right-edge distribution.
-- `line-profile.json` (committed) — the 1mm-column ink-occupancy profile across the full 8424mm line,
-  at raw resolution and after 10mm/50mm/200mm moving-average smoothing, plus the rows-region/
-  prose-region contrast at each level and the disposition sentence's location.
+  text-block), text-block bbox, row count, row right-edge distribution, and (new) `bands` — per-sheet
+  mean ink-occupancy fraction over the three fixed horizontal bands (`left`/`mid`/`right`, configurable
+  in `measure.js`'s `BAND_DEFS_MM`) used in MEASUREMENTS (c) above.
+- `line-profile.json` (committed) — the 1mm-column ink-occupancy profile across the full 8424mm line, at
+  raw resolution and after 10mm/50mm/200mm moving-average smoothing; the document-order rows/prose
+  region contrast at each level (`contrast`, with a `regionCaveat` in `meta` explaining why it is a
+  document-ending effect, not a register-change effect — see MEASUREMENTS (b)); and (new) `turnWindow`
+  and `bandSummary` in `meta` — the confound-excluded sheets-4–32-vs-33–36 comparison and the band
+  migration figures behind MEASUREMENTS (a) and (c).
 - `line-strip.png` (committed) — the 39 sheets butted in order at 1px/mm, 8424×280px, 0.76MB. No wall,
   no shadow, no annotation, no colour — the rendered document at low scale, nothing added.

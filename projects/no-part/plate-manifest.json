@@ -13,7 +13,22 @@
     "inkLuminanceThreshold": 150,
     "rowNoiseMinDarkPx": 2,
     "rowMinHeightPx": 6,
-    "textBlockInkCoverageDefinition": "ink pixel count inside the sheet's own ink bounding box, divided by that box's pixel area (so it includes inter-row gaps within the block, not just the ink itself)."
+    "textBlockInkCoverageDefinition": "ink pixel count inside the sheet's own ink bounding box, divided by that box's pixel area (so it includes inter-row gaps within the block, not just the ink itself).",
+    "bandDefsMm": {
+      "left": [
+        30,
+        60
+      ],
+      "mid": [
+        90,
+        140
+      ],
+      "right": [
+        150,
+        190
+      ]
+    },
+    "bandDefinition": "mean of the sheet's own 1mm-column ink-occupancy fraction (see line-profile.json's column definition) over the band's mm range, measured from the sheet's own left edge — a fixed horizontal window read across the full sheet height, not the text block."
   },
   "sheets": [
     {
@@ -38,6 +53,29 @@
         "min": 71.5,
         "median": 143.75,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0431
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1153
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0401
+        }
       }
     },
     {
@@ -62,6 +100,29 @@
         "min": 75.5,
         "median": 168.25,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0425
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1261
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0592
+        }
       }
     },
     {
@@ -86,6 +147,29 @@
         "min": 103,
         "median": 160.5,
         "max": 188.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0657
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.135
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0597
+        }
       }
     },
     {
@@ -110,6 +194,29 @@
         "min": 103,
         "median": 143.5,
         "max": 186
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0843
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1288
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0315
+        }
       }
     },
     {
@@ -134,6 +241,29 @@
         "min": 108,
         "median": 141,
         "max": 177.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1107
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1348
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0146
+        }
       }
     },
     {
@@ -158,6 +288,29 @@
         "min": 116.5,
         "median": 144.5,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1101
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1459
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0223
+        }
       }
     },
     {
@@ -182,6 +335,29 @@
         "min": 88.25,
         "median": 142.75,
         "max": 177.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1078
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1294
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0209
+        }
       }
     },
     {
@@ -206,6 +382,29 @@
         "min": 108,
         "median": 139.25,
         "max": 169.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1106
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1327
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.009
+        }
       }
     },
     {
@@ -230,6 +429,29 @@
         "min": 101.75,
         "median": 145.5,
         "max": 179.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1109
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1399
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0227
+        }
       }
     },
     {
@@ -254,6 +476,29 @@
         "min": 101.75,
         "median": 127,
         "max": 154
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1063
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1201
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0016
+        }
       }
     },
     {
@@ -278,6 +523,29 @@
         "min": 105.75,
         "median": 128.5,
         "max": 181.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1061
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1204
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0085
+        }
       }
     },
     {
@@ -302,6 +570,29 @@
         "min": 109.5,
         "median": 124.5,
         "max": 162.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1069
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1222
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0037
+        }
       }
     },
     {
@@ -326,6 +617,29 @@
         "min": 109.5,
         "median": 129,
         "max": 152
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1059
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1318
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.001
+        }
       }
     },
     {
@@ -350,6 +664,29 @@
         "min": 109.5,
         "median": 139.25,
         "max": 190.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1061
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.132
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0175
+        }
       }
     },
     {
@@ -374,6 +711,29 @@
         "min": 109.5,
         "median": 127,
         "max": 173.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1063
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1264
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0044
+        }
       }
     },
     {
@@ -398,6 +758,29 @@
         "min": 108,
         "median": 127,
         "max": 169.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.107
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1232
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0076
+        }
       }
     },
     {
@@ -422,6 +805,29 @@
         "min": 103.75,
         "median": 127,
         "max": 175.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1079
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1251
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0111
+        }
       }
     },
     {
@@ -446,6 +852,29 @@
         "min": 101.5,
         "median": 129.25,
         "max": 171.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0994
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1229
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0069
+        }
       }
     },
     {
@@ -470,6 +899,29 @@
         "min": 105.75,
         "median": 141.25,
         "max": 169.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0808
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1317
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0165
+        }
       }
     },
     {
@@ -494,6 +946,29 @@
         "min": 99.5,
         "median": 135,
         "max": 188.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.086
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1338
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0158
+        }
       }
     },
     {
@@ -518,6 +993,29 @@
         "min": 93.25,
         "median": 125,
         "max": 179.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0973
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1139
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0105
+        }
       }
     },
     {
@@ -542,6 +1040,29 @@
         "min": 101.75,
         "median": 125,
         "max": 171.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1053
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1201
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0034
+        }
       }
     },
     {
@@ -566,6 +1087,29 @@
         "min": 105.75,
         "median": 127,
         "max": 160.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1117
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1315
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0044
+        }
       }
     },
     {
@@ -590,6 +1134,29 @@
         "min": 97.25,
         "median": 122.75,
         "max": 160.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1142
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1142
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0021
+        }
       }
     },
     {
@@ -614,6 +1181,29 @@
         "min": 107.75,
         "median": 118.5,
         "max": 158.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.103
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1087
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0025
+        }
       }
     },
     {
@@ -638,6 +1228,29 @@
         "min": 99.5,
         "median": 124.5,
         "max": 164.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1083
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1145
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0051
+        }
       }
     },
     {
@@ -662,6 +1275,29 @@
         "min": 109.25,
         "median": 131.25,
         "max": 175.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1068
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1365
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0109
+        }
       }
     },
     {
@@ -686,6 +1322,29 @@
         "min": 99.5,
         "median": 125,
         "max": 162.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1055
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1229
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0069
+        }
       }
     },
     {
@@ -710,6 +1369,29 @@
         "min": 105.75,
         "median": 125,
         "max": 184
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1068
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1213
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0077
+        }
       }
     },
     {
@@ -734,6 +1416,29 @@
         "min": 109.5,
         "median": 125,
         "max": 162.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1046
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1223
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0038
+        }
       }
     },
     {
@@ -758,6 +1463,29 @@
         "min": 109.75,
         "median": 127,
         "max": 156.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.1084
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1242
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0022
+        }
       }
     },
     {
@@ -782,6 +1510,29 @@
         "min": 109.5,
         "median": 125,
         "max": 173.25
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0996
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1182
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0095
+        }
       }
     },
     {
@@ -806,6 +1557,29 @@
         "min": 66.75,
         "median": 175.25,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.048
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1169
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0663
+        }
       }
     },
     {
@@ -830,6 +1604,29 @@
         "min": 67,
         "median": 179.75,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0443
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1299
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0861
+        }
       }
     },
     {
@@ -854,6 +1651,29 @@
         "min": 67,
         "median": 152,
         "max": 186.5
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.046
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.105
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0513
+        }
       }
     },
     {
@@ -878,6 +1698,29 @@
         "min": 67,
         "median": 176,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0513
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.1219
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.065
+        }
       }
     },
     {
@@ -902,6 +1745,29 @@
         "min": 79.75,
         "median": 99.5,
         "max": 186.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0788
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.0647
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0167
+        }
       }
     },
     {
@@ -926,6 +1792,29 @@
         "min": 79.75,
         "median": 106,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0675
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.0811
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0404
+        }
       }
     },
     {
@@ -950,6 +1839,29 @@
         "min": 99.5,
         "median": 125.75,
         "max": 188.75
+      },
+      "bands": {
+        "left": {
+          "xMm": [
+            30,
+            60
+          ],
+          "meanInkFraction": 0.0483
+        },
+        "mid": {
+          "xMm": [
+            90,
+            140
+          ],
+          "meanInkFraction": 0.0806
+        },
+        "right": {
+          "xMm": [
+            150,
+            190
+          ],
+          "meanInkFraction": 0.0199
+        }
       }
     }
   ]

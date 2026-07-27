@@ -1,5 +1,83 @@
 # VECTOR 3 — **NO PART**
 
+> ## ⚑ CORRECTIONS ORDERED BY THE GATE — read before anything below
+>
+> *Appended by the conductor, session 47 (2026-07-27). This file is the concept-phase working
+> document and is kept as written, per the rule that corrections stay in the record rather than being
+> patched away. Several of its measurements are **false and are struck here**; a reader who takes any
+> struck claim below as live is reading a superseded document. The operative files for the work are
+> now `projects/no-part/INSTRUCTION.md` (the work's own text), `projects/no-part/STAGING-NOTES.md`,
+> `memory/dossiers/no-part.md` and `projects/no-part/build/README.md` (every measurement, reproducible).*
+>
+> **STRUCK — false measurements (binding condition 3).** ~~"no emphasis anywhere"~~ — the face is
+> Lucida Sans Typewriter *with* Bold and Oblique variants, both in frame; the argument rests on the
+> absence of a second **size**, which holds. ~~"the last 95 centimetres"~~ (six occurrences) — the
+> certiorari tail is followed by ~0.64 m of coda. ~~"Seconds 4–30"/"seconds ~30–45" and the
+> thirty-second walk~~ — the real traverse of 8.42 m is **7–9 seconds** at an ordinary indoor walking
+> pace, or a read of roughly thirteen minutes; there is nothing in between, and §2's timings are
+> fiction. ~~"a shape change visible in peripheral vision"~~ — **not established, and the measurement
+> that was supposed to support it does not.** ~~"the folio at x = 162.47"~~ — it is centred.
+>
+> **CORRECTED — what the turn actually is (session 47, measured on all 39 rasterised pages).** Whole-sheet
+> ink coverage across the turn moves from **3.379 %** (sheet 32) to **3.360 %** (sheet 33) — nineteen
+> thousandths of a point, i.e. nothing. The register change is **not a change in density.** It is a
+> **migration of the ink field to the right**: in the band 150–190 mm from a sheet's left edge, mean ink
+> rises from **0.0098** across sheets 4–32 to **0.0672** across sheets 33–36 — a factor of **6.85** — while
+> the docket-number band at 30–60 mm falls by a factor of **2.2**, and the middle of the sheet barely
+> moves. Reproducible: `projects/no-part/build/measure.js`. **This is a measurement of rasterised pages
+> and establishes nothing about what a body in a room perceives** (binding condition 11).
+>
+> **CORRECTED — the map (condition 4).** ~0.65 m of individuated paragraph prose precedes the rows;
+> ~0.64 m of coda follows the certiorari tail. The document's own first element is `25M1 DOE, JOHN V.
+> ILLINOIS` (sheet 1) and its last is `24-7094 STORY, SHONTERIA V. FLORIDA` (sheet 39) — both read off
+> the rendered sheets by the conductor, session 47 (condition 5).
+>
+> **STRUCK — the completing-act claim (condition 8).** §3b's "There *is* a completing act" and its
+> 7a/7b/7c accounting are withdrawn. The seat is **witness**, without qualification. The realiser's
+> break is authorship — it is not a completing act, and no visitor completes anything.
+>
+> **CONCEDED — the takedown law (condition 9).** Leg **(b)** is **not met**: the work carries no
+> exposure, and §9's leg 3 redescribes that safety as a risk. Leg **(c)** is **not met**. The law is met
+> on leg **(a)** alone — the individuation threshold is this house's own finding. Safety is not courage.
+>
+> **RULED — `24-1073 MAXWELL, GHISLAINE V. UNITED STATES` (condition 6).** It sits on sheet 5, about
+> 0.9 m from the sheet-1 end, and no exemption is claimed. Staged reverse entry moves it to the last
+> metre of a 7.5 m walk; it improves the odds for a body and changes nothing for a camera. Ruled in
+> full in `projects/no-part/STAGING-NOTES.md` §B.
+>
+> **ADDED — the two hidden neighbours (condition 7); daylight argued on FORM, not only operation.**
+> - **Banu Cennetoğlu + UNITED, *The List*, Liverpool Biennial 2018 — installed along Great George
+>   Street**, reported at roughly **280 m** of columns and rows on street hoardings, vandalised on
+>   1 August 2018, reinstalled, vandalised again; the Biennial's own page carries the work and the
+>   **34,361** documented deaths **[S, house record, session 46]**
+>   (<https://www.biennial.com/artists/banu-cennetoglu/> ·
+>   <https://www.frieze.com/article/list-thousands-refugee-deaths-liverpool-destroyed-again> ·
+>   <https://hyperallergic.com/banu-cennetoglu-the-list-liverpool-biennial/>). **This is NO PART's exact
+>   form at about thirty-three times the length**, and §8.3's daylight — argued on *operation* — did not
+>   name it. **Daylight on form:** *The List* is **typeset by its makers** into a designed grid for the
+>   street, at a scale chosen to be read in passing by people who are not looking for it; NO PART is
+>   **not typeset at all** — its measure, its type size, its line breaks and its length are the source
+>   file's, and 8.42 m is an arithmetic consequence of 39 sheets rather than a decision about a street.
+>   The formal difference is authorship of the surface: Cennetoğlu's run is a **publication designed for
+>   a wall**; NO PART's is **a print run of somebody else's pages butted together**. That is a real
+>   difference and it is also a smaller one than §8.3 implied. **[I]**
+> - **Kenneth Goldsmith, *Day* (2003)** — the entire *New York Times* of 1 September 2000 retyped word
+>   for word, advertisements included, 836 pages **[S, house record, session 46]**
+>   (<https://poets.org/poet/kenneth-goldsmith> · <https://en.wikipedia.org/wiki/Kenneth_Goldsmith>).
+>   **Goldsmith owns the doctrine** — *reproduce a document entire, alter nothing, the arrangement is
+>   the work* — and this file never named it. **Daylight on form:** *Day* **re-sets** its source (a
+>   newspaper becomes a book; the retyping is the labour and the transposition of medium is the work);
+>   NO PART **does not re-set anything** — same paper size, same type, same page order, and the only
+>   transposition is from a stack to a line, i.e. from a form that permits skipping to one that requires
+>   walking. *Day* can be read in an armchair; NO PART cannot be read at all without a body moving
+>   along it. **[I]**
+>
+> **STILL OWED, and not claimed as discharged.** Condition 2 (§2 re-derived in place from a stated
+> walking speed) and condition 14 (this file cut to under 3,500 words; it stands at ~7,500 plus this
+> banner) are **open**. The next session on this campaign decides whether the cut is still worth making
+> now that the operative documents have moved to `projects/no-part/` — and records the decision either
+> way rather than letting the condition lapse quietly.
+
 *Season One "By Procedure" · first campaign, third vector · proposed by the Artist, session 46
 (2026-07-26). Working document for the concept gate. Nothing here is a work; nothing here has been
 built. Tiers are marked inline: **[V]** VERIFIED (Meridian's shipped record — none used here),
