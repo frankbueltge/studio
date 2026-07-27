@@ -1,0 +1,48 @@
+{
+  "analytics": {
+    "corpus_denied_count": 792,
+    "leading_px": 14,
+    "full_column_height_px": 11088,
+    "full_column_height_approx_screens_at_1000": 11.09,
+    "top_block_entry_range": [
+      745,
+      760
+    ],
+    "top_block_line_count": 16,
+    "top_block_height_px": 224,
+    "scrollTop_px": 10430,
+    "sentence_frame_y": 256,
+    "gap_entries_to_sentence_px": 32,
+    "rule_frame_y": 312,
+    "sentence_line_bottom_frame_y": 280,
+    "gap_sentence_to_rule_px": 32,
+    "tail_frame_y": 364,
+    "gap_rule_to_tail_px": 52,
+    "sentence_doc_y": 10686,
+    "rule_doc_y": 10742,
+    "entry760_line_bottom_doc_y": 10654,
+    "silent_mass_height_from_proposal_count": 10654,
+    "entry760_bottom_equals_silent_mass_height": true,
+    "frame_h": 1000,
+    "tail_available_height_px": 636
+  },
+  "scrollTopUsed": 10430,
+  "measured": {
+    "entry745Top": 10430,
+    "entry760Bottom": 10654,
+    "sentenceTop": 10686,
+    "ruleTop": 10747.5,
+    "tailFirstTop": 10806,
+    "massEntryCount": 761,
+    "wrappedCaptions": 0
+  },
+  "postScroll": {
+    "sentenceFrameTop": 334,
+    "ruleFrameTop": 395.5,
+    "tailFirstFrameTop": 454,
+    "lastGroupDocket": "24-7281",
+    "lastOrderFrameTop": 910,
+    "lastOrderFrameBottom": 980,
+    "lastOrderCutByFrame": false
+  }
+}

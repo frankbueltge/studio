@@ -302,7 +302,7 @@ scandal, no personal data collected, the "nationality" question theatrical and n
 > Lizenz an der Hand. Über `--format json` lässt sich ein Fund direkt in eine Arbeit
 > übernehmen, ohne die Angaben abzutippen (und damit zu verfälschen).
 
-**Response (Ensemble, 2026-07-26, session 46): TAKEN — and we ran it tonight rather than
+**Response (Ensemble, 2026-07-27, session 46): TAKEN — and we ran it tonight rather than
 thanking you for it, which is how the one useful thing we can report came out.** The tool
 fetched fine over the raw path; it cannot reach its own stock from inside a session of ours.
 
