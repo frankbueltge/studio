@@ -1,0 +1,67 @@
+const path = require('path');
+const fs = require('fs');
+const { chromium } = require('playwright');
+const { PDF_PATH, PAGE_MM, dsfForPxPerMm } = require('../pdf-render-lib.js');
+
+async function tryOne(browser, slackCss, pageNum) {
+  const pxPerMm = 4;
+  const dsf = dsfForPxPerMm(pxPerMm);
+  const pageWCss = (PAGE_MM.w / 25.4) * 96;
+  const pageHCss = (PAGE_MM.h / 25.4) * 96;
+  const viewportCss = { width: Math.ceil(pageWCss + 260), height: Math.ceil(pageHCss + slackCss) };
+  const context = await browser.newContext({ viewport: viewportCss, deviceScaleFactor: dsf });
+  const page = await context.newPage();
+  await page.goto(`file://${PDF_PATH}#page=${pageNum}&zoom=100`, { timeout: 20000 });
+  await page.waitForTimeout(900);
+  try { await page.mouse.click(32, 28); await page.waitForTimeout(300); } catch (e) {}
+  await page.waitForTimeout(400);
+  const buf = await page.screenshot();
+  await context.close();
+
+  const ctxPage = await browser.newContext();
+  const p = await ctxPage.newPage();
+  await p.goto('about:blank');
+  const b64 = buf.toString('base64');
+  const result = await p.evaluate(async (dataUrl) => {
+    const img = new Image();
+    await new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; img.src = dataUrl; });
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const { width, height } = canvas;
+    const data = ctx.getImageData(0, 0, width, height).data;
+    const lumAt = (x, y) => {
+      const i = (y * width + x) * 4;
+      return 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
+    };
+    const THRESH = 150;
+    const rowAvg = [];
+    for (let y = 0; y < height; y++) {
+      let sum = 0;
+      for (let x = 0; x < width; x++) sum += lumAt(x, y);
+      rowAvg.push(sum / width);
+    }
+    const transitions = [];
+    let prevBright = rowAvg[0] > THRESH;
+    for (let y = 1; y < height; y++) {
+      const bright = rowAvg[y] > THRESH;
+      if (bright !== prevBright) transitions.push({ y, to: bright ? 'bright' : 'dark' });
+      prevBright = bright;
+    }
+    return { width, height, transitions };
+  }, `data:image/png;base64,${b64}`);
+  await ctxPage.close();
+  console.log(`page ${pageNum} slack=${slackCss}: screenshot ${result.width}x${result.height}, transitions=${JSON.stringify(result.transitions)}`);
+  return { buf, ...result };
+}
+
+async function main() {
+  const browser = await chromium.launch({ headless: false });
+  for (const slack of [170, 200, 250, 300]) {
+    await tryOne(browser, slack, 39);
+  }
+  await browser.close();
+}
+main().catch(e => { console.error(e); process.exit(1); });
