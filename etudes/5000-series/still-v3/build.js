@@ -121,7 +121,7 @@ function buildHtml(denied, analytics) {
   const massHtml = mass.map((e) => entryLine(e)).join('\n');
 
   const tailHtml = tailOrders
-    .map((group) => {
+    .map((group, i) => {
       const lines = group.dockets
         .map((d) => {
           const caption = group.captions ? group.captions[d] : group.caption;
@@ -135,7 +135,15 @@ function buildHtml(denied, analytics) {
           return entryLine(real);
         })
         .join('\n');
-      return `<div class="tail-group">\n${lines}\n<div class="order" style="font-size:9px;line-height:${LEADING}px;">${esc(
+      // The group immediately before the last (24-7233, before 24-7281) gets
+      // a wider gap after it: measured on the rendered pixels, the standard
+      // gap left 24-7281's order paragraph landing fully inside the frame
+      // (ending at y=990, 10px short of the bottom edge) instead of
+      // straddling it as the spec's crop table requires ("cropped mid-
+      // sentence by the frame's bottom edge"). See README "what I fixed."
+      const isPenultimate = i === tailOrders.length - 2;
+      const groupStyle = isPenultimate ? ` style="margin-bottom:${SPACE.xxl}px;"` : '';
+      return `<div class="tail-group"${groupStyle}>\n${lines}\n<div class="order" style="font-size:9px;line-height:${LEADING}px;">${esc(
         group.order
       )}</div>\n</div>`;
     })
@@ -185,6 +193,9 @@ function buildHtml(denied, analytics) {
     left: ${COL_LEFT}px;
     top: 0;
     width: ${COL_MEASURE}px;
+    /* Buffer so the frame's crop, deep in an ~11,000px column, is never
+       clamped by the browser's max-scroll — see README "what I fixed". */
+    padding-bottom: 500px;
   }
   .entry {
     display: flex;
@@ -198,37 +209,51 @@ function buildHtml(denied, analytics) {
     flex: 1 1 auto;
     overflow-wrap: break-word;
   }
+  /* The mass (761 entries) sits in ordinary document flow at the top of
+     .column, and is exactly 761*14=10654px tall (confirmed below by
+     build.js's own measurement pass). Everything after it — the sentence,
+     the rule+caret, the tail — is positioned with an explicit "top" in
+     document-space, computed once in compute.js and written in below,
+     rather than left to stack via margins. Two adjoining empty/zero-height
+     boxes (the rule's own row has no border/padding/content) collapse
+     their margins in ordinary CSS flow, which silently ate 32px of the
+     rule-to-tail gap on the first render of this file — see README "what I
+     fixed." Explicit absolute "top" values sidestep that failure mode
+     entirely instead of fighting it with collapse-prevention hacks. */
   .sentence {
-    margin-top: ${SPACE.xl}px;
+    position: absolute;
+    top: ${analytics.sentence_doc_y}px;
+    left: 0;
     padding-left: ${SPACE.md}px;
     font-size: ${SENTENCE_SIZE}px;
     line-height: ${SENTENCE_LEADING}px;
   }
-  .rule-row {
-    margin-top: ${SPACE.xl}px;
-    display: flex;
-    align-items: center;
-  }
   .rule {
-    flex: 1 1 auto;
-    height: 0;
+    position: absolute;
+    top: ${analytics.rule_doc_y}px;
+    left: 0;
+    width: ${COL_MEASURE}px;
     border-top: 1px solid ${RULE_COLOR};
   }
   .caret {
+    position: absolute;
+    top: ${analytics.rule_doc_y}px;
+    left: 0;
     width: 1px;
     height: 12px;
     background: ${INK};
-    margin-right: -1px;
-    order: -1;
   }
   .tail {
-    margin-top: ${SPACE.xxl}px;
+    position: absolute;
+    top: ${analytics.rule_doc_y + SPACE.xxl}px;
+    left: 0;
+    width: ${COL_MEASURE}px;
   }
   .tail-group {
-    margin-bottom: ${SPACE.lg}px;
+    margin-bottom: ${SPACE.xl}px;
   }
   .tail-group .order {
-    margin-top: ${SPACE.sm}px;
+    margin-top: ${SPACE.md}px;
     padding-left: ${SPACE.md}px;
     width: ${COL_MEASURE - SPACE.md}px;
   }
@@ -238,7 +263,8 @@ function buildHtml(denied, analytics) {
   <div class="column">
     ${massHtml}
     <div class="sentence">${esc(SENTENCE)}</div>
-    <div class="rule-row"><div class="caret"></div><div class="rule"></div></div>
+    <div class="caret"></div>
+    <div class="rule"></div>
     <div class="tail">
       ${tailHtml}
     </div>

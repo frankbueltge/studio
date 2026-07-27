@@ -40,6 +40,9 @@
     left: 380px;
     top: 0;
     width: 520px;
+    /* Buffer so the frame's crop, deep in an ~11,000px column, is never
+       clamped by the browser's max-scroll — see README "what I fixed". */
+    padding-bottom: 500px;
   }
   .entry {
     display: flex;
@@ -53,37 +56,51 @@
     flex: 1 1 auto;
     overflow-wrap: break-word;
   }
+  /* The mass (761 entries) sits in ordinary document flow at the top of
+     .column, and is exactly 761*14=10654px tall (confirmed below by
+     build.js's own measurement pass). Everything after it — the sentence,
+     the rule+caret, the tail — is positioned with an explicit "top" in
+     document-space, computed once in compute.js and written in below,
+     rather than left to stack via margins. Two adjoining empty/zero-height
+     boxes (the rule's own row has no border/padding/content) collapse
+     their margins in ordinary CSS flow, which silently ate 32px of the
+     rule-to-tail gap on the first render of this file — see README "what I
+     fixed." Explicit absolute "top" values sidestep that failure mode
+     entirely instead of fighting it with collapse-prevention hacks. */
   .sentence {
-    margin-top: 32px;
+    position: absolute;
+    top: 10686px;
+    left: 0;
     padding-left: 12px;
     font-size: 17.6px;
     line-height: 24px;
   }
-  .rule-row {
-    margin-top: 32px;
-    display: flex;
-    align-items: center;
-  }
   .rule {
-    flex: 1 1 auto;
-    height: 0;
+    position: absolute;
+    top: 10742px;
+    left: 0;
+    width: 520px;
     border-top: 1px solid rgba(23,23,26,0.35);
   }
   .caret {
+    position: absolute;
+    top: 10742px;
+    left: 0;
     width: 1px;
     height: 12px;
     background: #17171A;
-    margin-right: -1px;
-    order: -1;
   }
   .tail {
-    margin-top: 52px;
+    position: absolute;
+    top: 10794px;
+    left: 0;
+    width: 520px;
   }
   .tail-group {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
   .tail-group .order {
-    margin-top: 8px;
+    margin-top: 12px;
     padding-left: 12px;
     width: 508px;
   }
@@ -853,7 +870,8 @@
 <div class="entry" style="font-size:9px;line-height:14px;"><span class="docket" style="width:72px;color:#A8201A;">25-5511</span><span class="caption">PARKINS, MATTHEW T., ET AL. V. McMASTER, HENRY D., ET AL.</span></div>
 <div class="entry" style="font-size:9px;line-height:14px;"><span class="docket" style="width:72px;color:#A8201A;">25-5543</span><span class="caption">BROOKS, ALTONY V. JOHNSTON, SGT., ET AL.</span></div>
     <div class="sentence">The petitions for writs of certiorari are denied.</div>
-    <div class="rule-row"><div class="caret"></div><div class="rule"></div></div>
+    <div class="caret"></div>
+    <div class="rule"></div>
     <div class="tail">
       <div class="tail-group">
 <div class="entry" style="font-size:9px;line-height:14px;"><span class="docket" style="width:72px;color:#17171A;">24-948</span><span class="caption">GUERRERO, CHIEF JUSTICE, ET AL. V. REDD, STEPHEN M.</span></div>
@@ -876,7 +894,7 @@
 <div class="entry" style="font-size:9px;line-height:14px;"><span class="docket" style="width:72px;color:#A8201A;">24-7206</span><span class="caption">BOCHRA, MARK V. USDC ND IL</span></div>
 <div class="order" style="font-size:9px;line-height:14px;">The petition for a writ of certiorari is denied. The Chief Justice took no part in the consideration or decision of this petition.</div>
 </div>
-<div class="tail-group">
+<div class="tail-group" style="margin-bottom:52px;">
 <div class="entry" style="font-size:9px;line-height:14px;"><span class="docket" style="width:72px;color:#A8201A;">24-7233</span><span class="caption">DANIELS, JOSEPH A. V. GORE, DOCTOR</span></div>
 <div class="order" style="font-size:9px;line-height:14px;">The motion of petitioner for leave to proceed in forma pauperis is denied, and the petition for a writ of certiorari is dismissed. See Rule 39.8.</div>
 </div>

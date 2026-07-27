@@ -31,18 +31,18 @@
     "entry745Top": 10430,
     "entry760Bottom": 10654,
     "sentenceTop": 10686,
-    "ruleTop": 10747.5,
-    "tailFirstTop": 10806,
+    "ruleTop": 10742,
+    "tailFirstTop": 10794,
     "massEntryCount": 761,
     "wrappedCaptions": 0
   },
   "postScroll": {
-    "sentenceFrameTop": 334,
-    "ruleFrameTop": 395.5,
-    "tailFirstFrameTop": 454,
+    "sentenceFrameTop": 256,
+    "ruleFrameTop": 312,
+    "tailFirstFrameTop": 364,
     "lastGroupDocket": "24-7281",
-    "lastOrderFrameTop": 910,
-    "lastOrderFrameBottom": 980,
-    "lastOrderCutByFrame": false
+    "lastOrderFrameTop": 940,
+    "lastOrderFrameBottom": 1010,
+    "lastOrderCutByFrame": true
   }
 }

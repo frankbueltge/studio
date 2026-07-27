@@ -1,0 +1,96 @@
+{
+  "still-1x.png": {
+    "file": "/home/user/studio/etudes/5000-series/still-v3/still-1x.png",
+    "width": 1280,
+    "height": 1000,
+    "total": 1280000,
+    "ground": 1232141,
+    "ink": 4847,
+    "sat": 11073,
+    "edge": 31939,
+    "groundShare": 0.9626,
+    "inkShare": 0.0038,
+    "satShare": 0.0087,
+    "edgeShare": 0.025,
+    "satOfMarkShare": 0.6955,
+    "strictInkPixels": 93,
+    "strictSatPixels": 0,
+    "strictSatShare": 0,
+    "strictInkShare": 0.000073,
+    "hue": {
+      "file": "/home/user/studio/etudes/5000-series/still-v3/still-1x.png",
+      "total": 1280000,
+      "ground": 1229095,
+      "ink": 34019,
+      "sat": 16886,
+      "inkShare": 0.0266,
+      "satShare": 0.0132,
+      "satOfMarkShare": 0.3317
+    }
+  },
+  "still-2x.png": {
+    "file": "/home/user/studio/etudes/5000-series/still-v3/still-2x.png",
+    "width": 2560,
+    "height": 2000,
+    "total": 5120000,
+    "ground": 4983606,
+    "ink": 51038,
+    "sat": 25495,
+    "edge": 59861,
+    "groundShare": 0.9734,
+    "inkShare": 0.01,
+    "satShare": 0.005,
+    "edgeShare": 0.0117,
+    "satOfMarkShare": 0.3331,
+    "strictInkPixels": 11725,
+    "strictSatPixels": 809,
+    "strictSatShare": 0.000158,
+    "strictInkShare": 0.00229,
+    "hue": {
+      "file": "/home/user/studio/etudes/5000-series/still-v3/still-2x.png",
+      "total": 5120000,
+      "ground": 4977707,
+      "ink": 92818,
+      "sat": 49475,
+      "inkShare": 0.0181,
+      "satShare": 0.0097,
+      "satOfMarkShare": 0.3477
+    }
+  },
+  "scan_1x_docket_row": {
+    "file": "/home/user/studio/etudes/5000-series/still-v3/still-1x.png",
+    "y": 6,
+    "xStart": 380,
+    "xEnd": 460,
+    "distinctLumBuckets": 10,
+    "darkRuns": 9,
+    "sampleWidth": 80
+  },
+  "scan_2x_docket_row": {
+    "file": "/home/user/studio/etudes/5000-series/still-v3/still-2x.png",
+    "y": 12,
+    "xStart": 760,
+    "xEnd": 920,
+    "distinctLumBuckets": 11,
+    "darkRuns": 11,
+    "sampleWidth": 160
+  },
+  "scan_1x_sentence_row": {
+    "file": "/home/user/studio/etudes/5000-series/still-v3/still-1x.png",
+    "y": 268,
+    "xStart": 392,
+    "xEnd": 700,
+    "distinctLumBuckets": 13,
+    "darkRuns": 46,
+    "sampleWidth": 308
+  },
+  "scan_2x_sentence_row": {
+    "file": "/home/user/studio/etudes/5000-series/still-v3/still-2x.png",
+    "y": 536,
+    "xStart": 784,
+    "xEnd": 1400,
+    "distinctLumBuckets": 14,
+    "darkRuns": 48,
+    "sampleWidth": 616
+  }
+}
