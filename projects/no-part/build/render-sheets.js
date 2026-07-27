@@ -99,13 +99,19 @@ async function main() {
   for (const pg of pages) {
     const pageT0 = Date.now();
     try {
-      const { buffer, widthPx, heightPx } = await renderWithRetry(browser, pg, PX_PER_MM, MAX_ATTEMPTS);
+      const { buffer, widthPx, heightPx, shortfallPx } = await renderWithRetry(browser, pg, PX_PER_MM, MAX_ATTEMPTS);
       const grayBuffer = await desaturateToGrayscale(browser, buffer);
       const fname = path.join(RENDER_DIR, `sheet-${String(pg).padStart(2, '0')}.png`);
       fs.writeFileSync(fname, grayBuffer);
       const dt = ((Date.now() - pageT0) / 1000).toFixed(1);
       log(`sheet ${String(pg).padStart(2, '0')}: ${widthPx}x${heightPx}px -> ${fname} (${grayBuffer.length} bytes, ${dt}s)`);
-      results.push({ page: pg, widthPx, heightPx, bytes: grayBuffer.length });
+      if (shortfallPx > 0) {
+        const shortfallMm = (shortfallPx / PX_PER_MM).toFixed(2);
+        log(`  ** DEFECT: sheet ${pg}'s bottom ${shortfallPx}px (${shortfallMm}mm) could not be captured from the source screenshot`);
+        log(`     (see pdf-render-lib.js "LAST-PAGE DEFECT" comment) — that strip is filled paper-white in the saved PNG,`);
+        log(`     not sourced from any rendered pixel. Treat sheet ${pg}'s bottom ${shortfallMm}mm as UNMEASURED, not confirmed-blank.`);
+      }
+      results.push({ page: pg, widthPx, heightPx, bytes: grayBuffer.length, shortfallPx });
     } catch (e) {
       log(`sheet ${String(pg).padStart(2, '0')}: FAILED after ${MAX_ATTEMPTS} attempts — ${e.message}`);
       failed.push({ page: pg, error: e.message });
@@ -124,6 +130,10 @@ async function main() {
     if (widths.size > 1 || heights.size > 1) {
       log('WARNING: not all sheets rendered to the same pixel size — investigate before trusting downstream measurements.');
     }
+  }
+  const shortfallSheets = results.filter((r) => r.shortfallPx > 0);
+  if (shortfallSheets.length) {
+    log(`Sheets with an unmeasured bottom strip (see per-sheet DEFECT notes above): ${shortfallSheets.map((r) => `${r.page} (${r.shortfallPx}px / ${(r.shortfallPx / PX_PER_MM).toFixed(2)}mm)`).join(', ')}`);
   }
   if (failed.length) {
     console.error(`FAILED sheets (not filled, not guessed): ${JSON.stringify(failed, null, 2)}`);

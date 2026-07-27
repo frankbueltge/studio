@@ -93,9 +93,11 @@ async function renderPage(browser, pageNum, pxPerMm) {
   const expectedW = Math.round(PAGE_MM.w * pxPerMm);
   const expectedH = Math.round(PAGE_MM.h * pxPerMm);
 
-  const { left, top } = await detectPageTopLeft(browser, fullBuf);
+  const { left, top, sourceHeight } = await detectPageTopLeft(browser, fullBuf);
+  const availableH = sourceHeight - top;
+  const shortfallPx = Math.max(0, expectedH - availableH);
   const cropped = await cropPng(browser, fullBuf, left, top, expectedW, expectedH);
-  return { buffer: cropped, widthPx: expectedW, heightPx: expectedH, dsf, left, top };
+  return { buffer: cropped, widthPx: expectedW, heightPx: expectedH, dsf, left, top, shortfallPx };
 }
 
 // Find only the page's top-left corner (light paper vs. dark viewer
@@ -103,6 +105,54 @@ async function renderPage(browser, pageNum, pxPerMm) {
 // construction (pxPerMm * PAGE_MM), so we never need to detect the
 // bottom/right edge — the fragile part in a continuous-scroll PDF viewer
 // where the gap between pages is thin.
+//
+// LAST-PAGE DEFECT (new, found and fixed in this project — the concept
+// gate's 6-sheet frame, sheets 30-35, never included the actual last page of
+// the 39-page document, so it never exercised this path):
+//
+// The original algorithm took the FIRST row from the top where the row's
+// average luminance clears the paper/background threshold, on the
+// assumption that only dark viewer chrome (toolbar/background) precedes the
+// target page. That holds for every interior page (confirmed by direct
+// pixel-transition analysis of pages 1, 15, 38) — but NOT for the actual
+// last page of the document (39). Rendering page 39 alone and inspecting
+// the full, uncropped screenshot's row-luminance transitions shows THREE
+// transitions, not one: dark->bright at the toolbar boundary, bright->dark,
+// then dark->bright again — because Chromium's continuous-scroll PDF viewer
+// cannot scroll past the end of the document, so navigating to the last
+// page leaves the TAIL of the second-to-last page still visible above it
+// (confirmed visually: that tail band contains page 38's own folio number,
+// "38"). The original "first transition" logic picks that tail as if it
+// were the page, producing a crop that starts ~80px too early and — because
+// the crop height is fixed — ends ~80px too early too, silently cutting off
+// the true page 39's own bottom margin and folio.
+//
+// Fix: don't take the first dark->bright transition; take the first one
+// whose following bright run is long enough to plausibly BE a full page
+// (>= MIN_RUN_PX, comfortably between the tail band's measured height
+// [66-236px across several tested viewport sizes, always much shorter] and
+// a genuine page's [~1089-1117px, always much longer]). This is a strictly
+// more general rule, not a page-39 special case: for every interior page,
+// the very first transition already satisfies it (there is only one
+// transition until the page's own bottom), so behaviour there is unchanged.
+//
+// Even with the correct transition selected, page 39's available room below
+// it (screenshot height minus top) falls short of the expected full page
+// height by a small, essentially constant amount (~29-34px across every
+// viewport size tested, independent of how much slack is added) — this
+// plugin's internal scroll/layout geometry allocates less vertical space to
+// the document than its own dsf^2-scaled glyph rendering actually draws
+// (see pdfRenderLib's dsfForPxPerMm() comment for that scaling defect, which
+// this appears to be a second symptom of). No scroll position, wheel event,
+// keyboard End, or out-of-range #page=40 fragment recovers the missing
+// rows (all tried and confirmed to make no difference) — it is not
+// reachable by this plugin, not just under-captured. detectPageTopLeft
+// reports `sourceHeight` (the full raw screenshot height) alongside `top`
+// so callers can compute and report this shortfall explicitly rather than
+// silently crop past the end of the source image (which, in a plain
+// <canvas>, would composite as transparent/black, not paper white — cropPng
+// below fills white first specifically to avoid manufacturing a black bar
+// out of a missing-data condition).
 async function detectPageTopLeft(browser, pngBuffer) {
   const ctxPage = await browser.newContext();
   const p = await ctxPage.newPage();
@@ -127,11 +177,26 @@ async function detectPageTopLeft(browser, pngBuffer) {
       return 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
     };
     const THRESH = 150;
-    let top = -1;
+    const MIN_RUN_PX = 500; // see LAST-PAGE DEFECT above: tail bands measured 66-236px, genuine pages 1089-1117px — 500 sits cleanly between them
+    const rowAvg = new Array(height);
     for (let y = 0; y < height; y++) {
       let sum = 0;
       for (let x = 0; x < width; x++) sum += lumAt(x, y);
-      if (sum / width > THRESH) { top = y; break; }
+      rowAvg[y] = sum / width;
+    }
+    let top = -1;
+    for (let y = 0; y < height; y++) {
+      const isTransitionIn = rowAvg[y] > THRESH && (y === 0 || rowAvg[y - 1] <= THRESH);
+      if (!isTransitionIn) continue;
+      let runEnd = y;
+      while (runEnd < height && rowAvg[runEnd] > THRESH) runEnd++;
+      if (runEnd - y >= MIN_RUN_PX || runEnd === height) {
+        // Either a genuinely long run, or a run that is cut short only by
+        // reaching the bottom of the screenshot itself (the last-page
+        // shortfall case) — both are the real page, not a tail sliver.
+        top = y;
+        break;
+      }
     }
     if (top === -1) return null;
     const bandBottom = Math.min(top + 40, height - 1);
@@ -142,7 +207,7 @@ async function detectPageTopLeft(browser, pngBuffer) {
       if (sum / (bandBottom - top + 1) > THRESH) { left = x; break; }
     }
     if (left === -1) return null;
-    return { left, top };
+    return { left, top, sourceHeight: height };
   }, `data:image/png;base64,${b64}`);
   await ctxPage.close();
   if (!result) throw new Error('Could not detect page top-left corner');
@@ -165,6 +230,17 @@ async function cropPng(browser, pngBuffer, left, top, width, height) {
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext('2d');
+    // Fill white FIRST: if the source screenshot doesn't extend far enough
+    // to cover the full requested crop (the last-page shortfall — see
+    // detectPageTopLeft's LAST-PAGE DEFECT comment), canvas compositing
+    // would otherwise leave the uncovered region transparent, which PNG
+    // encodes as black, not paper-coloured. That would fabricate a black
+    // bar where the truth is "not captured" — filling white instead is
+    // still not a claim about what's really printed there, only the least
+    // misleading default, and every such shortfall is logged and reported
+    // by the caller, never silently absorbed.
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(0, 0, width, height);
     ctx.drawImage(img, left, top, width, height, 0, 0, width, height);
     return canvas.toDataURL('image/png').split(',')[1];
   }, { dataUrl: `data:image/png;base64,${b64}`, left, top, width, height });
