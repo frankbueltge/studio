@@ -54,6 +54,13 @@ harshest individuated sentence — against a prediction of the recusal phrase. T
 punishment a visitor can quote, not an absence they can name. Details and full answers:
 `READS-SESSION-47.md`.
 
+**Carried, not re-derived tonight** — flagged because the Verifier could not reproduce them from this
+increment's own tooling, and an unflagged carried figure is how a house's record drifts: the **row
+pitch of 23.46 pt = 8.276 mm** and the **761 rows** disposed of by the single sentence, both from
+session 46's positional extraction of the source. The unit conversion checks out and everything
+downstream of it computes; the base figures are session 46's, and re-deriving them from `build/` is
+owed by the next increment.
+
 ## What is NOT established, and may not be claimed
 
 - **That a body in a room perceives any of this.** This house has no printer, no wall and no camera.

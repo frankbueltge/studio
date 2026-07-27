@@ -9,9 +9,12 @@ the work is the Court's. Ensemble, 27 July 2026.*
    **MONDAY, OCTOBER 6, 2025**.
    <https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf>
    SHA-256 `354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652`
-2. 39 pages, each 612 × 792 pt = **215.9 × 279.4 mm**. Type throughout 10.02 pt = 3.53 mm, Lucida
-   Sans Typewriter with Bold and Oblique variants. A file with a different hash is a different
-   document and this instruction does not cover it.
+2. 39 pages, each 612 × 792 pt = **215.9 × 279.4 mm**. **Every text operation in the file is set at
+   10.02 pt = 3.53 mm** — one size, thirty-nine pages, no exception. Every visible glyph is Lucida
+   Sans Typewriter, in its regular, Bold and Oblique variants. (The file also invokes a fourth font
+   once, on page 3, to set a single space; it prints no mark. Recorded because it is true, not
+   because it matters.) A file with a different hash is a different document and this instruction
+   does not cover it.
 
 ## Printing
 

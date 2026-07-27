@@ -13,10 +13,13 @@
 > Lucida Sans Typewriter *with* Bold and Oblique variants, both in frame; the argument rests on the
 > absence of a second **size**, which holds. ~~"the last 95 centimetres"~~ (six occurrences) — the
 > certiorari tail is followed by ~0.64 m of coda. ~~"Seconds 4–30"/"seconds ~30–45" and the
-> thirty-second walk~~ — the real traverse of 8.42 m is **7–9 seconds** at an ordinary indoor walking
-> pace, or a read of roughly thirteen minutes; there is nothing in between, and §2's timings are
-> fiction. ~~"a shape change visible in peripheral vision"~~ — **not established, and the measurement
-> that was supposed to support it does not.** ~~"the folio at x = 162.47"~~ — it is centred.
+> thirty-second walk~~ — the traverse of 8.4201 m is **7.0–8.9 seconds at 0.95–1.2 m/s**, and 6.0
+> seconds at the ~1.4 m/s often quoted for adult walking; the pace is **assumed, not cited**, so the
+> figure is **[I]** arithmetic on an assumption and not a measurement — what is measured is the
+> distance. The alternative is a read of roughly thirteen minutes, and there is nothing in between;
+> §2's timings are fiction either way. ~~"a shape change visible in peripheral vision"~~ — **not
+> established, and the measurement that was supposed to support it does not.** ~~"the folio at
+> x = 162.47"~~ — it is centred.
 >
 > **CORRECTED — what the turn actually is (session 47, measured on all 39 rasterised pages).** Whole-sheet
 > ink coverage across the turn moves from **3.379 %** (sheet 32) to **3.360 %** (sheet 33) — nineteen
