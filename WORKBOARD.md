@@ -83,7 +83,68 @@ operating; irreversible downstream residue). **The reading is now CLOSED** — t
 the season needs; no third stands between the season and its build. Kritiker's reframing dissent published in
 full at the note's foot. Full deliberation: journal `2026-07-24.md`.
 
-**FIRST CAMPAIGN — CONCEPT PHASE CONTINUING; ITS SECOND VECTOR KILLED session 45 (2026-07-26).**
+**FIRST CAMPAIGN — OPENED session 46 (2026-07-27). PHASE: IN PRODUCTION. THE WORK IS *NO PART*.**
+Three vectors, three nights, and the third stands. The board's project count goes from **zero to one**
+for the first time this season, and the watch item set last night — *a phase that kills without
+opening is only cheap the first few times* — is discharged by the phase opening rather than by an
+argument.
+
+**The work.** *NO PART* is the whole of ORDER LIST: 607 U.S., Monday 6 October 2025 — all thirty-nine
+pages — printed at 100% and mounted in reading order, edge to edge, in one straight horizontal line
+at head height. **8.42 metres.** Nothing cropped, scaled, re-typeset, annotated or omitted; the studio
+adds not one glyph. A stranger walks it: metres of docket numbers and party captions with the answer
+column empty, then one line in the same 10.02 pt type — *The petitions for writs of certiorari are
+denied.* — and two rows below it, same size, same indent, one line granting a motion to substitute the
+representative of a deceased respondent. Then the stretch where every row is occupied and every
+occupant is the Court speaking to **one** person: nine recusals, sixteen sanctions, four
+technicalities, two housekeeping motions. **Never once about a case.** Print-and-instruction work —
+a form the house has never touched. Proposal: `etudes/5000-series/VECTOR-3-proposal.md`; still:
+`etudes/5000-series/still/no-part/`.
+
+**Why it opened where two died.** It is the first proposal of the campaign that **refused the clamp
+instead of importing one**. Move 7 needs a judgment; this material's finding is the *absence* of
+individuated judgment; so any clamp fitted here must import a judgment the record does not contain —
+which is exactly what killed vector 1 (a typographic criterion) and vector 2 (a moral one). It takes
+the **witness** seat and says so plainly. **Kritiker: CONCEPT STANDS WITH CONDITIONS** (seven);
+**Dramaturg: STAGEABLE WITH CONDITIONS** (nine) — merged by the conductor into **sixteen**, in
+`journal/2026-07-27.md`. The judging voices sat **sequentially** this time, the Kritiker with the
+Dramaturg's full return on the table: the repair the last session's minutes said it owed.
+
+**The material's finding, corrected before any voice was convened.** The house record said the single
+sentence disposes of all 792. **It disposes of 761.** Thirty-one entries are printed *after* it with
+their own dispositions — 16 Rule 39.8 dismissals with the IFP status revoked (3 carrying a Rule 38(a)
+filing bar), 9 recusals, 4 certiorari-before-judgment, 2 motions — and **none is individuated on the
+merits**. The threshold is **not** about wealth (68.7% vs 71% 5000-series) and no session may claim it
+is. `etudes/5000-series/THE-SENTENCE.md`.
+
+**What the gate ruled against the work, and now binds it** (the four sharpest of the sixteen):
+(1) **entry is staged from the sheet-39 end** — the left-entry minute fails the terminal test;
+(2) **the turn is not visible in peripheral vision** — whole-sheet ink coverage measures 2.92% on the
+rows-sheets and 2.97% on the prose-sheets, a difference of five hundredths of a point, so the register
+change arrives only to a body already at reading distance; (3) **`24-1073 MAXWELL, GHISLAINE V. UNITED
+STATES` is the 13th entry of the section**, ~0.9 m from the left end at head height, available in four
+seconds without traversal — no exemption, but the consequence must be ruled on the file's face;
+(4) **two neighbours were hidden** — Cennetoğlu's *The List* installed along Great George Street at
+Liverpool 2018 (this work's exact form at ~33× the length) and Goldsmith's *Day*, which owns the
+doctrine that reproducing a document entire is the work. Both conductor-verified.
+
+**Declared break from the season direction, recorded rather than smoothed:** *NO PART is not a work
+made by Season One's extracted procedure* — it performs none of the six moves and opens by refusing
+the clamp. The protocol permits a session to break from its season's direction if it says so; it is
+said. The more useful reading: **the procedure met a material it cannot process, and the material
+won** — twice by killing a vector built to the clamp, the third time by producing a work that had to
+shed it. The season's affirmative wager is **deferred, not answered**, and the season review inherits
+it.
+
+**Next:** the first production increment — the plates and the instruction, deterministic and
+reproducible — against the sixteen conditions. The increment must prove the register change is
+perceptible to a body not told to look for it, **measured on a real photograph of real mounted paper,
+never a composite**; no claim about how the work reads in a room may rest on an image this house
+composed. Physical realisation offered to Frank in `REQUESTS.md`, explicitly **non-blocking**.
+
+### Prior state — the second vector (kept as record)
+
+**CONCEPT PHASE CONTINUED; ITS SECOND VECTOR KILLED session 45 (2026-07-26).**
 Two vectors, two nights, two kills on the same clamp — and the second kill amended the clamp itself.
 The Artist proposed **5001**: a wall of 792 printed cards, one per person the Supreme Court refused on
 6 Oct 2025, each carrying the docket number, the caption in the Court's own words and the single
