@@ -83,7 +83,7 @@ sheet 32; consistent across all six sheets by inspection):
 | | Hypothesis | **Measured** |
 |---|---|---|
 | Paper | `#F4F2ED` | **`#FFFFFF`** (pure white; large blank regions average exactly 255,255,255) |
-| Ink (typical, darkest 0.1% of pixels) | `#161412` | **`#180F22`** — rgb(24,15,34) |
+| Ink (typical, darkest 0.1% of pixels) | `#161412` | **`#141414`** — rgb(20,20,20), R=G=B exactly (see correction below) |
 | Ink (single darkest pixel, any channel) | — | `#000000` |
 
 The paper is rendered pure white by Chromium's PDF engine, not the warm
@@ -93,14 +93,38 @@ colour, so "paper colour" isn't something the build chooses at all; this row
 is reported because the proposal asked for it as a fact, not because it
 changes anything drawn).
 
-The ink is genuinely **not neutral black** — it has a small but real
-blue-violet cast (B channel highest of the three, visible directly by
-zooming into any glyph). This is a property of the source document's own
-rendered text colour, not of this build's process, and it directly explains
-the colour-census finding below (Measurement 7): a document with slightly
-tinted "black" ink produces slightly tinted anti-aliasing at every glyph
-edge, which is measurably "saturated" by the HSL formula even though no
-human viewer would call any of it colour.
+> **SUPERSEDED — kept in the record, not deleted (legal-hygiene rule 6).**
+> A previous pass measured this build's ink at `#180F22` — rgb(24,15,34), B
+> channel highest — and reported it here as *"genuinely not neutral black
+> ... a property of the source document's own rendered text colour."* **That
+> reading was wrong**, and the paragraph it justified (below, struck) does
+> not describe a fact about the Court's document:
+>
+> ~~The ink is genuinely not neutral black — it has a small but real
+> blue-violet cast (B channel highest of the three, visible directly by
+> zooming into any glyph). This is a property of the source document's own
+> rendered text colour, not of this build's process, and it directly
+> explains the colour-census finding below (Measurement 7): a document with
+> slightly tinted "black" ink produces slightly tinted anti-aliasing at
+> every glyph edge, which is measurably "saturated" by the HSL formula even
+> though no human viewer would call any of it colour.~~
+>
+> **The correction, independently verified this pass:** every content
+> stream in `order-list.pdf` containing a `BT`/text-showing block was
+> searched — twice, independently, once scanning only after each `BT` and
+> once scanning the entire decompressed stream regardless of position — for
+> any colour-setting operator (`rg RG g G k K sc SC scn SCN`). **None
+> exists, anywhere, in any of the 39 text-bearing content streams.** Every
+> glyph is drawn at `Tr 0` (fill) under the PDF's untouched default colour,
+> which is pure black in DeviceGray. There is also no image XObject
+> anywhere in the file — this is genuine vector text, not a scan with an
+> invisible OCR layer, so there was no possibility the visible glyphs came
+> from compressed image pixel data either. `#180F22` was never the Court's
+> ink. It was **subpixel (LCD) text antialiasing this render pipeline
+> itself was adding** — this house's instrument colouring its own output,
+> not a property of the work, the document, or the proposal's deliberate
+> no-accent palette. See "Defect 5, corrected" below for the fix and its
+> full census consequence.
 
 The wall (`#8C8781`) and seam shadow (`#D9D5CE`) colours are used exactly as
 the proposal's hypothesis — there is no "real" wall or seam in the PDF to
@@ -133,6 +157,25 @@ curiam*) throughout the Rule 39.8 and recusal paragraphs, and the proposal's
 brief should be corrected before the gate rules on it. Both example
 occurrences (`24-7281 WATSON`, `24-7233 DANIELS`) are on sheet 33, inside
 this still's own frame.
+
+**2a. The type is monospaced — named from the PDF's own font descriptors
+(new this pass).** Visible directly on `sheet-32.png` (every character cell
+the same fixed width; compare the tight "i" and the wide "W" sitting on
+identical horizontal spacing). Read from the PDF's embedded font resources
+(decompressing the file's object streams and reading `/BaseFont` and
+`/FontDescriptor`/`/FontName`, the same independent pass that found no
+colour operator, above): the body and caption text is set in
+**`LucidaSans-Typewriter`** (subset tag `AHDOHP+`), with a matching
+**`LucidaSans-TypewriterBold`** (`AHDOFO+`) and **`LucidaSans-TypewriterOblique`**
+(`AHDPDP+`) — the latter is the "second face" identified as italic in
+Measurement 2 above; strictly it is an **oblique** (slanted Roman) rather
+than a true drawn italic, per its own `FontName`, though the visual effect
+on the page is the same terms-of-art emphasis described there. One further
+glyph resource, `AHDPCN+Calibri`, is present but declared for a single
+character only (`FirstChar`/`LastChar` both 32) — not a second body face,
+just one incidental non-Lucida glyph (most likely a substituted space or
+dash) — so it does not change the "monospaced Lucida Sans Typewriter
+family throughout" finding. Named from the file itself, not guessed.
 
 **3. Prose-inset check on sheets 30 & 31 (the two "rows-only" pages in frame).**
 A naive "is there any ink at column x=162.47pt (229px)" test is not useful
@@ -191,51 +234,62 @@ truthfully simulate by halving pixel count alone; what this measurement
 supports is only the narrower, honest claim that legibility measurably
 degrades from 4px/mm to 2px/mm, not that it disappears.
 
+**Re-confirmed after the antialiasing correction (this pass):** re-run on
+the corrected, desaturated render — same crop, same method. 4px/mm capital
+"T": ink bounding-box height **14px** (unchanged; the fix touched colour,
+not glyph shape or coverage). 2px/mm: ink bounding-box height **35px**,
+distinct-row count **13** (also unchanged). The "has softened but has not
+fully become texture" finding above is **re-confirmed exactly as stated,
+not softened further and not walked back** — colour was never what made it
+legible or illegible at either scale, so removing the colour cast changes
+nothing about this finding.
+
 **6. Frame coverage — paper vs wall.**
 Analytic (from the geometry the build actually used): paper band =
 1118px / 1840px = **60.76%** of frame height; wall = **39.24%** (90mm top +
 90.5mm bottom, see the page-height defect note below for why bottom isn't
-exactly 91mm). Pixel count over the full 4800×1840 canvas: paper-coloured
-pixels 5,176,919 (**58.62%**), wall-coloured 3,466,372 (**39.25%**), other
-(ink + anti-aliasing + seam shadow) 188,709 (**2.14%**). The wall fraction
+exactly 91mm). Pixel count over the full 4800×1840 canvas, re-measured on
+the corrected render: paper-coloured pixels 5,175,907 (**58.60%**),
+wall-coloured 3,468,689 (**39.27%**), other (ink + anti-aliasing + seam
+shadow) 187,404 (**2.12%**) — a shift of a few thousand pixels from the
+pre-correction count (5,176,919 / 3,466,372 / 188,709), fully explained by
+desaturation moving some near-threshold grey pixels across the paper/wall
+classifier's tolerance band; not a geometry change. The wall fraction
 matches the analytic prediction almost exactly; the paper fraction reads
 ~2 points lower than analytic because "paper-coloured" pixel counting
 excludes every dark ink pixel and every anti-aliased edge pixel within the
 paper band (by design, so it isn't double-counted against "other"), which a
 document with 29 text lines per page has a lot of. No fifth element
-intrudes anywhere in the frame — confirmed by the "other" category (2.14%)
+intrudes anywhere in the frame — confirmed by the "other" category (2.12%)
 being fully accounted for by ink + seam shadow + anti-aliasing, not by any
 unexplained residue.
 
 **7. Colour census over `no-part-01.png`.**
-Distinct colours: **188,982**. Pixels with HSL saturation > 0.15:
-**420,435** (4.76% of the frame; max saturation found: 1.000) — **not
-zero**, contradicting the proposal's stated expectation. Location: **not
-concentrated anywhere** — sampled locations spread across every sheet in the
-frame, always immediately adjacent to a glyph edge (e.g. the first content
-row of the page, y≈463–464, recurring across x=26…2907, i.e. on sheets 30
-through 33 alike). This is not a design element; it is anti-aliasing.
-Because the source document's own ink is not neutral (`#180F22`, a
-blue-violet-tinted near-black, see Palette above), every anti-aliased blend
-between that ink and white paper produces a pixel with a small, real colour
-cast — and the HSL saturation formula mathematically exaggerates casts at
-extreme lightness (a pixel like rgb(255,251,243), 8 parts off pure white,
-registers as **s=1.0**, "fully saturated", despite being visually
-indistinguishable from white). Restricting to pixels whose lightness is NOT
-near white or black (L between 0.15 and 0.85 — i.e. pixels that would
-actually read as coloured to an eye, not just to the formula) gives
-**238,498** pixels, still nonzero but a meaningfully different number worth
-reporting alongside the literal count the gate asked for. None of this is an
-accent colour; there is no colour anywhere in the frame that was chosen
-rather than measured off the document's own rendered ink. Compare: the
-previous session's still was reported to have ~305 saturated pixels — this
-count is far higher, but that comparison is not apples-to-apples: that still
-was a synthetic HTML/CSS composition where any saturated pixel would have
-been an authored colour; this still is a rasterisation of real anti-aliased
-19th-century-style monospace type meeting slightly-tinted ink, at a
-resolution (4px/mm) where individual glyph edges are only a few pixels
-wide, so anti-aliasing fringe is a much larger fraction of total ink pixels
-than it would be in a higher-resolution scan.
+
+> **SUPERSEDED — kept in the record, not deleted (legal-hygiene rule 6).**
+> ~~Distinct colours: 188,982. Pixels with HSL saturation > 0.15: 420,435
+> (4.76% of the frame; max saturation found: 1.000) — not zero, contradicting
+> the proposal's stated expectation... Because the source document's own ink
+> is not neutral (#180F22, a blue-violet-tinted near-black)... Restricting to
+> pixels whose lightness is NOT near white or black gives 238,498 pixels...~~
+> This entire finding rested on the wrong ink reading corrected under
+> Palette above. The 420,435 "saturated" pixels were never a property of the
+> document — they were LCD/subpixel antialiasing fringe this render pipeline
+> was adding at every glyph edge. The corrected measurement below is what
+> the gate should actually be checked against.
+
+**Corrected census (this pass), after fixing the antialiasing at source
+(see "Defect 5, corrected" below for exactly what was tried and what
+worked):** Distinct colours: **262**. Pixels with HSL saturation > 0.15:
+**0** (0.00% of the frame; max saturation found anywhere in the frame:
+**0.070**, i.e. every pixel sits comfortably under the gate's own
+threshold, not just barely). This **is** zero, confirming the proposal's
+stated expectation — once the measurement is actually of the document
+rather than of this house's own renderer. There is no remainder to locate:
+zero means zero, not "a small residue somewhere." None of this is an accent
+colour; there is no colour anywhere in the frame that was chosen rather than
+measured off the document's own rendered ink, and now none that was
+introduced by the rendering instrument either.
 
 ## Defect list
 
@@ -290,10 +344,53 @@ render) is **not answerable from this deliverable** and would require a
 still covering different sheets, or a direct rasterisation of pages 28–29
 outside this brief's frame. Stated plainly rather than silently skipped.
 
-**5. `no-part-01.png`'s ink is not neutral black.** See Palette and
-Measurement 7 above — reported as a fact about the source document, not
-fixed (there is nothing to fix; the ink colour is the Court's, not this
-studio's).
+**5. `no-part-01.png`'s ink is not neutral black — SUPERSEDED, corrected
+this pass.**
+
+> **Kept in the record, not deleted (legal-hygiene rule 6):** ~~this was
+> originally reported as a fact about the source document ("the ink colour
+> is the Court's, not this studio's"), not fixed.~~ That was wrong. See
+> Palette above for the full correction and its independent verification
+> (every `BT`/text content stream in the PDF searched for a colour operator;
+> none found; no image XObjects either, so it is real vector text, not a
+> scan). The colour was this render pipeline's own subpixel/LCD
+> antialiasing, not the Court's ink.
+
+**Defect 5, corrected:** fix attempted, in order, per the correction brief:
+1. Chromium launch flag `--disable-lcd-text` — **no measurable effect**
+   (ink still measured `#180F22` after cropping to the actual page region).
+2. Additionally `--disable-font-subpixel-positioning
+   --force-color-profile=srgb` — **no measurable effect.**
+3. `--disable-features=PdfUseSkiaRenderer` (forces PDFium off its Skia
+   glyph path) — **no measurable effect.**
+4. A display-level greyscale-AA setting: a system-wide fontconfig override
+   (`rgba: none`, `lcdfilter: lcdnone`, `hintstyle: hintslight`, `fc-cache
+   -f` applied) — **no measurable effect.** None of the above reaches
+   whatever internal glyph-coverage/compositing path this bundled headful
+   Chromium build's PDF viewer actually uses; it does not appear to consult
+   host fontconfig or respond to any Blink-level LCD-text switch for its own
+   PDF canvas. The fontconfig override was reverted after testing, leaving
+   the environment unchanged for reproduction.
+5. **Last resort, used, and explicitly declared as such:** every sheet
+   raster (`sheet-30.png` … `sheet-35.png` — pure PDF content, no
+   studio-authored colour anywhere in them) is desaturated to true neutral
+   grey immediately after Chromium produces it — every pixel's R, G, B
+   channels set to that pixel's own perceptual luminance
+   (`0.299R+0.587G+0.114B`, the same weights used everywhere else in this
+   build for ink/lightness thresholds) — **before** it is written to disk or
+   used anywhere downstream (compositing, sampling, measurement). This is a
+   **change made to the image, not a change in how the source was drawn**,
+   and is recorded here as exactly that: a post-process correction of this
+   house's own rendering defect, not a discovery about the document. It is
+   applied only to the sheet rasters; the wall (`#8C8781`) and seam-shadow
+   (`#D9D5CE`) fills added later at composite time are untouched, so the
+   palette is unchanged from the hypothesis exactly as before.
+
+Result: ink now measures `#141414` (rgb 20,20,20, R=G=B exactly — see
+Palette above), paper unchanged at pure white, and the colour census
+(Measurement 7) drops from 420,435 saturated pixels to **0**. Legibility
+(Measurement 5) is unchanged — 14px and 35px/13-rows, exactly as before,
+confirming the fix touched colour only, not shape or coverage.
 
 **6. This build requires a real (non-headless) Chromium under Xvfb.**
 `headless: true` and `chromium_headless_shell` cannot render a PDF at all in

@@ -121,17 +121,53 @@ async function runInCanvas(browser, pngBuffer, fn, args) {
 async function main() {
   verifyPdf();
 
-  const browser = await chromium.launch({ headless: false });
+  // ---- Corrective note (was defect 5) ----
+  // A prior pass measured this build's rendered ink at #180F22 and reported
+  // it as a fact about the source document's own ink colour. That reading
+  // was WRONG: every content stream in order-list.pdf containing a BT/text
+  // block was searched (independently, twice) for a colour-setting operator
+  // (rg/RG/g/G/k/K/sc/SC/scn/SCN) and NONE was found, anywhere, inside or
+  // outside the text objects — the document draws its glyphs with the PDF
+  // default fill (DeviceGray black, Tr 0). So #180F22 was never the Court's
+  // ink; it was subpixel/LCD glyph antialiasing this render pipeline itself
+  // introduces. Fix attempted, in order, all confirmed on this Chromium
+  // build's bundled PDFium/Skia PDF viewer:
+  //   1. --disable-lcd-text                                   -> no change
+  //   2. + --disable-font-subpixel-positioning
+  //        --force-color-profile=srgb                          -> no change
+  //   3. --disable-features=PdfUseSkiaRenderer (forces PDFium's
+  //      non-Skia/AGG glyph path)                               -> no change
+  //   4. display-level greyscale-AA fontconfig override
+  //      (rgba=none, lcdfilter=lcdnone, system-wide)            -> no change
+  // None of these reach whatever internal glyph-coverage/compositing path
+  // this bundled viewer uses for its own PDF canvas (it is not the same
+  // code path system fontconfig or these Blink-level switches govern). So,
+  // as the last resort the correction brief explicitly allows: every sheet
+  // raster is desaturated to true neutral grey (R=G=B=perceptual luminance)
+  // immediately after Chromium produces it, before it is written to disk or
+  // used anywhere downstream. This is a post-process change to the image,
+  // not a change in how the source was drawn — declared here and in
+  // README.md exactly because of that distinction. It is applied ONLY to
+  // the sheet rasters (pure PDF content); the wall/seam colours added later
+  // at compositing are untouched.
+  const AA_FLAGS = [
+    '--disable-lcd-text',
+    '--disable-font-subpixel-positioning',
+    '--force-color-profile=srgb',
+    '--disable-features=PdfUseSkiaRenderer',
+  ];
+  const browser = await chromium.launch({ headless: false, args: AA_FLAGS });
 
-  // ---- 1. Rasterise the six needed sheets ----
-  section('Rasterising sheets 30-35 at 4 px/mm');
+  // ---- 1. Rasterise the six needed sheets, then force neutral grey ----
+  section('Rasterising sheets 30-35 at 4 px/mm (+ AA-flag attempt, + post-process desaturation — see corrective note above)');
   const sheetPngs = {};
   for (const pg of SHEETS) {
     const { buffer, widthPx, heightPx } = await renderPage(browser, pg, PX_PER_MM);
+    const grayBuffer = await desaturateToGrayscale(browser, buffer);
     const fname = path.join(OUT_DIR, `sheet-${pg}.png`);
-    fs.writeFileSync(fname, buffer);
-    sheetPngs[pg] = buffer;
-    log(`sheet ${pg}: ${widthPx}x${heightPx}px -> ${fname}`);
+    fs.writeFileSync(fname, grayBuffer);
+    sheetPngs[pg] = grayBuffer;
+    log(`sheet ${pg}: ${widthPx}x${heightPx}px -> ${fname} (desaturated to neutral grey post-process)`);
   }
 
   // ---- 2. Sample paper & ink colour off the real rasterisation ----
@@ -268,6 +304,27 @@ async function main() {
 
   section('Done');
   log('See README.md for the (A)/(B) verdict, full measurement transcript, and defect list.');
+}
+
+// Post-process desaturation (last resort — see corrective note in main()).
+// Forces every pixel's R, G, B channels to the SAME value (its own
+// perceptual luminance, same 0.299/0.587/0.114 weights used everywhere else
+// in this file), which drives HSL saturation to exactly 0 for every pixel
+// in the buffer. Applied only to sheet rasters — pure PDF content, no
+// studio-authored colour anywhere in them — never to the wall/seam fill
+// added later at composite time.
+async function desaturateToGrayscale(browser, pngBuffer) {
+  return runInCanvas(browser, pngBuffer, (ctx, canvas) => {
+    const { width, height } = canvas;
+    const imgData = ctx.getImageData(0, 0, width, height);
+    const data = imgData.data;
+    for (let i = 0; i < data.length; i += 4) {
+      const lum = Math.round(0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2]);
+      data[i] = lum; data[i + 1] = lum; data[i + 2] = lum;
+    }
+    ctx.putImageData(imgData, 0, 0);
+    return canvas.toDataURL('image/png').split(',')[1];
+  }).then((b64) => Buffer.from(b64, 'base64'));
 }
 
 // ---- Composite + downsample + measurement implementations ----
