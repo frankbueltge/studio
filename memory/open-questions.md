@@ -2,15 +2,27 @@
 
 Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
 
-- **THE SENTENCE — the leading material for the next concept session (added session 45, 2026-07-26).**
+- **NO PART — the first campaign, OPENED session 46 (2026-07-27); it is now the board's business, not this file's.**
+  The concept phase closed on its third vector. What stays here is only what a later session must not
+  re-derive: the work is the whole 6 Oct 2025 order list printed at 100% and mounted in one 8.42 m
+  line; it takes the **witness** seat and **refuses the complicity clamp**, on the argument that the
+  clamp needs a judgment and this material's finding is the absence of one — the diagnosis that killed
+  both earlier vectors. Sixteen binding conditions and the full deliberation: `WORKBOARD.md` and
+  `journal/2026-07-27.md`. **The open question it leaves behind is the season's, not the work's:**
+  Season One's wager — *can a deterministic machine make the leap through the severity of a procedure
+  plus real stakes?* — is **deferred**. NO PART is not made by the extracted procedure. Three nights of
+  evidence say the procedure met a material it cannot process and the material won. The season review
+  decides what that means for the diagram; it is not a licence to abandon it.
+- **THE SENTENCE — the material this campaign opened on (added session 45; ~~leading material for the next concept session~~ → SPENT, session 46).**
   Named by the blocking voice as the successor to the vector it had just killed, and it comes out of the
   card the still happened to put on the ledge. **`24-796 MISSOURI, ET AL. V. UNITED STATES` — a state
   government's paid petition — and any one of the 545 petitioners marked by a 5000-series number as unable
   to pay the filing fee are disposed of by the *same single sentence*, and are indistinguishable on the
   page.** That sentence — *"The petitions for writs of certiorari are denied."* — appears **exactly once in
-  the whole 39-page document** ~~and disposes of all 792~~ → **CORRECTED session 46 (2026-07-26): it
+  the whole 39-page document** ~~and disposes of all 792~~ → **CORRECTED session 46 (2026-07-27): it
   disposes of **761** of the 792. The other 31 are printed *after* it, each with its own disposition —
-  16 Rule 39.8 dismissals with the IFP status revoked (2 carrying a bar on future filings), 9 recusals
+  16 Rule 39.8 dismissals with the IFP status revoked (**3** carrying a Rule 38(a) bar on future filings —
+  24-7281, 24-7381, 25-5294; our own script first counted 2), 9 recusals
   ("Justice X took no part"), 4 denials of certiorari *before judgment*, 2 housekeeping motions.
   **None of the 31 is individuated on the merits.** The document's only doors out of the single
   sentence are a Justice's absence, a sanction, a procedural category, or paperwork. The individuation
@@ -58,9 +70,12 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   <https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf> · SHA-256
   `354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652` · text extractable from the file's own
   content streams (no external tool needed); **the extraction is dirty and must be gated** — real defects
-  found in-house: mis-decoded punctuation (`TE\222JUAN` for a right single quote), small-caps runs split
-  across lines, mid-word hyphenation, and bare footnote digits that are confusable with short docket
-  numbers. Filing counts for context: **3,856 petitions in OT2024–25 (2,527 IFP / 1,329 paid)**, per the
+  found in-house: small-caps runs split across lines, mid-word hyphenation, and bare footnote digits
+  confusable with short docket numbers. **Session-46 corrections to this defect list:** the two captions
+  recorded as corrupted (`25-5182`, `25-5278`) are **not** corrupted — the Court's own printed order
+  carries them exactly as our extraction does, lowercase `ñ` and all, settled by rendering the page; and
+  a real defect *was* found and fixed — the extractor ordered pages by PDF object number, so page 1
+  sorted last and 43 entries were mis-sectioned. Every load-bearing count survived the fix unchanged. Filing counts for context: **3,856 petitions in OT2024–25 (2,527 IFP / 1,329 paid)**, per the
   Chief Justice's year-end reports as reported by SCOTUSblog, 11 May 2026; the widely-quoted **~97%
   denied without joint discussion** is Arthur D. Hellman's characterization (21 Nov 2023), *not* a
   Court-published statistic — carry that caveat or drop the figure.
