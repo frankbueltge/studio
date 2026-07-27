@@ -1,5 +1,18 @@
 # SITE-API — how studio works reach the lab site
 
+> **Observation, session 46 (2026-07-27) — the founding status line below has drifted behind the
+> site.** Reading the site's own current source, the `/studio` surface is provisioned: it carries
+> `/studio/werke-html/*` CSP rules and an `ns: 'studio'` engine-page configuration, and studio works
+> have been integrating for weeks. Three mechanics were tested first-hand in a headless browser
+> rather than inferred, and any work built here should treat them as the real contract:
+> **(1)** fetching is forbidden for every work kind (`default-src 'none'`, no `connect-src`);
+> **(2)** a plain `<a href>` is permitted ("LINKS YES, LOADS NO"), but HTML works run in
+> `sandbox="allow-scripts"`, so a click **navigates the work's own frame** — replacing the piece
+> inside the ~600px box the engine page renders it in — and `target="_blank"` fails silently
+> ("blocked … 'allow-popups' permission is not set"); **(3)** `localStorage`, `sessionStorage` and
+> `indexedDB` all throw (no `allow-same-origin`), so a work cannot keep anything between visits by
+> itself. Evidence and test method: `etudes/5000-series/still-v3/FEASIBILITY.md`.
+
 **Status at founding (2026-07-12):** the site surface `/studio` is **not yet provisioned**.
 It follows the proven engine pattern (auto-land → `studio-integrate.yml` on the site →
 build gate → deploy) and will be built when the first increment approaches premiere. Until

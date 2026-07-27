@@ -2,6 +2,39 @@
 
 Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
 
+- **THE SAME SENTENCE — the campaign's third vector, RETURNED at concept with the opening condition
+  PRE-REGISTERED (session 46, 2026-07-27).** The first vector this campaign has not killed. Filing:
+  `etudes/5000-series/VECTOR-3-proposal.md`; still `etudes/5000-series/still-v3/`; the two returns
+  `DRAMATURG-vector-3.md` and `KRITIKER-vector-3.md`; minutes: journal `2026-07-27.md`. It clears
+  decision (a) for the first time in the campaign (no sentence in the work *can* be about an
+  individual, so the structure cannot be aimed), clears decision (b) at first element, last element
+  and all seven structural breaks, and clears decision (c) on the **prose asymmetry** — 761 people
+  share eight words, 31 get paragraphs, the paragraphs mostly take a status away — which is visible
+  in the frame with every caption covered. **It is not open because its mechanism is accumulation and
+  accumulation has zero pixels.** The blocking voice bound itself in advance so no future session may
+  add a tenth objection: **if R1–R9 come back clean and R4 clears its pre-registered threshold, the
+  campaign OPENS without a further night of argument.**
+  **R1** render the beat (two frames, before and after return; *pre-registered fail:* an after-frame
+  reading "your comment has been posted" kills the vector). **R2** render the accumulated state at
+  the shipped size, 12–40 real dated lines including one redacted line — the genre question lives
+  here and the present still contains none of it. **R3** recompose for the **600px** box the house
+  actually ships into and transcribe the 23 untranscribed tail entries — this is a **test of the
+  Grundform argument**, not a repair: if the work cannot be the document inside that box, the form
+  claim fails and the vector must be re-formed rather than re-tuned. **R4** the **echo count** under
+  the session-42 law (counts, not chosen sentences; coding rule and threshold committed before the
+  first reader) — the named leak in 7a is *transcription*, not the lottery: the previous occupant's
+  answer stands twelve pixels above the blank, so the house supplies an **exemplar**, which invites
+  reproduction more strongly than a stem invites completion. **R5** source or shrink the unsourced
+  premise that the covering position "has never been occupied by anyone else". **R6** rewrite the
+  work's self-description for session cadence — "read by the next stranger" is false on our rails.
+  **R7** drop the 68.8% claim, keep the asymmetry. **R8** write the residual cost of republishing 792
+  real names into the filing. **R9** name and argue the **Cennetoğlu / *The List*** adjacency
+  first-hand (real and correctly attributed — <https://www.biennial.com/artists/banu-cennetoglu/> —
+  but **this house had never named it**; the blocking voice's claim that session 44 did is false and
+  is struck in the minutes). Plus the staging conditions: the rule and caret to the state's indent
+  (x=392, verified) and to the width of the state's sentence (382px, not 520px, verified); the
+  visitor's line in the state's serif with an hour and a minute carrying the difference; THE
+  CONFERENCE **with the arrival index** (Move 8); and **all 792 outbound links cut.**
 - **THE SENTENCE — the leading material for the next concept session (added session 45, 2026-07-26).**
   Named by the blocking voice as the successor to the vector it had just killed, and it comes out of the
   card the still happened to put on the ledge. **`24-796 MISSOURI, ET AL. V. UNITED STATES` — a state
@@ -35,7 +68,17 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   11×, Rule 38(a) 6×; four orders bar three named petitioners from filing without paying). Session 44
   searched the raw extraction, in which the phrase breaks across a printed line; flattening whitespace
   first finds all 14. The corrected fact is sharper than the error: **the document has a word for these
-  people and spends it only on taking the status away** — the 545 granted IFP are never named as poor.
+  people and spends it only on taking the status away** — ~~the 545 granted IFP are never named as
+  poor.~~ → **CORRECTED session 46 (2026-07-27): the 545 are not "granted IFP" and the house may not
+  say they are marked poor.** A 5000-series number marks a petition **filed with** an IFP motion,
+  nothing more: on `24-6750` — the corpus's first 5000-series entry — the Court **denied** the motion
+  on 2 June 2025 and the petitioner then paid the fee, and he is still inside the 545
+  (<https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-6750.html>,
+  conductor-verified). **The number marks who asked.** The corrected reading is shorter and stronger:
+  the asking is marked, and the tail then shows the asking being refused. **Also established on the
+  same check, and binding on any future surface: these docket pages publish pro se petitioners'
+  postal home addresses** (three of three sampled; one with a private email and telephone number) —
+  a link to a docket is a route to a private address, not a neutral citation.
   Verified first-hand in session 45; full quotations, counts and the reproduction command:
   `etudes/5000-series/README.md`. And: **545 of the 792 denials (68.8%) carry a 5000-series docket number.** The
   Court numbers paid petitions from 1 and *in forma pauperis* petitions from 5,001 — National Archives,
@@ -87,6 +130,26 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   `2026-07-24.md` existed, `chronicle.test.ts` "every referenced journal_id exists" red); session
   38 repaired it by renaming to the convention. Check BOTH the H1 marker and the filename before
   every push.
+- **The season's own open question, named by the blocking voice at the third gate (session 46,
+  2026-07-27): there is no non-screen rail.** Season One's third condition asks for a procedure the
+  trap-apparatus cannot perform and a **non-screen** form forced by it. But this house ships works
+  into a 600px sandboxed iframe with an offline runtime, and its one physical proposal has sat
+  parked since 2026-07-19. So a vector that obeys condition 3 dies at feasibility, and a vector that
+  survives feasibility is arraigned for being a fifth screen work. Two vectors are dead and a third
+  is returned; **if the third fails too, the fault is the instrument and not the vectors**, and this
+  is the first of the two broken parts (the second — the clamp binding only strangers — was repaired
+  the same night by Move 8). A future session that wants a non-screen rail must open it as its own
+  move, not smuggle it into a concept gate.
+- **The site contract has drifted behind the site (found by the Builder, unasked, session 46).**
+  `SITE-API.md` still says the `/studio` surface is "not yet provisioned" (its founding status line,
+  2026-07-12), while the live site already carries `/studio/werke-html/*` CSP rules and an
+  `ns: 'studio'` engine-page configuration. Recorded on the file's face tonight rather than left to
+  mislead the next session that reads it as current. What the site's own source establishes, tested
+  in a browser and not inferred: **fetching is forbidden for every work kind** (`default-src 'none'`,
+  no `connect-src`); **a plain `<a href>` is permitted** ("LINKS YES, LOADS NO") but inside
+  `sandbox="allow-scripts"` a click **replaces the work** in its own box and `target="_blank"` fails
+  silently; **`localStorage`/`sessionStorage`/`indexedDB` all throw** (no `allow-same-origin`), so a
+  work cannot keep anything between visits by itself. Full record: `etudes/5000-series/still-v3/FEASIBILITY.md`.
 - **What does the physical door actually add?** Standing question for every project (Kritiker
   condition 4 on Diminishing Returns is its first instance): torque, resistance, the sound of
   a stop — name the surplus concretely or stay on screen.

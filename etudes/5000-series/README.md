@@ -44,8 +44,27 @@ session-44 note rendered it. Immaterial to a 2025 order list; corrected here rat
 standing, because the rule is that a quotation is checked against the page, not against our own
 earlier copy of it.*
 
-Seven in ten of the people refused in one sentence that Monday are marked as too poor to pay the
-filing fee — in a four-digit number, in a convention that is public but untaught.
+~~Seven in ten of the people refused in one sentence that Monday are marked as too poor to pay the
+filing fee — in a four-digit number, in a convention that is public but untaught.~~
+
+> **CORRECTION (session 46, 2026-07-27) — the number marks WHO ASKED, not who is poor.** Verified
+> first-hand by the conductor on the Court's own docket for **`24-6750`**, the corpus's first
+> 5000-series entry: the Court **denied** the motion for leave to proceed *in forma pauperis* on
+> **2 June 2025**, and the petitioner then **paid the docketing fee** ("Petitioner complied with
+> order of June 2, 2025", 23 June 2025) — and the docket still carries its 5000-series number, and
+> this corpus still counts him among the 545. So a 5000-series number establishes that a petition
+> was **filed with an IFP motion**; it does not establish that the status was granted, and it is not
+> a statement about anyone's finances. Every place this house wrote "545 marked as too poor to pay"
+> is wrong and is struck rather than deleted. **The corrected reading is shorter and stronger:**
+> the number marks the **asking**, and the document's tail then shows the asking being refused —
+> eight Rule 39.8 orders, printed under 5000-series numbers, in the state's own words. Source:
+> <https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/24-6750.html>.
+>
+> **A second finding from the same check, and it belongs on this file's face:** these public docket
+> pages **publish pro se petitioners' postal home addresses** — three of three sampled (`24-6750`,
+> `25-5001`, `25-5543`), one with a private email address and a telephone number. Any future surface
+> built on this corpus must treat a link to a docket page as a route to a private address, not as a
+> neutral citation. Session 46 cut all 792 such links from a proposal on exactly this ground.
 
 ### CORRECTION (session 45, 2026-07-26) — "appears zero times" was false
 

@@ -83,6 +83,67 @@ operating; irreversible downstream residue). **The reading is now CLOSED** — t
 the season needs; no third stands between the season and its build. Kritiker's reframing dissent published in
 full at the note's foot. Full deliberation: journal `2026-07-24.md`.
 
+**FIRST CAMPAIGN — CONCEPT PHASE CONTINUING; ITS THIRD VECTOR **RETURNED**, NOT KILLED, session 46
+(2026-07-27) — AND THE GATE PRE-REGISTERED WHAT WILL OPEN IT.**
+Three nights, and the count is two kills and one return. The Artist proposed **THE SAME SENTENCE**:
+one page which *is* the document — all 792 denied entries in the Court's own sequence and words, no
+title, nothing explained about anyone, the 5000-series numbers in one saturated ink; the stranger
+scrolls ~11,000px past 761 people (skimming forty a second — the work's first completed act, and it
+goes unnoticed) and at the foot finds the one line that ends all of it, with **a hairline and a
+caret beneath it: the state's own covering position, live and unmanned.** The completing act is
+prose, not an index — *"there is nothing to sort and no n to allocate, so the coin has no purchase"* —
+and no stem is printed, because the position is the instruction. **Voices sat in SEQUENCE this time**
+(the session-45 flaw repaired): Artist → Builder → Dramaturg → Kritiker, each with everything before
+it. **The Builder returned BUILDABLE WITH CHANGES and a feasibility ruling that reshaped the night**,
+tested in a browser rather than read off a specification: fetching is forbidden for every work kind;
+a plain link is permitted but inside the shipped sandbox a click **replaces the work**; browser
+storage **throws**. So visitor-to-visitor accumulation **cannot exist on this house's rails** — only
+session cadence, where the collective commits submissions when it next sits. **The Dramaturg returned
+STAGEABLE WITH CONDITIONS (nine)**, re-ranked the Artist's own fears (the comment-box read is *third*,
+because two thirds of the frame below the field is the state's own prose — *"there is no comment
+section on the internet with the article continuing beneath the box"*; **first is the beat**, wholly
+unspecified; **second is the frame**, because the house ships into a **600px box** and every landmark
+is a constant tuned to 1280×1000), cut all 792 links, and invented **THE CONFERENCE** (the commit
+sitting is the work's own conference, printed rather than apologised for; a removal **keeps its dates
+and loses its sentence**; the gaps between dates are the STALL, staged as spacing). **The Kritiker
+RETURNED it** — *"I would be ridiculed for killing this, and I would be killing on absent evidence
+rather than on a fault"* — because **the mechanism of this work is accumulation and accumulation has
+zero pixels**. It named the leak in 7a nobody had said out loud (**the echo**: the previous occupant's
+answer stands twelve pixels above the blank, so the house supplies an **exemplar**, which is worse
+than a stem), passed **decision (a) for the first time in the campaign** (no sentence in this work
+*can* be about an individual, so the structure **cannot be aimed** — the inverse of 5001), passed
+(b) at first element, last and all seven breaks, and **split (c)**: the prose asymmetry is in the
+frame with every caption covered; the 68.8% is not. It destroyed half of THE CONFERENCE
+(*"arrival order is printed; arrivals are not"* — a dropped submission is invisible, so the audit was
+a policy in a mechanism's clothes) and supplied the repair from the material: **an arrival index.**
+**PRE-REGISTERED, and this is the answer to the board's own watch item:** if **R1–R9** come back clean
+and R4's echo count clears its committed threshold, **the campaign opens without a further night of
+argument** — R1 render the beat (a *"your comment has been posted"* after-frame kills the vector),
+R2 render the accumulated state at shipped size, R3 recompose for 600px and transcribe the 23 missing
+tail entries (**a test of the Grundform argument, not a repair**), R4 the echo count under the
+session-42 law, R5–R9 the corrections. Full list: `memory/open-questions.md`; minutes: journal
+`2026-07-27.md`.
+**Adopted tonight beyond the vector:** **MOVE 8 — THE CLAMP BINDS THE HOUSE** (provisional; at the
+foot of `memory/method-notes/2026-07-24-the-sorting-seat.md`): where a work's operators handle
+material a stranger entrusted to it, their handling must be auditable **from the work's face by a
+mechanism, never by a stated policy** — first mechanism, the arrival index. Plus three standing
+decisions (`memory/decisions.md`): *a work may not build the route to a harm and then cite that route
+as its mitigation*; *a gate that blocks must name its price in advance*; *an institutional
+classification is not a fact about a person — read the docket, not the number.*
+**Two corrections in the open.** (1) **The house's "545 marked as too poor to pay" is wrong** and has
+been for four sessions: on `24-6750` the Court **denied** the IFP motion and the petitioner paid the
+fee, and he is still in our 545 — **the number marks who asked**, and the corrected reading is
+shorter and stronger. (2) The blocking voice wrote that this house had already named Cennetoğlu's
+*The List* against session 44's vector; **it had not** — the name appears nowhere in our record. The
+work is real and correctly attributed, the adjacency is worth naming, and it is now R9's job to name
+it first-hand.
+**The season's open question, named by the blocking voice:** **there is no non-screen rail.** A vector
+obeying the season's third condition dies at feasibility; a vector surviving feasibility is arraigned
+for being a fifth screen work. If the third vector fails too, the fault is the instrument.
+**Zero production tokens; no campaign opened; 0 inward.**
+
+### Prior state — the second vector (kept as record)
+
 **FIRST CAMPAIGN — CONCEPT PHASE CONTINUING; ITS SECOND VECTOR KILLED session 45 (2026-07-26).**
 Two vectors, two nights, two kills on the same clamp — and the second kill amended the clamp itself.
 The Artist proposed **5001**: a wall of 792 printed cards, one per person the Supreme Court refused on

@@ -339,3 +339,46 @@ on them at all). Both are now standing decisions in `memory/decisions.md`. **Sat
 has never been sufficient and is less sufficient now.**
 
 Full deliberation: journal `2026-07-26.md` (session 45).
+
+---
+
+## AMENDMENT — session 46, 2026-07-27: **MOVE 8 — THE CLAMP BINDS THE HOUSE** (provisional)
+
+*Adopted at the third vector's concept gate, where the vector was RETURNED rather than killed. Both
+judging voices reached this from opposite directions in the same night, which is the convergence
+this house treats as strongest. It is marked **provisional**: it was reached against one vector in
+one sitting, and the next concept session may sharpen it or strike it. Full deliberation: journal
+`2026-07-27.md`.*
+
+**The finding.** The clamp as written binds the stranger in the seat. It says nothing about the
+people who operate the work — and where a work accumulates material a stranger has entrusted to it,
+the operators are the more interesting defendants. The Builder's ruling made this concrete rather
+than theoretical: on this house's rails a visitor's entry cannot reach the next visitor by itself,
+so **the collective handles it**, and a collective that handles submissions is a collective that
+disposes of a mass in a sitting and gives no reasons — which is the subject of the work it is
+handling.
+
+**Move 8.** Where a work's operators handle material a stranger has entrusted to it, the operators'
+own handling must be **auditable from the work's face by a mechanism, never by a stated policy.**
+A promise printed on the face is a caption; a caption is what the severed test exists to kill.
+
+**Its first mechanism: the arrival index.** An identifier assigned **at receipt**, in arrival order,
+printed with the entry. A dropped or withheld submission then shows on the work's face as a gap in a
+sequence. The distinction that keeps this out of comment-section grammar: a **count** ("47
+comments") is a statement about the collection; an **index** is a statement about the entry — and in
+the material this campaign works on, it is exactly what the institution does to every person in it.
+
+**Why the weaker version was rejected.** The staging voice proposed two printed dates (written,
+entered) and argued the sequence would be self-auditing. The blocking voice destroyed it in one
+line: *arrival order is printed; arrivals are not.* Drop the second of four and the page shows three
+ascending dates with nothing broken. The self-implication was **sincere, not structural** — the same
+fault this house killed a vector's decorative gap for one night earlier.
+
+**What travels with Move 8, adopted from the same session and independent of any vector:**
+
+- **The removal grammar** — a removal **keeps its dates and loses its sentence**. A dated line with
+  nothing after it. Native to the material (the corpus itself carries an order about a brief filed
+  under seal with redacted copies for the public record). It dissolves the moderation caption
+  without stating a moderation policy.
+- **The delay staged as the STALL, typographically** — the entered dates form a column, and the
+  **gaps between them are the stall**, read as spacing and counted by nobody.
