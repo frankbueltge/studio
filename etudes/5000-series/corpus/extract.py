@@ -82,7 +82,29 @@ for num, s in streams:
     if lines:
         pages_text.append((num, lines))
 
-pages_text.sort(key=lambda x: x[0])
+# Session 46 bug fix — page ORDER. This originally sorted by PDF object number, which is not
+# page order: in this file page 1 is object 5283 and sorted LAST, so the masthead and the whole
+# ORDERS IN PENDING CASES section landed at the end of the extraction and were mis-sectioned by
+# the parser. The certiorari section happened to be unaffected (objects 9..79 do run in page
+# order), which is why every count derived from it survived. Sort by the printed folio instead,
+# and fall back to object order only if the folios are not a clean permutation — with a warning
+# on stderr rather than a silent guess.
+def folio_of(lines):
+    for l in reversed(lines):
+        s = l.strip()
+        if re.fullmatch(r'\d{1,3}', s):
+            return int(s)
+    return None
+
+
+folios = [folio_of(l) for _, l in pages_text]
+if None not in folios and sorted(folios) == list(range(1, len(folios) + 1)):
+    pages_text = [p for _, p in sorted(zip(folios, pages_text), key=lambda t: t[0])]
+else:
+    print('WARNING: folios are not a clean 1..n permutation; falling back to object order',
+          file=sys.stderr)
+    pages_text.sort(key=lambda x: x[0])
+
 for num, lines in pages_text:
     print(f'%%% obj {num}')
     for l in lines:

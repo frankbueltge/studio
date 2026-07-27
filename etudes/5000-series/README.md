@@ -23,13 +23,23 @@ used, and the load-bearing numbers reproduced exactly:
 
 | Section | Entries |
 |---|---|
-| OPENING (miscellaneous motions, `25M…`, plus orders in pending cases) | 33 |
-| ORDERS IN PENDING CASES (after the printed section header) | 10 |
+| ORDERS IN PENDING CASES (miscellaneous motions, `25M…`, and orders in pending cases) | 43 |
 | **CERTIORARI DENIED** | **792** |
 | HABEAS CORPUS DENIED | 26 |
 | MANDAMUS DENIED | 11 |
 | REHEARINGS DENIED | 10 |
 | **Total docket entries** | **882** |
+
+*Session-46 repair. This table previously split the first section into "OPENING 33" + "ORDERS IN
+PENDING CASES 10". That split was an artefact of a real bug, found tonight: **`extract.py` sorted
+pages by PDF object number, not by page order** — and in this file page 1 is object 5283, so it
+sorted **last**. The masthead and the printed `ORDERS IN PENDING CASES` header therefore arrived at
+the *end* of the extraction, and 33 entries that belong under that header were parsed before it had
+been seen. The certiorari section was unaffected (its objects do run in page order), which is why
+every count derived from it survived unchanged — 882 / 792 / 545 / 761 / 31 / 3 all reproduce
+exactly after the fix. `extract.py` now orders pages by their printed folio and warns on stderr if
+the folios are not a clean permutation. The corpus is now in true document order: its first entry is
+`25M1 DOE, JOHN V. ILLINOIS` and its last is in REHEARINGS DENIED.*
 
 **Of the 792 certiorari denials, 545 (68.8%) carry a 5000-series docket number.**
 
@@ -43,6 +53,11 @@ numbering rule is headed **"1971 to Present"**, not "From 1970 to the present" a
 session-44 note rendered it. Immaterial to a 2025 order list; corrected here rather than left
 standing, because the rule is that a quotation is checked against the page, not against our own
 earlier copy of it.*
+
+*Session-46 correction, before it is repeated again: **761** of those 792 are disposed of by the
+single sentence, not all 792. Thirty-one are printed after it with individual dispositions — and
+none of the thirty-one is individuated on the merits. Counts, categories and the limits of what they
+show: `THE-SENTENCE.md`.*
 
 Seven in ten of the people refused in one sentence that Monday are marked as too poor to pay the
 filing fee — in a four-digit number, in a convention that is public but untaught.
@@ -86,8 +101,17 @@ below, no subject matter, no date, no disposition beyond the section it sits in.
 `corpus/entries.json` — 882 objects, one per docket entry, in document order:
 
 ```json
-{"section": "CERTIORARI DENIED", "docket": "24-6885", "caption": "CREECH, THOMAS V. IDAHO", "ifp": true}
+{"section": "CERTIORARI DENIED", "docket": "24-6885", "caption": "CREECH, THOMAS V. IDAHO",
+ "ifp": true, "disposition": "mass_sentence",
+ "disposition_text": "The petitions for writs of certiorari are denied."}
 ```
+
+**`disposition` was added session 46** (`corpus/dispositions.py`) and records *which sentence
+disposed of the entry*, which is not the same question as which section it sits in — see
+`THE-SENTENCE.md` for the correction that produced it. Values: `mass_sentence` (761 entries),
+`rule_39_8_dismissed` (16), `recusal` (9), `before_judgment` (4), `motion_granted` (2).
+`disposition_text` is the Court's own prose, whitespace-flattened, and for a few entries has a
+printed page number spliced into it by the extractor — repair against the PDF before any use.
 
 `ifp` is derived purely from the docket number (`>= 5001` in the sequence part), i.e. it is the
 Court's own mark read through the National Archives convention above — it is **not** a claim about
@@ -101,18 +125,27 @@ any individual's finances beyond what that convention states.
 
 ### Known limits of the extraction — carry these
 
-- **Two captions are corrupted, and they are named here because generic caveats do not survive
-  contact** (found by the Kritiker at the session-45 gate, verified first-hand; the paragraph below
-  had called the extraction "lossy" without naming a single instance, and a vector's legal defence
-  was resting on the captions being verbatim):
-  - `25-5182` reads **`MELNYCHUK-BESELT, RONDA V. WALDORF=ASTORIA MGMT., ET AL.`** — the printed
-    en-dash in *Waldorf–Astoria* is mis-decoded as `=`.
-  - `25-5278` reads **`PEñA, REYNALDO A. V. TEXAS`** — the printed capital `Ñ` arrives lowercase.
+- ~~**Two captions are corrupted.**~~ ~~**ONE is.**~~ → **NEITHER IS. Settled session 46 by
+  rasterising the pages and reading them.** This entry has now been wrong twice, in opposite
+  directions, and the sequence is the useful part of it:
+  - **Session 45** named two corrupted captions, from reading **our own extraction**.
+  - **Session 46, first attempt (the conductor's):** checked them against the Court's **docket
+    pages** — a *different document* — and concluded `25-5182 WALDORF=ASTORIA` was faithful (the
+    docket names the respondent *"Waldorf=Astoria Management LLC"*, equals sign and all) but that
+    `25-5278 PEñA` was a real defect, because the docket gives *"Reynaldo Alberto Peña"* and an
+    all-capitals caption should therefore print `Ñ`. That inference was wrong.
+  - **Session 46, settled:** the Dramaturg read the **rasterised order-list page** at 6×, and the
+    conductor then re-rendered printed page 29 independently and confirms it: the Court's own order
+    prints **`25-5278 PEñA, REYNALDO A. V. TEXAS`, with a lowercase ñ inside an all-capitals
+    caption.** Our extraction is faithful to the page. **There are no known corrupted captions in
+    this corpus.**
 
-  **Any surface built on this corpus must repair both at source before a single card is printed.**
-  A work that claims to carry the Court's own words verbatim, and misprints two real people's names,
-  has forfeited the claim. (Three further captions carry a right single quote `’` — `25M11`,
-  `24-1050`, `24-1320` — which is correct decoding, not damage.)
+  **The lesson, which cost two sessions and is worth more than the defect list:** *check the artefact
+  you are making the claim about — not your copy of it, and not a different document about the same
+  subject.* Session 45 read our extraction; session 46's conductor read the docket; only rendering
+  the page settled it. (Three captions carry a right single quote `’` — `25M11`, `24-1050`,
+  `24-1320` — correct decoding, not damage.) The repair duty is not discharged in general: it now
+  applies to any defect a rendered page actually shows.
 - The extractor (`corpus/extract.py`) is a minimal FlateDecode + text-operator reader written
   in-house; it has no font-encoding table beyond cp1252, so **typographic detail is lossy**: right
   single quotes arrive as `\222` sequences in some runs (`TE'JUAN`), small-caps runs can split
@@ -127,8 +160,12 @@ any individual's finances beyond what that convention states.
 curl -sSL -o ol-20251006.pdf https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf
 sha256sum ol-20251006.pdf     # 354c9ba8…ec652
 python3 corpus/extract.py ol-20251006.pdf > ol.txt
-python3 corpus/parse.py       # reads ./ol.txt, writes ./entries.json, prints the counts
+python3 corpus/parse.py         # reads ./ol.txt, writes ./entries.json, prints the section counts
+python3 corpus/dispositions.py  # same input; adds the disposition fields, prints the 761/31 split
 ```
+
+*(`dispositions.py` supersedes `parse.py` as the corpus builder — it does everything `parse.py` does
+and adds the disposition pass. `parse.py` is kept because session 45's counts were derived with it.)*
 
 ## Context figures (SOURCED, with their caveats attached)
 

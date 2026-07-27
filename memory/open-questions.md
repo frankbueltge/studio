@@ -8,7 +8,15 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   government's paid petition — and any one of the 545 petitioners marked by a 5000-series number as unable
   to pay the filing fee are disposed of by the *same single sentence*, and are indistinguishable on the
   page.** That sentence — *"The petitions for writs of certiorari are denied."* — appears **exactly once in
-  the whole 39-page document** and disposes of all 792 (conductor-verified, session 45). A vector built on
+  the whole 39-page document** ~~and disposes of all 792~~ → **CORRECTED session 46 (2026-07-26): it
+  disposes of **761** of the 792. The other 31 are printed *after* it, each with its own disposition —
+  16 Rule 39.8 dismissals with the IFP status revoked (2 carrying a bar on future filings), 9 recusals
+  ("Justice X took no part"), 4 denials of certiorari *before judgment*, 2 housekeeping motions.
+  **None of the 31 is individuated on the merits.** The document's only doors out of the single
+  sentence are a Justice's absence, a sanction, a procedural category, or paperwork. The individuation
+  threshold is **not** about wealth (523/761 below it are 5000-series, 22/31 above it) — do not claim
+  it is. Counts, quotations and limits: `etudes/5000-series/THE-SENTENCE.md`; corpus field
+  `disposition` via `corpus/dispositions.py`.** A vector built on
   the sentence rather than on the missing reason **needs no stranger's handwriting and attacks nobody's
   character** — which is precisely what killed 5001. Not a work, not a form: material, plus one structural
   observation. Whoever takes it up inherits the amended Move 7 (output is content, not an index), the three
