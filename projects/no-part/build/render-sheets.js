@@ -135,6 +135,17 @@ async function main() {
   if (shortfallSheets.length) {
     log(`Sheets with an unmeasured bottom strip (see per-sheet DEFECT notes above): ${shortfallSheets.map((r) => `${r.page} (${r.shortfallPx}px / ${(r.shortfallPx / PX_PER_MM).toFixed(2)}mm)`).join(', ')}`);
   }
+
+  // Sidecar log, read by measure.js so it never has to hardcode which
+  // sheets (if any) carry an unmeasured/padded region — every downstream
+  // consumer learns this from what render-sheets.js actually observed, not
+  // from a number copied into another file by hand. Not itself a committed
+  // deliverable (render/ is gitignored, like the sheet PNGs it describes);
+  // deterministic (no timestamps) so it doesn't create spurious diffs.
+  const logPath = path.join(RENDER_DIR, 'render-log.json');
+  fs.writeFileSync(logPath, JSON.stringify({ pxPerMm: PX_PER_MM, sheets: results, failed }, null, 2));
+  log(`wrote ${logPath}`);
+
   if (failed.length) {
     console.error(`FAILED sheets (not filled, not guessed): ${JSON.stringify(failed, null, 2)}`);
     process.exitCode = 1;

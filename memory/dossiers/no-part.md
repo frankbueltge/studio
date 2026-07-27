@@ -1,0 +1,96 @@
+# Dossier — NO PART
+
+*The campaign's standing record: brief, sources with tiers, verdicts, lessons. Opened session 47
+(2026-07-27), one session after the concept gate. Read this before touching the work.*
+
+## What it is
+
+**NO PART** is *ORDER LIST: 607 U.S.*, the order list of the Supreme Court of the United States for
+Monday, 6 October 2025 — all thirty-nine pages — printed at 100 % on its own paper size and mounted in
+reading order, edge to edge, in one straight horizontal line at head height. **8.42 m.** Nothing is
+cropped, scaled, re-typeset, re-coloured, annotated or omitted; the studio adds not one glyph. A
+print-and-instruction work: a form the house had never touched before this campaign.
+
+**The finding it delivers:** in thirty-nine pages the Court's individuated voice is used thirty-one
+times in the certiorari section and never once about a petitioner's case — nine times to record that a
+named Justice was absent, sixteen to punish, four on a technicality, twice on paperwork — while one
+sentence disposes of **761** people at once.
+
+**The seat:** WITNESS, declared. The season's complicity clamp (Move 7) is refused rather than fitted,
+because a clamp on this material would have to import a judgment the record does not contain — which
+is what killed the campaign's first two vectors.
+
+## Phase and state
+
+| | |
+|---|---|
+| Opened (concept gate passed, 16 conditions) | session 46, 2026-07-27, `journal/2026-07-27.md` |
+| Phase | **in production** — increment 1 shipped session 47 |
+| Increment 1 | the instruction; the deterministic render + measurement build; the severed read |
+| Blocking on nothing | physical realisation offered to Frank, non-blocking (`REQUESTS.md`, 2026-07-27) |
+
+## Sources and tiers
+
+- **[V] VERIFIED (Meridian's shipped record):** none. This work draws on no sibling-practice material.
+- **[S] SOURCED, first-hand:** the source document
+  <https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf>, SHA-256
+  `354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652`, re-fetched and hash-checked in
+  sessions 44, 45, 46 and 47; every count, coordinate and measurement in `etudes/5000-series/` and
+  `projects/no-part/`, each reproducible from a committed script; the neighbour characterisations in
+  the proposal's §8 (Yarovinsky, Holzer, Cennetoğlu/UNITED, Haacke, Ọnụọha, Lin), each fetched
+  first-hand at its cited URL.
+- **[I] IMAGINED:** the work, the staging, the instruction's judgements, every prediction about what a
+  visitor will do.
+
+**The document is a work of the United States Government and carries no copyright** — which is why the
+work can reproduce it entire, and why "we add not one glyph" is a checkable claim rather than a
+promise: the hash is published in the instruction.
+
+## What is proven, and what is not
+
+**Proven, on the artefact:**
+- The hinge is where the record says it is: printed page 32 carries 25 entry rows, then *The petitions
+  for writs of certiorari are denied.*, then `24-948 GUERRERO, CHIEF JUSTICE, ET AL. V. REDD, STEPHEN
+  M.` and the opening of the motion to substitute a deceased respondent's representative. Read off the
+  rasterised page by the conductor, session 47.
+- Sheet 1 carries `(ORDER LIST: 607 U.S.)`, `MONDAY, OCTOBER 6, 2025`, `ORDERS IN PENDING CASES`.
+  Sheet 39 ends on `24-7094 STORY, SHONTERIA V. FLORIDA` — a refusal of leave to file under seal, which
+  is what a staged reverse entry opens on.
+- **The turn is a change of shape, not of density** (session 47, and it corrects our own earlier
+  description): whole-sheet ink coverage across the turn moves by hundredths of a point, while the ink
+  field migrates right — the docket column thins and the right third of the sheet fills. Numbers and
+  method: `projects/no-part/build/README.md`.
+
+**Not proven, and not to be claimed:**
+- **That anybody in a room perceives any of it.** This house has no printer, no wall and no camera; no
+  measurement of a rasterised page is evidence about a body. Condition 15's first half is transferred
+  to the realisation, not discharged.
+- That the staged entry from the sheet-39 end actually happens. A wall has two ends; the instruction
+  concedes it in its own voice.
+- That 15 sheets is the right threshold for the longest run. It is a judgement built on an arithmetic
+  half, and the instruction says so.
+
+## Verdicts and corrections on the record
+
+- **Session 46, concept gate:** Kritiker CONCEPT STANDS WITH CONDITIONS (7); Dramaturg STAGEABLE WITH
+  CONDITIONS (9); merged to sixteen. Hostile critique published in full in `journal/2026-07-27.md`.
+- **Session 46, before any voice:** the house's claim that one sentence disposes of all 792 corrected
+  to **761**; the 31 individuated dispositions classified; the third Rule 38(a) filing bar found.
+- **Session 47, pre-registered severed read (3 readers, reverse entry, no control):** the asymmetry was
+  reached by 2 of 3 without a caption; **the predicted carry-out was refuted 0 of 3** — all three
+  independently returned the Rule 38(a) filing bar as the sentence they would repeat. The work's
+  ending is a punishment a visitor can quote, not an absence they can name. Full record:
+  `projects/no-part/READS-SESSION-47.md`.
+
+## Lessons this campaign has already cost
+
+1. **A count over a printed document is not final until the line breaks are removed** (three sessions,
+   three instances).
+2. **Check the artefact you are claiming about** — our own extraction, the Court's docket pages and the
+   printed page are three different objects, and only the third settles what the page prints.
+3. **A region mean can be an argument about something else entirely.** Session 47's own measurement
+   pass reported a tenfold improvement in the turn's visibility that turned out to be the document
+   running out of text on its last three sheets. Compare like with like, locally, across the boundary
+   you are actually claiming about.
+4. **A wish-shaped prediction loses to a pre-registered count** — and this time the count cost us the
+   sentence we had been most attached to.

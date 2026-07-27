@@ -1,0 +1,956 @@
+{
+  "meta": {
+    "sourcePdfSha256": "354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652",
+    "pxPerMm": 4,
+    "measuredSheetWidthMm": 216,
+    "measuredSheetHeightMm": 279.5,
+    "nominalUSLetterMm": {
+      "w": 215.9,
+      "h": 279.4
+    },
+    "note": "Positions use the MEASURED per-sheet width (216.0mm), not the nominal 215.9mm cited in the brief — see the top-level note in this file's generating script (measure.js) and build/README.md. Sheet 39 carries a small unmeasured bottom strip (see unmeasuredBottomMm on that record and build/README.md \"LAST-PAGE DEFECT\") — its ink/row/text-block figures below are measured only over its captured region.",
+    "totalLengthMm": 8424,
+    "inkLuminanceThreshold": 150,
+    "rowNoiseMinDarkPx": 2,
+    "rowMinHeightPx": 6,
+    "textBlockInkCoverageDefinition": "ink pixel count inside the sheet's own ink bounding box, divided by that box's pixel area (so it includes inter-row gaps within the block, not just the ink itself)."
+  },
+  "sheets": [
+    {
+      "sheet": 1,
+      "startMm": 0,
+      "endMm": 216,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.0468,
+      "textBlockInkCoveragePct": 4.9153,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26.25,
+        "bottomMm": 248.25,
+        "widthMm": 163.25,
+        "heightMm": 222.25
+      },
+      "inkRowCount": 26,
+      "rowRightEdgeMm": {
+        "min": 71.5,
+        "median": 143.75,
+        "max": 188.75
+      }
+    },
+    {
+      "sheet": 2,
+      "startMm": 216,
+      "endMm": 432,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3969,
+      "textBlockInkCoveragePct": 5.3939,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26.25,
+        "bottomMm": 252.5,
+        "widthMm": 163.25,
+        "heightMm": 226.5
+      },
+      "inkRowCount": 28,
+      "rowRightEdgeMm": {
+        "min": 75.5,
+        "median": 168.25,
+        "max": 188.75
+      }
+    },
+    {
+      "sheet": 3,
+      "startMm": 432,
+      "endMm": 648,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.7731,
+      "textBlockInkCoveragePct": 6.008,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.25,
+        "topMm": 26.25,
+        "bottomMm": 253.25,
+        "widthMm": 162.75,
+        "heightMm": 227.25
+      },
+      "inkRowCount": 28,
+      "rowRightEdgeMm": {
+        "min": 103,
+        "median": 160.5,
+        "max": 188.25
+      }
+    },
+    {
+      "sheet": 4,
+      "startMm": 648,
+      "endMm": 864,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.6265,
+      "textBlockInkCoveragePct": 5.8623,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 186,
+        "topMm": 26,
+        "bottomMm": 252.5,
+        "widthMm": 160.5,
+        "heightMm": 226.75
+      },
+      "inkRowCount": 28,
+      "rowRightEdgeMm": {
+        "min": 103,
+        "median": 143.5,
+        "max": 186
+      }
+    },
+    {
+      "sheet": 5,
+      "startMm": 864,
+      "endMm": 1080,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.7084,
+      "textBlockInkCoveragePct": 6.3331,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 177.5,
+        "topMm": 26.25,
+        "bottomMm": 252.75,
+        "widthMm": 152,
+        "heightMm": 226.75
+      },
+      "inkRowCount": 28,
+      "rowRightEdgeMm": {
+        "min": 108,
+        "median": 141,
+        "max": 177.5
+      }
+    },
+    {
+      "sheet": 6,
+      "startMm": 1080,
+      "endMm": 1296,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.9785,
+      "textBlockInkCoveragePct": 6.3371,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26.25,
+        "bottomMm": 252.75,
+        "widthMm": 163.25,
+        "heightMm": 226.75
+      },
+      "inkRowCount": 28,
+      "rowRightEdgeMm": {
+        "min": 116.5,
+        "median": 144.5,
+        "max": 188.75
+      }
+    },
+    {
+      "sheet": 7,
+      "startMm": 1296,
+      "endMm": 1512,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.7982,
+      "textBlockInkCoveragePct": 6.4983,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 177.5,
+        "topMm": 26.25,
+        "bottomMm": 252.5,
+        "widthMm": 152,
+        "heightMm": 226.5
+      },
+      "inkRowCount": 28,
+      "rowRightEdgeMm": {
+        "min": 88.25,
+        "median": 142.75,
+        "max": 177.5
+      }
+    },
+    {
+      "sheet": 8,
+      "startMm": 1512,
+      "endMm": 1728,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.6988,
+      "textBlockInkCoveragePct": 6.3008,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 169.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 144.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 108,
+        "median": 139.25,
+        "max": 169.75
+      }
+    },
+    {
+      "sheet": 9,
+      "startMm": 1728,
+      "endMm": 1944,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.9629,
+      "textBlockInkCoveragePct": 6.3479,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 179.75,
+        "topMm": 26.25,
+        "bottomMm": 264.75,
+        "widthMm": 154.25,
+        "heightMm": 238.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 101.75,
+        "median": 145.5,
+        "max": 179.75
+      }
+    },
+    {
+      "sheet": 10,
+      "startMm": 1944,
+      "endMm": 2160,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.4589,
+      "textBlockInkCoveragePct": 6.6028,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 154,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 128.5,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 101.75,
+        "median": 127,
+        "max": 154
+      }
+    },
+    {
+      "sheet": 11,
+      "startMm": 2160,
+      "endMm": 2376,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.4872,
+      "textBlockInkCoveragePct": 5.4759,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 181.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 156.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 105.75,
+        "median": 128.5,
+        "max": 181.75
+      }
+    },
+    {
+      "sheet": 12,
+      "startMm": 2376,
+      "endMm": 2592,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.4958,
+      "textBlockInkCoveragePct": 6.2497,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 162.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 137.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.5,
+        "median": 124.5,
+        "max": 162.75
+      }
+    },
+    {
+      "sheet": 13,
+      "startMm": 2592,
+      "endMm": 2808,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5208,
+      "textBlockInkCoveragePct": 6.8304,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 152,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 126.5,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.5,
+        "median": 129,
+        "max": 152
+      }
+    },
+    {
+      "sheet": 14,
+      "startMm": 2808,
+      "endMm": 3024,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.7764,
+      "textBlockInkCoveragePct": 5.6353,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 190.25,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 164.75,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.5,
+        "median": 139.25,
+        "max": 190.25
+      }
+    },
+    {
+      "sheet": 15,
+      "startMm": 3024,
+      "endMm": 3240,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5534,
+      "textBlockInkCoveragePct": 5.9036,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 173.25,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 147.75,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.5,
+        "median": 127,
+        "max": 173.25
+      }
+    },
+    {
+      "sheet": 16,
+      "startMm": 3240,
+      "endMm": 3456,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5131,
+      "textBlockInkCoveragePct": 5.9766,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 169.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 144.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 108,
+        "median": 127,
+        "max": 169.75
+      }
+    },
+    {
+      "sheet": 17,
+      "startMm": 3456,
+      "endMm": 3672,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.6179,
+      "textBlockInkCoveragePct": 5.9234,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 175.5,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 150,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 103.75,
+        "median": 127,
+        "max": 175.5
+      }
+    },
+    {
+      "sheet": 18,
+      "startMm": 3672,
+      "endMm": 3888,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.4395,
+      "textBlockInkCoveragePct": 5.7879,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 171.25,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 145.75,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 101.5,
+        "median": 129.25,
+        "max": 171.25
+      }
+    },
+    {
+      "sheet": 19,
+      "startMm": 3888,
+      "endMm": 4104,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5963,
+      "textBlockInkCoveragePct": 6.1219,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 169.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 144.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 105.75,
+        "median": 141.25,
+        "max": 169.75
+      }
+    },
+    {
+      "sheet": 20,
+      "startMm": 4104,
+      "endMm": 4320,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5687,
+      "textBlockInkCoveragePct": 5.3832,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.25,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 162.75,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 99.5,
+        "median": 135,
+        "max": 188.25
+      }
+    },
+    {
+      "sheet": 21,
+      "startMm": 4320,
+      "endMm": 4536,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3346,
+      "textBlockInkCoveragePct": 5.2978,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 179.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 154.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 93.25,
+        "median": 125,
+        "max": 179.75
+      }
+    },
+    {
+      "sheet": 22,
+      "startMm": 4536,
+      "endMm": 4752,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3838,
+      "textBlockInkCoveragePct": 5.6917,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 171.25,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 145.75,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 101.75,
+        "median": 125,
+        "max": 171.25
+      }
+    },
+    {
+      "sheet": 23,
+      "startMm": 4752,
+      "endMm": 4968,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5896,
+      "textBlockInkCoveragePct": 6.5288,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 160.5,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 135,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 105.75,
+        "median": 127,
+        "max": 160.5
+      }
+    },
+    {
+      "sheet": 24,
+      "startMm": 4968,
+      "endMm": 5184,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3828,
+      "textBlockInkCoveragePct": 6.143,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 160.5,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 135,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 97.25,
+        "median": 122.75,
+        "max": 160.5
+      }
+    },
+    {
+      "sheet": 25,
+      "startMm": 5184,
+      "endMm": 5400,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.2424,
+      "textBlockInkCoveragePct": 5.9696,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 158.5,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 133,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 107.75,
+        "median": 118.5,
+        "max": 158.5
+      }
+    },
+    {
+      "sheet": 26,
+      "startMm": 5400,
+      "endMm": 5616,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3223,
+      "textBlockInkCoveragePct": 5.8462,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 164.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 139.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 99.5,
+        "median": 124.5,
+        "max": 164.75
+      }
+    },
+    {
+      "sheet": 27,
+      "startMm": 5616,
+      "endMm": 5832,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.7169,
+      "textBlockInkCoveragePct": 6.0895,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 175.5,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 150,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.25,
+        "median": 131.25,
+        "max": 175.5
+      }
+    },
+    {
+      "sheet": 28,
+      "startMm": 5832,
+      "endMm": 6048,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.4346,
+      "textBlockInkCoveragePct": 6.1374,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 162.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 137.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 99.5,
+        "median": 125,
+        "max": 162.75
+      }
+    },
+    {
+      "sheet": 29,
+      "startMm": 6048,
+      "endMm": 6264,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5267,
+      "textBlockInkCoveragePct": 5.4608,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 184,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 158.5,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 105.75,
+        "median": 125,
+        "max": 184
+      }
+    },
+    {
+      "sheet": 30,
+      "startMm": 6264,
+      "endMm": 6480,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3825,
+      "textBlockInkCoveragePct": 6.0417,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 162.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 137.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.5,
+        "median": 125,
+        "max": 162.75
+      }
+    },
+    {
+      "sheet": 31,
+      "startMm": 6480,
+      "endMm": 6696,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.5319,
+      "textBlockInkCoveragePct": 6.6296,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 156.25,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 130.75,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.75,
+        "median": 127,
+        "max": 156.25
+      }
+    },
+    {
+      "sheet": 32,
+      "startMm": 6696,
+      "endMm": 6912,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3793,
+      "textBlockInkCoveragePct": 5.6069,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 173.25,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 147.75,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 109.5,
+        "median": 125,
+        "max": 173.25
+      }
+    },
+    {
+      "sheet": 33,
+      "startMm": 6912,
+      "endMm": 7128,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.3596,
+      "textBlockInkCoveragePct": 5.0389,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26,
+        "bottomMm": 265.75,
+        "widthMm": 163.25,
+        "heightMm": 240
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 66.75,
+        "median": 175.25,
+        "max": 188.75
+      }
+    },
+    {
+      "sheet": 34,
+      "startMm": 7128,
+      "endMm": 7344,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.6814,
+      "textBlockInkCoveragePct": 5.5349,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26,
+        "bottomMm": 265.75,
+        "widthMm": 163.25,
+        "heightMm": 240
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 67,
+        "median": 179.75,
+        "max": 188.75
+      }
+    },
+    {
+      "sheet": 35,
+      "startMm": 7344,
+      "endMm": 7560,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 2.9808,
+      "textBlockInkCoveragePct": 4.5221,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 186.5,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 161,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 67,
+        "median": 152,
+        "max": 186.5
+      }
+    },
+    {
+      "sheet": 36,
+      "startMm": 7560,
+      "endMm": 7776,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 3.4823,
+      "textBlockInkCoveragePct": 5.2334,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 163.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 67,
+        "median": 176,
+        "max": 188.75
+      }
+    },
+    {
+      "sheet": 37,
+      "startMm": 7776,
+      "endMm": 7992,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 2.6488,
+      "textBlockInkCoveragePct": 3.9926,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 186.75,
+        "topMm": 26,
+        "bottomMm": 265.75,
+        "widthMm": 161.25,
+        "heightMm": 240
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 79.75,
+        "median": 99.5,
+        "max": 186.75
+      }
+    },
+    {
+      "sheet": 38,
+      "startMm": 7992,
+      "endMm": 8208,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 0,
+      "totalInkCoveragePct": 2.9548,
+      "textBlockInkCoveragePct": 4.4198,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 163.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 29,
+      "rowRightEdgeMm": {
+        "min": 79.75,
+        "median": 106,
+        "max": 188.75
+      }
+    },
+    {
+      "sheet": 39,
+      "startMm": 8208,
+      "endMm": 8424,
+      "widthMm": 216,
+      "heightMm": 279.5,
+      "unmeasuredBottomMm": 7.25,
+      "totalInkCoveragePct": 2.2913,
+      "textBlockInkCoveragePct": 3.5343,
+      "textBlock": {
+        "leftMm": 25.75,
+        "rightMm": 188.75,
+        "topMm": 26.25,
+        "bottomMm": 265.75,
+        "widthMm": 163.25,
+        "heightMm": 239.75
+      },
+      "inkRowCount": 21,
+      "rowRightEdgeMm": {
+        "min": 99.5,
+        "median": 125.75,
+        "max": 188.75
+      }
+    }
+  ]
+}
