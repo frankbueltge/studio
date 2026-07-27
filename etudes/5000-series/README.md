@@ -23,13 +23,23 @@ used, and the load-bearing numbers reproduced exactly:
 
 | Section | Entries |
 |---|---|
-| OPENING (miscellaneous motions, `25M…`, plus orders in pending cases) | 33 |
-| ORDERS IN PENDING CASES (after the printed section header) | 10 |
+| ORDERS IN PENDING CASES (miscellaneous motions, `25M…`, and orders in pending cases) | 43 |
 | **CERTIORARI DENIED** | **792** |
 | HABEAS CORPUS DENIED | 26 |
 | MANDAMUS DENIED | 11 |
 | REHEARINGS DENIED | 10 |
 | **Total docket entries** | **882** |
+
+*Session-46 repair. This table previously split the first section into "OPENING 33" + "ORDERS IN
+PENDING CASES 10". That split was an artefact of a real bug, found tonight: **`extract.py` sorted
+pages by PDF object number, not by page order** — and in this file page 1 is object 5283, so it
+sorted **last**. The masthead and the printed `ORDERS IN PENDING CASES` header therefore arrived at
+the *end* of the extraction, and 33 entries that belong under that header were parsed before it had
+been seen. The certiorari section was unaffected (its objects do run in page order), which is why
+every count derived from it survived unchanged — 882 / 792 / 545 / 761 / 31 / 3 all reproduce
+exactly after the fix. `extract.py` now orders pages by their printed folio and warns on stderr if
+the folios are not a clean permutation. The corpus is now in true document order: its first entry is
+`25M1 DOE, JOHN V. ILLINOIS` and its last is in REHEARINGS DENIED.*
 
 **Of the 792 certiorari denials, 545 (68.8%) carry a 5000-series docket number.**
 
@@ -115,27 +125,27 @@ any individual's finances beyond what that convention states.
 
 ### Known limits of the extraction — carry these
 
-- ~~**Two captions are corrupted**~~ → **ONE is. Corrected session 46 (2026-07-26) against the
-  Court's own docket pages.** Session 45 named two corrupted captions (found by the Kritiker at that
-  gate, adopted after a first-hand look at *our own extraction* — which is not the same as checking
-  the source). Checked tonight against the Supreme Court's public docket:
-  - `25-5278` reads **`PEñA, REYNALDO A. V. TEXAS`** — **a real defect.** The Court's docket for
-    25-5278 gives the petitioner as *"Reynaldo Alberto Peña"*; in an all-capitals caption the printed
-    letter is `Ñ`, and our extractor delivers it lowercase.
-    (<https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25-5278.html>)
-  - `25-5182` reads **`MELNYCHUK-BESELT, RONDA V. WALDORF=ASTORIA MGMT., ET AL.`** — **not a defect.
-    The equals sign is correct.** The Court's own docket names the respondent *"Waldorf=Astoria
-    Management LLC"*, with the equals sign, and our extraction reproduces it faithfully. Session 45's
-    "mis-decoded en-dash" reading was wrong, and this house asserted it on the corpus's own face.
-    (<https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/25-5182.html>)
+- ~~**Two captions are corrupted.**~~ ~~**ONE is.**~~ → **NEITHER IS. Settled session 46 by
+  rasterising the pages and reading them.** This entry has now been wrong twice, in opposite
+  directions, and the sequence is the useful part of it:
+  - **Session 45** named two corrupted captions, from reading **our own extraction**.
+  - **Session 46, first attempt (the conductor's):** checked them against the Court's **docket
+    pages** — a *different document* — and concluded `25-5182 WALDORF=ASTORIA` was faithful (the
+    docket names the respondent *"Waldorf=Astoria Management LLC"*, equals sign and all) but that
+    `25-5278 PEñA` was a real defect, because the docket gives *"Reynaldo Alberto Peña"* and an
+    all-capitals caption should therefore print `Ñ`. That inference was wrong.
+  - **Session 46, settled:** the Dramaturg read the **rasterised order-list page** at 6×, and the
+    conductor then re-rendered printed page 29 independently and confirms it: the Court's own order
+    prints **`25-5278 PEñA, REYNALDO A. V. TEXAS`, with a lowercase ñ inside an all-capitals
+    caption.** Our extraction is faithful to the page. **There are no known corrupted captions in
+    this corpus.**
 
-  **The repair duty stands for `25-5278` and for any further defect a surface exposes** — a work that
-  claims to carry the Court's own words verbatim and misprints a real person's name has forfeited the
-  claim. The lesson of the reversal is narrower and worth more than the defect list: *a caption is
-  checked against the source that prints it, not against our copy of it.* Two sessions running, this
-  house has taken a finding about a document from a reading of its own extraction. (Three further
-  captions carry a right single quote `’` — `25M11`, `24-1050`, `24-1320` — correct decoding, not
-  damage.)
+  **The lesson, which cost two sessions and is worth more than the defect list:** *check the artefact
+  you are making the claim about — not your copy of it, and not a different document about the same
+  subject.* Session 45 read our extraction; session 46's conductor read the docket; only rendering
+  the page settled it. (Three captions carry a right single quote `’` — `25M11`, `24-1050`,
+  `24-1320` — correct decoding, not damage.) The repair duty is not discharged in general: it now
+  applies to any defect a rendered page actually shows.
 - The extractor (`corpus/extract.py`) is a minimal FlateDecode + text-operator reader written
   in-house; it has no font-encoding table beyond cp1252, so **typographic detail is lossy**: right
   single quotes arrive as `\222` sequences in some runs (`TE'JUAN`), small-caps runs can split

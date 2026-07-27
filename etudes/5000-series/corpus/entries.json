@@ -1,6 +1,86 @@
 [
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M1",
+"caption": "DOE, JOHN V. ILLINOIS",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M2",
+"caption": "WILLIAMS, CHAD B. V. MULTI-COLOR CORPORATION, INC.",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M3",
+"caption": "WATSON, ERIC, ET UX. V. KURTZ, LISA, ET VIR",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M4",
+"caption": "HERTO, STEPHEN D. V. MURPHY, WARDEN",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M5",
+"caption": "OKORIE, IKECHUKWU H. V. LENTZ, KIMBERLY R.",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M6",
+"caption": "BAILEY, JOHN P. V. U.S. BANK TRUST, N.A., ET AL.",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M7",
+"caption": "MONTANEZ, DELIRIS V. DEPT. OF HOMELAND SEC.",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M8",
+"caption": "IN RE LARRY E. CLARK",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M9",
+"caption": "WILLIAMSON, ROLANDO A. V. UNITED STATES",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
+"docket": "25M10",
+"caption": "VELA, RODOLFO, ET AL. V. COMPTON, SHERIFF, ET AL.",
+"ifp": null,
+"disposition": null,
+"disposition_text": null
+},
+{
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M11",
 "caption": "SEALED APPELLANT V. FORD, ATT\u2019Y GEN. OF NV",
 "ifp": null,
@@ -8,7 +88,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M12",
 "caption": "McLAUGHLIN, EILEEN V. COMMUNITY LIVING ASSN., ET AL.",
 "ifp": null,
@@ -16,7 +96,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M13",
 "caption": "BRIDGES, SAVIAN J. V. WAL-MART ASSOCIATES, INC.",
 "ifp": null,
@@ -24,7 +104,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M14",
 "caption": "FOULIARD, DANIEL J. V. WISCONSIN",
 "ifp": null,
@@ -32,7 +112,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M15",
 "caption": "McGHEE, JAYLYN D. V. UNITED STATES",
 "ifp": null,
@@ -40,7 +120,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M16",
 "caption": "TODINO, JAMES V. X CORP., ET AL.",
 "ifp": null,
@@ -48,7 +128,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M17",
 "caption": "EL MALIK, RASHID V. COLLINS, SEC. OF VA",
 "ifp": null,
@@ -56,7 +136,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M18",
 "caption": "CORTEZ, COREY V. GUERRERO, DIR., TX DCJ",
 "ifp": null,
@@ -64,7 +144,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25M19",
 "caption": "BARRETO, MICHAEL V. UNITED STATES",
 "ifp": null,
@@ -72,7 +152,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "23-1201",
 "caption": "CC/DEVAS LTD., ET AL. V. ANTRIX CORP. LTD., ET AL.",
 "ifp": false,
@@ -80,7 +160,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-17",
 "caption": "DEVAS MULTIMEDIA PRIVATE LTD. V. ANTRIX CORP. LTD., ET AL.",
 "ifp": false,
@@ -88,7 +168,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-784",
 "caption": "ARCH RESOURCES, INC., ET AL. V. PENNINGTON, ACTING DIR., OWCP",
 "ifp": false,
@@ -96,7 +176,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-1001",
 "caption": "COTTER CORP., ET AL. V. MAZZOCCHIO, NIKKI S., ET AL.",
 "ifp": false,
@@ -104,7 +184,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-1016",
 "caption": "RISEANDSHINE CORP. V. PEPSICO, INC.",
 "ifp": false,
@@ -112,7 +192,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-1130",
 "caption": "SPAIN V. BLASKET INVESTMENTS LLC, ET AL.",
 "ifp": false,
@@ -120,7 +200,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7246",
 "caption": "SEAY, TAMIKA V. JAMES, LISA, ET AL.",
 "ifp": true,
@@ -128,7 +208,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7247",
 "caption": "SEAY, TAMIKA V. DEPT. OF JUSTICE, ET AL.",
 "ifp": true,
@@ -136,7 +216,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7248",
 "caption": "SEAY, TAMIKA V. GEORGIA, ET AL.",
 "ifp": true,
@@ -144,7 +224,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7354",
 "caption": "STEWART, SETH V. AMERICAN FORK, UT",
 "ifp": true,
@@ -152,7 +232,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7413",
 "caption": "MAKOZY, GREGORY V. UNITED STATES",
 "ifp": true,
@@ -160,7 +240,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7461",
 "caption": "MARTINEZ-MERCADO, PEDRO A. V. UNITED STATES",
 "ifp": true,
@@ -168,7 +248,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7464",
 "caption": "JACKSON, SHUKEITHA V. ABBVIE, INC.",
 "ifp": true,
@@ -176,7 +256,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "24-7519",
 "caption": "KOGER, FREDERICK S. V. KLEIDON, CHARLES E., ET AL.",
 "ifp": true,
@@ -184,7 +264,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5038",
 "caption": "WEIR, NICHOLAS V. MONTEFIORE MEDICAL, ET AL.",
 "ifp": true,
@@ -192,7 +272,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5040",
 "caption": "WEIR, NICHOLAS V. USCIS, ET AL.",
 "ifp": true,
@@ -200,7 +280,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5055",
 "caption": "MAROWITZ, ANDREW V. DOSTIE, CORY",
 "ifp": true,
@@ -208,7 +288,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5082",
 "caption": "BYLSMA, JAKE V. USDC MD PA",
 "ifp": true,
@@ -216,7 +296,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5113",
 "caption": "DYKMAN, BENJAMIN V. BD. OF REGENTS UNIV. OF WI",
 "ifp": true,
@@ -224,7 +304,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5147",
 "caption": "CHO, MINGGUO V. TRUMP, PRESIDENT OF U.S., ET AL.",
 "ifp": true,
@@ -232,7 +312,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5175",
 "caption": "PAYNE, RAYON V. LaRUE, ERIC PARKE, ET AL.",
 "ifp": true,
@@ -240,7 +320,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5251",
 "caption": "BEHNAMIAN, SHAHRIAR V. STEWART, COKE, ET AL.",
 "ifp": true,
@@ -248,7 +328,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5298",
 "caption": "MALLONEE, MICHAEL V. DEPT. OF INTERIOR",
 "ifp": true,
@@ -256,7 +336,7 @@
 "disposition_text": null
 },
 {
-"section": "HEADER",
+"section": "ORDERS IN PENDING CASES",
 "docket": "25-5412",
 "caption": "RICHMOND, RYAN D. V. UNITED STATES",
 "ifp": true,
@@ -6972,86 +7052,6 @@
 "docket": "24-7094",
 "caption": "STORY, SHONTERIA V. FLORIDA",
 "ifp": true,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M1",
-"caption": "DOE, JOHN V. ILLINOIS",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M2",
-"caption": "WILLIAMS, CHAD B. V. MULTI-COLOR CORPORATION, INC.",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M3",
-"caption": "WATSON, ERIC, ET UX. V. KURTZ, LISA, ET VIR",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M4",
-"caption": "HERTO, STEPHEN D. V. MURPHY, WARDEN",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M5",
-"caption": "OKORIE, IKECHUKWU H. V. LENTZ, KIMBERLY R.",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M6",
-"caption": "BAILEY, JOHN P. V. U.S. BANK TRUST, N.A., ET AL.",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M7",
-"caption": "MONTANEZ, DELIRIS V. DEPT. OF HOMELAND SEC.",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M8",
-"caption": "IN RE LARRY E. CLARK",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M9",
-"caption": "WILLIAMSON, ROLANDO A. V. UNITED STATES",
-"ifp": null,
-"disposition": null,
-"disposition_text": null
-},
-{
-"section": "ORDERS IN PENDING CASES",
-"docket": "25M10",
-"caption": "VELA, RODOLFO, ET AL. V. COMPTON, SHERIFF, ET AL.",
-"ifp": null,
 "disposition": null,
 "disposition_text": null
 }
