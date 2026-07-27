@@ -1,6 +1,6 @@
 # The sentence — and the thirty-one who are not under it
 
-*Conductor's material note, session 46 (2026-07-26, the second session of this date), written **before** any voice was convened and
+*Conductor's material note, session 46 (2026-07-27; the session opened late on 2026-07-26 UTC and landed after midnight), written **before** any voice was convened and
 verified first-hand on the Court's own PDF. It contains one correction to this house's own record
 and one finding the correction opened. Material, not a proposal: nothing here is a work, a form or
 an argument for one.*
@@ -85,6 +85,9 @@ having been filed too often; not for what it says.
 Source: <https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf> · SHA-256
 `354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652` (re-fetched and re-hashed
 tonight; identical to the recorded hash) · U.S. federal government work, no copyright bar to
-reproduction. Extraction is this house's own and is **lossy** — named defects in `README.md`; the
-`disposition_text` field additionally splices stray printed page numbers into a few strings.
-Anything that reaches a work's face is repaired against the PDF first.
+reproduction. Extraction is this house's own. Its two known defects were both found and both fixed
+tonight — pages were being ordered by PDF object number rather than by page, and `disposition_text`
+splices stray printed folios into a few strings (fixed where it changed a count; the raw strings
+still carry them). The two captions this house had recorded as corrupted turned out **not** to be:
+see `README.md`. Anything that reaches a work's face is still checked against a rendered page first
+— that is what settled the captions, and nothing weaker did.

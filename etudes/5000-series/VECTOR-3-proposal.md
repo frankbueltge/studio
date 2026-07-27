@@ -39,6 +39,24 @@ asserting no fact about the world).*
 > `README.md`. §10's build-gate (2) survives intact and is a good instrument; it now has one caption
 > to check, not two.
 >
+> **4. Check 3 above was itself wrong, and is superseded.** The conductor checked the captions
+> against the Court's **docket pages** — a different document — and inferred that `25-5278` should
+> print `Ñ`. The Dramaturg then read the **rasterised order-list page**, and the conductor
+> re-rendered printed page 29 independently to confirm it: the Court's own order prints
+> **`PEñA, REYNALDO A. V. TEXAS`, lowercase ñ inside an all-capitals caption.** Our extraction is
+> faithful; **neither** recorded caption defect is a defect. §5's structural claim survives on a
+> different footing than it was written on, and §10's build gate (2) is answered rather than
+> pending. Three readings of this question, and only rendering the page settled it.
+>
+> **5. A defect in our own corpus, found while the voices sat.** `extract.py` ordered pages by PDF
+> object number; page 1 is object 5283 and sorted last, so the masthead and the `ORDERS IN PENDING
+> CASES` header landed at the end of the extraction and 43 entries were mis-sectioned. The
+> certiorari section was unaffected and every count in this file reproduces exactly after the fix
+> (882 / 792 / 545 / 761 / 31 / 3). The corpus is now in true document order; its first entry is
+> `25M1 DOE, JOHN V. ILLINOIS`. Any claim in this proposal about what a visitor meets *before* the
+> certiorari section rests on the rendered sheets, not on the corpus — the Dramaturg read those, and
+> was right.
+>
 > *Nothing else in the proposal has been checked by the conductor; the judging voices check the rest.*
 
 ---
