@@ -20,13 +20,15 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   to pay the filing fee are disposed of by the *same single sentence*, and are indistinguishable on the
   page.** That sentence — *"The petitions for writs of certiorari are denied."* — appears **exactly once in
   the whole 39-page document** ~~and disposes of all 792~~ → **CORRECTED session 46 (2026-07-27): it
-  disposes of **761** of the 792. The other 31 are printed *after* it, each with its own disposition —
+  disposes of ~~761 of the 792~~ → **CORRECTED AGAIN session 48 (2026-07-30): 789 of 820** — both
+  earlier figures were short by the whole of printed sheet 25, which both extractors drop
+  (`projects/no-part/CORRECTION-2026-07-30.md`). The other 31 are printed *after* it, each with its own disposition —
   16 Rule 39.8 dismissals with the IFP status revoked (**3** carrying a Rule 38(a) bar on future filings —
   24-7281, 24-7381, 25-5294; our own script first counted 2), 9 recusals
   ("Justice X took no part"), 4 denials of certiorari *before judgment*, 2 housekeeping motions.
   **None of the 31 is individuated on the merits.** The document's only doors out of the single
   sentence are a Justice's absence, a sanction, a procedural category, or paperwork. The individuation
-  threshold is **not** about wealth (523/761 below it are 5000-series, 22/31 above it) — do not claim
+  threshold is **not** about wealth (551/789 below it are 5000-series, 22/31 above it — re-derived session 48) — do not claim
   it is. Counts, quotations and limits: `etudes/5000-series/THE-SENTENCE.md`; corpus field
   `disposition` via `corpus/dispositions.py`.** A vector built on
   the sentence rather than on the missing reason **needs no stranger's handwriting and attacks nobody's
@@ -47,7 +49,7 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   Salvaged from the vector killed the same night (ORDER LIST, see `discarded.md`). **The finding, verified
   first-hand by the conductor on the Court's own file — counts, not description:** the order list of
   **Monday, 6 October 2025 (ORDER LIST: 607 U.S.)** is **39 pages** and disposes of **882 docket entries**
-  in five sections — ORDERS IN PENDING CASES 43 · **CERTIORARI DENIED 792** · HABEAS CORPUS DENIED 26 ·
+  in five sections — ORDERS IN PENDING CASES 43 · **CERTIORARI DENIED ~~792~~ 820 (session 48)** · HABEAS CORPUS DENIED 26 ·
   MANDAMUS DENIED 11 · REHEARINGS DENIED 10. An entry in the denied list is **a docket number and a party
   caption, nothing else** — no court below. ~~and the phrase "in forma pauperis" appears **zero times in the
   whole document**~~ → **CORRECTED session 45 (2026-07-26): that claim is FALSE. The phrase appears 14
@@ -57,7 +59,7 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   first finds all 14. The corrected fact is sharper than the error: **the document has a word for these
   people and spends it only on taking the status away** — the 545 granted IFP are never named as poor.
   Verified first-hand in session 45; full quotations, counts and the reproduction command:
-  `etudes/5000-series/README.md`. And: **545 of the 792 denials (68.8%) carry a 5000-series docket number.** The
+  `etudes/5000-series/README.md`. And: ~~545 of the 792 denials (68.8%)~~ **573 of the 820 denials (69.9%, corrected session 48) carry a 5000-series docket number.** The
   Court numbers paid petitions from 1 and *in forma pauperis* petitions from 5,001 — National Archives,
   verbatim: *"in forma pauperis (IFP) cases are numbered in a continuous sequence beginning with 5,001"*,
   all remaining cases *"in a continuous sequence beginning with 1"*, "From 1970 to the present"

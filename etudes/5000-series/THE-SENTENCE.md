@@ -5,6 +5,16 @@ verified first-hand on the Court's own PDF. It contains one correction to this h
 and one finding the correction opened. Material, not a proposal: nothing here is a work, a form or
 an argument for one.*
 
+> **⚑ CORRECTED, session 48 (2026-07-30) — the counts below are short by twenty-eight.** Printed sheet
+> 25 carries twenty-eight certiorari-denied entries and is dropped in full by both of this house's
+> extractors, which share one line-break convention; the page prints them and the eye confirms them.
+> **CERTIORARI DENIED 792 → 820 · disposed of by the single sentence 761 → 789 · individuated after it
+> 31, unchanged · 5000-series 545/792 = 68.8 % → 573/820 = 69.9 %** (before the sentence 551/789 =
+> 69.8 %, after it 22/31 = 71.0 %, so the finding that the threshold is not about wealth survives its
+> own correction). Every count on this page is superseded by
+> `projects/no-part/CORRECTION-2026-07-30.md`; the figures there are re-derived from
+> `projects/no-part/build/rows.json`.
+
 ## The correction
 
 Sessions 44 and 45 recorded, and this house asserted in four places, that the sentence
