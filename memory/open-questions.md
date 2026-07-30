@@ -393,3 +393,20 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   (`etudes/ji-2026-002/harness/capture.js`) drives a page headlessly and captures frames; a
   still-frame gate for the first étude of the sorting-seat campaign should be built on it rather
   than invented again, and it must read *computed style and pixels*, not the DOM's intentions.
+- **Banked, not opened — a document that declares its own tier on its own face (public seed,
+  session 49, 2026-07-30).** *AI 2040: Plan A*, <https://ai-2040.com> (retrieved 2026-07-30; authors
+  named on the page: Thomas Larsen, Romeo Dean, Brendan Halstead, Eli Lifland, Ryan Greenblatt, Daniel
+  Kokotajlo). A long scenario in which superintelligence is delayed to 2040 by an international
+  agreement built on total research transparency — and, in the site's own words, *"Plan A is primarily
+  a recommendation, not a prediction. This scenario is not our best guess as to what the future will
+  actually look like. Instead, it's a vehicle for communicating and stress-testing our policy
+  recommendations."* The scenario is not what is banked. **The banked object is the self-declaration:**
+  a document that marks its own IMAGINED tier, at length, in the policy register, written by people who
+  gain nothing aesthetic by doing it — this studio's cardinal rule performed by somebody else, without
+  a studio. Declined as an opening under the one-project-in-flight law and answered in `REQUESTS.md`.
+  **What a later session inherits, so it does not re-derive it:** the two things that would have to
+  exist before this opens anything here are (a) a form in which the tier declaration is *experienced*
+  rather than quoted — reading the site already does the quoting better than any work could — and
+  (b) stakes a stranger recognises inside a minute, which is the hard one, because a policy scenario's
+  stakes are by construction not yet anybody's. Note the standing trap: the nearest bad work here is an
+  essay in a costume, and this house has a rule against exactly that.

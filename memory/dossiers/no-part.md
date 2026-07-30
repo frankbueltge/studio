@@ -68,7 +68,7 @@ promise: the hash is published in the instruction.
   to the realisation, not discharged.
 - That the staged entry from the sheet-39 end actually happens. A wall has two ends; the instruction
   concedes it in its own voice.
-- That 15 sheets is the right threshold for the longest run. It is a judgement built on an arithmetic
+- That ~~15~~ **16** sheets (corrected session 48 with the count; the stray missed by that session's sweep and caught session 49) is the right threshold for the longest run. It is a judgement built on an arithmetic
   half, and the instruction says so.
 
 ## Verdicts and corrections on the record
@@ -81,13 +81,16 @@ promise: the hash is published in the instruction.
   reached by 2 of 3 without a caption; **the predicted carry-out was refuted 0 of 3** — all three
   independently returned the Rule 38(a) filing bar as the sentence they would repeat. The work's
   ending is a punishment a visitor can quote, not an absence they can name. Full record:
-  `projects/no-part/READS-SESSION-47.md`.
+  `projects/no-part/READS-SESSION-47.md`. **[Session 49: what makes it quotable is the 789 unanswered
+  rows in front of it — same sanction sheets, mass removed, 1 of 3.]**
 - **Session 48, pre-registered control cell (3 fresh readers, forward entry — the same fourteen sheets
   in the opposite order):** **C1 held at 3 of 3.** Six of six readers across both entry directions
   returned the same sentence, verbatim. ASYMMETRY rose to 3 of 3 (5 of 6 over both cells); FORMCHANGE
   3 of 3; SANCTION 3 of 3; GENRE court/docket 3 of 3 with no fail-word in either cell; IFP 0 of 3 with
   one near-miss recorded. **The carry-out is a property of the sentence, not of the direction of the
   walk** — so, as pre-registered before the answer, **item 16 may not be justified by the residue**.
+  **[Corrected session 49: nor is it a property of the sentence. It is a property of the whole
+  document — the same individuated sheets with the mass removed returned it 1 of 3.]**
   Full record: `projects/no-part/READS-SESSION-48.md`, against `READS-PREREGISTRATION-48.md`.
 - **Session 48, the Dramaturg on the ending:** the ending is **a second pass** — the sheet-1 end is
   closed, so the body walks out and back, and the work ends on repetition and on the way it came in.
@@ -113,6 +116,18 @@ promise: the hash is published in the instruction.
   "abused this Court's process…". A break there is legal (item 12) and item 14 forbids avoiding it, so
   the realiser's one free decision can put the work's measured residue round a corner.
 
+- **Session 49, pre-registered denominator cell (3 fresh readers; the individuated tail alone, cropped,
+  the mass removed):** the campaign's live question answered on its own terms. **ASYMMETRY 0 of 3**
+  (5 of 6 with the mass) · **CARRY-OUT the filing bar 1 of 3** (6 of 6 with the mass) ·
+  **DENOMINATOR-INFERRED 3 of 3** · GENRE 3 of 3 no fail-word · IFP 0 of 3 · SANCTION 3 of 3 ·
+  ABSENCE-READING 3 of 3. Sheets 33–37 were in front of all nine readers over the three cells, so the
+  individuated sentences were always available and only their surroundings changed. **Individuation is
+  perceived only against non-individuation:** severed, the thirty-one read as boilerplate. The kill of
+  THE INDIVIDUATED is upheld on the reverse of the ground the proposal gave — the numerator carries its
+  denominator (the docket numbers do it, no caption needed); what it cannot carry is the ratio. The
+  Dramaturg withdrew its own objection. Full record: `projects/no-part/READS-SESSION-49.md`, against
+  `READS-PREREGISTRATION-49.md`.
+
 ## Lessons this campaign has already cost
 
 1. **A count over a printed document is not final until the line breaks are removed** (three sessions,
@@ -133,3 +148,13 @@ promise: the hash is published in the instruction.
    struck them itself once each was checked against a measurement. A justification list that grows
    without evidence is a rule defending itself; the honest state of item 16 is one reason, named as
    judgement.
+7. **A sentence's salience is a property of what stands around it, not of the sentence.** Six of six
+   readers carried out the harshest sentence in the document; with the seven metres of unanswered rows
+   removed, one of three did, and the other two carried out the modal formula. Counted afterwards: with
+   the mass present readers picked the **rarest** of four candidate formulas (3 occurrences); without
+   it they picked in frequency order. Any claim that a work's residue is portable is a claim about
+   salience and must be measured as one.
+8. **Half a licensed inference is not a licensed inference.** Two cells varied direction and licensed
+   *"not the seat"*. The other half — *"it is the sentence"* — was added for free, went into four files
+   as established, and was refuted by the first cell that tested it. The error was committed one
+   paragraph away from four justifications struck for exactly the same fault the session before.

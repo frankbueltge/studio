@@ -670,7 +670,11 @@ re-running the extractor; they must be read off the rasterised page.
 
 ## 11. Two vectors I considered and killed myself
 
-**THE INDIVIDUATED — killed.** Show only the thirty-one. Thirty-one sheets, or thirty-one lines: every
+**THE INDIVIDUATED — killed.** *[Corrected by measurement, session 49 (2026-07-30): the caption reason
+below is refuted — 3 of 3 readers shown the thirty-one alone inferred a large body behind them with no
+caption at all, from the Court's own docket numbers. The kill is upheld on the reverse ground: severed
+from the mass, the thirty-one are not read as individuated at all. And "761 others" is 789.
+`projects/no-part/READS-SESSION-49.md`.]* Show only the thirty-one. Thirty-one sheets, or thirty-one lines: every
 sentence the Court wrote to one person that Monday, and nothing else. It is the sharpest material in
 the document and it fits any room. **Why it dies:** the finding is a **ratio**, and a work made only of
 the numerator has to assert its denominator in a caption — *"and 761 others got one line between

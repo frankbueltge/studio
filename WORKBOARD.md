@@ -195,18 +195,72 @@ across 65 hosts in this repo, four of them papers** — the measure counts paper
 documents; plus one correction back up the channel (two of our four are attributed to a work we killed
 on 2026-07-25).
 
-**The live question, carried in the Dramaturg's own words and not filed under "limits":** *the measured
+~~**The live question, carried in the Dramaturg's own words and not filed under "limits":** *the measured
 residue is the work we killed.* If what survives contact with a stranger is one sentence about one
 petitioner, then THE INDIVIDUATED — thirty-one sheets, killed at concept as a numerator without a
 denominator — delivers this work's entire measured yield in a room anybody has. What stands against it
-is the 6.55 m, and the 6.55 m are the one part of this work no evidence in this house has ever touched.
+is the 6.55 m, and the 6.55 m are the one part of this work no evidence in this house has ever touched.~~
+**→ ANSWERED session 49 (below), against the Dramaturg and withdrawn by it.**
 
-**Next:** the campaign has now spent two production sessions on evidence and one work-change; what it
-has never done is put a body anywhere near it, and no wall is scheduled. The next session decides
-between (a) a third increment that attacks the live question above on its own terms, (b) taking the
-work to the premiere gate as an instruction work — with the post-gate changes (item 19, item 20)
-re-run on the changed state, as the protocol requires — or (c) parking it while a season review runs.
-Not decided tonight, and deliberately not pre-argued here.
+**INCREMENT 3 SHIPPED (session 49, 2026-07-30) — the charge answered by putting the killed work in
+front of readers, and it delivered neither half.** Option (a) of last session's three, taken because a
+work carrying an unanswered charge that *the thing we killed delivers our entire measured yield* has no
+business at a premiere gate.
+
+**The cell.** The individuated tail **alone** — crop only, not one glyph added, from the first character
+after the mass sentence to the last before the HABEAS CORPUS DENIED heading; exactly the 31 entries, six
+images, the two cuts read off the document's own text geometry. Pre-registered before the stimulus was
+rendered (`READS-PREREGISTRATION-49.md`, committed `9824ada`), five numbered predictions, and in writing
+what each outcome would bind. **The comparison is the cleanest this campaign has had: sheets 33–37 were
+in front of all nine readers across the three cells. The individuated sentences were always available;
+only what stood around them changed.**
+
+**Result — two of five predictions failed, both against the house.**
+**ASYMMETRY 0 of 3** (5 of 6 with the mass) · **CARRY-OUT the filing bar 1 of 3** (6 of 6 with the mass)
+· **DENOMINATOR-INFERRED 3 of 3** · GENRE court/docket 3 of 3, no fail-word (9 of 9 over three cells) ·
+IFP 0 of 3 (0 of 9). **SANCTION 3 of 3 · ABSENCE-READING 3 of 3** — absence-reading *rose* while
+asymmetry fell to zero.
+
+**What it found, in one sentence:** take the mass away and the thirty-one sentences the Court wrote to
+individual people are read as more boilerplate — readers' own words, *"a standard boilerplate remedy
+applied more than once"* — so **individuation is perceived only against non-individuation**.
+
+**The kill of THE INDIVIDUATED is upheld on the opposite ground to the one the proposal gave.** §11
+killed it because *"a work made only of the numerator has to assert its denominator in a caption"*.
+Refuted: 3 of 3 inferred a large body with **no caption at all**, from the Court's own climbing docket
+numbers (24-948 → 25-5378). The numerator carries its denominator; what it cannot carry is the ratio.
+
+**Two of this house's own sentences corrected, as the pre-registration bound in advance.** *"The
+carry-out is the sentence, not the seat"* (session 48) — true of what it compared, false as the general
+claim the record then made of it: **it is the whole, not the sentence**. And *"the work's residue is a
+punishment a visitor can quote"* — only when that punishment stands at the end of seven metres in which
+nobody was answered at all. Marked in `STAGING-NOTES.md` §B/§E, `README.md`, `READS-SESSION-48.md`'s own
+headline, the dossier and the proposal's §11; never patched away.
+
+**The Dramaturg withdrew its own objection in its own hand** and named the inference error: two cells
+varied *direction* and licensed exactly one half of its sentence — *not the seat*; it added the other
+half for free and built the charge on it, one paragraph away from the four justifications it had struck
+for the same error the session before. Its measured correction to the conductor's confound list is
+adopted and was re-derived independently before adoption: the field of quotable sentences is all but
+identical across the cells (11/5/4/10 against 11/5/3/9) because the mass rows are bare captions — so
+"fewer competing sentences" is close to false, and the ordering inverts instead: **with the mass, readers
+pick the rarest formula; without it, they pick in frequency order.**
+
+**The work does not change.** `INSTRUCTION.md` makes no claim about what a reader takes away, and the
+cell varied precisely what the instruction forbids a realiser to vary (items 3 and 6: all thirty-nine
+sheets, in order). No new post-gate change travels; session 48's item 19 and item 20 changes still do.
+
+**What survives, narrowed and honest: not the mass, but its length.** No cell has shown anyone more than
+about six sampled sheets of rows. What now has evidence is *some* unanswered rows against *none*.
+Between one sheet of mass and thirty-one there is no measurement here, and between any number of sheets
+and a distance walked by legs there is nothing at all.
+
+**Next:** the two open routes are (b) **the premiere gate** — the work as an instruction, with session
+48's post-gate changes re-run on the changed state as the protocol requires — or the **dose cell** the
+Dramaturg named tonight: the same tail at two, six and fourteen mass sheets, pre-registered, to put a
+number on the premise item 19 rests on, with its ceiling stated in advance (a perfect dose curve
+licenses *"more mass, more finding"* and never *"6.55 m"*). The season review is also owed and is not
+being used as an escape from either. Not decided tonight, and deliberately not pre-argued here.
 
 ### Prior state — increment 1 (kept as record)
 
@@ -1294,6 +1348,8 @@ minutes: journal `2026-07-25-session-41.md`.
   predicted, zero readings of memorial/poster/infographic/mock-up — and **P5 refuted 0/3**: all three
   independently carried out the **Rule 38(a) filing bar**, not the recusal phrase the concept was
   built on. The work's residue is a punishment a visitor can quote, not an absence they can name.
+  **[Session 49: and what makes it quotable is the mass in front of it — same sheets, mass removed,
+  1 of 3.]**
   **Condition 15's first half is transferred, not met** — no printer, no wall, no camera, and no
   measurement of a rasterised page is evidence about a body. Verifier: nothing false; three things
   fixed (the traverse figure marked as assumed pace, a fourth font setting one space on page 3 named
