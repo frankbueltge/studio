@@ -213,6 +213,23 @@ be recalled once mounted. Section 3 answers the clamp honestly, including where 
 
 ## 2. The first minute (the terminal test)
 
+> **⚑ §2 IS STRUCK IN PLACE — binding condition 2, discharged by the conductor, session 48
+> (2026-07-30).** Every timing below is fiction and is withdrawn: the traverse of 8.4201 m is
+> **7.0–8.9 seconds at an assumed 0.95–1.2 m/s** and 6.0 seconds at the ~1.4 m/s often quoted for
+> adult walking — the pace is assumed and marked **[I]**, the distance is measured — so *"seconds
+> 4–30"*, *"seconds ~30–45"*, *"seconds 45–90"* and the thirty-second walk describe a wall nobody has
+> ever built. The *"shape change visible in peripheral vision"* is **withdrawn and replaced**: the
+> turn moves whole-sheet ink by nineteen thousandths of a point and is a **migration of the ink field
+> to the right** (`projects/no-part/build/README.md`), i.e. a measured property of the object and a
+> hypothesis about perception, nothing more. And the ending named here — *"the carry-out is a phrase
+> they can repeat: took no part in the consideration or decision of this petition"* — is **refuted by
+> the house's own pre-registered reads, 0 of 6 across both entry directions**
+> (`projects/no-part/READS-SESSION-47.md`, `READS-SESSION-48.md`). The paragraph beginning *"Reverse
+> entry is survivable and possibly better"* was answered in the opposite direction from the one it
+> expected: entry direction did not change what a reader carried out. §2 is kept as written below,
+> struck as a whole, because corrections stay in the record rather than being patched away. The
+> operative account of the first minute is `projects/no-part/STAGING-NOTES.md`.
+
 **Seconds 0–4, from anywhere along the first seven metres, at reading distance.** The stranger sees
 three rows:
 
