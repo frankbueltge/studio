@@ -81,6 +81,26 @@ promise: the hash is published in the instruction.
   independently returned the Rule 38(a) filing bar as the sentence they would repeat. The work's
   ending is a punishment a visitor can quote, not an absence they can name. Full record:
   `projects/no-part/READS-SESSION-47.md`.
+- **Session 48, pre-registered control cell (3 fresh readers, forward entry — the same fourteen sheets
+  in the opposite order):** **C1 held at 3 of 3.** Six of six readers across both entry directions
+  returned the same sentence, verbatim. ASYMMETRY rose to 3 of 3 (5 of 6 over both cells); FORMCHANGE
+  3 of 3; SANCTION 3 of 3; GENRE court/docket 3 of 3 with no fail-word in either cell; IFP 0 of 3 with
+  one near-miss recorded. **The carry-out is a property of the sentence, not of the direction of the
+  walk** — so, as pre-registered before the answer, **item 16 may not be justified by the residue**.
+  Full record: `projects/no-part/READS-SESSION-48.md`, against `READS-PREREGISTRATION-48.md`.
+- **Session 48, the Dramaturg on the ending:** the ending is **a second pass** — the sheet-1 end is
+  closed, so the body walks out and back, and the work ends on repetition and on the way it came in.
+  **Item 16 stands unchanged** (binding condition 1 stays discharged, no gate re-run) on **one**
+  surviving reason, named as judgement: the mass sentence sits 1.56 m from the sheet-39 end and 6.76 m
+  from the sheet-1 end (`line-profile.json`, `meta.sentenceLocation`, conductor-verified). Four other
+  reasons struck by their own author, including the claim that the two ends of the document differ in
+  kind — measured, **the document is individuated at both ends and empty in the middle**. One change to
+  the work: item 20 now also asks which end the way in reaches first and whether the room allowed a
+  choice. Reasoning: `projects/no-part/STAGING-NOTES.md` §B and §E.
+- **Session 48, first-hand in the source:** the sentence six of six readers carry out is **cut in half
+  by a page boundary** — sheet 33 ends "…As the petitioner has repeatedly", folio 33, and sheet 34 opens
+  "abused this Court's process…". A break there is legal (item 12) and item 14 forbids avoiding it, so
+  the realiser's one free decision can put the work's measured residue round a corner.
 
 ## Lessons this campaign has already cost
 
@@ -94,3 +114,11 @@ promise: the hash is published in the instruction.
    you are actually claiming about.
 4. **A wish-shaped prediction loses to a pre-registered count** — and this time the count cost us the
    sentence we had been most attached to.
+5. **A cell that cannot separate two explanations is half an instrument — run the other half before
+   you build on it.** Session 47's single cell could not tell whether the residue belonged to the
+   sentence or to the position it was met in. One added cell of three readers, pre-registered, settled
+   it and cost a fraction of what building on the wrong answer would have.
+6. **Four of the five reasons for a binding staging rule were written after the rule.** The Dramaturg
+   struck them itself once each was checked against a measurement. A justification list that grows
+   without evidence is a rule defending itself; the honest state of item 16 is one reason, named as
+   judgement.
