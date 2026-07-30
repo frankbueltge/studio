@@ -12,6 +12,11 @@ pre-registration.*
 away the same sixty-two-word punishment — and the house's staged entry direction is not what puts it
 there.**
 
+> **[Corrected session 49: nor is it the sentence. It is the whole.** The same individuated sheets,
+> with the mass removed, returned that punishment 1 of 3. This cell varied the direction and licensed
+> exactly one half of the headline above — *not the seat*; the other half was added for free and is
+> refuted. `READS-SESSION-49.md`.**]**
+
 | Prediction (fixed in advance) | Predicted | Measured | Result |
 |---|---|---|---|
 | **C1** CARRY-OUT is the Rule 38(a) filing bar | ≥ 2 of 3 | **3 of 3** | pass |

@@ -59,8 +59,9 @@ noticed the register change; 0 of 3 named the docket-number convention (as predi
 for *memorial*, *poster*, *infographic* or *mock-up*. And **3 of 3 independently returned the same
 sentence** as the one they would repeat to somebody else — the Rule 38(a) filing bar, the Court's
 harshest individuated sentence — against a prediction of the recusal phrase. The work's residue is a
-punishment a visitor can quote, not an absence they can name. Details and full answers:
-`READS-SESSION-47.md`.
+punishment a visitor can quote, not an absence they can name — **and session 49 measures what makes it
+quotable: the 789 unanswered rows in front of it. Same sanction sheets, mass removed, 1 of 3.**
+Details and full answers: `READS-SESSION-47.md`.
 
 **Carried, not re-derived tonight** — flagged because the Verifier could not reproduce them from this
 increment's own tooling, and an unflagged carried figure is how a house's record drifts: the **row
@@ -108,7 +109,7 @@ sheet 25 — 761 becomes 789, 792 becomes 820. `CORRECTION-2026-07-30.md`.**
 
 | File | What it is |
 |---|---|
-| `READS-PREREGISTRATION-48.md` · `READS-SESSION-48.md` | The control cell: the same fourteen sheets in the opposite order, pre-registered before any stimulus was inspected, then three fresh severed readers in full. **6 of 6 readers across both entry directions carry out the same sentence** — so the residue belongs to the sentence, not to the staging, and item 16 may not be justified by it. |
+| `READS-PREREGISTRATION-48.md` · `READS-SESSION-48.md` | The control cell: the same fourteen sheets in the opposite order, pre-registered before any stimulus was inspected, then three fresh severed readers in full. **6 of 6 readers across both entry directions carry out the same sentence** — so the residue does not belong to the staging; ~~it belongs to the sentence~~ **session 49 shows it does not belong to the sentence either. It belongs to the whole.** Item 16 may not be justified by it. |
 | `CORRECTION-2026-07-30.md` | The count corrected: 792 → 820, 761 → 789, and how the first corrected figure was itself wrong. |
 | `build/extract-rows.py` · `build/rows.json` | The re-derivation the Verifier asked for, by an independent path — the PDF's own cross-reference streams and page tree, not byte patterns. The row pitch is a two-cluster distribution, not the carried constant. |
 | `STAGING-NOTES.md` §B, §E | The ending, named; four of item 16's five justifications struck by their author. |
@@ -131,12 +132,24 @@ sheet 25 — 761 becomes 789, 792 becomes 820. `CORRECTION-2026-07-30.md`.**
    in one place: item 20 now asks which end the way in reaches first.
 4. Whatever a realiser returns, if a wall ever exists (`INSTRUCTION.md` item 20) — which, since
    Frank's answer of 2026-07-28, is not scheduled.
-5. **The live question, in the Dramaturg's own words and not filed under "limits":** the measured
+5. ~~**The live question, in the Dramaturg's own words and not filed under "limits":** the measured
    residue is the work we killed. If the one thing that survives contact with a stranger is a single
    sentence about a single petitioner, then THE INDIVIDUATED — thirty-one sheets, killed at concept
    for being a numerator without a denominator — delivers this work's entire measured yield in a room
    anybody has. What stands against it is the 6.55 m, and the 6.55 m are the one part of this work no
-   evidence in this house has ever touched.
+   evidence in this house has ever touched.~~ **ANSWERED, session 49, against the Dramaturg, and
+   withdrawn by it.** The residue is not portable: removing the mass drops the carry-out from 6 of 6 to
+   1 of 3 and the asymmetry from 5 of 6 to 0 of 3, on the same individuated sheets. What remains
+   untouched is not the mass but **its length** — no cell has ever shown anyone more than about six
+   sampled sheets of rows. `READS-SESSION-49.md`.
+
+## What increment 3 is (session 49, 2026-07-30)
+
+| File | What it is |
+|---|---|
+| `READS-PREREGISTRATION-49.md` · `READS-SESSION-49.md` | The denominator cell: the individuated tail alone, cropped from the same rendered sheets, pre-registered before the stimulus was rendered, then three fresh severed readers in full. Two of five predictions failed, both against the house. **ASYMMETRY 0 of 3 · CARRY-OUT 1 of 3 · DENOMINATOR-INFERRED 3 of 3.** |
+| `build/crop-tail-49.js` · `build/row-geometry.py` · `reads-49/stimulus/` | The stimulus and how it was cut — crop only, the two cut positions read off the document's own text geometry, the four whole sheets byte-identical to the rendered originals. |
+| `STAGING-NOTES.md` §B, §E and the second objection | The corrections the cell forced, and the objection withdrawn by its author. |
 
 ## Licence and dependencies
 

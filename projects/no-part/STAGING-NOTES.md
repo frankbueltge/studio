@@ -132,9 +132,14 @@ worth.** **[I]**
 
 **Struck — the residue.** §2 of the proposal built the ending on *"took no part in the consideration or
 decision of this petition"* and this section leaned on it. Six severed readers, two cells, both entry
-directions, returned the Rule 38(a) filing bar instead, verbatim and identically. The carry-out is a
-property of the sentence, not of the direction of the walk, and **item 16 may not be justified by it** —
-pre-registered before the answer (`READS-PREREGISTRATION-48.md`).
+directions, returned the Rule 38(a) filing bar instead, verbatim and identically. ~~The carry-out is a
+property of the sentence, not of the direction of the walk~~ **→ CORRECTED, session 49: the carry-out
+is not a property of the direction of the walk — and it is not a property of the sentence either. The
+same three filing-bar sentences, on the same sheets, with the mass removed, were carried out by 1 of 3
+(`READS-SESSION-49.md`). It is a property of the whole document.** **Item 16 may not be justified by
+it**, now for two reasons: the residue does not follow the seat, and it does not belong to the sentence
+that could have been placed at one. Both halves pre-registered before their answers
+(`READS-PREREGISTRATION-48.md`, `READS-PREREGISTRATION-49.md`).
 
 **Struck — "the mass is walked in ignorance and never re-walked with knowledge."** I wrote that last
 session and item 16's own second clause contradicts it: the sheet-1 end is closed — an inside corner,
@@ -283,13 +288,19 @@ way it came in.** **[I]**
 **What the house may claim a visitor carries out — this sentence and no larger one:** *six severed
 readers of fourteen sampled sheets, in both entry directions, with no caption, returned the same
 sentence as the one they would repeat to somebody else — the Court's order that the Clerk not accept
-further petitions from a named person unless he pays.* Nothing in it is about a body in a room, and
-nothing about a body in a room may be added to it.
+further petitions from a named person unless he pays.* **— and a third cell, shown the same
+individuated sheets with the mass removed, returned it 1 of 3 (session 49). The carry-out belongs to
+the whole document, not to the sentence.** Nothing in it is about a body in a room, and nothing about a
+body in a room may be added to it.
 
 **What is lost, said before it is spun.** The residue is one sentence about one man. It does not carry
-the 789. The proposal killed THE INDIVIDUATED (§11) because a numerator without its denominator needs
-a caption — and the measured residue is that numerator. What leaves in the mouth is not what the work
-does to the legs, and the house may not repair the gap with a claim.
+the 789. ~~The proposal killed THE INDIVIDUATED (§11) because a numerator without its denominator needs
+a caption — and the measured residue is that numerator.~~ **→ CORRECTED, session 49. The §11 ground is
+refuted: 3 of 3 readers shown the thirty-one alone inferred a large body behind them with no caption at
+all, from the Court's own docket numbers (24-948 → 25-5378). The kill is upheld on the reverse ground —
+severed from the mass, the thirty-one are not read as individuated at all (ASYMMETRY 5 of 6 with the
+mass, 0 of 3 without), and the residue goes with them (6 of 6 → 1 of 3).** What leaves in the mouth is
+not what the work does to the legs, and the house may not repair the gap with a claim.
 
 **What the evidence does support.** SANCTION 6 of 6; ASYMMETRY 5 of 6; GENRE 6 of 6 with no fail-word;
 IFP 0 of 6. What readers **describe** is an institution that answers at scale and speaks to a person
@@ -341,11 +352,30 @@ and the objection is against their sum, which is where I cannot check my own wor
 in a room and tried to solve this. It is settled by a floor plan and a tape measure, and the first
 realiser will settle it in an afternoon.
 
-**And a second one, arrived at by measurement rather than by argument: the residue is the work we
-killed.** THE INDIVIDUATED was killed (proposal §11) because a work made only of the thirty-one
+**~~And a second one, arrived at by measurement rather than by argument: the residue is the work we
+killed.~~ → ANSWERED, session 49, against its author — the residue is NOT the work we killed.** The
+objection is kept below exactly as it was written, because a withdrawn objection that vanishes teaches
+nothing. THE INDIVIDUATED was killed (proposal §11) because a work made only of the thirty-one
 individuated dispositions is a numerator that needs a caption to supply its denominator. Six of six
 severed readers took that numerator out of the room and left the denominator on the wall. If what
 survives contact with a stranger is the one sentence, then thirty-one sheets — which fit any room and
-need no 8.42 m — deliver the same residue at a fraction of the cost, and the 6.3 m are a conviction of
-ours that no evidence supports. I can answer this for a reader of images, who has no legs and about
-whose legs the whole work is a claim. **I cannot answer it for a body, because none has walked it.**
+need no 8.42 m — deliver the same residue at a fraction of the cost, and the ~~6.3 m~~ **6.55 m** are a
+conviction of ours that no evidence supports. I can answer this for a reader of images, who has no legs
+and about whose legs the whole work is a claim. **I cannot answer it for a body, because none has
+walked it.**
+
+> **Withdrawn by its author, session 49, on measurement it asked for.** The thirty-one were put in
+> front of three readers with nothing else: they delivered neither the finding (ASYMMETRY 0 of 3) nor
+> the residue (CARRY-OUT 1 of 3, against 6 of 6). Six of six took the numerator out of a room that
+> still had the denominator in it. With the denominator gone, one of three did. What the objection got
+> wrong is what it assumed without measuring — that a sentence's salience is a property of the
+> sentence. It is a property of what stands around it: with the mass present, readers picked the
+> **rarest** of the four formulas on those sheets (the filing bar, 3 occurrences); with it gone, all
+> three picked in frequency order — the modal denial (11), the Rule 39.8 dismissal (5), the bar (3).
+> **[S]**, counted from the source by the house's own extractor and re-derived by the conductor.
+> **And what survives, narrowed and still unanswered: not the mass, but its length.** Nobody in this
+> house has ever been shown 6.55 m of anything — the mass cells showed about six sampled sheets. What
+> now has evidence is *some* unanswered rows against *none*. Between one sheet of mass and thirty-one
+> there is no measurement here, and between any number of sheets and a distance walked by legs there is
+> nothing at all. The design that would touch it is named in the journal (a dose cell); the metres are
+> reached by one mounting and one person who stopped early, and by nothing else.

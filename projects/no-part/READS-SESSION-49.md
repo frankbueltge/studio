@@ -160,9 +160,26 @@ returned.
 
 1. **The mass is not the only thing that changed.** The stimulus is six images against fourteen, and
    one clause of the framing changed with it (*"Some intermediate pages are skipped"* →
-   *"Some pages are cropped"*, because nothing was skipped and two pages were cropped). A shorter
-   sitting with fewer sentences competing for Q5 is a rival explanation for the carry-out result and
-   is not excluded by this cell.
+   *"Some pages are cropped"*, because nothing was skipped and two pages were cropped). Both remain
+   rival explanations for the carry-out result and are not excluded by this cell.
+   ~~A shorter sitting with fewer sentences competing for Q5 is a rival explanation.~~
+   **→ STRUCK the same session, by the Dramaturg, on a count the conductor then re-derived
+   independently. It is close to false.** The field of quotable sentences is all but identical,
+   because the mass rows carry no disposition text at all — they are bare captions:
+
+   | candidate sentence | 47/48 stimulus (14 sheets) | 49 stimulus (tail crop) |
+   |---|---:|---:|
+   | *"The petition for a writ of certiorari is denied."* | 11 | 11 |
+   | the *in forma pauperis* / Rule 39.8 dismissal | 5 | 5 |
+   | the Rule 38(a) filing bar | 4 | 3 |
+   | *"took no part in the consideration"* | 10 | 9 |
+   | the mass sentence | 1 | **0** |
+
+   What was removed is the rows and the one sentence that answers them — not the competition. And the
+   ordering inverts: with the mass present, six of six readers picked the **rarest** of the four
+   formulas; with it gone, all three picked in **frequency order** — A the modal denial (11), C the
+   dismissal (5), B the bar (3). *The mass is what makes an exception legible as an exception*, which
+   is the same finding as the asymmetry collapse, arriving from the other side.
 2. **Three readers do not measure an effect size.** 1 of 3 against 6 of 6 is a difference the cell can
    report and cannot size. The pre-registration forbade effect-size claims in advance and the
    prohibition holds tonight, when the result happens to favour the house.
