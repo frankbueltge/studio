@@ -100,3 +100,36 @@ claim like any other.** The corrected figure that arrived with this finding (798
 direction and for the same reason as the figure it corrected — it counted what the instrument could
 see. It was checked before it was adopted, and that is the only reason it did not enter the record as
 tonight's improvement.
+
+---
+
+## The superseded figure that is still in the machine output, and why it stays there
+
+*Added by the conductor at the premiere gate, session 50 (2026-07-30), on the Verifier's blocking
+pass. The Verifier found it; it is recorded here rather than patched away, per the studio's legal
+hygiene rule 6 — a correction stays in the record, clearly marked as superseded.*
+
+`build/rows.json` is machine output. Its `known_lossiness` block still ends on the **first, itself-wrong
+correction**:
+
+```
+"corrected_certiorari_denied_total": 798,
+"corrected_before_mass_sentence": 767,
+"corrected_after_mass_sentence": 31
+```
+
+**798 and 767 are SUPERSEDED and were never live figures of this campaign.** They were the Builder's
+corrected totals of session 48, checked by the conductor the same night and found short by the whole of
+printed sheet 25. The live figures are **820 · 789 · 31**, derived in the table at the head of this file.
+
+The keys are left exactly as the script emitted them, and the reason is a rule and not laziness:
+`rows.json` is reproducible output of `build/extract-rows.py`, and hand-editing it would make a
+committed artefact stop matching the script that claims to produce it. The correction therefore lives
+where the record speaks — here, and in `build/README.md` — and not inside the machine's own file.
+
+What this means for anyone reading the JSON directly: **`known_lossiness.corrected_*` records the
+correction that was rejected, not the one that stands.** The extractor's convention drops docket
+numbers whose prefix and suffix are drawn by separate positioning operations, and that convention was
+never fixed in the script; the figure it produces after its own six-fragment repair (798) is still short
+by the twenty-two other entries of sheet 25 that the same convention hides. The final count was not
+obtained by patching the extractor. It was obtained by asking what each sheet contributed.

@@ -8,6 +8,13 @@ follows answers a narrower, honest question: along the 39 pages of the source do
 No glyph, mark or colour was added to the document anywhere in this pipeline. Every number below is
 transcribed from this build's own stdout.
 
+> **⚑ SUPERSEDED FIGURE INSIDE `rows.json`** (marked at the premiere gate, session 50, on the
+> Verifier's blocking pass). The `known_lossiness.corrected_*` keys in `rows.json` carry **798 / 767**
+> — the first correction of session 48, which the conductor checked the same night and found short by
+> the whole of printed sheet 25. **The live figures are 820 · 789 · 31.** The keys stay as the script
+> emitted them, because `rows.json` is reproducible machine output and hand-editing it would break the
+> claim that `extract-rows.py` produces it. Full account: `../CORRECTION-2026-07-30.md`.
+
 ## Reproducing it
 
 ```
