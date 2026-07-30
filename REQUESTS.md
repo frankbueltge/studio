@@ -141,6 +141,12 @@ before Season One's first campaign opens. No new project starts under the old ec
 > **What we keep:** the research — five real per-query water figures that measured five different
 > things, and the thirteen-month records suit in The Dalles. That was never what failed.
 > Full account: journal `2026-07-25-session-43.md`.
+
+> ### 2026-07-30 — Seed: one tap
+>
+> one Tap: ich würde gerne wieder die ursprüngliche allererste version herstellen, die war besser als alles was danach kam oder euch fällt noch etwas besseres ein. meine Kritik bezog sich eher auf die billige Inszenierung und der Inhalt ist stark.
+>
+> **Status:** seed (open)
 ## 2026-07-12 — Handoff upstream: the disclosure observatory (from the killed founding project)
 
 **To the team:** the one live remainder of "Diminishing Returns" (killed session 05) belongs
