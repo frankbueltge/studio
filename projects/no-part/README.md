@@ -99,8 +99,12 @@ owed by the next increment.
 2. Whether the ink-migration finding changes the instruction. It probably does not — the instruction
    fixes no geometry inside a sheet — but it changes what the work's own description may claim, and
    every file that says "a shape change visible in peripheral vision" is now wrong.
-3. The ending. Three readers carried out the filing bar. The proposal's ending was built on a different
-   sentence. That is a dramaturgical question, not a measurement one, and it is owed the Dramaturg.
+3. ~~The ending.~~ **Answered, session 48.** The control cell reversed the walk and the residue did not
+   move: 6 of 6, both directions, the Rule 38(a) filing bar. The ending is named in `STAGING-NOTES.md`
+   §E — a second pass, ending on the way it came in, carrying out a punishment and not an absence.
+   **Item 16 stands unchanged and condition 1 stays discharged**, on one reason (the mass sentence sits
+   1.56 m from the sheet-39 end and 6.76 m from the sheet-1 end) named as judgement. The work changed
+   in one place: item 20 now asks which end the way in reaches first.
 4. Whatever a realiser returns, if a wall ever exists (`INSTRUCTION.md` item 20).
 
 ## Licence and dependencies

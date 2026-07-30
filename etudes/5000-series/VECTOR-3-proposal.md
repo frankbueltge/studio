@@ -35,6 +35,15 @@
 > ILLINOIS` (sheet 1) and its last is `24-7094 STORY, SHONTERIA V. FLORIDA` (sheet 39) — both read off
 > the rendered sheets by the conductor, session 47 (condition 5).
 >
+> **STRUCK — the ending (sessions 47–48).** ~~§2's *"Seconds 45–90 — the ending… The carry-out is a
+> phrase they can repeat: took no part in the consideration or decision of this petition"*~~, and
+> ~~§11's use of that residue to keep the CONSIDERATION finding inside the work~~. Six severed readers,
+> two pre-registered cells, both entry directions, returned the **Rule 38(a) filing bar** verbatim and
+> identically as the sentence they would repeat; none returned the recusal phrase or the certiorari
+> sentence. The residue is a punishment a stranger can quote, and it is **invariant to the direction of
+> the walk**. `projects/no-part/READS-SESSION-47.md`, `READS-SESSION-48.md`,
+> `READS-PREREGISTRATION-48.md`, and the ending as it actually is in `STAGING-NOTES.md` §E.
+>
 > **STRUCK — the completing-act claim (condition 8).** §3b's "There *is* a completing act" and its
 > 7a/7b/7c accounting are withdrawn. The seat is **witness**, without qualification. The realiser's
 > break is authorship — it is not a completing act, and no visitor completes anything.

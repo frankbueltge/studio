@@ -1,9 +1,11 @@
 # NO PART — staging notes
 
-*Dramaturg, session 47 (2026-07-27). The reasoning behind `INSTRUCTION.md`. Tiers inline: **[S]**
-measured or fetched first-hand with a retrievable source; **[I]** this studio's own staging and
-judgement, asserting no fact. Written under the sixteen conditions of session 46; the conditions that
-bear on this file are named where they bite.*
+*Dramaturg, sessions 47–48 (written 2026-07-27, revised 2026-07-30 after the control cell). The
+reasoning behind `INSTRUCTION.md`. Tiers inline: **[S]** measured or fetched first-hand with a
+retrievable source; **[I]** this studio's own staging and judgement, asserting no fact. Written under
+the sixteen conditions of session 46; the conditions that bear on this file are named where they
+bite. Section B was rewritten on 2026-07-30 and four of its five arguments were struck by their
+author.*
 
 **Checked tonight, on the artefact itself** (standing rule (a)): `projects/no-part/order-list.pdf`
 hashes to `354c9ba8…6c652`, contains exactly 39 page objects, and every one declares
@@ -97,31 +99,55 @@ people"* is an interpretation we would be adding, and neither the instruction no
 
 ## B. Entry from the sheet-39 end
 
+**Item 16 stands, and its justification is one reason instead of five. The other four are struck
+below, in my own hand.**
+
 **What the instruction may legitimately do.** It cannot make a stranger walk in a direction. It can
-site the work in a room. Those are different acts, and the second is available without adding a mark:
+site the work in a room, put the sheet-39 end where the room delivers people (item 16, first clause),
+close the sheet-1 end (second clause), and add nothing to achieve either (item 17). A work that adds
+not one glyph to the document may not add one to the floor. Item 18 concedes on the work's own public
+page that a wall has two ends.
 
-1. **Put the sheet-39 end where the room delivers people** (item 16, first clause) — nearest the door,
-   on the wall a body meets first, at the end of the approach.
-2. **Close the sheet-1 end** (item 16, second clause) — an inside corner, the end of a wall, a dead
-   end — so that no route delivers anyone to sheet 1 first.
-3. **Add nothing to achieve either** (item 17) — no arrow, no floor mark, no rope, no attendant saying
-   *start over there*. A work that adds not one glyph to the document may not add one to the floor.
+**The one reason left, and it is measured.** The single sentence that disposes of 761 petitions
+occupies 6757.75–6860.75 mm along the line as the profile measures it (8,424 mm; the instruction's
+geometric figure is 8,420.1 mm at the nominal sheet) — **1.56 m from the sheet-39 end, 6.76 m from the
+sheet-1 end** (`line-profile.json`, `meta.sentenceLocation`). **[S]** A body that abandons the walk
+early has met the work's one event if it entered at sheet 39, and may never meet it if it entered at
+sheet 1. That is an argument about attrition in walking bodies. This house has never observed one, and
+no severed read can address it, because a reader handed fourteen images never abandons the walk.
+**Item 16 is a judgement, it is now a single judgement, and it is worth what an untested judgement is
+worth.** **[I]**
 
-**And it fails, honestly, some of the time.** A wall has two ends. Somebody walks past, doubles back,
-comes in with a colleague from the far side, or simply turns left. Item 18 says so on the work's own
-public page rather than in a note nobody reads.
+**Struck — the residue.** §2 of the proposal built the ending on *"took no part in the consideration or
+decision of this petition"* and this section leaned on it. Six severed readers, two cells, both entry
+directions, returned the Rule 38(a) filing bar instead, verbatim and identically. The carry-out is a
+property of the sentence, not of the direction of the walk, and **item 16 may not be justified by it** —
+pre-registered before the answer (`READS-PREREGISTRATION-48.md`).
 
-**What is lost in the minority case, stated plainly.** At the sheet-39 end the material is the last
-entry of REHEARINGS DENIED — the Court refusing one named person leave to file a rehearing petition
-under seal **[S]**. Then the individuated tail; then, on sheet 32, the one sentence; then roughly
-6.3 m of rows **[S]** which the visitor now knows that sentence covers; ending on the masthead and a
-date. The sentence is a **floor** the body then walks the length of.
+**Struck — "the mass is walked in ignorance and never re-walked with knowledge."** I wrote that last
+session and item 16's own second clause contradicts it: the sheet-1 end is closed — an inside corner,
+the end of a wall, a dead end — so in the rooms item 16 describes the body comes back along the line.
+**The walk is out and back in both directions**, and both re-walk the mass with knowledge. What differs
+is which leg is which.
 
-Entering at sheet 1, the same sentence arrives as a **resolution**: it explains, at the far end, what
-all those rows were, and the work is nearly over when it does. The mass is walked in ignorance and
-never re-walked with knowledge. That version is not nothing, and it is not the work either: it fails
-the terminal test, because the last thing the body meets is a verdict rather than a date, and a work
-that ends on its own point ends as an argument. **[I]**
+**Struck — the first encounter.** This section assumed the two ends of the document differ in kind. The
+map corrected in increment 1 says they do not, and the manifest measures it: mean ink in the
+150–190 mm band is 0.0401 / 0.0592 / 0.0597 on sheets 1–3, falls to 0.0038 / 0.0022 / 0.0095 across
+sheets 30–32, and returns at 0.0663 / 0.0861 / 0.0513 / 0.0650 across sheets 33–36
+(`plate-manifest.json`). **[S]** **The document is individuated at both ends and empty in the middle.**
+A body entering at either end meets prose, then rows. Session 48's forward cell scored no worse than
+the reverse cell on any code, which is what that map predicts.
+
+**Struck — the terminal test.** The session-46 gate ruled that *"the left-entry minute fails the
+terminal test"*. Neither cell tested a first minute — every reader saw all fourteen sheets before
+answering — and the one cell that began at sheet 1 named the institution, the date and the genre 3 of 3
+with no fail-word. The claim is unsupported, not refuted, and is not available as a reason.
+
+**The loophole in my own argument.** §A refuses to mount sheet 39 at the left because that would
+present the document backwards, *"and this work's whole discipline is that it re-sets nothing."* Item
+16 then reverses the body instead of the paper and obtains the same reading order from the room. I keep
+item 16 anyway, on the attrition reason alone, and record that the discipline is narrower than §A
+claims: the work does not re-set the **document**; it does stage the **reading**.
 
 **One thing the reverse approach does not fix, and one it does.** Condition 6: `24-1073 MAXWELL,
 GHISLAINE V. UNITED STATES` sits on sheet 5, about 0.9 m from the sheet-1 end **[S]**. Reverse entry
@@ -206,6 +232,18 @@ individuated tail and the coda. To guarantee that, the instruction would have to
 the long run carries, which is authoring the break — the one thing it must not do. So the condition
 stays weak, on purpose, and the weakness is named here rather than hidden in a stronger-sounding rule.
 
+**What the break can now do that no earlier session saw.** The sentence six severed readers carry out
+is **cut in half by a page boundary in the source.** Sheet 33's last printed line ends *"See Rule 39.8.
+As the petitioner has repeatedly"*, the folio **33** sits beneath it, and sheet 34 opens *"abused this
+Court's process, the Clerk is directed not to accept…"* (read off `render/sheet-33.png` and
+`render/sheet-34.png` by the Dramaturg and re-confirmed by the conductor in the source's own content
+streams, session 48 **[S]**; the splice itself is already in the record as the thing that defeated
+`dispositions.py` three times). A break between sheets 33 and 34 is legal under item 12, and item 14
+forbids adjusting the joint to avoid it. **So the realiser's one free decision may put the work's
+measured residue round a corner, with the accusation on one run and the sentence on the next.** Nobody
+chooses that and nobody may choose against it. It is the sharpest available instance of what §A means
+by leaving the joint live.
+
 **What happens below it: the work does not stop.** Item 19 says mount it anyway and record it. An
 instruction that forbids its own realisation in every room that exists has chosen never to be made,
 and condition 9 will not let this house call that courage — it is the safest possible posture, taken
@@ -213,6 +251,44 @@ by a work that is already the safest object this studio could make. So the thres
 boundary, not a permission boundary**: below it the work stands and *we* stop, because no mounting
 under 15 sheets may be used as evidence that a body finds anything in that room. That is condition 15
 made operable in advance of the increment rather than argued after it.
+
+---
+
+## E. The ending
+
+**The ending is a second pass, and what a visitor carries out is a punishment.**
+
+Under item 16 the sheet-1 end is closed, so the walk is out and back. Three movements: ~1.6 m in which
+the document says everything it will ever say to an individual — recusals, Rule 39.8 dismissals, three
+orders barring a named person from filing again — and then, 1.56 m from the end the body entered, the
+one sentence that disposes of 761 petitions **[S]**; then 6.3 m of rows, walked knowing; then sheet 1,
+where the document names itself — *(ORDER LIST: 607 U.S.)*, *MONDAY, OCTOBER 6, 2025* — and the wall
+stops. Then the same 6.3 m again, and out past the sanctions. **The work ends on repetition and on the
+way it came in.** **[I]**
+
+**What the house may claim a visitor carries out — this sentence and no larger one:** *six severed
+readers of fourteen sampled sheets, in both entry directions, with no caption, returned the same
+sentence as the one they would repeat to somebody else — the Court's order that the Clerk not accept
+further petitions from a named person unless he pays.* Nothing in it is about a body in a room, and
+nothing about a body in a room may be added to it.
+
+**What is lost, said before it is spun.** The residue is one sentence about one man. It does not carry
+the 761. The proposal killed THE INDIVIDUATED (§11) because a numerator without its denominator needs
+a caption — and the measured residue is that numerator. What leaves in the mouth is not what the work
+does to the legs, and the house may not repair the gap with a claim.
+
+**What the evidence does support.** SANCTION 6 of 6; ASYMMETRY 5 of 6; GENRE 6 of 6 with no fail-word;
+IFP 0 of 6. What readers **describe** is an institution that answers at scale and speaks to a person
+only to record an absence or to punish. **The finding travels in description; it does not travel in a
+quotation.**
+
+**The ending under no wall.** Frank answered on 2026-07-28: no capacity at present, and he will say if
+that changes (`REQUESTS.md`). So the only body that meets this work is, for now, a reader of an
+instruction, and the ending they reach is item 20 — a record that will not be filed, closing *"it is
+not ours to compose."* Nothing is added about the absent wall. The instruction answers this condition
+once already, in item 19: **the work stands; what stops is us.** Said twice it becomes a complaint, and
+a line of ours about having no wall would supply the emphasis the document withholds — item 9's
+argument applied to the last line of the page. **[I]**
 
 ---
 
@@ -233,8 +309,9 @@ made operable in advance of the increment rather than argued after it.
    15's first increment, and until it exists, item 19 is a judgement wearing a number.
 2. **Whether 1600 mm is head height for the bodies that will stand there.** It is a chosen figure.
    A mounting settles it.
-3. **Whether the room delivers people to the sheet-39 end in practice.** Settled by watching one
-   room, by the realiser, not by us.
+3. **Whether a body that enters at sheet 1 reaches sheet 32 at all.** This is the whole of item 16's
+   remaining case and no reader can settle it — a reader handed fourteen images never abandons the
+   walk. Settled by one mounting and one person who stopped early, and by nothing else.
 4. **Whether the two ends of the document print as I read them.** I decoded content streams; standing
    rule (a) wants a render. Two pages, one build step.
 
@@ -249,3 +326,12 @@ If one, the realiser has not authored a break; they have complied with a constra
 and the objection is against their sum, which is where I cannot check my own work: I have never stood
 in a room and tried to solve this. It is settled by a floor plan and a tape measure, and the first
 realiser will settle it in an afternoon.
+
+**And a second one, arrived at by measurement rather than by argument: the residue is the work we
+killed.** THE INDIVIDUATED was killed (proposal §11) because a work made only of the thirty-one
+individuated dispositions is a numerator that needs a caption to supply its denominator. Six of six
+severed readers took that numerator out of the room and left the denominator on the wall. If what
+survives contact with a stranger is the one sentence, then thirty-one sheets — which fit any room and
+need no 8.42 m — deliver the same residue at a fraction of the cost, and the 6.3 m are a conviction of
+ours that no evidence supports. I can answer this for a reader of images, who has no legs and about
+whose legs the whole work is a claim. **I cannot answer it for a body, because none has walked it.**

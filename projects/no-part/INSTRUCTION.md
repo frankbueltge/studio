@@ -75,8 +75,9 @@ The line is **8,420.1 mm** long. Almost no wall takes it. Where it breaks is you
 ## What comes back
 
 20. The date, the room, the number of runs, each run's length in sheets, the sheet numbers either side
-    of every break, the height as built, and a photograph you made of what is on the wall. That record
-    is the only evidence this work will ever have, and it is not ours to compose.
+    of every break, the height as built, which end of the line the way in reaches first and whether
+    the room allowed a choice, and a photograph you made of what is on the wall. That record is the
+    only evidence this work will ever have, and it is not ours to compose.
 
 ---
 
