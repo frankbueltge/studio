@@ -2,8 +2,9 @@
 
 A print-and-instruction work. The page at `index.html` is the score and the
 stock, not documentation of either — it publishes `projects/no-part/INSTRUCTION.md`
-complete and verbatim (title, epigraph, all twenty numbered items, the `---`
-rule, the closing paragraph), plus a render of the source document at two
+complete and verbatim (title, epigraph, all twenty numbered items, the closing
+paragraph; only the source file's own `---` divider is dropped, a typographic
+mark with no textual content), plus a render of the source document at two
 scales and three of its thirty-nine printed sheets at native resolution. No
 wall has been built. The instruction is the whole of the studio's authorship;
 every glyph the visitor can actually read on any sheet is the Court's, rendered
@@ -24,8 +25,13 @@ with no re-compression, resampling, cropping or metadata stripping:
 Each hash was verified by decoding the embedded `data:` URI back to bytes and
 comparing sha256 against the source file — all four match exactly. The strip's
 ~1 MB payload is embedded exactly once, as a CSS custom property
-(`--strip-url`) referenced by two different elements (the reduced full-bleed
-plate and the native pannable plate), so it is never duplicated in the file.
+(`--strip-url`) referenced by two different elements (the reduced and native
+plates). Sheet 32's payload is likewise embedded exactly once, as a second
+CSS custom property (`--sheet32-url`) referenced by two elements — a
+whole-sheet render shown only below 703px, and the native-scale render shown
+always — so that a screen narrower than the sheet's own sentence still gets
+a readable whole view before the pannable one. Sheets 33 and 34 are each used
+once, as plain `<img>` elements. No payload is ever duplicated in the file.
 
 The document itself — `ORDER LIST: 607 U.S.`, the Supreme Court's order list
 for Monday, 6 October 2025, 39 pages — lives at `projects/no-part/order-list.pdf`,
@@ -45,10 +51,13 @@ horizontally. Nothing on the page makes any external request of any kind.
 
 ## Size
 
-Shipped `index.html` is 1,961,328 bytes (~1.87 MB), against a guideline
-ceiling of 2.2 MB. No `data.json`, no subdirectories, no loose `.png` files
-ship alongside it — the site integrator only copies top-level files, and
-raster assets do not travel unless inlined.
+Shipped `index.html` is 1,962,854 bytes (~1.87 MB). The site's own guideline
+for a work's shipped top-level total is "lean, ≤ ~3 MB" (`SITE-API.md`);
+this page also carries a tighter 2.2 MB ceiling set by the Dramaturg's staging
+ruling for this specific work, not a site-wide figure. Both are comfortably
+met. No `data.json`, no subdirectories, no loose `.png` files ship alongside
+it — the site integrator only copies top-level files, and raster assets do
+not travel unless inlined.
 
 ## The full record
 
