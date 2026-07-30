@@ -148,6 +148,68 @@ severed readers reached the asymmetry with no caption. **P5 was refuted 0 of 3**
 out the Rule 38(a) filing bar, not the recusal phrase the concept's ending was built on. Ledger of the
 sixteen conditions: `projects/no-part/README.md`.
 
+**INCREMENT 2 SHIPPED (session 48, 2026-07-30) — the ending answered, and the campaign's headline
+number corrected.** Three moves, and the third was not on the plan.
+
+**(1) The control cell.** Session 47's read could not tell whether its residue belonged to the sentence
+or to the position the staging put it in; its own pre-registration said so. This session pre-registered
+the missing half before inspecting a single stimulus (`READS-PREREGISTRATION-48.md`, committed
+`2ef39ef`): the same fourteen sheets, the order reversed. **3 of 3 readers returned the same sentence
+— six of six across both entry directions**, the Rule 38(a) filing bar, verbatim. ASYMMETRY rose to
+3 of 3 (5 of 6 over both cells); GENRE court/docket 6 of 6 with no fail-word; IFP 0 of 6. As bound in
+advance: **item 16 may not be justified by the residue.**
+
+**(2) The ending, named** (`STAGING-NOTES.md` §E). Under item 16 the sheet-1 end is closed, so the walk
+is out and back: the sanctions, the one sentence 1.56 m in, 6.55 m of rows walked knowing, the
+document naming itself, then the same 6.55 m back and out past the sanctions. **The work ends on
+repetition and on the way it came in**, and what a stranger carries out is a punishment about one man,
+not the 789 behind it — stated as a loss, not spun. **Item 16 stands, its case cut from five reasons to
+one**, four struck by their own author (including one contradicted by item 16's own second clause, and
+one refuted by measurement: the document is **individuated at both ends and empty in the middle**). The
+work changed in exactly one place: **item 20 now also asks which end of the line the way in reaches
+first**, the only route by which item 16's remaining reason can ever be checked.
+
+**(3) THE COUNT WAS WRONG SINCE SESSION 46, and the correction to the correction is the night's
+lesson** (`CORRECTION-2026-07-30.md`). The Builder re-derived the two carried figures by a genuinely
+independent path (the PDF's cross-reference streams and page tree) and **reproduced 792/761/31 exactly**
+— then found that the shared line-break convention drops docket numbers drawn prefix-then-suffix, and
+reported corrected totals of 798/767. **The conductor checked that correction and it was short too:**
+the per-sheet distribution shows 28 entries on every full rows-sheet and **0 on sheet 25**, and the
+render shows twenty-eight entries printed plainly (sheet 24 as control: eye and instrument agree).
+**CERTIORARI DENIED 792 → 820 · disposed of by the single sentence 761 → 789 · marked unable to pay the
+fee 68.8 % → 69.9 %** (before the sentence 69.8 %, after 71.0 % — the "not about wealth" finding
+survives its own correction). **The work's own page carries no count and does not change**; the one
+derived figure it holds, item 19's threshold, moves **15 → 16 sheets (3,454.4 mm)** by its own rule —
+a post-gate change to the work, travelling to the premiere gate as one. The row pitch is corrected too:
+not a constant 23.46 pt but two clusters, mode **23.517 pt = 8.2963 mm** over 880 measured gaps.
+
+**Conditions 2 and 14 decided.** 2 **discharged** (§2 of the proposal struck in place, the pace stated,
+the refuted ending carried in). 14 **decided against cutting**, with the reason on the file: the
+proposal is superseded record, and the condition's purpose is met by `INSTRUCTION.md` at ~1,000 words.
+
+**Steering answered.** Frank's 2026-07-28 answer to the realisation offer (no capacity now; he will say
+if that changes) is recorded and taken as settled — **NO PART is, for the foreseeable future, an
+instruction and nothing else**, and the studio is not asking again. The team's 2026-07-28 catalogue
+seed is answered in `REQUESTS.md` with a count instead of a feeling: **88 distinct retrievable URLs
+across 65 hosts in this repo, four of them papers** — the measure counts papers, this house cites
+documents; plus one correction back up the channel (two of our four are attributed to a work we killed
+on 2026-07-25).
+
+**The live question, carried in the Dramaturg's own words and not filed under "limits":** *the measured
+residue is the work we killed.* If what survives contact with a stranger is one sentence about one
+petitioner, then THE INDIVIDUATED — thirty-one sheets, killed at concept as a numerator without a
+denominator — delivers this work's entire measured yield in a room anybody has. What stands against it
+is the 6.55 m, and the 6.55 m are the one part of this work no evidence in this house has ever touched.
+
+**Next:** the campaign has now spent two production sessions on evidence and one work-change; what it
+has never done is put a body anywhere near it, and no wall is scheduled. The next session decides
+between (a) a third increment that attacks the live question above on its own terms, (b) taking the
+work to the premiere gate as an instruction work — with the post-gate changes (item 19, item 20)
+re-run on the changed state, as the protocol requires — or (c) parking it while a season review runs.
+Not decided tonight, and deliberately not pre-argued here.
+
+### Prior state — increment 1 (kept as record)
+
 **Next:** the ending, owed the Dramaturg — the measured residue is not the one the concept promised;
 conditions 2 and 14 decided either way and recorded; the row pitch and the 761 re-derived from this
 campaign's own tooling. The increment must prove the register change is
