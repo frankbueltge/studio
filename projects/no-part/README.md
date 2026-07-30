@@ -1,6 +1,14 @@
-# NO PART — increment 1
+# NO PART — increments 1–2
 
-*Session 47, 2026-07-27. The campaign's first production increment. Phase: in production.*
+*Session 47, 2026-07-27 (increment 1) and session 48, 2026-07-30 (increment 2). Phase: in production.*
+
+> **⚑ READ FIRST — `CORRECTION-2026-07-30.md`.** Session 48 found that every count of the
+> certiorari-denied section published by this campaign is short by twenty-eight entries: the whole of
+> printed sheet 25, dropped by two independent extractors that share one line-break convention.
+> **792 → 820 entries; 761 → 789 disposed of by the single sentence; 68.8 % → 69.9 % marked unable to
+> pay the fee.** Where a number below still reads 761 or 792, it is the sentence as written at the time
+> and is superseded. The work's own page carries no count and does not change; item 19's threshold
+> moves from 15 sheets to 16 by its own rule.
 
 **The work.** *ORDER LIST: 607 U.S.* — the order list of the Supreme Court of the United States for
 Monday, 6 October 2025, all thirty-nine pages — printed at 100 % and mounted in reading order, edge to
@@ -80,7 +88,7 @@ sheet 25 — 761 becomes 789, 792 becomes 820. `CORRECTION-2026-07-30.md`.**
 | # | Condition (abbreviated) | State |
 |---|---|---|
 | 1 | Entry staged from the sheet-39 end | **discharged** — `INSTRUCTION.md` 16–18, with the concession in the work's own voice |
-| 2 | §2 re-derived from a stated walking speed, in place | **open** — the traverse figure (7–9 s) is corrected in the proposal's banner; §2 itself is not rewritten |
+| 2 | §2 re-derived from a stated walking speed, in place | **discharged, session 48** — §2 of the proposal is struck in place, with the pace stated (7.0–8.9 s at an assumed 0.95–1.2 m/s, marked **[I]**) and the refuted ending carried into it |
 | 3 | Every false measurement deleted | **discharged as struck**, not as erased — banner at the head of the proposal; none is repeated in any file of this increment |
 | 4 | The map corrected at both ends | **discharged** — banner; geometry in `plate-manifest.json` |
 | 5 | Corpus trace re-run on the document's own first and last elements | **discharged** — `25M1 DOE, JOHN V. ILLINOIS` and `24-7094 STORY, SHONTERIA V. FLORIDA`, read off the rendered sheets |
@@ -90,25 +98,45 @@ sheet 25 — 761 becomes 789, 792 becomes 820. `CORRECTION-2026-07-30.md`.**
 | 9 | Safety is not courage — (b) and (c) conceded in writing | **discharged** — banner |
 | 10 | The still remade as a plate, not a room | **discharged** — `line-strip.png` |
 | 11 | No room-claim resting on an image this house composed | **holds** — asserted and observed in every file |
-| 12 | The 68.8 % stays out of the work | **discharged, now with evidence** — 0 of 3 severed readers reached it |
+| 12 | The 68.8 % stays out of the work | **discharged, now with evidence** — 0 of 6 severed readers over two cells reached it; and the figure itself is now **69.9 %** (`CORRECTION-2026-07-30.md`), which is the second reason it stays out |
 | 13 | The wall carries `PEñA` as the Court set it | **structural** — the work prints the source; nothing to repair |
-| 14 | The proposal cut to under 3,500 words | **open** — the file stands at ~7,500 words; the next session decides whether the cut is still worth making now that the operative documents have moved here |
+| 14 | The proposal cut to under 3,500 words | **decided, session 48: not cut — answered by a different means, and said so rather than quietly dropped.** The file is the concept-phase working document and the house's rule is that corrections stay in the record rather than being patched away; cutting 5,000 words out of a superseded document destroys record and produces no work. What the condition was for — that no bloated document stand as the work's description — is met by the operative files: `INSTRUCTION.md` is the work at ~1,000 words, and the proposal now opens with a banner naming itself superseded, plus a struck §2 |
 | 15 | The increment must prove two things | **split**: the perceptibility half is **transferred to the realisation** (untestable here, stated rather than faked); the cold-reader half is **met in its reduced form** (2 of 3, sampled pages, no walk) |
 | 16 | The record states this vector does not discharge the season's affirmative question | **discharged** — stated on `WORKBOARD.md` and repeated here |
 
+## What increment 2 is (session 48, 2026-07-30)
+
+| File | What it is |
+|---|---|
+| `READS-PREREGISTRATION-48.md` · `READS-SESSION-48.md` | The control cell: the same fourteen sheets in the opposite order, pre-registered before any stimulus was inspected, then three fresh severed readers in full. **6 of 6 readers across both entry directions carry out the same sentence** — so the residue belongs to the sentence, not to the staging, and item 16 may not be justified by it. |
+| `CORRECTION-2026-07-30.md` | The count corrected: 792 → 820, 761 → 789, and how the first corrected figure was itself wrong. |
+| `build/extract-rows.py` · `build/rows.json` | The re-derivation the Verifier asked for, by an independent path — the PDF's own cross-reference streams and page tree, not byte patterns. The row pitch is a two-cluster distribution, not the carried constant. |
+| `STAGING-NOTES.md` §B, §E | The ending, named; four of item 16's five justifications struck by their author. |
+
 ## What the next increment owes
 
-1. Conditions 2 and 14, decided either way and recorded.
-2. Whether the ink-migration finding changes the instruction. It probably does not — the instruction
-   fixes no geometry inside a sheet — but it changes what the work's own description may claim, and
-   every file that says "a shape change visible in peripheral vision" is now wrong.
+1. ~~Conditions 2 and 14, decided either way and recorded.~~ **Done, session 48** — see the ledger
+   above: 2 discharged, 14 decided against cutting, with the reason on the file.
+2. ~~Whether the ink-migration finding changes the instruction.~~ **Answered, session 48: it does
+   not.** The instruction fixes no geometry inside a sheet and there is nothing to restage. What it
+   changed is what may be said: the work has **no foreshadowing** — nothing announces the turn at any
+   distance — which retires the last version of the arc in which a body sees something coming, and
+   turns items 9–11 (one height, one plane, no aimed light) from taste into the delivery mechanism.
+   `STAGING-NOTES.md` §D.
 3. ~~The ending.~~ **Answered, session 48.** The control cell reversed the walk and the residue did not
    move: 6 of 6, both directions, the Rule 38(a) filing bar. The ending is named in `STAGING-NOTES.md`
    §E — a second pass, ending on the way it came in, carrying out a punishment and not an absence.
    **Item 16 stands unchanged and condition 1 stays discharged**, on one reason (the mass sentence sits
    1.56 m from the sheet-39 end and 6.76 m from the sheet-1 end) named as judgement. The work changed
    in one place: item 20 now asks which end the way in reaches first.
-4. Whatever a realiser returns, if a wall ever exists (`INSTRUCTION.md` item 20).
+4. Whatever a realiser returns, if a wall ever exists (`INSTRUCTION.md` item 20) — which, since
+   Frank's answer of 2026-07-28, is not scheduled.
+5. **The live question, in the Dramaturg's own words and not filed under "limits":** the measured
+   residue is the work we killed. If the one thing that survives contact with a stranger is a single
+   sentence about a single petitioner, then THE INDIVIDUATED — thirty-one sheets, killed at concept
+   for being a numerator without a denominator — delivers this work's entire measured yield in a room
+   anybody has. What stands against it is the 6.55 m, and the 6.55 m are the one part of this work no
+   evidence in this house has ever touched.
 
 ## Licence and dependencies
 
