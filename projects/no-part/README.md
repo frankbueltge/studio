@@ -59,7 +59,9 @@ increment's own tooling, and an unflagged carried figure is how a house's record
 pitch of 23.46 pt = 8.276 mm** and the **761 rows** disposed of by the single sentence, both from
 session 46's positional extraction of the source. The unit conversion checks out and everything
 downstream of it computes; the base figures are session 46's, and re-deriving them from `build/` is
-owed by the next increment.
+owed by the next increment. **→ Paid, session 48, and both figures were wrong: the pitch is a
+two-cluster distribution (mode 23.517 pt = 8.2963 mm) and the count was short by the whole of printed
+sheet 25 — 761 becomes 789, 792 becomes 820. `CORRECTION-2026-07-30.md`.**
 
 ## What is NOT established, and may not be claimed
 
@@ -70,7 +72,8 @@ owed by the next increment.
 - **That the ink migration is visible without reading.** It is a measured property of the object and a
   *hypothesis* about perception. Settled by one mounting and one photograph the studio did not compose.
 - **That a stranger enters from the sheet-39 end.** A wall has two ends; the instruction concedes it.
-- **That 15 sheets is the right threshold.** Arithmetic half, named as judgement.
+- **That 16 sheets is the right threshold** (15 until session 48's corrected count moved the
+  arithmetic). Arithmetic half, named as judgement.
 
 ## The sixteen conditions — ledger
 

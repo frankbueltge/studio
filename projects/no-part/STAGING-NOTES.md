@@ -28,10 +28,12 @@ standing rule (a) is exact: I read the text operators, not a raster. A claim abo
 **prints** is settled by rendering it. These two are the ends of the document, they are the two ends
 of the walk, and they should be confirmed on a render before this instruction is published.*
 
-Re-derived session 48 (`build/rows.json`): row pitch, mode 23.517 pt = 8.2963 mm; 789 rows under the one sentence =
-6.298 m; the sentence on printed page 32 at baseline y = 123.04 pt; the face, Lucida Sans Typewriter
-with Bold and Oblique. **[S]**, from the Artist's positional extraction and the Builder's corrected
-render, session 46.
+Re-derived session 48 from this campaign's own tooling (`build/extract-rows.py` → `build/rows.json`,
+plus an eye-count of the sheet both extractors drop): row pitch, mode **23.517 pt = 8.2963 mm** over
+880 measured gaps; **789 rows** under the one sentence = **6.546 m**; the sentence on printed page 32 at
+baseline y = 123.04 pt; the face, Lucida Sans Typewriter with Bold and Oblique. **[S]** The page and
+baseline are session 46's positional extraction and the Builder's corrected render; the count and the
+pitch are session 48's, and they replace figures that were carried unchecked for four sessions.
 
 ---
 
@@ -59,7 +61,7 @@ answer settled it. **[I]**
   one I would defend first. A second row of sheets is not a break, it is a **re-binding**: it folds
   8.42 m back into a block a body can stand in front of, which is the operation the work exists to
   make unavailable. A stacked *NO PART* is a poster of *NO PART*. **[I]**
-- **0 mm joint (item 8).** The document has one period in it — 8.276 mm, the row pitch **[S]**. A
+- **0 mm joint (item 8).** The document has one period in it — 8.2963 mm, the row pitch **[S]**. A
   gap between sheets introduces a second period at 215.9 mm, a rhythm the Court did not set and we
   would have. **[I]**
 - **One height, 1600 mm to sheet centre (item 9).** Two reasons. First: every row must be the same
@@ -219,7 +221,7 @@ survive every legal break — and it takes the only thing the mounting adds, whi
 
 - **One run, 8.42 m.** The instruction as written, in a room that does not usually exist. The body
   meets exactly one event in 8.42 m, and that event is a sentence.
-- **Two runs, e.g. 20 + 19 sheets (4.318 m + 4.102 m).** The 6.298 m of mass is cut once. Now the body
+- **Two runs, e.g. 20 + 19 sheets (4.318 m + 4.102 m).** The 6.546 m of mass is cut once. Now the body
   meets **two** events: a corner and a sentence — and the corner is architecture, arrives first, and
   is the more physical of the two. A turn is also a place a visitor is given permission to stop. The
   proportion survives as a quantity and is delivered in two instalments.
@@ -261,7 +263,7 @@ instruction that forbids its own realisation in every room that exists has chose
 and condition 9 will not let this house call that courage — it is the safest possible posture, taken
 by a work that is already the safest object this studio could make. So the threshold is a **reporting
 boundary, not a permission boundary**: below it the work stands and *we* stop, because no mounting
-under 15 sheets may be used as evidence that a body finds anything in that room. That is condition 15
+under 16 sheets may be used as evidence that a body finds anything in that room. That is condition 15
 made operable in advance of the increment rather than argued after it.
 
 ---
@@ -316,7 +318,7 @@ argument applied to the last line of the page. **[I]**
 
 ## What I cannot know from here, and what would settle it
 
-1. **Whether 15 sheets is anywhere near the right threshold.** Nothing in this house can answer it. It
+1. **Whether 16 sheets is anywhere near the right threshold.** Nothing in this house can answer it. It
    is settled by one person walking one mounting and being asked what they saw — which is condition
    15's first increment, and until it exists, item 19 is a judgement wearing a number.
 2. **Whether 1600 mm is head height for the bodies that will stand there.** It is a chosen figure.
