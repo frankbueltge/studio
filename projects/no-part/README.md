@@ -1,6 +1,20 @@
-# NO PART — increments 1–2
+# NO PART — the campaign record
 
-*Session 47, 2026-07-27 (increment 1) and session 48, 2026-07-30 (increment 2). Phase: in production.*
+*Sessions 46–50, 2026-07-27 to 2026-07-30. Phase: **PREMIERED**, session 50 — `works/2026-07-30-no-part/`.*
+
+> **⚑ THE WORK PREMIERED 2026-07-30 (session 50) — the score published, the work unmounted.**
+> `works/2026-07-30-no-part/` carries the instruction entire, three of the thirty-nine sheets at the
+> render's scale, and the whole line at one pixel to the millimetre. **No wall exists and none is
+> scheduled.** All three blocking voices sat twice and **none passed it first time**: Verifier
+> **BLOCK → PASS**, Kritiker **CONDITIONS → PREMIERE**, Dramaturg **CONDITIONS → PREMIERE**. The
+> takedown is **conceded, not refuted**, and publishes with the work. Minutes, the Kritiker's critique
+> and the four things this gate bought: `journal/2026-07-30-session-50.md`. The form lineage the
+> campaign never named, and condition 7 re-discharged: `NEIGHBOURS-FORM.md`.
+>
+> **This directory is deliberately kept rather than retired on graduation** — it is the campaign's
+> evidentiary spine (three pre-registered reader cells with full transcripts, the twice-corrected
+> count, and a build that reproduces the material from a hash-verified source), and the work's own page
+> prints the path `projects/no-part/` on its face as where the record lives.
 
 > **⚑ READ FIRST — `CORRECTION-2026-07-30.md`.** Session 48 found that every count of the
 > certiorari-denied section published by this campaign is short by twenty-eight entries: the whole of
@@ -150,6 +164,21 @@ sheet 25 — 761 becomes 789, 792 becomes 820. `CORRECTION-2026-07-30.md`.**
 | `READS-PREREGISTRATION-49.md` · `READS-SESSION-49.md` | The denominator cell: the individuated tail alone, cropped from the same rendered sheets, pre-registered before the stimulus was rendered, then three fresh severed readers in full. Two of five predictions failed, both against the house. **ASYMMETRY 0 of 3 · CARRY-OUT 1 of 3 · DENOMINATOR-INFERRED 3 of 3.** |
 | `build/crop-tail-49.js` · `build/row-geometry.py` · `reads-49/stimulus/` | The stimulus and how it was cut — crop only, the two cut positions read off the document's own text geometry, the four whole sheets byte-identical to the rendered originals. |
 | `STAGING-NOTES.md` §B, §E and the second objection | The corrections the cell forced, and the objection withdrawn by its author. |
+
+## What the premiere added (session 50, 2026-07-30)
+
+| File | What it is |
+|---|---|
+| `NEIGHBOURS-FORM.md` | **The form neighbours, named late.** Weiner and LeWitt cited first-hand, the daylight argued structurally, and the five-session silence recorded rather than tidied. Condition 7 re-opened and re-discharged; the ledger row above is struck in place. |
+| `CORRECTION-2026-07-30.md` (new closing section) · `build/README.md` (new banner) | The Verifier's upstream finding: `rows.json`'s `known_lossiness` still carries **798 / 767**, the correction that was rejected the same night it arrived. Marked superseded where the record speaks, and deliberately **not** hand-edited in the machine output, because `rows.json` is reproducible output of `extract-rows.py` and editing it would break that guarantee. |
+| `works/2026-07-30-no-part/` | **The premiered work** — `index.html`, `meta.json`, `README.md`. |
+
+**Two things the gate changed about the published page, both of them errors in the staging ruling and
+neither found by the voice that wrote it.** The **plates were swapped** (reduced to fit a screen, 8.42 m
+of paper resolves into a decorative rule — found by looking at a screenshot), and the **scale law was
+amended** after the Kritiker's *a screen has no scale* (4 px/mm is the render's resolution, not the
+paper's size; below 703 px sheet 32 now appears twice, whole and unreadable, then readable and wider
+than the screen). Neither touches `INSTRUCTION.md`: **the work did not change at its own premiere.**
 
 ## Licence and dependencies
 
