@@ -68,7 +68,7 @@ The line is **8,420.1 mm** long. Almost no wall takes it. Where it breaks is you
 
 ## If the wall is too small
 
-19. If the longest single run carries fewer than **15 sheets (3,238.5 mm)**, mount it anyway and
+19. If the longest single run carries fewer than **16 sheets (3,454.4 mm)**, mount it anyway and
     record that it did so. The work stands; what stops is us — no claim about what a body finds in
     that room may be made from that mounting.
 

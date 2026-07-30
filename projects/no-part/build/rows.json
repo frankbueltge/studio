@@ -1,0 +1,5834 @@
+{
+ "meta": {
+  "source_pdf_sha256": "354c9ba8dbc6e5104a6a6b84ee53a91a6f8e5e87b2d900e8c26f4a67ef6ec652",
+  "pages_found": 39,
+  "script": "build/extract-rows.py"
+ },
+ "sections": [
+  {
+   "section": "ORDERS IN PENDING CASES",
+   "first_row_idx": 2,
+   "sheet": 1
+  },
+  {
+   "section": "CERTIORARI DENIED",
+   "first_row_idx": 156,
+   "sheet": 4
+  },
+  {
+   "section": "HABEAS CORPUS DENIED",
+   "first_row_idx": 1954,
+   "sheet": 37
+  },
+  {
+   "section": "MANDAMUS DENIED",
+   "first_row_idx": 2026,
+   "sheet": 38
+  },
+  {
+   "section": "REHEARINGS DENIED",
+   "first_row_idx": 2051,
+   "sheet": 39
+  }
+ ],
+ "mass_sentence": {
+  "text": "The petitions for writs of certiorari are denied.",
+  "row_idx": 1756,
+  "sheet": 32
+ },
+ "certiorari_denied": {
+  "convention": "A \"line\" is a docket entry iff, after whitespace normalisation, it is ENTIRELY a docket number matching ^(\\d{2}[-M]\\d{1,5})(\\)|,)?$. Several consecutive docket lines followed by one caption line (containing \" V. \" or starting \"IN RE\") each count as one entry per docket number, sharing that one caption -- the grouped-entry convention carried over from etudes/5000-series/corpus/parse.py and dispositions.py.",
+  "total": 792,
+  "before_mass_sentence": 761,
+  "after_mass_sentence": 31,
+  "first_entry": {
+   "docket": "24-796",
+   "caption": "MISSOURI, ET AL. V. UNITED STATES",
+   "sheet": 4
+  },
+  "last_entry": {
+   "docket": "25-5378",
+   "caption": "SMITH, SAMUEL L. V. SLIMAK, MARK H.",
+   "sheet": 37
+  },
+  "entries": [
+   {
+    "docket": "24-796",
+    "caption": "MISSOURI, ET AL. V. UNITED STATES",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-857",
+    "caption": "ESTRADA, BRIAN V. SMART, JACOB",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-919",
+    "caption": "MILLER, MIKE V. ROCK, DILLON",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-970",
+    "caption": "LUNA, DAGOBERTO V. BONDI, ATT'Y GEN.",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-986",
+    "caption": "MENDOCINO R. V. HUCKELBRIDGE, KATE, ET AL.",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1020",
+    "caption": "UBER TECHNOLOGIES, INC., ET AL. V. AMIE DRAMMEH, ET AL.",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1027",
+    "caption": "INVENERGY THERMAL LLC, ET AL. V. SIXKILLER, CASEY",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1031",
+    "caption": "GRAMAJO-REYES, ROLAND O. V. BONDI, ATT'Y GEN.",
+    "sheet": 4,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1050",
+    "caption": "ESTATE OF TE\u2019JUAN JOHNSON V. RAKES, AMANDA",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1061",
+    "caption": "PROJECT VERITAS, ET AL. V. VASQUEZ, NATHAN, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1066",
+    "caption": "SOLAKYAN, SAM S. V. UNITED STATES",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1067",
+    "caption": "WETZEL, JOHN, ET AL. V. WILLIAMS, ROY L.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1073",
+    "caption": "MAXWELL, GHISLAINE V. UNITED STATES",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1082",
+    "caption": "SMITH, AGHEE W. V. UNITED STATES",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1089",
+    "caption": "UVUKANSI, FEANYICHI E. V. GUERRERO, DIR., TX DCJ",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1092",
+    "caption": "MUNGO HOMES, LLC V. HUSKINS, AMANDA L., ET VIR",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1093",
+    "caption": "MUMFORD, ASHLEE M. V. IOWA",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1107",
+    "caption": "PEOPLES, JONATHAN V. COOK COUNTY, IL, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1119",
+    "caption": "NISBET, ANDREW C. V. BRIDGER, SPIRIT R.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1120",
+    "caption": "OHIO, EX REL. YOST V. ROVER PIPELINE, LLC, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1122",
+    "caption": "ROOT, ROBIN V. HOWARD, WARDEN",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1124",
+    "caption": "THOMAS, CHRISTOPHER V. PACHOTE, TRACY",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1126",
+    "caption": "AVON CAPITAL, LLC V. UNIVERSITAS ED., LLC",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1131",
+    "caption": "FAN, FEI F. V. JIANG, YAN Y., ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1132",
+    "caption": "PURDUE PHARMA L.P., ET AL. V. ACCORD HEALTHCARE, INC.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1133",
+    "caption": "M. P. V. META PLATFORMS INC., ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1138",
+    "caption": "BELTRE, RAFAEL V. FIT GUYS WALK, LLC",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1140",
+    "caption": "ALLAN, PETER, ET AL. V. MN DEPT. HUMAN SERVICES, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1144",
+    "caption": "TURKIYE HALK BANKASI A.S. V. UNITED STATES",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1145",
+    "caption": "LIVE NATION, ET AL. V. HECKMAN, SKOT, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1146",
+    "caption": "RYAN, GILDA, ET AL. V. IMPERIAL COUNTY, CA, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1147",
+    "caption": "BOWLES, GLENN, ET AL. V. WHITMER, GOV. OF MI, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1149",
+    "caption": "WILLIAMS, T. K. V. ELTON CORP., ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1150",
+    "caption": "CARTER, CLYDE O. V. CHAVEZ-DeREMER, SEC. OF LABOR",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1153",
+    "caption": "SMITH, COREY S. V. HAMM, COMM'R, AL DOC",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1157",
+    "caption": "PACKWOOD, TAYLOR, ET AL. V. CONTRA COSTA COUNTY, CA, ET AL.",
+    "sheet": 5,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1158",
+    "caption": "LEWIS, CAROL A., ET AL. V. KENNEDY, SEC. OF H&HS",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1160",
+    "caption": "LOTT, WILLIAM R. V. LOTT, MARIA V.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1161",
+    "caption": "RUNITONETIME LLC V. UNITED STATES, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1162",
+    "caption": "ROBINSON, GINA V. FASHION DISTRICT DENTAL, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1164",
+    "caption": "EVERSON, JACQUELINE R. V. THE COCA-COLA CO., ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1165",
+    "caption": "WINTER, ABRAHAM V. LABORATORY CORP. OF AM., ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1168",
+    "caption": "M. D., ET AL. V. ABBOTT, GOV. OF TX, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1169",
+    "caption": "JACKSON, AMANDA V. METHODIST HEALTH SERVICE CORP.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1170",
+    "caption": "JOHNSON, LaQUAN S. V. TERRY, ELAINE, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1171",
+    "caption": "NURSING HOME CARE MGMT., ET AL. V. CHAVEZ-DeREMER, SEC. OF LABOR",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1174",
+    "caption": "HAMILTON, CHELSEA A. V. STEINER, POSTMASTER GEN.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1176",
+    "caption": "LAGUNAS ESPINOZA, FABIAN, ET AL. V. BONDI, ATT'Y GEN.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1178",
+    "caption": "U.S. BANK NAT. ASSN. V. FOX, CASSANDRA",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1179",
+    "caption": "ROSALES, GANESA, ET AL. V. AMEDISYS NC, L.L.C., ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1183",
+    "caption": "LIGHTFOOT, ANTONIO L. V. UNITED STATES",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1184",
+    "caption": "IN RE GRAND JURY INVESTIGATION",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1190",
+    "caption": "SYNGENTA CROP, LLC, ET AL. V. NEMETH, DOUGLAS, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1191",
+    "caption": "SADORRA, DENNIS D. V. STARLIGHT DUNES HOA",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1194",
+    "caption": "DOE, JOHN V. DISTRICT COURT OF NV, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1197",
+    "caption": "FARAG, TAREK V. BIDEN, JOSEPH R., ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1198",
+    "caption": "ASSN. FOR GOVT., ET AL. V. SIMON, MN SEC. OF STATE, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1199",
+    "caption": "TAHAR, MUNTAHA V. CREATIVE CORNER LEARNING CENTER",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1205",
+    "caption": "SWETT URQUIETA, MARIA E. V. BOWE, JOHN F.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1206",
+    "caption": "KHATRI, DARYAO V. BD. OF TRUSTEES UNIV. OF DC",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1208",
+    "caption": "BECK REDDEN L.L.P. V. CANTU, MARK A.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1209",
+    "caption": "JONES, DARYLL B. V. NEW YORK, ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1210",
+    "caption": "ARBOGAST, BRENT A. B. V. PFIZER INC., ET AL.",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1211",
+    "caption": "WAGNER, KRISTEN E. V. DIXON, SEC., FL DOC",
+    "sheet": 6,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1212",
+    "caption": "BURNHAM, KENNETH V. MICHIGAN",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1215",
+    "caption": "MINISO DEPOT CA, INC., ET AL. V. LIU, YONGTONG",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1217",
+    "caption": "KANAM, KURT V. BURGUM, SEC. OF INTERIOR, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1219",
+    "caption": "ADKINS, DORA L. V. JP MORGAN CHASE BANK, N.A.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1221",
+    "caption": "NEESE, SUSAN, ET AL. V. KENNEDY, SEC. OF H&HS, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1222",
+    "caption": "RICHMOND, COURTNEY V. WIESE, NOLAN, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1223",
+    "caption": "HERNANDEZ, JUAN C. U., ET AL. V. BONDI, ATT'Y GEN.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1224",
+    "caption": "WARD, DENVER V. FISHER, LAURA, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1226",
+    "caption": "S. G. S. V. S. F.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1227",
+    "caption": "SLAUGHTER, FRANK L. V. BD. OF PROF'L RESPONSIBILITY",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1228",
+    "caption": "STONE, CHRISTOPHER E. V. STONE, IRYNA H.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1229",
+    "caption": "CANZONERI, DENISE A. V. PRESCOTT SCH. DIST., ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1230",
+    "caption": "COINBASE, INC., ET AL. V. KRAMER, DARREN, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1231",
+    "caption": "DOWD, ANDREW V. UNITED STATES",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1232",
+    "caption": "MEMARZADEH, MAHER V. COHEN, LOTTIE, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1233",
+    "caption": "BARR, JOHN M., ET AL. V. SEC",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1235",
+    "caption": "BU, SULIANG V. MISSOURI",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1236",
+    "caption": "FARRAKHAN, LOUIS, ET AL. V. ANTI-DEFAMATION LEAGUE, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1237",
+    "caption": "GOERZ, HANS V. MEINK, SEC. OF AIR FORCE",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1239",
+    "caption": "WELLS, CARA W. V. TX TECH UNIV., ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1240",
+    "caption": "UNKECHAUG INDIAN NATION, ET AL. V. LEFTON, COMM'R, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1241",
+    "caption": "KELNHOFER, ADAM V. UNITED STATES",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1243",
+    "caption": "TRI-CORP HOUSING, INC. V. BAUMAN, ROBERT",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1245",
+    "caption": "RAY, MASIKA B. V. BOONE, CHIEF, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1250",
+    "caption": "BULLOCK, ART, ET AL. V. R-RANCH PROPERTY OWNERS', ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1251",
+    "caption": "GILBERT-DANIELS, NICOLE V. LIONS GATE ENTERTAINMENT, ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1252",
+    "caption": "REAL PROPERTY, ET AL. V. YAMHILL COUNTY, OR",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1253",
+    "caption": "WILLIAMS, DARRELL E. V. PROMEDICA HEALTH SYS., ET AL.",
+    "sheet": 7,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1254",
+    "caption": "PALESTINE, TX, ET AL. V. UNION PACIFIC R. CO.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1256",
+    "caption": "ROBINSON, GARY V. HIGGINS, JERRY N., ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1257",
+    "caption": "AKERMAN, MARTIN V. DISTRICT OF COLUMBIA, ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1258",
+    "caption": "JUDSON, PETER V. FRIEDMAN, ROBERT I.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1263",
+    "caption": "BEDARD, JEANNINE V. LOS ANGELES, CA, ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1264",
+    "caption": "KIRK, DAVID M. V. CITIGROUP GLOBAL MARKETS, INC.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1265",
+    "caption": "DIAZ, GLENN E. V. UNITED STATES",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1266",
+    "caption": "JUMP TRADING, LLC V. PATTERSON, NICK, ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1269",
+    "caption": "CURTIS-SHANLEY, JEREMIAH V. J.G.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1271",
+    "caption": "LEIGH, MALIK V. STATE BAR OF FL",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1272",
+    "caption": "KAETZ, WILLIAM F. V. UNITED STATES",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1273",
+    "caption": "PHILLIPS, JONATHAN V. CALIFORNIA",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1274",
+    "caption": "CESTARO, R. M. V. RODRIGUEZ, CLARISSA M., ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1275",
+    "caption": "CONNELLY, JO-ANN V. CONNECTICUT, EX REL. DUNN",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1276",
+    "caption": "CA ASSN. PRESERVATION GAMEFOWL V. STANISLAUS COUNTY, CA",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1277",
+    "caption": "BICKFORD, PAMELA L. V. ALASKA, ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1278",
+    "caption": "BJORNSON, KEVIN S. V. EQUIFAX INFORMATION SERVICES",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1279",
+    "caption": "ANDERSON, FRANK J. V. NEW JERSEY",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1282",
+    "caption": "MENZER, ROBERT V. U.S. BANK, N.A., ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1283",
+    "caption": "JORDAN, JACK R. T. V. USCA 5",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1284",
+    "caption": "DINGLE, EUGENE V. ARMSTRONG, LESLIE, ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1285",
+    "caption": "YUE, DONGXIAO V. YANG, WENBIN",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1286",
+    "caption": "BUFORD, JEFFREY V. GEORGIA",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1289",
+    "caption": "NISSAN NORTH AM., INC. V. JOHNSON, SHERIDA, ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1290",
+    "caption": "SCZESNY, KATIE, ET AL. V. MURPHY, GOV. OF NJ, ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1291",
+    "caption": "DALTON, ARIEL V. EDGEWOOD POLICE DEPT., ET AL.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1292",
+    "caption": "RODRIGUEZ, VICTOR N. V. BONDI, ATT'Y GEN.",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1293",
+    "caption": "McALPIN, BRETT M. V. UNITED STATES",
+    "sheet": 8,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1297",
+    "caption": "ROYAL MERCHANT HOLDINGS, LLC V. THE FERRARO LAW FIRM, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1298",
+    "caption": "JEAN-BAPTISTE, HAROLD V. BOOZ ALLEN HAMILTON, INC.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1300",
+    "caption": "BLOUNT, ANDREW J. V. BLOUNT, JOAN M.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1301",
+    "caption": "ALLEN, CALVIN, ET AL. V. GOMEZ, SETH, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1303",
+    "caption": "JENDAYI, ZAKIYA V. HAMLIN, DELLA, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1308",
+    "caption": "JAFFAN INTERNATIONAL, LLC V. RADHE KRISHNA PROPERTIES, LLC",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1311",
+    "caption": "LAVERY, KEVIN T. V. PURSUANT HEALTH, INC.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1312",
+    "caption": "DECOULOS, JAMES J. V. BD. OF WASTE CLEANUP, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1313",
+    "caption": "MILLER, JEREMY N. V. MILLER, CASI A., ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1314",
+    "caption": "SBERBANK OF RUSSIA PJSC V. SCHANSMAN, THOMAS, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1315",
+    "caption": "DESTY, ANDY V. SANTANDER CONSUMER USA, INC.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1316",
+    "caption": "DOWNS, WENDY V. MACOMBER, SEC., CA DOC, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1317",
+    "caption": "SWANSON, BRIAN D. V. CIR",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1319",
+    "caption": "SIRIMANNE, SRIYANTHA B., ET UX. V. GARCIA, MIGUEL",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1320",
+    "caption": "CENTERLINE CORP., ET AL. V. INLANDBOATMEN\u2019S UNION, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1321",
+    "caption": "LASSOFF, SAUL, ET AL. V. MGM RESORTS INTERNATIONAL",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1323",
+    "caption": "KLEIDMAN, PETER V. COLLINS, AUDREY B., ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1324",
+    "caption": "SAP SE, ET AL. V. TERADATA CORP., ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1325",
+    "caption": "GO NEW YORK TOURS INC. V. GRAY LINE NEW YORK TOURS, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-1326",
+    "caption": "IQ DATA INT'L, INC. V. SIX, RYAN",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6750",
+    "caption": "RAMBARANSINGH, TROY V. BANK OF AM. NAT. ASSN., ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6798",
+    "caption": "ROBERTS, KARL D. V. PAYNE, DIR., AR DOC",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6836",
+    "caption": "GENAO, CHRISTIAN V. UNITED STATES",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6885",
+    "caption": "CREECH, THOMAS V. IDAHO",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6898",
+    "caption": "EDWARDS, AVERY J. V. UNITED STATES",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6901",
+    "caption": "DIEUJUSTE, JUNIOR-TONY V. SIN, JUDGE, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6904",
+    "caption": "JAIYEOLA, GANIYU A. V. GARMIN INT'L, INC.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6921",
+    "caption": "KOHN, BENJAMIN V. STATE BAR OF CA, ET AL.",
+    "sheet": 9,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6936",
+    "caption": "SMITH, DEVEON J. V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6942",
+    "caption": "SEXTON, JOHN V. FLORIDA",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6983",
+    "caption": "SAPALASAN, MARKANTHONY D. V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-6996",
+    "caption": "WHEELER, DEONTA D. V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7010",
+    "caption": "HARTLEY, KENNETH V. DIXON, SEC., FL DOC, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7014",
+    "caption": "WILLIAMS, SCOTT A. V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7033",
+    "caption": "QUAILES, AQUDRE V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7038",
+    "caption": "RICKS, CEDRIC A. V. GUERRERO, DIR., TX DCJ",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7051",
+    "caption": "UNDERWOOD, GMERRIO V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7054",
+    "caption": "MARTINEZ-HERNANDEZ, OSCAR J. V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7098",
+    "caption": "PETERSON, DOROTA V. STAPLES SUPERSTORE, LLC",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7101",
+    "caption": "FREEMAN, JOSHUA V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7104",
+    "caption": "MARTINEZ, RAY B. V. UNITED STATES",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7106",
+    "caption": "GU, FEIFEI V. JAMES, ATT'Y GEN. OF NY, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7108",
+    "caption": "CRAAYBEEK, THOMAS G. V. TEXAS",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7118",
+    "caption": "DIAZ, ENRIQUE V. DIXON, SEC., FL DOC, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7119",
+    "caption": "HILL, MARK A. V. PELL, JENNIFER, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7120",
+    "caption": "HENDERSON, SELENE V. V. WASHINGTON",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7121",
+    "caption": "DIAZ-RIVERA, ORLANDO S. V. FLORIDA",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7124",
+    "caption": "RODGERS, GARY D. V. LANDRY, GOV. OF LA, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7128",
+    "caption": "CAREY, KENNETH, ET AL. V. KIRK, JONATHAN, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7130",
+    "caption": "SMITH, KEN V. HOCHUL, GOV. OF NY, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7131",
+    "caption": "CARDWELL, KEVIN M. V. BOJRAB, PAUL D., ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7133",
+    "caption": "GREEN, ISAAC V. FLORIDA",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7136",
+    "caption": "WALDRUP, DeWAYNE L. V. TEXAS",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7138",
+    "caption": "VAN HORNE, STEVE V. HAAG, JUDGE, ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7139",
+    "caption": "LITTLE, DAVID V. GEORGIA",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7142",
+    "caption": "HANNA, SAAD V. NELSON, KIMBERLY A., ET AL.",
+    "sheet": 10,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7144",
+    "caption": "HAYMES, LAMAR V. STOLLSTEIMER, JACK",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7151",
+    "caption": "FLOYD, ZANE M. V. BEAN, WARDEN, ET AL.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7152",
+    "caption": "BARRETT, TERRANCE V. AK COMM'N FOR HUMAN RIGHTS",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7154",
+    "caption": "HARRIS, MICHELE K., ET VIR V. SPRINGFIELD HOUS. AUTH., ET AL.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7156",
+    "caption": "MAIN, MICHAEL S. V. ILLINOIS",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7163",
+    "caption": "BRIONES, JOSE N. V. GUERRERO, DIR., TX DCJ",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7165",
+    "caption": "BERMAN, JOHN L. V. JORDAN, SENIOR JUDGE, ET AL.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7171",
+    "caption": "NGUYEN, MAI-TRANG T. V. UNITED STATES",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7172",
+    "caption": "PERALTA, ERICK A. V. TEXAS",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7173",
+    "caption": "PERKINS, TERRELL V. HANCOCK, WARDEN",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7176",
+    "caption": "POPE, MIRIAM V. PATEL, CHETAN",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7177",
+    "caption": "TAYLOR, BRYANT D. V. NEW JERSEY",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7179",
+    "caption": "TANKSLEY, JORDASH V. JONES, WARDEN",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7180",
+    "caption": "WILLIAMS, YOLANDA M. V. AUSTIN POLICE DEPT.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7184",
+    "caption": "LIU, TRICIA V. FERIA, LOUIE A. D.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7185",
+    "caption": "JOHNSON, WAYNE V. FIRST DIST. APP. PROJECT, ET AL.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7186",
+    "caption": "CRUZ, ALBERTICO C. V. TEXAS",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7187",
+    "caption": "FITZGIBBON, ELIZABETH A. V. FITZGIBBON, ADAM P.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7188",
+    "caption": "CLARK, XZAVIER J. L. V. UNITED STATES",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7195",
+    "caption": "BELLINSKY, JACOB V. COLORADO",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7196",
+    "caption": "BELLINSKY, JACOB V. GALAN, RACHEL Z.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7198",
+    "caption": "ELLAR, DONNA V. THOMAS, JESSIE, ET AL.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7199",
+    "caption": "MARTINEZ, ALCENIOS V. TEXAS",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7200",
+    "caption": "BATSON, THERESA V. FL DOC",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7201",
+    "caption": "BROWN, JOHNNIE L. V. MICHIGAN",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7202",
+    "caption": "ANDERSON, IRIS L. V. JASPER, FL, ET AL.",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7204",
+    "caption": "TOMEY, SANDRA L. V. BILL HOWARD PROPERTY MANAGEMENT",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7209",
+    "caption": "ANAYA, GERARDO C. V. VIGIL-RICHARDS, WARDEN",
+    "sheet": 11,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7210",
+    "caption": "LAKE, LOGAN B. V. ILLINOIS, ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7211",
+    "caption": "SPIVACK, JEFFREY V. UNITED STATES",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7214",
+    "caption": "WOODS, ANTHONY J. V. SMITH, N'GAI",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7216",
+    "caption": "ANDREWS, DESSIE V. ADAMS, ALMA, ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7221",
+    "caption": "CENANOVIC, FIKRETA V. HAMDARD CENTER FOR HHS",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7224",
+    "caption": "DELEHOY, DEVON V. SOUTH DAKOTA, ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7227",
+    "caption": "KOCONTES, LONNIE L. V. CALIFORNIA",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7235",
+    "caption": "COLLIER, TIMMY O. V. MICHIGAN",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7238",
+    "caption": "COPE, WILLIAM D. V. KENTUCKY",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7244",
+    "caption": "YORK, SAMUEL V. UNITED STATES",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7250",
+    "caption": "TRANBARGER, DALE C. V. ANDERSON POLICE DEPT.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7251",
+    "caption": "DEUSCHEL, MICHAEL V. BAYER PHARMACEUTICALS, ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7257",
+    "caption": "DUARTE, ALEJANDRO R. V. NEBRASKA",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7262",
+    "caption": "LAIRD, RICHARD R. V. HARRY, SEC., PA DOC, ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7263",
+    "caption": "VERAS, YHANKA V. NYC DEPT. OF ED., ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7264",
+    "caption": "SHARPE, MICHAEL L. V. TEXAS",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7269",
+    "caption": "WELD, JACOB J. V. BRAMAN, WARDEN",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7276",
+    "caption": "HEFFNER, CHRISTINA V. BISIGNANO, COMM'R, SOCIAL SEC.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7279",
+    "caption": "HERNANDEZ, CARLOS V. USDC ED NC",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7280",
+    "caption": "HYDE, TRISTAN M. V. FL DEPT. OF LEGAL AFFAIRS",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7282",
+    "caption": "KIFOR, IMRE V. MASSACHUSETTS, ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7283",
+    "caption": "RUBIO, JAMES V. GUERRERO, DIR., TX DCJ",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7286",
+    "caption": "MASON, CHRISTOPHER G. V. UNITED STATES",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7287",
+    "caption": "BRANCH, ANTHONY M. V. KEARNEY, AIDAN, ET AL.",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7288",
+    "caption": "CORNELL, QUAID A. V. ARIAS, WARDEN",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7292",
+    "caption": "RAMSEY, GERMAINE V. UNITED STATES",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7293",
+    "caption": "SOTO, ALEXANDER V. MASSACHUSETTS",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7294",
+    "caption": "MIDDLETON, RUSTIN R. V. LOUISIANA",
+    "sheet": 12,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7298",
+    "caption": "GUESS, THURMOND R. V. BROWN, LEONARDO, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7299",
+    "caption": "HOFFMAN, JERRY L. V. DELGADO, JOSE, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7306",
+    "caption": "HILL, WILLIAM T. V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7308",
+    "caption": "CROUCH, ZACHARY C. V. GODDARD, BRADEN, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7309",
+    "caption": "ABTS, BRANDI V. ARNOLD-ABTS, CYNTHIA",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7310",
+    "caption": "CLARK, IAN L. V. USDC OR, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7311",
+    "caption": "HARRIS, PERCY L. V. MISSISSIPPI",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7312",
+    "caption": "REEVES, LEAVON Z. V. AKUNNE, OLUCHI",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7313",
+    "caption": "HILT, DALLAS C. V. ANDERSON, SHERIFF",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7317",
+    "caption": "BRAY, LAURACK D. V. KENEFICK, MATTHEW, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7319",
+    "caption": "FRANKLIN, JAMES H. V. OKLAHOMA",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7324",
+    "caption": "PATINO, FLAVIO C. V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7326",
+    "caption": "MACKAY, DESMOND A. V. WEAD, WARDEN, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7329",
+    "caption": "PLEDGER, NICCO-KAWON V. MASSACHUSETTS",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7331",
+    "caption": "FARMER, JEREMIAH S. V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7333",
+    "caption": "BRUMIT, DANIEL D. V. ROGERS, WARDEN",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7336",
+    "caption": "MITCHELL, BLONDELL F. V. RAYTOWN WATER, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7337",
+    "caption": "ROSS, MICHAEL V. BLUEFIELD AREA TRANSIT, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7338",
+    "caption": "PANUS, JUSTIN V. GUERRERO, DIR., TX DCJ",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7339",
+    "caption": "GARCIA, JONATHAN V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7342",
+    "caption": "QUIROZ, JOSE G. V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7343",
+    "caption": "HARRIS, CHRISTOPHER V. LESKO, OFFICER, ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7344",
+    "caption": "JACKSON, SHETERRIA L. V. FLORIDA",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7345",
+    "caption": "BRYANT, ANITA S. V. ESTATE OF LAURA J. BRYANT",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7347",
+    "caption": "JOHNSON, JOSHUA C. V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7348",
+    "caption": "BACON, SPENCER W. V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7350",
+    "caption": "DRISCOLL, RUSTY J. V. UNITED STATES",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7352",
+    "caption": "BENNEY, ROBERT A. V. McGINLEY, SUPT., ET AL.",
+    "sheet": 13,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7353",
+    "caption": "MARTINEZ SANTOYO, JOSE T. V. BOYDEN, U.S. MARSHAL, ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7355",
+    "caption": "MILLER, CURTIS D. V. UNITED STATES",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7356",
+    "caption": "SMITH, KURTAVIUS J. V. EVANS, SUPT., GREENE, ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7357",
+    "caption": "JONES, CHRISTOPHER S. V. UNITED STATES",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7358",
+    "caption": "GOLDSBORO, HARRY L. V. FLORIDA",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7359",
+    "caption": "G., GINA V. WASHOE HUMAN SERVICES, ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7360",
+    "caption": "STRADER, DANIEL D. V. DIXON, SEC., FL DOC, ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7361",
+    "caption": "JONES, DESHAUN C. V. UNITED STATES",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7362",
+    "caption": "KENSINGER, CHRISTINE L. V. BISIGNANO, COMM'R, SOCIAL SEC., ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7363",
+    "caption": "MULLINGS, WESLEY-KEITH V. RAGHNAL, HARRIET E., ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7364",
+    "caption": "EMIABATA, PHILIP, ET UX. V. BANK OF N.Y. TRUST CO., ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7366",
+    "caption": "PUGH, DAMIEN D. V. BISIGNANO, COMM'R, SOCIAL SEC.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7369",
+    "caption": "BEVER, SHAWN K. V. UNITED STATES",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7371",
+    "caption": "OKPOSIO, ABRAKA V. V. BARRY UNIV., INC., ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7372",
+    "caption": "CUOMO, GUY V. UNITED STATES",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7373",
+    "caption": "ZEMENE, NATNAEL V. MASSACHUSETTS",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7374",
+    "caption": "ANDERSON, CHAYCE A. V. COLORADO",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7375",
+    "caption": "ROGERS, VICTOR V. NY CENT. MUT. FIRE INS. CO.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7376",
+    "caption": "CHAN, YU H. V. CAMPANELLI, JOY F., ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7377",
+    "caption": "LIN, JAY J. V. HUDSON CITY SAVINGS BANK, ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7378",
+    "caption": "LEANOS, MARGARITA V. DILLS, WARDEN",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7379",
+    "caption": "GREEN, ANDRA G. V. UNITED STATES",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7380",
+    "caption": "ROSENBAUM, MEGAN V. THOMPSON, GREGORY A.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7382",
+    "caption": "FISHER, ISSAC J. V. MISSOURI",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7384",
+    "caption": "MARTINEZ-RODRIGUEZ, EDGAR V. UNITED STATES",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7385",
+    "caption": "BURNS, LUSTER P. V. TANNER, WARDEN",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7386",
+    "caption": "WALLACE, MONIQUE C. V. ARAMARK AT CAPITAL ONE ARENA",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7388",
+    "caption": "ADEBOWALE, ADEOYE O. V. CHICAGO, IL, ET AL.",
+    "sheet": 14,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7389",
+    "caption": "FOREMAN, NATHAN R. V. TEXAS",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7390",
+    "caption": "SCOTT, RICKEY L. V. CALIFORNIA",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7391",
+    "caption": "MARTINEZ, ANGEL L. V. HOWARD, SUPT., FOREST, ET AL.",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7392",
+    "caption": "MOTA, JONATHAN V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7393",
+    "caption": "ACEITUNO, WALTER V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7394",
+    "caption": "CALLIGAN, EDWIN D. V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7398",
+    "caption": "MATLOCK, DIONTE D. V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7399",
+    "caption": "ROBINSON, LAKE V. DIXON, SEC., FL DOC",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7401",
+    "caption": "QUEZADA, ALVARO V. HILL, WARDEN",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7402",
+    "caption": "ROLLERSON, BRADDIC D. V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7403",
+    "caption": "STAPLETON, MICHAEL V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7404",
+    "caption": "AJJAHNON, ZOE V. SANDLER, EDWARD",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7405",
+    "caption": "TRIPLETT, WILLIE V. LeBLANC, JAMES, ET AL.",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7406",
+    "caption": "KISAKA, DOUG V. UNIV. OF SOUTHERN CALIFORNIA",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7407",
+    "caption": "McGRAW, ANDREW V. MISSISSIPPI",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7409",
+    "caption": "FELIX-SAMANIEGO, PABLO J. V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7411",
+    "caption": "BIZZELL, JESSIE L. V. KURTZMAN CARSON LLC",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7412",
+    "caption": "SWERCHOWSKY, VLADIMIR A. L. V. U-HAUL INT'L, INC., ET AL.",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7414",
+    "caption": "FISHBURNE, RICARDO V. SOUTH CAROLINA",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7415",
+    "caption": "RINALDI, MICHAEL V. UNITED STATES, ET AL.",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7416",
+    "caption": "MATHEWS, COURTNEY B. V. TENNESSEE",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7417",
+    "caption": "JALOMO, MICHAEL E. V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7419",
+    "caption": "BRADLEY, CARDARI V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7420",
+    "caption": "BEWAJI, OLABAMIDELE O. V. MINNESOTA",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7421",
+    "caption": "BROWN, GEOFFREY J. V. TEXAS",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7423",
+    "caption": "HERNANDEZ RUIZ, APOLONIO V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7424",
+    "caption": "ARELLANO, WILBERTO V. GUERRERO, DIR., TX DCJ",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7425",
+    "caption": "SUTHERLAND, JOSHUA V. UNITED STATES",
+    "sheet": 15,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7426",
+    "caption": "BUGGS, STEPHEN L. V. TEXAS",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7427",
+    "caption": "WHITE, PHILLIP V. AGBAOSI, WARDEN",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7428",
+    "caption": "LIMPIN, MELCHOR K. T. V. NEWSOM, GAVIN, ET AL.",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7429",
+    "caption": "TORRES, RANDY V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7451",
+    "caption": "OWEN, WALSTON V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7430",
+    "caption": "POWELL, TRENTON J. V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7431",
+    "caption": "REYNOLDS, KEISHA V. HNS MANAGEMENT CO., INC., ET AL.",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7432",
+    "caption": "DIAZ-BALLEZA, ELEAZAR V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7433",
+    "caption": "THOMAS, ZQUAREUS T. I. V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7434",
+    "caption": "GUTIERREZ, IVAN V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7436",
+    "caption": "REISER, HANS T. V. CALIFORNIA",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7437",
+    "caption": "AFRASIABI, KAVEH L. V. PRESIDENT AND FELLOWS OF HARVARD",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7442",
+    "caption": "BOOKER, PATRICK L. V. SOUTH CAROLINA",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7443",
+    "caption": "MAJERSKY, GREGORY V. LCM PROPERTY MANAGEMENT, INC.",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7444",
+    "caption": "IBRAHIM, JAMEEL V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7446",
+    "caption": "ROYSTER, TELLY V. TERRA, SUPT., PHOENIX, ET AL.",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7447",
+    "caption": "AGUIRRE, GILBERT V. DEPT. OF DEFENSE",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7448",
+    "caption": "FAIRLEY, JESSE G. V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7449",
+    "caption": "CASILLAS, MARCO A. V. CAVAGNOLO, ACTING WARDEN",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7450",
+    "caption": "ROWE, ZACHERY J. E. V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7452",
+    "caption": "HART, ROBERT V. HART, BETH M.",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7454",
+    "caption": "WHITE, WILLIAM D. V. STENSETH, WARDEN",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7455",
+    "caption": "WILLIAMS, GARLAND E. V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7456",
+    "caption": "JONES, DANIEL V. TOPE, DANIELLE",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7459",
+    "caption": "VANZANT, STEVEN L. V. RODGERS, WARDEN",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7460",
+    "caption": "PORTERIE, ALVIN V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7462",
+    "caption": "WEAVER, HENRY V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7465",
+    "caption": "LUJAN, NIKKY N. V. UNITED STATES",
+    "sheet": 16,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7466",
+    "caption": "DUNCAN, PATRICK J. V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7467",
+    "caption": "SAMUEL, ELDON G. V. CARLIN, WARDEN",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7468",
+    "caption": "PERRY, DONALD V. U.S. BANK TRUST N.A.",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7469",
+    "caption": "SIMMONS, DAVID V. ALASKA",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7470",
+    "caption": "MARTINEZ, JOSHUA I. V. FLORIDA",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7471",
+    "caption": "FERGUSON, QUINTIN T. V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7472",
+    "caption": "ANDREWS, THOMAS F. V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7475",
+    "caption": "MATEO-MARTINEZ, SAMUEL V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7476",
+    "caption": "ORDONEZ-FLORES, ARTURO A. V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7477",
+    "caption": "McCARTNEY, ARNOLD W. V. FRAME, SUPT., MOUNT OLIVE",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7478",
+    "caption": "McCALL, SHAQUAN D. V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7479",
+    "caption": "WILLS, JOHNNIE F. V. REGER, SUPT., NORTHERN CORR.",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7480",
+    "caption": "WHITEHEAD, OTIS R. V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7482",
+    "caption": "STEIN, RAPHAEL V. KOHN, ADEENA",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7483",
+    "caption": "ZIEGLAR, DeANGELO V. PENNSYLVANIA",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7484",
+    "caption": "LANGDON, CHRISTOPHER V. SUN LAKE MULTI-FAMILY, ET AL.",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7485",
+    "caption": "LANGDON, CHRISTOPHER V. SUN LAKE MULTI-FAMILY, ET AL.",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7487",
+    "caption": "SMITH, NICHOLAS N. D. V. ALABAMA",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7488",
+    "caption": "KELLEY, RICHARD W. V. MAINE",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7490",
+    "caption": "SCHRAM, CLINT R. V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7492",
+    "caption": "CHANEY, TONY V. CHICAGO HOUSING AUTH.",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7493",
+    "caption": "HARRELL, CHRISTOPHER D. V. NORRIS, WARDEN",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7494",
+    "caption": "CRAWFORD, JESSE L. V. MICHIGAN",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7495",
+    "caption": "LOPEZ CARRILLO, JOSE M. V. ARNOLD, SUPT., STAFFORD, ET AL.",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7496",
+    "caption": "WOODS, ALLEN O. V. TURNER, WARDEN",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7497",
+    "caption": "COTHAM, MICHAEL M. V. THORNELL, DIR., AZ DOC, ET AL.",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7498",
+    "caption": "CROWDER, DASAHN V. MASSACHUSETTS",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7499",
+    "caption": "MESQUIAS, RODNEY V. UNITED STATES",
+    "sheet": 17,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7500",
+    "caption": "HERNANDEZ, RAMON C. V. TEXAS",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7501",
+    "caption": "JUDD, JACOB A. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7503",
+    "caption": "HARRIS, BRADLEY J. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7504",
+    "caption": "GARCIA, DANIEL R. V. KACSMARYK, JUDGE, ET AL.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7505",
+    "caption": "EVANS, DONALD V. BOHINSKI, SUPT., DALLAS, ET AL.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7506",
+    "caption": "WILSON, ALLAN D. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7507",
+    "caption": "ALVAREZ, OSMAR A. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7509",
+    "caption": "RUBINSTEIN, JACOB M. V. RARDIN, WARDEN",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7511",
+    "caption": "MEDINA-QUIJIJE, MARIO M. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7513",
+    "caption": "ROBERSON, TRACY A. V. ELLER, WARDEN",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7514",
+    "caption": "ZENG, HOU H. V. ALLIED TRUST INS. CO., ET AL.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7515",
+    "caption": "COUNTS, JOSEPH V. MAINE",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7520",
+    "caption": "ROMERO, SALVADOR N. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7521",
+    "caption": "WILLIAMS, ANTHONY D. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7522",
+    "caption": "BOEHME, RACHAEL L. V. OREGON",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7523",
+    "caption": "BINDRANAUTH, SEAN K. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7524",
+    "caption": "BROWN, MARK A. V. SOUTH CAROLINA",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7525",
+    "caption": "SIVAK, LACEY M. V. IDAHO",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7526",
+    "caption": "FORD, DWAYNE L. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7527",
+    "caption": "MURAT, KH'LAJUWON A. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7528",
+    "caption": "SAM, JOHN A. V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-7529",
+    "caption": "CARTER, MATTHEW V. UNITED STATES",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-4",
+    "caption": "MARSHALL, PRESTON L. V. COOK, STEPHEN D.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-7",
+    "caption": "KEEFER, DAWN, ET AL. V. TRUMP, PRESIDENT OF U.S., ET AL.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-9",
+    "caption": "WILKINS, KEITH M. V. HERRON, STEVE, ET AL.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-10",
+    "caption": "HARMON, RODNEY D. V. PAYNE, DIR., AR DOC",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-11",
+    "caption": "FITZGERALD, MARGARET M. V. KNAUB, MICHAEL A., ET AL.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-12",
+    "caption": "FARRAR, ARRIN, ET UX. V. TEXTRON AVIATION, INC., ET AL.",
+    "sheet": 18,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-15",
+    "caption": "BELLEVUE SCH. DIST. NO. 405 V. C. S. A.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-17",
+    "caption": "D R BURTON HEALTHCARE LLC V. TRUDELL MEDICAL INT'L INC.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-18",
+    "caption": "CIRRUS DESIGN CORP. V. GREAT WESTERN AIR, LLC",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-20",
+    "caption": "ESSEILY, ALI V. HOCHUL, GOV. OF NY, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-22",
+    "caption": "KOEL, RICKY V. CITIZENS MEDICAL CENTER, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-23",
+    "caption": "JOHNSON, ANTOINE D. V. UNITED STATES",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-26",
+    "caption": "BERKELEY CTY. SCH. DIST. V. HUB INT'L LIMITED, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-27",
+    "caption": "BRANNBERG, JUDY A. V. JEFFERSON CTY. PUB. SCH., ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-28",
+    "caption": "SANDERS, CLAUDE F. V. CIR",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-30",
+    "caption": "STITT, MARVIN K. V. TULSA, OK",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-32",
+    "caption": "BINION, MASON V. UNITED STATES",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-33",
+    "caption": "ORTIZ-ROMERO, PEDRO V. GOVT. DEV. BANK FOR PR, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-36",
+    "caption": "LOPEZ, ARTHUR V. COURT OF APPEAL OF CA, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-37",
+    "caption": "ENGLAND, THERESA V. SIEBE, STEVEN R., ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-40",
+    "caption": "JEAN-BAPTISTE, HAROLD V. DEPT. OF JUSTICE, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-42",
+    "caption": "MONTERO, ADOLFO S. V. CIR",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-44",
+    "caption": "PIRANI, FIYYAZ V. SLACK TECHNOLOGIES, INC., ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-47",
+    "caption": "ALEXANDER, WILBERT J. V. SC DOT, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-48",
+    "caption": "FARAG, TAREK V. CLIMATE UNITED FUND, ET AL.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-53",
+    "caption": "MARTIN, BRITTANY V. V. SOUTH CAROLINA",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-54",
+    "caption": "RICHARDS, DAVID L. V. TENNESSEE",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-55",
+    "caption": "CICHOWSKI, KEVIN, ET AL. V. DISCOVER BANK",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-56",
+    "caption": "ZHANG, QINGHUA, ET AL. V. FED. HOME LOAN BANK OF TOPEKA",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-58",
+    "caption": "FINDLAY, ANDREW V. GEOQUIP, INC.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-59",
+    "caption": "SHERMAN, JOSEPH V., ET AL. V. LERNER, FORMER JUDGE",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-61",
+    "caption": "MURPHY, MARK, ET UX. V. UNITED STATES",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-62",
+    "caption": "PUCKETT, CARL E., ET UX. V. AIN JEEM, INC.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-65",
+    "caption": "ROYAL SUITES HEALTH CARE, ET AL. V. INGEMI, JOSEPH S.",
+    "sheet": 19,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-66",
+    "caption": "ALLIANCE MARC HIGH SCH., ET AL. V. EMPLOY. RELATIONS BD., ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-67",
+    "caption": "BAGAL, ABHIJIT V. SAWANT, KSHAMA, ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-68",
+    "caption": "BALLARD, JAMES T. V. WEST HOLLYWOOD, CA, ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-69",
+    "caption": "SU, SHAN S. V. BROWARD COUNTY, FL",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-70",
+    "caption": "KELLY, WILLIAM V. GRAPHIC PACKAGING INT'L, LLC",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-72",
+    "caption": "MOEHLE, JAMES R. V. FLORIDA",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-74",
+    "caption": "SULLIVAN EQ. PARTNERS, LLC V. LOS ANGELES, CA",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-75",
+    "caption": "CROCS, INC. V. DOUBLE DIAMOND LTD., ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-78",
+    "caption": "LANDS, PATRICK D. V. RALEIGH, NC",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-80",
+    "caption": "STUDCO BLDG. SYS. US, LLC V. 1ST ADVANTAGE FED. CREDIT UNION",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-82",
+    "caption": "PIPES, MALCOLM W. V. UNITED STATES",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-84",
+    "caption": "SALIS, OWOLABI V. DOPICO, JORGE, ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-85",
+    "caption": "BAKHTIARI, ALIREZA V. UNITED STATES",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-86",
+    "caption": "ARORA, ASHOK V. MIDLAND CREDIT MGMT., ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-87",
+    "caption": "MACDONALD, KEVIN F. V. JP MORGAN CHASE BANK, N.A.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-90",
+    "caption": "SCOTT, MARK S. V. UNITED STATES, ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-92",
+    "caption": "MULAMBA, ISAAC V. BD. OF ED. OF BALTIMORE CTY.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-93",
+    "caption": "JIN, ANG V. ZHAO, CHEN",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-94",
+    "caption": "DeBOSE, ANGELA V. USDC ND FL",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-96",
+    "caption": "MARYVILLE BAPTIST CHURCH, ET AL. V. BESHEAR, GOV. OF KY",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-97",
+    "caption": "SMITH, SUSAN M. V. BISIGNANO, COMM'R, SOCIAL SEC.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-98",
+    "caption": "GUMM, PETER V. AK STEEL CORPORATION",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-99",
+    "caption": "HUDSON, WILLIAM T. V. MEISNER, WARDEN",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-100",
+    "caption": "BARRAZA-MIRANDA, JAVIER E. V. UNITED STATES",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-101",
+    "caption": "J. M. F. V. QUIROS, COMM'R, CT DOC",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-102",
+    "caption": "SWINFORD, JAYNE V. SANTOS, OFFICER, ET AL.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-103",
+    "caption": "BOFI FEDERAL BANK V. ERHART, CHARLES M.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-104",
+    "caption": "ADAMS, JOE L. V. 3D SYSTEMS, INC.",
+    "sheet": 20,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-105",
+    "caption": "BELAND, BRIAN, ET AL. V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-109",
+    "caption": "NGUYEN, HONG T. V. McBEE, WARDEN, ET AL.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-110",
+    "caption": "PRIESTER, SALLY V. PR DEPT. OF HEALTH, ET AL.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-111",
+    "caption": "CARVER, TIMOTHY V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-118",
+    "caption": "HOOD RIVER DISTILLERS, INC. V. NLRB",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-121",
+    "caption": "MORGAN, KERA V. UNION PACIFIC RAILROAD CO.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-122",
+    "caption": "CARMICHAEL, DAVID A., ET AL. V. RUBIO, SEC. OF STATE, ET AL.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-123",
+    "caption": "CONNOLLY, MATTHEW J. V. SOUTHFIELD, MI",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-124",
+    "caption": "LAWS, THERESA M. V. LANSDALE, PA, ET AL.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-127",
+    "caption": "BALL, JONATHAN F. V. USDC MD",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-129",
+    "caption": "DAY PACER LLC, ET AL. V. FTC",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-130",
+    "caption": "McLAIN, FRANCIS V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-137",
+    "caption": "FLOYD, JADEN T. V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-139",
+    "caption": "CORNELIUS, MICHELE A. V. CVS PHARMACY, INC., ET AL.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-144",
+    "caption": "FOSTER, THOMAS D. V. STEWART, COKE M.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-146",
+    "caption": "CHAUDHRI, MOHAMMAD N., ET AL. V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-148",
+    "caption": "PRETE, MICHAEL V. RHODE ISLAND",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-150",
+    "caption": "LAZZARO, ANTON J. V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-154",
+    "caption": "PRETE, MICHAEL V. RHODE ISLAND",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-157",
+    "caption": "HALL, RICHARD V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-158",
+    "caption": "R. J. REYNOLDS VAPOR CO. V. ALTRIA CLIENT SERVICES LLC",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-164",
+    "caption": "BAKER, MITZI V. SSA",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-169",
+    "caption": "LOWE, CLIFFORD, A., ET AL. V. SHIELDMARK, INC., ET AL.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-171",
+    "caption": "SMITH, DIMETRI A. V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-174",
+    "caption": "REAGOR, BART W. V. UNITED STATES",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-177",
+    "caption": "MANENTE, VITO V. CIR",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-185",
+    "caption": "ROSEN, BARRY V. HAWTHORNE, CA",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-190",
+    "caption": "MORAN, JOHN P. V. HEGSETH, SEC. OF DEFENSE, ET AL.",
+    "sheet": 21,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-192",
+    "caption": "EZOR, ARTHUR E. V. STATE BAR OF CA",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-199",
+    "caption": "CONCEPCION, DANIEL, ET AL. V. COMM'R OF BASEBALL, ET AL.",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-214",
+    "caption": "FITCH, KENNETH, ET AL. V. MARYLAND, ET AL.",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-217",
+    "caption": "CERAMTEC GMBH V. COORSTEK BIOCERAMICS LLC",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-218",
+    "caption": "SMITH, BRIAN V. FLORIDA",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-223",
+    "caption": "LEGITSCRIPT LLC V. PHARMACYCHECKER.COM LLC",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-231",
+    "caption": "JARRARD, JON W. V. MARTELL, WARDEN",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-241",
+    "caption": "AHO, JASON A. V. FLORIDA",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5001",
+    "caption": "AUSTIN, CLARENCE V. CT OFFICE OF CLAIMS, ET AL.",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5002",
+    "caption": "GARRIDOAGUILAR, JUAN C. V. CALIFORNIA",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5003",
+    "caption": "GARZA, ERIC R. V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5005",
+    "caption": "TAJWAR, TAWSIF V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5006",
+    "caption": "JOHNSON, FREDRICK V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5007",
+    "caption": "JOHNSON, FREDRICK V. OHIO",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5008",
+    "caption": "AGUIAR, STEPHEN T. V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5010",
+    "caption": "ALLEN, TIMOTHY L. V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5013",
+    "caption": "PATTERSON, TAWHYNE M. V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5014",
+    "caption": "DURACHINSKY, PHILLIP R. V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5015",
+    "caption": "LITTLE, JUSTIN D. V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5016",
+    "caption": "PARKER, GENERAL V. HUD, ET AL.",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5017",
+    "caption": "DAVIS, BRANT V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5018",
+    "caption": "WASHINGTON, LAKEITH L. V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5019",
+    "caption": "LOWE, CHAT V. PALM TRAN, ET AL.",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5020",
+    "caption": "BOZEMAN, DAN L. V. SCHIEBNER, WARDEN",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5021",
+    "caption": "SPEAKS, DAJAVAN V. UNITED STATES",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5022",
+    "caption": "TAYLOR, SHEMICA V. CIRCUIT COURT OF IL, ET AL.",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5023",
+    "caption": "REED, MYCHAL A. V. SUPERIOR COURT OF CA, ET AL.",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5024",
+    "caption": "REAY, ROY G. V. NORRIS, WARDEN",
+    "sheet": 22,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5025",
+    "caption": "HUETE-TORRES, SANTOS ISABEL V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5026",
+    "caption": "C. M. C. V. TX DEPT. OF FAMILY SERVICES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5027",
+    "caption": "STEVENS, GREGORY V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5028",
+    "caption": "DeFRANCE, MICHAEL B. V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5029",
+    "caption": "WILLIAMS, DAMON D. V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5030",
+    "caption": "LOPEZ-VILLEGAS, BRANDON V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5031",
+    "caption": "ODOM, MICHAEL V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5034",
+    "caption": "BORNE, SHAWN T. V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5035",
+    "caption": "DEES, JENNIFER L., ET AL. V. KNOX, JILLIAN, ET AL.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5037",
+    "caption": "FRANIZER, JAMES V. V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5041",
+    "caption": "HERNANDEZ, GEOVANI V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5042",
+    "caption": "HOUSE, DESHAWN D. V. LONG, WARDEN, ET AL.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5043",
+    "caption": "QUINN, CECIL J. V. SC MARSHALS, SPARTANBURG, ET AL.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5044",
+    "caption": "BAISE, ROBERT V. MITCHELL, WARDEN, ET AL.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5045",
+    "caption": "ORDOUKHANIAN, RAYMOND D. V. CHANEY, LEAH W., ET AL.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5046",
+    "caption": "HAOBSH, PIERRE V. SANTA BARBARA SHERIFF, ET AL.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5047",
+    "caption": "FRANCIS, MICHAEL V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5048",
+    "caption": "HOLT, JEREMY W. V. OKLAHOMA",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5049",
+    "caption": "HYMES, DaJOHN M. V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5050",
+    "caption": "CARABALLO, CARLOS V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5051",
+    "caption": "MOORE, KRISTIAN D. V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5052",
+    "caption": "AQUINO-DOLORES, VERONICA V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5057",
+    "caption": "DOE, JOHN V. GLASS, COMM'R, FDLE",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5058",
+    "caption": "AYALA-ALAS, JOSE M. V. UNITED STATES",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5059",
+    "caption": "LOWE, JAMES R. V. ND WORKFORCE SAFETY AND INS.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5060",
+    "caption": "CAMPBELL, HAROLD A. V. LOUISIANA",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5061",
+    "caption": "JOHNSON, RONALD V. KANSAS",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5064",
+    "caption": "KIRUI, KENNETH K. V. LeMAIRE, JUDGE, ET AL.",
+    "sheet": 23,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5066",
+    "caption": "SPOSITO, DANIELLE V. ROLLINS-THREATS, LINDA",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5068",
+    "caption": "ANDERSON, DWAYNE V. OHIO",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5069",
+    "caption": "ANDERSON, ARNOLD V. ROYAL, WARDEN, ET AL.",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5070",
+    "caption": "JOHNSON, KEDRICK V. LOUISIANA",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5071",
+    "caption": "MASON, MARTEZ D. V. TANNER, WARDEN",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5072",
+    "caption": "MIAH, KHALED V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5073",
+    "caption": "MENTER, WILLIAM V. NEW JERSEY",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5075",
+    "caption": "JABBEN, MARK V. TEXAS",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5076",
+    "caption": "LEGGHETTE, SHOMARI V. ILLINOIS",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5078",
+    "caption": "TURNER, LAWRENCE J. V. WISCONSIN",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5079",
+    "caption": "CARTER, LEON V. MLODZIK, WARDEN",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5080",
+    "caption": "COLES, KEVIN V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5081",
+    "caption": "POOLE, ERIC V. V. ARNOLD, WARDEN",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5085",
+    "caption": "PERRY, DONALD V. DIXON, SEC., FL DOC",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5086",
+    "caption": "CARR, JIMMY J. V. IOWA",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5087",
+    "caption": "BURNS, TASHAWN V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5088",
+    "caption": "MENDEZ, LORENZO E. V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5089",
+    "caption": "JOHNSON, VERONICA M. V. MOORE, JUDGE, ET AL.",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5090",
+    "caption": "ZINNERMAN, JOSEPH A. V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5092",
+    "caption": "YOUSIF, HUSSEIN S. V. CHRISTENSEN, SUSAN L., ET AL.",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5093",
+    "caption": "NUNEZ-CARDENAS, HECTOR M. V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5094",
+    "caption": "MUSTAFA, AWAD V. HTS SERVICES, INC., ET AL.",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5095",
+    "caption": "REED, PATRICK D. V. FREDRICK, WARDEN",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5099",
+    "caption": "RAY, FRANKLIN V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5100",
+    "caption": "PETERSON, DAVID J. V. BLACK BODY CORP., ET AL.",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5102",
+    "caption": "BRASHEAR, DANNIE C. V. WASHINGTON",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5104",
+    "caption": "MOORE, MARCUS V. ACE INSURED/CHUBB, ET AL.",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5105",
+    "caption": "LAPORTE, ANTHONY M. V. UNITED STATES",
+    "sheet": 24,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5138",
+    "caption": "MYKONOS, STEPHANIE V. AXINN, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5140",
+    "caption": "PICKETT, AMY V. TTUHSC, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5141",
+    "caption": "MAYFIELD, DEDRIC V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5143",
+    "caption": "TAYLOR, MARY L. V. MICHIGAN, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5144",
+    "caption": "HAWES, GREGORY M. V. NORRIS, WARDEN",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5145",
+    "caption": "ACKLIN, NICHOLAS B. V. HAMM, COMM'R, AL DOC, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5148",
+    "caption": "COSSIO, JOSE A. V. AFCCA, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5149",
+    "caption": "SIMS, JERRELL V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5151",
+    "caption": "RUIZ-RIVERA, J. INES V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5152",
+    "caption": "FOWLER, ZACHARY C. V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5154",
+    "caption": "MUHAMMAD, ELIJAH V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5211",
+    "caption": "MUHAMMAD, KAREEM V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5155",
+    "caption": "PAYANO-PEREZ, LUIS V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5156",
+    "caption": "ROYAL, MARLIN L. V. GUZMAN, WARDEN",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5157",
+    "caption": "TYLER, JUAN T. V. MARTINEZ, WARDEN",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5158",
+    "caption": "CHERMER, BEAU V. MASON, SUPT., MAHONOY, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5159",
+    "caption": "GREGORY, LARON V. OHIO",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5160",
+    "caption": "HOLDER, BRUCE V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5161",
+    "caption": "CROUCH, ZACHARY C. V. IRS",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5162",
+    "caption": "BINETTI, CHRISTOPHER V. NEW JERSEY, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5163",
+    "caption": "OAKLIEF, SHAWN V. MESA, AZ, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5186",
+    "caption": "ELLAR, DONNA V. MESA, AZ, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5164",
+    "caption": "AMERSON, PIERRE A. V. DISMUKES, SEC., NC DOC, ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5165",
+    "caption": "BEEMAN, BROCK V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5166",
+    "caption": "CAMARDA, THOMAS E. V. WHITEHORN, ELIZABETH M., ET AL.",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5167",
+    "caption": "WALLACE, MONIQUE C. V. CEDAR HILL DENTAL",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5169",
+    "caption": "EVENSEN, RICHARD P. V. CALIFORNIA",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5170",
+    "caption": "WALTERS, MARK R. V. UNITED STATES",
+    "sheet": 26,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5171",
+    "caption": "HITCHCOCK, REGINALD V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5172",
+    "caption": "WIDMYER, WILLIAM T. V. FRAME, SUPT., MOUNT OLIVE",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5173",
+    "caption": "WELSH, DOUGLAS D. V. SALAMON, SUPT., ROCKVIEW, ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5174",
+    "caption": "HAMMOND, JAMES B. V. GUERRERO, DIR., TX DCJ",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5176",
+    "caption": "RODGERS, MARIO G. V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5177",
+    "caption": "MEIER, AARON E. V. WILLIAMS, AARON, ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5178",
+    "caption": "MARTINEZ-LARA, PABLO V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5179",
+    "caption": "CAMPBELL, GERALD L. V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5180",
+    "caption": "WRIGHT, SHERROD A. V. FLORIDA",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5181",
+    "caption": "SANCHEZ-TENA, SAMUEL A. V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5182",
+    "caption": "MELNYCHUK-BESELT, RONDA V. WALDORF=ASTORIA MGMT., ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5185",
+    "caption": "SMITH, GEORGE W. V. FLORIDA",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5187",
+    "caption": "LEWIS, SHANTELL V. CASTRO, HERNAN, ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5188",
+    "caption": "SAFIER, BETHZAELI V. WOOLRIDGE, THELMA",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5190",
+    "caption": "DICKERSON, CURTIS V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5192",
+    "caption": "FLETCHER, JOHN P. V. COLEMAN, WARDEN",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5193",
+    "caption": "SAN MIGUEL, SAMUEL V. ABBOTT, GOV. OF TX, ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5195",
+    "caption": "MO, EX REL. MARTIN, STEVEN A. V. HANSBROUGH, JUDGE, ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5196",
+    "caption": "MANNING, ANTWON V. BRADFORD, KARL R., ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5197",
+    "caption": "MANNING, ANTWON V. KILDUFF, RYAN A.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5198",
+    "caption": "BUTTS, COREY L. V. DOTSON, DIR., VA DOC",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5199",
+    "caption": "ASHFORD, BURK N. V. COURT OF APPEAL OF CA, ET AL.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5200",
+    "caption": "NUNEZ, ISAIAS L. V. GAMBOA, WARDEN",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5201",
+    "caption": "GREEN, BRANT A. V. RIOS, WARDEN",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5202",
+    "caption": "MILLS, JACOB M. V. BISIGNANO, COMM'R, SOCIAL SEC.",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5203",
+    "caption": "TAYLOR, RHONDA D. V. BASKETT, OFFICER",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5204",
+    "caption": "GONZALEZ, MARIO O. V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5205",
+    "caption": "GARCIA, JESUS V. UNITED STATES",
+    "sheet": 27,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5206",
+    "caption": "NWANERI, NGOZIKA J. V. GEORGE WASHINGTON UNIV. HOSP.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5207",
+    "caption": "SALAZAR, JESSICA V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5208",
+    "caption": "BULLOCK, JESSIE V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5209",
+    "caption": "WEETLY, ANDREA N. V. SUPERIOR COURT OF CA, ET AL.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5210",
+    "caption": "PEREZ, LISA M. V. PARKER, WARDEN",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5212",
+    "caption": "O'NEAL, JACQUEL V. TEXAS",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5213",
+    "caption": "WILLIAMS, CIMEON D. V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5215",
+    "caption": "CORNEJO, OTONIEL V. CALIFORNIA",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5216",
+    "caption": "NOBLE, RICARDO L. V. PENNSYLVANIA",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5217",
+    "caption": "JACKSON, WILLIAM R. V. GEORGIA, ET AL.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5218",
+    "caption": "LoRUSSO, MICHAEL A. V. DIXON, SEC., FL DOC, ET AL.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5219",
+    "caption": "HIN, MAO V. CALIFORNIA",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5221",
+    "caption": "GRISTINA, ANNA V. MERCHAN, FORMER JUDGE, ET AL.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5222",
+    "caption": "REYNOLDS, DAHRYL L. V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5223",
+    "caption": "RHODES, BURTE G. V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5224",
+    "caption": "UMEH, KELECHI C. V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5225",
+    "caption": "VEGA, MANUEL V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5226",
+    "caption": "DRAKE, NASHAUN V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5227",
+    "caption": "MITCHELL, DERRICK K. V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5228",
+    "caption": "SOTO, GEBER V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5229",
+    "caption": "WALDECK, DAVID L. V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5230",
+    "caption": "BRITO, VICTOR S. V. UNITED STATES",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5231",
+    "caption": "DAVIS, JOSEPH-ALLEN V. OM SRP, LLC",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5232",
+    "caption": "ALMAZON, DOINA R. V. OYSTER BAY, NY",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5234",
+    "caption": "BUTLER, CATHY E. V. ESTATE OF DANA G. BUTLER, ET AL.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5235",
+    "caption": "VOSE, CARLTON V. NERONHA, ATT'Y GEN. OF RI",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5236",
+    "caption": "ANNABEL, ROBERT V. CAMPBELL, WARDEN, ET AL.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5237",
+    "caption": "ROONEY, TENISHA V. UNEMPLOYMENT COMPENSATION BD.",
+    "sheet": 28,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5239",
+    "caption": "LARGO, ROBERT V. NEW YORK",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5240",
+    "caption": "SHORTRIDGE, JASON V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5242",
+    "caption": "RITCHIE, CHRISTINE V. LAVIN, CEDRONE, GRAVER, ET AL.",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5244",
+    "caption": "RICHARD, KRISTY V. DIXON, SEC., FL DOC, ET AL.",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5247",
+    "caption": "RINALDI, MICHAEL V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5250",
+    "caption": "ROMERO-ROSALES, EDGARDO A. V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5252",
+    "caption": "MARRUFO, ERIC D. V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5257",
+    "caption": "ROLOSON, ERIC S. V. WASHINGTON",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5258",
+    "caption": "BRYANT, JAMES J. V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5263",
+    "caption": "GIPSON, MARVIN V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5264",
+    "caption": "SANDHAUS, CRAIG A. V. FLORIDA",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5265",
+    "caption": "GRAULAU MALDONADO, JESSICA M. V. ORANGE CTY. PUB. LIBRARY SYS.",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5267",
+    "caption": "NASCIMENTO-DEPINA, ANTONIO B. V. MASSACHUSETTS",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5269",
+    "caption": "MILLER, MICHAEL D. V. FLORIDA",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5271",
+    "caption": "MOBARAK, SOLEIMAN V. FORSHEY, WARDEN",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5273",
+    "caption": "PADILLA, JORDAN V. NEW MEXICO",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5274",
+    "caption": "ZUBIA-MELENDEZ, ELEUTERIO V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5275",
+    "caption": "WILLIAMS, KAYLA V. PA STATE UNIV., ET AL.",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5276",
+    "caption": "EARLS, DAVID L. V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5277",
+    "caption": "HERNANDEZ-VILLALOBOS, OLISER V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5278",
+    "caption": "PE\u00f1A, REYNALDO A. V. TEXAS",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5281",
+    "caption": "GOOCH, TONY L. V. TENNESSEE",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5282",
+    "caption": "BOWERS, JACKSON D. V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5283",
+    "caption": "BLACKMAN, DEANDRE V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5284",
+    "caption": "EDWARDS, BOBBIE RAY V. GRAHAM, WARDEN",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5287",
+    "caption": "BELL, ANDREW W. V. SWIFT, KARLI, ET AL.",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5288",
+    "caption": "MEKASHA, EDDIE V. CHAPPLEAR, CHRISTY, ET AL.",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5289",
+    "caption": "OLIVER, MICHAEL V. UNITED STATES",
+    "sheet": 29,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5293",
+    "caption": "MOCK, TYRONE V. PALMER, WARDEN",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5297",
+    "caption": "ELLIS, CHRISTOPHER J. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5299",
+    "caption": "SHAVERS, ALFRED L. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5301",
+    "caption": "THORNE, MARIO L. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5302",
+    "caption": "EDWARDS, CAMERON V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5303",
+    "caption": "BERNARD, JAE M. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5305",
+    "caption": "MONDELLI, VICTOR V. BERKELEY HEIGHTS NURSING, ET AL.",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5311",
+    "caption": "OLIVER, WINSTON S. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5312",
+    "caption": "JONES, ROY L. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5313",
+    "caption": "CASSADAY, KEVIN W. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5318",
+    "caption": "EDDINGS, DEAGO L. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5319",
+    "caption": "ELLIOTT, TIMOTHY L. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5322",
+    "caption": "LLOYD, DERRICK V. MORTON, ROBERT",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5328",
+    "caption": "SAUNDERS, AYANA V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5329",
+    "caption": "UNDERWOOD, DUANE G. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5330",
+    "caption": "DUGAN, RAYMOND V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5332",
+    "caption": "MELGAR CABRERA, FRANCISCO V. LEPE, WARDEN",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5333",
+    "caption": "SAIN, MARK W. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5334",
+    "caption": "RUSSELL, BILLY J. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5336",
+    "caption": "McCOY, TERRELL V. DUNCAN, WARDEN",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5337",
+    "caption": "GATLIN, KALEN A. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5339",
+    "caption": "NUTTER, DAVID K. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5341",
+    "caption": "LAIRD, KENNETH J. V. THORNELL, DIR., AZ DOC, ET AL.",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5342",
+    "caption": "VERRILL, RAYMOND A. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5344",
+    "caption": "BROWNING, ELLIOT M. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5345",
+    "caption": "NAVARRO-ZUNIGA, ARTURO V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5351",
+    "caption": "LEE, ROBERTA A. V. DEPT. OF ARMY",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5352",
+    "caption": "TOVAR, ANTONIO R. V. UNITED STATES",
+    "sheet": 30,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5361",
+    "caption": "GARCIA, RITA A. V. BISIGNANO, COMM'R, SOCIAL SEC.",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5362",
+    "caption": "BLANCHER, NATHANIEL V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5363",
+    "caption": "REYES-SALINAS, EDRAS V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5365",
+    "caption": "PAZOS-MONTES, OMAR A. V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5367",
+    "caption": "GRANGER, CLEVERN A. V. TACK, WARDEN",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5368",
+    "caption": "STORY, SHONTERIA V. JUDD, SHERIFF",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5375",
+    "caption": "SPILA, ARTURS V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5377",
+    "caption": "DERITIS, VINCENT V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5381",
+    "caption": "JOHNSON, SHAMEIKA V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5386",
+    "caption": "MARSHALL, AURELIAS V. DOUGLAS, WARDEN",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5387",
+    "caption": "NARVETT, ROBERT V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5390",
+    "caption": "MEDFORD, BRANDON D. V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5391",
+    "caption": "MARQUEZ-FLORIANO, JOSE G. V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5392",
+    "caption": "MICKENS, NELSON V. DANFORTH, WILLIAM",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5399",
+    "caption": "MEHRABANI, NEDA V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5400",
+    "caption": "BEARD, ANDREW C. V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5404",
+    "caption": "SMITH, DARREN V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5405",
+    "caption": "COLEMAN, LAMONT V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5406",
+    "caption": "WHITESIDE, MALGUM V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5407",
+    "caption": "THOMPSON, BRANDON K. V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5408",
+    "caption": "AVILES, JULIO V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5409",
+    "caption": "ARBIT, STANISLAV V. SCHNEIDER ELECTRIC SE",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5410",
+    "caption": "SYPHAX, KYLE V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5411",
+    "caption": "PIRES, ADMILSON V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5413",
+    "caption": "JENNINGS, RAYMOND R. V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5414",
+    "caption": "CAMPBELL, ANTHONY T. V. GONZALES, ACTING WARDEN",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5416",
+    "caption": "OLVERA-GAMEZ, MELITON V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5419",
+    "caption": "WRIGHT, ANTHONY S. V. UNITED STATES",
+    "sheet": 31,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5420",
+    "caption": "JACKSON, PERRY J. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5423",
+    "caption": "TURNER, DAVONTA D. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5425",
+    "caption": "FOSTER, KEITH L. V. PENNSYLVANIA",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5427",
+    "caption": "DENNIS, RUFUS E. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5429",
+    "caption": "WALKER, ANTHONY B. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5430",
+    "caption": "RAMSEY, RAVON L. V. CA DOC, ET AL.",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5431",
+    "caption": "MATLOCK, JASON C. V. INDIANA",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5435",
+    "caption": "WYNN, ANTUAN L. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5444",
+    "caption": "WILSON, STEVEN V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5446",
+    "caption": "PEREZ, JAVIER V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5449",
+    "caption": "WILLIAMS, JOHN T. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5460",
+    "caption": "THOMPSON, JOSEPH V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5462",
+    "caption": "WILSON, DEANDRE V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5465",
+    "caption": "NICHOLSON, DAVID V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5466",
+    "caption": "HOERIG, CLAUDIA C. V. OLDS, WARDEN",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5468",
+    "caption": "MOYLAN, ROBERT A. V. ILLINOIS",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5471",
+    "caption": "LEE, JAKARI A. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5472",
+    "caption": "ST. JOHN, LARS V. GRIMES, OFFICER, ET AL.",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5490",
+    "caption": "BROEKER, TRAVIS V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5493",
+    "caption": "BARROW, JOSHUA D. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5495",
+    "caption": "DRONE, PERTEACHER V. CONRAD, ROBERT J., ET AL.",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5500",
+    "caption": "ROLAND, CLARENCE C. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5506",
+    "caption": "CANARIO-VILOMAR, CARLOS D. V. UNITED STATES",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5511",
+    "caption": "PARKINS, MATTHEW T., ET AL. V. McMASTER, HENRY D., ET AL.",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "25-5543",
+    "caption": "BROOKS, ALTONY V. JOHNSTON, SGT., ET AL.",
+    "sheet": 32,
+    "before_mass_sentence": true
+   },
+   {
+    "docket": "24-948",
+    "caption": "GUERRERO, CHIEF JUSTICE, ET AL. V. REDD, STEPHEN M.",
+    "sheet": 32,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-998",
+    "caption": "BOYD, OFFICER, ET AL. V. WATSON, FRED",
+    "sheet": 33,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-1151",
+    "caption": "BDO USA, LLP V. NEW ENGLAND CARPENTERS, ET AL.",
+    "sheet": 33,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7126",
+    "caption": "LETTIERI, DAVID C. V. USDC ND NY",
+    "sheet": 33,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7140",
+    "caption": "LETTIERI, DAVID C. V. VILARDO, LAWRENCE J.",
+    "sheet": 33,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7206",
+    "caption": "BOCHRA, MARK V. USDC ND IL",
+    "sheet": 33,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7233",
+    "caption": "DANIELS, JOSEPH A. V. GORE, DOCTOR",
+    "sheet": 33,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7281",
+    "caption": "WATSON, LAWRENCE B. V. IFILL, PAMERSON",
+    "sheet": 33,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7322",
+    "caption": "SMITH, SAMUEL L. V. RODRIGUEZ, A.",
+    "sheet": 34,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7325",
+    "caption": "GREEN, TRACIE L. V. US BANK NATIONAL ASSOCIATION",
+    "sheet": 34,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7341",
+    "caption": "MORETA, PEDRITO S. V. UNITED STATES",
+    "sheet": 34,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7381",
+    "caption": "ROSA, CHARLENE V. FLORIDA",
+    "sheet": 34,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7458",
+    "caption": "FISHBOURNE, RICARDO V. MURDAUGH, ALEX, ET AL.",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7516",
+    "caption": "HESS, DARRELL A. V. OKLAHOMA",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7517",
+    "caption": "SMITH, SAMUEL L. V. MIAMI, FLORIDA, ET AL.",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "24-7518",
+    "caption": "SMITH, SAMUEL L. V. SMITH, NATASHA K.",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-16",
+    "caption": "KLAYMAN, LARRY E. V. JUDICIAL WATCH, INC., ET AL.",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-19",
+    "caption": "LOOMER, LAURA, ET AL. V. ZUCKERBERG, MARK, ET AL.",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-21",
+    "caption": "KAETZ, WILLIAM F. V. UNITED STATES, ET AL.",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-60",
+    "caption": "GREINER, JAMES V. DEMOCRATIC NAT. COMM., ET AL.",
+    "sheet": 35,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-141",
+    "caption": "PHILLIPS, ARNOLD G. V. ABUNDIS, CECILIA, ET AL.",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-149",
+    "caption": "UNITED SERVICES AUTO. ASSN. V. PNC BANK N.A.",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5011",
+    "caption": "EZEANI, GREGORY I. V. JIMENEZ, OFFICER, ET AL.",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5012",
+    "caption": "EZEANI, GREGORY I. V. BONDI, ATT'Y GEN.",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5036",
+    "caption": "FELICIANO-RODRIGUEZ, WILFREDO V. UNITED STATES",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5084",
+    "caption": "MANNING, DOUGLAS V. ADM'R, EAST JERSEY, ET AL.",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5108",
+    "caption": "GRIFFITH, HOWARD V. NEW YORK",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5294",
+    "caption": "NAVARRO MARTIN, MARIA V. FLORIDA",
+    "sheet": 36,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5369",
+    "caption": "HOLMES, C. V. COLE, ADM'R, DEA",
+    "sheet": 37,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5371",
+    "caption": "MANNING, DOUGLAS V. PLATKIN, ATT'Y GEN. OF NJ",
+    "sheet": 37,
+    "before_mass_sentence": false
+   },
+   {
+    "docket": "25-5378",
+    "caption": "SMITH, SAMUEL L. V. SLIMAK, MARK H.",
+    "sheet": 37,
+    "before_mass_sentence": false
+   }
+  ]
+ },
+ "entry_counts_by_section": {
+  "ORDERS IN PENDING CASES": 43,
+  "CERTIORARI DENIED": 792,
+  "HABEAS CORPUS DENIED": 26,
+  "MANDAMUS DENIED": 11,
+  "REHEARINGS DENIED": 10
+ },
+ "row_pitch": {
+  "measured_over": "consecutive-baseline y-gaps inside CERTIORARI DENIED, same-sheet pairs only, excluding rows that are purely digits or purely closing punctuation (folios, margin counters, stray grouped-docket paren wraps)",
+  "carried_figure_pt": 23.46,
+  "carried_figure_mm": 8.276,
+  "n": 880,
+  "mean_pt": 23.492516249999987,
+  "median_pt": 23.516939999999977,
+  "stdev_pt": 0.029544256772002495,
+  "min_pt": 23.456819999999993,
+  "max_pt": 23.52696000000003,
+  "mode_pt": 23.517,
+  "mode_count": 520,
+  "mode_fraction": 0.5909090909090909,
+  "histogram_pt": [
+   [
+    23.517,
+    520
+   ],
+   [
+    23.457,
+    357
+   ],
+   [
+    23.527,
+    2
+   ],
+   [
+    23.467,
+    1
+   ]
+  ],
+  "mean_mm": 8.287637677083328,
+  "median_mm": 8.296253833333324,
+  "mode_mm": 8.296275,
+  "pages_measured_on": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37
+  ],
+  "gaps_pt": [
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4668,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.527,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.527,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.4568,
+   23.5169,
+   23.5169,
+   23.4568,
+   23.5169
+  ]
+ },
+ "rule_38a_occurrences": [
+  {
+   "sheet": 34,
+   "row_idx": 1805,
+   "text": "unless the docketing fee required by Rule 38(a) is paid and the",
+   "in_certiorari_denied": true
+  },
+  {
+   "sheet": 34,
+   "row_idx": 1842,
+   "text": "unless the docketing fee required by Rule 38(a) is paid and the",
+   "in_certiorari_denied": true
+  },
+  {
+   "sheet": 36,
+   "row_idx": 1932,
+   "text": "unless the docketing fee required by Rule 38(a) is paid and the",
+   "in_certiorari_denied": true
+  },
+  {
+   "sheet": 38,
+   "row_idx": 2016,
+   "text": "unless the docketing fee required by Rule 38(a) is paid and the",
+   "in_certiorari_denied": false
+  }
+ ],
+ "known_lossiness": {
+  "description": "Docket numbers whose \"NN-\" or \"NNM\" prefix and whose numeral suffix are drawn by two separate, out-of-order text-positioning operations in the page's content stream (the suffixes are drawn as an earlier batch, at a different x, before the main docket/caption column). The line-break convention used for entry counting above (a new line at every Td/TD/Tm/T*/'/\" operator) never reassembles these, so they are silently absent from certiorari_denied.total/before/after above, exactly as they would be absent from the prior session's own extractor, which uses the same convention. Confirmed by direct inspection of the raw content stream and of the rendered page (render/sheet-25.png): all six dockets ARE visibly, correctly printed on the page; only this extraction convention misses them.",
+  "fragments": [
+   {
+    "sheet": 25,
+    "row_idx": 1325,
+    "text": "25-"
+   },
+   {
+    "sheet": 25,
+    "row_idx": 1330,
+    "text": "25-"
+   },
+   {
+    "sheet": 25,
+    "row_idx": 1336,
+    "text": "25-"
+   },
+   {
+    "sheet": 25,
+    "row_idx": 1342,
+    "text": "25-"
+   },
+   {
+    "sheet": 25,
+    "row_idx": 1347,
+    "text": "25-"
+   },
+   {
+    "sheet": 25,
+    "row_idx": 1353,
+    "text": "25-"
+   }
+  ],
+  "count": 6,
+  "corrected_certiorari_denied_total": 798,
+  "corrected_before_mass_sentence": 767,
+  "corrected_after_mass_sentence": 31
+ }
+}

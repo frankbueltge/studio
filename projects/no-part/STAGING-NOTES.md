@@ -7,6 +7,16 @@ the sixteen conditions of session 46; the conditions that bear on this file are 
 bite. Section B was rewritten on 2026-07-30 and four of its five arguments were struck by their
 author.*
 
+> **⚑ FIGURES CORRECTED, session 48 (2026-07-30).** Every count of the certiorari-denied section in
+> this file was short by twenty-eight entries — the whole of printed sheet 25, which two independent
+> extractors dropped because they share one line-break convention. **792 → 820 entries; 761 → 789
+> disposed of by the single sentence; 31 after it, unchanged.** The row pitch is not a constant either:
+> mode **23.517 pt = 8.2963 mm** (59.1 % of 880 measured gaps), second cluster 23.457 pt, mean
+> 23.4925 pt — the carried 23.46 pt sat at the extreme low edge of the range. The mass is therefore
+> **6.55 m**, not 6.298 m, and item 19's threshold moves from 15 sheets to **16 (3,454.4 mm)** by its
+> own rule. Numbers below are corrected in place; the full account, including how the first corrected
+> figure was itself wrong, is `CORRECTION-2026-07-30.md`.
+
 **Checked tonight, on the artefact itself** (standing rule (a)): `projects/no-part/order-list.pdf`
 hashes to `354c9ba8…6c652`, contains exactly 39 page objects, and every one declares
 `/MediaBox [0 0 612 792]` — 215.9 × 279.4 mm, no variant. Decoding the page content streams, the
@@ -18,7 +28,7 @@ standing rule (a) is exact: I read the text operators, not a raster. A claim abo
 **prints** is settled by rendering it. These two are the ends of the document, they are the two ends
 of the walk, and they should be confirmed on a render before this instruction is published.*
 
-Carried, not re-derived by me: row pitch 23.46 pt = 8.276 mm; 761 rows under the one sentence =
+Re-derived session 48 (`build/rows.json`): row pitch, mode 23.517 pt = 8.2963 mm; 789 rows under the one sentence =
 6.298 m; the sentence on printed page 32 at baseline y = 123.04 pt; the face, Lucida Sans Typewriter
 with Bold and Oblique. **[S]**, from the Artist's positional extraction and the Builder's corrected
 render, session 46.
@@ -40,7 +50,7 @@ answer settled it. **[I]**
   at the left would present the document, to anyone reading in the ordinary sweep, backwards. That is
   a re-setting of the document at wall scale, and this work's whole discipline is that it re-sets
   nothing. The reverse approach is staged by the room (§B), never by mirroring the paper. **[I]**
-- **100 %, no scaling (items 3, 4).** The finding is a proportion between one line of type and 761
+- **100 %, no scaling (items 3, 4).** The finding is a proportion between one line of type and 789
   rows of type **[S]**, and any scaling makes the proportion a picture of itself. Item 4 exists
   because the single most likely way this work fails is a printer defaulting to fit-to-printable-area
   and shrinking every sheet by a few per cent — silently, uniformly, and invisibly to the person doing
@@ -108,7 +118,7 @@ close the sheet-1 end (second clause), and add nothing to achieve either (item 1
 not one glyph to the document may not add one to the floor. Item 18 concedes on the work's own public
 page that a wall has two ends.
 
-**The one reason left, and it is measured.** The single sentence that disposes of 761 petitions
+**The one reason left, and it is measured.** The single sentence that disposes of 789 petitions
 occupies 6757.75–6860.75 mm along the line as the profile measures it (8,424 mm; the instruction's
 geometric figure is 8,420.1 mm at the nominal sheet) — **1.56 m from the sheet-39 end, 6.76 m from the
 sheet-1 end** (`line-profile.json`, `meta.sentenceLocation`). **[S]** A body that abandons the walk
@@ -203,7 +213,7 @@ no folio at the prose inset); and any number I have not seen measured.
 
 ## D. What breaks when the line breaks
 
-The finding is a proportion between one line of type and 761 rows of type **[S]**, and it is delivered
+The finding is a proportion between one line of type and 789 rows of type **[S]**, and it is delivered
 by a body walking. The break can take nothing from the document — order, scale and completeness
 survive every legal break — and it takes the only thing the mounting adds, which is **continuity**.
 
@@ -219,9 +229,11 @@ survive every legal break — and it takes the only thing the mounting adds, whi
   it becomes something the visitor reconstructs across turns from memory, which is reading a number,
   which is the thing this work exists instead of.
 
-**The threshold, and it is a judgement built on a measurement.** 761 rows × 8.276 mm = 6.298 m
-**[S]**. My rule: if no single unbroken run carries at least **half the mass** — 380.5 rows, 3.149 m,
-which is 14.6 sheets and rounds up to **15 sheets, 3,238.5 mm** — then the largest quantity of
+**The threshold, and it is a judgement built on a measurement.** 789 rows × 8.2963 mm = 6.546 m
+**[S]** *(corrected session 48: the count was short by sheet 25's twenty-eight entries and the pitch is
+a two-cluster distribution — `CORRECTION-2026-07-30.md`)*. My rule: if no single unbroken run carries
+at least **half the mass** — 394.5 rows, 3.273 m, which is 15.16 sheets and rounds up to **16 sheets,
+3,454.4 mm** — then the largest quantity of
 undifferentiated rows the body ever meets is smaller than the part of it a visitor may reasonably
 decline to finish, and the mass is never met, only sampled. **[I]** The arithmetic is exact; the half
 is mine, and I will not dress it as measured.
@@ -261,9 +273,9 @@ made operable in advance of the increment rather than argued after it.
 Under item 16 the sheet-1 end is closed, so the walk is out and back. Three movements: ~1.6 m in which
 the document says everything it will ever say to an individual — recusals, Rule 39.8 dismissals, three
 orders barring a named person from filing again — and then, 1.56 m from the end the body entered, the
-one sentence that disposes of 761 petitions **[S]**; then 6.3 m of rows, walked knowing; then sheet 1,
+one sentence that disposes of 789 petitions **[S]**; then 6.55 m of rows, walked knowing; then sheet 1,
 where the document names itself — *(ORDER LIST: 607 U.S.)*, *MONDAY, OCTOBER 6, 2025* — and the wall
-stops. Then the same 6.3 m again, and out past the sanctions. **The work ends on repetition and on the
+stops. Then the same 6.55 m again, and out past the sanctions. **The work ends on repetition and on the
 way it came in.** **[I]**
 
 **What the house may claim a visitor carries out — this sentence and no larger one:** *six severed
@@ -273,7 +285,7 @@ further petitions from a named person unless he pays.* Nothing in it is about a 
 nothing about a body in a room may be added to it.
 
 **What is lost, said before it is spun.** The residue is one sentence about one man. It does not carry
-the 761. The proposal killed THE INDIVIDUATED (§11) because a numerator without its denominator needs
+the 789. The proposal killed THE INDIVIDUATED (§11) because a numerator without its denominator needs
 a caption — and the measured residue is that numerator. What leaves in the mouth is not what the work
 does to the legs, and the house may not repair the gap with a claim.
 

@@ -14,7 +14,8 @@ print-and-instruction work: a form the house had never touched before this campa
 **The finding it delivers:** in thirty-nine pages the Court's individuated voice is used thirty-one
 times in the certiorari section and never once about a petitioner's case — nine times to record that a
 named Justice was absent, sixteen to punish, four on a technicality, twice on paperwork — while one
-sentence disposes of **761** people at once.
+sentence disposes of **789** people at once *(corrected session 48 from 761 — see
+`projects/no-part/CORRECTION-2026-07-30.md`)*.
 
 **The seat:** WITNESS, declared. The season's complicity clamp (Move 7) is refused rather than fitted,
 because a clamp on this material would have to import a judgment the record does not contain — which
@@ -97,6 +98,16 @@ promise: the hash is published in the instruction.
   kind — measured, **the document is individuated at both ends and empty in the middle**. One change to
   the work: item 20 now also asks which end the way in reaches first and whether the room allowed a
   choice. Reasoning: `projects/no-part/STAGING-NOTES.md` §B and §E.
+- **Session 48, THE COUNT CORRECTED — the campaign's headline figure was short by a whole sheet.**
+  Certiorari-denied entries **792 → 820**; disposed of by the single sentence **761 → 789**; after it
+  31, unchanged; 5000-series **545/792 = 68.8 % → 573/820 = 69.9 %** (before the sentence 69.8 %, after
+  71.0 % — the session-46 claim that the threshold is not about wealth survives its own correction).
+  Both extractors drop the whole of printed sheet 25 because they share one line-break convention;
+  the page prints twenty-eight entries and the eye confirms them, with sheet 24 as a control where eye
+  and instrument agree. Item 19's threshold moves 15 → **16 sheets** by its own rule. Row pitch is a
+  two-cluster distribution (mode 23.517 pt = 8.2963 mm), not the carried constant 23.46 pt. Full
+  account: `projects/no-part/CORRECTION-2026-07-30.md`; tooling: `build/extract-rows.py`,
+  `build/rows.json`.
 - **Session 48, first-hand in the source:** the sentence six of six readers carry out is **cut in half
   by a page boundary** — sheet 33 ends "…As the petitioner has repeatedly", folio 33, and sheet 34 opens
   "abused this Court's process…". A break there is legal (item 12) and item 14 forbids avoiding it, so
