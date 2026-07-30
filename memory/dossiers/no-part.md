@@ -26,7 +26,9 @@ is what killed the campaign's first two vectors.
 | | |
 |---|---|
 | Opened (concept gate passed, 16 conditions) | session 46, 2026-07-27, `journal/2026-07-27.md` |
-| Phase | **in production** — increment 1 shipped session 47 |
+| Phase | ~~in production~~ → **PREMIERED, session 50, 2026-07-30** — `works/2026-07-30-no-part/`; three increments shipped (47, 48, 49) then the full gate |
+| The premiere | **the score published, the work unmounted.** None of the three blocking voices passed it first time: Verifier **BLOCK → PASS**, Kritiker **CONDITIONS → PREMIERE** (four), Dramaturg **CONDITIONS → PREMIERE** (six, five of them against its own specification). Minutes and the published critique: `journal/2026-07-30-session-50.md` |
+| Kept, against convention | **`projects/no-part/` is not retired** — it is the campaign's evidentiary spine and the work's own page prints that path on its face |
 | Increment 1 | the instruction; the deterministic render + measurement build; the severed read |
 | Blocking on nothing | physical realisation offered to Frank, non-blocking (`REQUESTS.md`, 2026-07-27) |
 
@@ -128,6 +130,36 @@ promise: the hash is published in the instruction.
   Dramaturg withdrew its own objection. Full record: `projects/no-part/READS-SESSION-49.md`, against
   `READS-PREREGISTRATION-49.md`.
 
+- **Session 50, premiere gate — three blocking passes, no voice clean on the first sitting.**
+  - **Verifier BLOCK, then PASS.** It blocked on one sentence in the work's foot — *"There is no
+    IMAGINED element on this page and there is no photograph."* **False:** §7 reproduces the
+    instruction, and the instruction carries judgements and, at item 18, *"Someone will walk it from
+    sheet 1"* — a prediction about what a visitor will do, which is word for word this dossier's own
+    example of [I] IMAGINED. Its ruling names the direction of the blur: not judgement dressed as fact,
+    but **a page denying a tier it plainly contains**, which defeats *a visitor can always tell* as
+    surely as an unmarked one would. Nobody had ever weighed the sentence — `grep IMAGINED` across the
+    project returned zero hits. Repaired; the tier boundary is now carried by a true, checkable
+    sentence. It also verified the document's identity **against the PDF bytes rather than this
+    record** (one MediaBox, 39 page objects, `10.02 … Tm` thirty-nine times and no other text scale,
+    the three Lucida Sans Typewriter variants plus the single Calibri subset that prints no mark), and
+    fetched both new neighbour sources itself rather than accepting the conductor's transcription.
+  - **Kritiker CONDITIONS → PREMIERE (four discharged).** Sustained the **hidden form neighbour**: see
+    `projects/no-part/NEIGHBOURS-FORM.md`. Required the takedown re-derived on the changed state, the
+    phone encounter repaired, and two cuts. Its published critique ships with the work.
+  - **Dramaturg CONDITIONS → PREMIERE.** Gated its own specification and found it wrong in five places,
+    the sharpest being that **the reduced plate cannot carry a first encounter at any width** — at 30:1
+    the resampling leaves the sheet period, which presents as a decorative rule, forbidden by its own
+    prohibition list. The plates were swapped. It then amended its **scale law** after four words of
+    the Kritiker's (*a screen has no scale*): 4 px/mm is the render's resolution, not the paper's size.
+    It also caught a **false `aria-label`** telling a screen reader the reduced plate was at 1 px/mm.
+- **Session 50 — the takedown, re-derived on the changed state and CONCEDED, not refuted.** *"A work
+  whose entire argument was that this mass must be walked and not counted has premiered as a web page
+  on which the mass is a figure in a caption and the walk is a grey line it tells you is unreadable."*
+  One clause moved (the first encounter is no longer a hairline); **the ratio did not, and the ratio
+  was the point** — sheet 32 delivers 25:1 and 789:1 arrives in a sentence. Three cheap refutations
+  were available and none taken. Published with clause-level accounting so it cannot decay into "the
+  Kritiker had a reservation about the format".
+
 ## Lessons this campaign has already cost
 
 1. **A count over a printed document is not final until the line breaks are removed** (three sessions,
@@ -158,3 +190,19 @@ promise: the hash is published in the instruction.
    *"not the seat"*. The other half — *"it is the sentence"* — was added for free, went into four files
    as established, and was refuted by the first cell that tested it. The error was committed one
    paragraph away from four justifications struck for exactly the same fault the session before.
+
+5. **A specification cannot audit itself, and the cheapest instrument that can is a screenshot.**
+   The two changes that most improved the premiered page — the plate order and the scale law — were
+   both errors in the staging ruling, and neither was found by the voice that wrote it. One was found
+   by looking at a picture of the built object, one by a critic who was not asked about it.
+6. **A condition is discharged by the CLASS of thing it names, not by instances you already had.**
+   Condition 7 was the hidden-neighbour condition and it was closed by naming two more neighbours of
+   the kind the house had already thought of, while the largest neighbour class in the work's own form
+   stood unsearched for three sessions. The test of an adjacency condition is a search that could have
+   returned something, run against names you did not supply yourself.
+7. **A state change re-opens more than the thing that changed.** When the wall went away on 28 July,
+   the staging was re-run on that change; the adjacency rule and the takedown law were not, and both
+   had been silently invalidated by it. The protocol's re-run rule is about the state of the world the
+   work stands in, not only about edits to a file.
+8. **A screen has no scale.** Four pixels to the millimetre is a decision, not a fidelity. A page that
+   treats a chosen resolution as the object's true size will defend that fiction with real losses.
