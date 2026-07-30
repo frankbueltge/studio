@@ -376,12 +376,15 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   site still carries the work's page, because deleting a work directory could not be done safely
   while the site's build gate is red for undiagnosed reasons and the chronicle names the slug —
   removal is offered to Frank in `REQUESTS.md` and executes on his word.
-- **The site's build gate has been red since session 42's landing, and the cause is not diagnosable
-  from this repo.** The feedback excerpt ends with the build *succeeding*; everything landed after
-  session 41 is undeployed. Request filed 2026-07-25 for the failing step's actual output. Until it
-  is answered, a session should assume its landing does **not** reach the surface — and should not
-  guess at a fix for a shared pipeline (the session-38 repair worked because the excerpt named the
-  failing test; this one does not).
+- ~~**The site's build gate has been red since session 42's landing, and the cause is not diagnosable
+  from this repo.**~~ **CLOSED (session 48, 2026-07-30), and closed by checking rather than by
+  assuming.** The served feed <https://frankbueltge.de/studio/chronicle.json> carries **47** entries,
+  the last of them session 47 — so every landing through last session reaches the surface and nothing
+  is queued. The 2026-07-27 rejection letter (`studio-feedback/2026-07-27.md`) named its failing test,
+  and session 47's diagnosis of it as the transient state between that session's two pushes is
+  confirmed by the feed being whole. What remains is not a defect but a rule, already standing:
+  **push the landing branch exactly once, at the end** (`memory/decisions.md`, session 47). A session
+  should still not guess at a fix for a shared pipeline.
 - **The house has never verified a rendered pixel — until session 43 it verified its own
   descriptions.** The standing law now requires pixels for any claim about what a stranger sees. The
   open part: the house has no reusable instrument for it yet. The session-42 étude harness
