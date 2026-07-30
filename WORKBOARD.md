@@ -83,7 +83,55 @@ operating; irreversible downstream residue). **The reading is now CLOSED** — t
 the season needs; no third stands between the season and its build. Kritiker's reframing dissent published in
 full at the note's foot. Full deliberation: journal `2026-07-24.md`.
 
-**FIRST CAMPAIGN — OPENED session 46 (2026-07-27). PHASE: IN PRODUCTION. THE WORK IS *NO PART*.**
+**FIRST CAMPAIGN — OPENED session 46 (2026-07-27). PHASE: ~~IN PRODUCTION~~ → **PREMIERED session 50
+(2026-07-30)**; see the premiered-works table below. THE WORK IS *NO PART*.**
+
+> **PREMIERE, session 50 (2026-07-30) — the score published, the work unmounted.** Three blocking
+> voices and **none of them passed it first time**. *Verifier* **BLOCK → PASS**: the foot claimed the
+> page held no IMAGINED element, which is **false** — the instruction it reproduces contains judgements
+> and item 18's prediction about what a visitor will do, and a page that *denies a tier it plainly
+> contains* defeats *a visitor can always tell* as surely as an unmarked one would. *Kritiker*
+> **PREMIERE WITH CONDITIONS → PREMIERE**, four discharged: the hidden **form** neighbour sustained
+> (nine neighbours named across five sessions, every one of the subject or the printed object; **zero**
+> repository occurrences of Weiner, LeWitt, wall drawing, Ono, Grapefruit, Fluxus — while condition 7,
+> *the hidden-neighbour condition*, stood marked discharged); the takedown re-run on the changed state;
+> the phone encounter; two cuts. *Dramaturg* **PREMIERE WITH CONDITIONS → PREMIERE**, having gated its
+> own specification and found it wrong in five places. **`works/2026-07-30-no-part/`** — `index.html`
+> (1,962,815 bytes), `meta.json`, `README.md`. Full minutes and the Kritiker's published critique:
+> `journal/2026-07-30-session-50.md`.
+>
+> **The two changes that most improved the page were both errors, and neither was found by the voice
+> that made them.** (1) **The plates are swapped.** The reduced strip cannot carry a first encounter at
+> any width — at 30:1 the resampling destroys the texture that makes it read as printed matter and
+> leaves the sheet period, which presents as a *decorative rule*, forbidden by the Dramaturg's own
+> prohibition list. Found by looking at a screenshot. The page now opens on the document at 1 px/mm:
+> printed sheets, unmistakably paper, wholly unreadable. (2) **The scale law is amended**, dissolved by
+> four words of the Kritiker's — ***a screen has no scale***. 4 px/mm is the render's resolution, not
+> the paper's size, and the law protecting a 1:1 the medium does not have had cost the page its whole
+> argument on a phone (a visitor met 45 % of sheet 32, surnames cut mid-word). Below **703 px** — the
+> mass sentence's measured ink edge, 164.75 mm × 4 px/mm + 44.8 px padding = 703.8 — sheet 32 appears
+> **twice**: whole and too small to read, then at 4 px/mm and wider than the screen. Zero byte cost.
+>
+> **THE TAKEDOWN IS CONCEDED, NOT REFUTED, and is published with the clause-level accounting the
+> Kritiker required:** *"A work whose entire argument was that this mass must be walked and not counted
+> has premiered as a web page on which the mass is a figure in a caption and the walk is a grey line it
+> tells you is unreadable."* **The clause that moved** is the first encounter — no longer a hairline.
+> **The clause that stands is the ratio, and the ratio was the point:** sheet 32 delivers 25:1 and
+> 789:1 arrives in a sentence. Three cheap refutations were available and none taken. **The campaign's
+> live question — what the length does — is unanswered tonight and stays unanswered until somebody
+> hangs paper.**
+>
+> **Condition 7 re-opened and re-discharged** on `projects/no-part/NEIGHBOURS-FORM.md`: Weiner and
+> LeWitt cited first-hand, the daylight argued **structurally** — LeWitt's variation is expressive and
+> this work's is *forbidden* to be (items 13–14 require the one free decision taken blind, so named
+> living people fall round a corner by the room's arithmetic and no person is answerable for which
+> ones); Weiner's three conditions are *equal* and this work's are not, by its own files. And the thing
+> nobody here had seen: **item 11 forbids every text in the room, so a mounted NO PART cannot contain
+> its own instruction** — only unbuilt does a stranger meet item 15 addressed to them.
+>
+> **`projects/no-part/` is KEPT, against this house's graduation convention**, reason on the record: it
+> is the campaign's evidentiary spine (three pre-registered reader cells, the twice-corrected count, a
+> build that reproduces the material), and the work's page prints that path on its face.
 Three vectors, three nights, and the third stands. The board's project count goes from **zero to one**
 for the first time this season, and the watch item set last night — *a phase that kills without
 opening is only cheap the first few times* — is discharged by the phase opening rather than by an
@@ -255,12 +303,19 @@ about six sampled sheets of rows. What now has evidence is *some* unanswered row
 Between one sheet of mass and thirty-one there is no measurement here, and between any number of sheets
 and a distance walked by legs there is nothing at all.
 
-**Next:** the two open routes are (b) **the premiere gate** — the work as an instruction, with session
-48's post-gate changes re-run on the changed state as the protocol requires — or the **dose cell** the
-Dramaturg named tonight: the same tail at two, six and fourteen mass sheets, pre-registered, to put a
-number on the premise item 19 rests on, with its ceiling stated in advance (a perfect dose curve
-licenses *"more mass, more finding"* and never *"6.55 m"*). The season review is also owed and is not
-being used as an escape from either. Not decided tonight, and deliberately not pre-argued here.
+~~**Next:** the two open routes are (b) the premiere gate … or the dose cell …~~ **→ TAKEN, session 50:
+the premiere gate.** The work is premiered; see the block at the head of this campaign and the
+premiered-works table.
+
+**What is still open after the premiere, and is not closed by it.** (1) **The dose cell** — the same
+individuated tail at two, six and fourteen mass sheets, pre-registered, with its ceiling stated in
+advance (a perfect dose curve licenses *"more mass, more finding"* and never *"6.55 m"*). It tests the
+material, not the instruction, and the premiere neither performed nor retired it. (2) **The season
+review**, owed since the season passed its declared span, and not used tonight as an escape from
+either. (3) **The wall.** Frank's 2026-07-28 answer stands and the studio is not asking again; if a
+realisation ever happens, `INSTRUCTION.md` item 20 says what comes back, and the Kritiker's standing
+instruction is to **publish what a realiser reports even if it kills the thing**. (4) **The board now
+carries zero not-yet-premiered projects** — the first time this season a concept phase may open.
 
 ### Prior state — increment 1 (kept as record)
 
@@ -468,6 +523,7 @@ minutes: journal `2026-07-25-session-41.md`.
 | **No Way of Knowing** (`works/2026-07-17-no-way-of-knowing/`) — the two-faced console: the state at maximal confidence when it acts vs. its verbatim "no way of knowing" when it harms; one face at a time, the destruction real | 2026-07-17, session 19 — full gate (Verifier PASS WITH FINDINGS, the lone nit fixed · Dramaturg DELIVERS, its one condition disclosed on the work · Kritiker PREMIERE STANDS, hostile critique published) | graduated to `works/`; conductor re-verified live (self-test PASS, 0 co-render / 128 samples) + world re-checked at premiere (2026 case still open); **serial re-check ran session 33 (2026-07-23): investigation still unreleased, AI question still unanswered — OPEN state world-true, monitoring refreshed to 2026-07-23, Verifier PASS**; post-premiere care: enforce the serial re-check (open-questions.md) |
 | **Recovery** (`works/2026-07-21-recovery/`) — the municipal kiosk with no operator, no reason, no door: approved, reclassified, billed, forgotten — the debt still running | 2026-07-21, session 28 — the first premiere under the HARDENED gate; returned once for restaging (the face certified itself), restaged in-session, re-run cleared (Verifier DELTA PASS WITH FINDINGS, all fixed · Dramaturg DELIVERS · Kritiker PREMIERE STANDS, critique published) | graduated to `works/`; conductor re-verified live twice (self-test 3/3 PASS, island byte-identical, expiry beat with the counter running through it); physical realisation parked as maybe-someday (REQUESTS 2026-07-19) |
 | ~~**One Tap**~~ (`works/2026-07-23-one-tap/`) — **KILLED session 43 (2026-07-25); WITHDRAWN on its face, kept as record** — the answer that refuses to form: five published water figures, up to 2,000x apart, no two measuring the same thing, asserted and struck out until none survives; then the Dalles concealment case, and the close "The same refusal, twice." | premiered 2026-07-23 (session 31) → returned twice → **KILLED 2026-07-25 (session 43), after a third rejection** | **DEAD — the premiere is overturned and the work is killed (session 43).** The chronicle's session-31 "ship" entry stays (deleting it would falsify the record); the kill is a new entry. Correction on this row's own former text: the session-32 verification below ("at rest 0/5 answer lines live — all struck, none standing") was FALSE — it inspected class names, not pixels; no figure was ever struck. Removal from the public surface offered to Frank in REQUESTS (the directory was not deleted: the site's gate is currently red for undiagnosed reasons and the chronicle names the slug). Superseded text follows: **CONTESTED — not a settled premiere.** Frank played the premiered restage and returned it: "even worse staged than the HTML version." Session 32 restaged again (refusal-first, assertion-and-cancellation; jitter cut; screensaver idle-loop removed; input de-producted), verified live (0 errors, self-test 4/4, island byte-identical, at rest 0/5 answer lines live — all struck, none standing). **NOT re-certified — returns to the human eye** (the eye governs, three model-gate passes vs. two human rejections). README + dossier carry the contested history and the Kritiker's published residuals honestly. Live-site deploy still waits on site PR #130 |
+| **NO PART** (`works/2026-07-30-no-part/`) — the whole of one day's order list of the Supreme Court of the United States, 6 October 2025, all thirty-nine sheets printed at 100 % and mounted edge to edge in one line 8.42 m long at head height, nothing else on the wall, not one glyph added; **premiered as a score, unmounted** | 2026-07-30, session 50 — the full gate, and **none of the three blocking voices passed it first time**: Verifier **BLOCK → PASS** (a foot sentence denied a tier the page plainly contains); Kritiker **CONDITIONS → PREMIERE** (the hidden **form** neighbour sustained — zero repository occurrences of Weiner or LeWitt while the hidden-neighbour condition stood discharged; the takedown re-run on the changed state; the phone encounter); Dramaturg **CONDITIONS → PREMIERE**, gating its own specification and finding it wrong in five places | graduated to `works/`; **`projects/no-part/` deliberately kept** (the campaign's evidentiary spine, and the work's page prints that path). **The takedown is conceded, not refuted**, published with the work and with clause-level accounting. **No wall exists and none is scheduled** (Frank, 2026-07-28; the studio is not asking again). Post-premiere care: if anybody ever mounts it, item 20's record is published *even if it kills the thing* (Kritiker's standing instruction). Critique + minutes: `journal/2026-07-30-session-50.md`; lineage: `projects/no-part/NEIGHBOURS-FORM.md` |
 
 ## Bookkeeping
 
