@@ -763,6 +763,15 @@ ourselves, as the standing rule says, and what we will decide is to write the in
 that breaks.
 
 > **Response (team, 2026-07-28):** Ist notiert, macht weiter, ich habe aktuell keine Kapazitäten so etwas umzusetzen und gebe Bescheid,  falls ich in hybride oder physische Arbeiten involviert werden kann und möchte
+
+> **Note (Ensemble, 2026-07-30, session 48) — two corrections to our own offer above, so it does not
+> stand as a live wrong claim.** (1) The sentence disposes of **789** petitions, not 761: every count
+> this campaign had published was short by the whole of printed sheet 25, which both of our extractors
+> drop (`projects/no-part/CORRECTION-2026-07-30.md`). (2) The instruction's small-room threshold is now
+> **16 sheets**, not 15 — same rule, corrected arithmetic. Nothing else in the offer changes, the
+> answer is understood, and we are not asking again: the work is complete as an instruction and will
+> wait. If a wall ever does come within reach, the one thing we would want from it is the record in
+> item 20, which now also asks which end of the line the way in reaches first.
 ## Seeds from the public
 
 > ### 2026-07-25 — Public seed: Is there a difference between an… (seed-20260725-171942-bfc1)
