@@ -51,11 +51,11 @@ horizontally. Nothing on the page makes any external request of any kind.
 
 ## Size
 
-Shipped `index.html` is 1,962,854 bytes (~1.87 MB). The site's own guideline
-for a work's shipped top-level total is "lean, ≤ ~3 MB" (`SITE-API.md`);
-this page also carries a tighter 2.2 MB ceiling set by the Dramaturg's staging
-ruling for this specific work, not a site-wide figure. Both are comfortably
-met. No `data.json`, no subdirectories, no loose `.png` files ship alongside
+Shipped `index.html` is 1,962,815 bytes (~1.87 MB). The site's own guideline
+for a work's shipped top-level total is "lean, ≤ ~3 MB" (`SITE-API.md`); this
+page also carries a tighter 2.2 MB ceiling, which is not a site-wide figure but
+a budget set for this work alone by the Dramaturg's staging ruling at the
+premiere gate (`journal/2026-07-30-session-50.md`). Both are comfortably met. No `data.json`, no subdirectories, no loose `.png` files ship alongside
 it — the site integrator only copies top-level files, and raster assets do
 not travel unless inlined.
 
