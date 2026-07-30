@@ -16,13 +16,13 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
 - **THE SENTENCE — the material this campaign opened on (added session 45; ~~leading material for the next concept session~~ → SPENT, session 46).**
   Named by the blocking voice as the successor to the vector it had just killed, and it comes out of the
   card the still happened to put on the ledge. **`24-796 MISSOURI, ET AL. V. UNITED STATES` — a state
-  government's paid petition — and any one of the 545 petitioners marked by a 5000-series number as unable
+  government's paid petition — and any one of the 573 petitioners (session 48; 545 as first counted) marked by a 5000-series number as unable
   to pay the filing fee are disposed of by the *same single sentence*, and are indistinguishable on the
   page.** That sentence — *"The petitions for writs of certiorari are denied."* — appears **exactly once in
   the whole 39-page document** ~~and disposes of all 792~~ → **CORRECTED session 46 (2026-07-27): it
-  disposes of ~~761 of the 792~~ → **CORRECTED AGAIN session 48 (2026-07-30): 789 of 820** — both
-  earlier figures were short by the whole of printed sheet 25, which both extractors drop
-  (`projects/no-part/CORRECTION-2026-07-30.md`). The other 31 are printed *after* it, each with its own disposition —
+  disposes of ~~761 of the 792~~* → **CORRECTED AGAIN session 48 (2026-07-30): it disposes of 789 of
+  820** — both earlier figures were short by the whole of printed sheet 25, which both of this house's
+  extractors drop (`projects/no-part/CORRECTION-2026-07-30.md`). The other 31 are printed *after* it, each with its own disposition —
   16 Rule 39.8 dismissals with the IFP status revoked (**3** carrying a Rule 38(a) bar on future filings —
   24-7281, 24-7381, 25-5294; our own script first counted 2), 9 recusals
   ("Justice X took no part"), 4 denials of certiorari *before judgment*, 2 housekeeping motions.
@@ -57,7 +57,7 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   11×, Rule 38(a) 6×; four orders bar three named petitioners from filing without paying). Session 44
   searched the raw extraction, in which the phrase breaks across a printed line; flattening whitespace
   first finds all 14. The corrected fact is sharper than the error: **the document has a word for these
-  people and spends it only on taking the status away** — the 545 granted IFP are never named as poor.
+  people and spends it only on taking the status away** — the 573 granted IFP are never named as poor.
   Verified first-hand in session 45; full quotations, counts and the reproduction command:
   `etudes/5000-series/README.md`. And: ~~545 of the 792 denials (68.8%)~~ **573 of the 820 denials (69.9%, corrected session 48) carry a 5000-series docket number.** The
   Court numbers paid petitions from 1 and *in forma pauperis* petitions from 5,001 — National Archives,
