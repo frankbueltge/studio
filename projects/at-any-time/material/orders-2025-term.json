@@ -1,0 +1,649 @@
+{
+ "source_index": "https://www.supremecourt.gov/orders/ordersofthecourt/25",
+ "retrieved": "2026-07-31",
+ "term": "2025",
+ "documents": 101,
+ "by_kind": {
+  "Order List": 29,
+  "Miscellaneous Order": 72
+ },
+ "publication_days": 79,
+ "first_day": "2025-10-06",
+ "last_day": "2026-07-28",
+ "per_month": {
+  "2025-10": 12,
+  "2025-11": 14,
+  "2025-12": 8,
+  "2026-01": 7,
+  "2026-02": 6,
+  "2026-03": 9,
+  "2026-04": 10,
+  "2026-05": 16,
+  "2026-06": 11,
+  "2026-07": 8
+ },
+ "gap_days_between_publication_days": {
+  "max": 16,
+  "median": 3,
+  "distribution": {
+   "1": 14,
+   "2": 10,
+   "3": 22,
+   "4": 10,
+   "5": 2,
+   "6": 9,
+   "7": 6,
+   "8": 3,
+   "9": 1,
+   "16": 1
+  }
+ },
+ "records": [
+  {
+   "date": "2025-10-06",
+   "kind": "Order List",
+   "file": "100625zor_5368.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/100625zor_5368.pdf"
+  },
+  {
+   "date": "2025-10-06",
+   "kind": "Miscellaneous Order",
+   "file": "100625zr_3fbh.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/100625zr_3fbh.pdf"
+  },
+  {
+   "date": "2025-10-08",
+   "kind": "Miscellaneous Order",
+   "file": "100825zr_mlho.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/100825zr_mlho.pdf"
+  },
+  {
+   "date": "2025-10-10",
+   "kind": "Miscellaneous Order",
+   "file": "101025zr_l6gn.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/101025zr_l6gn.pdf"
+  },
+  {
+   "date": "2025-10-14",
+   "kind": "Order List",
+   "file": "101425zor_8m58.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/101425zor_8m58.pdf"
+  },
+  {
+   "date": "2025-10-14",
+   "kind": "Miscellaneous Order",
+   "file": "101425zr1_10n2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/101425zr1_10n2.pdf"
+  },
+  {
+   "date": "2025-10-14",
+   "kind": "Miscellaneous Order",
+   "file": "101425zr_b07d.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/101425zr_b07d.pdf"
+  },
+  {
+   "date": "2025-10-17",
+   "kind": "Miscellaneous Order",
+   "file": "101725zr_1b8e.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/101725zr_1b8e.pdf"
+  },
+  {
+   "date": "2025-10-20",
+   "kind": "Order List",
+   "file": "102025zor_19m2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/102025zor_19m2.pdf"
+  },
+  {
+   "date": "2025-10-23",
+   "kind": "Miscellaneous Order",
+   "file": "102325zr1_f2ag.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/102325zr1_f2ag.pdf"
+  },
+  {
+   "date": "2025-10-23",
+   "kind": "Miscellaneous Order",
+   "file": "102325zr_m648.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/102325zr_m648.pdf"
+  },
+  {
+   "date": "2025-10-29",
+   "kind": "Miscellaneous Order",
+   "file": "102925zr_hgci.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/102925zr_hgci.pdf"
+  },
+  {
+   "date": "2025-11-05",
+   "kind": "Miscellaneous Order",
+   "file": "110525zr_19m1.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/110525zr_19m1.pdf"
+  },
+  {
+   "date": "2025-11-07",
+   "kind": "Miscellaneous Order",
+   "file": "110725zr_pnk0.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/110725zr_pnk0.pdf"
+  },
+  {
+   "date": "2025-11-10",
+   "kind": "Order List",
+   "file": "111025zor_bqmc.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111025zor_bqmc.pdf"
+  },
+  {
+   "date": "2025-11-10",
+   "kind": "Miscellaneous Order",
+   "file": "111025zr_3ebh.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111025zr_3ebh.pdf"
+  },
+  {
+   "date": "2025-11-11",
+   "kind": "Miscellaneous Order",
+   "file": "111125zr_3204.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111125zr_3204.pdf"
+  },
+  {
+   "date": "2025-11-12",
+   "kind": "Miscellaneous Order",
+   "file": "111225zr_6kgn.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111225zr_6kgn.pdf"
+  },
+  {
+   "date": "2025-11-13",
+   "kind": "Miscellaneous Order",
+   "file": "111325zr1_4g15.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111325zr1_4g15.pdf"
+  },
+  {
+   "date": "2025-11-13",
+   "kind": "Miscellaneous Order",
+   "file": "111325zr_2bo2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111325zr_2bo2.pdf"
+  },
+  {
+   "date": "2025-11-14",
+   "kind": "Miscellaneous Order",
+   "file": "111425zr_8o6a.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111425zr_8o6a.pdf"
+  },
+  {
+   "date": "2025-11-17",
+   "kind": "Order List",
+   "file": "111725zor_f2bh.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/111725zor_f2bh.pdf"
+  },
+  {
+   "date": "2025-11-20",
+   "kind": "Miscellaneous Order",
+   "file": "112025zr_4f15.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/112025zr_4f15.pdf"
+  },
+  {
+   "date": "2025-11-21",
+   "kind": "Miscellaneous Order",
+   "file": "112125zr_5536.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/112125zr_5536.pdf"
+  },
+  {
+   "date": "2025-11-24",
+   "kind": "Order List",
+   "file": "112425zor_3e04.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/112425zor_3e04.pdf"
+  },
+  {
+   "date": "2025-11-26",
+   "kind": "Miscellaneous Order",
+   "file": "112625zr_gfbi.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/112625zr_gfbi.pdf"
+  },
+  {
+   "date": "2025-12-05",
+   "kind": "Miscellaneous Order",
+   "file": "120525zr_hejm.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/120525zr_hejm.pdf"
+  },
+  {
+   "date": "2025-12-08",
+   "kind": "Order List",
+   "file": "120825zor_i4ek.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/120825zor_i4ek.pdf"
+  },
+  {
+   "date": "2025-12-11",
+   "kind": "Miscellaneous Order",
+   "file": "121125zr_2b82.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/121125zr_2b82.pdf"
+  },
+  {
+   "date": "2025-12-15",
+   "kind": "Order List",
+   "file": "121525zor_10n2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/121525zor_10n2.pdf"
+  },
+  {
+   "date": "2025-12-18",
+   "kind": "Miscellaneous Order",
+   "file": "121825zr1_6jfl.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/121825zr1_6jfl.pdf"
+  },
+  {
+   "date": "2025-12-18",
+   "kind": "Miscellaneous Order",
+   "file": "121825zr_3d9g.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/121825zr_3d9g.pdf"
+  },
+  {
+   "date": "2025-12-19",
+   "kind": "Miscellaneous Order",
+   "file": "121925zr_p8k0.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/121925zr_p8k0.pdf"
+  },
+  {
+   "date": "2025-12-22",
+   "kind": "Miscellaneous Order",
+   "file": "122225zr_6647.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/122225zr_6647.pdf"
+  },
+  {
+   "date": "2026-01-07",
+   "kind": "Miscellaneous Order",
+   "file": "010726zr_21o3.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/010726zr_21o3.pdf"
+  },
+  {
+   "date": "2026-01-09",
+   "kind": "Miscellaneous Order",
+   "file": "010926zr_g2bh.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/010926zr_g2bh.pdf"
+  },
+  {
+   "date": "2026-01-12",
+   "kind": "Order List",
+   "file": "011226zor_3d9g.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/011226zor_3d9g.pdf"
+  },
+  {
+   "date": "2026-01-16",
+   "kind": "Miscellaneous Order",
+   "file": "011626zr_3f14.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/011626zr_3f14.pdf"
+  },
+  {
+   "date": "2026-01-20",
+   "kind": "Order List",
+   "file": "012026zor_bpm1.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/012026zor_bpm1.pdf"
+  },
+  {
+   "date": "2026-01-26",
+   "kind": "Order List",
+   "file": "012626zor_ec8f.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/012626zor_ec8f.pdf"
+  },
+  {
+   "date": "2026-01-28",
+   "kind": "Miscellaneous Order",
+   "file": "012826zr_6kg7.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/012826zr_6kg7.pdf"
+  },
+  {
+   "date": "2026-02-04",
+   "kind": "Miscellaneous Order",
+   "file": "020426zr_3eb4.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/020426zr_3eb4.pdf"
+  },
+  {
+   "date": "2026-02-10",
+   "kind": "Miscellaneous Order",
+   "file": "021026zr_hfci.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/021026zr_hfci.pdf"
+  },
+  {
+   "date": "2026-02-11",
+   "kind": "Miscellaneous Order",
+   "file": "021126zr_9ol1.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/021126zr_9ol1.pdf"
+  },
+  {
+   "date": "2026-02-17",
+   "kind": "Miscellaneous Order",
+   "file": "021726zr_3204.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/021726zr_3204.pdf"
+  },
+  {
+   "date": "2026-02-20",
+   "kind": "Miscellaneous Order",
+   "file": "022026zr_d1o2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/022026zr_d1o2.pdf"
+  },
+  {
+   "date": "2026-02-23",
+   "kind": "Order List",
+   "file": "022326zor_7758.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/022326zor_7758.pdf"
+  },
+  {
+   "date": "2026-03-02",
+   "kind": "Order List",
+   "file": "030226zor_2d8f.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/030226zor_2d8f.pdf"
+  },
+  {
+   "date": "2026-03-03",
+   "kind": "Miscellaneous Order",
+   "file": "030326zr_6537.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/030326zr_6537.pdf"
+  },
+  {
+   "date": "2026-03-09",
+   "kind": "Order List",
+   "file": "030926zor_p86b.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/030926zor_p86b.pdf"
+  },
+  {
+   "date": "2026-03-11",
+   "kind": "Miscellaneous Order",
+   "file": "031126zr_4hdj.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/031126zr_4hdj.pdf"
+  },
+  {
+   "date": "2026-03-16",
+   "kind": "Miscellaneous Order",
+   "file": "031626zr1_5h25.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/031626zr1_5h25.pdf"
+  },
+  {
+   "date": "2026-03-16",
+   "kind": "Miscellaneous Order",
+   "file": "031626zr_7648.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/031626zr_7648.pdf"
+  },
+  {
+   "date": "2026-03-20",
+   "kind": "Miscellaneous Order",
+   "file": "032026zr_g3bi.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/032026zr_g3bi.pdf"
+  },
+  {
+   "date": "2026-03-23",
+   "kind": "Order List",
+   "file": "032326zor_7mio.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/032326zor_7mio.pdf"
+  },
+  {
+   "date": "2026-03-30",
+   "kind": "Order List",
+   "file": "033026zor_i4dk.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/033026zor_i4dk.pdf"
+  },
+  {
+   "date": "2026-04-06",
+   "kind": "Order List",
+   "file": "040626zor_5iek.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/040626zor_5iek.pdf"
+  },
+  {
+   "date": "2026-04-09",
+   "kind": "Miscellaneous Order",
+   "file": "040926zr_3f14.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/040926zr_3f14.pdf"
+  },
+  {
+   "date": "2026-04-17",
+   "kind": "Miscellaneous Order",
+   "file": "041726zr_5i26.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/041726zr_5i26.pdf"
+  },
+  {
+   "date": "2026-04-20",
+   "kind": "Order List",
+   "file": "042026zor_h315.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/042026zor_h315.pdf"
+  },
+  {
+   "date": "2026-04-21",
+   "kind": "Miscellaneous Order",
+   "file": "042126zr_6k47.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/042126zr_6k47.pdf"
+  },
+  {
+   "date": "2026-04-27",
+   "kind": "Order List",
+   "file": "042726zor_08l1.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/042726zor_08l1.pdf"
+  },
+  {
+   "date": "2026-04-30",
+   "kind": "Miscellaneous Order",
+   "file": "043026zr1_3314.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/043026zr1_3314.pdf"
+  },
+  {
+   "date": "2026-04-30",
+   "kind": "Miscellaneous Order",
+   "file": "043026zr2_6479.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/043026zr2_6479.pdf"
+  },
+  {
+   "date": "2026-04-30",
+   "kind": "Miscellaneous Order",
+   "file": "043026zr3_1a7d.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/043026zr3_1a7d.pdf"
+  },
+  {
+   "date": "2026-04-30",
+   "kind": "Miscellaneous Order",
+   "file": "043026zr_bpm1.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/043026zr_bpm1.pdf"
+  },
+  {
+   "date": "2026-05-04",
+   "kind": "Order List",
+   "file": "050426zor_hfjm.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/050426zor_hfjm.pdf"
+  },
+  {
+   "date": "2026-05-04",
+   "kind": "Miscellaneous Order",
+   "file": "050426zr1_f2bh.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/050426zr1_f2bh.pdf"
+  },
+  {
+   "date": "2026-05-04",
+   "kind": "Miscellaneous Order",
+   "file": "050426zr_l5gm.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/050426zr_l5gm.pdf"
+  },
+  {
+   "date": "2026-05-06",
+   "kind": "Miscellaneous Order",
+   "file": "050626zr_7648.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/050626zr_7648.pdf"
+  },
+  {
+   "date": "2026-05-11",
+   "kind": "Miscellaneous Order",
+   "file": "051126zr1_5he6.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/051126zr1_5he6.pdf"
+  },
+  {
+   "date": "2026-05-11",
+   "kind": "Miscellaneous Order",
+   "file": "051126zr_apl1.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/051126zr_apl1.pdf"
+  },
+  {
+   "date": "2026-05-15",
+   "kind": "Miscellaneous Order",
+   "file": "051526zr_1a72.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/051526zr_1a72.pdf"
+  },
+  {
+   "date": "2026-05-18",
+   "kind": "Order List",
+   "file": "051826zor_h315.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/051826zor_h315.pdf"
+  },
+  {
+   "date": "2026-05-19",
+   "kind": "Miscellaneous Order",
+   "file": "051926zr_10n2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/051926zr_10n2.pdf"
+  },
+  {
+   "date": "2026-05-21",
+   "kind": "Miscellaneous Order",
+   "file": "052126zr1_21o3.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/052126zr1_21o3.pdf"
+  },
+  {
+   "date": "2026-05-21",
+   "kind": "Miscellaneous Order",
+   "file": "052126zr2_7kh7.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/052126zr2_7kh7.pdf"
+  },
+  {
+   "date": "2026-05-21",
+   "kind": "Miscellaneous Order",
+   "file": "052126zr3_i42j.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/052126zr3_i42j.pdf"
+  },
+  {
+   "date": "2026-05-21",
+   "kind": "Miscellaneous Order",
+   "file": "052126zr4_d1o3.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/052126zr4_d1o3.pdf"
+  },
+  {
+   "date": "2026-05-21",
+   "kind": "Miscellaneous Order",
+   "file": "052126zr_m6hn.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/052126zr_m6hn.pdf"
+  },
+  {
+   "date": "2026-05-22",
+   "kind": "Miscellaneous Order",
+   "file": "052226zr_1an2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/052226zr_1an2.pdf"
+  },
+  {
+   "date": "2026-05-26",
+   "kind": "Order List",
+   "file": "052626zor_6j36.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/052626zor_6j36.pdf"
+  },
+  {
+   "date": "2026-06-01",
+   "kind": "Order List",
+   "file": "060126zor_k53l.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/060126zor_k53l.pdf"
+  },
+  {
+   "date": "2026-06-01",
+   "kind": "Miscellaneous Order",
+   "file": "060126zr_onjq.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/060126zr_onjq.pdf"
+  },
+  {
+   "date": "2026-06-08",
+   "kind": "Order List",
+   "file": "060826zor_21p3.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/060826zor_21p3.pdf"
+  },
+  {
+   "date": "2026-06-11",
+   "kind": "Miscellaneous Order",
+   "file": "061126zr_m6io.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/061126zr_m6io.pdf"
+  },
+  {
+   "date": "2026-06-15",
+   "kind": "Order List",
+   "file": "061526zor_5if6.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/061526zor_5if6.pdf"
+  },
+  {
+   "date": "2026-06-16",
+   "kind": "Miscellaneous Order",
+   "file": "061626zr_g204.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/061626zr_g204.pdf"
+  },
+  {
+   "date": "2026-06-22",
+   "kind": "Order List",
+   "file": "062226zor_g314.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/062226zor_g314.pdf"
+  },
+  {
+   "date": "2026-06-25",
+   "kind": "Miscellaneous Order",
+   "file": "062526zr_n7io.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/062526zr_n7io.pdf"
+  },
+  {
+   "date": "2026-06-26",
+   "kind": "Miscellaneous Order",
+   "file": "062626zr_10n2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/062626zr_10n2.pdf"
+  },
+  {
+   "date": "2026-06-29",
+   "kind": "Order List",
+   "file": "062926zor_1bn2.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/062926zor_1bn2.pdf"
+  },
+  {
+   "date": "2026-06-30",
+   "kind": "Order List",
+   "file": "063026zor_3f14.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/063026zor_3f14.pdf"
+  },
+  {
+   "date": "2026-07-02",
+   "kind": "Miscellaneous Order",
+   "file": "070226zr_2cp3.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/070226zr_2cp3.pdf"
+  },
+  {
+   "date": "2026-07-06",
+   "kind": "Miscellaneous Order",
+   "file": "070626zr1_dc8f.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/070626zr1_dc8f.pdf"
+  },
+  {
+   "date": "2026-07-06",
+   "kind": "Miscellaneous Order",
+   "file": "070626zr_g3bi.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/070626zr_g3bi.pdf"
+  },
+  {
+   "date": "2026-07-14",
+   "kind": "Miscellaneous Order",
+   "file": "071426zr_2dp3.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/071426zr_2dp3.pdf"
+  },
+  {
+   "date": "2026-07-20",
+   "kind": "Order List",
+   "file": "072026zor_8nk0.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/072026zor_8nk0.pdf"
+  },
+  {
+   "date": "2026-07-28",
+   "kind": "Miscellaneous Order",
+   "file": "072826zr1_b97c.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/072826zr1_b97c.pdf"
+  },
+  {
+   "date": "2026-07-28",
+   "kind": "Miscellaneous Order",
+   "file": "072826zr2_jifl.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/072826zr2_jifl.pdf"
+  },
+  {
+   "date": "2026-07-28",
+   "kind": "Miscellaneous Order",
+   "file": "072826zr_8n5a.pdf",
+   "url": "https://www.supremecourt.gov/orders/courtorders/072826zr_8n5a.pdf"
+  }
+ ]
+}
