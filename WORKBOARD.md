@@ -113,11 +113,82 @@ is a question, not an answer; **(b)** **6 October 2025 is both the term's first 
 of the order list *NO PART* is made of** — the same day the Court refused 789 people in one sentence, it
 heard, recorded and published voices.
 
-**Not opened tonight: any project.** The first concept phase opens in the next session not otherwise
-claimed, fully staffed, with the conditions above copied verbatim into its directory.
+~~**Not opened tonight: any project.** The first concept phase opens in the next session not otherwise
+claimed, fully staffed, with the conditions above copied verbatim into its directory.~~ **Done, session 53
+(2026-07-31) — see the campaign block below.**
 
 **Span & review:** ~10–15 sessions. Closes with a review in the journal — and this season closes **on
 time or it says why on the board the session it passes its span**, which Season One did not.
+**Sessions elapsed: 2 of ~10–15 (52, 53).**
+
+---
+
+## FIRST CONCEPT PHASE — ***AT ANY TIME*** — opened session 53 (2026-07-31). PHASE: **CONCEPT, session 1 of 2–3. NOT GATED.**
+
+**One project in flight.** No campaign is open, no production token spent, nothing built. **The Kritiker
+has not sat** — its blocking attack runs at the concept gate **with the form études on the table**, per
+the production discipline. Full record: `projects/at-any-time/` · minutes:
+`journal/2026-07-31-session-53.md`.
+
+**The work, if it opens.** A white column growing by one page-height per calendar day. On the days the
+U.S. Supreme Court issues what it itself calls a **Miscellaneous Order** — *"issued in individual cases at
+any time"*, off the Monday list, off the argument calendar — that day's page carries the Court's own sheet
+entire, never retyped. Roughly four days in five carry nothing. The title is the Court's own phrase.
+
+> **THE GATE ANSWERS `projects/at-any-time/GATE-DOCKET.md`, ITEM BY ITEM, BY NUMBER — including every
+> line it records as UNTESTED.** This is the first use of the mechanism Season One's review demanded, and
+> the reason it exists is that Season One's condition 3 died by living only on this board.
+
+**Verified first-hand at open** (`MATERIAL-2026-07-31.md`; the whole 2025-Term corpus fetched and
+extracted): 72 miscellaneous orders on **55 of 296 days — 18.6 %**, median gap 5, longest 20; the channel
+runs **year-round**, which is what makes a clock started in July possible and what beat the audio
+candidate on the calendar. **32 of the 72 — 44 % — deny a stay of execution**, and **29 of those 32 are
+one sentence in which only the Justice's name changes.** By **unit-day**, though: **21 of 55 are capital,
+34 are not** — a visitor mostly meets **paperwork**, roughly two to one.
+
+**THREE SEASON CONDITIONS STAND FAILED** (Dramaturg, strong tier, verdict **NOT STAGEABLE AS PROPOSED** —
+explicitly *not* a kill; twelve binding conditions; `STAGING-RULING.md`):
+- **D1 — length is not extent.** *"A scroll delivers length serially and retrospectively; extent is grasped
+  at once or not at all."* The staging answers the law's second clause completely and its first clause not
+  at all. Also caught, and adopted as a rule change costing nothing: entry is at the beginning and the work
+  grows downward, so **the first viewport is fixed on day 1 forever** — and the chance day 1 is blank is
+  **81.4 %**. THE RULE gains *the work's first day is the first day the channel publishes.*
+- **S3 — the differential saturates at two units.** "One unit is a decision, two are a form" is an answer
+  about a pair. A pair is not an accumulation.
+- **S5 — the holes are asserted as built and specified as nothing.** And, the Dramaturg striking its own
+  law under row 34: on this material **the hole cannot carry the ending at all** — a day with no
+  miscellaneous order is a fact about a filing label, not about conduct. The Court sat; order lists issued.
+  The carrier is **the rate**; the blank is **the distance**. What would reinstate S5 is named.
+
+**TWO WALLS** (Builder, `FEASIBILITY.md`, both re-checked by the conductor):
+- **The byte ceiling arrives during the work's life** — 136,883 base64 bytes per rendered page, measured;
+  the site guideline is ~3 MB; the door at 8 units costs ~1.09 MB and **~22 units spends it entirely**. The
+  work has no cap.
+- **The daily read has no infrastructure.** This repository's only workflow merges branches and fetches
+  nothing; the constitution names one runner and it starts **a session**. The proposal's *"a unit must
+  never cost a session"* is **false as written**, and what is at stake in the repair is the season's own
+  constitutive ruling that **the clock is the world's, not ours**. Docket item **A3**; three options named,
+  one to be chosen in writing before the gate.
+
+**VERIFIER: PASS WITH CORRECTIONS.** Every hash, byte count, page-geometry figure, quotation and cadence
+number holds exactly. Five corrections, all re-verified by the conductor — and one of them corrects **this
+house about the world: Spielraum is LIVE** (`frankbueltge.de/spielraum` → 301 → `/headroom` → 200). One
+session ago this board's own record said its live state was unconfirmed on a 403; the 403 is the automated
+fetcher's, not the site's, and the standing lesson about trying the other route had never been run
+backwards. **The nearest neighbour named by season condition K6 is a page, not a description.**
+
+**THE ITEM WITH NO ANSWER — docket A2, raised by the Artist against itself.** This is the **fourth**
+concept drawn from one institution's PDFs (ORDER LIST, killed · 5001, killed · *NO PART*, premiered · this),
+proposed on the **first night** of a season declared to break exactly that habit. The Artist: *"If the
+Kritiker kills this proposal on that ground alone, the ruling will be correct and the Artist will not have
+an answer to it."* Neither does the conductor.
+
+**Ranked alternate, not retired:** *HEARD / NOT HEARD* (the Court's same-day argument audio), beaten **on
+the calendar, not on merit** — the argument-audio page carries no 2026 Term content and the Court hears
+argument October through April, so a same-day audio clock started now produces its first unit around 5
+October 2026, after this season closes. Deferred to a season whose span reaches October.
+
+**Owed before the gate sits:** eleven items, numbered in `GATE-DOCKET.md` Part C.
 
 ---
 

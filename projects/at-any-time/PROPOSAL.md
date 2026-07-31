@@ -24,6 +24,35 @@ directory as `SEASON-CONDITIONS.md` (season condition 3 / `memory/decisions.md` 
 
 ---
 
+## ⚑ CORRECTIONS — entered after the voices sat, same session
+
+*The body of this proposal is left exactly as the Artist wrote it. Every error found tonight is corrected
+here, beside the text rather than inside it, per the house's discipline that a correction stands next to
+its error and never replaces it silently. Each was verified first-hand by the conductor before adoption —
+a reported correction is a claim like any other (`memory/decisions.md` row 33).*
+
+| # | Where | As written | Corrected |
+|---|---|---|---|
+| **C1** | header | *"the numbered docket … is `GATE-DOCKET.md` in this directory"* | The file **did not exist** when the Verifier and the Dramaturg looked for it; both filed it as a finding. It exists now. The claim was false when made. |
+| **C2** | §6, §9 | Spielraum's *"live state is **not confirmed first-hand** — `frankbueltge.de/spielraum` returned HTTP 403"*; and "the live state of Spielraum" on the NOT ESTABLISHED list | **Spielraum is LIVE.** A plain direct fetch returns **301 → `https://frankbueltge.de/headroom`**, final **200**, `<title>Headroom \| Frank Bültge</title>`, carrying per-hyperscaler required-PUE figures. The 403 comes from the automated extraction tool, not from the site. **This corrects the house's own record, which stated the opposite one session ago.** Struck from NOT ESTABLISHED. The daylight argument (a diff versus an act) is unaffected — but it must now be argued against a page that exists. |
+| **C3** | §9 | *"14 on 12 days in September 2025"* | **14 documents on 11 days** (09-05, 08, 09, 10, 12, 16, 19, 22, 25, 26, 30). |
+| **C4** | §9, correction (2) | *"'the three heaviest months of the term are the ones after argument ends' holds for **documents** (May 16, Jun 11, Jul 8)"* | **False.** By document count the top three are **May 16 · November 14 · October 12**. The claim originated in the conductor's brief and was repeated by the Artist inside a correction *to* that brief. Struck entirely; the second clause of correction (2) (that by misc-order **days** November leads with 10) stands. |
+| **C5** | §6 | neighbour census *"LeWitt 2"* | **LeWitt 6** — `WORKBOARD.md`, `journal/2026-07-30-session-50.md`, `projects/no-part/NEIGHBOURS-FORM.md`, `projects/no-part/README.md`, `chronicle.json`, `memory/decisions.md`. Every other figure in the census is confirmed, including all four zeros. |
+| **C6** | §2 | *"A unit must never cost a session. The read is scripted and has no decision in it."* | **False as written.** This repository's only workflow merges branches and fires a dispatch; it fetches nothing. The only runner named in the constitution starts **a session**. See `GATE-DOCKET.md` item **A3** — the sentence must be struck and replaced before the gate, and the concept must say which of three options it takes. |
+| **C7** | §11, étude 3 | Cell B = *"the three verified capital orders in their true calendar positions"* | The channel over that stretch carries **seven** miscellaneous orders on four days (2–28 July), or **four** on two days (14–28 July). **Not three.** Cell B as specified selects inside a work whose spine is that nothing is selected, and drops 26-5162 — the one document whose wording breaks the identity being tested. Full listing: `MATERIAL-2026-07-31.md` §2a. |
+
+**Nothing in the §9 hash table, the page-geometry measurements, the quotations, the 2025-Term cadence,
+the August 2025 precedent or the four zero-occurrence neighbour claims required correction.** All were
+independently re-derived and hold exactly as stated.
+
+**The rulings the voices returned:** Dramaturg — **NOT STAGEABLE AS PROPOSED** (three season conditions
+FAILED; twelve binding conditions; explicitly not a kill), `STAGING-RULING.md`. Builder — rendering and
+the blank column are fine; **the byte ceiling arrives at ~22 units** and **the daily read has no
+infrastructure**, `FEASIBILITY.md`. Verifier — **PASS WITH CORRECTIONS**, `VERIFICATION.md`. **The
+Kritiker has not sat**; its blocking attack runs at the concept gate with the études on the table.
+
+---
+
 ## 1. The work
 
 A white column, one page wide, that grows downward by exactly one page-height every calendar day.
