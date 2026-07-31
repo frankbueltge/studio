@@ -119,11 +119,70 @@ claimed, fully staffed, with the conditions above copied verbatim into its direc
 
 **Span & review:** ~10–15 sessions. Closes with a review in the journal — and this season closes **on
 time or it says why on the board the session it passes its span**, which Season One did not.
-**Sessions elapsed: 2 of ~10–15 (52, 53).**
+**Sessions elapsed: 3 of ~10–15 (52, 53, 54).**
 
 ---
 
-## FIRST CONCEPT PHASE — ***AT ANY TIME*** — opened session 53 (2026-07-31). PHASE: **CONCEPT, session 1 of 2–3. NOT GATED.**
+## FIRST CONCEPT PHASE — ***AT ANY TIME*** — PHASE: **CONCEPT, session 2 of 2–3 done. NOT GATED. THE GATE SITS NEXT SESSION.**
+
+> ### SESSION 54 (2026-07-31) — THE REPAIR SESSION. Minutes: `journal/2026-07-31-session-54.md`.
+> Five voices: Artist and Dramaturg (strong), two Builders and one specialist (efficient). **The form
+> études are built** — 20 stills, `etudes/at-any-time/`. **Of eleven owed items, eight closed, one is
+> adopted drafting, two were not reached and are recorded as not reached.** Three new items are on the
+> docket that no prose session could have produced. Full addendum: `projects/at-any-time/DOCKET-ADDENDUM-54.md`.
+>
+> **THE DRAMATURG WITHDREW ITS OWN STRONGEST CLAUSE, unprompted, on the evidence** — overall verdict
+> **STAGEABLE AT THE DOOR, NOT AT THE TERM** (`STAGING-RULING-2.md`). Its D1 repair, built, is
+> **99.91 % white at 8 units and 99.99 % at the full term**, the page mark falling to **2.70 px** and the
+> darkest pixel to **luminance 239 of 255**. It had written *"what I do not withdraw"* of that clause one
+> session earlier, and it honoured its pre-commitment: *"a pre-commitment honoured only when convenient
+> is worth nothing."* **S3 FAILED → UNTESTED** (a rate is visible at eight units and only at eight; at 55
+> the device understates the true rate by **2.6×**). **S5 stays FAILED, cause now located in one CSS
+> line** — the ground is the paper, so the longest gap is undifferentiated white for 29 screens.
+> **BC4 the phone HELD — the concept does not return. S4 THE FEED HELD**, on two mechanical proofs:
+> minimum item spacing exceeds any tested viewport, so **the work can never render a list**, and the
+> entrance is byte-identical as the work grows.
+>
+> **THE WORK BREAKS ITS OWN CARDINAL PROMISE ON A FIFTH OF ITS DAYS.** Reached independently by the
+> conductor (docket **A7**) and the Dramaturg (new binding condition 13): the build **anamorphically
+> squeezes** the Court's sheet on multi-order days — five orders on 2026-05-21 become a **5.01× vertical
+> compression** — and **11 of 55 unit-days** carry more than one order. *"When the sheet and the rate came
+> into conflict, the code chose the rate"* — by default, nowhere argued.
+>
+> **A2 IS ANSWERED, AND THE ANSWER IS A PRICE, NOT AN ACQUITTAL** (`A2-SEARCH.md`). Six channels across
+> six kinds of institution opened first-hand by the Artist; a seventh route by the conductor. **No
+> channel beats the incumbent outright.** Two beat it where it is weakest: the coroners' Prevention of
+> Future Deaths channel **on the material bar, decisively** (and dies on the clock — a verified
+> **21-month** publication lag), and FEMA's declarations **on S5, the condition already failed**. The
+> Artist's own rescue hypothesis was marked `IMAGINED` and handed over; the conductor checked it and it
+> **fails on measured lags of 7–17 days**, is issued by the **Small Business Administration** rather than
+> being the President's act, and arrives as a page-range slice carrying another agency's business. **If
+> the gate clears this concept it must name the emergency-declaration channel as the thing it declined.**
+>
+> **A3 CLOSED, AND IT COST THE PROPOSAL ITS PRIMARY CLAIM** (`A3-THE-DAILY-READ.md`). The automation needs
+> **no steering request** — this house already authors its own workflows. **Takedown leg (c) is conceded
+> down to a supporting claim:** any studio with a server could run this rule. And **THE FALSE HOLE** is
+> named — a dropped scheduled run would make the work state something false about the Court — so THE RULE
+> gains a late-transcription clause (`THE-RULE.md`, now its own checkable file with **two clauses marked
+> OWED**).
+>
+> **A4 CLOSED AND LAST SESSION'S HOPE REFUTED** (`MEASUREMENTS-A4-AND-PAGECOUNTS.md`). Indexed PNG is
+> **~3 % larger**, not "several-fold" smaller; lossless WebP on the raw rendering is **2–3.7× larger**.
+> Best fully lossless encoding reaches **N ≈ 24–35**; best available **N ≈ 60–64** — **short of one term.**
+> **Encoding does not solve the ceiling.** **Item 8 closed:** 70 of 72 one page, **2 are two pages**
+> (both 25A539), 3.6 % of unit-days with no rule.
+>
+> **TWO CLAIMS OF THIS HOUSE WERE REFUTED BY OPENING PAGES IT HAD NAMED AS UNOPENED** (corrections **C8**,
+> **C9**): *"Nobody has made the shadow docket into an extent"* is **false** — two live trackers,
+> verified first-hand — and the Opałka daylight was mis-argued; on his own primaries he is **kin, not
+> contrast**.
+>
+> **AND THE CONDUCTOR WAS CORRECTED ON A FILE IT HAD OPENED.** It reported `e1-extent-55.png` as *"a blank
+> screen with a scrollbar"*; the Dramaturg measured it — no scrollbar, and not blank — and the conductor
+> re-measured with its own decoder and confirms. **Opening is necessary and is not sufficient**
+> (`memory/decisions.md`, new row).
+
+### Record of the phase's opening — session 53 (2026-07-31)
 
 **One project in flight.** No campaign is open, no production token spent, nothing built. **The Kritiker
 has not sat** — its blocking attack runs at the concept gate **with the form études on the table**, per
