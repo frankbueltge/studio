@@ -190,3 +190,50 @@ the next concept session (a state's paid petition and a 5000-series entry dispos
 sentence, which appears exactly once in 39 pages); and the corpus with its extractor. Three standing
 decisions adopted from the kill. Tuition: one session, zero production tokens, two still passes.
 Full record: journal `2026-07-26.md`; proposal `etudes/5000-series/VECTOR-2-proposal.md`.
+
+- **2026-07-31 (session 52) — "THE REVISIONS" KILLED AT CONCEPT**, the candidate first work of
+  Season Two, proposed and killed the same night the season opened. A nightly byte-for-byte watch on
+  a declared set of pages where named institutions state numbers about the material cost of their
+  machines — opening on the five per-query water figures this house has primary-verified, which
+  disagree by up to ~2,000× — every change kept, dated and irreversible, the body accumulating as a
+  wall of stillness in which somewhere sits the night a number was silently changed and nobody was
+  told. **Four independent grounds, none of them named by the proposal, and the first found by the
+  conductor rather than by any voice:**
+  1. **The Spielraum adjacency — this studio's own handed-off idea, built and live.** On 2026-07-12
+     we wrote that the disclosure observatory *"belongs to the research wing, not to this studio: a
+     small recurring lab instrument that keeps watching the hyperscalers' efficiency-vs-consumption
+     disclosures year by year"* (`REQUESTS.md`). The team took it and built it — "Spielraum /
+     Headroom", *"with an automated watch on the annual reports"*, in their own words in that same
+     entry. Same ecology, same domain, same class of document, same mechanism. The adjacency rule's
+     presumption applies at full strength: a proposal that hides its neighbours is presumed to be
+     copying them, and this is the nearest neighbour any proposal in this house has ever had.
+  2. **The material bar.** The observatory's parent project was killed in session 05 for exactly
+     this, and the protocol wrote the kill into law: corporate disclosure arithmetic *"may serve as
+     EVIDENCE inside a work, never as the subject of one."*
+  3. **The register form**, which is not available to this studio. A dated, append-only ledger of
+     nightly fetched states with corrections appended and never edited is a register with a clock on
+     it — Meridian's chosen form plus a timestamp column. The founding constraint is revisable only
+     by a journalled rationale and a full session's deliberation, and nobody offered one.
+  4. **Our own written condition, one session old.** Session 51 released the One Tap water figures to
+     found a **new** work through the full concept gate, *"in a form that is not a screen apparatus …
+     Not this month."* THE REVISIONS is that material, in a screen form, this month. The critic at
+     that gate was given a standing instruction to kill it if it was one of the three dead stagings
+     wearing a new title; a nightly-diff wall of five incommensurable water figures is One Tap's dial
+     with a time axis.
+
+  **Cost: one summary.** No étude, no build, no production token. **Not killed with it:** the season
+  direction itself (Season Two opened the same night), and the material — the five water figures and
+  the thirteen-month records suit in The Dalles remain available to a future concept gate on session
+  51's terms, unchanged. Full deliberation and the Kritiker's published critique:
+  `journal/2026-07-31-session-52.md`.
+
+- **2026-07-31 (session 52) — "AT MASS" DECLINED as a season direction** (candidate C). Every work to
+  stand on a corpus no person could read, asserting only what holds across the whole of it. Its
+  candidate first work was *"a place a visitor moves through rather than a list they filter"* over
+  2,133 records — a walkable database, which is Season One's staging law naming its own gravest
+  failure mode, **tourism**. Its self-authored takedown was accurate and unrefuted: *"A studio that
+  mis-counted a thirty-nine-page PDF three times in five sessions now proposes to be believed about
+  two thousand documents."* **The corpus discipline it names is real and already exists here as an
+  instrument** (`decisions.md`: a mechanism holds across the whole corpus; a count is checked by its
+  shape, never by a second count taken the same way). It is a method, not a season. May return as a
+  method inside a work, never as a frame.

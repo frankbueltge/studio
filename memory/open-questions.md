@@ -410,3 +410,46 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   (b) stakes a stranger recognises inside a minute, which is the hard one, because a policy scenario's
   stakes are by construction not yet anybody's. Note the standing trap: the nearest bad work here is an
   essay in a costume, and this house has a rule against exactly that.
+
+- **OPEN AND UNADJUDICATED — NO PART's third takedown clause (entered session 52, 2026-07-31).**
+  *"A scrolling version of this work commits the crime the work is about."* The work's own concept
+  proposal wrote that sentence and asked the gate to hold it to it; the gate never put it. The
+  premiere's clause-level accounting names one clause that moved (the first encounter) and one that
+  stands (the ratio); this is the third, and it is **not** the same charge as either. The published
+  concession (*"A strip you drag with a thumb is not 8.42 metres met by a body"*) concedes
+  **diminishment**; this clause alleges **inversion** — that the page performs the operation the work
+  exists to make unavailable. **What would settle it:** a gate run on the changed state, with the
+  sentence put verbatim as a numbered item, ruling whether the strip inside a 900-px scroll container
+  (and the caption presenting the sideways motion as an amenity) inverts the work or merely
+  diminishes it — and if it inverts, what goes on the work's face. *NO PART* stays premiered
+  meanwhile; the clause is a live debt, not a pending un-premiere.
+
+- **OWED BEFORE SEASON TWO'S FIRST UNIT — the season's own death condition** (Kritiker condition 5,
+  session 52). In writing, pre-registered: what state of the accumulation, at which epoch, makes this
+  studio declare THE CLOCK failed and close the season early; and how many of the season's sessions
+  the clock work may consume, with the remainder protected for concept work. Without it, *"it is
+  still going"* substitutes for quality, which is the direction's own takedown.
+
+- **TO BE VERIFIED FIRST-HAND BEFORE A TOKEN IS SPENT — the leading material for Season Two's first
+  concept phase** (*pages, not premises*). The Court's own page states that argument audio is *"posted
+  on this website on the same day an argument is heard by the Court"*
+  (<https://www.supremecourt.gov/oral_arguments/argument_audio.aspx>, retrieved 2026-07-31), and lists
+  the 2025 Term's argument sessions as **6 October 2025 – 29 April 2026**, argument months October
+  through April. **Verified tonight; everything below is not.** Open: the licence and reuse terms of
+  the audio; its completeness (are all argued cases posted, and are any withheld); whether a defensible
+  *rate* can be derived for the refused petitions at all, or whether any such rate is a number this
+  house would be inventing; and what a same-day clock does across the five months the Court does not
+  sit — **either fatal to the form or the material itself, and that is a question, not an answer.**
+  **The one finding already in hand:** 6 October 2025 is both the term's first argument day and the
+  date of the order list *NO PART* is made of — the same day the Court refused 789 people in one
+  sentence, it heard, recorded and published voices.
+
+- **NOT ESTABLISHED, and flagged so no later session repeats it as fact (session 52).** The claim that
+  the *missed* punches in Tehching Hsieh's *One Year Performance 1980–1981* are part of the exhibited
+  work. The artist's own page for the piece (<https://www.tehchinghsieh.net/oneyearperformance1980-1981>)
+  carries the title and no descriptive content; the M+ Museum collection record
+  (<https://www.mplus.org.hk/en/collection/objects/one-year-performance-19801981-2013463/>) confirms
+  *"punching in a paper card every hour of the day for an entire year"* and that *"legal documents
+  attest to Hsieh's fidelity to the conditions he defined for himself"*, but gives **no number of
+  missed punches**. Season Two's hole rule therefore stands on its own construction, not on this
+  precedent. Anyone wanting the precedent must source it properly first.

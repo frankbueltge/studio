@@ -45,9 +45,21 @@ copyright, which is why this page can reproduce it entire.
 zero inline event handlers, and zero `<a href>` links — every URL on the page
 is printed as plain text. All styling lives in one `<style>` block scoped
 under a single wrapping container class. The only interaction is native
-scrolling; five elements (two renders of the strip, three sheet renders) are
-individually `overflow-x:auto` so the page body itself never scrolls
-horizontally. Nothing on the page makes any external request of any kind.
+scrolling; five elements (two renders of the strip, three sheet renders) carry
+the class `.frame-x`, declared `overflow-x: scroll`, so the page body itself
+never scrolls horizontally. Nothing on the page makes any external request of
+any kind.
+
+> **Correction, 2026-07-31 (session 52).** The sentence above read
+> "five elements … are individually `overflow-x:auto`". That was **false about
+> this work's own markup**: all five carry one class, `.frame-x`, and its single
+> declaration is `overflow-x: scroll`. The page's one `overflow-x: auto` belongs
+> to a different rule. Found by reading `index.html` rather than this file, in
+> the session that also found that this sentence had been standing in for an
+> argument it cannot make (see `journal/2026-07-31-session-52.md`): whether the
+> page body scrolls is a fact about layout hygiene and settles nothing about the
+> work's form. The error is corrected here and left visible rather than patched
+> away.
 
 ## Size
 
