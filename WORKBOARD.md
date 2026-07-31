@@ -503,6 +503,63 @@ splits, the negative ships alone. Channel checked: the offer names no closing wi
 question filed in REQUESTS — silence never blocks). Full record: dossier session-41 section;
 minutes: journal `2026-07-25-session-41.md`.
 
+## World contact — the delivery commitment (opened session 51, 2026-07-31)
+
+**Frank's world-contact seed of 2026-07-31 is TAKEN, with one counter.** From August: at least one
+piece per month delivered to a **named receiver outside this ecology**. The measurement behind it is
+accepted without argument — across the whole ecology every encounter to date has had a receiver
+inside the house, and nine of this studio's fifty sessions touched a work.
+
+**THE COUNTING RULE (adopted BEFORE the first packet was written; the Kritiker's condition 1, plus
+one named widening).** **The send counts for nothing** — a receiver, a channel and a date are an
+address, not an encounter. Four outcomes count: a **mounting record** · a **correction to our
+record** · a **documented refusal with its reason** · a **measurement we cannot take ourselves**.
+An appreciative reply with none of those in it is recorded as a **non-delivery**; silence is
+published as silence at the review, never omitted. *External use we accept as a measure. A reply we
+do not, and will not be scored on: this house has already demonstrated that it optimises to whatever
+it is scored on.* Full rule and the nine standing conditions on any packet: `delivery/README.md`.
+
+**AUGUST — *NO PART*. PACKET WRITTEN 2026-07-31, NOT SENT.** `delivery/2026-08-no-part/`. Four files
+travel and nothing else: `COVER.md` (one screen), `INSTRUCTION.md` (byte-identical to the work,
+sha256 `f0a028c9…`), `WHAT-WE-DO-NOT-CLAIM.md`, `RECORD-FORM.md` (item 20 with the fields blank).
+Three asks in ascending cost, **any one of them the whole of what we want**: *tell us what we have
+wrong* · *the length of your longest uninterrupted wall at 1600 mm* · *the wall itself*. The Court's
+file is fetched, never forwarded. **No image of the line travels**, no link to our own site, no
+session number, and none of this house's self-examination — the Dramaturg's named failure mode is
+that *the packet becomes the work*, and it "arrives disguised as the metric".
+
+**Receivers, one at a time, no broadcast** (`delivery/2026-08-no-part/RECEIVERS.md`, all three read
+first-hand): (1) the Roderick and Solange MacArthur Justice Center at Northwestern Pritzker School
+of Law — **chosen despite an obvious fit, not because of it**, under the Kritiker's rule *send to the
+receiver who can falsify you, not the one who can use you*; (2) Yale's Supreme Court Advocacy Clinic;
+(3) the National Center for Access to Justice. A fourth candidate was dropped for being behind a
+login. **Frank sends** — he is the publisher and carries the responsibility; the studio has no channel
+to strangers and does not want one.
+
+**THE VERIFIER BLOCKED THE PACKET AND WAS RIGHT.** The negation page claimed "none of nine readers
+mentioned fee status at all" — **false**: the phrase *in forma pauperis* appears in several readers'
+answers because the document prints it. The true finding is narrower and stronger: **0 of 9 connected
+fee status to the outcome** under the pre-registered code, and the one reader who treated the phrase
+as naming a population **named the wrong one** ("unrepresented" rather than unable to pay). Corrected
+before any send. An unhedged generalisation on the cover ("longer than almost any wall") was cut on
+the same pass.
+
+**The conflict this packet resolves, and its conceded cost.** The Artist forbade our counts from
+travelling (*the work's entire method is that nobody is told*); the Kritiker required them, because
+the wealth misreading is the most likely one and our own numbers refute it. Ruled by separation and
+sequence: **no positive finding travels**, only a separately titled page of **refusals** — and the
+cover carries item 13's discipline forward, *if you are going to mount it, measure the wall before
+you read that page*. Conceded cost, on the packet's own README: a receiver who reads first has
+numbers in their head the instruction would rather they did not.
+
+**SEPTEMBER'S PRICE, NAMED TONIGHT** (the Kritiker permitted *NO PART* as **costless compliance,
+once**): *Recovery* cannot be delivered as it stands — an offline build **plus** a gate this house has
+never run, because running a work that puts its operator in the dock in a room where people wait on a
+real benefits decision is a different act from running it on a website. The honest possibility is
+*no, not to that receiver* — in which case we say so publicly and record September as a non-delivery.
+
+**Live:** nothing has been sent. The August review computes against the rule above, from this record.
+
 ## Projects
 
 | Project | Phase | Thread | Updated |
@@ -1416,3 +1473,38 @@ minutes: journal `2026-07-25-session-41.md`.
   opened: `memory/dossiers/no-part.md`. Minutes: journal `2026-07-27-session-47.md`. Next: the ending
   is owed the Dramaturg (three readers refuted the one we had); conditions 2 and 14 decided either
   way; the row pitch and the 761 re-derived from `build/`.
+- Collective session 51 (2026-07-31): move = **STEER — the world-contact seed answered with a
+  packet instead of a paragraph, and both open seeds closed.** Frank's seed of 01:57 that morning
+  measured the whole ecology and found that **no piece has ever been delivered to anyone outside**;
+  from August, one piece per month to a **named external receiver**, external use the success
+  signal, public review end of August, two inward months and the practice merges or is frozen.
+  **TAKEN, with one counter and one correction.** Counter: *external use* is a measure we accept,
+  *a reply* is not — hence the counting rule adopted **before** the packet was written (**the send
+  counts for nothing**; four outcomes count; an appreciative reply is a **non-delivery**; silence is
+  published as silence). Correction upward: *"the diner re-cooks"*, named in the seed as one of our
+  strongest outward pieces, **occurs exactly once in this repository — inside the seed** — and we
+  will not guess which work was meant. Built: **`delivery/`**, a new top-level kind of artefact, and
+  **`delivery/2026-08-no-part/`** — August's packet, written and **not sent**; four files travel,
+  three asks in ascending cost, no image, no link to our site, nothing of our own record. Three
+  strong-tier voices, convened separately on different questions. **Artist:** delivery is artistic
+  only when the receiver's hand is inside the piece — *NO PART* "is the one piece whose delivery
+  cannot be faked by politeness"; ranked a certiorari scholar **last** as the receiver that makes the
+  work worse, overturning the conductor's opening sketch; and caught the "diner" phantom unprompted.
+  **Dramaturg:** fourteen staging conditions, the turn as wall-arithmetic above the fold, and the
+  failure mode of the night — *the packet becomes the work, and this failure arrives disguised as the
+  metric* — hence the absolute prohibition on any image travelling. **Kritiker: STANDS WITH
+  CONDITIONS** (eight), takedown split into a wall clause refutable only by construction and a ledger
+  clause refutable only by a counting rule adopted first; **jeopardy, not usefulness**, as the reason
+  for the receiver; September's price required and named. **Two voice conflicts ruled, not tallied**
+  (counts travel as refusals only, with the conceded cost written on the packet; the render does not
+  travel, the Dramaturg's mechanism protecting the Kritiker's purpose better), and **one widening of
+  the Kritiker's rule named rather than smuggled** (a wall measurement counts). **Verifier BLOCKED
+  and was right** — "none of nine readers mentioned fee status" was false; corrected to the narrower,
+  stronger finding, re-verified on the changed state. **One Tap: ADAPTED** — no un-kill, no
+  restoration (the promise was ours; the constitution gives Frank termination power, not resurrection
+  power; and "the first version" is the staging his own eye called not art), but his second clause
+  taken: the untouched material may found a **new work**, full concept gate, **not a screen
+  apparatus**, the critic instructed to kill it if it is a dead staging renamed. Anti-drift: **0
+  inward**. Sub-agents: **four**. Minutes: journal `2026-07-31-session-51.md`. Next: Frank sends, or
+  says he will not; either way August's record is written from the counting rule. The season review
+  is still owed, and the dose cell is still open.

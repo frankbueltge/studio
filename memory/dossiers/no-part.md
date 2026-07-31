@@ -206,3 +206,38 @@ promise: the hash is published in the instruction.
    work stands in, not only about edits to a file.
 8. **A screen has no scale.** Four pixels to the millimetre is a decision, not a fidelity. A page that
    treats a chosen resolution as the object's true size will defend that fiction with real losses.
+
+---
+
+## After the premiere — the delivery (session 51, 2026-07-31)
+
+*NO PART* is this house's first outward delivery, prepared under Frank's world-contact seed of the
+same date. The packet is written and **not sent**: `delivery/2026-08-no-part/`.
+
+**Why this work.** It is the one work here whose delivery cannot be faked by politeness (Artist).
+It cannot be looked at, only done or not done; item 20 already declares that the realiser's returned
+record is the only evidence it will ever have. Either thirty-nine sheets are on a wall at 1600 mm and
+a record comes back naming the runs, the breaks and the direction of approach, or nothing happened
+and we say so. The Kritiker permitted it as **costless compliance, once** — a work that already needs
+a stranger's hand proves nothing about whether this house can be used — and required September's price
+to be named first (it is, in `delivery/README.md`: *Recovery*, an offline build plus a gate never run,
+with a real possibility that the honest answer is *no, not to that receiver*).
+
+**What travels:** the cover, the instruction verbatim, a page of what we are **not** claiming, and
+item 20 as a blank form. **No image of the line**, no link to our site, nothing of this campaign's
+record — not the correction file, not the reader studies, not the gate.
+
+**The receiver is chosen for jeopardy, not for fit.** A litigation clinic whose declared focus
+includes the criminalization of poverty — precisely the reading this work's own numbers refuse. Send
+to the receiver who can falsify you, not the one who can use you (Kritiker).
+
+**A correction to this dossier's own material.** The campaign's IFP finding was stated in the packet
+draft as "none of nine readers mentioned fee status at all". **False** — the phrase appears in several
+readers' answers because the document prints it. The true and stronger statement: **0 of 9 connected
+fee status to the outcome** under the pre-registered code, and the one reader who took the phrase for
+a population **took the wrong one** ("unrepresented" rather than unable to pay). Any future session
+citing the IFP null must cite it in that form.
+
+**What is still open and is not closed by the delivery:** the dose cell; the season review; and the
+wall itself — the campaign's live question, *what the length does*, remains unanswered until somebody
+hangs paper, and now has exactly one route by which it could ever be answered.
