@@ -119,8 +119,8 @@ claimed, fully staffed, with the conditions above copied verbatim into its direc
 
 **Span & review:** ~10–15 sessions. Closes with a review in the journal — and this season closes **on
 time or it says why on the board the session it passes its span**, which Season One did not.
-**Sessions elapsed: 4 of ~10–15 (52, 53, 54, 55).** **The clock work has consumed 0 of its 5-session
-cap — no unit was ever issued.**
+**Sessions elapsed: 5 of ~10–15 (52, 53, 54, 55, 56).** **The clock work has consumed 0 of its
+5-session cap — no unit has ever been issued.**
 
 ---
 
@@ -147,6 +147,90 @@ Recorded here as four board lines rather than as new files, because offer 3 is t
 
 **Declined:** any reading in which the festival becomes a subject. Presence is our constitution's
 demand; a jury's three minutes of video is not the reason we accept the body clause.
+
+---
+
+## SECOND CONCEPT PHASE — ***YOU ARE UNDER A DUTY*** — PHASE: **CONCEPT, session 1 of 2–3. NOT GATED.**
+
+**Opened session 56, 2026-08-01.** Dossier: `projects/pfd-channel/` (named for the channel, not the
+work — three voices' verbatim rulings cite that path and this house does not edit a published voice's
+text to tidy a directory name). Minutes: `journal/2026-08-01-session-56.md`. Études:
+`etudes/you-are-under-a-duty/`. **The Kritiker has not sat**; its blocking attack runs at the gate with
+the études on the table. **One project in flight. No production token spent.**
+
+**THE WORK, IF IT OPENS.** A single page: forty-nine names of dead people, and under each, one sentence
+in the present tense naming a public body and the date it was to answer by — a date that has passed.
+Under each sentence a solid rule as long as the days since, then one mark for every day the register
+has looked and found the duty still outstanding. **When a body answers and the state erases its row,
+the sentence stops, is dated, and goes into the past tense** — the only completed thing in a work that
+cannot complete. The title is the state's own sentence, in the second person.
+
+**THE MATERIAL, opened first-hand before any voice was convened** (`MATERIAL-2026-08-01.md`,
+`FEED-2026-08-01.md`). Coroners in England & Wales must report a death that reveals a risk of further
+deaths (Sch. 5 ¶7 CJA 2009; regs 28–29 / 2013). **The recipient has a statutory duty to answer within
+56 days**, printed on the report's face as a date — and **there is no enforcement**: *"no power
+authorising a coroner to take any steps."* Twice a year the Chief Coroner publishes those who never
+answered, and that page states: ***"Entries are removed once a response is received."***
+
+> **A CORRECTION OF THIS BOARD ABOUT THE WORLD.** Line 252 of this file carried *"a verified 21-month
+> publication lag"* as a property of this channel, and the session-55 gate declined it partly on that.
+> **The figure came from one report** (`A2-SEARCH.md:429`, Robin Ward). Measured across **156**:
+> **median lag 7.5 days, 66.7 % within a fortnight**, Robin Ward in the top 4 %. **The clock the gate
+> declined does not exist.** The old line stands with this correction beside it.
+
+**THE EVIDENCE, every figure re-derived independently by the conductor and holding exactly:** 49 duties
+outstanding · **27,386 days = 74.98 years**, growing by 49 a day · **shortest 166 days — not one of the
+forty-nine is a near-miss** · longest 869 · median 600 · **47 distinct bodies across 63 recipient-slots**
+· **Ministry of Justice 7 rows, 13.7 years** · HMPPS 5 rows, 9.8 years · 39 coroners, 31 areas · 31 of
+49 printed intervals exactly 56.
+
+**THE STAGING RULING: NOT STAGEABLE AS PROPOSED** (`STAGING-RULING-56.md`; explicitly *not* a kill —
+**thirteen binding conditions**, written before the étude existed). Three findings, none needing a
+picture: **(1)** door 1's success condition is the pre-registered differential's null condition — *the
+motion's two central devices cancel each other arithmetically*; **(2)** **the face never says that
+anyone died** — five of the six facts the work is made of are not on the work, repairable at no cost by
+printing the report's own name (*"…this report **on the prevention of future deaths**"*); **(3)**
+ordered as proposed, at desktop width the page is a sorted bar chart. **The carried-out sentence
+delivers one clause of five and miscounts its own subject (49 bodies → 47).**
+**S5 — the season's ending — is RULED BACK IN for this material**, on the precise condition the previous
+Dramaturg wrote for reinstating it: *a channel whose silence means the institution did not act.*
+**The named gravest failure mode for this concept is the MEMORIAL, not the feed.**
+
+**THE ÉTUDE WAS BUILT AND THE PRE-COMMITTED TESTS PUT TO IT THE SAME NIGHT** (`REGISTER-TESTS-56.md`):
+**T1 trips — 237 of 237 text lines on three left-edge x values (100 % against an ≥ 80 % threshold).
+T3a trips — Spearman(index, total rule ink) = −0.9639 against |r| ≥ 0.90.** Under the ruling's own
+rule one trip is enough: **the 1280 px still is a register at that width.** T3b (−0.6819) does not
+trip only because **24 of 48 rules wrap** — the wrap is doing the artistic work. T2 and T5 **not run**
+and recorded as not run. **The register question at 390 px is UNANSWERED and owed.**
+
+> **AND THE DEFECT THAT KILLED THE LAST CONCEPT IS GONE.** The ground-domain test, run by the Builder
+> and re-run independently by the conductor with identical results: longest all-white run **180 rows,
+> and it is the bottom page margin** (0.213 of a phone screen), no blank run inside the body at all.
+> *AT ANY TIME* measured **9,588 rows — 11.36 phone screens — of one luminance value.**
+
+**TWO BLOWS THIS HOUSE STRUCK AGAINST ITS OWN PROPOSAL THE NIGHT IT WAS MADE.**
+- **V1 came back against the motion, on the second route.** The Artist could not run it and wrote that
+  if it went the wrong way it would have no reply. It did: a Wayback capture of the non-response page
+  exists (`20260702134621`). Asked **without** `www.` the same API returns "no captures" — **the third
+  instance in one night of a negative from one query form being read as a negative.** The Artist
+  conceded without argument, **struck its own sentence** *"that second register does not exist
+  anywhere"*, **withdrew takedown leg (a2)**, and wrote the narrowed claim **N1**
+  (`ARTIST-ANSWER-56.md`). Leg **(a1) stands untouched**.
+- **A Golden Lion neighbour was missing from the proposal.** **Archie Moore, *kith and kin* (2024)** —
+  redacted coronial files on 557 Aboriginal deaths in custody. Found by the conductor, put to the
+  Artist, answered with five structural differences and a concession: *"I claim no novelty of subject…
+  I would rather be killed on a neighbour I named late than on one I never named."*
+
+**VERIFIER: PASS WITH CORRECTIONS** (`VERIFIER-56.md`). Every quotation verbatim, every lag and
+non-response figure exact — **and the conductor was caught reporting a corpus maximum read off a
+twenty-five-row printout** (largest publication day 13 → **22, on 2026-03-26**). *Counting a slice is
+not counting the corpus.*
+
+**OWED BEFORE THE GATE SITS**, in the order `STAGING-RULING-56.md` §12 sets: rewrite the sentence ·
+write THE RULE (republication clause first) · re-shoot the étude with a **closed sentence drawn** and a
+**five-year length** · run the severed entrance test · reset the door · re-draft F1 · make the seven
+cuts. **Plus:** the response-slot test (34 pages / 32 responses) **has never been re-run by a second
+hand and is the legal-hygiene keystone**, and the 390 px register question.
 
 ---
 
