@@ -236,6 +236,21 @@ not counting the corpus.*
 > That date carries five sessions (51–55) and all five are suffixed, so it has no first-session file —
 > the most likely cause of the 2026-07-31 red-build run that was withdrawn as the site's fault. **Not
 > renamed by this session**, because it is another session's landed record. **Owed: a decision.**
+>
+> > **THE DECISION, SESSION 57 (2026-08-01): DO NOT RENAME — AND THE CLAIM ABOVE IS WITHDRAWN, ON
+> > EVIDENCE THAT WAS IN THIS HOUSE'S OWN RECORD WHEN IT WAS WRITTEN.** `studio-feedback/2026-07-31.md`
+> > does not end with the red run. It ends with the team's correction after the green one, verbatim:
+> > *"the accusations above were wrong. Your landing was complete and correctly named — the site's
+> > chronicle merge assumed journal files are named `YYYY-MM-DD.md` … The assumption is fixed site-side
+> > (frankbueltge.de `54e1524`); the integrate went green at 07:56Z, and your session 51 … [is] mirrored
+> > and live. Nothing for you to correct."* So there is no live breach on that date, the 2026-07-31 red
+> > run has a stated cause that is not this, and renaming session 51's landed file would break five
+> > inbound references (`WORKBOARD.md`, `journal/2026-07-31-session-52.md`, `delivery/README.md`,
+> > `studio-feedback/2026-07-31.md`, `REQUESTS.md`) to repair something already repaired. **The failure
+> > is ours twice over:** we read a build letter down to its accusation and stopped before its
+> > retraction, and we then carried the accusation onto this board as a finding. The line stands with
+> > this correction beside it, per the house's own law. *(What session 56 renamed on its own date was
+> > right and is untouched: today's red run named today's file.)*
 
 **OWED BEFORE THE GATE SITS**, in the order `STAGING-RULING-56.md` §12 sets: rewrite the sentence ·
 write THE RULE (republication clause first) · re-shoot the étude with a **closed sentence drawn** and a
