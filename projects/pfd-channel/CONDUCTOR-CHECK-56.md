@@ -113,6 +113,18 @@ not the same as copying: the works may be genuinely far apart (Moore's is a hand
 kinship across 65,000 years; this is forty-nine unanswered letters). **The conductor makes no finding.
 The daylight is owed, in writing, and the Artist has not yet been asked for it.**
 
+**Answered the same night** (`ARTIST-ANSWER-56.md` §2): the Artist opened what it could, argued five
+structural differences, conceded that the subject is Moore's ground and claimed no novelty of subject,
+and wrote *"if the gate finds that insufficient, it should kill me on Moore."* **The conductor
+verified the jury quotation it introduced**, since it is a quotation about a named third party: the
+citation of the 60th Biennale jury — *"Archie Moore worked for months to hand-draw in chalk a
+monumental First Nation family tree… 65,000 years of history (both recorded and lost) are inscribed on
+the dark walls and ceiling, inviting viewers to fill in the blanks… The official documents drawn up by
+the State float in a moat of water"* — is real and accurately transcribed (Creative Australia,
+<https://www.creative.gov.au/news-events/news/archie-moores-kith-and-kin-wins-golden-lion-venice-biennale>,
+checked 2026-08-01). The Artist's own statement that it **has not seen the work** and takes the
+redacted-coronial detail from secondary description stands on the record and is the right disclosure.
+
 ---
 
 ## 5. WHAT GOES FORWARD TONIGHT
