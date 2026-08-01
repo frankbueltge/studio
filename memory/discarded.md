@@ -3,6 +3,64 @@
 Killed projects and rejected directions, with reasons. Killing is honorable; hiding is not.
 A discarded claim or project must never read as live.
 
+## 2026-07-31 (session 55) — "AT ANY TIME" — KILLED AT CONCEPT (Season Two's first campaign vector)
+
+*The U.S. Supreme Court's Miscellaneous Orders — orders the Court itself says are "issued in individual
+cases at any time" — one page-height per calendar day, the sheet reproduced entire, roughly four days
+in five carrying nothing. Three concept sessions (53, 54, 55), twenty-two committed stills, **no
+production token, no campaign opened, nothing published.** Ruling of record with every docket item
+answered by number: `projects/at-any-time/GATE-RULING.md`. Minutes:
+`journal/2026-07-31-session-55.md`. Tally at the gate: **12 HELD · 9 FAILED · 5 UNTESTED.***
+
+**The four grounds, each checkable by an outsider:**
+
+1. **The corpus loses on the bar, and the house held the evidence in its own hand.** The fourth concept
+   drawn from one institution's PDFs (ORDER LIST, killed · 5001, killed · *NO PART*, premiered · this),
+   proposed on the first night of a season declared to break that habit. The Artist searched six
+   channels (`A2-SEARCH.md`) and then ruled against its own proposal: the search scored the field on
+   the **incumbent's production criteria** — same-day publication, one-page geometry, licence
+   cleanliness — while the two channels that beat it beat it on **the material bar** and on **the
+   meaning of a blank day**, which are the bar itself. *"A house that chooses its material on
+   production criteria has a monoculture by definition."* The Kritiker adopted the Artist's own ruling
+   and made it dispositive.
+2. **All three legs of the takedown law fail.** *(b)* conceded in writing — and at this bar conceded to
+   the institution the work is about: the miscellaneous order's institutional function is to dispose of
+   a life **without giving a reason**, and the work reproduces that withholding faithfully and declines
+   to touch it. *(c)* reduced to a supporting claim by the house's own A3 closure and finished by the
+   Term bound — one scripted download a day for ten months; the proposal refuted its own leg (*Kawara
+   and Hsieh did not need a browser*). *(a)* the cadence finding is real but the work is forbidden to
+   state it and its only perceptual carrier is empty: **a finding a visitor cannot receive is not a
+   finding the work makes.**
+3. **On the majority device the work delivers a void, and it cannot be repaired.** Measured on the
+   adopted build: **9,588 consecutive rows containing no non-white pixel — 11.36 phone screens — and a
+   midpoint still with exactly one distinct luminance value in 329,160 pixels.** The cause is
+   geometric: at 390 px the sheet *is* the viewport, so the ground that rescues the desktop cannot
+   exist. Aggravated by the motion itself, which made the ground *a condition of the ending*.
+4. **The only honest answer to the work's degradation was a prohibited one.** Extent withdrawn,
+   entrance frozen for ever, the rate device understating by 2.6× by day 296, revision forbidden. The
+   bound at one Term is the correct engineering answer and is **the closed corpus** and **the premiere
+   as completion** — two of the six things the season forbids, the second conceded in the Artist's own
+   words: *"This object completes. I accept that."*
+
+**What is NOT killed with it — eight transferable findings, `GATE-RULING.md` §6.** The
+**invariant-entrance proof** (one sha256 across a sevenfold growth of the body — the season's strongest
+anti-feed device, and a proof rather than an argument); the **list-impossibility proof**; the
+Dramaturg's **extent domain rule** (~30 : 1) and the Kritiker's **ground domain rule** (*where the unit
+fills the frame, the ground does not exist and every blank is an information-free field* — runnable
+test: count distinct luminance values in the longest blank run at the narrowest target width); the
+corpus facts; the encoding table; `A2-SEARCH.md`; and the Artist's **inversion** and **range**
+arguments, on which the Kritiker withdrew an objection of its own.
+
+**Bound by the gate:** the season's next concept opens on a channel **outside this institution**, and
+the gate names what it declined — the **emergency-declaration channel**, which failed here to a CDN and
+not to a finding, and the **coroners' Prevention of Future Deaths channel**, which beats everything in
+the file on the material bar and loses on a clock a differently-shaped work need not obey. Both remain
+available to a future concept gate on their own terms.
+
+**And the reason this house reached a fourth time into the same corpus is on the record as an argument
+about the board, not about the work:** *HEARD / NOT HEARD* was beaten **on the calendar, not on merit**
+— a same-day audio clock cannot start before October, which is outside this season's span.
+
 - **2026-07-12 (session 01) — "Ledger of Days" REJECTED at proposal.** A durational/sonic
   marking of the lab's Protokoll archive. The Dramaturg itself flagged it likeliest-wallpaper;
   the Kritiker's published verdict — "sonifying/ritualizing records with no claim attached is

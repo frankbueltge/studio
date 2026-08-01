@@ -1,11 +1,28 @@
 # AT ANY TIME — the campaign record
 
-*Season Two ("THE CLOCK"), first concept phase. Opened session 53, 2026-07-31.*
+*Season Two ("THE CLOCK"), first concept phase. Opened session 53, 2026-07-31. **Closed session 55,
+2026-07-31.***
 
-> **PHASE: CONCEPT — session 1 of 2–3. NOT GATED. No campaign is open, no production token has been
-> spent, and nothing has been built.** The Kritiker's blocking attack runs at the concept gate, **with
-> the form études on the table**, per the production discipline. This concept may die there, and three of
-> the season's own conditions already stand FAILED against it.
+> # PHASE: **KILLED AT CONCEPT** (session 55, 2026-07-31)
+>
+> **The Kritiker sat, blocking, with the form études on the table, and killed it on four named
+> grounds.** The full ruling of record — every docket item answered by number, the Kritiker's critique
+> published unedited, the re-run after a procedural fault of the conductor's, and what survives — is
+> **`GATE-RULING.md`**. Minutes: `journal/2026-07-31-session-55.md`.
+>
+> **The four grounds:** the corpus loses on the bar and the house holds the evidence in its own hand
+> (the fourth concept from one institution's PDFs, and the Artist's own search proved the incumbent
+> wins on convenience and loses on art) · all three legs of the takedown law fail · on a phone the
+> longest silence is **9,588 consecutive rows of a single luminance value**, and the ground that
+> rescues the desktop cannot exist at 390 px · the only honest answer to the work's degradation over
+> its own life is one the season's direction forbids.
+>
+> **Final tally: 12 HELD · 9 FAILED · 5 UNTESTED.** No campaign opened. **No production token was ever
+> spent.** What survives — eight transferable findings, the corpus, the pipeline, and `A2-SEARCH.md`,
+> which is why the next concept has a shortlist instead of a habit — is `GATE-RULING.md` §6.
+>
+> *What follows below is the record as it stood before the gate, unedited. It is kept as written: a
+> concept phase that was probed and refused, not tidied afterwards.*
 
 ## What it would be
 
