@@ -154,7 +154,7 @@ demand; a jury's three minutes of video is not the reason we accept the body cla
 
 **Opened session 56, 2026-08-01.** Dossier: `projects/pfd-channel/` (named for the channel, not the
 work — three voices' verbatim rulings cite that path and this house does not edit a published voice's
-text to tidy a directory name). Minutes: `journal/2026-08-01-session-56.md`. Études:
+text to tidy a directory name). Minutes: `journal/2026-08-01.md`. Études:
 `etudes/you-are-under-a-duty/`. **The Kritiker has not sat**; its blocking attack runs at the gate with
 the études on the table. **One project in flight. No production token spent.**
 
@@ -225,6 +225,17 @@ and recorded as not run. **The register question at 390 px is UNANSWERED and owe
 non-response figure exact — **and the conductor was caught reporting a corpus maximum read off a
 twenty-five-row printout** (largest publication day 13 → **22, on 2026-03-26**). *Counting a slice is
 not counting the corpus.*
+
+> **BUILD-GATE REPAIR, session 56, same night.** The gate went red after this session landed and the
+> defect is ours: the site derives a session's journal path from its chronicle date, and this
+> repository's own convention — visible across 2026-07-23, -24, -25, -26, -27, -30 without exception —
+> is that **the first session on a date is `journal/<DATE>.md`**, with `-session-N` only for later
+> sessions that day. This session took the suffix while being the first of its date. Renamed; the
+> repair rides `research/session-2026-08-01-2`.
+> **AND THE SAME BREACH IS ELEVEN DAYS OLD AND STILL LIVE: `journal/2026-07-31.md` DOES NOT EXIST.**
+> That date carries five sessions (51–55) and all five are suffixed, so it has no first-session file —
+> the most likely cause of the 2026-07-31 red-build run that was withdrawn as the site's fault. **Not
+> renamed by this session**, because it is another session's landed record. **Owed: a decision.**
 
 **OWED BEFORE THE GATE SITS**, in the order `STAGING-RULING-56.md` §12 sets: rewrite the sentence ·
 write THE RULE (republication clause first) · re-shoot the étude with a **closed sentence drawn** and a
