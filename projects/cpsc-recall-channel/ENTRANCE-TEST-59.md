@@ -116,3 +116,94 @@ required a severed cell on the unit view alone, coded `MERCHANDISE` / `WARNING`,
 returns-desk grammar is on this page in full, and no reader assigned the genre it predicted. Recorded
 here as an answer to a binding condition, not as a point scored: the prediction was made honestly and
 with its own runnable test attached, which is why it could be checked at all.
+
+---
+
+# PANEL B — the same test on the corrected build, run the same night
+
+*The staging ruling (`STAGING-RULING-59.md` §6, binding condition 4) found that the shipped page put the
+photographs last, because the Artist's spec appeared to contradict itself and the Builder resolved it
+toward a bullet list. On the source of record the two clauses are the same instruction: `Images` is
+**field 11 of 22**, after `Products` and before `Injuries`, `Retailers`, `Distributors`, `Hazards` and
+`Remedies`, **uniformly across all 55 records** — re-derived independently by the conductor. The page
+was rebuilt with exactly one change, the image block moved to its source position, and re-shot. The
+first build is untouched and both are committed: `etude-59-one-object.html` / `etude-59b-one-object.html`.*
+
+**Why it was re-run rather than noted.** The staging voice pre-registered its expectation in writing
+before this panel existed: *"Re-run KC3 on the object-first build. If it returns 0 of 5 again, the
+prediction is dead in both orders and I want the record to show I said so before it ran."* It also
+warned that the object-first page is the stimulus **most** capable of producing a merchandise reading —
+a product photograph at hand size on paper-white above a price line — and that its own refutation on the
+first build could not be claimed to transfer. Same four questions, same order, same coding, five **fresh**
+severed readers, a still copied to a second neutral path.
+
+## The answers, verbatim
+
+### Reader B1
+1. *"This is a US CPSC product recall notice for VEVOR baby loungers (recall number 26591, dated 2026-07-02), citing entrapment and fall hazards from noncompliance with the infant sleep product safety standard."*
+2. *"It is a recall of about 237 VEVOR baby loungers due to entrapment and fall hazards that violate mandatory infant sleep product safety standards."*
+3. *"Consumers who bought the recalled VEVOR baby loungers are told to stop using them immediately, contact Vevor for a full refund, destroy the product (remove and cut the foam, pad, and cover in half), and email photos of the destroyed pieces to recalling@vevor.com."*
+4. *"VEVOR baby loungers — China."*
+
+### Reader B2
+1. *"This is a product safety recall notice for VEVOR baby loungers, issued due to entrapment and fall hazards, showing the recalled product models and stating the recall was published by the U.S. Consumer Product Safety Commission (CPSC)."*
+2. *"It informs consumers that VEVOR baby loungers are being recalled because they violate mandatory infant sleep product safety standards and pose entrapment and fall risks."*
+3. *"Consumers who own the recalled baby loungers are told to stop using them immediately, destroy them (remove the foam and pad, cut the cover, foam and pad in half), email photos of the destroyed pieces to recalling@vevor.com, and contact Vevor for a full refund."*
+4. *"VEVOR baby loungers — China (manufactured in China; distributed by Sanven Technology Ltd., dba Vevor, of Rancho Cucamonga, California, USA)."*
+
+### Reader B3
+1. *"This is a product safety recall notice from the U.S. Consumer Product Safety Commission (CPSC) for VEVOR baby loungers. It lists the recalled product's colors/patterns, hazards, remedy, and where it was sold. The page includes photos of the recalled loungers and a close-up of the product's label."*
+2. *"It is about a recall of VEVOR baby loungers due to entrapment and fall hazards that violate mandatory infant sleep product safety standards."*
+3. *"Consumers who own the recalled baby loungers are told to stop using them immediately, contact Vevor for a full refund, remove the foam and pad from the cover, cut the cover, foam, and pad in half, and email photos of the destroyed pieces to recalling@vevor.com to receive the refund."*
+4. *"VEVOR baby loungers — manufactured in China."*
+
+### Reader B4
+1. *"This is a product recall notice — specifically a CPSC (U.S. Consumer Product Safety Commission) recall listing for VEVOR baby loungers, including product photos, a label image, hazard description, and remedy instructions."*
+2. *"VEVOR is recalling about 237 baby loungers sold in the US because their low sides and open ends can trap infants or let them fall, posing fall and entrapment hazards that violate the mandatory infant sleep product safety standard."*
+3. *"Consumers are being told to stop using the recalled baby loungers immediately, contact Vevor for a full refund, remove the foam and pad from the cover, cut the cover, foam, and pad in half, and email photos of the destroyed pieces to recalling@vevor.com to receive the refund."*
+4. *"VEVOR baby loungers — manufactured in China (distributed by Sanven Technology Ltd., dba Vevor, of Rancho Cucamonga, California)."*
+
+### Reader B5
+1. *"This is a public product safety recall notice for VEVOR baby loungers, listing the recalled models, hazard, and remedy for consumers."*
+2. *"It is about a recall of VEVOR baby loungers due to entrapment and fall hazards that violate infant sleep product safety standards."*
+3. *"Consumers are told to stop using the recalled baby loungers immediately, contact Vevor for a full refund, remove the foam and pad from the cover, cut the cover, foam, and pad in half, and email photos of the destroyed pieces to recalling@vevor.com."*
+4. *"Vevor (Sanven Technology Ltd.) — China."*
+
+## The codes, and the two panels side by side
+
+| test | build A — document first | build B — object first | both |
+|---|---|---|---|
+| **KC3** MERCHANDISE (fails ≥ 2 of 5) | **0 of 5** · WARNING 5 of 5 | **0 of 5** · WARNING 5 of 5 | **0 of 10** |
+| **KC1** ADDRESSEE (needs ≥ 4 of 5) | **5 of 5** | **5 of 5** | **10 of 10** |
+| **KC2(b)** BLAME-FIRM (fails ≥ 2) · BLAME-OWNER (fails ≥ 1) | 1 · 0 | 1 · 0 | 2 · 0 |
+| **the instruction named UNPROMPTED** (Q2, no threshold) | **1 of 5** | **0 of 5** | **1 of 10** |
+| **KC2(a)** the list | undecidable by its own code | undecidable, same three readings | untested |
+
+### THE PREDICTION IS DEAD IN BOTH ORDERS, AS ITS AUTHOR ASKED TO BE RECORDED
+
+The staging voice's session-58 binding condition 2 held that this material's consumer instruction
+*"installs a returns desk"* on 35 of 36 notices and that the closed selling window *"is a price tag"*,
+and required a severed cell to test the resulting merchandise reading. **Ten severed readers, two field
+orders, and not one assigned the genre.** The prediction was made honestly, with a runnable test
+attached and its own refutation-condition written in advance, which is the only reason it could be
+killed this cleanly.
+
+### AND THE CORRECTION MADE THE WORK'S REAL PROBLEM WORSE, NOT BETTER
+
+**Asked who is being told to do something, 10 of 10 readers named the owner and named the destruction.
+Asked plainly what the page is about, 1 of 10 mentioned the instruction at all — and the one was on the
+build the ruling called defective.** Putting the object first did not help the speech act arrive; on
+this evidence it slightly buried it, because a photograph gives the unprompted answer *what the thing
+is* before the document can give *what is being demanded of you*.
+
+That is the sharpest fact this campaign has produced about itself, it was produced by the repair rather
+than by the defect, and it survives every threshold the work passed. It confirms the staging voice's
+ruling from the direction that costs the most: **on a page, nothing repeals it.** The Artist's own
+pre-committed concession names the consequence exactly — *"a finding available to a reader of the corpus
+and not to a visitor … which makes it a reading and not a work"* — and the only answer anyone has
+offered is one this house cannot build alone: **in a room, the receipt repeals it.**
+
+*Conductor's note on the codes, for whoever runs this next: KC2(b)'s BLAME-FIRM code counts the
+grammatical subject, so a reader who writes "VEVOR is recalling…" is coded BLAME-FIRM although the
+company is the actor performing the recall rather than the party accused. Coded as published in both
+panels, deliberately, and named here so the code can be fixed rather than the count re-read.*
