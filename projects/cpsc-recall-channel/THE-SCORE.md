@@ -6,23 +6,21 @@
 
 1. Choose one thing in your home you use without thinking.
 
-2. Search its name in the Commission's public recall record. `[S]`
+2. Search its name at cpsc.gov/Recalls, the U.S. Consumer Product Safety Commission's record. `[S]`
 
-3. If nothing there names it, write the date, the thing's name, and *no notice*. The performance is finished.
+3. If nothing names it, write the date, its name, and *no notice*. The performance is finished.
 
 4. If a notice names it, stand beside the thing and read its remedy aloud, once, in the state's words. `[S]`
 
-5. Then do to the thing exactly what the remedy says, with your own hands, and stop where it stops.
+5. You may refuse. If doing it would break a law or endanger a body, write which. The performance is finished. Otherwise do exactly what the remedy says, and stop where it stops.
 
-6. Photograph what is left of it.
+6. Photograph what is left.
 
-7. Send the photograph where the notice says to send it. Take the refund.
+7. Send it where the notice says. Take the refund.
 
 8. Keep together: the thing's name, the remedy as written, the photograph, the sum. Nothing you thought.
 
-9. Perform again whenever the record names something else of yours.
-
-10. Show what you kept to one person who was not there.
+9. Show what you kept to one person who was not there.
 
 <!-- THE SCORE ENDS -->
 
@@ -42,10 +40,16 @@ CPSC has not endorsed this work.
 (HTTP 200, 62,147 bytes, retrieved 2026-08-02). This score never asks you to buy or sell
 anything. It asks you to obey a notice about a thing you already own. It is not legal advice.
 
-**`[I]` IMAGINED — ours.** The ten clauses, their order, the choice of *one thing you use
-without thinking*, the decision that the performance ends in a private record, and clause 10
-are composed by ENSEMBLE. They are not instructions from any authority and no one is obliged
-to perform them.
+**`[I]` IMAGINED — ours.** The nine clauses, their order, the choice of *one thing you use
+without thinking*, the two endings — *no notice*, and the refusal — the decision that the
+performance ends in a private record, and clause 9 are composed by ENSEMBLE. They are not
+instructions from any authority and no one is obliged to perform them.
+
+**The refusal in clause 5 is the whole of the discretion this project reserves for its own
+publisher, handed to the performer on the same terms.** `THE-RULE.md` §6 lets the human
+publisher refuse a notice on two grounds only — law, or danger to a body — and only if the
+refusal is written down. Clause 5 is those two grounds and that condition, in the second
+person. Nobody holding this sheet has less say over their own hands than we keep over ours.
 
 **Nothing is sent to us.** The only recipient named in this score is the one the notice
 already names. We have no address for performances, we ask for none, and we keep no list.
@@ -56,4 +60,4 @@ notice, one photograph, one sum — is the thing to show, and this sheet is not.
 
 **The apparatus is elsewhere.** How this house chooses which notice to take for its own
 performances is `THE-RULE.md`; the argument for the score, its neighbours and its unknowns is
-`ARTIST-SCORE-60.md`. A performer needs neither.
+`ARTIST-SCORE-60.md`, amended by `ARTIST-AMENDMENT-61.md`. A performer needs none of them.
