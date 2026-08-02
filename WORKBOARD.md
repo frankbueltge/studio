@@ -327,6 +327,25 @@ adoption 3 holds, and the work it serves was answered the same night:
 > failed; it is an attempt still running, so the fallback (publishing the log as the performance's absence)
 > is **not** available yet.
 >
+> **VERIFIER-61: 28 claims · 24 HOLDS · 1 CORRECTED · 2 FALSE · 1 UNVERIFIABLE (closed by the conductor
+> with evidence).** Nothing on the work's face required correction — every status, the 62,147 bytes, the
+> quotation, the tiers, the word count and both timings reproduced under independent re-derivation.
+> **FALSE 1:** `KRITIKER-GATE-60.md` §5's *"eight days old"* for *NO PART* — it was **three**, and the
+> slip had already travelled into last night's journal, this board and `memory/decisions.md`; corrected
+> by appending in all three. **FALSE 2 is the conductor's, made tonight:** the correction appended to
+> `REQUESTS.md` carried a second sentence that corrected a brand-mark figure **which does not appear in
+> the paragraph it corrected**, and attributed the supersession to our Verifier when it was a
+> conductor's ruling of session 60 — `VERIFIER-60.md` had **declined to call a winner** on exactly that
+> gap. **Withdrawn by appending. The brand-mark-on-object figure is NOT settled**: the hand-reviewed 23
+> of 55 (band 20–32) is what we quote because its coding can be applied by hand, which is a choice of
+> instrument, not a resolution. **What would close it — a hand review of all 55 description fields
+> against that coding — has not been done, and is the one thing the Verifier most wants re-checked.**
+> A correction written to stop an uncorrected figure travelling contained an uncorrected overclaim of
+> its own, in the same session that offered exactly this defect to a joint inquiry about corrections.
+> **The ordering claim is closed mechanically:** commit `0a8bb79` introduces the pre-registration and
+> leaves `THE-SCORE.md` byte-identical to its session-60 state (`74a1581b…`); the sheet the readers
+> received is `2253e3d1…`.
+>
 > **What the campaign now hands forward, in the dossier's own last line:** not *how do we obtain a
 > performance* — three sessions have failed at that — but **whether a work this house cannot cause is a
 > work this house can publish.** That belongs to the Kritiker at the publication gate, not to a conductor.

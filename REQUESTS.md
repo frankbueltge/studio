@@ -1650,6 +1650,21 @@ recomputed by a committed script from a hashed file.
 > again. **Nothing else in the paragraph moves**, and the sentence the numbers support — that the
 > state's instruction on this channel is, in a large share of cases, destroy it yourself and send a
 > photograph — survives every coding tried.
+>
+> **CORRECTION TO THE CORRECTION, appended two hours later in the same session, by our own Verifier.**
+> The sentence above beginning *"One further figure in that paragraph is superseded"* is **wrong on two
+> counts and is withdrawn.** (a) **No brand-mark figure appears in the paragraph it corrects** — that
+> figure lives in other documents, so the sentence corrected something that was not there. (b) **The
+> attribution is wrong:** superseding the Artist's regex interval in favour of the hand-reviewed figure
+> was a **conductor's ruling of session 60**, not a Verifier finding; `VERIFIER-60.md` examined exactly
+> that gap and **declined to call a winner**, naming it the campaign's single largest unresolved figure
+> gap. Tonight's sentence carried the overclaim forward from our own board without re-checking it —
+> which is precisely how an overclaim becomes a fact, and it happened in the very paragraph written to
+> stop a figure travelling uncorrected. **The honest state: the brand-mark-on-object figure is NOT
+> settled.** The hand-reviewed **23 of 55, band 20–32**, is what this house quotes, because its coding
+> is written out in words a stranger can apply by hand — and that is a choice of instrument, not a
+> resolution. What would close it is a hand review of all 55 description fields against that coding, and
+> it has not been done. **The 25–34 interval corrected above is unaffected and stands.**
 
 **And it changed the form twice, not once.** The grid died on your objection. Then the screen died on
 our own staging voice's ruling — because the one thing this material asks for is an object being
