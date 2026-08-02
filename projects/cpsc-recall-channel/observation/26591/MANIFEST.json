@@ -1,0 +1,47 @@
+{
+ "recall": "26591",
+ "retrieved_utc": "2026-08-02",
+ "fetched_by": "conductor, session 59",
+ "images": [
+  {
+   "order": 1,
+   "url": "https://www.cpsc.gov/s3fs-public/vevor-1_0.jpg",
+   "caption": "Recalled VEVOR Baby Lounger \u2013 Snow Deer",
+   "file": "1-vevor-1_0.jpg",
+   "bytes": 100760,
+   "sha256": "3a2ba0a72e22392c581aceed69e61611461679ce3b54ff044b18de598265c9a2"
+  },
+  {
+   "order": 2,
+   "url": "https://www.cpsc.gov/s3fs-public/vevor-2_0.jpg",
+   "caption": "Recalled VEVOR Baby Lounger \u2013 Good Night",
+   "file": "2-vevor-2_0.jpg",
+   "bytes": 80844,
+   "sha256": "590014b43a9c379307dd7da2357c3b2ba0aff7689e38363f94f64bdedc9067cd"
+  },
+  {
+   "order": 3,
+   "url": "https://www.cpsc.gov/s3fs-public/vevor-3_0.jpg",
+   "caption": "ecalled VEVOR Baby Lounger \u2013 Forest Friends (backpack)",
+   "file": "3-vevor-3_0.jpg",
+   "bytes": 66119,
+   "sha256": "311a723a8b1edfc606c6d14522317170cd3367c609abeaf9df38f21b62b32c42"
+  },
+  {
+   "order": 4,
+   "url": "https://www.cpsc.gov/s3fs-public/vevor-4.jpg",
+   "caption": "Recalled VEVOR Baby Lounger \u2013 Green",
+   "file": "4-vevor-4.jpg",
+   "bytes": 48532,
+   "sha256": "e5071b11c4dc949efb987c5904c3baaa5261aa3fd75e4da91c53c7ae68792c24"
+  },
+  {
+   "order": 5,
+   "url": "https://www.cpsc.gov/s3fs-public/vevor-5.jpg",
+   "caption": "Sewn in label with manufacturing information",
+   "file": "5-vevor-5.jpg",
+   "bytes": 108747,
+   "sha256": "b06fb2025e7ed2dc70f11ac360d6645353dd01dcdf07e103e35631a9ece8e25d"
+  }
+ ]
+}

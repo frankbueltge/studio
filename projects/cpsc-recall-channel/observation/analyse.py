@@ -118,3 +118,29 @@ for r in R:
     if DESTROY.search(s) and PROOF.search(s):
         print(r['RecallNumber'], '|', (r.get('Products') or [{}])[0].get('Name','')[:45], '::', s[:300].replace('\n',' '))
         print()
+
+print("\n=== THE MARKING CLAUSE, AND WHO IS NAMED ===")
+MARK = re.compile(r'(permanent marker|write ["“]?(RECALL|RECALLED|DESTROYED)|marker on)', re.I)
+print("remedies instructing the owner to WRITE ON the object:",
+      sum(1 for r in R if MARK.search(' '.join(x.get('Name','') for x in (r.get('Remedies') or [])))), "of", len(R))
+
+anyfirm = 0
+for r in R:
+    ns = [x.get('Name','') for k in ('Manufacturers','Importers','Distributors') for x in (r.get(k) or [])]
+    if any(n.strip() for n in ns): anyfirm += 1
+print("records naming at least one firm (manufacturer/importer/distributor):", anyfirm, "of", len(R))
+allf = set()
+for r in R:
+    for k in ('Manufacturers','Importers','Distributors'):
+        for x in (r.get(k) or []):
+            if x.get('Name','').strip(): allf.add(x['Name'].strip())
+print("distinct firm strings across all three fields:", len(allf))
+cn = sum(1 for n in allf if re.search(r'\bof China\b|\bChina\b', n))
+print("  of which mention China:", cn)
+
+# the etude record, printed for the builder
+order = sorted(R, key=lambda r: (r['RecallDate'], r['RecallNumber']))
+pat = re.compile(r'stop using[^.]*immediately', re.I)
+chosen = next(r for r in order if pat.search(' '.join(x.get('Name','') for x in (r.get('Remedies') or []))))
+skipped = order.index(chosen)
+print("\nETUDE RECORD:", chosen['RecallNumber'], "| records the filter skipped before it:", skipped)
