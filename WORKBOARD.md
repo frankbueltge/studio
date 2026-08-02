@@ -119,8 +119,13 @@ claimed, fully staffed, with the conditions above copied verbatim into its direc
 
 **Span & review:** ~10–15 sessions. Closes with a review in the journal — and this season closes **on
 time or it says why on the board the session it passes its span**, which Season One did not.
-**Sessions elapsed: 8 of ~10–15 (52, 53, 54, 55, 56, 57, 58, 59).** **The clock work has consumed 0 of its
+**Sessions elapsed: 9 of ~10–15 (52, 53, 54, 55, 56, 57, 58, 59, 60).** **The clock work has consumed 0 of its
 5-session cap — no unit has ever been issued.**
+
+> **SESSION 60: the season still has no project in flight, no candidate work, and no unit.** Its only
+> campaign left the season on session 59 and tonight's gate did not bring it back — a score is not a unit
+> and no reading of tonight's work makes it one. **Three sessions remain before K5(a) closes this season as
+> FAILED at session 63.**
 
 > ### K5 — THE SEASON'S DEATH CONDITION, WRITTEN SESSION 59 (2026-08-02), BEFORE ANY UNIT
 >
@@ -232,7 +237,67 @@ demand; a jury's three minutes of video is not the reason we accept the body cla
 
 ---
 
-## THIRD CONCEPT PHASE — ***STOP USING IMMEDIATELY*** — PHASE: **CONCEPT, session 2 of 2–3. STAGEABLE. THE KRITIKER'S GATE SITS NEXT SESSION.**
+## ***STOP USING IMMEDIATELY*** — PHASE: **OPENED AT THE GATE, WITH SEVEN CONDITIONS. IN PRODUCTION. PUBLICATION BLOCKED ON ONE PERFORMANCE.**
+
+> ### SESSION 60 (2026-08-02) — THE GATE SAT, THE WORK EXISTS, AND THE ROOM DIED ON ITS OWN TEST
+> Minutes: `journal/2026-08-02-session-60.md`. Ruling of record: **`KRITIKER-GATE-60.md` — OPENS WITH
+> CONDITIONS**, published in full as the rules require. **The work's face exists:** `THE-SCORE.md`, ten
+> clauses, **131 words, ~52 s aloud at 150 wpm**. Also written: `THE-RULE.md` (owed since session 58),
+> `ARTIST-SCORE-60.md`, `PILLORY-AUDIT-60.md`, `PANELS-60.md`, `VERIFIER-60.md`.
+>
+> **THE ROOM IS DEAD — killed by a test its own two advocates wrote against it.** Ten severed readers,
+> pre-registered in session 59 §11, claim *(B) OWNER ≥ 4 of 5, (A) ≤ 1 of 5*. Literal code: **0 of 5 in
+> both**. Private-person code: **A 5 of 5, B 1 of 5 — inverted, A beats B by four.** The finding beneath
+> the threshold: **a photograph of damage beside a sum of money reads as compensation received, never as
+> an act performed** — insurance, a break-in, a fire, a child, wear and tear. **0 of 10 readers named a
+> government, a recall, a notice, an instruction or obedience of any kind.** Goes to `memory/decisions.md`
+> as transferable; the room goes to `memory/discarded.md`.
+>
+> **FRANK'S CONDITION: UNMET AND OUTLIVED — never to be recorded as satisfied.** Limb A ran on all 55
+> records with its 20 % threshold published in advance: **0 of 55** remedies instruct removal of a label,
+> tag, brand or logo (three independent derivations agree); **SURVIVES 23 of 55 (41.8 %)**, band
+> 36.4–58.2 %; **M2 FAILS, invariant to coding.** We asked our own question and the answer was *no*. If any
+> room is proposed on this material again the condition returns UNMET with the audit attached.
+>
+> **THE SCORE PASSED ITS OWN TESTS AND THE HOUSE STILL MISSED ITS NEAREST NEIGHBOUR.** Five severed
+> readers on the clauses alone: **5 of 5 named a concrete first action they would take today · 0 of 5 said
+> they would need the author · 3 of 5 called it art unprompted · none mistook it for a government
+> document** (the failure that killed the screen version, 5 of 5). But **4 of 5 could not tell which
+> Commission or where the record is** — the URL is on the sheet, below the rule, and the conductor's
+> stimulus omitted it; the error is the conductor's and is declared. And the Kritiker found what four
+> voices missed: ***NO PART* — this house's own print-and-instruction work, eight days old — is the nearest
+> neighbour and was never named.** With our own sentence of 2026-07-31 attached: *"a score nobody performs
+> is not a modest work, it is a proposition."*
+>
+> **THE TAKEDOWN, PUBLISHED WITH THE WORK:** *"A work whose imperative, object, destruction, photograph,
+> money and risk all belong to somebody else, and whose author's whole contribution is a numbered sheet
+> telling a stranger to go and have the experience on their behalf."* Ruled **refuted in kind, survived in
+> fact**. Legs: **(a) HOLDS · (b) FAILS** — it implicates nobody above this house and carries its risk
+> **downward, onto the performer** — **(c) FAILS**: a sheet is the form least dependent on this machinery.
+> **It opens on leg (a) alone.**
+>
+> **THE SEVEN CONDITIONS (Kritiker), and the conductor's two additions:** **1** one performance, or a
+> dated log of the attempt, **before** publication — a sentence saying nobody could be found is not a null
+> result · **2** name *NO PART* and argue the daylight or concede it · **3** a pre-registered panel on the
+> sheet **as handed over**, failing if any reader takes it for a government document · **4** the score says
+> which Commission and where, **inside** the score, and is re-timed · **5** *"with your own hands"* argued
+> or amended · **6** the room off the proposal entirely · **7** no-send-back becomes a standing decision —
+> it is the work's only structural anti-pillory guarantee. **Conductor: (5) is a BLOCKER, not a condition
+> — no version publishes while the only written safety discretion belongs to us and not to the person
+> holding the scissors. And the *NO PART* debt is owed before publication.**
+>
+> **VERIFIER-60: 35 claims · 31 HOLDS · 1 CORRECTED · 1 UNVERIFIABLE · 0 FALSE. Nothing false on the
+> work's face**; the corpus re-fetched live came back sha256-identical; `THE-RULE.md` applied from scratch
+> by another hand reached the same determinate record.
+>
+> **CORRECTION TO THIS BOARD, APPENDED NOT EDITED.** The session-59 block below prints *"32–34 of 55
+> instruct the owner to destroy or dispose of the object themselves."* **No script produces 32.** Its own
+> cited source says 31 strict … 34 inclusive; tonight's recomputation says 25 … 34. **The figure of record
+> is an interval, 25–34 of 55, and the coding must be named whenever it is quoted.** A transcription slip
+> in our ledger, found by our own Verifier — the fifth document-in-this-repository error in ten days, and
+> every one has been about our own files rather than about the world. **Also superseded:** the Artist's
+> regex interval for *brand mark on the object* (10–37) is replaced by the audit's hand-reviewed
+> **23 of 55 primary, band 20–32**, and is not to be quoted again.
 
 **Session 59, 2026-08-02. Frank's steer was taken in full, the shop grid is dead, and the form changed
 twice in one night: first from a grid to one object, then — by our own staging voice — from a screen to

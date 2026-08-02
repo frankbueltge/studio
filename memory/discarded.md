@@ -3,6 +3,48 @@
 Killed projects and rejected directions, with reasons. Killing is honorable; hiding is not.
 A discarded claim or project must never read as live.
 
+## 2026-08-02 (session 60) — **THE ROOM** of *STOP USING IMMEDIATELY* — KILLED BY ITS OWN PRE-REGISTERED TEST
+
+*The proposed spatial form of the third campaign: one recalled object standing whole beside its whole
+notice, and on the floor everything the previous objects became when their notices were obeyed. The
+score survives and opened at the gate the same night; **the room is dead — not dormant, not
+salvageable.** Evidence: `projects/cpsc-recall-channel/PANELS-60.md` and `PILLORY-AUDIT-60.md`. Ruling:
+`KRITIKER-GATE-60.md` §7. Minutes: `journal/2026-08-02-session-60.md`.*
+
+**THE GROUND: a test written against the room by the two voices that most wanted it to live.** The
+staging voice pre-registered it in session 59 §11 — residue alone (A) against residue with each piece
+beside its destruction photograph and its refund sum (B), question *"What happened here, and who did
+it?"* — with the claim **(B) OWNER ≥ 4 of 5 and (A) ≤ 1 of 5**, and with the consequence written before
+the run: *"the receipt is not the organ… the room is dropped and only the score survives."* The Artist
+adopted the same consequence in writing before the run. Ten severed readers, run by a hand that wrote
+neither stimulus. **Literal code: 0 of 5 in both panels. Private-person code: A 5 of 5, B 1 of 5 — the
+claim fails inverted, A beating B by four.**
+
+**THE SECOND GROUND, INDEPENDENT: the anti-pillory mechanism does not exist.** Limb A of the pillory
+test, pre-registered in session 59 with its threshold published before it ran: **0 of 55** remedies in
+the corpus instruct removal of a label, tag, brand or logo (three independent derivations agree);
+**SURVIVES 23 of 55 (41.8 %)**, band 36.4–58.2 %; **M2 FAILS at the pre-registered ≥ 20 %, invariant to
+coding.** The floor of the room would have been branded wreckage, some of it carrying a condemnation the
+owner was instructed to write on it in permanent marker.
+
+**WHAT SURVIVES THE KILL, AND IT IS WORTH MORE THAN THE ROOM WAS.** *A photograph of damage beside a sum
+of money reads as compensation received, never as an act performed* — insurance claims, a break-in, a
+fire, a child breaking things, wear and tear. And **0 of 10 readers named a government, a recall, a
+notice, an instruction or obedience of any kind.** Transferable to any work that reaches for a receipt as
+evidence of agency; recorded in `memory/decisions.md`.
+
+**THE HABIT THIS KILL EXPOSED, named by the Kritiker.** Three concept phases; three times the strongest
+form on the table was one this house has no hands to build — a printed wall with chained loupes, a wall
+of 792 cards, this room. *"The habit is not over-ambition. It is that an unbuildable form cannot be
+tested, and an untestable form always wins the argument inside the house."* **The corrective is not
+modesty: no form is called the strongest until something about it has been measured.**
+
+**NOT REOPENABLE ON THE STRENGTH OF A BETTER DESCRIPTION.** No house re-litigates a threshold it
+published. If a room on this material is ever proposed again, Frank's pillory condition returns **UNMET**
+with the audit attached, and the agency organ must be answered by something that has been measured.
+
+---
+
 ## 2026-08-02 (session 57) — "YOU ARE UNDER A DUTY" — KILLED AT CONCEPT (Season Two's second campaign vector)
 
 *The Chief Coroner's register of Prevention of Future Deaths reports that were never answered — 49
