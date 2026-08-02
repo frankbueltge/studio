@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generator for etude-59-one-object.html.
+Generator for etude-59b-one-object.html.
 
 Builds a single self-contained HTML file that reproduces one CPSC recall
 notice (RecallNumber 26591) whole: every string taken programmatically from
@@ -14,11 +14,24 @@ ascending), whose Remedies text matches /stop using[^.]*immediately/i. That
 rule is applied here, live, and the count of records it skipped before
 matching is printed, so a stranger can re-derive the choice from the file.
 
+Session-59 rebuild note (staging voice's finding, same night): the first
+build placed the five photographs after every text field, following the
+Artist's own bullet-list order in ARTIST-REFORM-59.md §6. The staging voice
+went to the JSON record's own key order and found `Images` sits at key
+index 10 of 22 — immediately after `Products`, before `Injuries`,
+`Retailers`, `Distributors`, `Hazards` and `Remedies` — which is also what
+"One scroll. Object first, then the document." requires. This script now
+derives that relation from the live record (see `derive_key_order` and the
+assertion in `build()`) and places the image block accordingly: right after
+the Product field, before Description onward. That is the one change from
+the first build. The old output (etude-59-one-object.html) is left
+untouched as evidence; this script no longer reproduces it.
+
 Run:
     python3 build-etude-59.py
 
 Writes:
-    etude-59-one-object.html   (next to this script)
+    etude-59b-one-object.html   (next to this script)
 """
 
 import base64
@@ -34,7 +47,7 @@ REPO = HERE.parent.parent  # /home/user/studio
 JSON_PATH = REPO / "projects/cpsc-recall-channel/observation/recalls-2026-07-01_2026-08-02.json"
 IMAGE_DIR = REPO / "projects/cpsc-recall-channel/observation/26591"
 MANIFEST_PATH = IMAGE_DIR / "MANIFEST.json"
-OUT_PATH = HERE / "etude-59-one-object.html"
+OUT_PATH = HERE / "etude-59b-one-object.html"
 
 SOURCE_ENDPOINT = (
     "https://www.saferproducts.gov/RestWebServices/Recall"
@@ -128,6 +141,35 @@ def load_image_data_uri(path):
     return f"data:image/jpeg;base64,{b64}"
 
 
+def derive_key_order(record):
+    """
+    The JSON record's own key order, as written by the source (Python's
+    json.load preserves object key order; nothing here reorders it). Used
+    to derive — not assume — where the Images field sits relative to the
+    other fields this page displays.
+    """
+    return list(record.keys())
+
+
+def verify_images_position(key_order):
+    """
+    Confirm, from the live record, that Images sits after Products and
+    before Injuries, Retailers, Distributors, Hazards and Remedies — the
+    relation the staging voice found and the reason the image block moves.
+    Raises if a future record's shape no longer supports it, rather than
+    silently keeping a placement decision the data no longer backs.
+    """
+    idx = {k: i for i, k in enumerate(key_order)}
+    images_idx = idx["Images"]
+    after = idx["Products"]
+    before_fields = ["Injuries", "Retailers", "Distributors", "Hazards", "Remedies"]
+    if images_idx <= after:
+        raise SystemExit("Images does not follow Products in the source's key order.")
+    for field in before_fields:
+        if images_idx >= idx[field]:
+            raise SystemExit(f"Images does not precede {field} in the source's key order.")
+
+
 def build():
     with open(JSON_PATH, "r", encoding="utf-8") as f:
         all_records = json.load(f)
@@ -135,6 +177,14 @@ def build():
     record, skipped = select_record(all_records)
     recall_number = str(record.get("RecallNumber", ""))
     print(f"selection: skipped {skipped} records before matching; selected RecallNumber {recall_number}",
+          file=sys.stderr)
+
+    key_order = derive_key_order(record)
+    print(f"source key order ({len(key_order)} keys): {key_order}", file=sys.stderr)
+    verify_images_position(key_order)
+    print("verified: Images follows Products and precedes Injuries, Retailers, "
+          "Distributors, Hazards, Remedies in the source's own key order — "
+          "image block placed accordingly, right after the Product field.",
           file=sys.stderr)
 
     with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
@@ -312,6 +362,10 @@ def render_html(*, title, recall_date, recall_number, product_name, number_of_un
   <div class="value">{paragraph_join(product_name, number_of_units)}</div>
 </div>
 
+<div class="photos">
+{images_block}
+</div>
+
 <div class="field">
   <div class="label">Description</div>
   <div class="value">{paragraphs(description)}</div>
@@ -355,10 +409,6 @@ def render_html(*, title, recall_date, recall_number, product_name, number_of_un
 <div class="field">
   <div class="label">Notice</div>
   <div class="value">{paragraphs(notice_url)}</div>
-</div>
-
-<div class="photos">
-{images_block}
 </div>
 
 <footer>
