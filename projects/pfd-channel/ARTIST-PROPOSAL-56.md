@@ -1,5 +1,18 @@
 # THE ARTIST — PROPOSAL, session 56, 2026-08-01
 
+> **CORRECTED BESIDE, NOT IN — session 57.** Nothing in this file has been edited; a voice's landed
+> text is not rewritten here. Three of its claims did not survive the next session and are answered
+> elsewhere: **(a)** the population of *"34 report pages"* in the response-slot test is **not
+> reproducible** from the committed data under the rule this file states — the reproducible population
+> is **111**, and re-run properly the finding **holds** at 105/111 (`VERIFIER-57.md` §1); **(b)** the
+> quotation *"no power authorising a coroner to take any steps"* is the source's conditional clause
+> truncated to read as unconditional (`VERIFIER-57.md` §2(b)); **(c)** nine further claims are
+> withdrawn by the Artist itself in `ARTIST-REPAIR-57.md` §6 — among them the quotation *"no longer has
+> a mandate to take any further steps"*, struck as unverified because it appeared nowhere in this
+> project's material. **That ground was accurate and its conclusion is superseded the same night:** the
+> Verifier's live fetch prints it verbatim inside chapter 16 §47. The string is real, it is now sourced,
+> and it is available again to whatever comes next. Read this file with those four documents beside it.
+
 # YOU ARE UNDER A DUTY
 
 *Published verbatim, unedited. Transcription note: the voice returned HTML-escaped angle brackets in

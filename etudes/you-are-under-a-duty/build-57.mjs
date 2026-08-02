@@ -933,7 +933,7 @@ async function cmdMeasureDom3(flags) {
           const segLineLefts = Array.from(segLines.values()).map((g) => g.left);
           const segLineBottoms = Array.from(segLines.keys()).sort((a, b) => a - b);
 
-          ruleInstances.push({
+          entryRules.push({
             segLineCount: segLines.size,
             segLineWidths,
             segLineRights,
@@ -947,12 +947,13 @@ async function cmdMeasureDom3(flags) {
 
           blockLines += rects.length + allLines.size;
         }
+        entryRuleGroups.push(entryRules);
 
         blockLineCounts.push(blockLines);
       }
 
       return {
-        textLines, nameTops, blockLineCounts, ruleInstances,
+        textLines, nameTops, blockLineCounts, entryRuleGroups,
         viewport: { width: window.innerWidth, height: window.innerHeight },
         mainContentWidth: (() => {
           const m = document.querySelector('main');
