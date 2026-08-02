@@ -32,7 +32,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DEFAULT_DATA = path.resolve(
+export const DEFAULT_DATA = path.resolve(
   __dirname,
   '../../projects/pfd-channel/data/nonresponse-tables-2026-08-01.json'
 );
@@ -117,7 +117,7 @@ function loadTables(dataPath) {
   return JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 }
 
-function buildEntries(order, dataPath) {
+export function buildEntries(order, dataPath) {
   const tables = loadTables(dataPath);
   const enriched = [];
   tables.forEach((t, ti) => {
@@ -171,13 +171,25 @@ function ruleSegmentsHtml(days) {
   return html;
 }
 
+function hash32(i) {
+  // integer bit-mixing hash (murmur3 finalizer), not a raw multiplicative
+  // congruential step — a plain (i * constant) % 2^32 degenerates under a
+  // later % 8 whenever the constant is odd mod 8 (it produces i % 8, a
+  // period-8 ramp, not noise; caught by inspecting a render, fixed here).
+  let x = (i + 0x9e3779b9) | 0;
+  x = Math.imul(x ^ (x >>> 16), 0x85ebca6b);
+  x = Math.imul(x ^ (x >>> 13), 0xc2b2ae35);
+  x = (x ^ (x >>> 16)) >>> 0;
+  return x;
+}
+
 function markBHeight(i) {
-  // deterministic irregular-height sequence — a multiplicative hash, not
-  // randomness, so a re-run reproduces pixel-identical marks. Range 2–9px,
-  // same scale as M-A's fixed 9px tick, so the two treatments are visually
-  // comparable in extent, not just in density.
-  const hash = (i * 2654435761) % 4294967296;
-  return 2 + (hash % 8);
+  // deterministic irregular-height sequence — a bit-mixing hash, not
+  // randomness, so a re-run reproduces pixel-identical marks, and not a
+  // periodic ramp either (see hash32's note). Range 2–9px, same scale as
+  // M-A's fixed 9px tick, so the two treatments are visually comparable in
+  // extent, not just in density.
+  return 2 + (hash32(i) % 8);
 }
 
 function marksHtml(mark, count) {
@@ -210,9 +222,9 @@ function buildHTML(opts) {
 
     const sentences = e.recipients.map((r) => {
       if (isClosedRow) {
-        return `<p class="sentence">${escapeHtml(r)} responded to this report on the prevention of future deaths, on ${dateWords(CLOSED_DATE)}.</p>`;
+        return `<p class="sentence">${escapeHtml(r)} responded to this report on the prevention of future deaths, on the ${dateWords(CLOSED_DATE)}.</p>`;
       }
-      return `<p class="sentence">${escapeHtml(r)} is under a duty to respond to this report on the prevention of future deaths, namely by ${dateWords(new Date(e.dueMs))}.</p>`;
+      return `<p class="sentence">${escapeHtml(r)} is under a duty to respond to this report on the prevention of future deaths, namely by the ${dateWords(new Date(e.dueMs))}.</p>`;
     }).join('');
 
     const marksCount = isClosedRow ? Math.min(CLOSED_DAY, extent) : extent;
@@ -407,42 +419,41 @@ async function cmdDownscale(flags) {
   const { chromium } = await loadPlaywright();
   const inPath = path.resolve(flags.in);
   const factor = Number(flags.factor || 0.25);
-  const tmpHtml = inPath + `.downscale-${Date.now()}.html`;
-  const html = `<!doctype html><meta charset="utf-8"><body style="margin:0">
-<canvas id="c"></canvas>
-<script>
-const img = new Image();
-img.onload = () => {
-  const w = Math.max(1, Math.round(img.naturalWidth * ${factor}));
-  const h = Math.max(1, Math.round(img.naturalHeight * ${factor}));
-  const c = document.getElementById('c');
-  c.width = w; c.height = h;
-  const ctx = c.getContext('2d');
-  ctx.imageSmoothingEnabled = true;
-  ctx.imageSmoothingQuality = 'high';
-  ctx.drawImage(img, 0, 0, w, h);
-  window.__done = c.toDataURL('image/png');
-  window.__w = w; window.__h = h;
-};
-img.onerror = (e) => { window.__err = String(e); };
-img.src = 'file://${inPath}';
-</script>`;
-  fs.writeFileSync(tmpHtml, html);
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage();
-    await page.goto('file://' + tmpHtml);
-    await page.waitForFunction(() => window.__done || window.__err, null, { timeout: 60000 });
-    const err = await page.evaluate(() => window.__err);
-    if (err) throw new Error('image load failed: ' + err);
-    const dataUrl = await page.evaluate(() => window.__done);
-    const dims = await page.evaluate(() => ({ w: window.__w, h: window.__h }));
-    const b64 = dataUrl.replace(/^data:image\/png;base64,/, '');
-    fs.writeFileSync(flags.out, Buffer.from(b64, 'base64'));
-    console.error(`wrote ${flags.out} (${dims.w}x${dims.h}, factor=${factor})`);
+    // data: URI images never taint the canvas (no cross-origin network
+    // fetch involved), unlike file:// images loaded from a different
+    // file:// document — so embed the bytes directly rather than reference
+    // the path.
+    await page.setContent('<!doctype html><meta charset="utf-8"><body style="margin:0"><canvas id="c"></canvas>');
+    await page.evaluate(async (b64) => {
+      const img = new Image();
+      const done = new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = () => reject(new Error('image decode failed'));
+      });
+      img.src = 'data:image/png;base64,' + b64;
+      await done;
+      window.__img = img;
+    }, fs.readFileSync(inPath).toString('base64'));
+    const result = await page.evaluate((factor) => {
+      const img = window.__img;
+      const w = Math.max(1, Math.round(img.naturalWidth * factor));
+      const h = Math.max(1, Math.round(img.naturalHeight * factor));
+      const c = document.getElementById('c');
+      c.width = w; c.height = h;
+      const ctx = c.getContext('2d');
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(img, 0, 0, w, h);
+      return { dataUrl: c.toDataURL('image/png'), w, h };
+    }, factor);
+    const b64out = result.dataUrl.replace(/^data:image\/png;base64,/, '');
+    fs.writeFileSync(flags.out, Buffer.from(b64out, 'base64'));
+    console.error(`wrote ${flags.out} (${result.w}x${result.h}, factor=${factor})`);
   } finally {
     await browser.close();
-    fs.unlinkSync(tmpHtml);
   }
 }
 
@@ -453,96 +464,87 @@ async function cmdPixels(flags) {
   const { chromium } = await loadPlaywright();
   const inPath = path.resolve(flags.in);
   const mode = flags.mode;
-  const tmpHtml = inPath + `.pixels-${Date.now()}.html`;
-  const html = `<!doctype html><meta charset="utf-8"><body style="margin:0">
-<canvas id="c"></canvas>
-<script>
-window.__result = null;
-window.__err = null;
-const img = new Image();
-img.onload = () => {
-  try {
-    const w = img.naturalWidth, h = img.naturalHeight;
-    const c = document.getElementById('c');
-    c.width = w; c.height = h;
-    const ctx = c.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-    const data = ctx.getImageData(0, 0, w, h).data;
-    const isWhiteRow = new Uint8Array(h);
-    for (let y = 0; y < h; y++) {
-      let white = 1;
-      const rowStart = y * w * 4;
-      for (let x = 0; x < w; x++) {
-        const idx = rowStart + x * 4;
-        if (data[idx] !== 255 || data[idx+1] !== 255 || data[idx+2] !== 255) { white = 0; break; }
-      }
-      isWhiteRow[y] = white;
-    }
-    if ('${mode}' === 'groundtest') {
-      let longestRun = 0, longestStart = -1, curRun = 0, curStart = -1;
-      for (let y = 0; y < h; y++) {
-        if (isWhiteRow[y]) {
-          if (curRun === 0) curStart = y;
-          curRun++;
-          if (curRun > longestRun) { longestRun = curRun; longestStart = curStart; }
-        } else {
-          curRun = 0;
-        }
-      }
-      // distinct luminance values inside the longest blank run
-      const lumSet = new Set();
-      for (let y = longestStart; y < longestStart + longestRun; y++) {
-        const rowStart = y * w * 4;
-        for (let x = 0; x < w; x++) {
-          const idx = rowStart + x * 4;
-          const lum = Math.round(0.2126*data[idx] + 0.7152*data[idx+1] + 0.0722*data[idx+2]);
-          lumSet.add(lum);
-        }
-      }
-      let inkRows = 0;
-      for (let y = 0; y < h; y++) if (!isWhiteRow[y]) inkRows++;
-      window.__result = { width: w, height: h, longestRun, longestStart,
-        distinctLuminance: lumSet.size, luminanceValues: Array.from(lumSet).sort((a,b)=>a-b),
-        inkRows, totalRows: h };
-    } else if ('${mode}' === 'markband') {
-      const top = ${Number(flags['band-top'] || 0)};
-      const bandH = ${Number(flags['band-height'] || 0)};
-      const lumSet = new Set();
-      let inkPixels = 0, totalPixels = 0;
-      for (let y = top; y < Math.min(top+bandH, h); y++) {
-        const rowStart = y * w * 4;
-        for (let x = 0; x < w; x++) {
-          const idx = rowStart + x*4;
-          const lum = Math.round(0.2126*data[idx] + 0.7152*data[idx+1] + 0.0722*data[idx+2]);
-          lumSet.add(lum);
-          totalPixels++;
-          if (lum < 250) inkPixels++;
-        }
-      }
-      window.__result = { width: w, height: h, band: {top, height: bandH},
-        distinctLuminance: lumSet.size, luminanceValues: Array.from(lumSet).sort((a,b)=>a-b),
-        inkPixels, totalPixels, inkFraction: inkPixels/totalPixels };
-    } else if ('${mode}' === 'dims') {
-      window.__result = { width: w, height: h };
-    }
-  } catch (e) { window.__err = String(e && e.stack || e); }
-};
-img.onerror = (e) => { window.__err = 'image load error'; };
-img.src = 'file://${inPath}';
-</script>`;
-  fs.writeFileSync(tmpHtml, html);
+  const bandTop = Number(flags['band-top'] || 0);
+  const bandHeight = Number(flags['band-height'] || 0);
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage();
-    await page.goto('file://' + tmpHtml);
-    await page.waitForFunction(() => window.__result || window.__err, null, { timeout: 120000 });
-    const err = await page.evaluate(() => window.__err);
-    if (err) throw new Error(err);
-    const result = await page.evaluate(() => window.__result);
+    // data: URI images never taint the canvas — see cmdDownscale.
+    await page.setContent('<!doctype html><meta charset="utf-8"><body style="margin:0"><canvas id="c"></canvas>');
+    const b64 = fs.readFileSync(inPath).toString('base64');
+    const result = await page.evaluate(async ({ b64, mode, bandTop, bandHeight }) => {
+      const img = new Image();
+      const done = new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = () => reject(new Error('image decode failed'));
+      });
+      img.src = 'data:image/png;base64,' + b64;
+      await done;
+      const w = img.naturalWidth, h = img.naturalHeight;
+      const c = document.getElementById('c');
+      c.width = w; c.height = h;
+      const ctx = c.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      const data = ctx.getImageData(0, 0, w, h).data;
+      const isWhiteRow = new Uint8Array(h);
+      for (let y = 0; y < h; y++) {
+        let white = 1;
+        const rowStart = y * w * 4;
+        for (let x = 0; x < w; x++) {
+          const idx = rowStart + x * 4;
+          if (data[idx] !== 255 || data[idx + 1] !== 255 || data[idx + 2] !== 255) { white = 0; break; }
+        }
+        isWhiteRow[y] = white;
+      }
+      if (mode === 'groundtest') {
+        let longestRun = 0, longestStart = -1, curRun = 0, curStart = -1;
+        for (let y = 0; y < h; y++) {
+          if (isWhiteRow[y]) {
+            if (curRun === 0) curStart = y;
+            curRun++;
+            if (curRun > longestRun) { longestRun = curRun; longestStart = curStart; }
+          } else {
+            curRun = 0;
+          }
+        }
+        const lumSet = new Set();
+        for (let y = longestStart; y < longestStart + longestRun; y++) {
+          const rowStart = y * w * 4;
+          for (let x = 0; x < w; x++) {
+            const idx = rowStart + x * 4;
+            const lum = Math.round(0.2126 * data[idx] + 0.7152 * data[idx + 1] + 0.0722 * data[idx + 2]);
+            lumSet.add(lum);
+          }
+        }
+        let inkRows = 0;
+        for (let y = 0; y < h; y++) if (!isWhiteRow[y]) inkRows++;
+        return { width: w, height: h, longestRun, longestStart,
+          distinctLuminance: lumSet.size, luminanceValues: Array.from(lumSet).sort((a, b) => a - b),
+          inkRows, totalRows: h };
+      } else if (mode === 'markband') {
+        const lumSet = new Set();
+        let inkPixels = 0, totalPixels = 0;
+        for (let y = bandTop; y < Math.min(bandTop + bandHeight, h); y++) {
+          const rowStart = y * w * 4;
+          for (let x = 0; x < w; x++) {
+            const idx = rowStart + x * 4;
+            const lum = Math.round(0.2126 * data[idx] + 0.7152 * data[idx + 1] + 0.0722 * data[idx + 2]);
+            lumSet.add(lum);
+            totalPixels++;
+            if (lum < 250) inkPixels++;
+          }
+        }
+        return { width: w, height: h, band: { top: bandTop, height: bandHeight },
+          distinctLuminance: lumSet.size, luminanceValues: Array.from(lumSet).sort((a, b) => a - b),
+          inkPixels, totalPixels, inkFraction: inkPixels / totalPixels };
+      } else if (mode === 'dims') {
+        return { width: w, height: h };
+      }
+      throw new Error('unknown mode ' + mode);
+    }, { b64, mode, bandTop, bandHeight });
     console.log(JSON.stringify(result, null, 2));
   } finally {
     await browser.close();
-    fs.unlinkSync(tmpHtml);
   }
 }
 
@@ -609,8 +611,12 @@ async function cmdMeasureDom(flags) {
         const allLines = new Map(); // rule + marks combined, for total wrapped-line count of the rule-line container
         for (const el of [...segs, ...marks]) {
           const r = el.getBoundingClientRect();
-          const top = Math.round(r.top);
-          allLines.set(top, true);
+          // group by bottom, not top: .rule-line uses align-items:flex-end,
+          // so mixed-height elements (2px segs beside 2-9px marks) on the
+          // same visual line share a bottom edge but not a top one — grouping
+          // by top overcounts lines whenever heights differ on a shared row.
+          const bottom = Math.round(r.bottom);
+          allLines.set(bottom, true);
         }
 
         const segLineWidths = Array.from(segLines.values()).map(g => g.width);
@@ -739,4 +745,10 @@ async function main() {
   }
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+// Only run the CLI dispatcher when this file is executed directly — not
+// when another script imports it for buildEntries/DEFAULT_DATA (a bug
+// caught in exactly this state: an importer's own argv[2] was being read
+// as a subcommand and failing the whole process before its own code ran).
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((e) => { console.error(e); process.exit(1); });
+}
