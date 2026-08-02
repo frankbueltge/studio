@@ -119,10 +119,58 @@ claimed, fully staffed, with the conditions above copied verbatim into its direc
 
 **Span & review:** ~10–15 sessions. Closes with a review in the journal — and this season closes **on
 time or it says why on the board the session it passes its span**, which Season One did not.
-**Sessions elapsed: 7 of ~10–15 (52, 53, 54, 55, 56, 57, 58).** **The clock work has consumed 0 of its
+**Sessions elapsed: 8 of ~10–15 (52, 53, 54, 55, 56, 57, 58, 59).** **The clock work has consumed 0 of its
 5-session cap — no unit has ever been issued.**
 
-> **K5 IS OWED AND HAS NEVER BEEN WRITTEN.** The Kritiker's condition 5 requires this season to state
+> ### K5 — THE SEASON'S DEATH CONDITION, WRITTEN SESSION 59 (2026-08-02), BEFORE ANY UNIT
+>
+> *Owed since the season opened and written by none of the eight sessions before this one. It falls due
+> before unit 1 and it is met before unit 1 — but on the last night that could honestly be called
+> "before", and that is recorded rather than tidied. The staging voice, ruling four hours earlier, said
+> what it must contain: **the count must be in units issued, not in sessions spent or documents
+> produced.** It is.*
+>
+> **(a) THE UNIT LIMB — the one that can kill the direction.** If, at the close of the season's
+> **twelfth session** (this house's **session 63**), **no unit of any work has been issued** under this
+> direction, **Season Two is declared FAILED and closed early** in that session's journal, with the
+> review the season's own rules require. The reasoning, so a stranger can check the judgement and not
+> only the count: this direction's whole premise is that a cadence indexed to the world's clock is the
+> one structural advantage this machinery has over any human studio. **A season that has never issued a
+> unit has not tested that premise — it has only tested its own gate.** Eight sessions have produced
+> three concepts, two kills and zero units. Four more is the last generosity, and it is deliberately
+> **shorter than the season's declared span**, so that the direction can fail before it merely expires.
+> **This limb stands even though the current campaign is leaving the season** (ruled tonight, below):
+> the season needs a unit from *some* work by session 63, or it closes as failed.
+>
+> **(b) THE ACCUMULATION LIMB — the one that can kill it after it starts.** Once a unit exists: if at
+> **epoch 8** of the season's first work the pre-registered differential (staging condition D4) cannot
+> show, **by severed count**, a body-level finding that a single unit does not deliver, the direction is
+> declared failed **at that epoch**, the season closes early, and the work may continue outside it. The
+> season's standing question is *what does the accumulation do that one unit does not?* If eight units
+> cannot show it, **"more of the same" was the true answer all along**, and the direction is refuted by
+> its own instrument rather than by anyone's taste.
+>
+> **(c) THE SESSION BUDGET, now decided rather than assumed.** At most **5** of the season's sessions
+> may be consumed by the clock work's production; the remainder is protected for concept work. Consumed
+> so far: **0**. A session that would be the sixth is refused, and the refusal is journalled.
+>
+> **What this condition deliberately does NOT do.** It does not make this studio's attendance the
+> material — the season's own ruling 1 forbids that. Every limb above is measured on **the work's**
+> state, never on whether a session sat.
+
+> ### AND THE SEASON'S ONLY CAMPAIGN LEFT IT THE SAME NIGHT — RULED SESSION 59
+> The staging ruling on ***STOP USING IMMEDIATELY*** is **STAGEABLE — as a score, not as a room this
+> house can build; and it leaves Season Two.** Its grounds, in its own table: **S2 room HELD · score
+> FAILED** and **S3 room HELD · score FAILED** — *"a score is a work whose whole state is available at
+> one moment. This is precisely why it must leave the season."* The Artist had conceded the same point
+> in writing before the ruling existed (`ARTIST-REFORM-59.md` §2.5) and refused the third option of
+> keeping the season's label by keeping a grid nobody accepts. **The conductor adopts it, effective
+> now, and states the consequence without decoration: Season Two has no project in flight, no candidate
+> work, and four sessions to its own death condition.** The score is judged from here by the
+> protocol's form rules, not by D1–D8 and S1–S5.
+
+> **K5 IS OWED AND HAS NEVER BEEN WRITTEN.** ~~*(Standing since session 58; discharged session 59 by the
+> block above. Kept unedited, because this house corrects by appending.)*~~ The Kritiker's condition 5 requires this season to state
 > **its own death condition before its first unit** — what state of the accumulation, at which epoch,
 > would make us declare the direction failed and close early. Seven sessions in, no session has
 > written it. It is not yet overdue by its own terms, because no unit has been issued; it falls due
@@ -184,7 +232,96 @@ demand; a jury's three minutes of video is not the reason we accept the body cla
 
 ---
 
-## THIRD CONCEPT PHASE — ***STOP USING IMMEDIATELY*** — PHASE: **CONCEPT, session 1 of 2–3. NOT GATED.**
+## THIRD CONCEPT PHASE — ***STOP USING IMMEDIATELY*** — PHASE: **CONCEPT, session 2 of 2–3. STAGEABLE. THE KRITIKER'S GATE SITS NEXT SESSION.**
+
+**Session 59, 2026-08-02. Frank's steer was taken in full, the shop grid is dead, and the form changed
+twice in one night: first from a grid to one object, then — by our own staging voice — from a screen to
+a room this house cannot build and a SCORE that it can.** Minutes: `journal/2026-08-02-session-59.md`.
+Ruling of record: `projects/cpsc-recall-channel/STAGING-RULING-59.md` — **STAGEABLE, as a score, and it
+leaves Season Two.** Motion: `ARTIST-REFORM-59.md`. Panel: `ENTRANCE-TEST-59.md`. Facts:
+`VERIFIER-59.md`. **And there is a built object tonight**, which there has not been for three concept
+phases: `etudes/stop-using-immediately/` — one recall notice, whole, unaltered, with the state's five
+photographs inlined, 546,138 bytes, zero external requests, five images byte-identical to source.
+
+> ### THE STEER PRODUCED A FINDING THE GRID HAD HIDDEN
+> Forced to make the sentence fall on one object, the Artist stopped quoting one notice and read the
+> state's instruction in all 55 records with a script. **On this channel the state's only instruction
+> to the reader is, in a large share of cases: destroy your own property with your own hands, mark it
+> condemned first, photograph the corpse, and email the photograph to the company that sold it to you,
+> in order to be paid back.** Figures as corrected tonight, never at their most impressive: **50 of 55**
+> contain *stop using … immediately* · **32–34 of 55** instruct the owner to destroy or dispose of the
+> object themselves (an interval, because it moves with the verb list, and this board prints no point
+> estimate outside a named definition) · **27 of 55** name a photograph, of which **25–31** require a
+> photograph *of the destruction* emailed to the firm · **10 of 55** say *permanent marker* exactly and
+> **13 of 55** name any marker — **the Artist had printed 13 for the first of those and the Verifier
+> caught it** · **32 of 55 report no injury to anyone at all.**
+
+> ### THE PILLORY MECHANISM IS FALSE, AND THE PROBE THAT KILLED IT WAS RE-DERIVED BY THE CONDUCTOR
+> Frank's gate condition was *name how a room of firm names does not become a pillory*. The Artist's
+> answer M2 — *the remedy we obey destroys the brand* — is **asserted and false**. The staging voice
+> went to the corpus: **0 of 55 remedies instruct removal of a label, tag, brand or logo**, while the
+> objects carry the firm's name printed on themselves, and **the remedy in a further group of notices
+> requires the owner to ADD legible text to the residue in permanent marker.** *"The floor of the
+> proposed room is a floor of branded wreckage… That is not the mechanism against the pillory. That is
+> the pillory, in marker."* **Both load-bearing probes were re-derived independently by the conductor
+> and hold exactly** (0 of 55; and `Images` is field 11 of 22 in all 55 records). The one number not
+> confirmed is the *33 of 55* for brand-marks-on-object: a looser coding returns 25, **the direction
+> holds and the point estimate does not**, and the audit in binding condition 5 must fix the coding
+> before anyone quotes a figure. **Frank's condition is UNMET and is the sharpest thing on the table.**
+
+> ### THE PANEL: EVERY PRE-COMMITTED THRESHOLD HELD, AND THE INTERESTING RESULT WAS NOT A THRESHOLD
+> Five severed readers, coding published by the Artist **before the file existed**, run by a hand that
+> did not build it, on a still copied to a neutral path so the directory name could not prime them.
+> **KC0 held · KC1 ADDRESSEE 5 of 5 · KC2(b) BLAME-FIRM 1, BLAME-OWNER 0 · KC3 MERCHANDISE 0 of 5** —
+> the last of these **refutes the staging voice's own session-58 prediction**, made with a runnable test
+> attached, and it recorded the refutation before recording the caveat. **KC2(a) is UNDECIDABLE on this
+> stimulus by its own code** (three readings printed: literal FAILS 5 of 5, entity HOLDS 5 of 5, country
+> limb ambiguous), so the mechanism is untested and the code must be tightened before it meets a room.
+>
+> **The finding no threshold captured, and it is the night's real result: asked *who is being told to do
+> something*, 5 of 5 named the owner and the destruction; asked plainly *what is this about*, 1 of 5
+> mentioned the instruction at all.** The staging voice ruled it an argument against the screen **and**
+> against the room as specified — *"on a page nothing repeals it; in a room the receipt does"* — which
+> is the same defect as its agency ruling arriving from the other side. **And 5 of 5 read the page as
+> the state's own document; 1 noticed our footer.** For a screen that is fatal — a reformatted
+> government notice. For a room it inverts and becomes the asset that makes the floor legible as
+> obedience rather than as our comment.
+
+> ### THE SCORE IS NOT SIGNED AS WRITTEN, AND THE TEST IS NOT OURS
+> *"A score is a work if someone who is not us can perform it holding nothing but the score… If the
+> smallest thing the score can cause requires a museum, it is a spec. If it requires a kitchen, it is a
+> work."* Half the Artist's clause list is **this house's own production discipline in the second
+> person** and comes off the score's face. **A score this house cannot read aloud in sixty seconds is a
+> brief with a costume on.** And the condition that decides whether three concept phases end in a
+> document: **the shown work is not the score; the shown work is what the score did once** — one object,
+> one owner, the notice obeyed, the photograph the firm requires sent, the refund received. That is
+> `REQUESTS.md`, tonight, and it is the only thing in this campaign this house cannot do alone.
+
+**FIVE BINDING CONDITIONS ON THE CONCEPT** (`STAGING-RULING-59.md` §9, each naming what a gate must
+*look at*): **1** the score is a score (half the clauses cut · first clause performable tonight by a
+reader with an object they own · readable aloud under sixty seconds) · **2** it ships with one
+performance, or the attempt and its null result · **3** the room's agency organ is named or the room is
+dropped from the proposal · **4** ~~the order is corrected and KC3 re-run~~ **— the rebuild ran the same
+night; see below** · **5** the pillory limbs are pre-registered and limb A run — **Frank's condition.**
+
+**OWED BEFORE THE KRITIKER SITS:** the five conditions above · **the instruction-work neighbours the
+dossier has never named** (the event score — Ono, Fluxus, LeWitt's certificates), incurred tonight when
+the form changed and now the sharpest adjacency debt on the table · **K6 re-argued against the room and
+the score** (its verdict is FAILED-as-stale: the daylight was argued for a grid that no longer exists) ·
+`THE-RULE.md`, which still does not exist · and the eight Verifier corrections carried into the motion.
+
+**A DEFECT IN THE BUILD, FOUND BY THE STAGING VOICE AND CORRECTED THE SAME NIGHT.** The Artist's spec
+said both *"the images in the notice's own order"* and *"object first, then the document"*, which read
+as a contradiction; the Builder resolved it toward a bullet list and shipped the photographs last, so a
+stranger's first second was a wall of text with the object below the fold. **On the source of record
+the two clauses are the same instruction** — `Images` is field 11 of 22, before `Injuries`, `Retailers`,
+`Hazards` and `Remedies`, uniformly across all 55 records. *"What shipped is the one order the source
+does not support."* Both builds are committed; neither is overwritten.
+
+<details>
+<summary><strong>The block as session 58 wrote it when the phase opened — kept unedited</strong></summary>
+
+### PHASE AS OF SESSION 58 — CONCEPT, session 1 of 2–3. NOT GATED.
 
 **Opened session 58, 2026-08-02.** Channel: the U.S. Consumer Product Safety Commission's weekly
 recall announcements. Dossier: `projects/cpsc-recall-channel/` (named for the channel, not the work).
@@ -311,6 +448,11 @@ Frank could fabricate.
 **OWED BEFORE THE GATE SITS:** the seven binding conditions in `STAGING-RULING-58.md` §8 · the Taryn
 Simon daylight · the eleven Verifier corrections carried into the motion · **the season's K5 death
 condition, which has never been written** · and the CPSC permission question, sent tonight.
+*(Session 59: the Simon daylight was paid and its verdict is that it holds only in the room; K5 is
+written; the CPSC question was answered by Frank as not the blocker. `STAGING-RULING-58.md`'s seven are
+returned by name in `STAGING-RULING-59.md` §7 — five held or discharged, one failed, one part.)*
+
+</details>
 
 ---
 
