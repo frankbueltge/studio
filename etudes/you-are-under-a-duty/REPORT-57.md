@@ -499,3 +499,382 @@ the register-test analysis script) were built and measured in the session scratc
 deleted before finishing — none are part of this étude's committed object.
 
 No commit was made to git.
+
+---
+---
+
+## SECOND PASS — e3, the encoding repair
+
+Built 2026-08-02, extending `build-57.mjs` (not replacing it) under two binding changes handed down
+after this étude's first pass: **CHANGE 1**, the duty sentence is the state's own second-person
+sentence, 56-day clause kept inside the clause, replacing the third-person paraphrase §8.0 of the
+first pass already flagged as unfaithful; **CHANGE 2**, no common left origin for the rule — it
+begins at the x where the sentence's last character ends, on the same line, and wraps as text wraps.
+Ordering fixed to O1 (oldest duty first), mark treatment fixed to M-A, per this pass's brief. This
+section reports what was built, what changed in the generator, and — the point of the exercise —
+whether T1 and T3 still trip.
+
+### S1. What changed in `build-57.mjs`
+
+Nothing in the e2 code path (`buildHTML`, the `html`/`shot`/`downscale`/`pixels`/`measure-dom`/
+`digitcheck`/`wrapcount` subcommands) was touched. Added, alongside it: `buildHTML3` (a second HTML
+assembler), three new CLI subcommands (`html3`, `measure-dom3`, `wrapcount3`), and a small addition to
+`buildEntries`'s per-row object (`coroner`, `area` — needed for the new coroner line, absent from e2's
+enriched rows because e2 never printed them). `build-57.mjs` grew from 28,819 to **43,267 bytes**
+(**+14,448 bytes** added this pass; nothing removed, nothing in the e2 path edited).
+
+**The one structural change (CHANGE 2), concretely.** In e2, `.seg`/`.mark` sat inside a sibling
+`<div class="rule-line">` — a `flex-wrap` block below the sentence text, `align-items:flex-end`, every
+wrapped line starting flush at the container's own left edge. In e3, `.seg`/`.mark` are `display:
+inline-block` children appended **inside the same `<p class="sentence">`**, directly after the
+sentence's closing "." with no intervening whitespace in the markup:
+
+```html
+<p class="sentence">You are under a duty to respond to this report within 56 days of the date of
+this report, namely by the fifteenth of March, two thousand and twenty-four.<span class="seg"
+style="width:16px"></span>…<span class="mark"></span>…</p>
+```
+
+Because there is no whitespace between the sentence's last character and the first `.seg`, and none
+between consecutive `.seg`/`.mark` elements, the rule's first pixel is contiguous with the sentence's
+last pixel whenever there is room on that line — and because `inline-block` elements carry an implicit
+soft-wrap opportunity on both sides even without a space present (the same mechanism that lets a row of
+un-spaced `inline-block` badges wrap like words), the whole run wraps exactly the way ordinary prose
+wraps: full lines return to the paragraph's own left inset, precisely as a long word or an unbroken
+sequence of them would. No JavaScript, no manual line-breaking, no `<wbr>` — this is standard CSS
+inline layout, unmodified. `.seg`/`.mark` keep `vertical-align: text-bottom` (an authorial choice, not
+specified by the brief, made so the rule sits low against the text the way an underline would; noted
+here rather than left silent).
+
+**A per-recipient-slot rule is now drawn once per recipient, not once per entry.** The brief specifies
+the rule and marks come after "the state's second-person sentence" *per recipient-slot* — so
+multi-recipient entries (Luke Chatterton, 5 recipients) now carry five separate name/sentence/rule/mark
+blocks, each with the same day-count-derived rule length (all five recipients of one report share one
+due date), rather than e2's single rule per entry. This is a direct, intended consequence of the
+brief's own per-recipient-slot grammar, not a side effect of CHANGE 2 — but it has a measurable effect
+on T3 below, and is flagged there rather than left to look like the repair's own doing.
+
+### S2. `e3.html` — structural checks
+
+**122,600 bytes.** Verified directly against the file's bytes: **zero `<script>` tags, zero
+`<link>`/`@font-face`/`@import`, zero image or media references.** Two literal `https://` strings, both
+plain inert text inside `<footer>`, same colophon convention as e2. Same font stack (`Georgia, Cambria,
+"Iowan Old Style", "Times New Roman", Times, serif`), `#000` on `#fff`, one column, 640px max measure.
+Ordering verified: first five deceased names in document order are Matthew Wickes, James Atkinson, Mark
+Pryor, Joshua Burgess, Sarah Sutherland — byte-identical opening sequence to `e1.html`'s O1 order.
+49 entries, 63 recipient-slots (matches e2's own recipient-slot count exactly, as expected — CHANGE 1/2
+touch wording and layout, not the data pipeline).
+
+**The three head sentences appear at the head and, identically, at the foot.** Checked by exact
+substring count against `e3.html`'s bytes: each of the three sentences appears **exactly twice** —
+once inside `<header>`, once inside `<footer>`, character-for-character identical both times, both set
+in plain `<p class="sentence">` with no quotation marks, no italics, no box, no rule, no indent, no
+attribution beside them (the two source URLs remain colophon-only, after the repeated sentences, inside
+`<footer>`). The foot-only variant used for the third entrance crop (`--foot-only`) was checked the same
+way: each sentence appears **exactly once**, in the footer only — the header carries just the title and
+the observed-date line.
+
+**Numerals — one exception found, named rather than smoothed over.** Scanning `e3.html`'s visible text
+outside CSS and `style="width:…px"` structural attributes turns up digit characters in exactly two
+places: (a) **"Care4U Healthcare"**, a recipient's own name as the state prints it — the explicitly
+permitted exception; (b) **"56 days"**, inside the state's own verbatim duty sentence, 63 times (once
+per recipient-slot). This second one is a genuine, unresolved tension between two binding instructions
+this pass inherited: the general house rule carried over from e2 ("no numerals… except inside a
+recipient's own name") and CHANGE 1's specific, later requirement to print the state's sentence
+**verbatim**, and the state's own sentence contains the digits "56" in "within 56 days" — not
+paraphrasable into words without breaking the verbatim requirement the whole point of CHANGE 1 was to
+satisfy. I have kept "56" exactly as the state prints it and not silently spelled it out as
+"fifty-six" (which would itself then be an unrequested departure from *verbatim*, the opposite failure
+CHANGE 1 exists to fix). Dates remain spelled out in words throughout, as before — this is the one
+numeral on the page that isn't a date and isn't a name, and it is the state's own digit, not this
+studio's. Flagged, not resolved, because resolving it is not this pass's call to make unilaterally.
+
+**Sentence 3 fidelity, cross-checked.** The third head sentence — *"Where no reply is received or an
+inadequate response is made a coroner would exceed their powers if they chased a missing reply or
+requested additional detail in respect of an inadequate response."* — matches `VERIFIER-57.md` §2(b)'s
+live-fetched text of Chief Coroner's guidance ch. 16 §47 (its own final sentence) word for word. This
+pass did not re-fetch the source independently — the three head sentences were handed down as binding
+text in this session's brief — but the match against the Verifier's own independently-fetched quotation
+was checked and holds exactly.
+
+### S3. Files delivered
+
+| file | note | size |
+|---|---|---|
+| `entrance-e3-390.png` | 390×844, viewport only, extent 1 | 61,083 B |
+| `entrance-e3-1280.png` | 1280×800, viewport only, extent 1 | 71,574 B |
+| `entrance-e3-390-foot-only.png` | 390×844, viewport only, head sentences moved to foot alone | 42,498 B |
+| `still-e3-390-IMAGINED-simulated-extent-400-scaled25.png` | full res 390×35,221 → scaled 98×8,805 | 903,918 B |
+| `still-e3-1280-IMAGINED-simulated-extent-400-scaled25.png` | full res 1280×24,545 → scaled 320×6,136 | 695,836 B |
+| `e3.html` | extent 1, real, the one built object of this pass | 122,600 B |
+
+Checked by eye: `entrance-e3-390.png` and `entrance-e3-1280.png` both show the three head sentences
+immediately under the observed-date line, before the first name, as intended. `entrance-e3-390-foot-only.png`
+shows **no** head sentences in the first viewport (title, observed-date line, then straight into Matthew
+Wickes) — confirming the `--foot-only` build genuinely empties the header rather than merely visually
+hiding the sentences. All extent-400 material is marked `IMAGINED-simulated-extent-400` per instruction
+— a study, not a fact about the register's actual run length.
+
+### S4. Register tests, re-run
+
+**Method**, unchanged from the first pass in spirit: `measure-dom3` reads Chromium's own layout
+(`Range.getClientRects()` for text lines, `getBoundingClientRect()` for `.seg`/`.mark`, grouped by
+rendered **bottom** edge — the same top-vs-bottom fix REPORT-57 §6 already made, still required here
+since `.seg` (2px) and `.mark` (9px) share a line via `vertical-align:text-bottom`, not a common top).
+One methodological adaptation was necessary and is named here, not hidden: e2's T3 method computed one
+ink total per **entry** (one rule per entry, unambiguous); e3 draws one rule per **recipient-slot**, so
+multi-recipient entries now carry several. Three readings are reported for T3 rather than silently
+picking one — see S4c.
+
+**Pre-commitment, restated: ANY ONE of the five trips the ruling, at that width.** Extent-invariance of
+T1/T3/T4 (structural, not extent-dependent, per REPORT-57 §6's own reasoning) was checked directly this
+time rather than only inferred: **all four register-test numbers below are identical at extent 1 and
+extent 400**, at both widths — confirmed by measurement, not assumption.
+
+#### S4a. T1 — left-edge histogram (what CHANGE 2 targets directly)
+
+Two readings reported, per instruction: **(a)** the original REPORT-57 method — every rendered line of
+every rule, wrapped continuations included; **(b)** first-line-only — one x-value per rule instance (63
+total), the position where each rule *actually begins*, which is the more direct read on whether CHANGE
+2 succeeded.
+
+| width | reading | distinct x-values | top-3 share | dominant x | threshold (≥80% on ≤3 x) |
+|---|---|---|---|---|---|
+| 1280px | (a) all rule-lines (n=113) | **16** | **76.1%** | 344 (63/113 = 55.8%) | **no trip** |
+| 1280px | (b) first-line-only (n=63) | **16** | **57.1%** | 378 (16/63) | **no trip** |
+| 390px | (a) all rule-lines (n=171) | **14** | **77.2%** | 24 (108/171 = 63.2%) | **no trip** |
+| 390px | (b) first-line-only (n=63) | **13** | **54.0%** | 256 (14/63) | **no trip** |
+
+Full distributions (x:count), reading (b), first-line-only:
+
+- **1280px:** 378:16, 344:13, 379:7, 437:6, 882:3, 874:3, 371:3, 910:2, 907:2, 436:2, 885:1, 889:1,
+  918:1, 890:1, 898:1, 914:1
+- **390px:** 256:14, 223:10, 255:10, 344:9, 346:5, 222:5, 315:3, 248:2, 321:1, 326:1, 343:1, 332:1,
+  345:1
+
+**T1 no longer trips, at either width, under either reading.** In e2/e1, T1 was 100% on a single x-value
+at both widths — the flattest possible failure. Here the *widest* single bucket is 55.8% (1280) / 63.2%
+(390), and even taking the three largest buckets together the concentration falls short of the
+pre-committed 80% line at both widths, under both readings. **This is the one register test CHANGE 2 was
+aimed at, and it is repaired.**
+
+**Why reading (a) still shows a non-trivial spike at the container's own left inset (x=344 / x=24),
+even though reading (b) shows the rule genuinely starting all over the place.** Checked directly: of the
+63 rule instances, **50/63 (79.4%) at 1280px** attach contiguously to the sentence's own last line
+(`firstLineLeft` within 2px of `sentenceLastLineRight` — no gap, as CHANGE 2 requires), while **13/63
+(20.6%)** find no room for even one 16px segment on the sentence's last line and the *entire* rule
+wraps down to a fresh line, landing flush at the paragraph's left inset — mechanically identical to what
+happens to any word that doesn't fit. At **390px, the fit succeeds 100% of the time (63/63)** — every
+rule instance's first segment lands contiguous with the sentence text, zero whole-rule wraps. (`delta =
+firstLineLeft − sentenceLastLineRight`, 1280px sample: −580, 0, 0, 0, 0, 0, 0, 0, 0, −580, −580, 0, 0,
+0, −592, −578, …, 390px: 0 sixty-three times over.) Once a rule's *first* line is placed — attached or
+sent down to the margin — every line **after** that first one is an ordinary wrapped continuation and
+necessarily returns to the paragraph's left inset, the same way any wrapped paragraph's second line
+does; that structural pile-up of continuation lines is what keeps reading (a)'s left-inset bucket
+non-trivial even after the repair. This is not a flaw in the repair — a paragraph that wraps to five
+lines has four lines that start at the margin no matter what it says — but it is why reading (a) alone
+understates how much reading (b) actually changed.
+
+#### S4b. T2 — row-pitch CV (unaffected by CHANGE 2, reported for completeness)
+
+| width | extent | CV (single-recipient entries, n=38) | threshold (<10% trips) |
+|---|---|---|---|
+| 1280px | 1 | 80.7% | no |
+| 1280px | 400 | 83.0% | no |
+| 390px | 1 | 80.5% | no |
+| 390px | 400 | 86.9% | no |
+
+Never close to tripping, in e2 or here — T2 was never the problem.
+
+#### S4c. T3 — staircase, total ink and longest rendered segment (both requested explicitly)
+
+Three ink readings, because the per-recipient-slot repetition (S1) changes what "total ink per row"
+means and the difference between the readings is itself the finding:
+
+| reading | what it measures | n | Spearman r (both widths, both extents — identical) | trips (\|r\|≥0.90)? |
+|---|---|---|---|---|
+| **(i) sequential, per rule-instance** | ink of each of the 63 rule instances, in true document/reading order (repeats included) | 63 | **−0.9991** | **TRIPS** |
+| **(ii) first-recipient-only, per entry** | one representative rule per entry (49), isolates CHANGE 2's effect from the repetition effect | 49 | **−0.9998** | **TRIPS** |
+| **(iii) entry-summed, all recipients** | total ink per entry summed across every recipient-slot in it | 49 | **−0.8283** | no |
+
+Longest rendered segment, per entry (identical whether summed or first-recipient-only, since taking a
+maximum is unaffected by how many equal-length copies exist):
+
+| width | Spearman r | e2/O1's figure (REPORT-57 §6) | trips (\|r\|≥0.90)? |
+|---|---|---|---|
+| 1280px | **−0.8944** | −0.9312 | no (never crossed the line either time — REPORT-57 read this by eye, no pre-committed number) |
+| 390px | **−0.7781** | −0.6870 | no (ditto) |
+
+**Reading this straight: T3 still trips, and CHANGE 2 does not touch why.** Readings (i) and (ii) —
+the two readings that measure the actual day-count-to-position correlation without diluting it — sit at
+−0.999x, essentially identical to e2/O1's own −0.9998 (REPORT-57 §6). This is expected and, checked
+here, confirmed: "days outstanding" is rendered as literal pixel *length* regardless of where that
+length starts, and near-monotone due-date ordering (O1, unchanged this pass) makes ink length correlate
+with row position almost perfectly no matter which x the rule begins at. **CHANGE 2 relocates the rule's
+origin; it does not change what the rule's length encodes**, and length-encodes-days is what T3 tests.
+
+Reading (iii) — the naive entry-summed total — drops to −0.8283, under the 0.90 line, at **both**
+widths and both extents (the figure is width- and extent-invariant because Spearman correlation depends
+only on ranks, and per-entry-summed-ink ranks don't change with viewport). **This is not evidence the
+repair fixed T3.** It is an arithmetic artifact of summing across a per-entry recipient count that is
+itself uncorrelated with days-outstanding rank (Luke Chatterton's 5-recipient entry adds roughly 5× the
+ink of a comparable 1-recipient entry at the same rank, purely because of how many bodies one report was
+sent to, which has nothing to do with how overdue it is) — noise added on top of the real signal, large
+enough at n=49 to pull the naive sum's correlation below the pre-committed threshold without the
+underlying staircase having moved at all. Reporting only reading (iii) would have let the page's
+apparent T3 status flip from TRIP to NO-TRIP on the strength of an accounting choice this pass didn't
+even make on purpose — it followed directly from the brief's own instruction to draw the rule "per
+recipient-slot." Readings (i) and (ii) are reported as the primary verdict for exactly this reason.
+
+#### S4d. T4 — shared right terminus (no pre-committed threshold, reported as before)
+
+| width | dominant right x | share | distinct values | e2/O1 figure (REPORT-57 §6) |
+|---|---|---|---|---|
+| 1280px | 936 (content edge) | **17.7%** of 113 | 51 | 33.8% of 74, 45 distinct |
+| 390px | 360 (content edge) | **32.7%** of 171 | 50 | 53.3% of 105, 43 distinct — was the one width REPORT-57 flagged as majority-share |
+
+At 390px specifically, the content-edge share fell from a bare majority (53.3%, the figure REPORT-57
+§6 flagged under its own, self-declared, non-Dramaturg-sanctioned "majority" reading) to under a third
+(32.7%). Under that same self-declared reading, **390px would no longer be called a T4 trip.** As
+before, this is reported, not adjudicated — T4 carries no numeric threshold from the ruling, only the
+structural observation that a wrapped rule mechanically must end at least one line at the content edge.
+
+#### S4e. T5 — line-count uniformity
+
+| width | extent | dominant line count | share | threshold (≥70% trips) |
+|---|---|---|---|---|
+| 1280px | 1 | 7 lines | 36.7% | no |
+| 1280px | 400 | 11 lines | 55.1% | no |
+| 390px | 1 | 10 lines | 36.7% | no |
+| 390px | 400 | 16 lines | 34.7% | no |
+
+Never close to tripping, in e2 or here.
+
+#### S4f. Wrap counts, for context (`wrapcount3`, extent-invariant)
+
+Of the 63 rule instances: **63/63 wrap onto at least a second line at 390px; 40/63 at 1280px.** (Not
+directly comparable to REPORT-57 §7c's 38/49 and 25/49 — those counted *entries*, one rule each; this
+counts *recipient-slot rule instances*, 63 of them, and a rule now starts partway along a line already
+occupied by its own sentence, so it reaches the right edge sooner than a rule starting at x=0 would.)
+
+#### S4g. Verdict, per width, stated plainly
+
+| | 1280px | 390px |
+|---|---|---|
+| T1 | no trip (was: TRIPS, 100% @ one x) | no trip (was: TRIPS, 100% @ one x) |
+| T2 | no trip (unchanged) | no trip (unchanged) |
+| T3 | **TRIPS** (readings i/ii, −0.999x; unchanged from e2/O1's −0.9998) | **TRIPS** (readings i/ii, −0.999x; unchanged from e2/O1's −0.9998) |
+| T4 | reported, not adjudicated (17.7%, well down from 33.8%) | reported, not adjudicated (32.7%, down from majority) |
+| T5 | no trip (unchanged) | no trip (unchanged) |
+| **verdict** | **STILL TRIPS (T3)** | **STILL TRIPS (T3)** |
+
+**Does the encoding repair work? Partially, and precisely: yes for the specific mechanism it targeted
+(T1 — a single, mechanically guaranteed left origin for every rule, at every width, at every extent, is
+gone), and no for the register's overall verdict (the page still trips at both widths, on the strength
+of T3 alone now rather than T1-and-T3). CHANGE 2 relocates where a rule begins. It was never going to
+touch what a rule's length means, and "length in pixels equals days outstanding" — not "every rule
+starts at the same x" — is the deeper of the two structural properties REPORT-57 §8.4 already named as
+inherent to any single-column, length-encoded rule form under a near-monotone order. That finding
+stands, unrepaired, because this pass's brief did not ask CHANGE 2 to touch it, and by the arithmetic
+already worked through in REPORT-57 §8.4 and confirmed again here, no left-origin change could have.**
+
+### S5. One honest paragraph — continuous, or accident?
+
+**Both, unpredictably, and that unpredictability is itself the answer.** At 390px, every single rule in
+this build (63/63) lands flush against its sentence's last glyph — no gap, no visible seam — and reads,
+by eye, as one continuous stroke: a sentence that keeps going as a line instead of a period, the ink
+picking up exactly where the words stop. At 1280px, the same page, the same data, the same code, the
+same rule — 13 of the 63 rules (20.6%) find no room for even their first 16-pixel segment on the
+sentence's own last line, and the whole rule jumps to a fresh line, flush left, with no visible
+connection at all to the sentence above it: exactly the "typographic accident" reading, a stray black
+bar that appears to come from nowhere, indistinguishable by eye from the pre-repair form it was built to
+replace. Nothing about the *content* changed between those two cases — not the sentence, not the day
+count, not the mark treatment — only whether a fixed 16px happened to fit in whatever slack was left at
+the end of a line of prose, which is a fact about English sentence length and column width, not about
+the report or the state's own duty. A design that reads as one continuous thing at one viewport and as
+an unexplained glitch at another, purely on the arithmetic of word-wrap, is not a stable answer to the
+question "does this rule read as continuous with the sentence" — it is a coin landing differently each
+time depending on furniture the reader never sees (how many characters were in *this* recipient's name,
+how long *this* month's name is, whether the date happened to end in a wide or narrow word). The honest
+position is that CHANGE 2 makes the rule's relationship to its sentence *look* considered in the
+majority of instances observed here, without making it *actually* considered in any instance — the
+placement is downstream of word-wrap arithmetic the generator does not reason about, not of any
+decision about how a rule ought to meet the sentence it measures.
+
+### S6. What I would flag against myself
+
+1. **`vertical-align: text-bottom` on `.seg`/`.mark` was my own choice, not specified anywhere in the
+   brief.** It was picked so the rule sits low against the sentence's baseline the way an underline
+   would, and is the only presentational decision this pass made that wasn't dictated by CHANGE 1/2 or
+   inherited from e2. A different vertical alignment would not change any register-test number reported
+   above (all of T1–T5 are computed from horizontal position and line-count, not vertical offset within
+   a line) but would change the page's appearance, and I am naming it as mine rather than the brief's.
+
+2. **The "56 days" numeral tension (S2) is named, not resolved.** I kept the state's digit rather than
+   either spelling it out (which would itself violate the verbatim requirement CHANGE 1 exists to serve)
+   or stripping the clause (which VERIFIER-57.md §2(a) already found unacceptable when e2's paraphrase
+   effectively did the equivalent by dropping the clause entirely). Whoever reviews this pass next should
+   treat this as a live, unresolved tension between two binding instructions, the same posture the first
+   pass took toward VERIFIER-57.md's other findings.
+
+3. **T3's three-reading treatment (S4c) is a methodological choice I made this pass, not one handed
+   down.** The brief asked for T1–T5 "exactly as REPORT-57 §6 ran them," but §6's method assumed one
+   rule per entry, and this pass's own grammar (per-recipient-slot rules, required by the brief's
+   "each entry… then, per recipient-slot…" instruction) breaks that assumption. Reading (i) — sequential,
+   per rule-instance, true reading order — is my own judgement call for which reading best represents
+   "exactly as before" in spirit; reading (iii) is reported alongside it precisely so a reviewer who
+   disagrees with my choice of primary reading can see the number I didn't foreground and judge for
+   themselves.
+
+4. **Extent-invariance of T1/T3/T4 was checked this time (S4, opening) rather than only inferred, as
+   REPORT-57 §8.5 flagged it had not been for e2.** T2 and T5 remain extent-sensitive, checked at both
+   extent 1 and extent 400 as before, not at 1825 — the same gap REPORT-57 §8.5 named for e2 applies
+   here unchanged.
+
+5. **I did not re-fetch the three head sentences' source pages independently.** Sentence 3 was
+   cross-checked word-for-word against `VERIFIER-57.md`'s own independently-fetched quotation (S2) and
+   matches exactly; sentences 1 and 2 were taken as bound text from this session's brief and not
+   separately verified against a fresh fetch in this pass. Given VERIFIER-57.md's demonstrated pattern of
+   finding exactly this kind of small, consequential mismatch in bound text, this is worth a second hand's
+   attention rather than treating the brief's wording as beyond question merely because it was handed down
+   as binding.
+
+### S7. Bytes added this pass
+
+```
+   +14,448  build-57.mjs (43,267 bytes total; delta only, file pre-existed)
+   122,600  e3.html
+    61,083  entrance-e3-390.png
+    71,574  entrance-e3-1280.png
+    42,498  entrance-e3-390-foot-only.png
+   903,918  still-e3-390-IMAGINED-simulated-extent-400-scaled25.png
+   695,836  still-e3-1280-IMAGINED-simulated-extent-400-scaled25.png
+---------
+ 1,911,957  bytes added to the repository this pass, before this section of REPORT-57.md
+```
+
+This section of `REPORT-57.md` (§"SECOND PASS — e3, the encoding repair" through the end of the file)
+added **~26,600 bytes** to the existing, unaltered 34,795-byte file — not a word of the first pass's
+text above this section was changed. (Approximate, with a "~", for the same reason REPORT-57 §4 gave
+its own report-file size as "~24,000": a self-referential exact count chases its own tail — fixing the
+number changes the file the number describes. The figure is a post-hoc measurement of this section's
+own text, taken once, not re-chased to false precision.)
+
+### S8. Files added to the repository this pass
+
+```
+etudes/you-are-under-a-duty/e3.html
+etudes/you-are-under-a-duty/entrance-e3-390.png
+etudes/you-are-under-a-duty/entrance-e3-1280.png
+etudes/you-are-under-a-duty/entrance-e3-390-foot-only.png
+etudes/you-are-under-a-duty/still-e3-390-IMAGINED-simulated-extent-400-scaled25.png
+etudes/you-are-under-a-duty/still-e3-1280-IMAGINED-simulated-extent-400-scaled25.png
+```
+
+`build-57.mjs` and `REPORT-57.md` were both extended in place (not replaced) — see S1 and S7 for the
+bytes added to each. All other HTML built this pass (the extent-400 source file, the foot-only variant,
+the full-resolution pre-downscale stills, the `measure-dom3`/`wrapcount3` analysis scratch scripts) was
+built and measured in the session scratch directory and deleted before finishing — none are part of
+this pass's committed object.
+
+No commit was made to git.
