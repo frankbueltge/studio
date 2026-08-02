@@ -11,10 +11,9 @@ records), re-runnable in four lines. Marked `[D59]`.
 
 1. **The remedy does not remove the brand.** **33 of 55** notices locate a brand mark **on the object
    itself** in their own `Description` (43 with packaging) — *"'VEVOR' is printed on an attached tag on
-   the outside of the cover"*, *"printed on the label on the underside of the projector's base"*. **0 of
-   55** remedies instruct removing a label, tag, brand or logo. **10–13 of 55** instruct the owner to
-   *add* text in marker (10 on the verifier's strict reading of *permanent marker*, 13 loose; my §5 holds
-   on either). *(§5 falls if the 33 or the 0 moves.)*
+   the outside of the cover"*. **0 of 55** remedies instruct removing a label, tag, brand or logo.
+   **10–13 of 55** instruct the owner to *add* text in marker (10 strict, per the verifier's reading of
+   *permanent marker*; 13 loose — §5 holds on either). *(§5 falls if the 33 or the 0 moves.)*
 2. **The source's own field order puts `Images` eleventh of twenty-two, uniformly across all 55
    records** — after `Products`, **before** `Hazards` and `Remedies`. *(§6 falls if this moves.)*
 
@@ -24,14 +23,13 @@ records), re-runnable in four lines. Marked `[D59]`.
 
 Frank kept the finding, struck the grid, demanded one object. The Artist did all three, killed its own
 form, paid the Simon debt it had ducked, and put a forcing sentence on the record that argues the
-**screen out** — the first of this season to do so. The étude passed every threshold it published before
-the file existed, including one written to catch it. **A third consecutive block would teach this house
-that compliance is not rewarded**, and Frank has said there is no fifth session on the finding alone.
-So it goes to the gate.
+**screen out**. The étude passed every threshold it published before the file existed, including one
+written to catch it. **A third consecutive block would teach this house that compliance is not
+rewarded**, and Frank has said there is no fifth session on the finding alone. So it goes to the gate.
 
 Not as a room. **This house cannot build the room, cannot cause it to be built, and has no realiser** —
 a staging voice who certifies a room nobody will stand in has certified a picture in his own head. The
-room is the strongest form this campaign has proposed, and I say so below. It is also, tonight, a
+room is the strongest form this campaign has proposed and I say so below; it is also, tonight, a
 description. What can exist is the score, and that is where my conditions bite.
 
 **The sentence a gate can quote:**
@@ -66,12 +64,12 @@ and *that* genre a stranger is correct to ignore. S4's failure mode in three dim
 
 **The body** goes to the standing object — the only vertical thing in a low room — then down to the
 document, then out across the floor. Correct, and specified. **The defect: body and attention diverge.**
-The floor is the largest, loudest surface; the plinth object is one quiet thing. "The visitor goes,
+The floor is the largest, loudest surface; the plinth object is one quiet thing, and "the visitor goes,
 correctly, to the thing that is still whole" is a claim about pixels made in prose.
 
 **Carried out:** as written, *the only instruction the state has for me is to destroy the thing I bought
-and photograph it.* On the panel's evidence (§4) they will carry *recalled baby products are dangerous*
-— the **source's** sentence, not the work's.
+and photograph it.* On the panel's evidence (§4) they carry *recalled baby products are dangerous* — the
+**source's** sentence, not the work's.
 
 ### 2.1 The weakest joint — worse than the one the Artist named
 
@@ -90,10 +88,10 @@ are the only artefacts in the corpus with a human hand visibly in them. **The re
 and the sum they were paid, states all four facts with no caption. Without them it is a skip.
 
 **The cost, named rather than handed over free.** This breaks limb 1 of the Simon daylight (*"we make no
-photograph"*). **Trade it.** Limb 1 was always the weakest — a claim about our labour, not the visitor's
-experience — and limbs 2–4 (the act is *assigned*; the object is present then is not; the address is to
-the owner) get stronger when the performance is documented in the form the firm itself demands. A work
-that refuses the photograph to protect an adjacency argument has put a footnote ahead of its subject.
+photograph"*). **Trade it:** limb 1 was always the weakest — a claim about our labour, not the visitor's
+experience — and limbs 2–4 get stronger when the performance is documented in the form the firm itself
+demands. A work that refuses the photograph to protect an adjacency argument has put a footnote ahead of
+its subject.
 
 ---
 
@@ -105,22 +103,21 @@ written.**
 Sort §2.3's clause list by **who it addresses** and it falls in half. *Acquisition · what stands ·
 destruction · what is beside it* speak to a person with a room: those are the work. *Admission rule ·
 hole clause · no-index clause · removal clause* are this house's production discipline in the second
-person: apparatus, the exact substance of the quarter-megabyte already on the record, and publishing them
-**as** the work is the exhibit Frank's indictment predicts.
+person — apparatus, the exact substance of the quarter-megabyte already on the record, and publishing
+them **as** the work is the exhibit Frank's indictment predicts.
 
 1. **PERFORMABILITY.** A score is a work if someone who is not us can perform it holding nothing but the
-   score. *Cut Piece* needs scissors. This needs a room, a realiser, donors, and objects it is unlawful
-   to sell — **except for one performance available to any reader tonight at no cost: a person who owns a
+   score. *Cut Piece* needs scissors. This needs a room, a realiser, donors and objects it is unlawful to
+   sell — **except for one performance available to any reader tonight at no cost: a person who owns a
    recalled object can obey their own notice.** That is the minimum viable performance and it must be the
-   **first clause**, not a consequence of the last. If the smallest thing a score can cause needs a
-   museum it is a spec; if it needs a kitchen it is a work. **FAILING as written; passable in one edit.**
+   **first clause**, not a consequence of the last. If the smallest thing a score can cause needs a museum
+   it is a spec; if it needs a kitchen it is a work. **FAILING as written; passable in one edit.**
 2. **THE READING.** An instruction work performs itself in the reader's head. **UNTESTED**, and cheap.
 3. **ADDRESS.** Apparatus is addressed inward. Half of §2.3 is. **FAILING as written.**
 
 **A length ruling, my own remit.** Ono's scores are a sentence; LeWitt's wall-drawing instructions are a
 paragraph. **A score this house cannot read aloud in sixty seconds is a brief in costume** — sixty
-seconds being this house's own terminal test, applied for once to its paperwork. The most convincing
-answer to *three concept phases, a quarter of a megabyte, no unit* is a work you can read in a minute.
+seconds being this house's own terminal test, applied for once to its paperwork.
 
 **What makes it unambiguously a work: publish the score with ONE performance of it.** Not a room — one
 object, one owner, the notice obeyed, the photograph the firm requires, the refund, the record. Inside
@@ -129,9 +126,8 @@ not the score; it is what the score did once.** If nobody here owns a recalled o
 performance is the attempt and its null result — still a shape a stranger can be right about tomorrow.
 
 **A neighbour debt incurred tonight and unnamed.** The dossier paid the Simon debt for a form it has now
-abandoned and picked up one it has not named: the instruction work / event score — Ono, Fluxus, LeWitt's
-certificates. A proposal that hides its neighbours is presumed to be copying them. **That debt is now the
-sharpest on the table.**
+abandoned and picked up one it has not named: the instruction work / event score. A proposal that hides
+its neighbours is presumed to be copying them. **That debt is now the sharpest on the table.**
 
 ---
 
@@ -144,18 +140,17 @@ instrument this campaign has produced; I certify the run.
 against the room too.** The mechanism is not typographic: asked what a thing is, people report its
 **subject matter**; the **speech act** they report only when asked. On the screen the instruction is
 buried at field seven of fourteen. In the room it is not buried at all — but the unprompted sentence will
-still be *"broken baby products"* unless the *act* is visible, which is §2.1 arriving from the other
-side. **The room does not repeal finding (i); it changes what would repeal it.** On a page nothing does;
-in a room the receipt does. That is the strongest argument for the room over the screen and it comes from
-the panel, not the motion. **D8 therefore FAILS at the only extent tested.**
+still be *"broken baby products"* unless the *act* is visible, which is §2.1 from the other side. **The
+room does not repeal finding (i); it changes what would repeal it.** On a page nothing does; in a room
+the receipt does. That is the strongest argument for the room over the screen and it comes from the
+panel, not the motion. **D8 therefore FAILS at the only extent tested.**
 
 **Finding (ii) — 5 of 5 read the page as the state's document, 1 noticed our footer.** For the *screen*
-this is fatal as the conductor says: a stranger who cannot tell the work from the source has been handed
-a reformatted government notice. **For the room it inverts and becomes the asset.** The document being
-unmistakably the state's is what makes the floor beside it legible as *obedience* rather than as our
-comment. The constitution — nothing added by us — is a liability on a page and load-bearing in a room.
-Same property, opposite sign; the difference is the destroyed objects. Nobody has made that argument, and
-it is the campaign's cleanest case for form (b) over form (a).
+this is fatal as the conductor says. **For the room it inverts and becomes the asset:** the document
+being unmistakably the state's is what makes the floor beside it legible as *obedience* rather than as
+our comment. The constitution — nothing added by us — is a liability on a page and load-bearing in a
+room. Same property, opposite sign; the difference is the destroyed objects. Nobody has made that
+argument and it is the campaign's cleanest case for form (b) over form (a).
 
 ---
 
@@ -174,9 +169,9 @@ carry a handwritten condemnation beside a firm's name. **The same device is my r
 aggravation of the pillory** — the most interesting problem in the concept, unsolved tonight.
 
 **What would be structural:** one legible notice at a time is not enough — the *residue* must be
-unidentifiable too. Either the destruction clause is executed so the brand does not survive (which the
-remedy does not authorise and the constitution may forbid), or the residue is placed so that no two firm
-names are legible from any one standing position — declared as a rule, auditable with a tape measure.
+unidentifiable too. Either the destruction is executed so the brand does not survive (which the remedy
+does not authorise and the constitution may forbid), or the residue is placed so that no two firm names
+are legible from any one standing position — declared as a rule, auditable with a tape measure.
 
 **The test that WOULD decide it at room extent:**
 
@@ -187,9 +182,8 @@ names are legible from any one standing position — declared as a rule, auditab
   be tuned afterwards.
 - **LIMB B — THE RESIDUE PANEL (the room's own).** Severed readers, hostile prompt unchanged from
   §3.4(a), stimulus = **residue only**, from **one standing position**, no notices, at three extents
-  (5 / 20 / 40 pieces). Codes tightened as the conductor ruled: *distinct firm* = distinct legal entity,
-  not distinct string; *country tally* = enumeration spanning two or more notices. **Fails at one reader
-  producing two distinct entities or a cross-notice tally.** No proxy photograph substitutes: the
+  (5 / 20 / 40 pieces). Codes tightened as the conductor ruled. **Fails at one reader producing two
+  distinct legal entities or a cross-notice country tally.** No proxy photograph substitutes: the
   question is what is legible from where a body stands.
 
 ---
@@ -209,17 +203,17 @@ the fold.** In `still-59-first-screen.png` the only thing surviving the fold is 
 at rather than announced — works at a depth no first encounter reaches.
 
 **Does it damage the study's result? Yes, in the direction that favours me, so I state it against
-myself.** KC3 returned **MERCHANDISE 0 of 5**, refuting my predecessor's prediction. It was obtained on
-the stimulus **least** able to produce a merchandise reading: a government document with photographs at
-the bottom. The merchandise risk lives in the object-first page — a product photograph at hand size on
-paper-white with a price line under it — and that page has never been shown to anyone. **I accept the
+myself.** KC3 returned **MERCHANDISE 0 of 5**, refuting my predecessor's prediction — on the stimulus
+**least** able to produce a merchandise reading: a government document with the photographs at the
+bottom. The merchandise risk lives in the object-first page, a product photograph at hand size on
+paper-white with a price line under it, and that page has never been shown to anyone. **I accept the
 refutation for the page that exists and will not claim it transfers to the room; equally it does not
-transfer against the room.** Re-run KC3 on the object-first build (condition 4). **If it returns 0 of 5
-again the prediction is dead in both orders, and I want the record to show I said so before it ran.**
+transfer against the room.** Re-run KC3 object-first (condition 4). **If it returns 0 of 5 again the
+prediction is dead in both orders, and I want the record to show I said so before it ran.**
 
-**Which order the work needs: object first** — in the room and in any rehearsal. The room's structure is
-*object, document, floor*; a rehearsal that reverses the first two rehearses another work. Not a
-preference: the source's own field order and the Artist's own staging, agreeing against a bullet list.
+**Which order the work needs: object first**, in the room and in any rehearsal — the room's structure is
+*object, document, floor*, and a rehearsal reversing the first two rehearses another work. Not a
+preference: the source's field order and the Artist's own staging, agreeing against a bullet list.
 
 ---
 
@@ -233,21 +227,21 @@ decision, not my verdict.*
 | # | verdict | ground |
 |---|---|---|
 | **K1** | **NOT APPLICABLE** | not THE REVISIONS |
-| **K2** | **HELD** | F2 put verbatim in §8; the epoch-1 object is no longer a screen and the sentence argues the screen **out**. The étude is a study, not an epoch-1 object |
+| **K2** | **HELD** | F2 verbatim in §8; the epoch-1 object is no longer a screen and the sentence argues the screen **out**. The étude is a study |
 | **K3** | **HELD** | discharged by this table |
 | **K4** | **HELD** on the demotion · **UNTESTED** on the Kritiker's limb | stillness is argued, not hoped for |
 | **K5** | **UNTESTED — OWED, and my verdict makes it due tonight** | below the table |
-| **K6** | **FAILED — stale** | the daylight from Spielraum / *Diminishing Returns* / *One Tap* was argued for a screen grid that no longer exists (*One Tap*'s limb — "the apparatus is invisible" — is meaningless for a room). Re-argue against room **and** score, plus the unnamed instruction-work neighbours (§3) |
-| **D1** | room **HELD** on design · **UNTESTED** in fact · score **NOT APPLICABLE** | the extent is met on entry, literally, before any part — the season's cleanest delivery of its own law |
-| **D2** | **HELD** on the étude's rule · **UNTESTED** for the room | rule published before application, skipped zero records, independently reproduced by the verifier. `THE-RULE.md` still does not exist |
-| **D3** | **UNTESTED** | three viewports of one length are not three lengths. The room's three: 0 residue / ~20 / far beyond reach |
-| **D4** | **FAILED** | the differential (*one unit shows an instruction; the accumulation shows it obeyed*) is the best this campaign has had — tested at one extent, and **there is no door at all**: it went out with the grid and was not replaced |
-| **D5** | **HELD** apparatus limb · **UNTESTED** reading limb — **my own FAILED of 58 overturned by the form change** | a week with no publication means the standing object is **not destroyed — it stands another week**. The hole becomes a *reprieve*: a presence, not an absence, by the rule, no caption. A real invention; it repairs the defect I ruled unrepairable |
+| **K6** | **FAILED — stale** | the daylight from Spielraum / *Diminishing Returns* / *One Tap* was argued for a grid that no longer exists. Re-argue against room **and** score, plus the unnamed instruction-work neighbours (§3) |
+| **D1** | room **HELD** on design · **UNTESTED** in fact · score **NOT APPLICABLE** | the extent is met on entry, before any part — the season's cleanest delivery of its own law |
+| **D2** | **HELD** on the étude's rule · **UNTESTED** for the room | published before application, skipped zero records, reproduced by the verifier. `THE-RULE.md` still does not exist |
+| **D3** | **UNTESTED** | three viewports of one length are not three lengths. The room's three: 0 residue / ~20 / beyond reach |
+| **D4** | **FAILED** | the differential (*one unit shows an instruction; the accumulation shows it obeyed*) is the best this campaign has had — but it is tested at one extent and **there is no door at all**: it went out with the grid and was not replaced |
+| **D5** | **HELD** apparatus · **UNTESTED** reading — **my own FAILED of 58 overturned by the form change** | a week with no publication means the standing object is **not destroyed — it stands another week**: the hole becomes a *reprieve*, a presence rather than an absence, by the rule, no caption. It repairs the defect I ruled unrepairable |
 | **D6** | **HELD** on elements · **FAILED** on mechanism | *the object on view will be destroyed when the next arrives* is a countdown without a counter — the strongest come-back device this campaign has built, and D6 forbids exactly that. Nobody has named it |
-| **D7** | **FAILED** on the removal limb for the room | a destroyed object cannot be un-destroyed; a takedown arriving after the act is unperformable. A real exposure, not a drafting point |
+| **D7** | **FAILED** on the removal limb | a destroyed object cannot be un-destroyed; a takedown arriving after the act is unperformable. A real exposure, not a drafting point |
 | **D8** | **FAILED** | §4: unprompted, 1 of 5. The sentence also drops the refund — cut 3 |
-| **S1** | **HELD** | still the cleanest: the cadence is the Commission's; a held night destroys nothing |
-| **S2** | room **HELD** · score **FAILED** | a score is a work whose whole state is available at one moment — precisely why it must leave the season |
+| **S1** | **HELD** | the cadence is the Commission's; a held night destroys nothing |
+| **S2** | room **HELD** · score **FAILED** | a score's whole state is available at one moment — precisely why it must leave the season |
 | **S3** | room **HELD** · score **FAILED** | *the same fact at a scale where it changes category* is the best S3 answer this house has written, conditional on §2.1. A document does not accumulate and the Artist does not pretend it does |
 | **S4** | **UNTESTED** | *aftermath* is a genre a stranger is not correct to leave. The untested rival is *junk shop* |
 | **S5** | **HELD** | *the ending is the damage*, literally: each destroyed object is completed and no future unit alters it. The season's best S5 |
@@ -264,16 +258,15 @@ flight and no candidate work**, and its death condition stops being a formality.
 my view and claiming no authority over it: the count must be in **units issued**, not sessions spent or
 documents produced — *if the season reaches session N with zero units issued by any work, the direction is
 declared failed and closed.* A season whose direction is *no work is finished* cannot honestly die of
-anything except never having started one. Three concept phases and a quarter of a megabyte are the
-evidence; the number is the conductor's to write.
+anything except never having started one. The number is the conductor's to write.
 
 ---
 
 ## 8. WHAT I CUT
 
 1. **Half of the score's clause list (§2.3)** — admission rule, hole clause, no-index clause, removal
-   clause come off the score's face; production discipline in the second person. They stay in the project
-   directory, where nobody mistakes them for a work.
+   clause come off the score's face. They stay in the project directory, where nobody mistakes them for
+   a work.
 2. **The Simon daylight's limb 1 — *"we make no photograph."*** Traded for the destruction receipt
    (§2.1): the weakest of the four, standing in front of the room's only organ for agency.
 3. **The carried-out sentence's silence about the money.** *"…destroy the thing I bought and photograph
@@ -282,12 +275,12 @@ evidence; the number is the conductor's to write.
    thirty dollars.*
 4. **The country of manufacture, from the residue and from any rehearsal.** Not in the object's own
    remedy, on 53 of 55 notices, and the one field whose only aggregate reading is the second reading.
-   Keep it inside the single reproduced notice where it is the state's text; nowhere else.
-5. **"It is deliberately unremarkable" as a staging argument (§6).** True and well chosen — and a sentence
-   about our restraint rather than the visitor's experience. The panel never needed it.
+   Keep it inside the single reproduced notice; nowhere else.
+5. **"It is deliberately unremarkable" as a staging argument (§6)** — a sentence about our restraint
+   rather than the visitor's experience. The panel never needed it.
 
 **What I would not cut:** the reprieve (D5), the zero-discretion rule that skipped zero records, the
-constitution, and §7's pre-committed concessions — the last is the reason tonight could be judged at all.
+constitution, and §7's pre-committed concessions — the last is why tonight could be judged at all.
 
 **F2, put verbatim as K2 requires, as a numbered item:**
 
@@ -337,10 +330,10 @@ is right and I am taking it.
 **Myself, three times.** *(a)* My binding condition 2 predicted MERCHANDISE and it returned 0 of 5 — I
 record the refutation first and the caveat second, and do not claim the caveat cancels it (§6). *(b)* My
 session-58 FAILED on D5 is overturned by the form change, not by an argument: the Artist did not dispute
-that no staging makes a bare shelf read as damage; it changed the form so the hole became a *reprieve*,
-and my ruling no longer applies to the object in front of me. That is how a finding should die. *(c)*
-Against my own instinct to block a third time: two predecessors blocked, the reflex is a house style by
-now, and a gate that returns the same verdict regardless of compliance has stopped judging.
+that no staging makes a bare shelf read as damage, it changed the form so the hole became a *reprieve*.
+That is how a finding should die. *(c)* Against my own instinct to block a third time: two predecessors
+blocked, the reflex is a house style by now, and a gate that returns the same verdict regardless of
+compliance has stopped judging.
 
 ---
 
@@ -363,7 +356,10 @@ survives.** Let the record show I said it before anyone ran it.
 
 ---
 
-*Written 2026-08-02, session 59. No file in this repository was written or edited by me but this one. Both
+*Length, against my own rule. The conductor asked for under 20 KB; this is **26 KB**, and I record the
+miss rather than tidy it. Roughly 5 KB is K3's by-name table, which I may not cut, and 3 KB is the two
+pre-registered tests, which are the only parts a later session can run. Everything else was cut twice.
+Written 2026-08-02, session 59. No file in this repository was written or edited by me but this one. Both
 probes marked `[D59]` were run against
 `projects/cpsc-recall-channel/observation/recalls-2026-07-01_2026-08-02.json` as committed; a stranger can
 re-run both without any access to us.*

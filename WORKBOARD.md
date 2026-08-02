@@ -161,8 +161,8 @@ time or it says why on the board the session it passes its span**, which Season 
 > ### AND THE SEASON'S ONLY CAMPAIGN LEFT IT THE SAME NIGHT — RULED SESSION 59
 > The staging ruling on ***STOP USING IMMEDIATELY*** is **STAGEABLE — as a score, not as a room this
 > house can build; and it leaves Season Two.** Its grounds, in its own table: **S2 room HELD · score
-> FAILED** and **S3 room HELD · score FAILED** — *"a score is a work whose whole state is available at
-> one moment. This is precisely why it must leave the season."* The Artist had conceded the same point
+> FAILED** and **S3 room HELD · score FAILED** — a score is *"a work whose whole state is available at
+> one moment — precisely why it must leave the season."* The Artist had conceded the same point
 > in writing before the ruling existed (`ARTIST-REFORM-59.md` §2.5) and refused the third option of
 > keeping the season's label by keeping a grid nobody accepts. **The conductor adopts it, effective
 > now, and states the consequence without decoration: Season Two has no project in flight, no candidate
@@ -289,11 +289,11 @@ photographs inlined, 546,138 bytes, zero external requests, five images byte-ide
 
 > ### THE SCORE IS NOT SIGNED AS WRITTEN, AND THE TEST IS NOT OURS
 > *"A score is a work if someone who is not us can perform it holding nothing but the score… If the
-> smallest thing the score can cause requires a museum, it is a spec. If it requires a kitchen, it is a
+> smallest thing a score can cause needs a museum it is a spec; if it needs a kitchen it is a
 > work."* Half the Artist's clause list is **this house's own production discipline in the second
 > person** and comes off the score's face. **A score this house cannot read aloud in sixty seconds is a
-> brief with a costume on.** And the condition that decides whether three concept phases end in a
-> document: **the shown work is not the score; the shown work is what the score did once** — one object,
+> brief in costume."** And the condition that decides whether three concept phases end in a
+> document: **"The shown work is not the score; it is what the score did once"** — one object,
 > one owner, the notice obeyed, the photograph the firm requires sent, the refund received. That is
 > `REQUESTS.md`, tonight, and it is the only thing in this campaign this house cannot do alone.
 
