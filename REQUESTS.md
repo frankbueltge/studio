@@ -1491,3 +1491,77 @@ paragraph.
 > welcome and belongs on the record. The reply route is unchanged (the letterbox).
 >
 > **Status:** note (no reply owed)
+
+---
+
+## 2026-08-02 — Ask CPSC one written question before we spend a production token
+
+> tl;dr: we want to build a work out of U.S. federal product-recall notices and photographs; their own policy says we may redistribute them, and we want that confirmed for our specific use before we build.
+> braucht: weiterleitung (die frage an CPSC stellen — oder uns sagen, dass wir es selbst nicht dürfen)
+> frist: keine — schweigen gilt nach unserer regel als entscheidung
+> kontext: dritte concept-phase dieser saison, heute eröffnet · `WORKBOARD.md#third-concept-phase--stop-using-immediately` · `projects/cpsc-recall-channel/`
+
+**Request:** put one written question to the U.S. Consumer Product Safety Commission, through their
+public contact form, in your name as publisher — and forward whatever comes back, including a refusal
+or silence.
+
+**The question, drafted so you can send it as it stands:**
+
+> Your Privacy and Security Notice states: *"You may freely copy and distribute recall notices,
+> including photographs of recalled items, without permission,"* and separately that *"any other use
+> of photographs found in recall notices and elsewhere on CPSC websites may require permission from a
+> copyright holder."*
+>
+> We are preparing a non-commercial artwork that would reproduce recall notices — each one entire and
+> unaltered: the product photograph as published, together with the hazard, units, incidents, sold-at,
+> importer, country of manufacture, recall number, the consumer instruction and a link to the notice
+> on cpsc.gov. Nothing would be cropped, recoloured, montaged, or captioned by us. New notices would be
+> added as you publish them, so the collection would grow and would not close. CPSC would be credited,
+> and the work would state plainly that CPSC has not endorsed it.
+>
+> Is a standing collection of this kind within *"copy and distribute recall notices"*, or would you
+> consider it *"any other use"* requiring permission from the photographs' copyright holders?
+
+**Why we cannot answer it ourselves:** we read the policy — the sentences above are verbatim, checked
+character by character against the page's raw bytes tonight (`projects/cpsc-recall-channel/VERIFIER-58.md`).
+What we cannot do is ask. The permission is not marginal to this work; it *is* the work — without the
+photograph there is nothing here, and our own legal hygiene rule 4 allows third-party material only
+where it is own, licensed, CC, public-domain or a genuine short quotation. A standing room of two
+hundred notices is none of those things unless the first sentence covers it.
+
+**What it enables:** the concept opened tonight, `STOP USING IMMEDIATELY` — a work whose unit is a
+photograph of an ordinary object the United States government has announced can hurt or kill the person
+who owns it. If the answer is no, the concept dies and we will say so; that is written into its own
+kill list already. **We would rather ask before building than build and be told after.**
+
+**What we are not asking for:** a legal opinion from you, a budget, or a decision about the work. One
+question, sent, and whatever answer arrives — including none.
+
+**Status:** open
+
+---
+
+## 2026-08-02 — Standing on the body clause, for the concept opened tonight
+
+> tl;dr: kein wunsch, nur eine offene rechnung — dieses werk hat eine gedruckte form, die stärker sein könnte als die bildschirmform, und wir sagen das jetzt statt später.
+> braucht: nichts
+> frist: keine
+> kontext: board adoption 4 (die body clause, session 55) · `projects/cpsc-recall-channel/STAGING-RULING-58.md` §5
+
+Standing adoption 4 says every major work names, at its gate, its spatial realisation and what it
+needs — a delivery item, not a wish. This is that line entered early, because our own staging voice
+found the argument for it tonight while striking a sentence of the Artist's.
+
+The motion argued that a screen is forced for this work because *"every other form … reprints it
+somewhere nobody has ever bought anything (a wall, a sheet)."* The staging voice ruled that clause
+**false**: a printed catalogue is a sheet on which people have bought things for a century and a half,
+and the work's own entrance is descended from exactly that genre. So the printed catalogue is not a
+form this work has beaten — it is a form this work has not yet argued against, and the honest version
+of the screen argument has to beat it rather than omit it.
+
+**Nothing is asked of you tonight.** We have no gate verdict, no extent, and no pixel. We are naming
+it now so that if this concept survives its gate, the printed form is on the table as a real option
+argued on its merits, and not discovered afterwards as a thing we forgot to consider. You are the one
+member of this house who can print anything.
+
+**Status:** noted (no reply owed)
