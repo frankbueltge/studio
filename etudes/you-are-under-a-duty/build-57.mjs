@@ -14,13 +14,16 @@
 //   PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node build-57.mjs <subcommand> [flags]
 //
 // Subcommands:
-//   html        --order O1|O2 --mark M-A|M-B --placement P1|P2 --extent N [--closed] [--out FILE] [--data FILE]
-//   shot        --html FILE --width N --height N --mode full|viewport --out FILE.png
-//   downscale   --in FILE.png --out FILE.png --factor 0.25
-//   pixels      --in FILE.png --mode groundtest|markband [--band-top N --band-height N]
-//   measure-dom --html FILE --width N
-//   digitcheck  --html FILE --width N --height N
-//   wrapcount   --html FILE --width N
+//   html         --order O1|O2 --mark M-A|M-B --placement P1|P2 --extent N [--closed] [--out FILE] [--data FILE]
+//   html3        --extent N [--foot-only] [--out FILE] [--data FILE]   (session-58 encoding repair, e3)
+//   shot         --html FILE --width N --height N --mode full|viewport --out FILE.png
+//   downscale    --in FILE.png --out FILE.png --factor 0.25
+//   pixels       --in FILE.png --mode groundtest|markband [--band-top N --band-height N]
+//   measure-dom  --html FILE --width N
+//   measure-dom3 --html FILE --width N   (e3 variant: rule lives inside p.sentence, no .rule-line)
+//   digitcheck   --html FILE --width N --height N
+//   wrapcount    --html FILE --width N
+//   wrapcount3   --html FILE --width N   (e3 variant)
 //
 // No <script>, no external reference, no web font is ever written into the emitted
 // page itself — this generator is a build-time tool, its own tags never ship.
@@ -127,7 +130,7 @@ export function buildEntries(order, dataPath) {
       const dueMs = parseUKDate(dueStr).getTime();
       const days = daysBetween(dueMs, OBS_DATE);
       const recipients = sentTo.split('|').map((s) => s.trim());
-      enriched.push({ ti, publishedMs, deceased, dueMs, days, recipients });
+      enriched.push({ ti, publishedMs, deceased, dueMs, days, recipients, coroner, area });
     });
   });
 
@@ -354,6 +357,182 @@ ${footer}
 }
 
 // ---------------------------------------------------------------------------
+// e3 — the encoding repair (session 58)
+//
+// Binding changes over e2 (see REPORT-57.md §8.0 and VERIFIER-57.md §2):
+//   CHANGE 1 — the duty sentence is the state's own second-person sentence,
+//     56-day clause kept inside the clause, not the third-person paraphrase
+//     e2 printed.
+//   CHANGE 2 — no common left origin for the rule. The rule begins at the x
+//     where the last character of the duty sentence ends, on the same line,
+//     and wraps as text wraps: the rule is emitted as inline-block spans
+//     directly inside the same <p class="sentence"> as the sentence text,
+//     immediately after the sentence's final character, with no intervening
+//     whitespace — not as a separate flex-line block below the text as in
+//     e2/e1. This is the one structural change from buildHTML(); everything
+//     else (data pipeline, ruleSegmentsHtml, marksHtml, hash32/markBHeight)
+//     is reused unmodified.
+// ---------------------------------------------------------------------------
+
+// Three head sentences, verbatim from the state (bound by the session-58
+// instruction; sentence 3 independently confirmed word-for-word against
+// VERIFIER-57.md §2(b)'s live fetch of Chief Coroner's guidance ch.16 §47).
+const HEAD_SENTENCES_E3 = [
+  'Coroners have a statutory duty, should the relevant pre-conditions be met, to make a report to those who can take action to prevent future deaths.',
+  "These reports have been compiled after receiving confirmation from coroner's offices that these responses have not been received.",
+  'Where no reply is received or an inadequate response is made a coroner would exceed their powers if they chased a missing reply or requested additional detail in respect of an inadequate response.',
+];
+
+const DUTY_PREFIX_E3 = 'You are under a duty to respond to this report within 56 days of the date of this report, namely by the ';
+
+function buildEntryHtml3(e, extent) {
+  const coronerLine = `<p class="coroner-line">${escapeHtml(e.coroner)}, coroner, ${escapeHtml(e.area)}.</p>`;
+  const recipientBlocks = e.recipients.map((r) => {
+    const sentenceText = `${DUTY_PREFIX_E3}${dateWords(new Date(e.dueMs))}.`;
+    // No whitespace between the sentence's closing "." and the first .seg,
+    // and none between consecutive .seg/.mark spans: the rule's first pixel
+    // must sit immediately against the sentence's last pixel, on the same
+    // line, per CHANGE 2. .seg/.mark are display:inline-block, which gives
+    // Chromium (and any standard UA) an implicit soft-wrap opportunity on
+    // both sides of each one even without a space present, so the rule
+    // wraps exactly the way the surrounding prose wraps.
+    const ruleHtml = `${ruleSegmentsHtml(e.days)}${marksHtml('M-A', extent)}`;
+    return `<p class="recip-name">${escapeHtml(r)}</p>\n<p class="sentence">${escapeHtml(sentenceText)}${ruleHtml}</p>`;
+  }).join('\n');
+  return `<section class="entry">\n<p class="name">${escapeHtml(e.deceased)}</p>\n${coronerLine}\n${recipientBlocks}\n</section>`;
+}
+
+export function buildHTML3(opts) {
+  const { extent, footOnly = false, data = DEFAULT_DATA } = opts;
+  if (!Number.isInteger(extent) || extent < 1) throw new Error(`bad extent ${extent}`);
+
+  // Ordering fixed to O1 (oldest duty first) per the session-58 brief; mark
+  // treatment fixed to M-A.
+  const entries = buildEntries('O1', data);
+  const entryHtml = entries.map((e) => buildEntryHtml3(e, extent)).join('\n');
+
+  const headSentencesHtml = HEAD_SENTENCES_E3.map((s) => `<p class="sentence">${escapeHtml(s)}</p>`).join('\n');
+  const headerSentences = footOnly ? '' : `\n${headSentencesHtml}`;
+
+  const colophonLines = [
+    `<p>Source: judiciary.uk, non-responses to Prevention of Future Deaths reports, https://www.judiciary.uk/guidance-and-resources/non-responses-to-prevention-of-future-death-pfd-reports/; Chief Coroner's guidance, chapter sixteen, https://www.judiciary.uk/guidance-and-resources/chapter-16-reports-to-prevent-future-deaths-pfds/; retrieved the first of August, two thousand and twenty-six.</p>`,
+  ];
+  // "Everything printed at the head is printed again, identically, at the
+  // foot" — the footer always carries the three sentences, whether or not
+  // the header also does (footOnly moves them out of the header only).
+  const footer = `<footer>\n${headSentencesHtml}\n${colophonLines.join('\n')}\n</footer>`;
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOU ARE UNDER A DUTY</title>
+<style>
+:root { color-scheme: light; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #000000;
+}
+body {
+  font-family: Georgia, Cambria, "Iowan Old Style", "Times New Roman", Times, serif;
+  font-size: 19px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 72px 24px 160px;
+  box-sizing: border-box;
+}
+header {
+  margin: 0 0 4.5em;
+}
+h1 {
+  font-size: 1em;
+  font-weight: normal;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.9em;
+}
+header p {
+  margin: 0;
+  font-size: 0.92em;
+}
+.entry {
+  margin: 0 0 3.4em;
+}
+.entry:last-child {
+  margin-bottom: 0;
+}
+p.name {
+  font-variant: small-caps;
+  font-size: 1.08em;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5em;
+}
+p.coroner-line {
+  margin: 0.35em 0 0;
+  font-size: 19px;
+}
+p.recip-name {
+  margin: 1.4em 0 0;
+  font-size: 19px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+/* .sentence is used identically in the body, the header and the footer —
+   the font-size is pinned in px here (not left to inherit em) precisely so
+   that the three head sentences render pixel-identical whether they sit in
+   <header> or <footer>, despite footer's own 0.85em context font-size
+   below; this rule's class specificity beats both "header p" and the
+   ancestor cascade, so no separate header/footer override is needed or
+   present anywhere in this sheet. */
+p.sentence {
+  margin: 0.15em 0 0;
+  font-size: 19px;
+}
+.seg {
+  display: inline-block;
+  height: 2px;
+  background: #000000;
+  vertical-align: text-bottom;
+}
+.mark {
+  display: inline-block;
+  width: 3px;
+  height: 9px;
+  background: #000000;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+}
+footer {
+  margin-top: 5em;
+  font-size: 0.85em;
+}
+footer p + p {
+  margin-top: 0.6em;
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>YOU ARE UNDER A DUTY</h1>
+<p>Observed the first of August, two thousand and twenty-six.</p>${headerSentences}
+</header>
+${entryHtml}
+${footer}
+</main>
+</body>
+</html>
+`;
+}
+
+// ---------------------------------------------------------------------------
 // CLI
 // ---------------------------------------------------------------------------
 
@@ -387,6 +566,20 @@ async function cmdHtml(flags) {
     placement: flags.placement,
     extent: Number(flags.extent),
     closed: !!flags.closed,
+    data: flags.data || DEFAULT_DATA,
+  });
+  if (flags.out) {
+    fs.writeFileSync(flags.out, html);
+    console.error(`wrote ${flags.out} (${Buffer.byteLength(html)} bytes)`);
+  } else {
+    process.stdout.write(html);
+  }
+}
+
+async function cmdHtml3(flags) {
+  const html = buildHTML3({
+    extent: Number(flags.extent),
+    footOnly: !!flags['foot-only'],
     data: flags.data || DEFAULT_DATA,
   });
   if (flags.out) {
@@ -649,6 +842,157 @@ async function cmdMeasureDom(flags) {
   }
 }
 
+// e3 DOM-geometry measurement. e3 has no .rule-line wrapper: .seg/.mark are
+// inline-block children of the same <p class="sentence"> as the sentence
+// text, so "rule instance" = one p.sentence, and "rule line" = one visual
+// line of that p.sentence that contains at least one .seg or .mark (grouped
+// by rendered *bottom* edge, same top-vs-bottom fix as measure-dom's comment
+// explains, since .seg (2px) and .mark (9px) share a line via
+// vertical-align:text-bottom, not a common top).
+async function cmdMeasureDom3(flags) {
+  const { chromium } = await loadPlaywright();
+  const width = Number(flags.width);
+  const height = Number(flags.height || 2000);
+  const browser = await chromium.launch();
+  try {
+    const page = await browser.newPage({ viewport: { width, height } });
+    await page.goto('file://' + path.resolve(flags.html));
+    const result = await page.evaluate(() => {
+      function lineRectsOf(el) {
+        const rects = [];
+        for (const node of el.childNodes) {
+          if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length) {
+            const r = document.createRange();
+            r.selectNodeContents(node);
+            for (const cr of r.getClientRects()) rects.push({ x: cr.left, y: cr.top, w: cr.width, h: cr.height });
+          }
+        }
+        return rects;
+      }
+
+      const entries = Array.from(document.querySelectorAll('.entry'));
+      const textLines = []; // every visual text line of every p.name / p.coroner-line / p.recip-name / p.sentence, body only
+      const nameTops = [];
+      const blockLineCounts = []; // total visual lines per entry (name + coroner line + all recipient blocks)
+      const entryRuleGroups = []; // one array per entry, each containing that entry's per-recipient rule-instance objects
+
+      for (const entry of entries) {
+        const nameEl = entry.querySelector('p.name');
+        const coronerEl = entry.querySelector('p.coroner-line');
+        const sentenceEls = Array.from(entry.querySelectorAll('p.sentence'));
+        const recipEls = Array.from(entry.querySelectorAll('p.recip-name'));
+
+        const nameRects = lineRectsOf(nameEl);
+        nameRects.forEach((r) => textLines.push({ x: r.x, y: r.y }));
+        nameTops.push({ top: nameRects[0] ? nameRects[0].y : null, singleRecipient: sentenceEls.length === 1 });
+
+        let blockLines = nameRects.length;
+
+        const coronerRects = lineRectsOf(coronerEl);
+        coronerRects.forEach((r) => textLines.push({ x: r.x, y: r.y }));
+        blockLines += coronerRects.length;
+
+        recipEls.forEach((rEl) => {
+          const rr = lineRectsOf(rEl);
+          rr.forEach((r) => textLines.push({ x: r.x, y: r.y }));
+          blockLines += rr.length;
+        });
+
+        const entryRules = [];
+        for (const sEl of sentenceEls) {
+          // text-only line rects, for textLines/blockLines/T5 as before
+          const rects = lineRectsOf(sEl);
+          rects.forEach((r) => textLines.push({ x: r.x, y: r.y }));
+
+          // rule geometry: .seg/.mark children of this one p.sentence
+          const segs = Array.from(sEl.querySelectorAll('.seg'));
+          const marks = Array.from(sEl.querySelectorAll('.mark'));
+          const segLines = new Map(); // bottom -> {left,right,width}
+          for (const s of segs) {
+            const r = s.getBoundingClientRect();
+            const bottom = Math.round(r.bottom);
+            if (!segLines.has(bottom)) segLines.set(bottom, { left: Infinity, right: -Infinity, width: 0 });
+            const g = segLines.get(bottom);
+            g.left = Math.min(g.left, r.left);
+            g.right = Math.max(g.right, r.right);
+            g.width += r.width;
+          }
+          const allLines = new Map(); // rule + marks combined, for wrapped-line count
+          for (const el of [...segs, ...marks]) {
+            const r = el.getBoundingClientRect();
+            const bottom = Math.round(r.bottom);
+            allLines.set(bottom, true);
+          }
+          // sentence's own last text-line bottom+right, to compare against
+          // the rule's first line — this is what checks CHANGE 2 held: the
+          // rule's first line should share the sentence text's last line.
+          const lastTextRect = rects.length ? rects[rects.length - 1] : null;
+
+          const segLineWidths = Array.from(segLines.values()).map((g) => g.width);
+          const segLineRights = Array.from(segLines.values()).map((g) => g.right);
+          const segLineLefts = Array.from(segLines.values()).map((g) => g.left);
+          const segLineBottoms = Array.from(segLines.keys()).sort((a, b) => a - b);
+
+          ruleInstances.push({
+            segLineCount: segLines.size,
+            segLineWidths,
+            segLineRights,
+            segLineLefts,
+            segLineBottoms,
+            wrappedLineCountWithMarks: allLines.size,
+            firstLineLeft: segLineLefts.length ? segLineLefts[0] : null,
+            sentenceLastLineRight: lastTextRect ? lastTextRect.x + lastTextRect.w : null,
+            sentenceLastLineBottom: lastTextRect ? Math.round(lastTextRect.y + lastTextRect.h) : null,
+          });
+
+          blockLines += rects.length + allLines.size;
+        }
+
+        blockLineCounts.push(blockLines);
+      }
+
+      return {
+        textLines, nameTops, blockLineCounts, ruleInstances,
+        viewport: { width: window.innerWidth, height: window.innerHeight },
+        mainContentWidth: (() => {
+          const m = document.querySelector('main');
+          const cs = getComputedStyle(m);
+          return m.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        })(),
+      };
+    });
+    console.log(JSON.stringify(result));
+  } finally {
+    await browser.close();
+  }
+}
+
+async function cmdWrapcount3(flags) {
+  const data = await (async () => {
+    const { chromium } = await loadPlaywright();
+    const width = Number(flags.width);
+    const browser = await chromium.launch();
+    try {
+      const page = await browser.newPage({ viewport: { width, height: 2000 } });
+      await page.goto('file://' + path.resolve(flags.html));
+      return await page.evaluate(() => {
+        const sentences = Array.from(document.querySelectorAll('p.sentence'));
+        // only recipient-slot sentences carry a rule (head/foot .sentence
+        // paragraphs have no .seg children at all)
+        return sentences.filter((p) => p.querySelector('.seg, .mark')).map((p) => {
+          const segs = Array.from(p.querySelectorAll('.seg'));
+          const bottoms = new Set(segs.map((s) => Math.round(s.getBoundingClientRect().bottom)));
+          return { ruleLineCount: bottoms.size, wraps: bottoms.size > 1 };
+        });
+      });
+    } finally {
+      await browser.close();
+    }
+  })();
+  const wrapCount = data.filter((d) => d.wraps).length;
+  console.log(JSON.stringify({ width: Number(flags.width), total: data.length, wrapCount, detail: data }, null, 2));
+}
+
 async function cmdDigitcheck(flags) {
   const { chromium } = await loadPlaywright();
   const width = Number(flags.width);
@@ -733,14 +1077,17 @@ async function main() {
   const flags = parseFlags(rest);
   switch (cmd) {
     case 'html': return cmdHtml(flags);
+    case 'html3': return cmdHtml3(flags);
     case 'shot': return cmdShot(flags);
     case 'downscale': return cmdDownscale(flags);
     case 'pixels': return cmdPixels(flags);
     case 'measure-dom': return cmdMeasureDom(flags);
+    case 'measure-dom3': return cmdMeasureDom3(flags);
     case 'digitcheck': return cmdDigitcheck(flags);
     case 'wrapcount': return cmdWrapcount(flags);
+    case 'wrapcount3': return cmdWrapcount3(flags);
     default:
-      console.error(`usage: build-57.mjs <html|shot|downscale|pixels|measure-dom|digitcheck|wrapcount> [flags]`);
+      console.error(`usage: build-57.mjs <html|html3|shot|downscale|pixels|measure-dom|measure-dom3|digitcheck|wrapcount|wrapcount3> [flags]`);
       process.exit(1);
   }
 }

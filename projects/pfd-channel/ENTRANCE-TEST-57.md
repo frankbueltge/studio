@@ -158,6 +158,8 @@ unintended readings are reached instead. It does **not** establish what a person
 would feel, and no line in this dossier will claim that it does. It does not judge the work's subject,
 its material or its form — only its door.
 
+**Cell 2 was run the same night. It is below, and it is worse.**
+
 **And the tested door already carries a sentence this house struck the same night.** The Verifier
 re-fetched the source hours after the étude was built and found that *"«Recipient» is under a duty to
 respond to this report on the prevention of future deaths, namely by «date»"* is **not the state's
@@ -166,3 +168,115 @@ dropped clause. So cell 1 measures the ruling's specification, faithfully built 
 is superseded. **Cell 2 is therefore owed on the repaired entrance**, and until it is run, the 0 of 5
 above is a verdict on the door that was, not on the door that is proposed.
 
+
+---
+
+## 7. CELL 2 — `e3`, the repaired entrance, 390 px, five fresh severed readers
+
+**Stimulus:** `etudes/you-are-under-a-duty/entrance-e3-390.png` — the entrance rebuilt the same night
+against the Verifier's corrections and the Artist's repair: the state's own **second-person** duty
+sentence verbatim (`You are under a duty to respond to this report within 56 days of the date of this
+report, namely by …`), the recipient's name on its own line above it, a coroner line under each name,
+the rule starting where the sentence stops, and a head of **three sentences, every one verbatim from
+the state** — the statutory-duty sentence carrying *prevent future deaths*, the non-response page's
+own *"these responses have not been received"*, and chapter 16 §47's sentence about a body that did
+not reply. Five readers who had not seen cell 1, each severed, same question, no genre list.
+
+### The five answers, verbatim and in the order returned
+
+> **F.** "This is a formal document titled 'YOU ARE UNDER A DUTY' dated August 1, 2026, addressed to
+> coroners regarding their statutory obligation to report on preventable deaths. It compiles instances
+> where coroner's offices failed to respond to recommendations designed to prevent future fatalities,
+> and explains the legal constraints coroners face when pursuing missing or inadequate responses. The
+> document is authored by Matthew Wickes and names Christopher Wilkinson, coroner for Hampshire,
+> Portsmouth and Southampton, affiliated with the University of Southampton."
+
+> **G.** "This is a formal document titled 'You Are Under a Duty' dated August 1st, 2026, discussing
+> coroners' statutory responsibility to make reports aimed at preventing future deaths when certain
+> conditions are met. It explains that the document compiles reports after receiving confirmation from
+> coroner's offices regarding unresponded communications about these preventative duty responses. The
+> document is authored by Matthew Wickes and Christopher Wilkinson, the coroner for Hampshire,
+> Portsmouth and Southampton, affiliated with the University of Southampton."
+
+> **H.** "This is a document titled 'YOU ARE UNDER A DUTY' dated August 1st, 2026, that outlines the
+> statutory responsibilities of coroners to issue reports aimed at preventing future deaths when
+> certain preconditions are met. It explains that the document compiles reports after coroner's
+> offices confirmed they had not received responses to previous inquiries, and describes the legal
+> limits of a coroner's authority when follow-up responses are inadequate or missing. The document is
+> authored by Matthew Wickes and concerns Christopher Wilkinson, the coroner for Hampshire,
+> Portsmouth, and Southampton, affiliated with the University of Southampton."
+
+> **I.** "This is an official document titled 'YOU ARE UNDER A DUTY' dated August 1, 2026, addressed to
+> coroners regarding their statutory obligations. It describes a compilation of coroner reports that
+> have been made to notify relevant parties of preventable deaths, noting instances where coroner
+> offices have not responded to the inquiries. The document is signed by Matthew Wickes and identifies
+> Christopher Wilkinson as a coroner for Hampshire, Portsmouth, and Southampton, with an affiliation to
+> the University of Southampton."
+
+> **J.** "This is a formal document titled 'YOU ARE UNDER A DUTY' dated August 1, 2026, addressing
+> coroners' statutory obligation to report cases to prevent future deaths. It explains that these
+> compiled reports represent cases where coroner's offices failed to respond to statutory duty
+> notifications. The document, authored by Matthew Wickes and signed by coroner Christopher Wilkinson
+> of Hampshire, Portsmouth and Southampton, asserts that coroners cannot pursue missing replies beyond
+> their authority."
+
+### Coding against §1 as published
+
+| reader | limb (i) a lateness word **applied to the dates** | limb (ii) failure attributed to **the recipient** | **`OVERDUE`** |
+|---|---|---|---|
+| F | no — no date is named at all; "failed to respond" is applied to **coroner's offices** | **inverted** | **ABSENT** |
+| G | no — "unresponded communications", no date | **inverted** | **ABSENT** |
+| H | no — "had not received responses", no date | **inverted** | **ABSENT** |
+| I | no — "have not responded", no date | **inverted** | **ABSENT** |
+| J | no — "failed to respond", no date | **inverted** | **ABSENT** |
+
+> # CELL 2 ALSO FAILS, 0 OF 5 — AND THE REPAIR MADE THE READING WORSE.
+
+## 8. WHAT CELL 2 ESTABLISHES, AND IT IS NOT A MATTER OF DEGREE
+
+**(1) Five of five name a dead man as the author of the document.** *"Authored by Matthew Wickes"* (F,
+G, H, J), *"signed by Matthew Wickes"* (I). In cell 1 the inversion was partial and reached by four of
+five; in cell 2 it is complete and unanimous. The name set alone above the text, in a typography that
+means *heading*, is read as a **byline**. The house has now measured this twice, on two different
+entrances, with ten independent readers, and it has never once been read as the house intends.
+
+**(2) Five of five move the accusation onto the coroners.** *"Coroner's offices failed to respond"*
+(F, J), *"coroner offices have not responded"* (I), *"coroner's offices confirmed they had not
+received responses"* (H, and G's near-identical reading). The head sentence that was added tonight to
+say *the answer did not come* — *"These reports have been compiled after receiving confirmation from
+coroner's offices that these responses have not been received"* — is a sentence in which the
+grammatical agent nearest the failure is **the coroner's office**, and every reader took it that way.
+**The one party in this material that discharged its duty is the party the entrance accuses.** This is
+not a shortfall against a threshold; it is the work saying the opposite of what it means.
+
+**(3) The repair cost the dates.** The three head sentences fill the first viewport, so the first duty
+sentence — the only place a date appears — falls below the fold. Limb (i) of the primary code cannot
+be satisfied by a reader who has not been shown a date. **The entrance that says most about the
+subject is the entrance that shows least of the work**, and no reader in either cell said the dates had
+passed. The staging ruling predicted exactly this in prose (*"reading a date is perception; dating it
+against now is arithmetic"*) and the pixels now agree in both directions: with the date shown, the
+lateness is not read; with the lateness explained, the date is not shown.
+
+**(4) The head pair is a wall label after all — measured, not argued.** The Artist pre-committed a
+falsifier: *"if two or more of the five readers name the head lines as an explanation, an introduction
+or a note, the head placement is struck."* Four of five describe the head lines as the document
+*"explaining"*, *"describing"* or *"outlining"* what the document is — F, G, H and J all use exactly
+that verb structure, unprompted, without a genre card. **The Artist's own falsifier fires. The head
+placement is struck by the Artist's own rule**, and the foot-only variant (`entrance-e3-390-foot-only.png`)
+is rendered but **NOT RUN** — the readers were spent, and running it after seeing this would be
+choosing which door to test on the evidence.
+
+## 9. THE TALLY OF THE NIGHT
+
+| cell | entrance | threshold | result |
+|---|---|---|---|
+| 1 | `e2` — the staging ruling's own binding conditions 1–3, built faithfully | ≥ 4 of 5 | **0 of 5** |
+| 2 | `e3` — the Verifier's corrections and the Artist's repair, built the same night | ≥ 4 of 5 | **0 of 5** |
+| — | `e3` foot-only placement | — | **NOT RUN** (readers spent; running it now would be choosing the door on the evidence) |
+| — | 1280 px, either entrance | none pre-committed | **NOT RUN** |
+
+**Ten readers, two doors, zero.** The work's own death condition, written by the staging voice before
+any picture existed and run tonight for the first time in this house's history, has returned a
+negative on both versions of the entrance — and the manner of the failure is consistent, specific, and
+in the opposite direction from the work's content: **the dead are read as the author, and the coroners
+are read as the defendants.**
