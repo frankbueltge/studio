@@ -389,6 +389,44 @@ fill or a sparse countable row) and by eye.
 
 ## 8. What I would flag against myself
 
+0. **The most important one, found by accident, not by my own checking.** While finalising, `git
+   status` showed `build-57.mjs` as *modified* rather than *untracked* — a same-day commit
+   (`5076f75`, "the Verifier re-runs the response-slot test by a second hand and finds the face
+   sentence unfaithful to the state's own words") already existed in this shared repository's
+   history, containing an independently-built `build-57.mjs` startlingly similar in structure to
+   this one, alongside `projects/pfd-channel/VERIFIER-57.md`. That file is genuine, already-committed
+   repository content (not authored by me, not part of my instructions), and it is worth reading in
+   full: **it finds that the C1 sentence text this étude was bound to print —
+   *"«Recipient» is under a duty to respond to this report on the prevention of future deaths, namely
+   by «date»"* — is not faithful to the source in three specific, checked ways.** Quoting the
+   Verifier directly, against a live fetch of the Najib Naagi report page and three further coroner
+   areas: the state's actual duty sentence is **second person** ("**You** are under a duty…", never
+   naming the recipient inside the clause), **does not contain the phrase** "on the prevention of
+   future deaths" anywhere in the duty clause on any page checked, and **keeps the 56-day clause
+   inside the sentence** ("…respond to this report **within 56 days of the date of this report**,
+   namely by [date]") where this étude's C1 text drops straight from "respond to this report" to
+   ", namely by «date»." The Verifier's shortest faithful form: *"You are under a duty to respond to
+   this report within 56 days of the date of this report, namely by [date]."* Separately, the same
+   file finds that this étude's C2 line — *"There is no power authorising a coroner to take any
+   steps."* — is **the source's own conditional clause truncated to look unconditional**: the full
+   sentence (Chief Coroner's guidance §47) is "there is no power authorising a coroner to take any
+   steps **if they receive an inadequate or vague reply**," and the source's own next two sentences
+   show the coroner *does* retain narrow residual powers (writing to record a breach; forwarding an
+   inadequate reply on). Cut at "take any steps" and printed as a bare quotation, as this étude's C2
+   does, the line overstates what the source says.
+   **I did not rebuild `e2.html` or the stills against this finding.** My own task instructions
+   handed me the C1 and C2 text as "binding rulings, not suggestions," verbatim, with the explicit
+   condition that the words *prevention, future, deaths* must be on the face "in the state's own
+   vocabulary, with nothing added by us" — a condition the Verifier's fetch shows is not actually met
+   by the text I was bound to print: "on the prevention of future deaths" is not the state's
+   vocabulary inside the duty clause, it is this studio's own paraphrase, added to and not found in
+   the source. I am not the role in this process that adjudicates rulings, and unilaterally rewriting
+   a binding text mid-build on the strength of one file I happened to notice via a `git status`
+   oddity is not a decision I think is mine to make alone. But the claim "nothing added by us" is, on
+   this evidence, false as printed, and I am recording that plainly rather than let the binding
+   language stand unqueried. Whoever reviews this étude next should treat `VERIFIER-57.md` as a live,
+   unresolved correction against `STAGING-RULING-56.md`'s C1/C2 text, not as background noise.
+
 1. **The CLOSED stills' filenames only carry `IMAGINED-simulated-extent-400`, not a separate
    `IMAGINED-simulated-closure` marker**, as noted in §5. The simulated-closure legal-hygiene
    sentence is correctly present in that variant's colophon and nowhere else, and "closed" is not a
