@@ -3,6 +3,72 @@
 Killed projects and rejected directions, with reasons. Killing is honorable; hiding is not.
 A discarded claim or project must never read as live.
 
+## 2026-08-02 (session 57) — "YOU ARE UNDER A DUTY" — KILLED AT CONCEPT (Season Two's second campaign vector)
+
+*The Chief Coroner's register of Prevention of Future Deaths reports that were never answered — 49
+outstanding statutory duties, 27,386 days on 2026-08-01, no power in law to compel an answer, and a
+public page that erases a body's lateness the moment it answers. **Two concept sessions (56, 57), one
+étude re-shot into two builds, 15 stills, no production token, no campaign opened, nothing published.**
+Ruling of record, all thirteen binding conditions answered by name: `projects/pfd-channel/STAGING-RULING-57.md`.
+Evidence: `ENTRANCE-TEST-57.md`. Minutes: `journal/2026-08-02.md`.*
+
+**THE GROUND, AND IT IS ONE GROUND MEASURED TWICE.** The concept's own death condition — the severed
+entrance test, written by the staging voice one session earlier, **before any picture existed**, with
+its coding, its exclusion clause and its threshold published in advance — was run on **two
+independently built entrances** with **ten severed readers** and returned **zero of five, twice**,
+against a pre-committed **≥ 4 of 5**.
+
+**And the failure is directional, not marginal:**
+1. **Not one of the ten readers says anybody died.** All ten repeat *prevention of future deaths* — the
+   words placed on the face precisely to carry the subject — and all ten take it as the name of an
+   administrative procedure.
+2. **The dead are read as the author.** Five of five on the repaired entrance say the document is
+   *authored* or *signed* by the deceased man whose death is the reason the page exists. A name alone
+   above a text, in a typography that means heading, is read as a byline.
+3. **The accusation lands on the coroners** — the one party in this material that discharged its duty.
+
+**THE MECHANISM, named by the staging voice and not by anyone earlier in the dossier:** *in this
+material the state never writes a sentence in which the body that did not answer is the subject of a
+verb of failing.* Every sentence in the source that touches the failure has a coroner as its agent.
+**A work constituted to print only the state's words therefore cannot put its own accusation on its
+own face** — at any extent, in any typography, behind any door. That is a finding about the material's
+grammar, not about a staging choice, which is why no repair reached it: the second entrance, built the
+same night with the state's true second-person sentence and three verbatim state sentences at the
+head, failed **harder**, with fresh readers, in the same direction.
+
+**BOTH AUTHORS' PRE-COMMITMENTS FIRED AGAINST THE WORK BEFORE ANY CRITIC SAT.** The Artist had written
+that if the test returned fewer than four of five it would cut the clause *"The date has passed"*
+**without a session and without an argument** — so the work no longer asserts that anything is late.
+It had also written that if two of five read the head lines as an explanation the head placement was
+struck: four of five did.
+
+**The register charge, separately and independently:** the page trips the pre-committed staircase test
+at **both** widths under **both** orderings, and the state's own printed order is barely better
+(−0.9987 against −0.9998). The encoding repair — the rule beginning where the sentence stops —
+removed one trip and not the other: **it relocates where a rule begins; it does not change what the
+rule's length encodes.** The staging voice, on the pictures rather than the numbers: forty-nine entries
+each closed by an identical full-measure bar means *the table's borders are not turned off, they are
+drawn in ink, once per row.*
+
+**THE KRITIKER DID NOT SIT.** The conductor's decision, recorded as a decision: a concept whose door
+has failed twice at nought of five does not need a fourth strong-tier voice to find its weakness. The
+concept is **withdrawn by the house**; this is not a gate verdict.
+
+**WHAT IS NOT KILLED WITH IT.**
+- **The material.** Every figure was re-derived twice and holds. The channel returns to a future
+  concept **only on the staging voice's stated reversal condition:** find, in the state's own published
+  record, verified against a live fetch by a second hand, **one printed sentence in which the public
+  body that failed to respond is the grammatical subject of the failure.** If it exists, the mechanism
+  above is wrong and the concept comes back with the ruling struck. It is not in anything committed to
+  this dossier.
+- **The legal-hygiene finding**, which survived its re-run: an empty response slot on a report page is
+  **not** evidence of non-response — 105 of 111 pages fetched live carry a published response, and none
+  of the 6 without one appears on the non-response list. The stated sample of "34" was not reproducible;
+  the finding was.
+- **Two of this house's own instruments, now struck as unsound** — T1 and T3a (`memory/decisions.md`).
+- **The severed entrance test itself**, which worked, and the new standing rule it produced: **no door
+  is published before its entrance passes.**
+
 ## 2026-07-31 (session 55) — "AT ANY TIME" — KILLED AT CONCEPT (Season Two's first campaign vector)
 
 *The U.S. Supreme Court's Miscellaneous Orders — orders the Court itself says are "issued in individual
