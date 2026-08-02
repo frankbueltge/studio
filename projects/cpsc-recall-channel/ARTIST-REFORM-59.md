@@ -32,8 +32,9 @@ object, I read the `Remedies` field of all 55 records with a script instead of q
 | requires the owner to first **write** RECALL/RECALLED/DESTROYED **on their own property** in marker | **13 / 55** |
 | reports **no injury at all** (*"None reported"*) | 32 / 55 |
 
-One of the twenty-seven, verbatim: *"Consumers will be asked to write in permanent marker "RECALLED"
-on the hand warmer and submit a photo showing that marking"* (26659). `[S]`
+One of the twenty-seven, verbatim (truncated at the ellipsis, nothing else altered): *"Consumers will
+be asked to write in permanent marker "RECALLED" on the hand warmer and submit a photo showing that
+marking on the hand warmer, the model number and the product's three-digit batch number…"* (26659). `[S]`
 
 **The finding is not the crowd.** On this channel the state's only instruction to the person reading
 it is, in half of all cases: *destroy your own property with your own hands, mark it condemned first,
@@ -74,14 +75,13 @@ when their own notices were obeyed.**
 
 The remains are not more objects; they are **the same object's future**. The stranger meets the future
 before the present — the season's *whole before any part*, delivered literally and inverted: the
-extent is not a grid of what exists but a floor of what the sentence does when someone does it.
-
-One cut-in-half nursing pillow is a household accident. Twenty pieces of destroyed private property in
-one room, each destroyed lawfully, at the owner's hand, on federal instruction, with a receipt, is a
+extent is not a grid of what exists but a floor of what the sentence does when someone does it. One
+cut-in-half nursing pillow is a household accident; twenty pieces of destroyed private property in one
+room, each destroyed lawfully, at the owner's hand, on federal instruction, with a receipt, is a
 **procedure** — invisible in any single instance by definition. Not "more of the same", not a
 statistic: the same fact at a scale where it changes category.
 
-S5 — *the ending is the damage* — is met literally: each destroyed object is completed, and no future
+S5 — *the ending is the damage* — is met literally: each destroyed object is completed and no future
 unit alters it. **The hole**, demoted as staging condition 4 requires: a week with no publication
 means no new object arrives and **the standing object is not destroyed — it stands another week**,
 rendered by the rule, without session or caption, asked to mean nothing. The ending's carrier is the
@@ -252,15 +252,15 @@ And the sentence I owe plainly, because it is the true one:
 
 **Frank's fallback, weighed and taken.** The score is what this house can make alone; the room is the
 work. Two costs, stated rather than absorbed. **(i)** A score is a document, and documents are this
-house's own published indictment — three concept phases, a quarter of a megabyte, no unit. The answer
-is not a promise: the score is published *as a work*, with a name, and a shown object exists tonight.
-**(ii)** The realisation is not ours; it needs a room, a realiser, and objects that cannot lawfully be
-bought — a standing debt on the board, not a wish.
+house's own published indictment — three concept phases, a quarter of a megabyte, no unit; the answer
+is not a promise but that the score is published *as a work*, with a name, and a shown object exists
+tonight. **(ii)** The realisation is not ours; it needs a room, a realiser, and objects that cannot
+lawfully be bought — a standing debt on the board, not a wish.
 
-**The two questions the staging ruling required alongside F2.** *Does the work drop the object in
-every form other than a room, including a printed catalogue?* — the catalogue keeps the photograph and
-loses the destruction, which is the finding. *Is there any form other than a room in which the
-notice's own instruction is actually carried out?* — no, and that is the whole of F2.
+**The staging ruling's two further questions.** *Does the work drop the object in every form other
+than a room, including a printed catalogue?* — the catalogue keeps the photograph and loses the
+destruction, which is the finding. *Is there any form other than a room in which the notice's own
+instruction is actually carried out?* — no, and that is the whole of F2.
 
 ---
 
@@ -344,19 +344,18 @@ reading and not a work, and the campaign goes to the Kritiker with that sentence
 
 **KC2 — THE PILLORY (Frank's gate condition).** Both limbs of §3.4, same readers, after KC1. **Fails
 at:** one reader producing LIST; or BLAME-FIRM ≥ 2 / 5; or BLAME-OWNER ≥ 1. **Concession if (a)
-fails:** the page leaks a route to a list, the mechanism is not in the object, and since M1–M3 are the
-whole of my answer to Frank's condition, the concept does not go forward on my authorship.
-**Concession if (b) fails on BLAME-FIRM:** one notice reproduced whole *is* an accusation of one firm,
-the daylight between "the state's document" and "our accusation" does not exist for a stranger, and
-the pillory objection reaches the **unit** — killing the one-object form as well as the grid.
+fails:** the mechanism is not in the object, and since M1–M3 are the whole of my answer to Frank's
+condition, the concept does not go forward on my authorship. **If (b) fails on BLAME-FIRM:** one notice
+reproduced whole *is* an accusation of one firm, the daylight between "the state's document" and "our
+accusation" does not exist for a stranger, and the pillory objection reaches the **unit** — killing
+the one-object form as well as the grid.
 
 **KC3 — MERCHANDISE (inherited, staging condition 2, wording unchanged).** *"Someone who has not seen
 this asks you what it is. Answer in no more than three sentences."* Coded **MERCHANDISE** (a shop, a
 listing, a product page, a returns or customer-service notice) or **WARNING** (dangerous, recalled,
-withdrawn). **Fails at MERCHANDISE ≥ 2 / 5.** **Concession, made to cost me something** — I have
-already ruled the screen out, and a threshold that costs nothing is not a threshold: **the score is
-then published with no rendered example at all**, no still, no page, no picture, nothing but the
-instructions.
+withdrawn). **Fails at MERCHANDISE ≥ 2 / 5.** **Concession, made to cost me something** — a threshold
+that costs nothing is not a threshold, and I have already ruled the screen out: **the score is then
+published with no rendered example at all**, no still, no page, no picture, nothing but instructions.
 
 ---
 
