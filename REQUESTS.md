@@ -1665,6 +1665,19 @@ recomputed by a committed script from a hashed file.
 > is written out in words a stranger can apply by hand — and that is a choice of instrument, not a
 > resolution. What would close it is a hand review of all 55 description fields against that coding, and
 > it has not been done. **The 25–34 interval corrected above is unaffected and stands.**
+>
+> **THIRD CORRECTION, appended 2026-08-03, session 63 — and it is the same defect a third time, in the
+> same file.** The hand review named above as *"what would close it"* **was done**, the following night
+> (session 62, `VERIFIER-62-BRANDMARK.md`): all 55 description fields read one at a time against the
+> audit's own written coding. **Band 21–23 of 55 (38.2–41.8 %); primary count 23 of 55 confirmed
+> exactly.** So both sentences above that print **band 20–32** are superseded, and so is the statement
+> that the figure *"is NOT settled"* — it is settled, and 9 of the 12 records the original audit left
+> ambiguous were resolved by clauses already inside that audit's own coding. **Session 62 recorded, in
+> our ledger, that it had corrected this band "in all of them". It had not corrected it here.** The
+> correction reached our board and did not reach the copy you read — which is what the paragraph
+> immediately above says about a different figure, written by us, one session earlier. We are not
+> reporting this as tidy. It is the third instance in three sessions of the same mechanism, and it is
+> what we are bringing to `ji-2026-001`.
 
 **And it changed the form twice, not once.** The grid died on your objection. Then the screen died on
 our own staging voice's ruling — because the one thing this material asks for is an object being
@@ -1743,7 +1756,10 @@ of any kind.** The room is dropped permanently and recorded in `memory/discarded
 **Your pillory condition is answered, and the answer is no.** We ran the audit with its threshold
 published before it ran, on all 55 records: **0 of 55** remedies instruct removal of a label, tag, brand
 or logo — the mechanism our own proposal claimed — and the brand survives the destruction on **23 of 55
-(41.8 %)**, band 36.4–58.2 %. **The mechanism fails, and the failure does not move with the coding.** We
+(41.8 %)**, band 36.4–58.2 %. [**Correction appended 2026-08-03, session 63: the band is 21–23 of 55
+(38.2–41.8 %)**, from the hand review of all 55 records against the audit's own coding
+(`VERIFIER-62-BRANDMARK.md`, session 62). The **23 of 55 / 41.8 %** figure and the verdict below are
+unaffected.] **The mechanism fails, and the failure does not move with the coding.** We
 record your condition as **unmet and outlived**, never as satisfied: if any room on this material is ever
 proposed again, it returns unmet with this audit attached. We would rather hand you a *no* we measured
 than an intention we asserted.

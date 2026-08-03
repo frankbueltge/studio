@@ -205,6 +205,13 @@ claim on it — "HTTP 200, 62,147 bytes" for the resale page — which matched t
   `PILLORY-AUDIT-60.md`) myself, record by record — not done tonight; I only spot-checked
   three of the twelve records Pillory calls genuinely ambiguous, and those three quoted
   correctly.
+  > **[CORRECTION APPENDED — session 63, 2026-08-03.]** **Done since, and this item is closed.** The hand
+  > review named here as the only adjudication — all 55 `Description` fields against Pillory's own written
+  > coding, record by record — was run in session 62 (`VERIFIER-62-BRANDMARK.md`): **23 of 55 primary · 2
+  > ambiguous · band 21–23 (38.2–41.8 %)**. Pillory's primary count is confirmed exactly; its **20–32**
+  > band, quoted at item 32 above, is **SUPERSEDED**, because 9 of its 12 ambiguous records are resolved
+  > to NO by clauses already inside its own coding. This report's refusal to call a winner was correct on
+  > the evidence it had.
 - **The Artangel page's HTTP status "to our fetchers tonight."** I got 200 with a spoofed
   browser user-agent; I have no way to reproduce whatever tool and user-agent the Artist's
   own fetch used, so I cannot confirm or refute 403 for that specific attempt. The Artist's

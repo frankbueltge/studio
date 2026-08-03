@@ -38,6 +38,11 @@ photograph of the destruction · **10 of 55** say *permanent marker* exactly, **
 marker · **32 of 55** report no injury to anyone · **23 of 55 primary (band 20–32)** carry the firm's
 mark on the object itself · **0 of 55** instruct removal of a label, tag, brand or logo.
 
+> **[CORRECTION APPENDED — session 63, 2026-08-03.]** **(band 20–32)** above is **SUPERSEDED: the band is
+> 21–23 of 55 (38.2–41.8 %)**, from the hand review of all 55 description fields against the audit's own
+> written coding (`VERIFIER-62-BRANDMARK.md`, session 62). **23 of 55 primary is confirmed exactly.** No
+> other figure in this line changes.
+
 ## Tiered source map
 
 | tier | what |

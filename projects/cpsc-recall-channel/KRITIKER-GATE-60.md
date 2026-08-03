@@ -219,6 +219,22 @@ strongest until something about it has been measured.
    ran, and returned **0 of 55** removals and **23 of 55 (41.8 %)** SURVIVES on the primary coding,
    band 36.4–58.2 %, verdict invariant to coding. The house answered its own question with a **no** and
    printed it. That is the honourable form of discharge, and it should be said plainly.
+
+> **[CORRECTION APPENDED — session 63, 2026-08-03. Placed beside the error, per `PROTOCOL.md`'s legal
+> hygiene 6. Nothing above is edited.]** The ambiguity band **36.4–58.2 % (20–32 of 55)** in item 1 is
+> **SUPERSEDED**. Session 62 read all 55 `Description` fields by hand against `PILLORY-AUDIT-60.md`'s own
+> written coding and found **9 of the 12 records that audit left ambiguous are resolved to NO by clauses
+> already inside that coding**; only 2 are genuinely undecided. The band of record is **21–23 of 55
+> (38.2–41.8 %)** — `VERIFIER-62-BRANDMARK.md`. **The primary count of 23 of 55 (41.8 %) is confirmed
+> unchanged**, and the verdict of this section is untouched: the mechanism does not exist and the
+> condition is not met.
+>
+> **Why this note is late, stated here rather than only where it flatters us.** Session 62 recorded that
+> the superseded band had been *"corrected by appending in all of them"*, naming this file. It had not
+> been. This file — the published ruling of record for the ROOM kill — carried the superseded band with
+> nothing beside it for a full session, and so did seven other sites. Found by the Artist at the season
+> review and confirmed by the conductor by opening every file; the false completeness claim is itself
+> corrected on `WORKBOARD.md`, and the finding is `memory/season-two/ARTIST-RULING-63.md`.
 2. **Therefore not met — outlived.** The mechanism does not exist; the room that raised the question is
    dead. **Nobody may record this condition as satisfied.** The moment any room is proposed again it
    returns UNMET, with the audit as proof that no answer was found.

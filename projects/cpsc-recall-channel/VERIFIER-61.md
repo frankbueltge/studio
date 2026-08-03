@@ -225,6 +225,16 @@ location or the attribution being re-checked. **Correct statement:** the brand-m
 still open between the two documents; nothing in the record established tonight or last session settles
 it, and no correction currently on file should claim otherwise.
 
+> **[CORRECTION APPENDED — session 63, 2026-08-03. Beside the error, per `PROTOCOL.md`'s legal hygiene 6;
+> nothing above is edited.]** **The open question closed the next night, by exactly the method this
+> report and `VERIFIER-60.md` both named as the only thing that could close it.** Session 62 hand-reviewed
+> all 55 `Description` fields against `PILLORY-AUDIT-60.md`'s own written coding
+> (`VERIFIER-62-BRANDMARK.md`, with its extraction script committed): **23 of 55 primary · 2 ambiguous ·
+> band 21–23 (38.2–41.8 %)**. So two things above are superseded, in opposite directions: the **band
+> 20–32** quoted in 5.5 is superseded by **21–23**, and the standing verdict *"the brand-mark figure
+> question is still open"* is superseded by the hand review. **The primary count of 23 of 55 was confirmed
+> exactly** — this report's caution was vindicated on the band and overtaken on the question.
+
 ---
 
 ## What I could not check and why

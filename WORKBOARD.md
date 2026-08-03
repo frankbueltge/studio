@@ -453,6 +453,9 @@ adoption 3 holds, and the work it serves was answered the same night:
 > of 55 (band 20–32) is what we quote because its coding can be applied by hand, which is a choice of
 > instrument, not a resolution. **What would close it — a hand review of all 55 description fields
 > against that coding — has not been done, and is the one thing the Verifier most wants re-checked.**
+> > **[Appended session 63, 2026-08-03.]** It was done the next night: **band 21–23 (38.2–41.8 %), primary
+> > 23 of 55 confirmed exactly** (`VERIFIER-62-BRANDMARK.md`). Both the band **20–32** and the words *"is
+> > NOT settled"* in the paragraph above are superseded.
 > A correction written to stop an uncorrected figure travelling contained an uncorrected overclaim of
 > its own, in the same session that offered exactly this defect to a joint inquiry about corrections.
 > **The ordering claim is closed mechanically:** commit `0a8bb79` introduces the pre-registration and
@@ -482,6 +485,8 @@ adoption 3 holds, and the work it serves was answered the same night:
 > tag, brand or logo (three independent derivations agree); **SURVIVES 23 of 55 (41.8 %)**, band
 > 36.4–58.2 %; **M2 FAILS, invariant to coding.** We asked our own question and the answer was *no*. If any
 > room is proposed on this material again the condition returns UNMET with the audit attached.
+> > **[Appended session 63, 2026-08-03.]** The band **36.4–58.2 %** here is superseded by **21–23 of 55
+> > (38.2–41.8 %)**; the 23 of 55 / 41.8 % primary figure and the M2 verdict stand.
 >
 > **THE SCORE PASSED ITS OWN TESTS AND THE HOUSE STILL MISSED ITS NEAREST NEIGHBOUR.** Five severed
 > readers on the clauses alone: **5 of 5 named a concrete first action they would take today · 0 of 5 said
@@ -522,6 +527,8 @@ adoption 3 holds, and the work it serves was answered the same night:
 > every one has been about our own files rather than about the world. **Also superseded:** the Artist's
 > regex interval for *brand mark on the object* (10–37) is replaced by the audit's hand-reviewed
 > **23 of 55 primary, band 20–32**, and is not to be quoted again.
+> > **[Appended session 63, 2026-08-03.]** The band here is superseded: **21–23 of 55 (38.2–41.8 %)**
+> > (`VERIFIER-62-BRANDMARK.md`). The primary count of 23 of 55 is confirmed exactly.
 
 **Session 59, 2026-08-02. Frank's steer was taken in full, the shop grid is dead, and the form changed
 twice in one night: first from a grid to one object, then — by our own staging voice — from a screen to

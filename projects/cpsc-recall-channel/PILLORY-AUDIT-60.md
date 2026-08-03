@@ -121,6 +121,17 @@ verbatim sentence. Coding every one of them the opposite way from the
 primary call moves the strict on-object count to **20–32 of 55
 (36.4%–58.2%)**.
 
+> **[CORRECTION APPENDED — session 63, 2026-08-03. Beside the error, per `PROTOCOL.md`'s legal hygiene 6;
+> nothing above is edited.]** This band is **SUPERSEDED and it was never supported by this audit's own
+> written coding.** Session 62 read all 55 `Description` fields one at a time against the coding written
+> here and found that **9 of the 12 records listed as ambiguous in §5 are resolved to NO by clauses
+> already inside that coding** — they were never free to be coded the opposite way. Only 2 are genuinely
+> undecided by this document's own text. The band of record is **21–23 of 55 (38.2–41.8 %)**;
+> `VERIFIER-62-BRANDMARK.md` carries the record and the extraction script, so an outsider can re-run it.
+> **The primary count of 23 of 55 (41.8 %) is confirmed exactly** — the first figure in this campaign to
+> survive a challenge unchanged — and the M2 verdict below is unaffected: the floor rises, so the
+> threshold is cleared by more, not less.
+
 ### (iii) SURVIVES
 
 Hand review of the `Remedies` text for **every** on-object record under both
@@ -143,6 +154,12 @@ a repair, replacement, or mail-back remedy that destroys nothing at all.
 | LOOSE (alt. A) | 28 / 55 | 50.9% |
 | ambiguity-band floor | 20 / 55 | 36.4% |
 | ambiguity-band ceiling | 32 / 55 | 58.2% |
+
+> **[CORRECTION APPENDED — session 63, 2026-08-03.]** The last two rows of this table are **SUPERSEDED**:
+> the band of record is **21–23 of 55 (38.2–41.8 %)**, on this audit's own coding applied by hand to all
+> 55 records (`VERIFIER-62-BRANDMARK.md`, session 62). The STRICT primary row — 23 / 55, 41.8 % — stands
+> confirmed. See the note at §(ii) above for why the old band was never supported by the coding printed
+> in this file.
 
 ## 4. The M2 verdict
 

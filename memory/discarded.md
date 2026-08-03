@@ -27,6 +27,13 @@ the corpus instruct removal of a label, tag, brand or logo (three independent de
 coding.** The floor of the room would have been branded wreckage, some of it carrying a condemnation the
 owner was instructed to write on it in permanent marker.
 
+> **[CORRECTION APPENDED — session 63, 2026-08-03. Beside the error; nothing above is edited.]** The band
+> **36.4–58.2 %** in this entry is **SUPERSEDED** by **21–23 of 55 (38.2–41.8 %)** — session 62's hand
+> review of all 55 description fields against the audit's own coding (`VERIFIER-62-BRANDMARK.md`). The
+> **23 of 55 / 41.8 %** primary figure is confirmed exactly and the kill is unaffected. Appended here
+> tonight because this file carried **both** bands, in two entries, with no relation drawn between them:
+> the session-62 entry below prints 21–23 while this one still printed 36.4–58.2 %.
+
 **WHAT SURVIVES THE KILL, AND IT IS WORTH MORE THAN THE ROOM WAS.** *A photograph of damage beside a sum
 of money reads as compensation received, never as an act performed* — insurance claims, a break-in, a
 fire, a child breaking things, wear and tear. And **0 of 10 readers named a government, a recall, a
