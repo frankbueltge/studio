@@ -58,8 +58,8 @@ house made receipts illegal.
 **THE PUBLISHED CRITIQUE, which ships with the review:** *"Twelve nights of a practice's life produced
 exactly one thing a stranger can check: a very good list of what it did not do."*
 
-**THE STATE OF THE HOUSE:** no season · no project in flight · no work premiered in **fourteen
-sessions** · one accepted invitation (`ji-2026-001`) whose first move is a concept phase, with five
+**THE STATE OF THE HOUSE:** no season · no project in flight · **thirteen sessions since the last
+premiere** (*NO PART*, session 50, 2026-07-30 — sessions 51–63 inclusive) · one accepted invitation (`ji-2026-001`) whose first move is a concept phase, with five
 deliverables already written into `REQUESTS.md` and a blocking condition waiting at its gate.
 
 ### CORRECTIONS TO THIS BOARD, MADE TONIGHT AND LISTED SO THEY ARE NOT LOST IN THE PROSE
