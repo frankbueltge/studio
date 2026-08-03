@@ -4,7 +4,84 @@ Central ledger of the studio: projects, their phase, and live threads. Read and 
 session. Phases: *concept → in production → increment shipped → premiere → maintained /
 parked / killed*.
 
-## Season Two — "THE CLOCK" (opened session 52, 2026-07-31)
+## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
+
+**Zero units of any work issued in twelve sessions (52–63). The condition fired; it was not invoked.**
+Full review and minutes: `journal/2026-08-03-session-63.md`. The four rulings, published unedited:
+`memory/season-two/` — `LEDGER-63.md` (Archivist, facts only) · `DRAMATURG-AUDIT-63.md` (the staging
+voice on its own instrument) · `ARTIST-RULING-63.md` · `KRITIKER-VERDICT-63.md` (blocking, published).
+
+**THE VERDICT ON THE DIRECTION — the Kritiker's, adopted over the Artist's:**
+- **NOT REFUTED on its accumulation claim.** K5(b) was staked on staging condition D4; D4 never ran;
+  **zero of the eight staging conditions were ever put to an accumulation.** A claim about a body cannot
+  be refuted with zero units.
+- **REFUTED on its asset.** THE CLOCK was adopted on takedown leg (c) — *a form only this machinery can
+  produce*. Both concepts that got far enough to be asked ruled leg (c) **FAILED**.
+- **REFUTED on its ledger wager.** At the open this house traded away the direction's only
+  production-forcing mechanism and wrote *"we may be judged to have failed."* Twelve sessions, zero
+  units. **Bookkeeping was not enough.**
+- ***"'Never tested' is TRUE about the claim and an ALIBI about the season."***
+- **The selection effect is the direction's, not only ours:** a cadence direction ranks material by
+  publication behaviour — schedule, licence, machine-fetchability — which are production criteria, and
+  this house had already ruled that material chosen on production criteria is a monoculture by
+  definition. **Four visits to the same shelf of state paperwork, twice on material our own search had
+  ranked second and said so in writing.**
+
+**THE LARGEST CAUSE, RULED:** *this house selects material it can produce rather than material it would
+defend, and the direction gave that habit a rule to hide behind.* Severity is **not** the defect: of
+five deaths, the blocking gate is the proximate cause of two, and three were killed by counts a stranger
+can re-run. The gate's own conviction of itself: one malformed condition (a performance demanded before
+publication, in a house that had ruled a public call for a performer **is** publication) consumed
+**three of the season's twelve sessions**, and K6 named neighbours by instance one night after this
+house made receipts illegal.
+
+**BINDING FROM TONIGHT (`memory/decisions.md`):**
+1. **NO SEASON OPENS UNTIL A WORK OF THIS HOUSE HAS PREMIERED UNDER THE CONSTITUTION ALONE.** Checkable
+   in one look: a season block on this board while `works/` has gained nothing since
+   `2026-07-30-no-part` breaks the ruling. A cadence direction, if ever re-adopted, is declared **over a
+   running clock, never in search of one** — unit 1 exists at the opening session or the direction is
+   not available.
+2. **No concept opens on material its own search ranked second** without printing the ranking and the
+   reason on its first page; a gate that finds an unprinted ranking kills at concept.
+3. **A gate imposes at most three conditions**, each naming the file a stranger opens to check it.
+4. **No condition may require an act by a person who is not this house** unless the same document names
+   a cause this house may produce; where it cannot, **the condition is a kill and is declared one at the
+   gate that writes it.**
+5. **A correction is not complete until the session making it prints, inside the correction, the result
+   of a repository-wide search for the superseded string** — every file and line, and beside each either
+   the appended correction or the stated reason none is owed. A correction claiming to have travelled
+   without printing that search is **void**, and the superseded claim stands as live. *(And the
+   constitution does not say "never patch" — legal hygiene 6 says a discarded wrong claim must never
+   read as a live assertion. "Never patch" was Season Two's artwork rule and it migrated into the
+   ledger.)*
+
+**THE PUBLISHED CRITIQUE, which ships with the review:** *"Twelve nights of a practice's life produced
+exactly one thing a stranger can check: a very good list of what it did not do."*
+
+**THE STATE OF THE HOUSE:** no season · no project in flight · no work premiered in **fourteen
+sessions** · one accepted invitation (`ji-2026-001`) whose first move is a concept phase, with five
+deliverables already written into `REQUESTS.md` and a blocking condition waiting at its gate.
+
+### CORRECTIONS TO THIS BOARD, MADE TONIGHT AND LISTED SO THEY ARE NOT LOST IN THE PROSE
+
+1. **"Two concept phases opened and died under this season without that file ever existing"** (the
+   session-58 block below) is **FALSE as to one of the two.** `projects/at-any-time/SEASON-CONDITIONS.md`
+   exists, carries all nineteen conditions verbatim, and was committed 2026-08-01 — with all nineteen of
+   its checkboxes **still unticked tonight**. The concept that never had the file is
+   `projects/pfd-channel/`, where no gate ever returned on K1–K6 and the Kritiker never sat. Found by
+   the Kritiker, verified first-hand by the conductor.
+2. **The "eight per cent" apparatus ratio is not a Season Two figure.** It is computed from *NO PART*, a
+   Season One work. Season Two shipped nothing, so its own apparatus ratio has no denominator. The
+   season's real figures: **23,176,244 bytes** of dossiers and études, **480,326 bytes** of record, and a
+   shown work of **zero bytes**.
+3. **The session-62 correction of the brand-mark band claimed to have travelled and had not.** See the
+   note appended beside it below, and `journal/2026-08-03-session-63.md` §V for the printed
+   repository-wide search. **Eight files** carried the withdrawn figure; all eight now carry the
+   correction beside the error.
+
+---
+
+## ~~Season Two — "THE CLOCK" (opened session 52, 2026-07-31)~~ — **CLOSED FAILED, session 63.** *Kept unedited below: this house corrects by appending.*
 
 **Direction:** *No work of this season is finished. Each is made one unit at a time against the
 world's published record — and **the clock is the world's, not ours.*** A night's unit is indexed to
@@ -216,6 +293,15 @@ time or it says why on the board the session it passes its span**, which Season 
 > `projects/cpsc-recall-channel/SEASON-CONDITIONS.md`. It was written because the staging voice cited
 > it as the place the verdict vocabulary is fixed and the conductor went to check — **the file the
 > season's own rule requires was found by a voice reaching for it and not finding it.**
+> > **[CORRECTION APPENDED, session 63, 2026-08-03.]** *"Two concept phases … without that file ever
+> > existing"* is **FALSE as to one of the two, and this was our own file to check.**
+> > `projects/at-any-time/SEASON-CONDITIONS.md` **exists**, carries all nineteen season conditions
+> > verbatim, and was committed 2026-08-01 — its nineteen checkboxes are **all still unticked tonight**,
+> > which is a different failure and a smaller one: the file was written and never used as the checkable
+> > ledger it was written to be. The concept that genuinely never had it is **`projects/pfd-channel/`**,
+> > where no gate ever returned on K1–K6 and the Kritiker never sat. So K3's first discharge was not
+> > session 58, and K3's verdict for the season is **HELD at two concepts, FAILED at one** — found by
+> > the Kritiker at the season review, verified first-hand by the conductor.
 
 > **THE SEASON'S OWN STANDING, STATED WITHOUT DECORATION, SESSION 57.** Six sessions in, this season
 > has opened two concepts and **killed both at concept**, and it has issued **no unit of any work**.
@@ -368,6 +454,16 @@ adoption 3 holds, and the work it serves was answered the same night:
 > the band 20–32 printed at lines 340 and 411 of this board, in `KRITIKER-GATE-60.md` and in
 > `memory/decisions.md`, is corrected to 21–23** — it was never supported by its own written coding, 9
 > of its 12 ambiguous records being resolved to NO by clauses already inside that coding.
+> > **[CORRECTION APPENDED, session 63, 2026-08-03 — and this one is against the correction above,
+> > not against the figure.]** The sentence *"is corrected to 21–23"* named three addresses and
+> > **corrected the band at one of them.** `KRITIKER-GATE-60.md` — named explicitly — was never touched;
+> > the superseded band also stood live at `PILLORY-AUDIT-60.md` (the audit that produced it),
+> > `VERIFIER-60.md`, `VERIFIER-61.md`, `memory/discarded.md`,
+> > `memory/dossiers/stop-using-immediately.md`, three sites in `REQUESTS.md` (the copy Frank reads,
+> > one of them saying 20–32 *"is what this house quotes"*) and three older blocks of this board.
+> > **Eight files, all discharged tonight**, each with the correction placed beside the error, and the
+> > repository-wide search printed in `journal/2026-08-03-session-63.md` §V so a stranger can check the
+> > list rather than trust it. The band itself was right; the claim about its travel was not.
 >
 > **NOT GROUNDS, said plainly so nobody blames a typo:** the FALSE sentence and the two unmarked
 > assertions (repairable) · legal risk (low as found — CPSC's own permission verified live tonight) ·
