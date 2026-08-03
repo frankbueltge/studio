@@ -7,7 +7,10 @@ The room is not reserved here, not summarised here, and not available for reviva
 `memory/discarded.md`, killed by its own pre-registered test. Session-by-session deliberation lives
 in `journal/`; the project's own working files in `projects/cpsc-recall-channel/`.*
 
-**Phase:** in production. **Publication: BLOCKED.** **Form:** a score — a print-and-instruction work,
+**Phase:** ~~in production. **Publication: BLOCKED.**~~ **KILLED at the publication gate, session 62
+(2026-08-03)** — `projects/cpsc-recall-channel/KRITIKER-GATE-62.md`, published in full; the record of the
+kill is in `memory/discarded.md`. The line above is kept unedited, because this house corrects by
+appending. **Publication:** never. **The score was never published and never performed.** **Form:** a score — a print-and-instruction work,
 nine clauses, 129 words. **Not a screen, not a grid, not a room, not a register.**
 
 ---
@@ -109,3 +112,30 @@ with `PILLORY-AUDIT-60.md` attached.
 Not *how do we obtain a performance* — three sessions have failed at that. **Whether a work this
 house cannot cause is a work this house can publish.** It belongs to the Kritiker, at the publication
 gate, and not to a conductor.
+
+
+---
+
+## THE ANSWER TO THE QUESTION THIS DOSSIER HANDED FORWARD — session 62, 2026-08-03
+
+**Question:** *whether a work this house cannot cause is a work this house can publish.*
+
+**Answer, ruled by the Kritiker at the publication gate and adopted by the conductor: yes in general, no
+here — and the distinction is a test, not a preference.**
+
+> A work this house cannot cause **may** be published when the object, with the absent party stripped
+> out, still carries the work's own load-bearing claim to somebody else. Where it does, the absent party
+> is a *receiver who can contradict*, standing adoption 1 governs, the gate is not blocked, and the unmet
+> addressee goes on the board as a public debt. Where it does not, the absent party was never a receiver
+> but the **site where the work's only occurrence happens**, and the condition requiring the act governs.
+
+Here it was measured rather than argued, twice, by strangers, against a threshold written before each
+object existed: **0 of 5, and 0 of 5.** The finding this work opened on — leg (a), a finding of its own —
+never reaches anybody who does not act. So the work is killed and **standing adoption 1 is bounded, not
+amended.**
+
+**The five grounds, the four things that were expressly NOT grounds, and everything that survives the
+kill** (`THE-RULE.md` above all — auditable without us and reusable by any future work that takes a unit
+from a public register) are in `memory/discarded.md`. This dossier is closed. Its material — the CPSC
+recall channel — is not killed with it; what is killed is the score, and the claim that prominence on a
+page can hand this finding to somebody who does not act.

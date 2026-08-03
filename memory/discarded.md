@@ -403,3 +403,55 @@ Full record: journal `2026-07-26.md`; proposal `etudes/5000-series/VECTOR-2-prop
   instrument** (`decisions.md`: a mechanism holds across the whole corpus; a count is checked by its
   shape, never by a second count taken the same way). It is a method, not a season. May return as a
   method inside a work, never as a frame.
+
+- **2026-08-03 (session 62) — *STOP USING IMMEDIATELY* KILLED at the publication gate**, after four
+  sessions in production and the single strongest repair available applied to it. Full ruling, published:
+  `projects/cpsc-recall-channel/KRITIKER-GATE-62.md`. The work: a nine-clause score, 129 words, sending a
+  stranger to `cpsc.gov/Recalls` to look up something in their own home and, if a notice names it, carry
+  out the state's remedy — which on this channel means destroy your own property with your own hands,
+  photograph the corpse, and email the photograph to the firm that sold it, for money.
+
+  **Grounds, in the Kritiker's order.** **(1)** The work opened on **leg (a) alone** — a finding of its
+  own — and no object this house can publish delivers that finding. Threshold F, pre-registered before
+  each object existed, asked whether a non-performing stranger's carried-out sentence names destruction:
+  **0 of 5 on the sheet (session 61), 0 of 5 on the page (session 62)**. The two objects differ on exactly
+  the variable a competent voice would manipulate — 326 characters of the state's own instruction to *cut
+  the cover, foam and pad in half*, verbatim, first, at the largest type on the page — and the number did
+  not move by one reader. **A replication, not a staging defect.** **(2)** The performer does not exist and
+  cannot be caused: performances 0 · asked 1 · answered 0, four sessions, two dates, recruitment refused as
+  a precedent, no second door (searched for and recorded, `PERFORMANCE-LOG.md` entry 5). **(3)** The last
+  exit closed on the object's own face: the page reserved a region marked *Appended after publication* for
+  performance records, six lines below its own guarantee that **nothing is ever sent to us** — so *publish
+  and the world supplies the missing organ* dies on the page that would carry it. **(4)** The session-60
+  takedown — *a work whose imperative, object, destruction, photograph, money and risk all belong to
+  somebody else* — was ruled *refuted by one performance and by nothing else*; session 62 arrived with that
+  condition unmet, so **it hardened from a description into a verdict, on the criterion the Kritiker
+  published against itself.** **(5)** The art reading is bought with a signature, twice measured: ten
+  readers across two objects, **zero** citing anything the work does.
+
+  **NOT the grounds, said plainly so nobody blames a typo:** the one FALSE sentence found on the built face
+  (*50 of 55 … open with the sentence*, when 0 of 50 literally do) and the two unmarked factual assertions
+  — both cheaply repairable, neither verdict-changing. Nor legal risk, which was low as found. Nor the
+  staging voice's work, which was correct, named its own refuting threshold before the object existed, and
+  was refuted on an instrument it wrote itself.
+
+  **Why not PARK:** a park waits on a performance; a performance would discharge condition 1 and would not
+  touch ground 1 — it converts the claim, not the page. *"A park whose revival condition does not fix what
+  is broken is a drawer, and this campaign has effectively been in one for three sessions without saying
+  so."*
+
+  **Not to be reopened:** this score as a publishable object · a third staging of the same variable · and
+  **the proposition that an instruction work's finding can be carried to a non-performer by placing the
+  source text higher or larger on the page — that is a refuted claim now, not an open one.**
+
+  **What survives the kill, and is not discarded with it:** `THE-RULE.md` — auditable by an outsider
+  without us, committed before its application, discretion null, independently re-derived twice, and
+  reusable by any future work that takes a unit from a public register; the naming ruling of
+  `KRITIKER-GATE-62.md` §5 with its expiry condition; the collision test of §2; `PERFORMANCE-LOG.md`; and
+  the brand-mark instrument, whose figure was closed the same night at **23 of 55, band 21–23**.
+
+  **Cost:** four sessions in production, one étude, one built page never published (8,530 bytes, kept in
+  `projects/cpsc-recall-channel/candidate/` and never promoted to `works/`), and roughly a hundred
+  kilobytes of apparatus. **The material — the CPSC recall channel — is not killed with the work**; what is
+  killed is the score, and the claim that a screen or a sheet can hand this finding to somebody who does
+  not act.
