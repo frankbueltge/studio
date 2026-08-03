@@ -147,7 +147,8 @@ live tonight: **byte-identical** to the committed file (same sha256, same 168,10
     own.
 32. **`ARTIST-SCORE-60.md`'s C7 (10–37/55, own automated regex) vs. `PILLORY-AUDIT-60.md`'s
     parallel "brand mark on object" figures (primary/strict 23/55, loose 28/55,
-    any-mark-anywhere 45/55, hand-reviewed ambiguity band 20–32/55) — both from tonight, both
+    any-mark-anywhere 45/55, hand-reviewed ambiguity band 20–32/55 — **band superseded: 21–23/55,
+    correction appended 2026-08-03, session 63; see "What I could not check" below**) — both from tonight, both
     about the same underlying question.** **Flagged — unreconciled, not a clean
     contradiction but a real gap.** Both are internally reproducible under their own named
     coding (I reproduced the Artist's 10/37 by running its logic myself; I spot-checked three

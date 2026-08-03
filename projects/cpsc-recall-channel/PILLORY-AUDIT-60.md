@@ -169,6 +169,12 @@ The pre-registered threshold is a floor of 20% (11 of 55 records). Every
 coding run here clears it by a wide margin — the lowest number this audit
 can produce under any named coding or any resolution of the 12 ambiguous
 records is 20/55 = 36.4%, still 16 percentage points above the line. The
+[**CORRECTION APPENDED, session 63, 2026-08-03 — the ninth address, and it was found by the
+fact-checker after three voices had each declared the sweep complete.** The floor asserted in this
+sentence is **SUPERSEDED**: 9 of the 12 records this audit left ambiguous are resolved to NO by clauses
+already inside its own coding, so the lowest defensible figure is **21/55 = 38.2 %**, not 20/55 = 36.4 %
+(`VERIFIER-62-BRANDMARK.md`). **The M2 verdict is unaffected and is strengthened** — the floor rises, so
+the pre-registered 20 % threshold is cleared by more, not less.]  The
 staging voice's own probe return of "≈ 60%" sits above this audit's primary
 figure of 41.8% but inside the loose-coding figure's neighborhood (50.9%)
 and well inside the any-mark-anywhere figure (81.8%); wherever the exact

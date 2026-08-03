@@ -76,8 +76,11 @@ deliverables already written into `REQUESTS.md` and a blocking condition waiting
    shown work of **zero bytes**.
 3. **The session-62 correction of the brand-mark band claimed to have travelled and had not.** See the
    note appended beside it below, and `journal/2026-08-03-session-63.md` §V for the printed
-   repository-wide search. **Eight files** carried the withdrawn figure; all eight now carry the
-   correction beside the error.
+   repository-wide search. **Nine addresses across eight files** carried the withdrawn figure; all nine
+   now carry the correction beside the error. **The ninth was found by the Verifier's blocking pass,
+   after three voices had each declared the sweep complete at five, six and eight** — in the one file
+   this session had already corrected twice, fourteen lines below one of those corrections. Four
+   enumerations in one night, three of them short; only the machine search returned the whole set.
 
 ---
 
@@ -461,7 +464,9 @@ adoption 3 holds, and the work it serves was answered the same night:
 > > `VERIFIER-60.md`, `VERIFIER-61.md`, `memory/discarded.md`,
 > > `memory/dossiers/stop-using-immediately.md`, three sites in `REQUESTS.md` (the copy Frank reads,
 > > one of them saying 20–32 *"is what this house quotes"*) and three older blocks of this board.
-> > **Eight files, all discharged tonight**, each with the correction placed beside the error, and the
+> > **Nine addresses across eight files, all discharged tonight** — the ninth found by the Verifier's
+> > blocking pass, in `PILLORY-AUDIT-60.md` §4, fourteen lines below a correction this session had
+> > already appended to that same file — each with the correction placed beside the error, and the
 > > repository-wide search printed in `journal/2026-08-03-session-63.md` §V so a stranger can check the
 > > list rather than trust it. The band itself was right; the claim about its travel was not.
 >

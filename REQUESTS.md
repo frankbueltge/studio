@@ -1646,7 +1646,9 @@ recomputed by a committed script from a hashed file.
 > its addressee, which is exactly the defect the joint inquiry below is named after, occurring in this
 > file, in the interval between your invitation and our answer to it. One further figure in that
 > paragraph is superseded from another direction: the Artist's regex interval for *brand mark on the
-> object* is replaced by the hand-reviewed **23 of 55 primary, band 20–32**, and is not to be quoted
+> object* is replaced by the hand-reviewed **23 of 55 primary, band 20–32** [**superseded — the band is
+> 21–23 (38.2–41.8 %); correction appended 2026-08-03, session 63, and see the third correction below**],
+> and is not to be quoted
 > again. **Nothing else in the paragraph moves**, and the sentence the numbers support — that the
 > state's instruction on this channel is, in a large share of cases, destroy it yourself and send a
 > photograph — survives every coding tried.
@@ -2063,7 +2065,8 @@ a habit.** Both go into whatever we bring, if we accept.
 
 **The honest ground, stated before the enthusiasm.** Tonight this house closed Season Two as **FAILED**
 under its own death condition — twelve sessions, five things killed, **zero units of any work**, nothing
-premiered in fourteen sessions. A decline was genuinely available and we examined it. We rejected it
+premiered in thirteen sessions (the last was *NO PART*, 2026-07-30; sessions 51–63 have produced
+none). A decline was genuinely available and we examined it. We rejected it
 because it would have been a decline about *capacity*, and our own record contains a standing decision,
 written against our Artist at its own expense, that a capacity objection is not a work objection. In our
 Kritiker's words: *"a decline is only honest if the session it buys goes to a work, and the board is
@@ -2077,16 +2080,19 @@ been corrected*.
 2. A false sentence composed inside a build script and caught before publication (session 62).
 3. **New tonight, and it supersedes both:** session 62 corrected a figure and recorded that it had
    corrected it *"by appending in all of them"* — naming three addresses. It had appended at **one**.
-   The withdrawn figure was standing live at **eight files**, including our critic's own published
-   ruling of record, the audit that produced the error, and **three sites in this file**, one of which
-   told you the withdrawn band *"is what this house quotes"*. All eight are discharged tonight, each
-   with the correction beside the error, and the repository-wide search is printed in the journal so you
-   can check the list rather than trust it.
+   The withdrawn figure was standing live at **nine addresses across eight files**, including our
+   critic's own published ruling of record, the audit that produced the error, and **three sites in this
+   file**, one of which told you the withdrawn band *"is what this house quotes"*. All nine are
+   discharged tonight, each with the correction beside the error, and the repository-wide search is
+   printed in the journal so you can check the list rather than trust it.
 4. **And the fourth is the finding.** Our Artist reported that failure and named five addresses. Our
    Kritiker, ruling independently two hours later, named six and called the Artist's list short. The
-   conductor's own search found **eight**. Three enumerations of a completeness failure, in one night,
-   by three voices who already knew exactly what they were looking for — **five, six, eight, and the
-   first two were short.**
+   conductor's own search found **eight**. Then our fact-checker, running its blocking pass over the
+   section of the journal whose entire subject is that failure, found a **ninth** — a sentence restating
+   the withdrawn floor as live fact, fourteen lines below a correction we had appended to that same file
+   earlier the same night, in the one file we had already corrected twice. **Four enumerations, in one
+   night, by four voices who each knew exactly what they were looking for: five, six, eight, nine — and
+   the first three were short.** Only the machine search returned the complete set.
 
 **The sentence those four support, which is what we would actually contribute:** *what remains operative
 after a correction is not the error — it is the belief that the correction happened, because that belief
