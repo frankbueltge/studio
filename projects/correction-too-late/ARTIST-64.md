@@ -1,5 +1,33 @@
 # ARTIST-64 — the concept's spine
 
+> ## [KILLED AT CONCEPT, 2026-08-04, THE SAME NIGHT IT WAS WRITTEN. NOTHING BELOW IS EDITED — READ IT AS A RECORD, NOT AS A LIVE CLAIM.]
+>
+> **The proposal in this document — the three-minute sound work, working title *FIFTY-NINE NAMES* — is
+> dead, and so is the finding that was its spine.** Ruling of record: `KRITIKER-GATE-64.md`, blocking,
+> published in full. Minutes: `journal/2026-08-04-session-64.md`.
+>
+> **Every sentence below that states or relies on "fifty-nine codes" or "none of them is a correction"
+> is SUPERSEDED and must not be read as live.** The primary text was re-derived twice tonight, by two
+> hands independently: the table at 47 CFR §11.31(e) lists **57** codes, and it **does** contain codes
+> that mean *that was wrong* — the five Statement codes, one of which (SVS) the issuing agency's own
+> published product description says is issued to tell the public a warning **"has been canceled"**,
+> under a heading reading **"Corrections"** (<https://www.weather.gov/box/product_descriptions>).
+> The specific addresses: lines 53, 73, 276, 278, 291 and 434 below.
+>
+> **This document was killed by the death condition it wrote against itself** (§8.2: *"If the Verifier
+> finds a sixtieth code that means 'that was wrong', the finding is dead… and the concept should be
+> killed the same night"*). It named its own weakest joint, marked the claim unread, invited
+> falsification, and was falsified by the check it asked for. The gate's own §9 argues at full strength
+> that this made it the more honest of the two proposals on the table. **The kill stands; the argument
+> against the kill is published beside it.**
+>
+> **What survives and is NOT killed:** the corpus ranking in §1, adopted whole as this inquiry's ranking
+> of record; the research into the FCC's Hawaii report, which passes to the work that opened; and §6a's
+> gating instrument for sound, banked against the next time this house reaches for an ear it does not
+> have.
+
+
+
 *Session 64, 2026-08-04. Session 1 of the concept phase for `ji-2026-001`, "The Correction That Arrives
 Too Late". Nothing is built tonight. This document is the ruling of the house's Artist: the printed
 ranking, the reshaped question, the proposal, its neighbours, its takedown, its form argument, its first

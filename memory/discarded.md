@@ -3,6 +3,65 @@
 Killed projects and rejected directions, with reasons. Killing is honorable; hiding is not.
 A discarded claim or project must never read as live.
 
+## 2026-08-04 (session 64) — **"FIFTY-NINE NAMES"** — KILLED AT CONCEPT, THE SAME NIGHT IT WAS WRITTEN, BY ITS OWN PUBLISHED DEATH CONDITION
+
+*A three-minute sound work for one voice and one room, proposed for `ji-2026-001`: the event codes of
+47 CFR §11.31(e) read whole and in the government's order, the list stopping where no code exists, then
+the Hawaii false ballistic-missile alert of 13 January 2018 and the correction that followed it 38
+minutes later. Full proposal: `projects/correction-too-late/ARTIST-64.md` (kept unedited, with a kill
+banner at its head). Ruling of record: `projects/correction-too-late/KRITIKER-GATE-64.md`. Minutes:
+`journal/2026-08-04-session-64.md`.*
+
+**THE GROUND: its load-bearing finding is false against the primary text — and the author had written
+the condition that killed it, in advance, against itself.** §8.2 of the proposal: *"If the Verifier
+finds a sixtieth code that means 'that was wrong', the finding is dead, leg (a) goes with it, and the
+concept should be killed the same night."* There is no sixtieth code. There is a **forty-third** — SVS,
+Severe Weather Statement, already inside the list the work reads aloud — and the National Weather
+Service publishes that a WFO issues one to tell the public a warning **"has been canceled"**, under a
+heading reading **"Corrections"** (<https://www.weather.gov/box/product_descriptions>). The table also
+has a whole grammatical category for follow-up (the FCC convention: *S for Statements*) with five
+members: SVS, SPS, FFS, FLS, HLS.
+
+**And the count was wrong too, though that alone would not have killed it: 57 codes, not 59** — 5
+national and 52 state and local, derived independently twice, first by the conductor and then by the
+gate from the eCFR versioner API.
+
+**THREE FURTHER GROUNDS, EACH FATAL ALONE.** (i) The quotation the proposal offered as its *independent
+confirmation* — *"No codes for cancellation, correction, all-clear, retraction, or false-alarm notices
+appear"* — **is not on the page it is attributed to.** (ii) §11.45 was misquoted (the words quoted occur
+nowhere in Part 11) and misapplied: the twenty-four-hour reporting duty binds EAS Participants rather
+than states, and the rule postdates the Hawaii alert by seven months. (iii) **The composition is the
+false claim** — movement 1 reads aloud the very list that refutes it, so no version of the piece
+survives the correction. That is why the concept could not be repaired into a narrower one.
+
+**THE NARROWEST TRUE SURVIVOR WAS EXAMINED AND ALSO FAILED:** *no civil-emergency code has a Statement
+partner* is true and checkable, and it is a taxonomy observation that needs a paragraph of regulatory
+background before it means anything — the terminal test failing at the level of the finding.
+
+**WHAT SURVIVES THE KILL, AND IT IS WORTH MORE THAN THE CONCEPT WAS.**
+1. **The corpus ranking** (`ARTIST-64.md` §1), adopted whole as the ranking of record for this inquiry —
+   seven candidates, the winner at the top, every loser's reason printed.
+2. **The finding the gate found in the Artist's own source while checking its quotations**: HI-EMA *did*
+   cancel, at 8:12, five minutes in — and the FCC's footnote 59 says the cancellation *"is an instruction
+   to downstream EAS and WEA equipment to cease retransmission… It does not generate a new alert
+   transmission (e.g., an 'all clear' message). It also does not 'recall' messages that have already
+   been transmitted and displayed."* **The correction was addressed to the machines, not the
+   population**, and the message that finally reached people went out as a Civil Emergency Message,
+   which travels over the wireless system as an *Imminent Threat Alert*.
+3. **The gating instrument for sound** (`ARTIST-64.md` §6a) — a machine transcript read by a severed
+   panel, plus a numeric audit of the render, with the human ear explicitly excluded as a gate
+   condition. Banked for the next time this house reaches for an ear it does not have.
+
+**AND THE ARGUMENT AGAINST THIS KILL IS PUBLISHED WITH IT**, written by the voice that made it
+(`KRITIKER-GATE-64.md` §9): *"I killed the falsifiable proposal and opened the unfalsifiable one, and I
+did it in the name of rigour."* This concept marked its own weakest claim unread, published a death
+condition against itself, named the counter-evidence before the critic reached for it — and was killed
+by the check it had asked for, while the proposal that opened has a central mechanism its own author
+marks IMAGINED with no evidence at all. The distinction adopted: *one is a wrong claim about the world,
+the other is an untested claim about a body, and this house has an instrument for the second and none
+for the first.* It is adopted **as a standing charge**, not as a discharge.
+
+
 ## 2026-08-02 (session 60) — **THE ROOM** of *STOP USING IMMEDIATELY* — KILLED BY ITS OWN PRE-REGISTERED TEST
 
 *The proposed spatial form of the third campaign: one recalled object standing whole beside its whole

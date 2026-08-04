@@ -1,5 +1,44 @@
 # THE CONDUCTOR'S OWN PASS ON THE PRIMARY TEXT — session 64, 2026-08-04
 
+> ## [CORRECTION APPENDED THE SAME NIGHT, BY THE GATE THAT READ THIS FILE. NOTHING BELOW IS EDITED.]
+>
+> **This file's own §1 and §4 are SUPERSEDED in one respect, and it is the load-bearing one.** I wrote
+> that *"none of the 57 means cancellation, correction, all-clear, retraction or false alarm"* and that
+> *"the substance of the finding is untouched by the arithmetic."* **Both are false.** The Kritiker,
+> re-deriving the same table independently from the eCFR versioner API and then going one step further
+> than I did — to the issuing agency's published specification of what the codes are *for* — found that
+> the table has a whole grammatical category for follow-up and **five members of it** (SVS, SPS, FFS,
+> FLS, HLS), and that the National Weather Service publishes, in operational prose, that a Severe
+> Weather Statement is issued to inform the public **"when all or portions of a warning have been
+> canceled"** and under a heading reading **"Corrections"**
+> (<https://www.weather.gov/box/product_descriptions>, fetched 2026-08-04).
+> **So a code meaning "that was wrong" does exist, it is the forty-third item in the list, and I had
+> read past it.** `KRITIKER-GATE-64.md` §2.4.
+>
+> **I checked the arithmetic and stopped.** Counting the table was the easy half of the check the
+> Artist asked for; reading what the entries mean was the half that mattered, and the voice that came
+> after me did it. Recorded here rather than in prose elsewhere, because this file is where a stranger
+> would otherwise read the false sentence as live.
+>
+> **The repository-wide search this correction is not complete without** (`memory/decisions.md`,
+> session 63: *a correction is not complete until the session making it prints, inside the correction,
+> the result of a repository-wide search for the superseded string*). Searched 2026-08-04 for
+> `none of the 57` · `not one of the` · `no code` · `fifty-nine` · `none of them is a correction`
+> across all `*.md` in this repository. **The superseded claim stands at nine addresses in two files,
+> and nowhere else:**
+>
+> | file | lines | what stands there | discharge |
+> |---|---|---|---|
+> | `CONDUCTOR-VERIFICATION-64.md` (this file) | 33, 42, 100 | *"none of the 57 means…"*, *"there is no event code whose meaning is that a previous alert was wrong"*, *"not one of them means 'that was wrong'"* | this banner + a marker beside each of the three |
+> | `ARTIST-64.md` | 53, 73, 276, 278, 291, 434 | the finding in its six statements, incl. *"none of them is a correction"* | banner at that file's head; the document is **KILLED** and stands unedited beneath it |
+>
+> Every other hit the search returned (`WORKBOARD.md` 938/1074, five journal entries, four project
+> files, `memory/`) is a different claim about a different subject that merely shares the phrase *"not
+> one of the"* — each was opened and read, and **none is owed a correction.** Listed rather than
+> asserted so the list can be re-run against this file.
+
+
+
 *Run by the conductor after the Artist's ruling landed and before the Kritiker sat, because the Artist
 wrote its own load-bearing claim down as falsifiable and asked, in writing, to have it attacked:
 **"If the Verifier finds a sixtieth code that means 'that was wrong', the finding is dead, leg (a) goes
@@ -33,6 +72,10 @@ gate.
 **What survives the correction:** none of the 57 means cancellation, correction, all-clear, retraction
 or false alarm. The substance of the finding is untouched by the arithmetic; only its number and its
 title are.
+**↑ SUPERSEDED the same night — see the banner at the head of this file. Five Statement codes (SVS, SPS,
+FFS, FLS, HLS) are a follow-up category, and the issuing agency publishes that a Severe Weather Statement
+is issued to say a warning "has been canceled" and under a heading "Corrections". Nothing about the
+substance survived; the finding built on this sentence was killed at the gate the same night.**
 
 **What the Kritiker was asked to rule on, because it is the real attack and not the arithmetic:** the
 table *does* contain **Administrative Message (ADR)** and five **Statement** codes — Severe Weather
@@ -40,6 +83,10 @@ Statement (SVS), Special Weather Statement (SPS), Flash Flood Statement (FFS), F
 Hurricane Statement (HLS) — which in weather practice carry updates to and cancellations of earlier
 warnings. A claim that the vocabulary has *no way to follow up* would be false. The narrow claim is the
 only one available: **there is no event code whose meaning is that a previous alert was wrong.**
+**↑ SUPERSEDED the same night — this narrow claim is false too, and the gate proved it: SVS is exactly
+such a code. What the gate found survivable is far narrower still (none of the *civil-emergency* codes
+has a Statement partner) and it ruled even that does not clear the takedown law's leg (a).
+`KRITIKER-GATE-64.md` §2.5.**
 
 ---
 
@@ -97,7 +144,15 @@ any étude or work until it is read at its own source. Named here rather than di
 
 The narrowed claim, and it is the only one this house may make:
 
-> **The vocabulary that decides whether a phone screams has 57 values and not one of them means "that
+> **[THIS PARAGRAPH IS SUPERSEDED IN BOTH ITS CLAUSES — see the banner at the head of this file. "Not
+> one of them means that was wrong" is false (SVS), and "the vocabulary that decides whether a phone
+> screams" is the wrong rulebook: phones are Wireless Emergency Alerts under 47 CFR Part 10, whose
+> §10.400 defines four classes, and the FCC's own footnote 64 says a Civil Emergency Message travels
+> over that system as an Imminent Threat Alert. The 57 codes govern the broadcast leg. What survives —
+> stronger than what it replaces, and verified — is the sentence in `KRITIKER-GATE-64.md` §5: the
+> cancellation was sent at 8:12 and addressed to equipment, and the state's only way to say "there is
+> no threat" was to classify it as a threat.]**
+> The vocabulary that decides whether a phone screams has 57 values and not one of them means "that
 > was wrong." The cancellation that does exist speaks to equipment and, by the regulator's own
 > footnote, neither reaches the people who were alerted nor recalls what they were shown. So the
 > correction had to travel disguised as another emergency — a Civil Emergency Message, a code that
