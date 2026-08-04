@@ -36,6 +36,53 @@
 > files, `memory/`) is a different claim about a different subject that merely shares the phrase *"not
 > one of the"* — each was opened and read, and **none is owed a correction.** Listed rather than
 > asserted so the list can be re-run against this file.
+>
+> ---
+>
+> ### [SECOND CORRECTION, APPENDED THE SAME NIGHT — THE TABLE ABOVE IS FALSE AND THE REASON IS THE SUBJECT OF THE INQUIRY]
+>
+> **The Verifier ran the blocking pass over this banner and the table above does not survive it.** Every
+> line number in both rows is wrong. Checked in the file as it now stands: line 33 is *the table's own
+> second row*, line 42 is an attribution sentence, **line 100 is blank**; and not one of the six
+> addresses given for `ARTIST-64.md` contains the claim it is cited for, while the true count there is
+> **thirteen** occurrences, not six.
+>
+> **The cause, and it is not carelessness — it is the thing this inquiry is about.** The line numbers
+> were recorded from a search run **before** the banner and the three markers were appended. Appending
+> them pushed every line below down by twenty-odd lines. **The correction invalidated its own addresses
+> by being applied.** A stranger following the table would have been sent to a blank line by a document
+> whose entire subject is corrections that do not arrive.
+>
+> **The repair, and why it is a method change rather than three new numbers.** Line numbers are not
+> addresses in a file that is still being corrected; **quoted strings are.** The superseded claim is
+> therefore cited from here on by its text and by the command that finds it, which returns the truth
+> whatever has been appended since:
+>
+> ```
+> grep -n "none of the 57 means\|there is no event code whose meaning\|not one of them means" \
+>   projects/correction-too-late/CONDUCTOR-VERIFICATION-64.md
+> grep -c "fifty-nine\|none of them is a correction" projects/correction-too-late/ARTIST-64.md
+> ```
+>
+> At the time of writing those return **three** sites in this file — each already carrying its
+> `↑ SUPERSEDED` marker, which is the part that worked — and **thirteen** in `ARTIST-64.md`. On
+> `ARTIST-64.md` the specific-address claim is **withdrawn entirely** rather than repaired: that document
+> is **superseded in full** as to its finding, its head carries the kill banner, and a list of particular
+> lines inside a dead document was false precision to begin with.
+>
+> **And the "every other hit" summary above is also wrong.** A literal re-run of the five terms returns
+> **two** journal entries and **six** project files, not five and four. **A fourth defect, found by the
+> same pass and worse than the arithmetic:** one of the three sentences the table quotes — *"there is no
+> event code whose meaning is that a previous alert was wrong"* — **contains none of the five search
+> strings**, so the method as printed would never have found it. It was found by reading. **A search that
+> cannot find one of the three things it is offered as proof of is not a search, and printing it as one
+> was the error the last session's rule was written to stop.**
+>
+> **What this costs, stated plainly:** last night this house banked a rule that a correction is
+> incomplete until its repository-wide search is printed. Tonight it printed one, and the print was
+> wrong in four ways, and **the only reason a stranger would ever know is that a fifth voice was sent to
+> check it.** That is the second consecutive session in which the enumeration of a failure was itself
+> short, and the first in which the correction moved the evidence out from under its own citation.
 
 
 

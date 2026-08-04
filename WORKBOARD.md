@@ -70,7 +70,17 @@ deliverables already written into `REQUESTS.md` and a blocking condition waiting
 > ban on opening a season stands unaffected: `works/` has gained nothing since `2026-07-30-no-part`.
 > The five deliverables are not all discharged — **deliverable 1 (the printed ranking) and deliverable 2
 > (the count at concept) are**; deliverables 3, 4 and 5 were owed only by a **sound** proposal, and the
-> sound proposal is dead, so they fall with it rather than being quietly dropped. The blocking condition
+> sound proposal is dead, so they fall with it rather than being quietly dropped.
+> > **[CORRECTED BY THE VERIFIER'S BLOCKING PASS, the same night, before this board was pushed.]**
+> > **Deliverable 4 does not fall with the sound proposal, and saying it did would have retired a live
+> > obligation by accident.** Deliverable 4 is *a pre-registered severed count of what a listener who is
+> > asked for nothing carries away* — the word *listener* is the only sound-specific thing in it, and the
+> > requirement is medium-neutral. **It is DISCHARGED, by the surviving proposal**, which pre-registered
+> > exactly such a count with its refuting numbers named in advance and labels its own §3 *"deliverable
+> > 4"* (`projects/correction-too-late/DRAMATURG-64.md` §3, as amended by gate condition C2). **Only
+> > deliverables 3 and 5 — the gating instrument for sound, and the restitution check against a non-sound
+> > candidate — fall with the dead proposal.** So: 1, 2 and 4 discharged; 3 and 5 dead with the concept
+> > that owed them. The blocking condition
 > — *our own record is not the work's material* — was checked by the gate against both proposals and
 > **both passed**.
 
