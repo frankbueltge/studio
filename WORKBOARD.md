@@ -58,6 +58,17 @@ measured share of that day's vessel-days of darkness knowable on the day itself,
 our committed captures. **Below that — a single-sitting screen with seeded times — is a failed
 forecast**, and the gate has put its own name to it.
 
+**THE VERIFIER'S BLOCKING PASS, and it blocked** (`VERIFIER-66.md`). **(1) The conductor dropped a
+vessel from the shelf he had called first-hand** — the live edition names **eleven** vessels, not ten;
+`EXCELLENCE (USA), 16 d, United States EEZ (Alaska)` was cut when the page was extracted through a
+window whose tail nobody read. The undercount travelled into the claim, the sharpening, the étude's
+data island and its README; corrected beside each error, cited by string and never by line number, and
+**the panelled étude was annotated rather than altered, because it is frozen.** No ruling of the gate
+depends on the count. *This is the same banked failure as the last three sessions — an enumeration of
+a set that was short — and it is recorded as a recurrence, not as a new rule.* **(2) Tonight's process
+record runs 4,192 words against the 3,000-word cap in force from today** (3,053 excluding the material
+file). Recorded as the violation it is; nothing was trimmed after the fact to make it fit.
+
 **THE STATE OF THE HOUSE:** one project in flight · **sixteen sessions since the last premiere**
 (*NO PART*, session 50, 2026-07-30 — sessions 51–66 inclusive) · inward sessions in the last four:
 **1** (session 63), so tonight was outward and the cadence rule holds.

@@ -28,6 +28,16 @@ use the two labelled reviewer controls at the bottom — "force the return" and 
 | SOURCED | ten vessel names, flags, durations, waters; TUNAMAR's coordinates; aggregates (82/230/5,641/~3,712); method and framing sentences. `https://frankbueltge.de/ghost-fleet/`, `https://frankbueltge.de/werke/ghost-fleet/`, fetched 2026-08-04. |
 | IMAGINED | which vessel reads "not yet knowable" vs. visible; "+Nd became visible" moments visit 2 (no per-vessel timestamp upstream); bar geometry, layout. Marked on the page, both visits. |
 
+**[VERIFIER-66: the live edition names eleven vessels, not ten. `https://frankbueltge.de/ghost-fleet/`
+(re-fetched 2026-08-04, 200, 35,473 bytes — byte-identical to the fetch `MATERIAL-66.md` §0 recorded,
+so this is a transcription drop, not live-data drift) also lists EXCELLENCE (USA) 16 d, United States
+EEZ (Alaska), absent from the data island below. The étude's data island and this table both
+undercount by one vessel.]**
+
+*(Conductor: this correction was appended by the Verifier inside the table above,
+which broke the table; the text is moved here verbatim and unaltered, and nothing else
+changed.)*
+
 No VERIFIED tier appears; that word is not used.
 
 ## Kill condition

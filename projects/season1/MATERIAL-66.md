@@ -78,7 +78,10 @@ transient capture artefact, a restoration, or nothing at all, we do not know and
   (**5,641** in the window), together about **3,712 vessel-days of darkness**.
 - Others named: MICRONESIA103 (FSM) 39 d, Marshallese EEZ · ALIZE (ECU) 31 d · FORTICA (ECU) 26 d ·
   PANOFI MASTER (GHA) 22 d · TRAVELER (USA) 18 d, Alaska · VICTORIA (MEX) 17 d · PANOFI DISCOVERER
-  (GHA) 17 d · VESTERAALEN (USA) 17 d · PACIFIC FURY (USA) 17 d.
+  (GHA) 17 d · VESTERAALEN (USA) 17 d · PACIFIC FURY (USA) 17 d. **[VERIFIER-66: this list drops
+  an eleventh vessel. The live page, re-fetched 2026-08-04 at the identical 35,473 bytes recorded
+  in §0 above, also names EXCELLENCE (USA) 16 d, United States EEZ (Alaska). The edition holds
+  eleven named vessels (TUNAMAR plus ten others), not ten (TUNAMAR plus nine).]**
 - The instrument's own framing: *"No claim of illegality, only the counted invisibility."*
 
 ## 4. The Consensus — the 4 August 2026 edition, as published

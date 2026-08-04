@@ -17,7 +17,9 @@ days — it is **the length of the darkness itself**: an event enters the record
 so a vessel dark for 56 days is absent from the day it vanished for 56 days. TUNAMAR's vanishing
 therefore falls **between 2026-06-02 and 2026-06-09** (56 days back from a window that closed
 within seven days of 2026-08-04) — a derived range with its uncertainty stated, not a fabricated
-date. Ten published durations give ten such ranges.
+date. Ten published durations give ten such ranges. **[VERIFIER-66: the live page names eleven
+vessels, not ten — TUNAMAR plus ten others, including EXCELLENCE (USA) 16 d, United States EEZ
+(Alaska), which MATERIAL-66 §3 omitted. Eleven published durations give eleven such ranges.]**
 
 **Consequence, and the gate decides it, not I:** if the work's day is the day a ship *went dark*
 rather than the edition date, the delay is measured rather than invented, the reveal order is no

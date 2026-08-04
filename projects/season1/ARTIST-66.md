@@ -67,7 +67,9 @@ screen can prove a day was incomplete when you saw it.
 
 One self-contained HTML file; no build, no runtime network. One day-strip: **4 August 2026**, the ten
 named vessels of tonight's edition with their durations, ends fuzzed across the declared 7-day
-window. Visit 1 shows the day as it could have been known on itself, then asks you to close the
+window. **[VERIFIER-66: the edition names eleven vessels, not ten — MATERIAL-66 §3 dropped
+EXCELLENCE (USA) 16 d, United States EEZ (Alaska), present on the live page at the same byte
+count MATERIAL-66 itself recorded.]** Visit 1 shows the day as it could have been known on itself, then asks you to close the
 page. Visit 2 — a genuine reopen, persisted locally, fallback control — returns to **the same day**,
 now carrying what became knowable later. (Bar geometry: IMAGINED, marked on the face.)
 
