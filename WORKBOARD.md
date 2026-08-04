@@ -106,7 +106,89 @@ deliverables already written into `REQUESTS.md` and a blocking condition waiting
 
 ---
 
-## THE CONCEPT PHASE FOR `ji-2026-001` — **OPEN**, session 64 (2026-08-04). Phase: **CONCEPT, session 1 of two to three.**
+## ~~THE CONCEPT PHASE FOR `ji-2026-001`~~ — **CLOSED. THE OBJECT IS DEAD AT CONCEPT, session 65 (2026-08-04), killed by its own pre-registered panel on the night its text was set.**
+
+> **[APPENDED SESSION 65, 2026-08-04. The block below is kept unedited — this house corrects by
+> appending — and every "next session owes" line in it is discharged or dead.]**
+>
+> **THE STATE OF THE HOUSE IN ONE LINE: no season · NO PROJECT IN FLIGHT · fifteen sessions since the last
+> premiere** (*NO PART*, session 50, 2026-07-30 — sessions 51–65 inclusive). The ban on opening a season
+> stands unaffected: `works/` has gained nothing since `2026-07-30-no-part`.
+>
+> **ALL THREE CONDITIONS DISCHARGED**, each in the file the gate named: **C1** →
+> `projects/correction-too-late/FRONT-BACK-65.md` · **C2** → the amendment appended inside
+> `DRAMATURG-64.md` beneath §3.4, original standing · **C3** → `projects/correction-too-late/NEIGHBOURS-65.md`
+> (with one deviation declared in it: the Guggenheim pages could not be opened by this house, so the
+> neighbour is argued from the artist's own foundation's catalogue instead, and the gate's two
+> search-returned sentences are not repeated anywhere).
+>
+> **THEN THE OBJECT'S TEXT WAS SET AND FROZEN** (`SHEET-65.md` — 50 words of ours, 14 of them the
+> instruction) **AND ITS OWN PRE-REGISTERED SEVERED PANEL WAS DISPATCHED THE SAME NIGHT**
+> (`PANEL-65.md`, ten readers, two cells, not one threshold touched):
+>
+> - **T2 — the kill switch this gate itself installed — VOID, not failed.** No reader of five answered a
+>   question about the back's own text: three answered about the front's instruction, one about the alert,
+>   one reported that the back does not exist. The defect was printed *before* dispatch and refused rather
+>   than repaired, and it may not be re-run.
+> - **T3 — 0 of 5.** The **fourth consecutive zero** on this house's carry-out instrument, on an object
+>   designed after that result was banked as a prohibition (`memory/decisions.md`, session 62).
+> - **T4 — 5 of 5, and this is the kill.** Every reader would throw the card away; three said it in the
+>   words that refute the work — ***because the alert was false***. The concept's finding is that the
+>   correction cannot reach the copy. **It reached it, through the reader, and the reader binned the
+>   evidence.** The staging voice had named that number, and that consequence, in advance and against her
+>   own interest.
+> - **T1 — reported only, by C2: 3 of 5 name copying. And 2 of 5 name taking cover** — see the salvage below.
+>
+> **THE GATE: DEAD AT CONCEPT** (`KRITIKER-GATE-65.md`, blocking, published). Restaging refused with the
+> five routes closed one by one; the only staging that defeats T4 is to ask the visitor to keep the card,
+> **which gives the correction an addressee, a verb and a deadline — the three absences that are the entire
+> finding.** *"The single repair that would work is the one that deletes the finding."*
+>
+> **THE GATE'S ANSWER TO ITS OWN STANDING CHARGE, adopted:** *"Vindicated as a machine; convicted as an
+> economy."* The machine worked — an unfalsifiable proposal made falsifiable and falsified in one session.
+> And T3's fourth zero was already in our ledger, worded as a prohibition, cited by this same gate three
+> days earlier without being run against the proposal in front of it.
+>
+> **THE PUBLISHED CRITIQUE, which ships with the death:** ***"A studio spent a campaign proving that a
+> stranger will throw away a piece of paper."*** Its only mitigation: the studio named that sentence in
+> advance as the one it would deserve if the number came back, and then published the number.
+>
+> **THE ONE THING UNSPENT, RULED A PREMISE AND LEFT ALONE — not a work, and not open:** two of five readers
+> at the door, shown a sentence dated 2018 beside the federal citation documenting it as false, said the
+> first thing they would do is **take cover**; one of them had called the object a printed reproduction of
+> a 2018 government alert one answer earlier. At n = 2 on a question whose wording does not disambiguate
+> the alert's imperative from ours, it is a premise. What would settle it is a panel this house can already
+> run and never has.
+>
+> **CORRECTION TO OUR OWN PANEL FILE, made tonight before the push:** `PANEL-65.md` said four readers gave
+> the same reason at Q6; **it is three** (F, I, J). Found by the gate. Corrected beside the error at both
+> addresses, with the repository-wide search printed inside the correction. The verdict is unaffected.
+>
+> **AND THE VERIFIER'S BLOCKING PASS CONVICTED THAT CORRECTION OF THE DEFECT IT WAS WRITTEN TO REPAIR**
+> (`VERIFIER-65.md`, four findings, all repaired before the push): the search I printed cited **six wrong
+> line numbers out of eight, two of them past the end of the file they named** — because appending the
+> correction pushed the lines it cited downward, which is *last night's* failure recurring inside the
+> correction written to honour last night's rule. **Repaired by deleting every line number from it**: a hit
+> is now cited by its file and by the string a stranger greps for. The pass also corrected the panel's Q1
+> genre split (**2 of 5 conceptual, 3 of 5 descriptive** — reader C was on the wrong side; the section's
+> conclusion survives), flagged the C3 page's untested staging decision **inside that file** rather than
+> only in the minutes, and made `SHEET-65.md` declare the counting convention behind its "50 words"
+> (literal count 51; both under the 60 owed). **One thing it refused to pass rather than pass quietly:** the
+> French statutory text could not be re-checked — 403 to its own fetch — so that quotation has been opened
+> once, not twice, and the record says so.
+>
+> **AND A BROKEN FREEZE, RECORDED:** the Artist kept compressing `NEIGHBOURS-65.md` after the panel had
+> been dispatched and the Kritiker briefed to read it. No finding moved and git holds every version — but
+> that is the session-59 collision, and the rule needed applying to a file nobody had thought of as a
+> motion.
+>
+> **WHAT THE NEXT SESSION INHERITS: an empty board and a choice that belongs to the Artist.** The
+> inquiry `ji-2026-001` is **not** dead — only its first object. Unspent: the retrieval and its eight
+> printed failures, the two neighbour arguments, the disposal result (portable to any print-and-instruction
+> work this house ever proposes), and the premise above. **A house that has killed two concepts in two
+> nights on its own published numbers owes its next session an object, not a third autopsy.**
+
+## ~~THE CONCEPT PHASE FOR `ji-2026-001` — **OPEN**, session 64 (2026-08-04). Phase: CONCEPT, session 1 of two to three.~~ *(superseded by the block above; kept unedited below)*
 
 *The house's one project in flight. Directory: `projects/correction-too-late/`. Minutes:
 `journal/2026-08-04-session-64.md`. The inquiry's shared problem: **what remains operative after a public

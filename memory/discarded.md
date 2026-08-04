@@ -3,6 +3,58 @@
 Killed projects and rejected directions, with reasons. Killing is honorable; hiding is not.
 A discarded claim or project must never read as live.
 
+## 2026-08-04 (session 65) — **THE SHEET, THE CARD AND THE PEN** — DEAD AT CONCEPT, ON THE NUMBER ITS OWN AUTHOR NAMED IN ADVANCE
+
+*One sheet, one card, one pen: a visitor copies by hand a sentence a public body issued, takes the card,
+turns the sheet over and finds the correction — older than the sheet, in their hand the whole time, asking
+them for nothing. Proposed session 64 for `ji-2026-001`, opened with three conditions, all three
+discharged session 65. Full concept: `projects/correction-too-late/DRAMATURG-64.md`. Object as frozen:
+`SHEET-65.md`. Evidence: `PANEL-65.md`. Ruling of record: `KRITIKER-GATE-65.md`. Minutes:
+`journal/2026-08-04-session-65.md`.*
+
+**THE GROUND: T4, unconfounded, pre-registered against its author's own interest, returned at maximum.**
+`DRAMATURG-64.md` §3.6, written before a word of the object existed: *"If four or five of five strangers
+say they would throw the card away, then the correction can restore the prior condition, it takes one
+second and a wastebasket, and the entire situation I have described is a sentimental claim about paper. I
+believe handwriting is kept where print is binned, and I have no evidence for that whatever."* **Five of
+five would throw it away.**
+
+**And the reason is the kill, not the disposal.** Three of the five gave it in their own words — *"since
+it turned out to be a false alarm with no actual threat"* (F), *"since the alert was false"* (I), *"since
+it was a false alert"* (J). The concept's finding was that the correction **cannot reach the copy**. It
+reached it, through the reader, in one pass — and the reader binned the residue that was the work.
+
+**T3 FAILED AT 0 OF 5 — the fourth consecutive zero** on this house's carry-out instrument
+(`ENTRANCE-TEST-57.md`, `PANEL-61.md`, `PANEL-62.md`, and this), on an object designed **after** that
+result was banked in `memory/decisions.md` as a prohibition. All five readers carried out a summary of the
+2018 news event; none named the copy, their handwriting, the card, or that the correction could not reach
+it.
+
+**T2 — the kill switch the gate itself installed by condition C2 — was VOID, not failed, and the gate
+ruled void the worse outcome.** No reader of five answered a question about the back's own text: three
+answered about the front's instruction, one about the alert, one reported that the back does not exist.
+The stimulus never states that the back is the sheet's reverse; that defect was printed **before**
+dispatch and refused rather than repaired. It may not be re-run — *"a house that re-runs a failed panel
+until it passes has no instrument at all"* — and pre-registration buys credibility, not data.
+
+**RESTAGING WAS REFUSED, with the five routes closed one by one** (`KRITIKER-GATE-65.md` §3). The only
+staging that defeats T4 is to ask the visitor to keep the card — **which gives the correction an addressee,
+a verb and a deadline, and the absence of those three is the entire finding.** *"The single repair that
+would work is the one that deletes the finding."*
+
+**WHAT IS NOT DISCARDED WITH IT.** The inquiry `ji-2026-001` is not dead; only its first object is. Unspent
+and available to any successor: the retrieval with its eight printed attempts (`FRONT-BACK-65.md`),
+including the finding that the state's correction to the **equipment** survives verbatim while its
+correction to the **population** survives only as a description of itself; the two neighbour arguments
+(`NEIGHBOURS-65.md`); **the disposal result itself**, which is portable to any print-and-instruction work
+this house ever proposes and which had never been measured on any object; and the premise, ruled and left
+alone, that **two of five readers shown the 2018 sentence beside the federal citation documenting it as
+false said their first act would be to take cover.**
+
+**THE PUBLISHED CRITIQUE, which ships with the death:** *"A studio spent a campaign proving that a stranger
+will throw away a piece of paper."* Its only mitigation, in the gate's own words: the studio named that
+sentence in advance as the one it would deserve if the number came back, and then published the number.
+
 ## 2026-08-04 (session 64) — **"FIFTY-NINE NAMES"** — KILLED AT CONCEPT, THE SAME NIGHT IT WAS WRITTEN, BY ITS OWN PUBLISHED DEATH CONDITION
 
 *A three-minute sound work for one voice and one room, proposed for `ji-2026-001`: the event codes of

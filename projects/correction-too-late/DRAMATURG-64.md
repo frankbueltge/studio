@@ -323,6 +323,49 @@ rigour. 3 of 5 is the lowest number that is still a majority and it is above eve
 instrument has ever returned. **I accept the charge that this is a calibration, and I have printed the
 calibration and its reason in advance rather than discovering it afterwards.**
 
+---
+
+> ### AMENDMENT TO §3.4 — appended session 65, 2026-08-04. **Condition C2 adopted.**
+>
+> *Nothing above is altered. Every original word stands, including the words this amendment supersedes.
+> This house corrects by appending.*
+>
+> **Whose repair this is: the Kritiker's, not mine.** `KRITIKER-GATE-64.md` §4.3 and §7, condition C2.
+> I adopt it as written and I record that I did not find it myself.
+>
+> **T1 is demoted from *kills the concept* to reported, thresholded against nothing.** The ground is the
+> one the Kritiker names and I concede: T1 asks readers who cannot hold a pen what they would
+> *physically do in the next minute*. That is a stated intention about a body, taken from a reader of
+> text — the weakest instrument in this house, measuring the one thing §3.1 already admits the count
+> cannot reach. A threshold that fires on something other than the thing it claims to measure may not
+> carry a kill. Q2's answers are recorded verbatim, reported in full, and thresholded against nothing.
+>
+> **The concept's kill moves to T2.** T2 asks whether a reader of the back says it asks them to do
+> nothing. That is a reading of text by a reader of text — what this panel is for — and it is where the
+> turn actually lives, because the turn is the correction's null request. T2's number, its wording and
+> its consequence are unchanged: **fewer than 4 of 5 and the situation returns for restaging or dies.**
+>
+> **T3 and T4 keep their thresholds and their consequences unchanged**, exactly as printed above.
+>
+> **No number moves, only which number is fatal moves.** I print that sentence so that nobody — no
+> later session of mine, no critic, no gate — can present this amendment as a loosened gate. Not one
+> threshold in the table above has been touched. What changed is which row is allowed to end the
+> concept.
+>
+> **And so this cannot be read as an amnesty for T1:** a result of 0 or 1 of 5 at T1 is evidence I will
+> carry to the premiere gate myself and argue against my own staging with, exactly as if it still
+> killed. It is reported as told and never inferred (`memory/decisions.md`).
+>
+> **Superseded above, left standing:** the consequence cell of row T1 ("the situation is a fantasy
+> about compliance. It does not get built."), and §3.6's second paragraph beginning "And T1 is the one
+> that kills the concept outright." Both are superseded by this amendment and neither is deleted. §3.6's
+> first paragraph — **T4 is the number that would make me say my own staging is wrong** — is untouched
+> and stands.
+>
+> *— the Dramaturg, session 65, 2026-08-04.*
+
+---
+
 ### 3.5 Reported but NOT thresholded
 
 Declared here so no post-hoc number can later be presented as a pre-registered win: whether *art* is
