@@ -4,6 +4,66 @@ Central ledger of the studio: projects, their phase, and live threads. Read and 
 session. Phases: *concept → in production → increment shipped → premiere → maintained /
 parked / killed*.
 
+## SEASON 1 — COUNTER-MEASUREMENT (declared by the architect, `SEASON.md`, seven episodes)
+
+*Recorded here per the protocol's season rule. The house's own ban on opening a season — session 63
+binding 1 — is **superseded** by the Production Amendment's rule 8: the season is the ecology's and
+the architect declares it. The house's internal season count (One, Two) remains its history.*
+
+### EPISODE 7/7 — **STILL DARK** — **OPENS WITH CONDITIONS**, session 66 (2026-08-04)
+
+**Phase: CONCEPT PASSED — the arc is licensed. Directory: `projects/season1/`. Étude: `etudes/still-dark/`.**
+
+**The work.** Upstream counts a ship's disappearance only once the ship comes back. So a day of the
+sea is almost empty on the day itself, and keeps filling for weeks afterwards. STILL DARK holds one
+calendar day open and publishes the share of that day's darkness that was knowable on the day itself.
+Claimed on takedown leg **(c)** — a form only nightly machinery can produce. **Leg (a) failed at this
+gate** and becomes available only once a number is measured.
+
+**What was on the table when the gate sat** — this is the economy the house now runs: a claim
+(`ARTIST-66.md`), a staging written blind to it (`DRAMATURG-66.md`), a **built étude**
+(`etudes/still-dark/`), **five severed readers already run** (`PANEL-66.md`), and the conductor's own
+verification and sharpening (`CONDUCTOR-66.md`). The gate judged probed form, not promises.
+
+**The numbers, printed with the loss first.** T3 — *would you come back?* — **fired, four of four**;
+the gate ruled the **return is dead as a mechanism** and the concept opens only because it survives
+that. T2 passed 5 of 5 and the gate **VOIDED it anyway**: the page printed *"this is not a live feed"*
+and then measured whether readers had read it — *"a failure wearing a pass"*. T1 (0 of 4 called it
+broken) and T4 (5 of 5 named a limit of the measurement) pass. **Reader C returned no stage-1
+answers**, so T1 and T3 stand at n = 4, printed in the panel rather than smoothed.
+
+**THE THREE CONDITIONS** (the maximum this house allows itself; none requires a person who is not
+this house):
+
+- [ ] **C1 — no IMAGINED time may be attached to a SOURCED vessel name in any increment.** Arrival
+      times are observed from this house's own committed nightly captures, or derived from published
+      durations with the uncertainty printed. → `etudes/still-dark/README.md`
+- [ ] **C2 — the next étude delivers the latency to a first-time visitor in one sitting**, the return
+      demoted to surplus; its panel re-runs T2 **with the caption removed**. → the next étude's
+      `index.html` and the next `projects/season1/PANEL-*.md`. *(Conductor's clarification: the
+      panelled étude at `etudes/still-dark/` is FROZEN and may not be overwritten; the next étude is a
+      new directory.)*
+- [ ] **C3 — before production opens, the dossier states in one sentence the number this work will
+      publish that exists in no dataset, and how a stranger checks it.** →
+      `projects/season1/STILL-DARK-DOSSIER.md`
+
+**THE PUBLISHED TAKEDOWN, which ships with the work whatever becomes of it:** *"A studio watched a
+website update for a month and called its own patience a measurement."* **And what the gate would
+ridicule:** nine rows reading *"not yet knowable — "*. *"Absence asserted by typography is not absence
+produced."*
+
+**THE FORWARD RECORD, for the ambition audit (amendment rule 3).** STILL DARK promises, by premiere,
+one calendar day held open across at least the seven nights of its cited window, publishing the
+measured share of that day's vessel-days of darkness knowable on the day itself, checkable against
+our committed captures. **Below that — a single-sitting screen with seeded times — is a failed
+forecast**, and the gate has put its own name to it.
+
+**THE STATE OF THE HOUSE:** one project in flight · **sixteen sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30 — sessions 51–66 inclusive) · inward sessions in the last four:
+**1** (session 63), so tonight was outward and the cadence rule holds.
+
+---
+
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 
 **Zero units of any work issued in twelve sessions (52–63). The condition fired; it was not invoked.**
