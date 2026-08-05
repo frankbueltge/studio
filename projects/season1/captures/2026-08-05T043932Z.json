@@ -1,0 +1,293 @@
+{
+  "capture_version": 1,
+  "fetch": {
+    "url": "https://frankbueltge.de/ghost-fleet/",
+    "fetched_at_utc": "2026-08-05T04:39:32Z",
+    "http_status": 200,
+    "bytes": 35473,
+    "sha256": "ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5"
+  },
+  "method": {
+    "source": "https://frankbueltge.de/werke/ghost-fleet/",
+    "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
+    "window_days": 7
+  },
+  "edition_date_printed": "4 August 2026",
+  "edition_date": "2026-08-04",
+  "case_of_the_day": {
+    "name": "TUNAMAR",
+    "flag": "PAN",
+    "days_dark": 56,
+    "prose": "A fishing vessel flagged PAN switched off its transponder for 56 days — vanished at 2.6°N, 92.3°W, resurfaced at 0.8°S, 81.2°W, in Ecuadorian EEZ (Galapagos).",
+    "gfw_url": "https://globalfishingwatch.org/map/vessel/7d0bafe28-8ec3-ab8e-fb15-3ce152f3974f"
+  },
+  "aggregates": {
+    "dark_inside_national_waters": 82,
+    "disappearances_examined": 230,
+    "in_the_window": 5641,
+    "vessel_days_of_darkness_approx": 3712
+  },
+  "vessels": [
+    {
+      "name": "TUNAMAR",
+      "flag": "PAN",
+      "days_dark": 56,
+      "prose": "A fishing vessel flagged PAN switched off its transponder for 56 days — vanished at 2.6°N, 92.3°W, resurfaced at 0.8°S, 81.2°W, in Ecuadorian EEZ (Galapagos).",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/7d0bafe28-8ec3-ab8e-fb15-3ce152f3974f",
+      "role": "case_of_the_day",
+      "waters": null
+    },
+    {
+      "name": "MICRONESIA103",
+      "flag": "FSM",
+      "days_dark": 39,
+      "waters": "Marshallese EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/44e937b38-8d12-ce29-5110-ee36398d904c",
+      "role": "other"
+    },
+    {
+      "name": "ALIZE",
+      "flag": "ECU",
+      "days_dark": 31,
+      "waters": "Ecuadorian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/db5cd7a2a-a9dd-4c52-00ac-4c6980d9a029",
+      "role": "other"
+    },
+    {
+      "name": "FORTICA",
+      "flag": "ECU",
+      "days_dark": 26,
+      "waters": "Ecuadorian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/ed76e5578-8f7d-2e31-1af3-cc129d6ae7b9",
+      "role": "other"
+    },
+    {
+      "name": "PANOFI MASTER",
+      "flag": "GHA",
+      "days_dark": 22,
+      "waters": "Ghanaian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/7b4c7f97f-f297-3a81-22a7-5d210ca4d71e",
+      "role": "other"
+    },
+    {
+      "name": "TRAVELER",
+      "flag": "USA",
+      "days_dark": 18,
+      "waters": "United States EEZ (Alaska)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/6c2fe0c33-3bec-8532-7d04-6c6e8aca5d32",
+      "role": "other"
+    },
+    {
+      "name": "VICTORIA",
+      "flag": "MEX",
+      "days_dark": 17,
+      "waters": "Mexican EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/ef787e860-0064-bc54-31e7-63a593778d42",
+      "role": "other"
+    },
+    {
+      "name": "PANOFI DISCOVERER",
+      "flag": "GHA",
+      "days_dark": 17,
+      "waters": "Ghanaian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/2781849c8-849b-ce64-e1e3-3ed0ae3cd66a",
+      "role": "other"
+    },
+    {
+      "name": "VESTERAALEN",
+      "flag": "USA",
+      "days_dark": 17,
+      "waters": "United States EEZ (Alaska)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/b6a3440c9-9f83-d1f6-378d-e70f7db7184b",
+      "role": "other"
+    },
+    {
+      "name": "PACIFIC FURY",
+      "flag": "USA",
+      "days_dark": 17,
+      "waters": "United States EEZ (Alaska)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/455a51563-3a2e-18c6-cf12-9ac5b75ab0a6",
+      "role": "other"
+    },
+    {
+      "name": "EXCELLENCE",
+      "flag": "USA",
+      "days_dark": 16,
+      "waters": "United States EEZ (Alaska)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/f4c37b1e1-14cd-40b6-80ad-9a41580169fd",
+      "role": "other"
+    }
+  ],
+  "derived_intervals": [
+    {
+      "name": "TUNAMAR",
+      "flag": "PAN",
+      "days_dark": 56,
+      "went_dark_between": [
+        "2026-06-02",
+        "2026-06-09"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "MICRONESIA103",
+      "flag": "FSM",
+      "days_dark": 39,
+      "went_dark_between": [
+        "2026-06-19",
+        "2026-06-26"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "ALIZE",
+      "flag": "ECU",
+      "days_dark": 31,
+      "went_dark_between": [
+        "2026-06-27",
+        "2026-07-04"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "FORTICA",
+      "flag": "ECU",
+      "days_dark": 26,
+      "went_dark_between": [
+        "2026-07-02",
+        "2026-07-09"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "PANOFI MASTER",
+      "flag": "GHA",
+      "days_dark": 22,
+      "went_dark_between": [
+        "2026-07-06",
+        "2026-07-13"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "TRAVELER",
+      "flag": "USA",
+      "days_dark": 18,
+      "went_dark_between": [
+        "2026-07-10",
+        "2026-07-17"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "VICTORIA",
+      "flag": "MEX",
+      "days_dark": 17,
+      "went_dark_between": [
+        "2026-07-11",
+        "2026-07-18"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "PANOFI DISCOVERER",
+      "flag": "GHA",
+      "days_dark": 17,
+      "went_dark_between": [
+        "2026-07-11",
+        "2026-07-18"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "VESTERAALEN",
+      "flag": "USA",
+      "days_dark": 17,
+      "went_dark_between": [
+        "2026-07-11",
+        "2026-07-18"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "PACIFIC FURY",
+      "flag": "USA",
+      "days_dark": 17,
+      "went_dark_between": [
+        "2026-07-11",
+        "2026-07-18"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "EXCELLENCE",
+      "flag": "USA",
+      "days_dark": 16,
+      "went_dark_between": [
+        "2026-07-12",
+        "2026-07-19"
+      ],
+      "resurfaced_between": [
+        "2026-07-28",
+        "2026-08-04"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    }
+  ],
+  "tiers": {
+    "SOURCED": "vessels, aggregates, edition date, gfw ids — printed on the page",
+    "DERIVED": "derived_intervals — arithmetic on published durations, bands printed",
+    "OBSERVED": "fetched_at_utc — this house's own record of when it could first know"
+  }
+}

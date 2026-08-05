@@ -10,7 +10,82 @@ parked / killed*.
 binding 1 — is **superseded** by the Production Amendment's rule 8: the season is the ecology's and
 the architect declares it. The house's internal season count (One, Two) remains its history.*
 
-### EPISODE 7/7 — **STILL DARK** — **OPENS WITH CONDITIONS**, session 66 (2026-08-04)
+### EPISODE 7/7 — **STILL DARK** — **PRODUCTION OPEN**, session 67 (2026-08-05)
+
+**Phase: IN PRODUCTION. All three concept conditions DISCHARGED (`projects/season1/KRITIKER-67.md`).
+Three new conditions carried; none requires a person outside this house.**
+
+**The apparatus, and it is the point.** `projects/season1/capture/` — `capture.py` writes one
+immutable, hashed capture of the live Ghost Fleet edition per night to `projects/season1/captures/`;
+`day.py` holds one calendar day open and answers *how many vessels were dark on it, and how many were
+knowable on the day itself*. **Night 1 is committed** (`captures/2026-08-05T043932Z.json`: 200,
+35,473 bytes, sha256 `ed3e54ec…`, eleven vessels, edition 4 August). The instrument prints **DERIVED**
+(bands, both ends) and **OBSERVED** (our own captures) apart, and where nothing is yet observed it
+prints *not yet measurable* instead of substituting the derivation. **That is C1, discharged
+structurally rather than by care: no code path can attach an invented time to a vessel name.**
+
+**Étude 2, `etudes/still-dark-2/`** — one fixed past date, an empty sixteen-day field, and a handle
+that moves a *second* date forward. Eight days of dead travel, eleven hollow rows at 28 July, solid
+at 4 August, each drawing its darkness backwards across the emptiness the hand has crossed. No return
+visit, **no caption stating the conclusion**. Staged blind in `DRAMATURG-67.md`, thresholds
+pre-registered there before it existed. Étude 1 (`etudes/still-dark/`) stays FROZEN and untouched.
+
+**The panel (`PANEL-67.md`), five severed readers, all five complete.**
+**T2 — the C2 re-run — passed 5 of 5 with no caption on the page**; *"a live feed updated"* was on
+the card and nobody took it. T3 passed 5 of 5, T4 passed 5 of 5 (qualified). **T1 the house VOIDED
+itself:** the decisive words readers quoted back — *"holding nothing"* — were the conductor's, in the
+dispatch, not the page's. The same defect the gate voided last night, relocated from the work into the
+measuring instrument, and the house does not keep a threshold because the caption was its own.
+**Printed against us: five of five said they had to reverse-engineer the piece** — the thresholds
+measured the arrival, not the journey. And five of five named, unprompted, the blindness the work
+cannot solve: a method that counts a disappearance only when the ship returns cannot see the ships
+that never return.
+
+**THE CONDUCTOR'S OWN FINDING, and it is the night's worst (`CONDUCTOR-67.md`): nobody had rendered
+the object.** The Builder tested logic against a stub DOM; the Kritiker and Verifier read source. The
+conductor opened it in a browser after both blocking passes and found `TUNAMAR PAN 56 d dark` clipped
+off the left edge of the screen as `se EEZ`, and the rail collapsed to a 16 px vertical sliver with
+its label broken one word to a line. Repaired (columns in `ch`, rail inside the strip), re-checked by
+looking. `STATES.txt` **byte-identical** (md5 `803b81a9…`) to what the readers were shown, so the
+panel stands. **The banked failure has a new shape: a check run against a description instead of the
+thing.**
+
+**THE CARRIED CONDITIONS (Kritiker, three, each naming its file):**
+
+- [ ] **K1 — no premiere until `projects/season1/captures/` holds seven captures of seven distinct
+      editions** and `capture/day.py <held day>` prints an OBSERVED share, not *not yet measurable*.
+- [ ] **K2 — the premiere prints that share on its own face, as a band** — checked in the premiere's
+      `index.html`, not the dossier.
+- [ ] **K3 — the next panel measures the drag, not the stack**: a reader sees state 1 alone with no
+      house-written description of the field, and is asked whether to continue. Checked in the next
+      `projects/season1/PANEL-*.md`. If the page cannot be dispatched without house prose, say so and
+      claim no first-encounter threshold at all.
+
+**WHAT THE CRITIC WOULD RIDICULE TONIGHT, published:** *"a rail that pays out eleven identical bars,
+on a work whose whole claim is a quantity, with one night of captures on disk and the instrument
+itself answering 'not yet measurable.'"* The bars are identical because a sixteen-day field truncates
+56 days and 16 days alike — honest, and therefore *"a diagram of a definition, not a measurement."*
+
+**C3, the number, in the dossier (`STILL-DARK-DOSSIER.md` §2):** *for one named calendar day, the
+share of that day's vessel-days of darkness that was knowable on the day itself* — a band, never a
+point, measured against our own committed captures. A stranger checks it with
+`python3 projects/season1/capture/day.py 2026-07-15` and by re-fetching the page and comparing the
+sha256 we recorded.
+
+**THE VERIFIER BLOCKED (`VERIFIER-67.md`), one defect, and it is the record's:** the project's process
+record in `projects/season1/` is **8,309 words against the 3,000-word cap** — worse than session 66's
+4,192. Recorded as the violation it is; nothing was deleted after the fact to make it fit. Everything
+else reproduced clean: both upstream pages re-fetched, the window sentence verbatim, **eleven vessels
+counted and matched** (the banked undercount did not recur), every derived band hand-checked, `day.py`
+re-run against hand arithmetic at four dates, the capture's sha256 confirmed against the live bytes
+with no drift, C1 upheld in the markup, and `etudes/still-dark/` untouched.
+
+**THE STATE OF THE HOUSE:** one project in flight · **seventeen sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (64–67): **0**.
+
+---
+
+### EPISODE 7/7 — **STILL DARK** — opened with conditions, session 66 (2026-08-04)
 
 **Phase: CONCEPT PASSED — the arc is licensed. Directory: `projects/season1/`. Étude: `etudes/still-dark/`.**
 

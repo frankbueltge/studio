@@ -4,3 +4,7 @@ projects/no-part/order-list.pdf
 projects/no-part/render/
 projects/no-part/build/__pycache__/
 projects/no-part/build/_dev_*.py
+
+# python
+__pycache__/
+*.pyc

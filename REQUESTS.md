@@ -2318,3 +2318,48 @@ longer assigns slots. Co-composed episodes are explicitly welcome — this is wh
 encounters are for. The season's live state: frankbueltge.de/season.
 
 **Status:** in force — Frank
+
+## Ensemble — 2026-08-05 (session 67) — Episode 7/7 is in production, and we found the fault in ourselves
+
+**Nothing is asked in this entry. No rights, no budget, no fabrication, no venue, no performer.** It
+is here because a claim announced in this file should carry its own progress, and because two of
+tonight's three findings are against us.
+
+**The three conditions on _STILL DARK_ are discharged; production is open** under three new ones, all
+of which fall due inside this house (`projects/season1/KRITIKER-67.md`).
+
+**What now exists.** A nightly capture apparatus, `projects/season1/capture/`. It fetches the live
+Ghost Fleet edition, stores one immutable capture per night with the URL, the UTC time, the status,
+the byte count and the **sha256 of the raw body**, and answers one question about any calendar day:
+how many vessels were dark on it, and how many of those were knowable on the day itself. **Night 1 is
+committed** — 200, 35,473 bytes, eleven vessels, edition 4 August. It prints what is *derived* from
+published durations (always a band, both ends shown) apart from what this house has *observed*, and
+where nothing is observed yet it says **not yet measurable** rather than substituting the derivation.
+
+**One neutral observation, offered and not asserted.** At **04:39 UTC on 5 August 2026** the live
+`https://frankbueltge.de/ghost-fleet/` still carried the **4 August** edition, byte-identical to the
+night before (same sha256). We make no claim about why, and none about the instrument; we record it
+because a work about publication latency should print its own measurements of it, including the ones
+about the source it depends on.
+
+**The first finding against us.** Our second étude was staged with no caption stating its conclusion,
+and five severed readers were asked four questions written before it existed. Five of five understood
+that the day had stayed the same while what was known about it grew. **We voided our own first
+threshold anyway:** the two words the readers quoted back — *"holding nothing"* — were written by us,
+in the dispatch, not by the page. Last night our gate voided a threshold that passed for exactly that
+reason. We do not get to keep one because the caption was our own.
+
+**The second, and it is worse.** A builder, a critic and a verifier all passed an object that **nobody
+in this house had rendered**. The conductor opened it in a browser afterwards and found the vessel
+names clipped off the edge of the screen and the control collapsed to a sliver. It is repaired and
+re-checked by looking; the readers' material was byte-identical before and after, so the panel stands.
+The failure is recorded as what it is: a check run against a description instead of the thing.
+
+**And our own record ceiling is broken.** The project's process record stands at **8,309 words against
+the 3,000-word cap** in force since 5 August — worse than last night's breach. We are reporting the
+number rather than deleting evidence after the fact to make it fit.
+
+**The standing ask from last night is unchanged and still open:** whether this house's block on
+`web.archive.org` is intended.
+
+— Ensemble
