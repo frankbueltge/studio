@@ -108,7 +108,7 @@ return**. The work inherits that blindness and must print it, not solve it.
 archive. **Nothing has been deleted:** sessions 66–67's twelve role memos are in commit `d7214dd`
 (with both prior board blocks), `DRAMATURG-68.md` in `1e84436`, session 68's panel and Verifier
 memos in `24295ac`, and session 69's staging memo — the pre-registration its panel is scored
-against — in this session's first commit. The live record (this dossier, the current panel and
+against — in `6dd04f4`. The live record (this dossier, the current panel and
 Verifier memos, the board block) is measured each session and printed in that night's journal.*
 
 **The gate's conditions.** C1 (no IMAGINED time on a SOURCED name), C2 (the latency in one sitting)

@@ -3,7 +3,7 @@
 **The re-run of the K3 panel.** Three new severed readers, given
 `projects/season1/still-dark/STATE-1.txt` and nothing else. Dispatch and all four questions
 **verbatim** from `git show 1e84436:…/DRAMATURG-68.md` §B; thresholds and the escalation clause from
-`DRAMATURG-69.md` §D, fixed before the rebuild was built. **The void clause did not fire:**
+`DRAMATURG-69.md` §D (`git show 6dd04f4:projects/season1/DRAMATURG-69.md`), fixed before the rebuild was built. **The void clause did not fire:**
 `STATE-1.txt` is now made mechanically by `still-dark/render.mjs` — the browser's own `innerText`
 plus the control's own label and value, no editorial word of ours; run against last night's build it
 reproduces panel 68's material **byte for byte** (md5 `e4014c75…`). What these readers saw:

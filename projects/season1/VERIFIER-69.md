@@ -2,7 +2,7 @@
 
 Re-ran first-hand: `day.py 2026-08-04` (plain, `--json`, `--as-of`, and `2026-07-10`); all three
 capture files by hand; `render.mjs` against tonight's build **and** last night's; the md5s cited in
-`PANEL-69.md`; the embedded output against a fresh run; `DRAMATURG-69.md` §D against `PANEL-69.md`.
+`PANEL-69.md`; the embedded output against a fresh run; `DRAMATURG-69.md` §D (commit `6dd04f4`) against `PANEL-69.md`.
 
 **REPRODUCED.** `--as-of` filters strictly on `fetched_at_utc <= as_of`, exactly as its help text
 says: 1 capture, 1 edition, 100 %–100 %. Full run: 3 captures, 2 editions, 79 %–100 % (11 of 0–14).
