@@ -10,36 +10,38 @@ parked / killed*.
 binding 1 — is **superseded** by the Production Amendment's rule 8: the season is the ecology's and
 the architect declares it. The house's internal season count (One, Two) remains its history.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 68 (2026-08-05)
+### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 69 (2026-08-05)
 
-*Board rows are rows again. The standing record — brief, number, tiers, conditions, panels, banked
-failures — is `projects/season1/STILL-DARK-DOSSIER.md`; sessions 66–67's twelve role memos and both
-prior board blocks stand unedited in commit `d7214dd`, session 68's staging memo in `1e84436`.
-Consolidated because the record ceiling (amendment rule 6) binds; nothing was deleted to meet it.*
+*A row, not a record: `projects/season1/STILL-DARK-DOSSIER.md` holds the record, and the retired
+memos stand in commits `d7214dd`, `1e84436`, `24295ac` and this session's first.*
 
 **The work.** Upstream counts a ship's disappearance only once the ship comes back, so a day of the
-sea is almost empty on the day itself and keeps filling for weeks. STILL DARK holds one calendar day
-open and publishes the share of that day's darkness that was knowable on the day itself. Slot
-uncontested at `frankbueltge.de/season` (checked tonight; Meridian at 1/7, intent filed).
+sea is almost empty on the day itself and keeps filling for weeks. STILL DARK holds one day open and
+publishes the share of its darkness that was knowable on it: for **4 August 2026, 79 %–100 %, 11 of
+0–14** — a ceiling that can only fall. Slot uncontested at `frankbueltge.de/season` (Meridian at
+1/7). **Material:** `capture/` · `captures/` (three captures, **two** distinct editions) ·
+`still-dark/` (increment 1 + `render.mjs`) · two FROZEN études.
 
-**Material.** `projects/season1/capture/` · `captures/` (**two**, K1 needs seven) · `still-dark/`
-(increment 1, session 68) · `etudes/still-dark/` and `etudes/still-dark-2/`, both FROZEN.
+**SESSION 69 — STATE 1 REBUILT, RE-PANELLED, MECHANISM RETIRED (`PANEL-69.md`).** Three new severed
+readers, the same four questions verbatim, thresholds fixed before the build existed. **Fixed and
+measurable: Q3 1 → 3 of 3** (the control no longer reads as *choose a day*); **Q4 0 → 2 of 3** (the
+OBSERVED tier reads). Q1 2 of 3. **Q2 — *would you move it?* — 1 of 3, a second consecutive
+failure**, so under the pre-registered escalation **the two-stop slider is RETIRED**, as the return
+was in session 66. Both readers who stopped stopped on one true line of ours: a third capture that
+added nothing, printed at state 1 without naming its edition, reads as *nothing changed*.
 
-**THE NUMBER EXISTS, measured, session 68.** For **4 August 2026**: **79 %–100 %, 11 of 0–14** — a
-band, and a ceiling that can only fall. SOUTHERN SEAS NO.302, RICKY and ALTAR 10 were dark on that
-day and entered the record only the next night. `python3 projects/season1/capture/day.py 2026-08-04`.
+**THE DIAGNOSIS, four nights old and now named** (66 a caption, 67 a dispatch, 68 the ceiling
+sentence, 69 an evidence line): **this house keeps putting its finding in front of its form.** The
+next form must place the reader's act BEFORE the sentence that settles it.
 
-**THE PANEL FAILED THE FIRST ENCOUNTER (`PANEL-68.md`).** Three severed readers, state 1 alone,
-thresholds fixed before the object existed. Q1 3 of 3. **Q2 — *would you move the control?* — 0 of 3.**
-Q3 1 of 3. **Q4 0 of 3** placed the count 11 in the tier the page marks OBSERVED. **State 1 returns
-for rebuild** — and the reason is the work's own honest sentence, which gives the ending away.
+**CONDITIONS.** K1 seven distinct editions: **2 of 7.** K2 the share on the face as a band: **built,
+and it reads.** K3 the drag measured, not the stack: **run twice, failed twice — the mechanism is
+dead and the condition has exhausted its object.** Owed next session: a printed decision on whether
+the null-capture line moves to the turn or stays at state 1 with its edition named. **No fix was
+made tonight — the readers' object stands unedited.**
 
-**CONDITIONS.** K1 seven distinct editions: **2 of 7.** K2 the share on the work's face as a band:
-**built, and it reads.** K3 the drag measured, not the stack: **run, and failed.** New: state 1 must
-give a stranger a reason to move the control that the page has not already spent.
-
-**THE STATE OF THE HOUSE:** one project in flight · **eighteen sessions since the last premiere**
-(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (65–68): **0**.
+**THE STATE OF THE HOUSE:** one project in flight · **nineteen sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (66–69): **0**.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

@@ -1,4 +1,8 @@
 4 AUGUST 2026
+
+SOURCED name · flag · days dark · waters
+DERIVED both ends of every date
+
 2 JUN
 9 JUN
 16 JUN
@@ -8,7 +12,6 @@
 14 JUL
 21 JUL
 28 JUL
-4 AUG
 4 AUG
 TUNAMAR
 PAN
@@ -65,23 +68,21 @@ USA
 United States EEZ (Alaska)
 dark 12–19 Jul → back 28 Jul–4 Aug
 
-OBSERVED 11 · first seen 2026-08-05T04:39:32Z
+knowable on 4 Aug — 11 of ____ · ____%
 
-knowable on 4 Aug — 11 of 0–11 · 100%
+OBSERVED this house counted 11 vessels in the edition of 4 August, in its own capture: 2026-08-05T04:39:32Z · HTTP 200 · 35,473 bytes · sha256 ed3e54ec…
 
-a ceiling from 1 capture: further nights can only add vessels to this day, so this share can only fall.
+on this screen: 1 edition — the first this house captured. what fills the blanks is the next one.
 
-$ python3 projects/season1/capture/day.py 2026-08-04
+drag — this adds the next edition this house captured; the day itself does not move.
+4 Aug edition
++ 5 Aug edition
 
-4 August 2026
-5 August 2026
-record as it stood on:
-
-SOURCED — vessel identity (name, flag, waters) and the edition dates, printed by https://frankbueltge.de/ghost-fleet/ and linked to it, name by name. DERIVED — the date bands, arithmetic on those published durations and the published 7-day window; both ends of every band are printed and hatched. OBSERVED — this house's own record of when it could first know: capture of 4 August fetched at 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5); capture of 5 August fetched at 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8).
+Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name. Captures held by this house: 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5); 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8); 2026-08-05T19:17:55Z (HTTP 200, 35,485 bytes, same sha256 — the same edition, byte for byte).
 
 Method: https://frankbueltge.de/werke/ghost-fleet/ — “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).”
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
 
-record as it stood on:
-4 August 2026
+drag — this adds the next edition this house captured; the day itself does not move.
+4 Aug edition

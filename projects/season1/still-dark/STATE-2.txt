@@ -1,0 +1,134 @@
+4 AUGUST 2026
+
+SOURCED name · flag · days dark · waters
+DERIVED both ends of every date
+
+2 JUN
+9 JUN
+16 JUN
+23 JUN
+30 JUN
+7 JUL
+14 JUL
+21 JUL
+28 JUL
+4 AUG
+TUNAMAR
+PAN
+56 d dark
+dark 2–9 Jun → back 28 Jul–4 Aug
+MICRONESIA103
+FSM
+39 d dark
+Marshallese EEZ
+dark 19–26 Jun → back 28 Jul–4 Aug
+ALIZE
+ECU
+31 d dark
+Ecuadorian EEZ
+dark 27 Jun–4 Jul → back 28 Jul–4 Aug
+FORTICA
+ECU
+26 d dark
+Ecuadorian EEZ
+dark 2–9 Jul → back 28 Jul–4 Aug
+PANOFI MASTER
+GHA
+22 d dark
+Ghanaian EEZ
+dark 6–13 Jul → back 28 Jul–4 Aug
+TRAVELER
+USA
+18 d dark
+United States EEZ (Alaska)
+dark 10–17 Jul → back 28 Jul–4 Aug
+VICTORIA
+MEX
+17 d dark
+Mexican EEZ
+dark 11–18 Jul → back 28 Jul–4 Aug
+PANOFI DISCOVERER
+GHA
+17 d dark
+Ghanaian EEZ
+dark 11–18 Jul → back 28 Jul–4 Aug
+VESTERAALEN
+USA
+17 d dark
+United States EEZ (Alaska)
+dark 11–18 Jul → back 28 Jul–4 Aug
+PACIFIC FURY
+USA
+17 d dark
+United States EEZ (Alaska)
+dark 11–18 Jul → back 28 Jul–4 Aug
+EXCELLENCE
+USA
+16 d dark
+United States EEZ (Alaska)
+dark 12–19 Jul → back 28 Jul–4 Aug
+SOUTHERN SEAS NO.302
+SLB
+29 d dark
+Micronesian EEZ
+dark 30 Jun–7 Jul → back 29 Jul–5 Aug
+first seen in the edition of 5 August
+RICKY
+GBR
+28 d dark
+Ecuadorian EEZ (Galapagos)
+dark 1–8 Jul → back 29 Jul–5 Aug
+first seen in the edition of 5 August
+ALTAR 10
+ECU
+18 d dark
+Ecuadorian EEZ (Galapagos)
+dark 11–18 Jul → back 29 Jul–5 Aug
+first seen in the edition of 5 August
+
+knowable on 4 Aug — 11 of 0–14 · 79%–100%
+
+OBSERVED 11 vessels counted in the edition of 4 August (capture 2026-08-05T04:39:32Z · HTTP 200 · 35,473 bytes · sha256 ed3e54ec…); three more in the edition of 5 August (capture 2026-08-05T12:54:00Z · HTTP 200 · 35,485 bytes · sha256 17c07fc3…). A third capture, 2026-08-05T19:17:55Z, returned that same edition byte for byte and added nothing.
+
+on this screen: 2 editions, 3 captures by this house.
+
+a ceiling from 2 editions, 3 captures: further nights can only add vessels to this day, so this share can only fall.
+
+drag — this adds the next edition this house captured; the day itself does not move.
+4 Aug edition
++ 5 Aug edition
+
+the first screen ·$ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T05:00:00Z
+this screen ·$ python3 projects/season1/capture/day.py 2026-08-04
+
+day 2026-08-04  ·  3 capture(s) read, 2 distinct edition(s)
+  vessels dark on that day .......... 0–14 (certain–possible)
+  knowable on the day, DERIVED ...... 11
+  knowable on the day, OBSERVED ..... 11
+  SHARE knowable on the day ......... 79%–100%  (11 of 0–14)
+    (a ceiling from 2 edition(s), 3 capture(s): further nights can only add vessels to this day, so this share can only fall)
+  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day
+  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day
+  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day
+  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day
+  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day
+  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day
+  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day
+  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day
+  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day
+  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day
+  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day
+  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day
+  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day
+  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day
+
+verbatim, unedited
+
+Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name. Captures held by this house: 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5); 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8); 2026-08-05T19:17:55Z (HTTP 200, 35,485 bytes, same sha256 — the same edition, byte for byte).
+
+Method: https://frankbueltge.de/werke/ghost-fleet/ — “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).”
+
+“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
+
+drag — this adds the next edition this house captured; the day itself does not move.
+4 Aug edition + 5 Aug edition

@@ -25,7 +25,11 @@ Both are printed. Where OBSERVED cannot yet be computed (no capture from on or b
 the target day), the script says so instead of falling back to DERIVED — the fallback
 is exactly the blur the work exists to refuse.
 
-Usage:  python3 day.py 2026-07-10 [--captures DIR] [--json]
+Usage:  python3 day.py 2026-07-10 [--captures DIR] [--as-of UTC] [--json]
+
+--as-of reads only the captures fetched at or before a UTC instant, so the record as it
+stood at any past moment can be re-run by anyone. The work's first screen is exactly such
+a moment; without this flag that screen would be a state only this house could reproduce.
 """
 
 import argparse
@@ -38,11 +42,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CAPTURES = os.path.normpath(os.path.join(HERE, "..", "captures"))
 
 
-def load(capdir):
+def load(capdir, as_of=None):
     caps = []
     for p in sorted(glob.glob(os.path.join(capdir, "*.json"))):
         with open(p, encoding="utf-8") as f:
             c = json.load(f)
+        if as_of and c["fetch"]["fetched_at_utc"] > as_of:
+            continue
         c["_path"] = os.path.basename(p)
         caps.append(c)
     return caps
@@ -133,6 +139,12 @@ def analyse(target, caps):
     return {
         "target_day": target,
         "captures_read": len(caps),
+        # Captures and editions are not the same count, and the difference is the work's
+        # own subject: on 5 August 2026 three captures held two editions, because the
+        # 12:54 and 19:17 fetches returned the same edition byte for byte. A ceiling is
+        # only as strong as the number of DISTINCT editions behind it, so that is what
+        # gets printed beside it.
+        "editions_read": sorted({c["edition_date"] for c in caps if c.get("edition_date")}),
         "capture_range": [
             min((c["fetch"]["fetched_at_utc"] for c in caps), default=None),
             max((c["fetch"]["fetched_at_utc"] for c in caps), default=None),
@@ -179,19 +191,32 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("day", help="target calendar day, YYYY-MM-DD")
     ap.add_argument("--captures", default=DEFAULT_CAPTURES)
+    ap.add_argument(
+        "--as-of",
+        dest="as_of",
+        default=None,
+        help="read only captures fetched at or before this UTC instant, e.g. 2026-08-05T12:00:00Z",
+    )
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
 
-    caps = load(a.captures)
+    caps = load(a.captures, a.as_of)
     if not caps:
-        raise SystemExit(f"no captures in {a.captures}")
+        raise SystemExit(
+            f"no captures in {a.captures}"
+            + (f" at or before {a.as_of}" if a.as_of else "")
+        )
     res = analyse(a.day, caps)
     if a.json:
         print(json.dumps(res, indent=2, ensure_ascii=False))
         return 0
 
     b = res["vessels_dark_on_day"]["band"]
-    print(f"day {res['target_day']}  ·  {res['captures_read']} capture(s) read")
+    n_ed = len(res["editions_read"])
+    print(
+        f"day {res['target_day']}  ·  {res['captures_read']} capture(s) read, "
+        f"{n_ed} distinct edition(s)"
+    )
     print(f"  vessels dark on that day .......... {b[0]}–{b[1]} (certain–possible)")
     print(f"  knowable on the day, DERIVED ...... {res['knowable_on_the_day_DERIVED']}")
     obs = res["knowable_on_the_day_OBSERVED"]
@@ -203,8 +228,8 @@ def main():
             f"({obs} of {b[0]}–{b[1]})"
         )
         print(
-            f"    (a ceiling from {res['captures_read']} capture(s): further nights can only "
-            f"add vessels to this day, so this share can only fall)"
+            f"    (a ceiling from {n_ed} edition(s), {res['captures_read']} capture(s): further "
+            f"nights can only add vessels to this day, so this share can only fall)"
         )
     if res["observed_note"]:
         print(f"    ({res['observed_note']})")

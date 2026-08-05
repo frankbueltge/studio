@@ -177,14 +177,29 @@
   .sd-root .sd-rows-turn .sd-row { color: var(--sd-ink); }
   .sd-root .sd-rows-turn { border-top: 1px dashed var(--sd-rule); margin-top: 0.15em; padding-top: 0.15em; }
 
-  /* the counter, in the heading's face */
-  .sd-root .sd-counter { margin-top: 0.5rem; }
-  .sd-root .sd-observed {
+  /* the column header: the tiers named at the columns they belong to */
+  .sd-root .sd-colhead {
+    display: flex;
+    gap: 4ch;
+    flex-wrap: wrap;
+    margin: 0 0 0.35rem var(--sd-gutter);
     font-size: 0.62rem;
     letter-spacing: 0.04em;
     color: var(--sd-dim);
-    margin: 0 0 0.25rem;
   }
+
+  /* the counter, in the heading's face */
+  .sd-root .sd-counter { margin-top: 0.5rem; }
+  .sd-root .sd-evidence,
+  .sd-root .sd-note {
+    font-size: 0.62rem;
+    letter-spacing: 0.02em;
+    color: var(--sd-dim);
+    max-width: 96ch;
+    margin: 0 0 0.25rem;
+    word-break: break-word;
+  }
+  .sd-root .sd-note { letter-spacing: 0.04em; }
   .sd-root .sd-tag {
     font-weight: 700;
     color: var(--sd-ink);
@@ -206,15 +221,17 @@
     margin: 0;
   }
 
-  /* the bare command, always on the face; the verbatim block only from stop 2 */
+  /* the commands and the verbatim block: both only from stop 2 */
   .sd-root .sd-cmd-line {
-    margin: 0.5rem 0 0;
-    font-size: 0.66rem;
+    margin: 0.4em 0.8ch 0.35em;
+    font-size: 0.62rem;
     color: var(--sd-dim);
   }
+  .sd-root .sd-cmd { display: block; }
+  .sd-root .sd-cmd-label { display: inline-block; min-width: 15ch; }
   .sd-root .sd-cmd-line code { color: var(--sd-ink); }
   .sd-root .sd-raw {
-    margin-top: 0.35rem;
+    margin-top: 0.6rem;
     border: 1px solid var(--sd-rule);
   }
   .sd-root .sd-raw pre {
@@ -234,7 +251,7 @@
   }
 
   /* the hand */
-  .sd-root .sd-hand { margin-top: 0.6rem; max-width: 46ch; }
+  .sd-root .sd-hand { margin-top: 0.8rem; max-width: 72ch; }
   .sd-root .sd-hand-ticks {
     display: flex;
     justify-content: space-between;
@@ -277,7 +294,7 @@
   .sd-root .sd-hand-input:focus-visible { outline: 1px solid currentColor; outline-offset: 0.3em; }
   .sd-root .sd-hand-label {
     display: block;
-    margin: 0.3rem 0 0;
+    margin: 0 0 0.3rem;
     color: var(--sd-ink);
     letter-spacing: 0.02em;
     font-size: 0.78rem;
@@ -322,6 +339,16 @@
       "edition_date": "2026-08-05",
       "edition_date_printed": "5 August 2026"
     },
+    "capture_5aug_evening": {
+      "url": "https://frankbueltge.de/ghost-fleet/",
+      "fetched_at_utc": "2026-08-05T19:17:55Z",
+      "http_status": 200,
+      "bytes": 35485,
+      "sha256": "17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8",
+      "edition_date": "2026-08-05",
+      "edition_date_printed": "5 August 2026",
+      "note": "same edition as 12:54, byte for byte — a night that added nothing, printed"
+    },
     "method": {
       "source": "https://frankbueltge.de/werke/ghost-fleet/",
       "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
@@ -345,29 +372,44 @@
       {"name":"RICKY","flag":"GBR","days_dark":28,"waters":"Ecuadorian EEZ (Galapagos)","went_dark_between":["2026-07-01","2026-07-08"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 1–8 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/99a1e9d7c-cc99-0a64-8794-918241e3e1b5"},
       {"name":"ALTAR 10","flag":"ECU","days_dark":18,"waters":"Ecuadorian EEZ (Galapagos)","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 11–18 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/0a0229027-76e4-3f79-a61c-d9c9362459b4"}
     ],
-    "day_py_command": "python3 projects/season1/capture/day.py 2026-08-04",
-    "day_py_output": "day 2026-08-04  ·  2 capture(s) read\n  vessels dark on that day .......... 0–14 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 79%–100%  (11 of 0–14)\n    (a ceiling from 2 capture(s): further nights can only add vessels to this day, so this share can only fall)\n  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day\n  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day\n  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day\n  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day\n  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day\n  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day\n  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day\n  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day\n  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day\n  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day\n  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day\n  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day\n  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day\n  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day\n",
+    "column_header": {
+      "sourced": "SOURCED  name · flag · days dark · waters",
+      "derived": "DERIVED  both ends of every date"
+    },
     "counter": {
       "stop0": {
-        "line": "knowable on 4 Aug — 11 of 0–11 · 100%",
-        "ceiling": "a ceiling from 1 capture: further nights can only add vessels to this day, so this share can only fall."
+        "line": "knowable on 4 Aug — 11 of ____ · ____%",
+        "evidence": "OBSERVED — this house counted 11 vessels in the edition of 4 August, in its own capture: 2026-08-05T04:39:32Z · HTTP 200 · 35,473 bytes · sha256 ed3e54ec…",
+        "note": "on this screen: 1 edition — the first this house captured. what fills the blanks is the next one.",
+        "ceiling": "",
+        "commands": [],
+        "output": ""
       },
       "stop1": {
         "line": "knowable on 4 Aug — 11 of 0–14 · 79%–100%",
-        "ceiling": "a ceiling from 2 captures: further nights can only add vessels to this day, so this share can only fall."
+        "evidence": "OBSERVED — 11 vessels counted in the edition of 4 August (capture 2026-08-05T04:39:32Z · HTTP 200 · 35,473 bytes · sha256 ed3e54ec…); three more in the edition of 5 August (capture 2026-08-05T12:54:00Z · HTTP 200 · 35,485 bytes · sha256 17c07fc3…). A third capture, 2026-08-05T19:17:55Z, returned that same edition byte for byte and added nothing.",
+        "note": "on this screen: 2 editions, 3 captures by this house.",
+        "ceiling": "a ceiling from 2 editions, 3 captures: further nights can only add vessels to this day, so this share can only fall.",
+        "commands": [
+          {
+            "label": "the first screen",
+            "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T05:00:00Z"
+          },
+          {
+            "label": "this screen",
+            "cmd": "python3 projects/season1/capture/day.py 2026-08-04"
+          }
+        ],
+        "output": "day 2026-08-04  ·  3 capture(s) read, 2 distinct edition(s)\n  vessels dark on that day .......... 0–14 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 79%–100%  (11 of 0–14)\n    (a ceiling from 2 edition(s), 3 capture(s): further nights can only add vessels to this day, so this share can only fall)\n  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day\n  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day\n  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day\n  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day\n  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day\n  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day\n  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day\n  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day\n  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day\n  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day\n  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day\n  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day\n  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day\n  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day\n"
       }
     },
-    "observed_stamp": "11 · first seen 2026-08-05T04:39:32Z",
-    "turn_stamp": "first seen in the edition of 5 August",
-    "tiers": {
-      "SOURCED": "vessel identity (name, flag, waters) and the edition dates, printed by the source and linked to it.",
-      "DERIVED": "the date bands — arithmetic on published durations and the published 7-day window; both ends of every band are printed and hatched.",
-      "OBSERVED": "this house's own record of when it could first know — the fetch timestamp of each capture."
-    }
+    "turn_stamp": "first seen in the edition of 5 August"
   }
   </script>
 
   <h1 class="sd-day">4 AUGUST 2026</h1>
+
+  <p class="sd-colhead" id="sd-colhead"></p>
 
   <div class="sd-fieldwrap">
     <div class="sd-fieldstrip">
@@ -382,30 +424,30 @@
   </div>
 
   <div class="sd-counter">
-    <p class="sd-observed" id="sd-observed"><span class="sd-tag">OBSERVED</span></p>
     <p class="sd-count-line" id="sd-count-line"></p>
-    <p class="sd-count-ceiling" id="sd-count-ceiling"></p>
-    <p class="sd-cmd-line">$ <code id="sd-raw-cmd"></code></p>
-    <div class="sd-raw" id="sd-raw" hidden>
-      <pre id="sd-raw-pre"></pre>
-      <p class="sd-raw-cap">verbatim, unedited</p>
-    </div>
+    <p class="sd-evidence" id="sd-evidence"></p>
+    <p class="sd-note" id="sd-note"></p>
+    <p class="sd-count-ceiling" id="sd-count-ceiling" hidden></p>
   </div>
 
   <div class="sd-hand">
-    <div class="sd-hand-ticks"><span>4 August 2026</span><span>5 August 2026</span></div>
-    <input class="sd-hand-input" id="sd-hand" type="range" min="0" max="1" step="1" value="0" disabled aria-valuetext="4 August 2026">
-    <label class="sd-hand-label" for="sd-hand">record as it stood on:</label>
+    <label class="sd-hand-label" for="sd-hand">drag — this adds the next edition this house captured; the day itself does not move.</label>
+    <div class="sd-hand-ticks"><span>4 Aug edition</span><span>+ 5 Aug edition</span></div>
+    <input class="sd-hand-input" id="sd-hand" type="range" min="0" max="1" step="1" value="0" disabled aria-valuetext="4 Aug edition">
+  </div>
+
+  <div class="sd-raw" id="sd-raw" hidden>
+    <p class="sd-cmd-line" id="sd-cmds"></p>
+    <pre id="sd-raw-pre"></pre>
+    <p class="sd-raw-cap">verbatim, unedited</p>
   </div>
 
   <div class="sd-foot">
-    <p><span class="sd-legend-tag">SOURCED</span> — vessel identity (name, flag, waters) and the edition dates, printed by
-    <a href="https://frankbueltge.de/ghost-fleet/">https://frankbueltge.de/ghost-fleet/</a> and linked to it, name by name.
-    <span class="sd-legend-tag">DERIVED</span> — the date bands, arithmetic on those published durations and the published
-    7-day window; both ends of every band are printed and hatched.
-    <span class="sd-legend-tag">OBSERVED</span> — this house's own record of when it could first know: capture of
-    4 August fetched at 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5);
-    capture of 5 August fetched at 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8).</p>
+    <p>Vessel names, flags, waters, durations and edition dates as printed by
+    <a href="https://frankbueltge.de/ghost-fleet/">https://frankbueltge.de/ghost-fleet/</a>, linked name by name.
+    Captures held by this house: 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5);
+    2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8);
+    2026-08-05T19:17:55Z (HTTP 200, 35,485 bytes, same sha256 — the same edition, byte for byte).</p>
     <p>Method: <a href="https://frankbueltge.de/werke/ghost-fleet/">https://frankbueltge.de/werke/ghost-fleet/</a> —
     “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).”</p>
     <p>“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof;
@@ -455,13 +497,18 @@
   // weekly ticks across the field's real (labelled) span only — the margin
   // past dataEnd carries no tick, because nothing is known to mark there
   var scaleEl = document.getElementById("sd-scale");
+  var rulePct = pct(parseDay(data.capture_4aug.edition_date));
   var d = fieldStart;
   while (d <= dataEnd) {
-    var tick = document.createElement("span");
-    tick.className = "sd-tick";
-    tick.style.left = pct(d) + "%";
-    tick.textContent = tickLabel(d);
-    scaleEl.appendChild(tick);
+    // a weekly tick landing on the held day would print its label twice, on top of
+    // the rule's own — the rule wins, because it is the thing being looked at
+    if (Math.abs(pct(d) - rulePct) > 2) {
+      var tick = document.createElement("span");
+      tick.className = "sd-tick";
+      tick.style.left = pct(d) + "%";
+      tick.textContent = tickLabel(d);
+      scaleEl.appendChild(tick);
+    }
     d = addDays(d, 7);
   }
 
@@ -550,13 +597,21 @@
   var rowsTurn = document.getElementById("sd-rows-turn");
   data.rows_turn.forEach(function (r) { rowsTurn.appendChild(buildRow(r, { turnStamp: true })); });
 
-  document.getElementById("sd-observed").appendChild(document.createTextNode(" " + data.observed_stamp));
-  document.getElementById("sd-raw-cmd").textContent = data.day_py_command;
+  var colhead = document.getElementById("sd-colhead");
+  var ch1 = document.createElement("span");
+  ch1.textContent = data.column_header.sourced;
+  var ch2 = document.createElement("span");
+  ch2.textContent = data.column_header.derived;
+  colhead.appendChild(ch1);
+  colhead.appendChild(ch2);
 
   var lineEl = document.getElementById("sd-count-line");
+  var evidenceEl = document.getElementById("sd-evidence");
+  var noteEl = document.getElementById("sd-note");
   var ceilingEl = document.getElementById("sd-count-ceiling");
   var rawWrap = document.getElementById("sd-raw");
   var rawPre = document.getElementById("sd-raw-pre");
+  var cmdsEl = document.getElementById("sd-cmds");
   var hand = document.getElementById("sd-hand");
 
   // At stop 1, the observer stands on 4 August: no capture from 5 August
@@ -567,12 +622,45 @@
     if (isNaN(i)) i = 0;
     var moved = i >= 1;
     var state = moved ? data.counter.stop1 : data.counter.stop0;
+
     lineEl.textContent = state.line;
+    evidenceEl.textContent = "";
+    var tag = document.createElement("span");
+    tag.className = "sd-tag";
+    tag.textContent = "OBSERVED";
+    evidenceEl.appendChild(tag);
+    // the evidence line's own text already opens with the tier word; strip that one
+    // repetition so the tag reads as a mark on the number, not as a second sentence
+    evidenceEl.appendChild(
+      document.createTextNode(" " + state.evidence.replace(/^OBSERVED\s*—\s*/, ""))
+    );
+    noteEl.textContent = state.note;
+
     ceilingEl.textContent = state.ceiling;
+    ceilingEl.hidden = !state.ceiling;
+
     rowsTurn.hidden = !moved;
-    rawWrap.hidden = !moved;
-    rawPre.textContent = moved ? data.day_py_output : "";
-    hand.setAttribute("aria-valuetext", moved ? "5 August 2026" : "4 August 2026");
+
+    rawWrap.hidden = !(state.commands && state.commands.length);
+    cmdsEl.textContent = "";
+    (state.commands || []).forEach(function (c) {
+      var l = document.createElement("span");
+      l.className = "sd-cmd";
+      var lab = document.createElement("span");
+      lab.className = "sd-cmd-label";
+      lab.textContent = c.label + " · ";
+      var code = document.createElement("code");
+      code.textContent = "$ " + c.cmd;
+      l.appendChild(lab);
+      l.appendChild(code);
+      cmdsEl.appendChild(l);
+    });
+    rawPre.textContent = state.output || "";
+
+    hand.setAttribute(
+      "aria-valuetext",
+      moved ? "4 Aug edition + 5 Aug edition" : "4 Aug edition"
+    );
   }
 
   hand.disabled = false;
