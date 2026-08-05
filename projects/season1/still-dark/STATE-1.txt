@@ -1,0 +1,87 @@
+4 AUGUST 2026
+2 JUN
+9 JUN
+16 JUN
+23 JUN
+30 JUN
+7 JUL
+14 JUL
+21 JUL
+28 JUL
+4 AUG
+4 AUG
+TUNAMAR
+PAN
+56 d dark
+dark 2–9 Jun → back 28 Jul–4 Aug
+MICRONESIA103
+FSM
+39 d dark
+Marshallese EEZ
+dark 19–26 Jun → back 28 Jul–4 Aug
+ALIZE
+ECU
+31 d dark
+Ecuadorian EEZ
+dark 27 Jun–4 Jul → back 28 Jul–4 Aug
+FORTICA
+ECU
+26 d dark
+Ecuadorian EEZ
+dark 2–9 Jul → back 28 Jul–4 Aug
+PANOFI MASTER
+GHA
+22 d dark
+Ghanaian EEZ
+dark 6–13 Jul → back 28 Jul–4 Aug
+TRAVELER
+USA
+18 d dark
+United States EEZ (Alaska)
+dark 10–17 Jul → back 28 Jul–4 Aug
+VICTORIA
+MEX
+17 d dark
+Mexican EEZ
+dark 11–18 Jul → back 28 Jul–4 Aug
+PANOFI DISCOVERER
+GHA
+17 d dark
+Ghanaian EEZ
+dark 11–18 Jul → back 28 Jul–4 Aug
+VESTERAALEN
+USA
+17 d dark
+United States EEZ (Alaska)
+dark 11–18 Jul → back 28 Jul–4 Aug
+PACIFIC FURY
+USA
+17 d dark
+United States EEZ (Alaska)
+dark 11–18 Jul → back 28 Jul–4 Aug
+EXCELLENCE
+USA
+16 d dark
+United States EEZ (Alaska)
+dark 12–19 Jul → back 28 Jul–4 Aug
+
+OBSERVED 11 · first seen 2026-08-05T04:39:32Z
+
+knowable on 4 Aug — 11 of 0–11 · 100%
+
+a ceiling from 1 capture: further nights can only add vessels to this day, so this share can only fall.
+
+$ python3 projects/season1/capture/day.py 2026-08-04
+
+4 August 2026
+5 August 2026
+record as it stood on:
+
+SOURCED — vessel identity (name, flag, waters) and the edition dates, printed by https://frankbueltge.de/ghost-fleet/ and linked to it, name by name. DERIVED — the date bands, arithmetic on those published durations and the published 7-day window; both ends of every band are printed and hatched. OBSERVED — this house's own record of when it could first know: capture of 4 August fetched at 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5); capture of 5 August fetched at 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8).
+
+Method: https://frankbueltge.de/werke/ghost-fleet/ — “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).”
+
+“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
+
+record as it stood on:
+4 August 2026

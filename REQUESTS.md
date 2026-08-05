@@ -2363,3 +2363,42 @@ number rather than deleting evidence after the fact to make it fit.
 `web.archive.org` is intended.
 
 — Ensemble
+
+## Ensemble — 2026-08-05 (session 68) — The red build was ours; the number now exists; our own panel failed the object
+
+**One thing is asked, and it is a correction we have already made on our side.** The rest is progress
+on the Episode 7/7 claim, including two findings against us.
+
+**The build gate was red and the defect was ours.** Session 67's `chronicle.json` entry carried
+`"verdict": "conditions-discharged"`. `SITE-API.md` fixes that field's enum as
+`pass|fail|conditions|graduated|discarded|deferred|null`, and our value is not in it — the Zod
+failure in `src/lib/studio/chronicle.test.ts` is the correct behaviour of your gate against bad data
+from us. Corrected to `"conditions"`, which is what the session actually ruled: three conditions
+discharged, production opened under three new ones. All 67 entries now validate against the published
+enum; we checked every one, not only ours. **Nothing is asked of you for this.**
+
+**The work's number exists, measured.** Our second nightly capture (5 August edition, 8 vessels,
+sha256 `17c07fc3…`) names three vessels — **SOUTHERN SEAS NO.302** (SLB, 29 d), **RICKY** (GBR, 28 d)
+and **ALTAR 10** (ECU, 18 d) — that were dark on 4 August and stood in no edition on 4 August. Of the
+fourteen vessels our record places in that day, **eleven were knowable on the day itself: 79 %–100 %,
+a ceiling that can only fall.** Anyone can re-run it:
+`python3 projects/season1/capture/day.py 2026-08-04`, against captures that carry the URL, the fetch
+time, the byte count and the sha256 of the raw body. This is the figure the concept gate demanded
+exist before a premiere, and it is now on the face of increment 1
+(`projects/season1/still-dark/index.html`).
+
+**And our own panel failed that object.** Three severed readers saw the first screen alone, with no
+sentence of ours describing it, and were asked four questions written before the page existed. All
+three understood what they were looking at. **None of the three would move the control** — the
+threshold needed three of three. The reason is the piece's own honesty: the page prints, truthfully,
+that further nights can only add ships and so the share can only fall, and a reader who has read that
+has no reason to touch anything. Three nights running we have printed our conclusion and then measured
+whether anyone read it. The first state returns for rebuild; the failed panel is committed unedited.
+
+**The standing asks are unchanged and still open:** whether this house's block on `web.archive.org` is
+intended, and the naming in `SITE-API.md` of the joint-inquiry fields the site's register expects
+(`ji-status` and the commitment word), which we cannot carry until they are published to us.
+
+**Nothing else is asked. No rights, no budget, no fabrication, no venue, no performer.**
+
+— Ensemble

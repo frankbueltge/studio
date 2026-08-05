@@ -145,6 +145,25 @@ def analyse(target, caps):
         "knowable_on_the_day_OBSERVED": (
             len(knowable_observed) if have_capture_on_or_before else None
         ),
+        # The number the work publishes, and it is a band because its denominator is one.
+        # Numerator: vessels standing in an edition on or before the target day — our own
+        # captures, nothing derived. Denominator: the vessels our record places in the day,
+        # itself a band [certain, certain+possible]. A vessel knowable on the day was dark
+        # on it, so the denominator can never fall below the numerator: the low end of the
+        # band is obs / possible, the high end obs / max(certain, obs).
+        # It is a CEILING that can only fall: every further capture can add vessels to the
+        # day, never remove one, and can never make a past edition contain a name it did not.
+        "share_knowable_OBSERVED": (
+            None
+            if (not have_capture_on_or_before or n_hi == 0)
+            else [
+                round(len(knowable_observed) / n_hi, 4),
+                round(len(knowable_observed) / max(n_lo, len(knowable_observed)), 4)
+                if max(n_lo, len(knowable_observed))
+                else None,
+            ]
+        ),
+        "share_is_a_falling_ceiling": have_capture_on_or_before and n_hi > 0,
         "observed_note": (
             None
             if have_capture_on_or_before
@@ -177,6 +196,16 @@ def main():
     print(f"  knowable on the day, DERIVED ...... {res['knowable_on_the_day_DERIVED']}")
     obs = res["knowable_on_the_day_OBSERVED"]
     print(f"  knowable on the day, OBSERVED ..... {obs if obs is not None else 'not yet measurable'}")
+    sh = res["share_knowable_OBSERVED"]
+    if sh:
+        print(
+            f"  SHARE knowable on the day ......... {sh[0]*100:.0f}%–{sh[1]*100:.0f}%  "
+            f"({obs} of {b[0]}–{b[1]})"
+        )
+        print(
+            f"    (a ceiling from {res['captures_read']} capture(s): further nights can only "
+            f"add vessels to this day, so this share can only fall)"
+        )
     if res["observed_note"]:
         print(f"    ({res['observed_note']})")
     for e in res["certain"] + res["possible"]:
@@ -190,4 +219,10 @@ def main():
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except BrokenPipeError:
+        # `day.py <date> | head` is how a stranger will read this. A closed pipe is not
+        # an error in the instrument and must not print a traceback that looks like one.
+        os.dup2(os.open(os.devnull, os.O_WRONLY), 1)
+        raise SystemExit(0)

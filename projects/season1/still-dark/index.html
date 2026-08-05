@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STILL DARK — 4 August 2026</title>
+<style>
+  /* Everything scoped under .sd-root. */
+  .sd-root {
+    --sd-ink: #111;
+    --sd-bg: #fff;
+    --sd-dim: rgba(0,0,0,0.55);
+    --sd-rule: rgba(0,0,0,0.22);
+    --sd-frame: rgba(0,0,0,0.35);
+    --sd-rowfs: 0.6rem;
+    --sd-gutter: 1.4ch;
+    box-sizing: border-box;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+                 "DejaVu Sans Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--sd-ink);
+    background: var(--sd-bg);
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  .sd-root, .sd-root * { box-sizing: border-box; }
+  .sd-root [hidden] { display: none !important; }
+  @media (prefers-color-scheme: dark) {
+    .sd-root {
+      --sd-ink: #e6e6e6;
+      --sd-bg: #0d0d0d;
+      --sd-dim: rgba(255,255,255,0.55);
+      --sd-rule: rgba(255,255,255,0.20);
+      --sd-frame: rgba(255,255,255,0.32);
+    }
+  }
+  :root[data-theme="dark"] .sd-root {
+    --sd-ink: #e6e6e6;
+    --sd-bg: #0d0d0d;
+    --sd-dim: rgba(255,255,255,0.55);
+    --sd-rule: rgba(255,255,255,0.20);
+    --sd-frame: rgba(255,255,255,0.32);
+  }
+  :root[data-theme="light"] .sd-root {
+    --sd-ink: #111;
+    --sd-bg: #fff;
+    --sd-dim: rgba(0,0,0,0.55);
+    --sd-rule: rgba(0,0,0,0.22);
+    --sd-frame: rgba(0,0,0,0.35);
+  }
+
+  body:has(> .sd-root) { margin: 0; background: #fff; }
+  @media (prefers-color-scheme: dark) {
+    body:has(> .sd-root) { background: #0d0d0d; }
+  }
+  :root[data-theme="dark"] body:has(> .sd-root) { background: #0d0d0d; }
+  :root[data-theme="light"] body:has(> .sd-root) { background: #fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sd-root, .sd-root * { transition: none !important; animation: none !important; }
+  }
+
+  .sd-root .sd-page {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0.8rem 1.4rem 0.8rem;
+  }
+
+  .sd-root .sd-day {
+    font-family: inherit;
+    font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+    margin: 0 0 0.6rem;
+  }
+
+  /* time field: weekly-tick scale + rows + labelled rule at 4 August.
+     One layout at every width: each row's own text line, its own bar
+     directly beneath it, all bars sharing the same field coordinates —
+     never a separate side panel. */
+  .sd-root .sd-fieldwrap { overflow-x: auto; padding-bottom: 0.15rem; }
+  .sd-root .sd-fieldstrip {
+    font-size: var(--sd-rowfs);
+    line-height: 1.55;
+  }
+  @media (max-width: 1150px) { .sd-root { --sd-rowfs: 0.6rem; } }
+  @media (min-width: 1700px) { .sd-root { --sd-rowfs: 0.7rem; } }
+
+  .sd-root .sd-scale {
+    position: relative;
+    height: 1.1em;
+    margin-left: var(--sd-gutter);
+    color: var(--sd-dim);
+    letter-spacing: 0.03em;
+  }
+  .sd-root .sd-tick {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .sd-root .sd-tick:first-child { transform: translateX(0); }
+
+  .sd-root .sd-rowsarea {
+    position: relative;
+  }
+  .sd-root .sd-rules {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: var(--sd-gutter);
+    right: 0;
+    border-top: 1px solid var(--sd-frame);
+    border-bottom: 1px solid var(--sd-frame);
+    z-index: 0;
+  }
+  .sd-root .sd-rule4 {
+    position: absolute;
+    top: -1.2em; bottom: 0;
+    left: calc(var(--sd-rule-pct) * 1% + var(--sd-gutter));
+    width: 1px;
+    background: var(--sd-ink);
+    z-index: 2;
+  }
+  .sd-root .sd-rule4-label {
+    position: absolute;
+    top: -1.2em;
+    left: 0.4ch;
+    font-size: var(--sd-rowfs);
+    color: var(--sd-ink);
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+
+  .sd-root .sd-rows {
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .sd-root .sd-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 1.2ch;
+    padding: 0.28em 0;
+  }
+  .sd-root .sd-row > span { white-space: nowrap; }
+  .sd-root .sd-waters, .sd-root .sd-band, .sd-root .sd-turnstamp { white-space: normal; }
+  .sd-root .sd-name { flex: 0 0 auto; min-width: 21ch; font-weight: 700; }
+  .sd-root .sd-flag { flex: 0 0 auto; min-width: 3.4ch; }
+  .sd-root .sd-days { flex: 0 0 auto; min-width: 8ch; }
+  .sd-root .sd-flag, .sd-root .sd-days, .sd-root .sd-waters, .sd-root .sd-turnstamp { color: var(--sd-dim); }
+  .sd-root .sd-name a { color: inherit; text-decoration: underline; text-decoration-color: var(--sd-rule); text-underline-offset: 0.15em; }
+  .sd-root .sd-name a:hover, .sd-root .sd-name a:focus-visible { text-decoration-color: currentColor; }
+  .sd-root .sd-band { font-style: normal; }
+  .sd-root .sd-turnstamp { font-style: italic; }
+
+  .sd-root .sd-field {
+    display: block;
+    position: relative;
+    flex: 1 0 100%;
+    height: 1em;
+    margin-top: 0.25em;
+    margin-left: var(--sd-gutter);
+  }
+  .sd-root .sd-seg { position: absolute; top: 0; height: 0.7em; margin-top: 0.5em; }
+  .sd-root .sd-seg-mid { background: currentColor; }
+  .sd-root .sd-seg-hatch {
+    background-image: repeating-linear-gradient(135deg,
+      currentColor 0, currentColor 1px, transparent 1px, transparent 4px);
+  }
+
+  .sd-root .sd-rows-turn .sd-row { color: var(--sd-ink); }
+  .sd-root .sd-rows-turn { border-top: 1px dashed var(--sd-rule); margin-top: 0.15em; padding-top: 0.15em; }
+
+  /* the counter, in the heading's face */
+  .sd-root .sd-counter { margin-top: 0.5rem; }
+  .sd-root .sd-observed {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    color: var(--sd-dim);
+    margin: 0 0 0.25rem;
+  }
+  .sd-root .sd-tag {
+    font-weight: 700;
+    color: var(--sd-ink);
+    border: 1px solid var(--sd-frame);
+    padding: 0 0.4ch;
+    margin-right: 0.6ch;
+    font-size: 0.9em;
+  }
+  .sd-root .sd-count-line {
+    font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.3rem;
+  }
+  .sd-root .sd-count-ceiling {
+    font-size: 0.72rem;
+    color: var(--sd-dim);
+    max-width: 72ch;
+    margin: 0;
+  }
+
+  /* the bare command, always on the face; the verbatim block only from stop 2 */
+  .sd-root .sd-cmd-line {
+    margin: 0.5rem 0 0;
+    font-size: 0.66rem;
+    color: var(--sd-dim);
+  }
+  .sd-root .sd-cmd-line code { color: var(--sd-ink); }
+  .sd-root .sd-raw {
+    margin-top: 0.35rem;
+    border: 1px solid var(--sd-rule);
+  }
+  .sd-root .sd-raw pre {
+    margin: 0;
+    padding: 0.45em 0.8ch;
+    font-family: inherit;
+    font-size: 0.56rem;
+    line-height: 1.42;
+    white-space: pre;
+    overflow-x: auto;
+    color: var(--sd-ink);
+  }
+  .sd-root .sd-raw-cap {
+    font-size: 0.6rem;
+    color: var(--sd-dim);
+    margin: 0.25em 0.8ch 0.35em;
+  }
+
+  /* the hand */
+  .sd-root .sd-hand { margin-top: 0.6rem; max-width: 46ch; }
+  .sd-root .sd-hand-ticks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.62rem;
+    color: var(--sd-dim);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.15rem;
+  }
+  .sd-root .sd-hand-input {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 1.4em;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  .sd-root .sd-hand-input::-webkit-slider-runnable-track { height: 1px; background: var(--sd-frame); }
+  .sd-root .sd-hand-input::-moz-range-track { height: 1px; background: var(--sd-frame); }
+  .sd-root .sd-hand-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.8em;
+    height: 1.2em;
+    margin-top: -0.6em;
+    background: var(--sd-ink);
+    border: 0;
+    border-radius: 0;
+  }
+  .sd-root .sd-hand-input::-moz-range-thumb {
+    width: 0.8em;
+    height: 1.2em;
+    background: var(--sd-ink);
+    border: 0;
+    border-radius: 0;
+  }
+  .sd-root .sd-hand-input:focus-visible { outline: 1px solid currentColor; outline-offset: 0.3em; }
+  .sd-root .sd-hand-label {
+    display: block;
+    margin: 0.3rem 0 0;
+    color: var(--sd-ink);
+    letter-spacing: 0.02em;
+    font-size: 0.78rem;
+  }
+
+  .sd-root .sd-foot {
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--sd-rule);
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--sd-dim);
+    word-break: break-word;
+  }
+  .sd-root .sd-foot p { margin: 0 0 0.3rem; }
+  .sd-root .sd-foot p:last-child { margin-bottom: 0; }
+  .sd-root .sd-foot a { color: inherit; }
+  .sd-root .sd-foot .sd-legend-tag { color: var(--sd-ink); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="sd-root">
+<div class="sd-page">
+
+  <script type="application/json" id="sd-data">
+  {
+    "capture_4aug": {
+      "url": "https://frankbueltge.de/ghost-fleet/",
+      "fetched_at_utc": "2026-08-05T04:39:32Z",
+      "http_status": 200,
+      "bytes": 35473,
+      "sha256": "ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5",
+      "edition_date": "2026-08-04",
+      "edition_date_printed": "4 August 2026"
+    },
+    "capture_5aug": {
+      "url": "https://frankbueltge.de/ghost-fleet/",
+      "fetched_at_utc": "2026-08-05T12:54:00Z",
+      "http_status": 200,
+      "bytes": 35485,
+      "sha256": "17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8",
+      "edition_date": "2026-08-05",
+      "edition_date_printed": "5 August 2026"
+    },
+    "method": {
+      "source": "https://frankbueltge.de/werke/ghost-fleet/",
+      "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
+      "window_days": 7
+    },
+    "rows_base": [
+      {"name":"TUNAMAR","flag":"PAN","days_dark":56,"waters":null,"went_dark_between":["2026-06-02","2026-06-09"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 2–9 Jun → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/7d0bafe28-8ec3-ab8e-fb15-3ce152f3974f"},
+      {"name":"MICRONESIA103","flag":"FSM","days_dark":39,"waters":"Marshallese EEZ","went_dark_between":["2026-06-19","2026-06-26"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 19–26 Jun → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/44e937b38-8d12-ce29-5110-ee36398d904c"},
+      {"name":"ALIZE","flag":"ECU","days_dark":31,"waters":"Ecuadorian EEZ","went_dark_between":["2026-06-27","2026-07-04"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 27 Jun–4 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/db5cd7a2a-a9dd-4c52-00ac-4c6980d9a029"},
+      {"name":"FORTICA","flag":"ECU","days_dark":26,"waters":"Ecuadorian EEZ","went_dark_between":["2026-07-02","2026-07-09"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 2–9 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/ed76e5578-8f7d-2e31-1af3-cc129d6ae7b9"},
+      {"name":"PANOFI MASTER","flag":"GHA","days_dark":22,"waters":"Ghanaian EEZ","went_dark_between":["2026-07-06","2026-07-13"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 6–13 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/7b4c7f97f-f297-3a81-22a7-5d210ca4d71e"},
+      {"name":"TRAVELER","flag":"USA","days_dark":18,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-10","2026-07-17"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 10–17 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/6c2fe0c33-3bec-8532-7d04-6c6e8aca5d32"},
+      {"name":"VICTORIA","flag":"MEX","days_dark":17,"waters":"Mexican EEZ","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/ef787e860-0064-bc54-31e7-63a593778d42"},
+      {"name":"PANOFI DISCOVERER","flag":"GHA","days_dark":17,"waters":"Ghanaian EEZ","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/2781849c8-849b-ce64-e1e3-3ed0ae3cd66a"},
+      {"name":"VESTERAALEN","flag":"USA","days_dark":17,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/b6a3440c9-9f83-d1f6-378d-e70f7db7184b"},
+      {"name":"PACIFIC FURY","flag":"USA","days_dark":17,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/455a51563-3a2e-18c6-cf12-9ac5b75ab0a6"},
+      {"name":"EXCELLENCE","flag":"USA","days_dark":16,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-12","2026-07-19"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 12–19 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/f4c37b1e1-14cd-40b6-80ad-9a41580169fd"}
+    ],
+    "rows_turn": [
+      {"name":"SOUTHERN SEAS NO.302","flag":"SLB","days_dark":29,"waters":"Micronesian EEZ","went_dark_between":["2026-06-30","2026-07-07"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 30 Jun–7 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/fbdba1e34-41d3-d737-11df-022bb7f0db73"},
+      {"name":"RICKY","flag":"GBR","days_dark":28,"waters":"Ecuadorian EEZ (Galapagos)","went_dark_between":["2026-07-01","2026-07-08"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 1–8 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/99a1e9d7c-cc99-0a64-8794-918241e3e1b5"},
+      {"name":"ALTAR 10","flag":"ECU","days_dark":18,"waters":"Ecuadorian EEZ (Galapagos)","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 11–18 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/0a0229027-76e4-3f79-a61c-d9c9362459b4"}
+    ],
+    "day_py_command": "python3 projects/season1/capture/day.py 2026-08-04",
+    "day_py_output": "day 2026-08-04  ·  2 capture(s) read\n  vessels dark on that day .......... 0–14 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 79%–100%  (11 of 0–14)\n    (a ceiling from 2 capture(s): further nights can only add vessels to this day, so this share can only fall)\n  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day\n  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day\n  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day\n  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day\n  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day\n  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day\n  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day\n  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day\n  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day\n  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day\n  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day\n  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day\n  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day\n  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day\n",
+    "counter": {
+      "stop0": {
+        "line": "knowable on 4 Aug — 11 of 0–11 · 100%",
+        "ceiling": "a ceiling from 1 capture: further nights can only add vessels to this day, so this share can only fall."
+      },
+      "stop1": {
+        "line": "knowable on 4 Aug — 11 of 0–14 · 79%–100%",
+        "ceiling": "a ceiling from 2 captures: further nights can only add vessels to this day, so this share can only fall."
+      }
+    },
+    "observed_stamp": "11 · first seen 2026-08-05T04:39:32Z",
+    "turn_stamp": "first seen in the edition of 5 August",
+    "tiers": {
+      "SOURCED": "vessel identity (name, flag, waters) and the edition dates, printed by the source and linked to it.",
+      "DERIVED": "the date bands — arithmetic on published durations and the published 7-day window; both ends of every band are printed and hatched.",
+      "OBSERVED": "this house's own record of when it could first know — the fetch timestamp of each capture."
+    }
+  }
+  </script>
+
+  <h1 class="sd-day">4 AUGUST 2026</h1>
+
+  <div class="sd-fieldwrap">
+    <div class="sd-fieldstrip">
+      <div class="sd-scale" id="sd-scale"></div>
+      <div class="sd-rowsarea">
+        <div class="sd-rules" aria-hidden="true"></div>
+        <div class="sd-rule4" id="sd-rule4" aria-hidden="true"><span class="sd-rule4-label">4 AUG</span></div>
+        <ol class="sd-rows" id="sd-rows-base"></ol>
+        <ol class="sd-rows sd-rows-turn" id="sd-rows-turn" hidden></ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="sd-counter">
+    <p class="sd-observed" id="sd-observed"><span class="sd-tag">OBSERVED</span></p>
+    <p class="sd-count-line" id="sd-count-line"></p>
+    <p class="sd-count-ceiling" id="sd-count-ceiling"></p>
+    <p class="sd-cmd-line">$ <code id="sd-raw-cmd"></code></p>
+    <div class="sd-raw" id="sd-raw" hidden>
+      <pre id="sd-raw-pre"></pre>
+      <p class="sd-raw-cap">verbatim, unedited</p>
+    </div>
+  </div>
+
+  <div class="sd-hand">
+    <div class="sd-hand-ticks"><span>4 August 2026</span><span>5 August 2026</span></div>
+    <input class="sd-hand-input" id="sd-hand" type="range" min="0" max="1" step="1" value="0" disabled aria-valuetext="4 August 2026">
+    <label class="sd-hand-label" for="sd-hand">record as it stood on:</label>
+  </div>
+
+  <div class="sd-foot">
+    <p><span class="sd-legend-tag">SOURCED</span> — vessel identity (name, flag, waters) and the edition dates, printed by
+    <a href="https://frankbueltge.de/ghost-fleet/">https://frankbueltge.de/ghost-fleet/</a> and linked to it, name by name.
+    <span class="sd-legend-tag">DERIVED</span> — the date bands, arithmetic on those published durations and the published
+    7-day window; both ends of every band are printed and hatched.
+    <span class="sd-legend-tag">OBSERVED</span> — this house's own record of when it could first know: capture of
+    4 August fetched at 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5);
+    capture of 5 August fetched at 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8).</p>
+    <p>Method: <a href="https://frankbueltge.de/werke/ghost-fleet/">https://frankbueltge.de/werke/ghost-fleet/</a> —
+    “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).”</p>
+    <p>“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof;
+    the instrument makes no claim of illegality against any vessel or state, and neither do we.</p>
+  </div>
+
+</div>
+</div>
+<script>
+(function () {
+  "use strict";
+
+  var root = document.querySelector(".sd-root");
+  var data = JSON.parse(document.getElementById("sd-data").textContent);
+
+  function parseDay(s) {
+    var p = s.split("-");
+    return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+  }
+  function addDays(dt, n) { return new Date(dt.getTime() + n * 86400000); }
+  function diffDays(a, b) { return Math.round((b.getTime() - a.getTime()) / 86400000); }
+  var MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+  function tickLabel(dt) { return dt.getUTCDate() + " " + MONTHS[dt.getUTCMonth()]; }
+
+  var allRows = data.rows_base.concat(data.rows_turn);
+
+  // the field's own bounds, taken from the data itself: earliest possible
+  // dark-start across every row, latest possible resurfacing across every row
+  var fieldStart = allRows.reduce(function (min, r) {
+    var d = parseDay(r.went_dark_between[0]);
+    return d < min ? d : min;
+  }, parseDay(allRows[0].went_dark_between[0]));
+  var dataEnd = allRows.reduce(function (max, r) {
+    var d = parseDay(r.resurfaced_between[1]);
+    return d > max ? d : max;
+  }, parseDay(allRows[0].resurfaced_between[1]));
+  // the drawing surface runs a few unlabelled days past the last real date, so
+  // the rule and the latest bars stand inside the field instead of on its
+  // border — a margin, like any chart's, not a claim about any further day
+  var RIGHT_MARGIN_DAYS = 6;
+  var layoutEnd = addDays(dataEnd, RIGHT_MARGIN_DAYS);
+  var layoutDays = diffDays(fieldStart, layoutEnd);
+  var ruleDate = parseDay(data.capture_4aug.edition_date);
+
+  function pct(dt) { return (diffDays(fieldStart, dt) / layoutDays) * 100; }
+
+  // weekly ticks across the field's real (labelled) span only — the margin
+  // past dataEnd carries no tick, because nothing is known to mark there
+  var scaleEl = document.getElementById("sd-scale");
+  var d = fieldStart;
+  while (d <= dataEnd) {
+    var tick = document.createElement("span");
+    tick.className = "sd-tick";
+    tick.style.left = pct(d) + "%";
+    tick.textContent = tickLabel(d);
+    scaleEl.appendChild(tick);
+    d = addDays(d, 7);
+  }
+
+  // labelled vertical rule at 4 August
+  var rule4 = document.getElementById("sd-rule4");
+  rule4.style.setProperty("--sd-rule-pct", pct(ruleDate));
+
+  function buildRow(r, opts) {
+    opts = opts || {};
+    var li = document.createElement("li");
+    li.className = "sd-row";
+
+    var name = document.createElement("span");
+    name.className = "sd-name";
+    var a = document.createElement("a");
+    a.href = r.gfw_url;
+    a.textContent = r.name;
+    name.appendChild(a);
+    li.appendChild(name);
+
+    var flag = document.createElement("span");
+    flag.className = "sd-flag";
+    flag.textContent = r.flag;
+    li.appendChild(flag);
+
+    var days = document.createElement("span");
+    days.className = "sd-days";
+    days.textContent = r.days_dark + " d dark";
+    li.appendChild(days);
+
+    var waters = document.createElement("span");
+    waters.className = "sd-waters";
+    waters.textContent = r.waters || "";
+    li.appendChild(waters);
+
+    var band = document.createElement("span");
+    band.className = "sd-band";
+    band.textContent = r.band_text;
+    li.appendChild(band);
+
+    var stamp = document.createElement("span");
+    stamp.className = "sd-turnstamp";
+    stamp.textContent = opts.turnStamp ? data.turn_stamp : "";
+    li.appendChild(stamp);
+
+    var field = document.createElement("span");
+    field.className = "sd-field";
+    field.setAttribute("aria-hidden", "true");
+
+    var d1lo = parseDay(r.went_dark_between[0]);
+    var d1hi = parseDay(r.went_dark_between[1]);
+    var d2lo = parseDay(r.resurfaced_between[0]);
+    var d2hi = parseDay(r.resurfaced_between[1]);
+    var left = pct(d1lo);
+    var hatchLeftW = pct(d1hi) - pct(d1lo);
+    var midW = pct(d2lo) - pct(d1hi);
+    var hatchRightW = pct(d2hi) - pct(d2lo);
+
+    var segL = document.createElement("span");
+    segL.className = "sd-seg sd-seg-hatch";
+    segL.style.left = left + "%";
+    segL.style.width = hatchLeftW + "%";
+    field.appendChild(segL);
+
+    if (midW > 0) {
+      var segM = document.createElement("span");
+      segM.className = "sd-seg sd-seg-mid";
+      segM.style.left = (left + hatchLeftW) + "%";
+      segM.style.width = midW + "%";
+      field.appendChild(segM);
+    }
+
+    var segR = document.createElement("span");
+    segR.className = "sd-seg sd-seg-hatch";
+    segR.style.left = (left + hatchLeftW + midW) + "%";
+    segR.style.width = hatchRightW + "%";
+    field.appendChild(segR);
+
+    li.appendChild(field);
+    return li;
+  }
+
+  var rowsBase = document.getElementById("sd-rows-base");
+  data.rows_base.forEach(function (r) { rowsBase.appendChild(buildRow(r)); });
+
+  var rowsTurn = document.getElementById("sd-rows-turn");
+  data.rows_turn.forEach(function (r) { rowsTurn.appendChild(buildRow(r, { turnStamp: true })); });
+
+  document.getElementById("sd-observed").appendChild(document.createTextNode(" " + data.observed_stamp));
+  document.getElementById("sd-raw-cmd").textContent = data.day_py_command;
+
+  var lineEl = document.getElementById("sd-count-line");
+  var ceilingEl = document.getElementById("sd-count-ceiling");
+  var rawWrap = document.getElementById("sd-raw");
+  var rawPre = document.getElementById("sd-raw-pre");
+  var hand = document.getElementById("sd-hand");
+
+  // At stop 1, the observer stands on 4 August: no capture from 5 August
+  // exists for them yet, so its share and its three names must not be
+  // reachable anywhere in the document — not just visually hidden, absent.
+  function apply() {
+    var i = parseInt(hand.value, 10);
+    if (isNaN(i)) i = 0;
+    var moved = i >= 1;
+    var state = moved ? data.counter.stop1 : data.counter.stop0;
+    lineEl.textContent = state.line;
+    ceilingEl.textContent = state.ceiling;
+    rowsTurn.hidden = !moved;
+    rawWrap.hidden = !moved;
+    rawPre.textContent = moved ? data.day_py_output : "";
+    hand.setAttribute("aria-valuetext", moved ? "5 August 2026" : "4 August 2026");
+  }
+
+  hand.disabled = false;
+  hand.addEventListener("input", apply);
+  hand.addEventListener("change", apply);
+  apply();
+})();
+</script>
+</body>
+</html>
