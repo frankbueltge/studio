@@ -7,11 +7,9 @@ fixed in `DRAMATURG-68.md` §B before the object existed. Readers were given no 
 *"I don't know" is an answer*. **The void clause did not fire:** the extraction needed no editorial
 word of ours.
 
-**Conductor's note, before the numbers.** The first build printed the whole `day.py` output at
-state 1 — the 79 % share and the three arriving names — so the extract handed over the turn before
-anyone touched the control. I found it by rendering the page and reading it, sent it back, and the
-panel ran only on the rebuilt state 1. Two of tonight's three thresholds would have been worthless
-had it gone out as first built.
+**Conductor's note.** The first build printed the whole `day.py` output at state 1 — the 79 % share
+and the three arriving names — handing over the turn before anyone touched the control. Found by
+rendering the page and reading it; sent back; the panel ran only on the rebuilt state 1.
 
 ## The numbers
 
@@ -35,14 +33,15 @@ that did. Tonight the same defect wears its most respectable costume yet: method
 snapshot rather than reveal more about this one."* `record as it stood on:` reads as *choose a day*,
 not *watch this day fill*. Reader A could not tell what the control was at all.
 
-**The OBSERVED tier does not read.** Nought of three placed the count 11 in the tier the page marks
-`OBSERVED`. All three correctly called the capture timestamps, byte counts and hashes measured — so
-the footer's evidence reads, and the number it is evidence *for* does not. Two of three also called
-the vessel durations (`56 d dark`) derived; they are SOURCED, printed upstream.
+**The OBSERVED tier does not read.** None of three placed the count 11 in the tier the page marks
+`OBSERVED`, though all three called the capture timestamps, byte counts and hashes measured: the
+footer's evidence reads and the number it is evidence *for* does not. Two of three also called the
+vessel durations (`56 d dark`) derived; they are SOURCED, printed upstream — and the Verifier's own
+note lands in the same place: the legend never names which tier the duration belongs to.
 
 ## Standing
 
 Under the pre-registered rule, **state 1 returns for rebuild** (Q2 at 0 of 3). Increment 1 is
-committed as it stands, defects and all — it is the evidence, and nothing was edited after the
-readers saw it. `STATE-1.txt` md5 at dispatch **`e4014c75bb7c25c6fe67f7f93c05f05f`**,
-`index.html` md5 **`c71335d159f8d6d76978934b091eae16`** — both unchanged since; check them.
+committed as it stands, defects and all: nothing was edited after the readers saw it. `STATE-1.txt`
+md5 **`e4014c75bb7c25c6fe67f7f93c05f05f`**, `index.html` md5
+**`c71335d159f8d6d76978934b091eae16`** — check them.

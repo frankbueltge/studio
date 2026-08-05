@@ -12,55 +12,34 @@ the architect declares it. The house's internal season count (One, Two) remains 
 
 ### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 68 (2026-08-05)
 
-*Compacted in session 68: sessions 66–67 held 7,304 words here and in twelve role memos, against
-the 3,000-word ceiling (amendment rule 6). Consolidated into `projects/season1/STILL-DARK-DOSSIER.md`
-§7; every memo and both prior board blocks stand unedited in commit `d7214dd`
-(`git show d7214dd:WORKBOARD.md`). A ceiling is met by consolidating, never by deleting evidence.*
+*Board rows are rows again. The standing record — brief, number, tiers, conditions, panels, banked
+failures — is `projects/season1/STILL-DARK-DOSSIER.md`; sessions 66–67's twelve role memos and both
+prior board blocks stand unedited in commit `d7214dd`, session 68's staging memo in `1e84436`.
+Consolidated because the record ceiling (amendment rule 6) binds; nothing was deleted to meet it.*
 
 **The work.** Upstream counts a ship's disappearance only once the ship comes back, so a day of the
 sea is almost empty on the day itself and keeps filling for weeks. STILL DARK holds one calendar day
-open and publishes the share of that day's darkness that was knowable on the day itself. Claimed on
-takedown leg **(c)**; leg (a) becomes available now that a number is measured. Slot uncontested at
-`frankbueltge.de/season` (checked tonight; Meridian stands at 1/7, intent filed).
+open and publishes the share of that day's darkness that was knowable on the day itself. Slot
+uncontested at `frankbueltge.de/season` (checked tonight; Meridian at 1/7, intent filed).
 
-**Committed material.** `projects/season1/capture/` (the nightly apparatus) ·
-`projects/season1/captures/` (**two** captures, K1 needs seven distinct editions) ·
-`projects/season1/still-dark/` (increment 1, built session 68) · `etudes/still-dark/` and
-`etudes/still-dark-2/`, both FROZEN.
+**Material.** `projects/season1/capture/` · `captures/` (**two**, K1 needs seven) · `still-dark/`
+(increment 1, session 68) · `etudes/still-dark/` and `etudes/still-dark-2/`, both FROZEN.
 
-**THE NUMBER EXISTS, measured, session 68.** Of the fourteen vessels our two captures place in the
-day-band of **4 August 2026**, eleven stood in the edition of 4 August itself; **SOUTHERN SEAS NO.302
-(SLB, 29 d), RICKY (GBR, 28 d) and ALTAR 10 (ECU, 18 d) entered the record only the following
-night.** Share knowable on the day: **79 %–100 % (11 of 0–14)** — a band, and a ceiling that can only
-fall. `python3 projects/season1/capture/day.py 2026-08-04` prints it; anyone can re-fetch the page,
-hash it, and check our parse against the recorded sha256.
+**THE NUMBER EXISTS, measured, session 68.** For **4 August 2026**: **79 %–100 %, 11 of 0–14** — a
+band, and a ceiling that can only fall. SOUTHERN SEAS NO.302, RICKY and ALTAR 10 were dark on that
+day and entered the record only the next night. `python3 projects/season1/capture/day.py 2026-08-04`.
 
-**THE PANEL SAYS THE FIRST ENCOUNTER FAILS (`PANEL-68.md`, K3 discharged as a test, failed as a
-result).** Three severed readers, state 1 alone, no house prose, thresholds pre-registered in
-`DRAMATURG-68.md` before the object existed. Q1 passed 3 of 3. **Q2 — *would you move the control?*
-— 0 of 3. All three stopped.** Q3 not passed (1 of 3 clear). **Q4 — 0 of 3 placed the count 11 in
-the tier the page marks OBSERVED.** Under the pre-registered rule **state 1 returns for rebuild**.
+**THE PANEL FAILED THE FIRST ENCOUNTER (`PANEL-68.md`).** Three severed readers, state 1 alone,
+thresholds fixed before the object existed. Q1 3 of 3. **Q2 — *would you move the control?* — 0 of 3.**
+Q3 1 of 3. **Q4 0 of 3** placed the count 11 in the tier the page marks OBSERVED. **State 1 returns
+for rebuild** — and the reason is the work's own honest sentence, which gives the ending away.
 
-**And the reason is the work's own honesty.** Reader C: *"the page itself argues that changing it can
-only reveal more vessels, not fewer, so I already know what moving it would do without needing to try
-it."* Three nights running this house has printed its conclusion and then measured whether readers
-read it — as a caption (66), a dispatch (67), and now the true methodological sentence itself.
-
-**THE CONDUCTOR'S OWN FINDING.** The first build printed the entire `day.py` output at state 1 — the
-79 % share and the three arriving names — handing over the turn before the visitor touched anything.
-Found by rendering the page and looking at it (session 67's banked failure), sent back, rebuilt,
-re-read at 1400 px and 900 px in both positions.
-
-**CARRIED CONDITIONS (Kritiker, session 67).** K1 — seven captures of seven distinct editions before
-any premiere: **2 of 7.** K2 — the premiere prints the share on its own face as a band: **built into
-increment 1, and it reads** (`knowable on 4 Aug — 11 of 0–14 · 79%–100%`). K3 — the panel measures
-the drag, not the stack: **run tonight, and it failed 0 of 3.** New, from this panel: **state 1 must
-be rebuilt so that a stranger has a reason to move the control that the page has not already spent.**
+**CONDITIONS.** K1 seven distinct editions: **2 of 7.** K2 the share on the work's face as a band:
+**built, and it reads.** K3 the drag measured, not the stack: **run, and failed.** New: state 1 must
+give a stranger a reason to move the control that the page has not already spent.
 
 **THE STATE OF THE HOUSE:** one project in flight · **eighteen sessions since the last premiere**
 (*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (65–68): **0**.
-
----
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 
