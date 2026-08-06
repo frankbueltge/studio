@@ -1,9 +1,10 @@
 # STILL DARK — concept dossier
 
-**Season 1 — Counter-Measurement, Episode 7/7.** Gate: opened with three conditions, session 66
-(`git show d7214dd:projects/season1/KRITIKER-GATE-66.md`). The project's standing record, written to
-discharge **C3** and hold the arc. *Tier: SOURCED throughout, with a DERIVED layer whose uncertainty
-is printed and an OBSERVED layer that is this house's record of itself. No VERIFIED claim — nothing
+**Season 1, Episode 7/7** (the season's theme was withdrawn 2026-08-06; the claim is untouched).
+Gate: opened with three conditions, session 66 (`git show
+d7214dd:projects/season1/KRITIKER-GATE-66.md`). The project's standing record, written to discharge
+**C3** and hold the arc. *Tier: SOURCED throughout, with a DERIVED layer whose uncertainty is
+printed and an OBSERVED layer that is this house's record of itself. No VERIFIED claim — nothing
 here draws on a sibling practice. No IMAGINED element is in the work.*
 
 ## 1. The work, in one page
@@ -25,12 +26,11 @@ Upstream's restraint is inherited whole and repeated on the face of anything we 
 
 **The number:** *for one named calendar day, the share of that day's vessel-days of darkness that
 was knowable on the day itself* — a band, never a point. **A stranger checks it in one command:**
-`python3 projects/season1/capture/day.py <day> [--as-of <UTC>]`, over captures that each carry the
+`python3 projects/season1/capture/day.py <day> [--as-of <UTC>]`, over captures each carrying the
 URL, the UTC fetch time, the status, the byte count and the **sha256 of the raw body**, so anyone
-can re-fetch, hash, and see whether our parse belongs to those bytes.
-
-The number exists in no dataset: upstream publishes a list of **endings**, and nobody keeps a
-**day-addressed** record of when each became knowable. The captures are that record.
+can re-fetch, hash, and see whether our parse belongs to those bytes. The number exists in no
+dataset: upstream publishes a list of **endings**, and nobody keeps a **day-addressed** record of
+when each became knowable. The captures are that record.
 
 ## 3. The three layers, and the line between them
 
@@ -38,8 +38,8 @@ The number exists in no dataset: upstream publishes a list of **endings**, and n
 Global Fishing Watch id. **DERIVED** — arithmetic on those, uncertainty carried: an edition holds
 events that ended within 7 days of its date, so TUNAMAR resurfaced somewhere in 2026-07-28 – 08-04.
 **OBSERVED** — this house's captures; the first capture naming a vessel is the moment we could first
-know of it. *Session 68's panel found the OBSERVED tier unreadable on the built face; session 69's
-column header fixed it, 0 → 2 of 3 — see §7.*
+know of it. *68's panel found the OBSERVED tier unreadable on the face; 69's column header fixed it,
+0 → 2 of 3.*
 
 **C1 is discharged structurally, not by care:** no code path can attach an invented time to a vessel
 name. A vessel's timing is either derived from its published duration — a band, printed at both
@@ -47,8 +47,8 @@ ends — or observed from a committed capture. Session 66's `+2d` stamps have no
 
 ## 4. The state of the measurement, honestly
 
-**Four captures are committed, holding THREE bodies and TWO distinct editions**
-(`projects/season1/captures/`; K1 counts editions, and needs seven):
+**Four captures committed, holding THREE bodies and TWO distinct editions** (K1 counts editions,
+and needs seven):
 
 | capture | status · bytes · body sha256 | content | edition | vessels |
 |---|---|---|---|---|
@@ -58,21 +58,18 @@ ends — or observed from a committed capture. Session 66's `+2d` stamps have no
 | `2026-08-06T043619Z.json` | 200 · 35,485 · `aed92f4f…` | `47338b03…` | 5 August 2026 | 8 |
 
 Two captures added nothing, kept because a work about publication latency owes its null
-measurements the same page as its findings. Since 69 `day.py` prints editions beside captures and
-takes `--as-of <UTC>`: the record as it stood at any past instant is re-runnable by anyone.
+measurements the same page as its findings. Since 69 `day.py` takes `--as-of <UTC>`: the record as
+it stood at any past instant is re-runnable by anyone.
 
 **A method the work had published was wrong, and the record caught it (70).** Until 6 August an
-edition's identity was the **sha256 of the raw body**, and the work's own face carried the
-sentence *"the same edition, byte for byte."* The fourth capture broke that test: **the body hash
-moved at an identical byte count while every field this work reads — edition date, aggregates,
-case of the day, all eight vessels with flags, durations and waters — stayed identical.** What
-moved is not claimed: the earlier bodies were never kept, only their hashes, so the cause is
-unrecoverable and is left so. `capture/edition.py` now computes a second digest over the
-edition's own material, computable from any capture file including those written before it
-existed; **no committed capture was rewritten** to carry it. The work's face prints the content
-column and says why. From now on `capture.py` also records the site's fingerprinted asset paths —
-outside the edition, outside every tier — so the next such move can be attributed instead of
-guessed at.
+edition's identity was the **sha256 of the raw body**, and the face carried *"the same edition,
+byte for byte."* The fourth capture broke that test: **the body hash moved at an identical byte
+count while every field this work reads stayed identical.** What moved is not claimed — the
+earlier bodies were never kept, only their hashes. `capture/edition.py` now digests the edition's
+own material, computable from any capture file including those written before it existed;
+**no committed capture was rewritten**, and the face prints the content column and says why.
+`capture.py` now also records the site's fingerprinted asset paths — outside the edition and
+outside every tier — so the next such move can be attributed instead of guessed at.
 
 **The number is measured, not derived** (68). Of the **fourteen** vessels our captures place in the
 day-band of **4 August 2026**, **eleven** stood in the edition of 4 August itself. The three that
@@ -83,10 +80,8 @@ is **79 %–100 % (11 of 0–14)**: a band, because its denominator is one, and 
 only fall** — a further night adds vessels to a past day, never removes one, and can never put a
 name into an edition that did not carry it.
 
-We assert nothing about why: at **04:39 UTC on 5 August** the live page still carried the
-**4 August** edition; at **12:54** the 5 August one; at **19:17** that same edition, byte for byte.
-Before our record begins the OBSERVED share stays **not yet measurable**, and the instrument refuses
-to substitute the DERIVED share in its place.
+We assert nothing about why. Before our record begins the OBSERVED share stays **not yet
+measurable**, and the instrument refuses to substitute the DERIVED share in its place.
 
 ## 5. The forward record (amendment rule 3, the ambition audit)
 
@@ -99,8 +94,8 @@ with seeded times — is a failed forecast, and the gate has put its own name to
 
 **The published takedown, which ships with the work whatever becomes of it:** *"A studio watched a
 website update for a month and called its own patience a measurement."* The refutation is the number
-in §2 and §4 — patience produces a figure that is checkable against a committed, hashed record, or
-the takedown stands.
+in §2 and §4 — patience produces a figure checkable against a committed, hashed record, or the
+takedown stands.
 
 **The nearest neighbours, named by the Artist before anyone asked:** the Ghost Fleet itself;
 **Trevor Paglen, *The Other Night Sky*** (`https://paglen.studio/2020/05/22/the-other-night-sky/`,
@@ -115,18 +110,17 @@ photographed; Watch the Med accumulates toward a completed incident, here nothin
 a method that counts a disappearance only when the ship returns **cannot see the ships that never
 return**. The work inherits that blindness and must print it, not solve it.
 
-## 7. The conditions, the panels and the banked failures — the consolidated record
+## 7. The conditions, the panels and the banked failures
 
-*The record ceiling (rule 6) is met by consolidating, never by losing evidence — git is this house's
-archive. **Nothing has been deleted:** sessions 66–67's twelve role memos are in commit `d7214dd`
-(with both prior board blocks), `DRAMATURG-68.md` in `1e84436`, session 68's panel and Verifier
-memos in `24295ac`, and session 69's staging memo — the pre-registration its panel is scored
-against — in `6dd04f4`. The live record (this dossier, the current panel and
-Verifier memos, the board block) is measured each session and printed in that night's journal.*
+*The record ceiling is met by consolidating, never by losing evidence — git is the archive.
+**Nothing has been deleted:** 66–67's twelve role memos in `d7214dd` (with both prior board
+blocks), `DRAMATURG-68.md` in `1e84436`, 68's panel and Verifier memos in `24295ac`, 69's staging
+memo in `6dd04f4`, 69's panel and Verifier memos and board block in `d778fe2`, **70's staging memo
+— the pre-registration its panel is scored against — in `5968048`**. The live record (this
+dossier, the current panel and Verifier memos, the board block) is measured and printed each
+session.*
 
-**The gate's conditions.** C1 (no IMAGINED time on a SOURCED name), C2 (the latency in one sitting)
-and C3 (the number, and how a stranger checks it): all three **DISCHARGED**, 67. **Three carried,
-verbatim:**
+**The gate's conditions.** C1, C2 and C3: all three **DISCHARGED**, 67. **Three carried, verbatim:**
 
 1. *No premiere until `projects/season1/captures/` holds seven captures of seven distinct editions
    and `capture/day.py <held day>` prints an OBSERVED share, not "not yet measurable."*
@@ -135,37 +129,21 @@ verbatim:**
 3. *The next panel measures the drag, not the stack: a reader sees state 1 alone, with no
    house-written description of the field, asked whether to continue. Checked in the next
    `projects/season1/PANEL-*.md`. If the page cannot be dispatched without house prose, say so and
-   claim no first-encounter threshold at all.* — **K3 has exhausted its object twice over: the drag
-   died in 69, and the act that replaced it died in 70.** The condition is discharged by its own
-   terms; what stands in its place is the escalation clause, which orders a form with no act.
+   claim no first-encounter threshold at all.* — **K3 has exhausted its object twice: the drag died
+   in 69, its replacement in 70.** Discharged by its own terms; the escalation clause stands in its
+   place, ordering a form with no act.
 
-**The panels.** 66 and 67, five readers each (minuted in their journals): **the return is dead as a
-mechanism** and **five of five had to reverse-engineer the piece**. Twice the house **voided a
-threshold that passed**, both times because the decisive words were ours. 68, 69 and 70 stand in
-one table in `PANEL-70.md`.
-
-**THREE MECHANISMS ARE DEAD, each killed by a threshold fixed in writing before its object
-existed:** the return (66), the two-stop slider (69), and **number-entry** (70 — Q2 0 of 3, the
-readers asked to commit a figure before the house said anything, and all three refused).
-
-**The finding of five nights, and it is about this house's hand.** 66 a caption · 67 a dispatch ·
-68 a methodological sentence · 69 an evidence line · 70 an instruction, *and beside it an
-inherited quotation*. The ruling after 69 was that this house puts its finding in front of its
-form. **70 refines it and makes it worse: this house cannot stand a reader in front of an act
-without also telling them, truthfully, what the act is worth.** *"Nothing on this screen will
-answer it for you"* is honest, load-bearing and a reason to stop; the void that fired on Q3 was
-fired by **upstream's own method quote**, which cannot be edited away. Under the pre-registered
-escalation the next form carries **no reader act at all** — one screen filling on a clock nobody
-can touch, the finding withheld until it has filled — and the next panel claims no act threshold.
-
-**What increment 1 is, as of 70:** `still-dark/README.md`; `render.mjs` makes the panel material
-and both legibility widths from the built file itself; `capture/edition.py` makes the ledger.
+**The panels, the three dead mechanisms and the ruling of five nights** are in `PANEL-70.md`,
+which carries 68, 69 and 70 in one table and is retired to a commit when the next panel supersedes
+it. Live state is the board's row.
 
 **The banked failures, this house's own.** (1) *66* — a vessel dropped from a shelf the conductor
 had called first-hand: **eleven**, not ten, and it travelled into the claim before the Verifier
 caught it. (2) *67* — a builder, a critic and a verifier passed an object **nobody had rendered**;
-the names were clipped off the screen. **A check run against a description instead of the thing** —
-now structurally harder: since 69 the panel's material is what the browser itself renders.
+a check run against a description instead of the thing — now structurally harder: since 69 the
+panel's material is what the browser renders. (3) *70* — **a published method of the work's own
+was false**: an edition identified by the sha256 of its raw body, and *"the same edition, byte for
+byte"* printed on the face. The record falsified it; §4 carries the repair.
 
 **The critic's standing ridicule, carried until it is refuted:** *"a rail that pays out eleven
 identical bars, on a work whose whole claim is a quantity, with one night of captures on disk and the

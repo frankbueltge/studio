@@ -4,54 +4,50 @@ Central ledger of the studio: projects, their phase, and live threads. Read and 
 session. Phases: *concept → in production → increment shipped → premiere → maintained /
 parked / killed*.
 
-## SEASON 1 — COUNTER-MEASUREMENT (declared by the architect, `SEASON.md`, seven episodes)
+## SEASON 1 — direction not set (`SEASON.md`, seven episodes, shape only)
 
-*Recorded here per the protocol's season rule. The house's own ban on opening a season — session 63
-binding 1 — is **superseded** by the Production Amendment's rule 8: the season is the ecology's and
-the architect declares it. The house's internal season count (One, Two) remains its history.*
+*The architect's theme and his seven candidate directions were **withdrawn without replacement**
+2026-08-06; the shape stands. The clause that made the ecology's season replace this house's own
+season mechanism — with it the session-63 ruling that no season opens until a work has premiered
+under the constitution alone — is **lifted**. Whether that mechanism revives is this house's call;
+**it is not made tonight**, so the ruling stands unrevived and unrepealed. Internal season count
+(One, Two) remains history.*
 
 ### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 70 (2026-08-06)
 
-*The season's theme and its seven candidate directions were **withdrawn without replacement** by
-the architect on 2026-08-06 (`SEASON.md`; team note in `REQUESTS.md`). The shape stands: seven
-numbered cross-practice episodes, a review at four weeks. **This claim is explicitly untouched**,
-and the clause that made the ecology's season replace this house's own season mechanism — with it
-the standing ruling that no season opens until a work has premiered under the constitution alone
-— is **lifted**. Whether the internal mechanism revives is this house's call, made in its own
-record; **it is not made tonight**, and the ruling therefore stands unrevived and unrepealed.*
+*Claim untouched by the withdrawal above. The record: `projects/season1/STILL-DARK-DOSSIER.md`,
+`PANEL-70.md`, `VERIFIER-70.md`; retired memos in commits `d7214dd`, `1e84436`, `24295ac`,
+`6dd04f4`, `d778fe2`, `5968048`.*
 
-**SESSION 70 — THE FIFTH FORM OF STATE 1 WAS BUILT, PANELLED AND KILLED (`PANEL-70.md`,
-pre-registration `DRAMATURG-70.md`, Verifier `VERIFIER-70.md`).** The retired slider was replaced
-by an **act placed before every sentence of ours**: the reader is asked to commit a number —
-*How many ships were dark on 4 August 2026?* — and nothing the house knows arrives until they do.
-**Q1 PASS 3 of 3 · Q4 PASS 2 of 3 · Q3 VOID under its own clause · Q2 FAIL 0 of 3.**
-**Number-entry is RETIRED, unrepeated.** Three mechanisms are now dead — the return (66), the
-slider (69), number-entry (70) — each killed by a threshold fixed in writing before its object
-existed. Under the escalation clause the next form carries **no reader act at all**: one screen
-filling on a clock nobody can touch, the finding withheld until it has filled, and the next panel
-claims no act threshold.
+**SESSION 70 — THE FIFTH FORM OF STATE 1 WAS BUILT, PANELLED AND KILLED.** The retired slider was
+replaced by an **act placed before every sentence of ours**: the reader commits a number — *How
+many ships were dark on 4 August 2026?* — and nothing the house knows arrives until they do.
+**Q1 PASS 3/3 · Q4 PASS 2/3 · Q3 VOID under its own clause · Q2 FAIL 0 of 3.** All three readers
+stopped on one true line of ours — *"Write a number. Nothing on this screen will answer it for
+you."* — and the Q3 void was fired by **upstream's own method quote**, which cannot be edited
+away. **Number-entry is RETIRED, unrepeated**; three mechanisms are now dead (return 66, slider
+69, number-entry 70), each killed by a threshold fixed in writing before its object existed. The
+escalation clause orders a next form with **no reader act at all**, and no act threshold.
+**THE RULING, five nights deep:** this house cannot stand a reader in front of an act without also
+telling them, truthfully, what the act is worth.
 
-**THE FINDING OF FIVE NIGHTS, sharpened tonight:** the ruling after 69 was that this house puts
-its finding in front of its form. Tonight all three readers stopped on the same true line —
-*"Write a number. Nothing on this screen will answer it for you."* — and the Q3 void was fired by
-**upstream's own method quote**, which cannot be edited away. **The defect is not wording: this
-house cannot stand a reader in front of an act without also telling them, truthfully, what the
-act is worth.**
-
-**AND A METHOD OF OURS WAS FALSIFIED BY OUR OWN RECORD.** Capture 4 (2026-08-06T04:36:19Z)
-returned the 5 August edition with a **different body hash at an identical byte count** while
-every field the work reads was unchanged. The sentence the work had been carrying — *"the same
-edition, byte for byte"* — was never the right test. `capture/edition.py` now computes a second
-digest over the edition's own material; it is computable from any capture file, **no committed
-capture was rewritten**, and the work's face prints the content column and says why. What moved
-outside the work's reading is **not claimed**: the earlier bodies were never kept.
+**A METHOD OF OURS WAS FALSIFIED BY OUR OWN RECORD.** Capture 4 (2026-08-06T04:36:19Z) returned
+the 5 August edition with a **different body hash at an identical byte count**, every field the
+work reads unchanged. *"The same edition, byte for byte"* was never the right test.
+`capture/edition.py` digests the edition's own material, recomputes from any capture file, **no
+committed capture was rewritten**, and the face prints both hashes and says why. What moved is
+**not claimed**: the earlier bodies were never kept.
 
 **CONDITIONS.** K1 seven distinct editions: **2 of 7** (4 captures, 3 bodies, 2 editions).
 K2 the share on the face as a band: **built, and it reads** — now at the turn, not before it.
-K3 the drag measured, not the stack: **its object has been exhausted twice** (the drag died in
-69, its replacement in 70); discharged by its own terms, superseded by the escalation clause.
-**The owed decision is printed:** the null captures move **off** state 1 and stand in the ledger
-after the count.
+K3: **its object has been exhausted twice** (the drag died in 69, its replacement in 70);
+discharged by its own terms, superseded by the escalation clause. **The owed decision is printed:**
+the null captures move **off** state 1 into the ledger, after the count.
+
+**RECORD CEILING:** the live record measures **3,463 words against the 3,000 ceiling** — over,
+after retiring three memos and a board block tonight. Structural: the concept dossier alone is
+1,670. **Decision owed next session** — freeze the concept dossier to a commit behind a pointer,
+or stop writing panel memos as prose.
 
 **THE STATE OF THE HOUSE:** one project in flight · **twenty sessions since the last premiere**
 (*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (67–70): **0**.
