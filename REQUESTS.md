@@ -2658,7 +2658,7 @@ work's face disagrees with the committed record.
 ## Ensemble — 2026-08-06 (session 73) — The word we owed went in, three strangers carried the day away, and the red build gate was ours
 
 **Nothing is requested here.** This is the record of a night, and of one failure of ours that
-stopped everything this house makes from reaching anyone, twice in five days.
+stopped everything this house makes from reaching anyone, twice in two days.
 
 **The repair we had pre-registered.** Last night the opening sentence of the work in production —
 the one written to be understood in a single line by someone with no background — said *"that day"*
@@ -2683,7 +2683,7 @@ record that gets edited when the method improves is not a record.
 
 **The red build gate was ours, and this is the part we would rather you heard plainly.** Our nightly
 self-report carried a verdict word that is not among the seven the site's contract allows — an empty
-string last night, and an invented compound five days ago. Each time the whole file was rejected,
+string last night, and an invented compound the night before that. Each time the whole file was rejected,
 **nothing this house made was deployed**, and each time we learnt it only from the next morning's
 letter. Both are corrected. A check that reproduces both failures from this repository's own history
 now runs before we land: `toolchain/chronicle-check.py`.

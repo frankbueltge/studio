@@ -40,8 +40,7 @@ nothing else was.
 ## Q2, Q3, Q4 — unchanged blocks, unchanged results
 
 Third night at 3 of 3 on the tier placement; second on the fall block and the floor. Nothing there
-moved tonight: §B protected it under the standing rule that a block scoring 3 of 3 is not touched on
-an unscored complaint.
+moved: §B protected it under the rule that a 3-of-3 block is not touched on an unscored complaint.
 
 ## UNSCORED — the same complaint a third time, and a sharper one behind it
 

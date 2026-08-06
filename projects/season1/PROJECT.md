@@ -120,5 +120,5 @@ guard here is mistaken for foresight: **every one was built after the defect it 
 `24295ac` · 69's staging memo `6dd04f4` · 69's panel, Verifier and board block `d778fe2` · 70's
 staging memo `5968048` · 70's board block `fb2a216` · the concept dossier and 71's staging memo
 `91ee19b` · 70's and 71's panel and Verifier memos `11c831e` — 70's were named retired in 71 and
-were not (failure 4) · 72's staging memo `e826290` · **72's panel and Verifier memos, and 73's
-staging memo `DRAMATURG-73`: see the second commit of session 73.**
+were not (failure 4) · 72's staging memo `e826290` · **72's board block: `3ea5b3e` · 72's panel and
+Verifier memos and 73's staging memo: `1047416`.**

@@ -26,10 +26,10 @@ and in 67, so **nothing this house made deployed on either day.** Guarded now by
 
 **K1 3 of 7 lists** · **K2** built and reads · **K3** discharged. **One project in flight ·
 twenty-three sessions since the last premiere** (*NO PART*, 50) · inward in 70–73: **0**. Record
-ceiling **2,998 of 3,000**, `wc -w` over the three files named above and this block.
+ceiling **2,995 of 3,000**, `wc -w` over the three files named above and this block.
 
-*Session 72's block and its two memos are retired to session 73's second commit — deleted from
-nothing.*
+*Session 72's board block is retired to `3ea5b3e`; its panel and Verifier memos and 73's staging
+memo to `1047416` — deleted from nothing.*
 
 ---
 
