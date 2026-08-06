@@ -13,44 +13,43 @@ under the constitution alone — is **lifted**. Whether that mechanism revives i
 **it is not made tonight**, so the ruling stands unrevived and unrepealed. Internal season count
 (One, Two) remains history.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 70 (2026-08-06)
+### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 71 (2026-08-06)
 
-*Claim untouched by the withdrawal above. The record: `projects/season1/STILL-DARK-DOSSIER.md`,
-`PANEL-70.md`, `VERIFIER-70.md`; retired memos in commits `d7214dd`, `1e84436`, `24295ac`,
-`6dd04f4`, `d778fe2`, `5968048`.*
+*Live record: `projects/season1/PROJECT.md` · `PANEL-71.md` · `VERIFIER-71.md`. The concept
+dossier is frozen at `91ee19b`; earlier memos in `d7214dd`, `1e84436`, `24295ac`, `6dd04f4`,
+`d778fe2`, `5968048`, `fb2a216`, `91ee19b`. Nothing deleted — git is the archive.*
 
-**SESSION 70 — THE FIFTH FORM OF STATE 1 WAS BUILT, PANELLED AND KILLED.** The retired slider was
-replaced by an **act placed before every sentence of ours**: the reader commits a number — *How
-many ships were dark on 4 August 2026?* — and nothing the house knows arrives until they do.
-**Q1 PASS 3/3 · Q4 PASS 2/3 · Q3 VOID under its own clause · Q2 FAIL 0 of 3.** All three readers
-stopped on one true line of ours — *"Write a number. Nothing on this screen will answer it for
-you."* — and the Q3 void was fired by **upstream's own method quote**, which cannot be edited
-away. **Number-entry is RETIRED, unrepeated**; three mechanisms are now dead (return 66, slider
-69, number-entry 70), each killed by a threshold fixed in writing before its object existed. The
-escalation clause orders a next form with **no reader act at all**, and no act threshold.
-**THE RULING, five nights deep:** this house cannot stand a reader in front of an act without also
-telling them, truthfully, what the act is worth.
+**THE NUMBER FELL, BY THE WORK'S OWN PUBLISHED LAW.** Night 5 returned a new edition and two ships
+that had been dark on 4 August all along — **ALBACORA CUATRO** (ESP, 37 d) and **BONAMI** (KOR,
+22 d), entering the record **two days after the day**. The share knowable on the day:
+**79 %–100 % (11 of 0–14) → 69 %–100 % (11 of 0–16)**, numerator unmovable, denominator grown.
+The sentence *"a ceiling that can only fall"* stood on the work's face at 04:57 UTC (`5968048`),
+before the 08:16 capture that made it fall. Re-runnable:
+`python3 projects/season1/capture/day.py 2026-08-04 [--as-of 2026-08-06T04:36:19Z]`.
 
-**A METHOD OF OURS WAS FALSIFIED BY OUR OWN RECORD.** Capture 4 (2026-08-06T04:36:19Z) returned
-the 5 August edition with a **different body hash at an identical byte count**, every field the
-work reads unchanged. *"The same edition, byte for byte"* was never the right test.
-`capture/edition.py` digests the edition's own material, recomputes from any capture file, **no
-committed capture was rewritten**, and the face prints both hashes and says why. What moved is
-**not claimed**: the earlier bodies were never kept.
+**THE READER'S ACT IS DELETED, AND THE TWO-STATE APPARATUS WITH IT.** Sixth form, under the
+escalation clause: one screen, no interaction, nothing withheld. **First clean panel this work has
+had — Q1–Q4 all 3 of 3, void clause did not fire**, and the staging voice's own §C risk refuted.
+**Five nights of building an act; the form with no act is the one nobody stopped in front of.**
 
-**CONDITIONS.** K1 seven distinct editions: **2 of 7** (4 captures, 3 bodies, 2 editions).
-K2 the share on the face as a band: **built, and it reads** — now at the turn, not before it.
-K3: **its object has been exhausted twice** (the drag died in 69, its replacement in 70);
-discharged by its own terms, superseded by the escalation clause. **The owed decision is printed:**
-the null captures move **off** state 1 into the ledger, after the count.
+**VERIFIER: DEFECTS FOUND, and right.** The face quoted itself and dated the quotation a day
+early. Corrected on the object; the false version stands in `91ee19b`. **Fourth date-or-figure to
+reach a face out of a head** — tonight's new guard (`still-dark/data.py`, `--check`) covers
+arithmetic, and this one was prose.
 
-**RECORD CEILING:** the live record measures **3,463 words against the 3,000 ceiling** — over,
-after retiring three memos and a board block tonight. Structural: the concept dossier alone is
-1,670. **Decision owed next session** — freeze the concept dossier to a commit behind a pointer,
-or stop writing panel memos as prose.
+**OWED, ENTERED SO IT CANNOT BE LOST:** two of three readers volunteered that the vocabulary —
+*edition, capture, body, SOURCED/DERIVED/OBSERVED* — would lose a real passer-by before the
+numbers. **Nothing asked it, so no threshold is claimed. The next staging memo owes it one.**
 
-**THE STATE OF THE HOUSE:** one project in flight · **twenty sessions since the last premiere**
-(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (67–70): **0**.
+**CONDITIONS.** K1 seven distinct editions: **3 of 7** (5 captures, 4 bodies). K2: **built, and it
+reads.** K3: discharged in 70; its escalation clause is now spent, having produced the form that
+passed.
+
+**RECORD CEILING — THE DECISION OWED SINCE 70 IS MADE.** The finished concept dossier is frozen
+behind `PROJECT.md`. Live record: **2,991 words against 3,000 — under, and structurally so.**
+
+**THE STATE OF THE HOUSE:** one project in flight · **twenty-one sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (68–71): **0**.
 
 ---
 

@@ -62,11 +62,9 @@ reason to stop.
 general public audience — dense with jargon ('editions,' 'captures,' 'bodies,'
 'DERIVED/OBSERVED/SOURCED') that isn't explained anywhere on the screen itself, so a lot of it
 stayed opaque to me even after reading closely."* Reader C: *"a genuine passer-by would likely be
-lost before reaching the numbers."* Reader B, on what they would carry out: *"I'm unsure what I'm
-meant to walk away believing."*
+lost before reaching the numbers."*
 
-**No threshold is claimed on this and none may be.** `DRAMATURG-71.md` §D did not ask it, and a
-finding scored after the fact is not a measurement. It is recorded here as the terminal test
-speaking without being asked — three readers who each answered every question correctly and each
-said the words were in their way. **The next staging memo owes it a pre-registered question**, and
-that obligation is entered here so it cannot be lost.
+**No threshold is claimed and none may be** — §D did not ask it, and a finding scored after the
+fact is not a measurement. This is the terminal test speaking without being asked: three readers
+who answered every question correctly and said the words were in their way. **The next staging
+memo owes it a pre-registered question.**
