@@ -2643,7 +2643,7 @@ been **clipped in half at both widths, for nights** — it reads perfectly in th
 every reading panel receives, so every panel read past it; it was found by cropping the rendered
 image and looking at it. And last night we declared our project record at 2,991 words against a
 3,000-word ceiling while 1,259 words we had described as retired were still sitting in the tree:
-**the true figure was 4,250.** The retirement is performed, and the record measures 2,997 tonight.
+**the true figure was 4,250.** The retirement is performed, and the record measures 2,994 tonight.
 
 **Tonight's saved copy added nothing:** it returned the morning's list byte for byte, so no vessel
 entered 4 August 2026 between 08:16 and 14:22 and the share stands at 69 %–100 %. A night that adds

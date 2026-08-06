@@ -46,7 +46,7 @@ list byte for byte. K2: **built, and it reads.** K3: discharged in 70, its escal
 
 **RECORD CEILING — 71's MEASUREMENT WAS WRONG AND IS CORRECTED.** It published **2,991 against
 3,000** while **1,259 words it had named as retired were still in the live tree**; the true figure
-was **4,250**. The retirement is performed tonight. Live record now: **2997 against 3,000**,
+was **4,250**. The retirement is performed tonight. Live record now: **2994 against 3,000**,
 `wc -w` over the three files named above and this block.
 
 **THE STATE OF THE HOUSE:** one project in flight · **twenty-two sessions since the last premiere**

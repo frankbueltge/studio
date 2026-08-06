@@ -116,5 +116,5 @@ seeing a score is what pre-registration prevents. **It is the next memo's pre-re
 66–67's role memos and the gate: `d7214dd` · `DRAMATURG-68.md`: `1e84436` · 68's panel and Verifier:
 `24295ac` · 69's staging memo: `6dd04f4` · 69's panel, Verifier and board block: `d778fe2` · 70's
 staging memo: `5968048` · 70's board block: `fb2a216` · the concept dossier and 71's staging memo:
-`91ee19b` · **70's and 71's panel and Verifier memos, and 72's staging memo: this session's
-consolidation commit** — 70's were named retired in 71 and were not (failure 7).
+`91ee19b` · **70's and 71's panel and Verifier memos: `11c831e`** — 70's were named retired in 71
+and were not (failure 7) · **72's staging memo: `e826290`.**
