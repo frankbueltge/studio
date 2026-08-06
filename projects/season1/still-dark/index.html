@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>STILL DARK — 4 August 2026</title>
 <style>
-  /* Everything scoped under .sd-root. */
+  /* Everything scoped under .sd-root. One state. No interaction. */
   .sd-root {
     --sd-ink: #111;
     --sd-bg: #fff;
@@ -26,7 +26,6 @@
     margin: 0;
   }
   .sd-root, .sd-root * { box-sizing: border-box; }
-  .sd-root [hidden] { display: none !important; }
   @media (prefers-color-scheme: dark) {
     .sd-root {
       --sd-ink: #e6e6e6;
@@ -58,10 +57,6 @@
   :root[data-theme="dark"] body:has(> .sd-root) { background: #0d0d0d; }
   :root[data-theme="light"] body:has(> .sd-root) { background: #fff; }
 
-  @media (prefers-reduced-motion: reduce) {
-    .sd-root, .sd-root * { transition: none !important; animation: none !important; }
-  }
-
   .sd-root .sd-page {
     max-width: 1600px;
     margin: 0 auto;
@@ -83,18 +78,24 @@
     color: var(--sd-dim);
   }
   .sd-root .sd-method {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.25rem;
     font-size: 0.62rem;
     line-height: 1.5;
     color: var(--sd-dim);
     max-width: 96ch;
   }
   .sd-root .sd-method a { color: inherit; }
+  .sd-root .sd-because {
+    margin: 0 0 0.6rem;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    max-width: 82ch;
+    color: var(--sd-ink);
+  }
 
   /* time field: weekly-tick scale + rows + labelled rule at 4 August.
      One layout at every width: each row's own text line, its own bar
-     directly beneath it, all bars sharing the same field coordinates —
-     never a separate side panel. */
+     directly beneath it, all bars sharing the same field coordinates. */
   .sd-root .sd-fieldwrap { overflow-x: auto; padding-bottom: 0.15rem; }
   .sd-root .sd-fieldstrip {
     font-size: var(--sd-rowfs);
@@ -118,9 +119,7 @@
   }
   .sd-root .sd-tick:first-child { transform: translateX(0); }
 
-  .sd-root .sd-rowsarea {
-    position: relative;
-  }
+  .sd-root .sd-rowsarea { position: relative; }
   .sd-root .sd-rules {
     position: absolute;
     top: 0; bottom: 0;
@@ -148,6 +147,17 @@
     letter-spacing: 0.04em;
   }
 
+  .sd-root .sd-group { position: relative; z-index: 1; }
+  .sd-root .sd-grouphead {
+    margin: 0.5em 0 0.1em var(--sd-gutter);
+    font-size: var(--sd-rowfs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--sd-ink);
+  }
+  .sd-root .sd-group-late .sd-grouphead { color: var(--sd-ink); }
+  .sd-root .sd-groupcount { font-weight: 400; color: var(--sd-dim); letter-spacing: 0.02em; }
+
   .sd-root .sd-rows {
     position: relative;
     z-index: 1;
@@ -155,6 +165,10 @@
     margin: 0;
     padding: 0;
   }
+  .sd-root .sd-group-late .sd-rows { border-left: 2px solid var(--sd-frame); }
+  .sd-root .sd-group-late .sd-row { padding-left: 0.8ch; }
+  .sd-root .sd-group-late .sd-field { margin-left: calc(var(--sd-gutter) - 0.8ch); }
+  .sd-root .sd-group-late .sd-seg-mid { opacity: 0.55; }
   .sd-root .sd-row {
     display: flex;
     flex-wrap: wrap;
@@ -188,9 +202,6 @@
       currentColor 0, currentColor 1px, transparent 1px, transparent 4px);
   }
 
-  .sd-root .sd-rows-turn .sd-row { color: var(--sd-ink); }
-  .sd-root .sd-rows-turn { border-top: 1px dashed var(--sd-rule); margin-top: 0.15em; padding-top: 0.15em; }
-
   /* the tier legend: the three tiers named at the columns they belong to */
   .sd-root .sd-legend {
     margin: 0 0 0.35rem var(--sd-gutter);
@@ -201,159 +212,80 @@
   .sd-root .sd-legend span { display: block; }
   .sd-root .sd-legend b { color: var(--sd-ink); font-weight: 700; }
 
-  /* THE ACT — the reader writes a number before this house says anything */
-  .sd-root .sd-ask {
+  /* THE FALL — the record's own turn, and the only place a percentage stands large */
+  .sd-root .sd-fall {
     margin-top: 1.1rem;
     padding-top: 0.8rem;
     border-top: 1px solid var(--sd-frame);
-    max-width: 62ch;
+    max-width: 96ch;
   }
-  .sd-root .sd-ask-q {
-    margin: 0 0 0.25rem;
-    font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  .sd-root .sd-fall-q {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.05rem, 2.2vw, 1.45rem);
     font-weight: 700;
-    letter-spacing: 0.01em;
     line-height: 1.25;
+    max-width: 62ch;
   }
-  .sd-root .sd-ask-sub {
-    margin: 0 0 0.7rem;
-    font-size: 0.72rem;
-    color: var(--sd-dim);
-  }
-  .sd-root .sd-ask-line {
+  .sd-root .sd-shares { margin: 0 0 0.7rem; }
+  .sd-root .sd-share {
     display: flex;
-    align-items: baseline;
     flex-wrap: wrap;
-    gap: 1ch;
-    margin-bottom: 0.6rem;
+    align-items: baseline;
+    column-gap: 1.6ch;
+    padding: 0.15em 0;
   }
-  .sd-root .sd-num {
-    font: inherit;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 700;
-    width: 5ch;
-    padding: 0 0.2ch 0.05em;
-    color: var(--sd-ink);
-    background: transparent;
-    border: 0;
-    border-bottom: 2px solid var(--sd-ink);
-    border-radius: 0;
-    text-align: center;
-    letter-spacing: 0.08em;
-  }
-  .sd-root .sd-num:focus-visible { outline: 1px solid currentColor; outline-offset: 0.35em; }
-  .sd-root .sd-num::placeholder { color: var(--sd-dim); opacity: 1; }
-  .sd-root .sd-unit { font-size: 0.85rem; color: var(--sd-dim); }
-  .sd-root .sd-pad {
-    display: grid;
-    grid-template-columns: repeat(3, 3.4em);
-    gap: 0.3em;
-    margin-bottom: 0.7rem;
-  }
-  .sd-root .sd-key {
-    font: inherit;
-    font-size: 0.9rem;
-    padding: 0.35em 0;
-    color: var(--sd-ink);
-    background: transparent;
-    border: 1px solid var(--sd-frame);
-    border-radius: 0;
-    cursor: pointer;
-  }
-  .sd-root .sd-key:hover { background: var(--sd-rule); }
-  .sd-root .sd-key:focus-visible { outline: 1px solid currentColor; outline-offset: 0.2em; }
-  .sd-root .sd-commit {
-    font: inherit;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    padding: 0.5em 1.6ch;
-    color: var(--sd-bg);
-    background: var(--sd-ink);
-    border: 1px solid var(--sd-ink);
-    border-radius: 0;
-    cursor: pointer;
-  }
-  .sd-root .sd-commit[disabled] {
-    color: var(--sd-dim);
-    background: transparent;
-    border-color: var(--sd-frame);
-    cursor: default;
-  }
-  .sd-root .sd-yours {
-    margin: 0.7rem 0 0;
-    font-size: 0.62rem;
-    letter-spacing: 0.02em;
-    color: var(--sd-dim);
-  }
-  .sd-root .sd-yours b { color: var(--sd-ink); font-weight: 700; }
-
-  /* THE TURN — nothing here exists until the number is written */
-  .sd-root .sd-turn { margin-top: 1.1rem; max-width: 96ch; }
-  .sd-root .sd-beat { opacity: 0; transition: opacity 380ms linear; }
-  .sd-root .sd-beat.sd-on { opacity: 1; }
-  @media (prefers-reduced-motion: reduce) { .sd-root .sd-beat { opacity: 1; } }
-
-  .sd-root .sd-wrote {
-    font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    margin: 0 0 0.7rem;
-  }
-  .sd-root .sd-count {
-    font-size: clamp(1.05rem, 2.2vw, 1.4rem);
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 0 0 0.4rem;
-    max-width: 62ch;
-  }
-  .sd-root .sd-ceiling {
-    font-size: 0.78rem;
-    line-height: 1.5;
-    color: var(--sd-ink);
-    max-width: 62ch;
-    margin: 0 0 0.9rem;
-  }
-
-  .sd-root .sd-ledger { margin: 0 0 0.5rem; }
-  .sd-root .sd-ledger table {
-    border-collapse: collapse;
-    font-size: 0.6rem;
-    color: var(--sd-dim);
-  }
-  .sd-root .sd-ledger th, .sd-root .sd-ledger td {
-    text-align: left;
-    padding: 0.15em 1.4ch 0.15em 0;
-    white-space: nowrap;
-    border-bottom: 1px solid var(--sd-rule);
-  }
-  .sd-root .sd-ledger th { color: var(--sd-ink); letter-spacing: 0.04em; font-weight: 700; }
-  .sd-root .sd-ledger caption {
-    text-align: left;
-    font-size: 0.62rem;
-    letter-spacing: 0.04em;
-    color: var(--sd-ink);
-    font-weight: 700;
-    padding-bottom: 0.25em;
-  }
-  .sd-root .sd-tally { font-size: 0.62rem; color: var(--sd-ink); margin: 0.3em 0 0.7rem; letter-spacing: 0.04em; }
-
-  .sd-root .sd-note {
+  .sd-root .sd-share-when {
+    flex: 0 0 auto;
+    min-width: 46ch;
     font-size: 0.66rem;
-    line-height: 1.55;
     color: var(--sd-dim);
-    max-width: 82ch;
-    margin: 0 0 0.45rem;
+    letter-spacing: 0.02em;
   }
-  .sd-root .sd-note b { color: var(--sd-ink); font-weight: 700; }
+  .sd-root .sd-share-fig {
+    font-size: clamp(1.1rem, 2.6vw, 1.7rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    min-width: 11ch;
+  }
+  .sd-root .sd-share-of { font-size: 0.72rem; color: var(--sd-dim); }
+  .sd-root .sd-share-then .sd-share-fig {
+    color: var(--sd-dim);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
 
+  .sd-root .sd-fall-line {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    max-width: 82ch;
+    margin: 0 0 0.35rem;
+  }
+  .sd-root .sd-fall-line b { font-weight: 700; }
+  .sd-root .sd-quoted {
+    margin: 0.6rem 0 0;
+    padding-left: 1.4ch;
+    border-left: 2px solid var(--sd-frame);
+    font-size: 0.78rem;
+    line-height: 1.55;
+    max-width: 82ch;
+  }
+  .sd-root .sd-quoted-when {
+    display: block;
+    margin-top: 0.2em;
+    font-size: 0.62rem;
+    color: var(--sd-dim);
+    letter-spacing: 0.02em;
+  }
+
+  /* the evidence: the command, its verbatim output, and the capture ledger */
+  .sd-root .sd-evidence { margin-top: 1rem; }
   .sd-root .sd-cmd-line {
-    margin: 0.4em 0 0.35em;
+    margin: 0 0 0.35em;
     font-size: 0.62rem;
     color: var(--sd-dim);
   }
   .sd-root .sd-cmd { display: block; }
-  .sd-root .sd-cmd-label { display: inline-block; min-width: 15ch; }
+  .sd-root .sd-cmd-label { display: inline-block; min-width: 18ch; }
   .sd-root .sd-cmd-line code { color: var(--sd-ink); }
   .sd-root .sd-raw {
     margin-top: 0.4rem;
@@ -375,7 +307,35 @@
     margin: 0.25em 0.8ch 0.35em;
   }
 
-  .sd-root .sd-last {
+  .sd-root .sd-ledger { margin: 0.9rem 0 0.4rem; overflow-x: auto; }
+  .sd-root .sd-ledger table {
+    border-collapse: collapse;
+    font-size: 0.6rem;
+    color: var(--sd-dim);
+  }
+  .sd-root .sd-ledger th, .sd-root .sd-ledger td {
+    text-align: left;
+    padding: 0.15em 1.4ch 0.15em 0;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--sd-rule);
+  }
+  .sd-root .sd-ledger th { color: var(--sd-ink); letter-spacing: 0.04em; font-weight: 700; }
+  .sd-root .sd-ledger caption {
+    text-align: left;
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    color: var(--sd-ink);
+    font-weight: 700;
+    padding-bottom: 0.25em;
+  }
+  .sd-root .sd-ledger-cap {
+    font-size: 0.62rem;
+    color: var(--sd-dim);
+    margin: 0.3em 0 0;
+    max-width: 96ch;
+  }
+
+  .sd-root .sd-floor {
     margin: 1.1rem 0 0;
     padding-top: 0.8rem;
     border-top: 1px solid var(--sd-frame);
@@ -404,15 +364,344 @@
 <div class="sd-page">
 
   <script type="application/json" id="sd-data">
-  {
-    "captures": [
+{
+  "day": {
+    "iso": "2026-08-04",
+    "printed": "4 AUGUST 2026"
+  },
+  "method": {
+    "source": "https://frankbueltge.de/werke/ghost-fleet/",
+    "edition_source": "https://frankbueltge.de/ghost-fleet/",
+    "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories)."
+  },
+  "field": [
+    {
+      "edition": "2026-08-04",
+      "edition_printed": "4 August 2026",
+      "days_after": 0,
+      "label": "IN THE EDITION OF 4 AUG — the day itself",
+      "count": 11,
+      "rows": [
+        {
+          "name": "TUNAMAR",
+          "flag": "PAN",
+          "days_dark": 56,
+          "waters": "",
+          "went_dark_between": [
+            "2026-06-02",
+            "2026-06-09"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 2–9 Jun → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/7d0bafe28-8ec3-ab8e-fb15-3ce152f3974f",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "MICRONESIA103",
+          "flag": "FSM",
+          "days_dark": 39,
+          "waters": "Marshallese EEZ",
+          "went_dark_between": [
+            "2026-06-19",
+            "2026-06-26"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 19–26 Jun → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/44e937b38-8d12-ce29-5110-ee36398d904c",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "ALIZE",
+          "flag": "ECU",
+          "days_dark": 31,
+          "waters": "Ecuadorian EEZ",
+          "went_dark_between": [
+            "2026-06-27",
+            "2026-07-04"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 27 Jun–4 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/db5cd7a2a-a9dd-4c52-00ac-4c6980d9a029",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "FORTICA",
+          "flag": "ECU",
+          "days_dark": 26,
+          "waters": "Ecuadorian EEZ",
+          "went_dark_between": [
+            "2026-07-02",
+            "2026-07-09"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 2–9 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/ed76e5578-8f7d-2e31-1af3-cc129d6ae7b9",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "PANOFI MASTER",
+          "flag": "GHA",
+          "days_dark": 22,
+          "waters": "Ghanaian EEZ",
+          "went_dark_between": [
+            "2026-07-06",
+            "2026-07-13"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 6–13 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/7b4c7f97f-f297-3a81-22a7-5d210ca4d71e",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "TRAVELER",
+          "flag": "USA",
+          "days_dark": 18,
+          "waters": "United States EEZ (Alaska)",
+          "went_dark_between": [
+            "2026-07-10",
+            "2026-07-17"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 10–17 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/6c2fe0c33-3bec-8532-7d04-6c6e8aca5d32",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "VICTORIA",
+          "flag": "MEX",
+          "days_dark": 17,
+          "waters": "Mexican EEZ",
+          "went_dark_between": [
+            "2026-07-11",
+            "2026-07-18"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/ef787e860-0064-bc54-31e7-63a593778d42",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "PANOFI DISCOVERER",
+          "flag": "GHA",
+          "days_dark": 17,
+          "waters": "Ghanaian EEZ",
+          "went_dark_between": [
+            "2026-07-11",
+            "2026-07-18"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/2781849c8-849b-ce64-e1e3-3ed0ae3cd66a",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "VESTERAALEN",
+          "flag": "USA",
+          "days_dark": 17,
+          "waters": "United States EEZ (Alaska)",
+          "went_dark_between": [
+            "2026-07-11",
+            "2026-07-18"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/b6a3440c9-9f83-d1f6-378d-e70f7db7184b",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "PACIFIC FURY",
+          "flag": "USA",
+          "days_dark": 17,
+          "waters": "United States EEZ (Alaska)",
+          "went_dark_between": [
+            "2026-07-11",
+            "2026-07-18"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/455a51563-3a2e-18c6-cf12-9ac5b75ab0a6",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        },
+        {
+          "name": "EXCELLENCE",
+          "flag": "USA",
+          "days_dark": 16,
+          "waters": "United States EEZ (Alaska)",
+          "went_dark_between": [
+            "2026-07-12",
+            "2026-07-19"
+          ],
+          "resurfaced_between": [
+            "2026-07-28",
+            "2026-08-04"
+          ],
+          "band_text": "dark 12–19 Jul → back 28 Jul–4 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/f4c37b1e1-14cd-40b6-80ad-9a41580169fd",
+          "seen": "first seen 2026-08-05T04:39:32Z"
+        }
+      ]
+    },
+    {
+      "edition": "2026-08-05",
+      "edition_printed": "5 August 2026",
+      "days_after": 1,
+      "label": "ADDED BY THE EDITION OF 5 AUG — one day after the day",
+      "count": 3,
+      "rows": [
+        {
+          "name": "SOUTHERN SEAS NO.302",
+          "flag": "SLB",
+          "days_dark": 29,
+          "waters": "Micronesian EEZ",
+          "went_dark_between": [
+            "2026-06-30",
+            "2026-07-07"
+          ],
+          "resurfaced_between": [
+            "2026-07-29",
+            "2026-08-05"
+          ],
+          "band_text": "dark 30 Jun–7 Jul → back 29 Jul–5 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/fbdba1e34-41d3-d737-11df-022bb7f0db73",
+          "seen": "first seen 2026-08-05T12:54:00Z"
+        },
+        {
+          "name": "RICKY",
+          "flag": "GBR",
+          "days_dark": 28,
+          "waters": "Ecuadorian EEZ (Galapagos)",
+          "went_dark_between": [
+            "2026-07-01",
+            "2026-07-08"
+          ],
+          "resurfaced_between": [
+            "2026-07-29",
+            "2026-08-05"
+          ],
+          "band_text": "dark 1–8 Jul → back 29 Jul–5 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/99a1e9d7c-cc99-0a64-8794-918241e3e1b5",
+          "seen": "first seen 2026-08-05T12:54:00Z"
+        },
+        {
+          "name": "ALTAR 10",
+          "flag": "ECU",
+          "days_dark": 18,
+          "waters": "Ecuadorian EEZ (Galapagos)",
+          "went_dark_between": [
+            "2026-07-11",
+            "2026-07-18"
+          ],
+          "resurfaced_between": [
+            "2026-07-29",
+            "2026-08-05"
+          ],
+          "band_text": "dark 11–18 Jul → back 29 Jul–5 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/0a0229027-76e4-3f79-a61c-d9c9362459b4",
+          "seen": "first seen 2026-08-05T12:54:00Z"
+        }
+      ]
+    },
+    {
+      "edition": "2026-08-06",
+      "edition_printed": "6 August 2026",
+      "days_after": 2,
+      "label": "ADDED BY THE EDITION OF 6 AUG — two days after the day",
+      "count": 2,
+      "rows": [
+        {
+          "name": "ALBACORA CUATRO",
+          "flag": "ESP",
+          "days_dark": 37,
+          "waters": "Seychellois EEZ",
+          "went_dark_between": [
+            "2026-06-23",
+            "2026-06-30"
+          ],
+          "resurfaced_between": [
+            "2026-07-30",
+            "2026-08-06"
+          ],
+          "band_text": "dark 23–30 Jun → back 30 Jul–6 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/31f3807c8-8763-fae4-d474-a445d6fc0eec",
+          "seen": "first seen 2026-08-06T08:16:42Z"
+        },
+        {
+          "name": "BONAMI",
+          "flag": "KOR",
+          "days_dark": 22,
+          "waters": "Marshallese EEZ",
+          "went_dark_between": [
+            "2026-07-08",
+            "2026-07-15"
+          ],
+          "resurfaced_between": [
+            "2026-07-30",
+            "2026-08-06"
+          ],
+          "band_text": "dark 8–15 Jul → back 30 Jul–6 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/0c912612b-bec9-e0fb-af7e-e7d52e7d2304",
+          "seen": "first seen 2026-08-06T08:16:42Z"
+        }
+      ]
+    }
+  ],
+  "fall": {
+    "then": {
+      "figure": "79 %–100 %",
+      "of": "11 of 0–14",
+      "editions": 2,
+      "captures": 4
+    },
+    "now": {
+      "figure": "69 %–100 %",
+      "of": "11 of 0–16",
+      "editions": 3,
+      "captures": 5
+    },
+    "as_of": "2026-08-06T04:36:19Z",
+    "held": "11 did not move. No later night can put a name into an edition that did not carry it.",
+    "moved": "The denominator moved, by ALBACORA CUATRO and BONAMI — two ships that entered the record with the edition of 6 AUG, two days after the day.",
+    "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
+    "published_when": "printed on this page 6 August 2026 at 04:57 UTC, in commit 5968048 — before the capture that made it fall"
+  },
+  "ledger": {
+    "rows": [
       {
         "fetched_at_utc": "2026-08-05T04:39:32Z",
         "http_status": 200,
         "bytes": 35473,
-        "sha256": "ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5",
+        "sha256": "ed3e54ec",
         "content_sha256": "ee555746",
-        "edition_date": "2026-08-04",
         "edition_date_printed": "4 August 2026",
         "vessels": 11
       },
@@ -420,9 +709,8 @@
         "fetched_at_utc": "2026-08-05T12:54:00Z",
         "http_status": 200,
         "bytes": 35485,
-        "sha256": "17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8",
+        "sha256": "17c07fc3",
         "content_sha256": "47338b03",
-        "edition_date": "2026-08-05",
         "edition_date_printed": "5 August 2026",
         "vessels": 8
       },
@@ -430,9 +718,8 @@
         "fetched_at_utc": "2026-08-05T19:17:55Z",
         "http_status": 200,
         "bytes": 35485,
-        "sha256": "17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8",
+        "sha256": "17c07fc3",
         "content_sha256": "47338b03",
-        "edition_date": "2026-08-05",
         "edition_date_printed": "5 August 2026",
         "vessels": 8
       },
@@ -440,109 +727,77 @@
         "fetched_at_utc": "2026-08-06T04:36:19Z",
         "http_status": 200,
         "bytes": 35485,
-        "sha256": "aed92f4fc10f36ac7107ac8944d9e751a156ebadd18d439c7a9129295368ae30",
+        "sha256": "aed92f4f",
         "content_sha256": "47338b03",
-        "edition_date": "2026-08-05",
         "edition_date_printed": "5 August 2026",
         "vessels": 8
+      },
+      {
+        "fetched_at_utc": "2026-08-06T08:16:42Z",
+        "http_status": 200,
+        "bytes": 35517,
+        "sha256": "f673e2f7",
+        "content_sha256": "53114dfe",
+        "edition_date_printed": "6 August 2026",
+        "vessels": 7
       }
     ],
-    "method": {
-      "source": "https://frankbueltge.de/werke/ghost-fleet/",
-      "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
-      "window_days": 7
+    "caption": "5 captures · 3 editions · 3 contents · 4 bodies — a raw body hash is not an edition's identity; the content column is."
+  },
+  "commands": [
+    {
+      "label": "the day",
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04"
     },
-    "rows_base": [
-      {"name":"TUNAMAR","flag":"PAN","days_dark":56,"waters":null,"went_dark_between":["2026-06-02","2026-06-09"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 2–9 Jun → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/7d0bafe28-8ec3-ab8e-fb15-3ce152f3974f"},
-      {"name":"MICRONESIA103","flag":"FSM","days_dark":39,"waters":"Marshallese EEZ","went_dark_between":["2026-06-19","2026-06-26"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 19–26 Jun → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/44e937b38-8d12-ce29-5110-ee36398d904c"},
-      {"name":"ALIZE","flag":"ECU","days_dark":31,"waters":"Ecuadorian EEZ","went_dark_between":["2026-06-27","2026-07-04"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 27 Jun–4 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/db5cd7a2a-a9dd-4c52-00ac-4c6980d9a029"},
-      {"name":"FORTICA","flag":"ECU","days_dark":26,"waters":"Ecuadorian EEZ","went_dark_between":["2026-07-02","2026-07-09"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 2–9 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/ed76e5578-8f7d-2e31-1af3-cc129d6ae7b9"},
-      {"name":"PANOFI MASTER","flag":"GHA","days_dark":22,"waters":"Ghanaian EEZ","went_dark_between":["2026-07-06","2026-07-13"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 6–13 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/7b4c7f97f-f297-3a81-22a7-5d210ca4d71e"},
-      {"name":"TRAVELER","flag":"USA","days_dark":18,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-10","2026-07-17"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 10–17 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/6c2fe0c33-3bec-8532-7d04-6c6e8aca5d32"},
-      {"name":"VICTORIA","flag":"MEX","days_dark":17,"waters":"Mexican EEZ","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/ef787e860-0064-bc54-31e7-63a593778d42"},
-      {"name":"PANOFI DISCOVERER","flag":"GHA","days_dark":17,"waters":"Ghanaian EEZ","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/2781849c8-849b-ce64-e1e3-3ed0ae3cd66a"},
-      {"name":"VESTERAALEN","flag":"USA","days_dark":17,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/b6a3440c9-9f83-d1f6-378d-e70f7db7184b"},
-      {"name":"PACIFIC FURY","flag":"USA","days_dark":17,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 11–18 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/455a51563-3a2e-18c6-cf12-9ac5b75ab0a6"},
-      {"name":"EXCELLENCE","flag":"USA","days_dark":16,"waters":"United States EEZ (Alaska)","went_dark_between":["2026-07-12","2026-07-19"],"resurfaced_between":["2026-07-28","2026-08-04"],"band_text":"dark 12–19 Jul → back 28 Jul–4 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/f4c37b1e1-14cd-40b6-80ad-9a41580169fd"}
-    ],
-    "rows_turn": [
-      {"name":"SOUTHERN SEAS NO.302","flag":"SLB","days_dark":29,"waters":"Micronesian EEZ","went_dark_between":["2026-06-30","2026-07-07"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 30 Jun–7 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/fbdba1e34-41d3-d737-11df-022bb7f0db73"},
-      {"name":"RICKY","flag":"GBR","days_dark":28,"waters":"Ecuadorian EEZ (Galapagos)","went_dark_between":["2026-07-01","2026-07-08"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 1–8 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/99a1e9d7c-cc99-0a64-8794-918241e3e1b5"},
-      {"name":"ALTAR 10","flag":"ECU","days_dark":18,"waters":"Ecuadorian EEZ (Galapagos)","went_dark_between":["2026-07-11","2026-07-18"],"resurfaced_between":["2026-07-29","2026-08-05"],"band_text":"dark 11–18 Jul → back 29 Jul–5 Aug","gfw_url":"https://globalfishingwatch.org/map/vessel/0a0229027-76e4-3f79-a61c-d9c9362459b4"}
-    ],
-    "seen_base": "first seen 2026-08-05T04:39:32Z",
-    "seen_turn": "first seen 2026-08-05T12:54:00Z — edition of 5 August, the night after the day",
-    "turn": {
-      "count": "11 of the 14 ships this record now places in 4 August 2026 stood in the edition of 4 August itself. Knowable on the day: 79 %–100 % — 11 of 0–14. A band, because the denominator is a band.",
-      "ceiling": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
-      "tally": "4 captures. 2 editions.",
-      "nulls": "Two of these four captures added nothing to this day. They are printed here, after the count and not before it: a capture that adds nothing is a measurement, but on a first screen it reads as an answer, and it is not one.",
-      "hashes": "The fourth capture differs from the two before it in the hash of its bytes, at an identical byte count, while every field this work reads — edition date, vessel names, flags, durations, waters — is identical. Something outside this work's reading moved; this house does not claim to know what, because the earlier bodies were not kept. A raw body hash is not an edition's identity. The edition, and the list of vessels it carries, are — which is what the content column counts.",
-      "source_state": "State 1 is a state of this reading, not of this file. Everything the turn withholds stands in the source of this page, and always did.",
-      "commands": [
-        {"label": "the day", "cmd": "python3 projects/season1/capture/day.py 2026-08-04"},
-        {"label": "the editions", "cmd": "python3 projects/season1/capture/edition.py"}
-      ],
-      "output": "day 2026-08-04  ·  4 capture(s) read, 2 distinct edition(s), 2 distinct content(s), 3 distinct bod(y/ies)\n  vessels dark on that day .......... 0–14 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 79%–100%  (11 of 0–14)\n    (a ceiling from 2 edition(s), 4 capture(s): further nights can only add vessels to this day, so this share can only fall)\n  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day\n  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day\n  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day\n  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day\n  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day\n  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day\n  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day\n  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day\n  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day\n  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day\n  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day\n  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day\n  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day\n  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day\n",
-      "last": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Ours is a floor: 14 is what this record can place in 4 August 2026, not what was on the sea that day."
+    {
+      "label": "the night before",
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z"
     }
-  }
+  ],
+  "output": "day 2026-08-04  ·  5 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)\n  vessels dark on that day .......... 0–16 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)\n    (a ceiling from 3 edition(s), 5 capture(s): further nights can only add vessels to this day, so this share can only fall)\n  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day\n  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day\n  possible ALBACORA CUATRO      ESP   37 d dark  arrived 0–2 days after the day\n  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day\n  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day\n  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day\n  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day\n  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day\n  possible BONAMI               KOR   22 d dark  arrived 0–2 days after the day\n  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day\n  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day\n  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day\n  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day\n  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day\n  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day\n  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day\n",
+  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 16 is what this record can place in 4 August 2026, not what was on the sea that day."
+}
   </script>
 
-  <h1 class="sd-day">4 AUGUST 2026</h1>
-  <p class="sd-sub">the ships this day published as dark, on the day itself</p>
+  <h1 class="sd-day" id="sd-day">4 AUGUST 2026</h1>
+  <p class="sd-sub">one day of the sea, and how much of it was knowable on the day itself</p>
 
-  <p class="sd-method">“Daily. Window: disabling events that ended in the last 7 days (complete
-  vanish-and-return stories).” — method sheet, The Ghost Fleet,
-  <a href="https://frankbueltge.de/werke/ghost-fleet/">frankbueltge.de</a></p>
+  <p class="sd-method" id="sd-method"></p>
+  <p class="sd-because">So a day of the sea is nearly empty on the day itself, and keeps filling
+  for weeks. This page holds one day open and publishes how much of its darkness this record
+  could place in it on the day, and how much arrived later.</p>
 
   <p class="sd-legend" id="sd-legend"></p>
 
   <div class="sd-fieldwrap">
     <div class="sd-fieldstrip">
       <div class="sd-scale" id="sd-scale"></div>
-      <div class="sd-rowsarea">
+      <div class="sd-rowsarea" id="sd-rowsarea">
         <div class="sd-rules" aria-hidden="true"></div>
-        <div class="sd-rule4" id="sd-rule4" aria-hidden="true"><span class="sd-rule4-label">4 AUG</span></div>
-        <ol class="sd-rows" id="sd-rows-base"></ol>
-        <ol class="sd-rows sd-rows-turn" id="sd-rows-turn" hidden></ol>
+        <div class="sd-rule4" id="sd-rule4" aria-hidden="true"><span class="sd-rule4-label" id="sd-rule4-label"></span></div>
       </div>
     </div>
   </div>
 
-  <section class="sd-ask" id="sd-ask">
-    <p class="sd-ask-q" id="sd-ask-q">How many ships were dark on 4 August 2026?</p>
-    <p class="sd-ask-sub">Write a number. Nothing on this screen will answer it for you.</p>
-    <div class="sd-ask-line">
-      <input class="sd-num" id="sd-num" type="text" inputmode="numeric" pattern="[0-9]*"
-             maxlength="4" autocomplete="off" placeholder="____"
-             aria-labelledby="sd-ask-q">
-      <span class="sd-unit">ships</span>
-    </div>
-    <div class="sd-pad" id="sd-pad"></div>
-    <button class="sd-commit" id="sd-commit" type="button" disabled>WRITE IT IN</button>
-    <p class="sd-yours"><b>YOURS</b> — your number is not part of the record. It is not stored
-    and it is not sent anywhere.</p>
+  <section class="sd-fall">
+    <p class="sd-fall-q" id="sd-fall-q"></p>
+    <div class="sd-shares" id="sd-shares"></div>
+    <p class="sd-fall-line" id="sd-held"></p>
+    <p class="sd-fall-line" id="sd-moved"></p>
+    <blockquote class="sd-quoted" id="sd-quoted"></blockquote>
   </section>
 
-  <section class="sd-turn" id="sd-turn" hidden>
-    <p class="sd-wrote sd-beat" id="sd-wrote"></p>
-    <p class="sd-count sd-beat" id="sd-count"></p>
-    <p class="sd-ceiling sd-beat" id="sd-ceiling"></p>
-    <div class="sd-beat" id="sd-evidence">
-      <div class="sd-ledger" id="sd-ledger"></div>
-      <p class="sd-tally" id="sd-tally"></p>
-      <p class="sd-note" id="sd-nulls"></p>
-      <p class="sd-note" id="sd-hashes"></p>
-      <p class="sd-note" id="sd-sourcestate"></p>
-      <p class="sd-cmd-line" id="sd-cmds"></p>
-      <div class="sd-raw">
-        <pre id="sd-raw-pre"></pre>
-        <p class="sd-raw-cap">verbatim, unedited</p>
-      </div>
+  <section class="sd-evidence">
+    <p class="sd-cmd-line" id="sd-cmds"></p>
+    <div class="sd-raw">
+      <pre id="sd-raw-pre"></pre>
+      <p class="sd-raw-cap">verbatim, unedited</p>
     </div>
-    <p class="sd-last sd-beat" id="sd-last"></p>
+    <div class="sd-ledger" id="sd-ledger"></div>
+    <p class="sd-ledger-cap" id="sd-ledger-cap"></p>
   </section>
+
+  <p class="sd-floor" id="sd-floor"></p>
 
   <div class="sd-foot">
     <p>Vessel names, flags, waters, durations and edition dates as printed by
@@ -568,7 +823,7 @@
   var MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
   function tickLabel(dt) { return dt.getUTCDate() + " " + MONTHS[dt.getUTCMonth()]; }
 
-  var allRows = data.rows_base.concat(data.rows_turn);
+  var allRows = data.field.reduce(function (acc, g) { return acc.concat(g.rows); }, []);
 
   // the field's own bounds, taken from the data itself: earliest possible
   // dark-start across every row, latest possible resurfacing across every row
@@ -586,9 +841,20 @@
   var RIGHT_MARGIN_DAYS = 6;
   var layoutEnd = addDays(dataEnd, RIGHT_MARGIN_DAYS);
   var layoutDays = diffDays(fieldStart, layoutEnd);
-  var heldDay = parseDay(data.captures[0].edition_date);
+  var heldDay = parseDay(data.day.iso);
 
   function pct(dt) { return (diffDays(fieldStart, dt) / layoutDays) * 100; }
+
+  // the method sentence, verbatim and attributed — the cause of everything below it
+  var methodEl = document.getElementById("sd-method");
+  methodEl.appendChild(document.createTextNode("“" + data.method.window_quote +
+    "” — method sheet, The Ghost Fleet, "));
+  var mlink = document.createElement("a");
+  mlink.href = data.method.source;
+  mlink.textContent = "frankbueltge.de";
+  methodEl.appendChild(mlink);
+
+  document.getElementById("sd-day").textContent = data.day.printed;
 
   // weekly ticks across the field's real (labelled) span only — the margin
   // past dataEnd carries no tick, because nothing is known to mark there
@@ -608,8 +874,16 @@
     d = addDays(d, 7);
   }
 
-  // labelled vertical rule at 4 August
+  // labelled vertical rule at the held day. The held day sits near the right end of
+  // the field, so its label goes to the LEFT of the rule when there is not room for
+  // it on the right — at 900px the right-hand placement was clipped to nonsense.
   document.getElementById("sd-rule4").style.setProperty("--sd-rule-pct", rulePct);
+  var ruleLabel = document.getElementById("sd-rule4-label");
+  ruleLabel.textContent = tickLabel(heldDay);
+  if (rulePct > 78) {
+    ruleLabel.style.left = "auto";
+    ruleLabel.style.right = "0.4ch";
+  }
 
   // the tier legend: three lines, each naming the columns it covers
   var LEGEND = [
@@ -627,7 +901,7 @@
     legendEl.appendChild(line);
   });
 
-  function buildRow(r, seenText) {
+  function buildRow(r) {
     var li = document.createElement("li");
     li.className = "sd-row";
 
@@ -661,7 +935,7 @@
 
     var seen = document.createElement("span");
     seen.className = "sd-seen";
-    seen.textContent = seenText;
+    seen.textContent = r.seen;
     li.appendChild(seen);
 
     var field = document.createElement("span");
@@ -701,147 +975,124 @@
     return li;
   }
 
-  var rowsBase = document.getElementById("sd-rows-base");
-  data.rows_base.forEach(function (r) { rowsBase.appendChild(buildRow(r, data.seen_base)); });
-
-  var rowsTurn = document.getElementById("sd-rows-turn");
-  data.rows_turn.forEach(function (r) { rowsTurn.appendChild(buildRow(r, data.seen_turn)); });
-
-  // ---- the act -------------------------------------------------------------
-  // The reader commits a number before this house says anything about the day.
-  // The figure is never stored, never sent, and never leaves this document.
-  var num = document.getElementById("sd-num");
-  var commit = document.getElementById("sd-commit");
-  var pad = document.getElementById("sd-pad");
-
-  var KEYS = ["1","2","3","4","5","6","7","8","9","⌫","0",""];
-  KEYS.forEach(function (k) {
-    if (!k) { pad.appendChild(document.createElement("span")); return; }
-    var b = document.createElement("button");
-    b.type = "button";
-    b.className = "sd-key";
-    b.textContent = k;
-    b.addEventListener("click", function () {
-      if (k === "⌫") num.value = num.value.slice(0, -1);
-      else if (num.value.length < 4) num.value = num.value + k;
-      sync();
-    });
-    pad.appendChild(b);
+  // the field, in the groups that made the number what it is: the edition of the
+  // day itself, then every edition that added to the day afterwards
+  var area = document.getElementById("sd-rowsarea");
+  data.field.forEach(function (g) {
+    var wrap = document.createElement("div");
+    wrap.className = "sd-group" + (g.days_after > 0 ? " sd-group-late" : "");
+    var head = document.createElement("p");
+    head.className = "sd-grouphead";
+    head.appendChild(document.createTextNode(g.label + " "));
+    var count = document.createElement("span");
+    count.className = "sd-groupcount";
+    count.textContent = "(" + g.count + " ship" + (g.count === 1 ? "" : "s") + ")";
+    head.appendChild(count);
+    wrap.appendChild(head);
+    var ol = document.createElement("ol");
+    ol.className = "sd-rows";
+    g.rows.forEach(function (r) { ol.appendChild(buildRow(r)); });
+    wrap.appendChild(ol);
+    area.appendChild(wrap);
   });
 
-  function digitsOnly() { return num.value.replace(/[^0-9]/g, "").slice(0, 4); }
-  function sync() {
-    num.value = digitsOnly();
-    commit.disabled = num.value.length === 0;
+  // ---- the fall: the record's own turn ------------------------------------
+  document.getElementById("sd-fall-q").textContent =
+    "The share of this day's darkness that was knowable on the day itself:";
+
+  var sharesEl = document.getElementById("sd-shares");
+  function shareRow(s, when, cls) {
+    var row = document.createElement("div");
+    row.className = "sd-share " + cls;
+    var w = document.createElement("span");
+    w.className = "sd-share-when";
+    w.textContent = when;
+    var f = document.createElement("span");
+    f.className = "sd-share-fig";
+    f.textContent = s.figure;
+    var o = document.createElement("span");
+    o.className = "sd-share-of";
+    o.textContent = s.of;
+    row.appendChild(w);
+    row.appendChild(f);
+    row.appendChild(o);
+    return row;
   }
-  num.addEventListener("input", sync);
-  num.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") { e.preventDefault(); if (!commit.disabled) written(); }
+  sharesEl.appendChild(shareRow(
+    data.fall.then,
+    "as this page published it, on " + data.fall.then.captures + " captures / " +
+      data.fall.then.editions + " editions, until " + data.fall.as_of + " —",
+    "sd-share-then"
+  ));
+  sharesEl.appendChild(shareRow(
+    data.fall.now,
+    "as this record measures it now, on " + data.fall.now.captures + " captures / " +
+      data.fall.now.editions + " editions —",
+    "sd-share-now"
+  ));
+
+  document.getElementById("sd-held").textContent = data.fall.held;
+  document.getElementById("sd-moved").textContent = data.fall.moved;
+
+  var q = document.getElementById("sd-quoted");
+  q.appendChild(document.createTextNode("“" + data.fall.published + "”"));
+  var when = document.createElement("span");
+  when.className = "sd-quoted-when";
+  when.textContent = data.fall.published_when + ".";
+  q.appendChild(when);
+
+  // ---- the evidence -------------------------------------------------------
+  var cmdsEl = document.getElementById("sd-cmds");
+  data.commands.forEach(function (c) {
+    var l = document.createElement("span");
+    l.className = "sd-cmd";
+    var lab = document.createElement("span");
+    lab.className = "sd-cmd-label";
+    // the non-breaking space survives innerText extraction, so the label and the
+    // command do not run together in what a screen reader (or a panel) receives
+    lab.textContent = c.label + " · ";
+    var code = document.createElement("code");
+    code.textContent = "$ " + c.cmd;
+    l.appendChild(lab);
+    l.appendChild(code);
+    cmdsEl.appendChild(l);
   });
-  commit.addEventListener("click", function () { if (!commit.disabled) written(); });
+  document.getElementById("sd-raw-pre").textContent = data.output;
 
-  // ---- the turn ------------------------------------------------------------
-  var turn = document.getElementById("sd-turn");
-  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function ledger() {
-    var wrap = document.getElementById("sd-ledger");
-    var t = document.createElement("table");
-    var cap = document.createElement("caption");
-    cap.textContent = "OBSERVED — every capture this house holds";
-    t.appendChild(cap);
-    var head = document.createElement("tr");
-    ["fetched (UTC)", "status", "bytes", "body sha256", "content", "edition", "vessels"]
-      .forEach(function (h) {
-        var th = document.createElement("th");
-        th.textContent = h;
-        head.appendChild(th);
-      });
-    t.appendChild(head);
-    data.captures.forEach(function (c) {
-      var tr = document.createElement("tr");
-      [
-        c.fetched_at_utc,
-        String(c.http_status),
-        c.bytes.toLocaleString("en-US"),
-        c.sha256.slice(0, 8) + "…",
-        c.content_sha256 + "…",
-        c.edition_date_printed,
-        String(c.vessels)
-      ].forEach(function (v) {
-        var td = document.createElement("td");
-        td.textContent = v;
-        tr.appendChild(td);
-      });
-      t.appendChild(tr);
+  var wrap = document.getElementById("sd-ledger");
+  var t = document.createElement("table");
+  var cap = document.createElement("caption");
+  cap.textContent = "OBSERVED — every capture this house holds";
+  t.appendChild(cap);
+  var head = document.createElement("tr");
+  ["fetched (UTC)", "status", "bytes", "body sha256", "content", "edition", "vessels"]
+    .forEach(function (h) {
+      var th = document.createElement("th");
+      th.textContent = h;
+      head.appendChild(th);
     });
-    wrap.appendChild(t);
-  }
-
-  function commands() {
-    var cmdsEl = document.getElementById("sd-cmds");
-    data.turn.commands.forEach(function (c) {
-      var l = document.createElement("span");
-      l.className = "sd-cmd";
-      var lab = document.createElement("span");
-      lab.className = "sd-cmd-label";
-      lab.textContent = c.label + " · ";
-      var code = document.createElement("code");
-      code.textContent = "$ " + c.cmd;
-      l.appendChild(lab);
-      l.appendChild(code);
-      cmdsEl.appendChild(l);
+  t.appendChild(head);
+  data.ledger.rows.forEach(function (c) {
+    var tr = document.createElement("tr");
+    [
+      c.fetched_at_utc,
+      String(c.http_status),
+      c.bytes.toLocaleString("en-US"),
+      c.sha256 + "…",
+      c.content_sha256 + "…",
+      c.edition_date_printed,
+      String(c.vessels)
+    ].forEach(function (v) {
+      var td = document.createElement("td");
+      td.textContent = v;
+      tr.appendChild(td);
     });
-    document.getElementById("sd-raw-pre").textContent = data.turn.output;
-  }
+    t.appendChild(tr);
+  });
+  wrap.appendChild(t);
+  document.getElementById("sd-ledger-cap").textContent = data.ledger.caption;
 
-  var wroteAlready = false;
-  function written() {
-    if (wroteAlready) return;
-    wroteAlready = true;
-
-    // The figure stays on screen — it is the reader's and the turn is answered against
-    // it. The machinery for entering it does not: once written, a keypad and a button
-    // that do nothing are furniture, and furniture competes with what arrives next.
-    var figure = digitsOnly();
-    num.readOnly = true;
-    pad.hidden = true;
-    commit.hidden = true;
-
-    document.getElementById("sd-wrote").textContent = "YOU WROTE " + figure + ".";
-    document.getElementById("sd-count").textContent = data.turn.count;
-    document.getElementById("sd-ceiling").textContent = data.turn.ceiling;
-    document.getElementById("sd-tally").textContent = data.turn.tally;
-    document.getElementById("sd-nulls").textContent = data.turn.nulls;
-    document.getElementById("sd-hashes").textContent = data.turn.hashes;
-    document.getElementById("sd-sourcestate").textContent = data.turn.source_state;
-    document.getElementById("sd-last").textContent = data.turn.last;
-    ledger();
-    commands();
-
-    turn.hidden = false;
-    // the beats: the reader's figure, then the three ships, then the count, then
-    // the evidence, then the last line. Order is the argument; the delay only
-    // keeps them from arriving as one wall of text.
-    var beats = [
-      document.getElementById("sd-wrote"),
-      rowsTurn,
-      document.getElementById("sd-count"),
-      document.getElementById("sd-ceiling"),
-      document.getElementById("sd-evidence"),
-      document.getElementById("sd-last")
-    ];
-    beats.forEach(function (el, i) {
-      function show() {
-        if (el === rowsTurn) el.hidden = false;
-        else el.classList.add("sd-on");
-      }
-      if (reduced) show();
-      else window.setTimeout(show, i * 700);
-    });
-  }
-
-  sync();
+  document.getElementById("sd-floor").textContent = data.floor;
 })();
 </script>
 </body>

@@ -1,8 +1,10 @@
 4 AUGUST 2026
 
-the ships this day published as dark, on the day itself
+one day of the sea, and how much of it was knowable on the day itself
 
 “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).” — method sheet, The Ghost Fleet, frankbueltge.de
+
+So a day of the sea is nearly empty on the day itself, and keeps filling for weeks. This page holds one day open and publishes how much of its darkness this record could place in it on the day, and how much arrived later.
 
 SOURCED name · flag · days dark · waters — printed by the instrument
 DERIVED both ends of every date — worked out here, printed as a band
@@ -18,6 +20,9 @@ OBSERVED first seen by this house — the capture that named the vessel
 21 JUL
 28 JUL
 4 AUG
+
+IN THE EDITION OF 4 AUG — the day itself (11 ships)
+
 TUNAMAR
 PAN
 56 d dark
@@ -84,26 +89,97 @@ United States EEZ (Alaska)
 dark 12–19 Jul → back 28 Jul–4 Aug
 first seen 2026-08-05T04:39:32Z
 
-How many ships were dark on 4 August 2026?
+ADDED BY THE EDITION OF 5 AUG — one day after the day (3 ships)
 
-Write a number. Nothing on this screen will answer it for you.
+SOUTHERN SEAS NO.302
+SLB
+29 d dark
+Micronesian EEZ
+dark 30 Jun–7 Jul → back 29 Jul–5 Aug
+first seen 2026-08-05T12:54:00Z
+RICKY
+GBR
+28 d dark
+Ecuadorian EEZ (Galapagos)
+dark 1–8 Jul → back 29 Jul–5 Aug
+first seen 2026-08-05T12:54:00Z
+ALTAR 10
+ECU
+18 d dark
+Ecuadorian EEZ (Galapagos)
+dark 11–18 Jul → back 29 Jul–5 Aug
+first seen 2026-08-05T12:54:00Z
 
-____
-ships
-1
-2
-3
-4
-5
-6
-7
-8
-9
-⌫
-0
-WRITE IT IN
+ADDED BY THE EDITION OF 6 AUG — two days after the day (2 ships)
 
-YOURS — your number is not part of the record. It is not stored and it is not sent anywhere.
+ALBACORA CUATRO
+ESP
+37 d dark
+Seychellois EEZ
+dark 23–30 Jun → back 30 Jul–6 Aug
+first seen 2026-08-06T08:16:42Z
+BONAMI
+KOR
+22 d dark
+Marshallese EEZ
+dark 8–15 Jul → back 30 Jul–6 Aug
+first seen 2026-08-06T08:16:42Z
+
+The share of this day's darkness that was knowable on the day itself:
+
+as this page published it, on 4 captures / 2 editions, until 2026-08-06T04:36:19Z —
+79 %–100 %
+11 of 0–14
+as this record measures it now, on 5 captures / 3 editions —
+69 %–100 %
+11 of 0–16
+
+11 did not move. No later night can put a name into an edition that did not carry it.
+
+The denominator moved, by ALBACORA CUATRO and BONAMI — two ships that entered the record with the edition of 6 AUG, two days after the day.
+
+“A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.”
+printed on this page 6 August 2026 at 04:57 UTC, in commit 5968048 — before the capture that made it fall.
+
+the day · $ python3 projects/season1/capture/day.py 2026-08-04
+the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z
+
+day 2026-08-04  ·  5 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)
+  vessels dark on that day .......... 0–16 (certain–possible)
+  knowable on the day, DERIVED ...... 11
+  knowable on the day, OBSERVED ..... 11
+  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)
+    (a ceiling from 3 edition(s), 5 capture(s): further nights can only add vessels to this day, so this share can only fall)
+  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day
+  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day
+  possible ALBACORA CUATRO      ESP   37 d dark  arrived 0–2 days after the day
+  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day
+  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day
+  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day
+  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day
+  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day
+  possible BONAMI               KOR   22 d dark  arrived 0–2 days after the day
+  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day
+  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day
+  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day
+  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day
+  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day
+  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day
+  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day
+
+verbatim, unedited
+
+OBSERVED — every capture this house holds
+fetched (UTC)	status	bytes	body sha256	content	edition	vessels
+2026-08-05T04:39:32Z	200	35,473	ed3e54ec…	ee555746…	4 August 2026	11
+2026-08-05T12:54:00Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8
+2026-08-05T19:17:55Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8
+2026-08-06T04:36:19Z	200	35,485	aed92f4f…	47338b03…	5 August 2026	8
+2026-08-06T08:16:42Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
+
+5 captures · 3 editions · 3 contents · 4 bodies — a raw body hash is not an edition's identity; the content column is.
+
+No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 16 is what this record can place in 4 August 2026, not what was on the sea that day.
 
 Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name.
 

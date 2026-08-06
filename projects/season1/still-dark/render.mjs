@@ -3,16 +3,18 @@
 // Why this exists: on 2026-08-05 (session 67) a builder, a critic and a verifier all
 // passed an object nobody in this house had rendered — the vessel names were clipped off
 // the screen. The check had been run against a description instead of the thing. This
-// script makes that failure structurally harder: every state that goes to a panel is
-// extracted BY the browser from the built file, and both legibility widths are written to
-// disk as images the conductor opens and looks at.
+// script makes that failure structurally harder: what goes to a panel is extracted BY the
+// browser from the built file, and both legibility widths are written to disk as images
+// the conductor opens and looks at.
+//
+// Since 2026-08-06 (session 71) the work has ONE state. The reader act is gone, the
+// second state with it, and so is this script's typed `11`.
 //
 //   node render.mjs            (from this directory)
 //   NODE_PATH=<global node_modules> node render.mjs     (if playwright is installed globally)
 //
 // Writes, beside index.html:
-//   STATE-1.txt   the page as it loads, in DOM/screen-reader order — the panel's material
-//   STATE-2.txt   the same after the one control is moved one notch (for verification only)
+//   STATE-1.txt   the page in DOM/screen-reader order — the panel's material
 //   render-1400.png, render-900.png   the two widths the staging law names
 //
 // Dependencies, named honestly: node >= 18 and playwright (chromium). Neither is a
@@ -44,44 +46,18 @@ async function open(width, height) {
   return { ctx, page };
 }
 
-// innerText of the work's root: the browser's own rendering of what is readable,
-// with hidden subtrees absent rather than merely invisible.
-//
-// The one thing innerText cannot carry is the number field: an <input> has a value, not
-// text, and at state 1 that value is empty. So before reading, the field's own string —
-// its value if the reader has typed one, otherwise its placeholder — is echoed into a
-// span at exactly the position the field occupies, and removed again afterwards. The
-// string is the page's own; no word of the house's is added by this script, so the
-// panel's void clause cannot fire on the extraction.
+// innerText of the work's root: the browser's own rendering of what is readable.
+// No word of this house's is added by this script — the panel's void clause could
+// otherwise fire on the extraction rather than on the work.
 const readText = (page) => page.evaluate(() => {
   const root = document.querySelector(".sd-root");
-  const field = document.getElementById("sd-num");
-  let echo = null;
-  if (field) {
-    echo = document.createElement("span");
-    echo.textContent = field.value || field.getAttribute("placeholder") || "";
-    field.after(echo);
-  }
-  const text = root.innerText.replace(/\n{3,}/g, "\n\n").trim();
-  if (echo) echo.remove();
-  return text;
+  return root.innerText.replace(/\n{3,}/g, "\n\n").trim();
 });
 
-// state 1 — as it loads, untouched
 {
   const { ctx, page } = await open(1400, 900);
   writeFileSync(join(here, "STATE-1.txt"), (await readText(page)) + "\n");
   await page.screenshot({ path: join(here, "render-1400.png"), fullPage: true });
-
-  // state 2 — the act performed, the way a hand performs it: a number typed into the
-  // field and the button pressed. The figure used here is 11, deterministically: it is
-  // the count visible on state 1 and therefore the answer the screen invites. It is this
-  // script's choice, not the work's — the work accepts any number of up to four digits.
-  await page.locator("#sd-num").fill("11");
-  await page.locator("#sd-commit").click();
-  await page.waitForSelector("#sd-last:not(:empty)");
-  writeFileSync(join(here, "STATE-2.txt"), (await readText(page)) + "\n");
-  await page.screenshot({ path: join(here, "render-1400-state2.png"), fullPage: true });
   await ctx.close();
 }
 
@@ -93,4 +69,4 @@ const readText = (page) => page.evaluate(() => {
 }
 
 await browser.close();
-console.log("STATE-1.txt, STATE-2.txt, render-1400.png, render-900.png written");
+console.log("STATE-1.txt, render-1400.png, render-900.png written");
