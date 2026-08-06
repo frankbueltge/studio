@@ -81,6 +81,12 @@ def printed_date(s):
     return f"{x.day} {FULL_MONTHS[x.month - 1]} {x.year}"
 
 
+def day_month(s):
+    """'4 August' — the day named without its year, for a second naming in one sentence."""
+    x = d(s)
+    return f"{x.day} {FULL_MONTHS[x.month - 1]}"
+
+
 def short_caps(s):
     x = d(s)
     return f"{x.day} {MONTHS_CAPS[x.month - 1]}"
@@ -201,10 +207,18 @@ def build():
     # observed: the earliest saved copy is from the following morning, and upstream prints a
     # date, not a publication instant (VERIFIER-72 D3). The list is DATED the day; that is
     # what the record holds, and that is now what the sentence says.
+    #
+    # And the day is NAMED here, twice, since session 73 (DRAMATURG-73 §A). Until tonight this
+    # sentence said "that day" and "the day itself": the sentence built to carry the work was
+    # anaphoric to a word it did not contain, pointing up to the headline, which is the first
+    # thing an unaided recall drops. 72's Q1 was refuted at 2 of 3 on exactly that — one reader
+    # carried the whole mechanism away and no date. The date is written where the anaphor stood,
+    # and named a second time because a word carried once in a subordinate clause is what a
+    # rebuilt sentence loses. Both namings are computed from DAY, like every other date here.
     lede = (
-        f"{word(n_obs).capitalize()} of the ships this record can place in that day stood in "
-        f"the list dated the day itself. {word(n_hi - n_obs).capitalize()} arrived "
-        f"later — {word(len(gained))} of them after this page had printed its figure."
+        f"{word(n_obs).capitalize()} of the ships this record can place in {printed_date(DAY)} "
+        f"stood in the list dated {day_month(DAY)} itself. {word(n_hi - n_obs).capitalize()} "
+        f"arrived later — {word(len(gained))} of them after this page had printed its figure."
     )
 
     # One list, more than one saved copy of it, and the copies differing in bytes: the

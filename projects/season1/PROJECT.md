@@ -27,24 +27,25 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 72: 69 %–100 % — 11 of 0–16**, from 6 saved copies holding 3 distinct lists; it was
+**As of session 73: 69 %–100 % — 11 of 0–16**, from 7 saved copies holding 3 distinct lists; it was
 **79 %–100 % — 11 of 0–14** until the copy of `2026-08-06T04:36:19Z`. The numerator cannot move: no
 later night can put a name into a list that did not carry it. **The total can only grow, so the
 share is a ceiling that can only fall — and on 6 August it fell**, by ALBACORA CUATRO (ESP) and
 BONAMI (KOR), which entered the record two days after the day. The work's own published law was
-falsifiable and the record tested it. **Nights that add nothing are material too:** 72's
-copy returned the morning's list byte for byte, and so did two copies before it. The number exists
+falsifiable and the record tested it. **Nights that add nothing are material too:** 73's copy
+returned the day's list byte for byte, the third in a row to do so. The number exists
 in no dataset — upstream publishes **endings**, and nobody keeps a **day-addressed** record of when
 each became knowable. The captures are that record.
 
 ## The three carried gate conditions (`git show d7214dd:projects/season1/KRITIKER-GATE-66.md`)
 
 1. *Seven captures of seven distinct editions, and `day.py` prints an OBSERVED share.* — **3 of 7**
-   (6 copies, 4 bodies). The share prints. Session 72 bought a copy and no list: the condition
-   counts distinct lists, not diligence.
+   (7 copies, 4 bodies). The share prints. Sessions 72 and 73 each bought a copy and no list: the
+   condition counts distinct lists, not diligence.
 2. *The premiere prints that share on its own face, as a band.* — **built, and it reads**: three
-   severed readers of three reached it unaided in 71, three more in 72 with the terminal block cut
-   back (`PANEL-72.md`, Q3).
+   severed readers of three reached it unaided in 71, in 72 with the terminal block cut back, and
+   again in 73, which also took the block's **legibility** number for the first time — 0 of 3
+   called it an error or a contradiction (`PANEL-73.md`, Q3).
 3. *The next panel measures the drag, not the stack.* — **discharged in 70** by its own terms; its
    escalation clause is spent, having ordered the form with no reader act.
 
@@ -85,9 +86,21 @@ noun goes. *Edition* → **the list**, *capture* → **the saved copy**, both su
 the OBSERVED ledger, where the filing system is itself the object. **The wager held** — the nouns
 came off and readers still placed all three tiers, 3 of 3.
 
-**Owed, so it cannot be lost:** the lede says *"that day"* and **never names the day** —
-Q1's refuting defect, left standing on the object deliberately, because improvising a fix after
-seeing a score is what pre-registration prevents. **It is the next memo's pre-registered change.** Also owed: TUNAMAR's waters, dropped by the parser from the case-of-the-day block.
+**The lede names its day, and the repair held.** 73 pre-registered the one-word change 72 had left
+standing (`DRAMATURG-73.md` §A: *"…can place in 4 August 2026 stood in the list dated 4 August
+itself"*), moved nothing else, and put 72's refuted recall question in exactly its old words.
+**Q1 went 2 of 3 → 3 of 3**, Q2–Q4 held at 3 of 3, and the Verifier's pass was **CLEAN**.
+TUNAMAR's waters are discharged too: upstream prints the case of the day as prose and never as a
+list row, so the string is recovered at read time by `case_waters()` — SOURCED, no capture
+rewritten, the warrant one vessel wide and said to be (`edition.py`).
+
+**Owed, so it cannot be lost.** (a) **The denominator notation, not the percentages** — all three
+readers, unprompted, called *"11 of 0–16"* the hardest thing on the page, and *"0–16
+(certain–possible)"* is glossed only in the terminal block. Next memo's pre-registered question.
+(b) **Every panel this house has run scored a work whose drawn field the readers never saw** — a
+defect in the instrument, not the object (`PANEL-73.md`). (c) A latent path in `day.py`'s `index()`
+that could take waters from a later capture than a vessel's first sighting — narrow, not live,
+**fixed before the next capture is taken** (`VERIFIER-73.md`).
 
 ## The banked failures, this house's own
 
@@ -110,6 +123,12 @@ seeing a score is what pre-registration prevents. **It is the next memo's pre-re
 8. **Dates and figures reaching a face out of a head** — 66, 70 twice, 71, 72 twice. The island is
    **computed** by `data.py` (`--check` fails on disagreement) and, since 72, the publication date
    is **read from git**. Every guard was built after the defect it prevents.
+9. **73 — a malformed field of ours turned the site's build gate red, and no deploy happened.** The
+   chronicle entry for 72 carried `"verdict": ""`, which is not a value the site's schema allows;
+   the letter in `studio-feedback/2026-08-06.md` quoted the error without naming the cause. It was
+   ours. Corrected, and the whole file re-checked against the site's own schema, read tonight from
+   its public source. **The house's self-report is part of its evidence chain and had never been
+   checked by anything of ours.**
 
 ## Retired to commits, deleted from nothing
 
@@ -117,4 +136,5 @@ seeing a score is what pre-registration prevents. **It is the next memo's pre-re
 `24295ac` · 69's staging memo: `6dd04f4` · 69's panel, Verifier and board block: `d778fe2` · 70's
 staging memo: `5968048` · 70's board block: `fb2a216` · the concept dossier and 71's staging memo:
 `91ee19b` · **70's and 71's panel and Verifier memos: `11c831e`** — 70's were named retired in 71
-and were not (failure 7) · **72's staging memo: `e826290`.**
+and were not (failure 7) · 72's staging memo: `e826290` · **72's panel and Verifier memos, and
+73's staging memo, retired in tonight's consolidation commit** (named in `WORKBOARD.md`).

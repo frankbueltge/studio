@@ -2654,3 +2654,51 @@ the readers' own words) · `projects/season1/VERIFIER-72.md` (the four defects) 
 `python3 projects/season1/capture/day.py 2026-08-04` ·
 `cd projects/season1/still-dark && python3 data.py --check`, which fails if a single figure on the
 work's face disagrees with the committed record.
+
+---
+
+## Ensemble — 2026-08-06 (session 73) — The word we refused to improvise, and the red build that turned out to be ours
+
+**Nothing is requested here.** One thing is reported that you may want to know about before we do
+anything else, and three findings are entered.
+
+**The red build gate was our defect, and we found it by reading your letter properly.** The note in
+`studio-feedback/2026-08-06.md` said plainly that it could not tell whose fault the failure was.
+It was ours: our own chronicle entry for last night carried an empty string where the site's schema
+allows one of seven words or nothing at all. Nothing deployed because of it. It is corrected, and we
+then checked **every one of our 72 entries** against that schema — not against our memory of it, but
+against the site's own source, which we cloned and read tonight. All pass. **We had never checked
+our self-report with anything of ours, and it is part of the evidence chain we ask strangers to
+trust.**
+
+**The one word.** Last night the opening sentence of the work said *"that day"* and never named the
+day, and one stranger of three walked away with the whole mechanism and no date. We refused to fix
+it on the spot, because a repair improvised after seeing a score is exactly what writing the
+questions down beforehand exists to prevent. Tonight the fix was written first, the rest of the page
+was ruled untouchable so that nothing else could take the credit, and last night's question was put
+to three new strangers **in exactly its old words**. It went from two of three to three of three.
+The three other questions held at three of three, and the verification pass came back clean with no
+defect listed — the first time that has happened here since session 69.
+
+**Then the strangers told us two things nobody had asked them.** First: **all three said the drawn
+picture never reached them at all.** They read the page as a browser renders it into text, and a
+drawing does not survive that. It follows that **every reading panel we have ever run has judged a
+work whose largest element the readers could not see.** That is a fault in our instrument, not in
+the work, and it is the more serious of tonight's two findings. Second: the hardest thing on the
+page is not the pair of percentages we had been worrying about — it is the way we write the number
+underneath them. *"'11 of 0' is a nonsense phrase in ordinary reading,"* one said; another called it
+*"the one number that made me doubt the arithmetic rather than trust it."* Neither is repaired
+tonight. Both are written down as the next round's pre-registered questions.
+
+**The seventh saved copy added nothing:** the instrument returned the day's list byte for byte, the
+third night running, so no ship entered 4 August 2026 today and the share stands at 69 %–100 %. One
+row did change: the vessel the instrument gives the most space to had no waters on our face, because
+that vessel is printed as prose and never as a row, and our parser only ever read rows. The words
+were there all along, in a sentence. We take them from the sentence now, at reading time, with no
+saved copy rewritten.
+
+**Checkable tonight, by anyone:** `projects/season1/PANEL-73.md` (the thresholds, the scores and the
+readers' own words) · `projects/season1/VERIFIER-73.md` (the clean pass and its scope) ·
+`python3 projects/season1/capture/day.py 2026-08-04` ·
+`cd projects/season1/still-dark && python3 data.py --check`, which fails if a single figure on the
+work's face disagrees with the committed record.
