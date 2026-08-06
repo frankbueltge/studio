@@ -81,9 +81,41 @@ def printed_date(s):
     return f"{x.day} {FULL_MONTHS[x.month - 1]} {x.year}"
 
 
+def printed_daymonth(s):
+    """'4 August' — the day inside a sentence, where the year would only slow it down."""
+    x = d(s)
+    return f"{x.day} {FULL_MONTHS[x.month - 1]}"
+
+
 def short_caps(s):
     x = d(s)
     return f"{x.day} {MONTHS_CAPS[x.month - 1]}"
+
+
+# Upstream prints the case-of-the-day's waters inside its prose sentence and not as a
+# field, and `capture.py` recorded `waters: null` for that one vessel per edition. TUNAMAR
+# therefore stood on this face with an empty waters column while every other row carried
+# one — an upstream fact this house held in its own record and did not print. The words
+# below are upstream's, verbatim off the committed capture; only the cut is ours, so the
+# column stays SOURCED. Captures are immutable and none was rewritten: the extraction
+# happens here, at build time, and `capture.py` records the field for editions to come.
+PROSE_WATERS_RE = re.compile(r",\s*in\s+([^,]+?)\.\s*$")
+
+
+def waters_index(caps):
+    """name → waters, preferring the printed field, falling back to the prose sentence."""
+    out = {}
+    for c in caps:
+        for v in c.get("vessels", []):
+            if out.get(v["name"]):
+                continue
+            w = v.get("waters")
+            if not w and v.get("prose"):
+                m = PROSE_WATERS_RE.search(v["prose"])
+                w = m.group(1) if m else None
+            if w:
+                out[v["name"]] = w
+    return out
 
 
 def commit_time(ref):
@@ -130,6 +162,8 @@ def build():
         for v in c.get("vessels", []):
             gfw.setdefault(v["name"], v.get("gfw_url"))
 
+    waters = waters_index(caps_now)
+
     rows_by_name = index(caps_now)
     seen_at = {r["name"]: r for r in rows_by_name.values()}
 
@@ -143,7 +177,7 @@ def build():
             "name": e["name"],
             "flag": e["flag"],
             "days_dark": e["days_dark"],
-            "waters": e["waters"] or "",
+            "waters": e["waters"] or waters.get(e["name"], ""),
             "went_dark_between": [dark_lo.isoformat(), dark_hi.isoformat()],
             "resurfaced_between": [end_lo.isoformat(), end_hi.isoformat()],
             "band_text": f"dark {span(dark_lo, dark_hi)} → back {span(end_lo, end_hi)}",
@@ -201,10 +235,17 @@ def build():
     # observed: the earliest saved copy is from the following morning, and upstream prints a
     # date, not a publication instant (VERIFIER-72 D3). The list is DATED the day; that is
     # what the record holds, and that is now what the sentence says.
+    #
+    # 72's panel refuted its own pre-registered recall question at 2 of 3: a reader carried
+    # the whole mechanism away and no date, because this sentence said "that day" and never
+    # named the day. It was anaphoric to a word it did not contain, and the date stood on the
+    # face only in the headline — which is what an unaided recall drops first. DRAMATURG-73 §A
+    # puts the day at the opening of the load-bearing sentence and again in the same breath;
+    # no anaphor is left in it. The date is computed here like every other figure.
     lede = (
-        f"{word(n_obs).capitalize()} of the ships this record can place in that day stood in "
-        f"the list dated the day itself. {word(n_hi - n_obs).capitalize()} arrived "
-        f"later — {word(len(gained))} of them after this page had printed its figure."
+        f"Of the ships this record can place in {printed_date(DAY)}, {word(n_obs)} stood in "
+        f"the list dated {printed_daymonth(DAY)} itself. {word(n_hi - n_obs).capitalize()} "
+        f"arrived later — {word(len(gained))} of them after this page had printed its figure."
     )
 
     # One list, more than one saved copy of it, and the copies differing in bytes: the

@@ -13,6 +13,15 @@ python3 edition.py                      # every capture: body hash, edition hash
 records the URL, the UTC fetch time, the HTTP status, the byte count and the **sha256 of the raw
 body**, so anyone can re-fetch the page, hash it, and check that our parse belongs to those bytes.
 
+**The case of the day's waters, since 2026-08-06 (session 73).** Upstream prints one vessel per
+edition as a prose sentence rather than as a row, and this parser wrote `waters: null` for it. So
+TUNAMAR stood on the work's face with an empty waters column for five nights while the fact sat in
+our own capture, inside its sentence. The parser now takes the sentence's trailing *"…, in
+&lt;waters&gt;."* — upstream's words, verbatim; only the cut is ours, so the value stays SOURCED —
+and `data.py` performs the same cut at build time for the captures already committed, because
+**captures are immutable and none was rewritten.** Where a sentence carries no waters, the field
+stays null rather than guessing.
+
 **Two hashes, since 2026-08-06 (session 70), because the record contradicted the instrument.**
 Until that night an edition was identified by the sha256 of the raw body, and on that test the
 19:17 capture of 5 August was "the same edition, byte for byte" as the 12:54 one. The capture of

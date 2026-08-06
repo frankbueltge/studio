@@ -2,7 +2,7 @@
 
 one day of the sea, and how much of it was knowable on the day itself
 
-Eleven of the ships this record can place in that day stood in the list dated the day itself. Five arrived later — two of them after this page had printed its figure.
+Of the ships this record can place in 4 August 2026, eleven stood in the list dated 4 August itself. Five arrived later — two of them after this page had printed its figure.
 
 A ship's disappearance reaches the instrument's daily list only when the ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for weeks afterwards. This page holds one day open and publishes how much of its darkness could be placed in it on the day, and how much arrived later.
 
@@ -28,6 +28,7 @@ IN THE LIST OF 4 AUG — the day itself (11 ships)
 TUNAMAR
 PAN
 56 d dark
+Ecuadorian EEZ (Galapagos)
 dark 2–9 Jun → back 28 Jul–4 Aug
 first seen 5 AUG
 MICRONESIA103
@@ -132,7 +133,7 @@ The share of this day's darkness that was knowable on the day itself:
 as this page published it at 04:57 UTC on 6 August, from 4 saved copies of 2 lists —
 79 %–100 %
 11 of 0–14
-as this record measures it now, from 6 saved copies of 3 lists —
+as this record measures it now, from 7 saved copies of 3 lists —
 69 %–100 %
 11 of 0–16
 
@@ -147,12 +148,12 @@ the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z
 
-day 2026-08-04  ·  6 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)
+day 2026-08-04  ·  7 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)
   vessels dark on that day .......... 0–16 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 69%–100%  (11 of 0–16)
-    (a ceiling from 3 edition(s), 6 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 3 edition(s), 7 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 
@@ -164,6 +165,7 @@ fetched (UTC)	status	bytes	body sha256	content	edition	vessels
 2026-08-06T04:36:19Z	200	35,485	aed92f4f…	47338b03…	5 August 2026	8
 2026-08-06T08:16:42Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
 2026-08-06T14:22:17Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
+2026-08-06T16:43:35Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
 
 One list came back in two different sets of bytes while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both.
 

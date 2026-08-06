@@ -82,6 +82,8 @@ VESSEL_DAYS_RE = re.compile(r'Together about\s*([\d,]+)\s*vessel-days of darknes
 # not kept, so that one stays unattributable and is left so.)
 ASSET_RE = re.compile(r'(?:href|src)="([^"]*_astro/[^"]+)"')
 DURATION_RE = re.compile(r'switched off its transponder for\s*(\d+)\s*days')
+# the trailing "…, in <waters>." of the case-of-the-day sentence; see the note where it is used
+PROSE_WATERS_RE = re.compile(r",\s*in\s+([^,]+?)\.\s*$")
 
 
 def num(s):
@@ -152,7 +154,13 @@ def parse(body):
     if out.get("case_of_the_day"):
         c = dict(out["case_of_the_day"])
         c["role"] = "case_of_the_day"
-        c["waters"] = None
+        # Upstream prints this one vessel's waters inside its prose sentence rather than as
+        # a field. Until 2026-08-06 this parser wrote null here, and the work's face carried
+        # an empty column for a fact the record held — TUNAMAR, for five nights. The words
+        # taken are upstream's, verbatim; only the cut is ours, so the value stays SOURCED,
+        # and where the sentence carries no waters it stays null rather than guessing.
+        m2 = PROSE_WATERS_RE.search(c.get("prose") or "")
+        c["waters"] = clean(m2.group(1)) if m2 else None
         vessels.append(c)
     for o in others:
         o = dict(o)

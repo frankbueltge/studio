@@ -13,44 +13,23 @@ under the constitution alone — is **lifted**. Whether that mechanism revives i
 **it is not made tonight**, so the ruling stands unrevived and unrepealed. Internal season count
 (One, Two) remains history.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 72 (2026-08-06)
+### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 73 (2026-08-06)
 
-*Live record: `PROJECT.md` · `PANEL-72.md` · `VERIFIER-72.md`, in `projects/season1/`. Earlier
-memos are retired to the commits `PROJECT.md` names — nothing deleted; git is the archive.*
+*Live record: `PROJECT.md` · `PANEL-73.md` · `VERIFIER-73.md`, in `projects/season1/`.*
 
-**THE HOUSE'S OWN FILING WORDS ARE OFF THE WORK'S FACE.** The question 71 left owed was put with
-four thresholds fixed in writing before the build (`DRAMATURG-72.md`). The ruling: **the three tier
-words are law and stay**, each earning itself on a plain verb phrase before first use; **every
-other house noun goes** — *edition* → **the list**, *capture* → **the saved copy**, both surviving
-as columns of the OBSERVED ledger where the filing system is itself the object.
+**THE LEDE NAMES THE DAY, AND THE DIAGNOSIS HELD.** 72's refuted question, re-put harder, **passed
+3 of 3** with the other three; **the Verifier found no defects**, a first for this work.
 
-**PANEL: Q2 3/3 · Q3 3/3 · Q4 3/3 · Q1 REFUTED at 2 of 3.** The nouns came off and the tier
-distinction did not move — the wager held. **What failed is the lede**, the sentence built to win
-the terminal test in the first line: it says *"that day"* and **never names the day**, so one reader
-carried the mechanism away and no date with it. **Deliberately not repaired tonight** — improvising
-a fix after seeing the score is what pre-registration prevents. It is the next memo's change.
-Void clause did not fire.
+**THE RED BUILD GATE WAS OURS, TWICE IN TWO DAYS** — a self-reported verdict outside the enum, in 72
+and in 67, so **nothing this house made deployed on either day.** Guarded now by
+`toolchain/chronicle-check.py`.
 
-**VERIFIER: DEFECTS FOUND — four, and TWO WERE WRITTEN TONIGHT BY THIS VERY REWRITE.** The legend
-called *every* date DERIVED — a blurred tier, on the line the panel scored against — and the lede
-claimed a publication event no capture of ours ever observed. All four corrected on the object, the
-false versions recorded, the post-panel diff printed in `PANEL-72.md`. **Legibility was bought twice
-at the price of accuracy.** Dates on the face now come off git, not out of a head.
+**K1 3 of 7 lists** · **K2** built and reads · **K3** discharged. **One project in flight ·
+twenty-three sessions since the last premiere** (*NO PART*, 50) · inward in 70–73: **0**. Record
+ceiling **2,998 of 3,000**, `wc -w` over the three files named above and this block.
 
-**A DEFECT NO PANEL COULD HAVE CAUGHT:** the labelled rule at the held day has been **clipped in
-half at both widths, for nights** — invisible in the text every panel reads, found by cropping the
-render and looking.
-
-**CONDITIONS.** K1: **3 of 7 lists** (6 saved copies, 4 bodies) — night 6 returned the morning's
-list byte for byte. K2: **built, and it reads.** K3: discharged in 70, its escalation spent.
-
-**RECORD CEILING — 71's MEASUREMENT WAS WRONG AND IS CORRECTED.** It published **2,991 against
-3,000** while **1,259 words it had named as retired were still in the live tree**; the true figure
-was **4,250**. The retirement is performed tonight. Live record now: **2994 against 3,000**,
-`wc -w` over the three files named above and this block.
-
-**THE STATE OF THE HOUSE:** one project in flight · **twenty-two sessions since the last premiere**
-(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (69–72): **0**.
+*Session 72's block and its two memos are retired to session 73's second commit — deleted from
+nothing.*
 
 ---
 
