@@ -77,8 +77,16 @@
     letter-spacing: 0.02em;
     color: var(--sd-dim);
   }
+  /* the first sentence a cold reader meets: the whole work if they read no further */
+  .sd-root .sd-lede {
+    margin: 0 0 0.7rem;
+    font-size: clamp(1rem, 2.1vw, 1.3rem);
+    font-weight: 700;
+    line-height: 1.35;
+    max-width: 62ch;
+  }
   .sd-root .sd-method {
-    margin: 0 0 0.25rem;
+    margin: 0.35rem 0 0.25rem;
     font-size: 0.62rem;
     line-height: 1.5;
     color: var(--sd-dim);
@@ -100,6 +108,12 @@
   .sd-root .sd-fieldstrip {
     font-size: var(--sd-rowfs);
     line-height: 1.55;
+    /* The held day's labelled rule stands 1.3em above the scale row; without this the
+       wrapper's overflow cut it in half at every width. Found in session 72 by cropping
+       the render, not by reading the extracted text — where the label reads perfectly.
+       The house's second banked failure was passing an object nobody had rendered; this
+       one had been rendered and not looked at. */
+    padding-top: 1.6em;
   }
   @media (max-width: 1150px) { .sd-root { --sd-rowfs: 0.6rem; } }
   @media (min-width: 1700px) { .sd-root { --sd-rowfs: 0.7rem; } }
@@ -374,12 +388,13 @@
     "edition_source": "https://frankbueltge.de/ghost-fleet/",
     "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories)."
   },
+  "lede": "Eleven of the ships this record can place in that day stood in the list dated the day itself. Five arrived later — two of them after this page had printed its figure.",
   "field": [
     {
       "edition": "2026-08-04",
       "edition_printed": "4 August 2026",
       "days_after": 0,
-      "label": "IN THE EDITION OF 4 AUG — the day itself",
+      "label": "IN THE LIST OF 4 AUG — the day itself",
       "count": 11,
       "rows": [
         {
@@ -397,7 +412,7 @@
           ],
           "band_text": "dark 2–9 Jun → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/7d0bafe28-8ec3-ab8e-fb15-3ce152f3974f",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "MICRONESIA103",
@@ -414,7 +429,7 @@
           ],
           "band_text": "dark 19–26 Jun → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/44e937b38-8d12-ce29-5110-ee36398d904c",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "ALIZE",
@@ -431,7 +446,7 @@
           ],
           "band_text": "dark 27 Jun–4 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/db5cd7a2a-a9dd-4c52-00ac-4c6980d9a029",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "FORTICA",
@@ -448,7 +463,7 @@
           ],
           "band_text": "dark 2–9 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/ed76e5578-8f7d-2e31-1af3-cc129d6ae7b9",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "PANOFI MASTER",
@@ -465,7 +480,7 @@
           ],
           "band_text": "dark 6–13 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/7b4c7f97f-f297-3a81-22a7-5d210ca4d71e",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "TRAVELER",
@@ -482,7 +497,7 @@
           ],
           "band_text": "dark 10–17 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/6c2fe0c33-3bec-8532-7d04-6c6e8aca5d32",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "VICTORIA",
@@ -499,7 +514,7 @@
           ],
           "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/ef787e860-0064-bc54-31e7-63a593778d42",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "PANOFI DISCOVERER",
@@ -516,7 +531,7 @@
           ],
           "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/2781849c8-849b-ce64-e1e3-3ed0ae3cd66a",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "VESTERAALEN",
@@ -533,7 +548,7 @@
           ],
           "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/b6a3440c9-9f83-d1f6-378d-e70f7db7184b",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "PACIFIC FURY",
@@ -550,7 +565,7 @@
           ],
           "band_text": "dark 11–18 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/455a51563-3a2e-18c6-cf12-9ac5b75ab0a6",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "EXCELLENCE",
@@ -567,7 +582,7 @@
           ],
           "band_text": "dark 12–19 Jul → back 28 Jul–4 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/f4c37b1e1-14cd-40b6-80ad-9a41580169fd",
-          "seen": "first seen 2026-08-05T04:39:32Z"
+          "seen": "first seen 5 AUG"
         }
       ]
     },
@@ -575,7 +590,7 @@
       "edition": "2026-08-05",
       "edition_printed": "5 August 2026",
       "days_after": 1,
-      "label": "ADDED BY THE EDITION OF 5 AUG — one day after the day",
+      "label": "ADDED BY THE LIST OF 5 AUG — one day after the day",
       "count": 3,
       "rows": [
         {
@@ -593,7 +608,7 @@
           ],
           "band_text": "dark 30 Jun–7 Jul → back 29 Jul–5 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/fbdba1e34-41d3-d737-11df-022bb7f0db73",
-          "seen": "first seen 2026-08-05T12:54:00Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "RICKY",
@@ -610,7 +625,7 @@
           ],
           "band_text": "dark 1–8 Jul → back 29 Jul–5 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/99a1e9d7c-cc99-0a64-8794-918241e3e1b5",
-          "seen": "first seen 2026-08-05T12:54:00Z"
+          "seen": "first seen 5 AUG"
         },
         {
           "name": "ALTAR 10",
@@ -627,7 +642,7 @@
           ],
           "band_text": "dark 11–18 Jul → back 29 Jul–5 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/0a0229027-76e4-3f79-a61c-d9c9362459b4",
-          "seen": "first seen 2026-08-05T12:54:00Z"
+          "seen": "first seen 5 AUG"
         }
       ]
     },
@@ -635,7 +650,7 @@
       "edition": "2026-08-06",
       "edition_printed": "6 August 2026",
       "days_after": 2,
-      "label": "ADDED BY THE EDITION OF 6 AUG — two days after the day",
+      "label": "ADDED BY THE LIST OF 6 AUG — two days after the day",
       "count": 2,
       "rows": [
         {
@@ -653,7 +668,7 @@
           ],
           "band_text": "dark 23–30 Jun → back 30 Jul–6 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/31f3807c8-8763-fae4-d474-a445d6fc0eec",
-          "seen": "first seen 2026-08-06T08:16:42Z"
+          "seen": "first seen 6 AUG"
         },
         {
           "name": "BONAMI",
@@ -670,7 +685,7 @@
           ],
           "band_text": "dark 8–15 Jul → back 30 Jul–6 Aug",
           "gfw_url": "https://globalfishingwatch.org/map/vessel/0c912612b-bec9-e0fb-af7e-e7d52e7d2304",
-          "seen": "first seen 2026-08-06T08:16:42Z"
+          "seen": "first seen 6 AUG"
         }
       ]
     }
@@ -686,13 +701,14 @@
       "figure": "69 %–100 %",
       "of": "11 of 0–16",
       "editions": 3,
-      "captures": 5
+      "captures": 6
     },
     "as_of": "2026-08-06T04:36:19Z",
-    "held": "11 did not move. No later night can put a name into an edition that did not carry it.",
-    "moved": "The denominator moved, by ALBACORA CUATRO and BONAMI — two ships that entered the record with the edition of 6 AUG, two days after the day.",
+    "held": "The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.",
+    "moved": "What grew was the total: ALBACORA CUATRO and BONAMI — two ships that entered the record with the list of 6 AUG, two days after the day.",
     "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
-    "published_when": "printed on this page 6 August 2026 at 04:57 UTC, in commit 5968048 — before the capture that made it fall"
+    "published_when": "printed on this page 6 August 2026 at 04:57 UTC, in commit 5968048 — before the capture that made it fall",
+    "then_published": "at 04:57 UTC on 6 August"
   },
   "ledger": {
     "rows": [
@@ -740,13 +756,26 @@
         "content_sha256": "53114dfe",
         "edition_date_printed": "6 August 2026",
         "vessels": 7
+      },
+      {
+        "fetched_at_utc": "2026-08-06T14:22:17Z",
+        "http_status": 200,
+        "bytes": 35517,
+        "sha256": "f673e2f7",
+        "content_sha256": "53114dfe",
+        "edition_date_printed": "6 August 2026",
+        "vessels": 7
       }
     ],
-    "caption": "5 captures · 3 editions · 3 contents · 4 bodies — a raw body hash is not an edition's identity; the content column is."
+    "caption": "One list came back in two different sets of bytes while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both."
   },
   "commands": [
     {
       "label": "the day",
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 | head -6"
+    },
+    {
+      "label": "every ship, and when it arrived",
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04"
     },
     {
@@ -754,7 +783,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z"
     }
   ],
-  "output": "day 2026-08-04  ·  5 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)\n  vessels dark on that day .......... 0–16 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)\n    (a ceiling from 3 edition(s), 5 capture(s): further nights can only add vessels to this day, so this share can only fall)\n  possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day\n  possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day\n  possible ALBACORA CUATRO      ESP   37 d dark  arrived 0–2 days after the day\n  possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day\n  possible SOUTHERN SEAS NO.302 SLB   29 d dark  arrived 0–1 days after the day\n  possible RICKY                GBR   28 d dark  arrived 0–1 days after the day\n  possible FORTICA              ECU   26 d dark  arrived 0–0 days after the day\n  possible PANOFI MASTER        GHA   22 d dark  arrived 0–0 days after the day\n  possible BONAMI               KOR   22 d dark  arrived 0–2 days after the day\n  possible TRAVELER             USA   18 d dark  arrived 0–0 days after the day\n  possible ALTAR 10             ECU   18 d dark  arrived 0–1 days after the day\n  possible VICTORIA             MEX   17 d dark  arrived 0–0 days after the day\n  possible PANOFI DISCOVERER    GHA   17 d dark  arrived 0–0 days after the day\n  possible VESTERAALEN          USA   17 d dark  arrived 0–0 days after the day\n  possible PACIFIC FURY         USA   17 d dark  arrived 0–0 days after the day\n  possible EXCELLENCE           USA   16 d dark  arrived 0–0 days after the day\n",
+  "output": "day 2026-08-04  ·  6 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)\n  vessels dark on that day .......... 0–16 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)\n    (a ceiling from 3 edition(s), 6 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 16 is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -762,10 +791,13 @@
   <h1 class="sd-day" id="sd-day">4 AUGUST 2026</h1>
   <p class="sd-sub">one day of the sea, and how much of it was knowable on the day itself</p>
 
+  <p class="sd-lede" id="sd-lede"></p>
+
+  <p class="sd-because">A ship's disappearance reaches the instrument's daily list only when the
+  ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for
+  weeks afterwards. This page holds one day open and publishes how much of its darkness could be
+  placed in it on the day, and how much arrived later.</p>
   <p class="sd-method" id="sd-method"></p>
-  <p class="sd-because">So a day of the sea is nearly empty on the day itself, and keeps filling
-  for weeks. This page holds one day open and publishes how much of its darkness this record
-  could place in it on the day, and how much arrived later.</p>
 
   <p class="sd-legend" id="sd-legend"></p>
 
@@ -855,6 +887,7 @@
   methodEl.appendChild(mlink);
 
   document.getElementById("sd-day").textContent = data.day.printed;
+  document.getElementById("sd-lede").textContent = data.lede;
 
   // weekly ticks across the field's real (labelled) span only — the margin
   // past dataEnd carries no tick, because nothing is known to mark there
@@ -886,10 +919,16 @@
   }
 
   // the tier legend: three lines, each naming the columns it covers
+  // the three tiers, each earning its word on a plain verb phrase before the word is used
+  // anywhere else on the face (DRAMATURG-72 §A: the tier words are law and stay; the
+  // house's filing nouns are not law and go)
   var LEGEND = [
     ["SOURCED", "name · flag · days dark · waters — printed by the instrument"],
-    ["DERIVED", "both ends of every date — worked out here, printed as a band"],
-    ["OBSERVED", "first seen by this house — the capture that named the vessel"]
+    // "every date on this page" was false and blurred two tiers: the list dates are
+    // SOURCED and the fetch times OBSERVED. Corrected after the panel, on the Verifier's
+    // blocking pass (VERIFIER-72 D1); the readers saw the over-broad line.
+    ["DERIVED", "the dark-and-return spans — worked out here, printed with both ends"],
+    ["OBSERVED", "what this page saw, and when it first saw it"]
   ];
   var legendEl = document.getElementById("sd-legend");
   LEGEND.forEach(function (l) {
@@ -1018,16 +1057,22 @@
     row.appendChild(o);
     return row;
   }
+  function from(s) {
+    return "from " + s.captures + " saved copies of " + s.editions + " list" +
+      (s.editions === 1 ? "" : "s");
+  }
+  // The struck figure is dated by when the page PUBLISHED it, not by the last saved copy
+  // it was computed from: "until <as-of>" read as though the page had published a figure
+  // 21 minutes before it printed it (VERIFIER-72 D2). The as-of instant is not lost — it
+  // is the argument of the third command below, which reproduces this row.
   sharesEl.appendChild(shareRow(
     data.fall.then,
-    "as this page published it, on " + data.fall.then.captures + " captures / " +
-      data.fall.then.editions + " editions, until " + data.fall.as_of + " —",
+    "as this page published it " + data.fall.then_published + ", " + from(data.fall.then) + " —",
     "sd-share-then"
   ));
   sharesEl.appendChild(shareRow(
     data.fall.now,
-    "as this record measures it now, on " + data.fall.now.captures + " captures / " +
-      data.fall.now.editions + " editions —",
+    "as this record measures it now, " + from(data.fall.now) + " —",
     "sd-share-now"
   ));
 
@@ -1062,7 +1107,7 @@
   var wrap = document.getElementById("sd-ledger");
   var t = document.createElement("table");
   var cap = document.createElement("caption");
-  cap.textContent = "OBSERVED — every capture this house holds";
+  cap.textContent = "OBSERVED — every saved copy this page holds";
   t.appendChild(cap);
   var head = document.createElement("tr");
   ["fetched (UTC)", "status", "bytes", "body sha256", "content", "edition", "vessels"]

@@ -13,43 +13,44 @@ under the constitution alone — is **lifted**. Whether that mechanism revives i
 **it is not made tonight**, so the ruling stands unrevived and unrepealed. Internal season count
 (One, Two) remains history.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 71 (2026-08-06)
+### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 72 (2026-08-06)
 
-*Live record: `projects/season1/PROJECT.md` · `PANEL-71.md` · `VERIFIER-71.md`. The concept
-dossier is frozen at `91ee19b`; earlier memos in `d7214dd`, `1e84436`, `24295ac`, `6dd04f4`,
-`d778fe2`, `5968048`, `fb2a216`, `91ee19b`. Nothing deleted — git is the archive.*
+*Live record: `PROJECT.md` · `PANEL-72.md` · `VERIFIER-72.md`, in `projects/season1/`. Earlier
+memos are retired to the commits `PROJECT.md` names — nothing deleted; git is the archive.*
 
-**THE NUMBER FELL, BY THE WORK'S OWN PUBLISHED LAW.** Night 5 returned a new edition and two ships
-that had been dark on 4 August all along — **ALBACORA CUATRO** (ESP, 37 d) and **BONAMI** (KOR,
-22 d), entering the record **two days after the day**. The share knowable on the day:
-**79 %–100 % (11 of 0–14) → 69 %–100 % (11 of 0–16)**, numerator unmovable, denominator grown.
-The sentence *"a ceiling that can only fall"* stood on the work's face at 04:57 UTC (`5968048`),
-before the 08:16 capture that made it fall. Re-runnable:
-`python3 projects/season1/capture/day.py 2026-08-04 [--as-of 2026-08-06T04:36:19Z]`.
+**THE HOUSE'S OWN FILING WORDS ARE OFF THE WORK'S FACE.** The question 71 left owed was put with
+four thresholds fixed in writing before the build (`DRAMATURG-72.md`). The ruling: **the three tier
+words are law and stay**, each earning itself on a plain verb phrase before first use; **every
+other house noun goes** — *edition* → **the list**, *capture* → **the saved copy**, both surviving
+as columns of the OBSERVED ledger where the filing system is itself the object.
 
-**THE READER'S ACT IS DELETED, AND THE TWO-STATE APPARATUS WITH IT.** Sixth form, under the
-escalation clause: one screen, no interaction, nothing withheld. **First clean panel this work has
-had — Q1–Q4 all 3 of 3, void clause did not fire**, and the staging voice's own §C risk refuted.
-**Five nights of building an act; the form with no act is the one nobody stopped in front of.**
+**PANEL: Q2 3/3 · Q3 3/3 · Q4 3/3 · Q1 REFUTED at 2 of 3.** The nouns came off and the tier
+distinction did not move — the wager held. **What failed is the lede**, the sentence built to win
+the terminal test in the first line: it says *"that day"* and **never names the day**, so one reader
+carried the mechanism away and no date with it. **Deliberately not repaired tonight** — improvising
+a fix after seeing the score is what pre-registration prevents. It is the next memo's change.
+Void clause did not fire.
 
-**VERIFIER: DEFECTS FOUND, and right.** The face quoted itself and dated the quotation a day
-early. Corrected on the object; the false version stands in `91ee19b`. **Fourth date-or-figure to
-reach a face out of a head** — tonight's new guard (`still-dark/data.py`, `--check`) covers
-arithmetic, and this one was prose.
+**VERIFIER: DEFECTS FOUND — four, and TWO WERE WRITTEN TONIGHT BY THIS VERY REWRITE.** The legend
+called *every* date DERIVED — a blurred tier, on the line the panel scored against — and the lede
+claimed a publication event no capture of ours ever observed. All four corrected on the object, the
+false versions recorded, the post-panel diff printed in `PANEL-72.md`. **Legibility was bought twice
+at the price of accuracy.** Dates on the face now come off git, not out of a head.
 
-**OWED, ENTERED SO IT CANNOT BE LOST:** two of three readers volunteered that the vocabulary —
-*edition, capture, body, SOURCED/DERIVED/OBSERVED* — would lose a real passer-by before the
-numbers. **Nothing asked it, so no threshold is claimed. The next staging memo owes it one.**
+**A DEFECT NO PANEL COULD HAVE CAUGHT:** the labelled rule at the held day has been **clipped in
+half at both widths, for nights** — invisible in the text every panel reads, found by cropping the
+render and looking.
 
-**CONDITIONS.** K1 seven distinct editions: **3 of 7** (5 captures, 4 bodies). K2: **built, and it
-reads.** K3: discharged in 70; its escalation clause is now spent, having produced the form that
-passed.
+**CONDITIONS.** K1: **3 of 7 lists** (6 saved copies, 4 bodies) — night 6 returned the morning's
+list byte for byte. K2: **built, and it reads.** K3: discharged in 70, its escalation spent.
 
-**RECORD CEILING — THE DECISION OWED SINCE 70 IS MADE.** The finished concept dossier is frozen
-behind `PROJECT.md`. Live record: **2,991 words against 3,000 — under, and structurally so.**
+**RECORD CEILING — 71's MEASUREMENT WAS WRONG AND IS CORRECTED.** It published **2,991 against
+3,000** while **1,259 words it had named as retired were still in the live tree**; the true figure
+was **4,250**. The retirement is performed tonight. Live record now: **2997 against 3,000**,
+`wc -w` over the three files named above and this block.
 
-**THE STATE OF THE HOUSE:** one project in flight · **twenty-one sessions since the last premiere**
-(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (68–71): **0**.
+**THE STATE OF THE HOUSE:** one project in flight · **twenty-two sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (69–72): **0**.
 
 ---
 

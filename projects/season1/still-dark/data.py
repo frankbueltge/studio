@@ -43,6 +43,11 @@ DAY_PRINTED = "4 AUGUST 2026"
 # Named, not guessed — the page prints it, and `day.py --as-of` reproduces it.
 PRIOR_AS_OF = "2026-08-06T04:36:19Z"
 
+# The commit that first carried the struck figure and the law printed beside it. Its
+# timestamp is read from git, never typed: this house has already put one publication
+# date on this face out of a head, and the dates that reach a face come off a record.
+PUBLISHED_COMMIT = "5968048"
+
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 MONTHS_CAPS = [m.upper() for m in MONTHS]
@@ -61,7 +66,14 @@ def span(a, b):
 
 FULL_MONTHS = ["January", "February", "March", "April", "May", "June",
                "July", "August", "September", "October", "November", "December"]
-WORDS = {0: "no", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven"}
+WORDS = {0: "no", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven",
+         8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve", 13: "thirteen",
+         14: "fourteen", 15: "fifteen", 16: "sixteen"}
+
+
+def word(n):
+    """A count in words where the page speaks, in digits where it counts. Never typed."""
+    return WORDS.get(n, str(n))
 
 
 def printed_date(s):
@@ -72,6 +84,15 @@ def printed_date(s):
 def short_caps(s):
     x = d(s)
     return f"{x.day} {MONTHS_CAPS[x.month - 1]}"
+
+
+def commit_time(ref):
+    """The commit's own timestamp, read from git. Raises rather than guessing."""
+    out = subprocess.run(
+        ["git", "-C", HERE, "log", "-1", "--format=%cI", ref],
+        capture_output=True, text=True, check=True,
+    )
+    return datetime.datetime.fromisoformat(out.stdout.strip())
 
 
 def run_day(*args):
@@ -97,6 +118,7 @@ def share_line(a):
 
 
 def build():
+    pub = commit_time(PUBLISHED_COMMIT).astimezone(datetime.timezone.utc)
     caps_now = load(CAPTURES)
     caps_then = load(CAPTURES, as_of=PRIOR_AS_OF)
     now = analyse(DAY, caps_now)
@@ -126,7 +148,10 @@ def build():
             "resurfaced_between": [end_lo.isoformat(), end_hi.isoformat()],
             "band_text": f"dark {span(dark_lo, dark_hi)} → back {span(end_lo, end_hi)}",
             "gfw_url": gfw.get(e["name"]),
-            "seen": f"first seen {r['first_seen_utc']}",
+            # Short on the row, exact in the ledger. Eleven repetitions of one ISO instant
+            # were eleven repetitions of this house's filing system (DRAMATURG-72 §A); the
+            # instant itself is checkable four inches lower, in the OBSERVED table.
+            "seen": f"first seen {short_caps(r['first_seen_utc'][:10])}",
         }
         groups.setdefault(r["first_edition_date"], []).append(row)
 
@@ -139,10 +164,13 @@ def build():
             "edition": ed,
             "edition_printed": printed_date(ed),
             "days_after": late,
+            # "edition" is the instrument's word and this house's filing word; on the face
+            # it is the list the instrument published that day (DRAMATURG-72 §A). It stays
+            # as a column of the OBSERVED ledger, where the filing system IS the object.
             "label": (
-                f"IN THE EDITION OF {short_caps(ed)} — the day itself"
+                f"IN THE LIST OF {short_caps(ed)} — the day itself"
                 if late == 0 else
-                f"ADDED BY THE EDITION OF {short_caps(ed)} — "
+                f"ADDED BY THE LIST OF {short_caps(ed)} — "
                 f"{'one day' if late == 1 else WORDS.get(late, str(late)) + ' days'} after the day"
             ),
             "count": len(rows),
@@ -156,12 +184,49 @@ def build():
     gained.sort(key=lambda e: -e["days_dark"])
     gained_eds = sorted({seen_at[e["name"]]["first_edition_date"] for e in gained})
     moved = (
-        "The denominator moved, by "
+        "What grew was the total: "
         + " and ".join(e["name"] for e in gained)
-        + f" — {WORDS.get(len(gained), str(len(gained)))} ships that entered the record with the "
-        + " and ".join(f"edition of {short_caps(x)}" for x in gained_eds)
-        + f", {WORDS.get((d(gained_eds[0]) - target).days, '')} days after the day."
+        + f" — {word(len(gained))} ships that entered the record with the "
+        + " and ".join(f"list of {short_caps(x)}" for x in gained_eds)
+        + f", {word((d(gained_eds[0]) - target).days)} days after the day."
     )
+
+    # The first sentence a cold reader meets, and the whole work if they read no further
+    # (DRAMATURG-72 §B.1). Every number in it is counted here, none typed: the numerator
+    # this record observes, what the later lists added, and how much of that arrived after
+    # the figure below had already been published.
+    n_obs = now["knowable_on_the_day_OBSERVED"]
+    n_hi = now["vessels_dark_on_day"]["band"][1]
+    # "the list published on the day itself" claimed a publication event this record never
+    # observed: the earliest saved copy is from the following morning, and upstream prints a
+    # date, not a publication instant (VERIFIER-72 D3). The list is DATED the day; that is
+    # what the record holds, and that is now what the sentence says.
+    lede = (
+        f"{word(n_obs).capitalize()} of the ships this record can place in that day stood in "
+        f"the list dated the day itself. {word(n_hi - n_obs).capitalize()} arrived "
+        f"later — {word(len(gained))} of them after this page had printed its figure."
+    )
+
+    # One list, more than one saved copy of it, and the copies differing in bytes: the
+    # correction session 70 published on this face, in the plain words §A ordered.
+    bodies_per_list = {}
+    for c in caps_now:
+        bodies_per_list.setdefault(content_sha256(c), set()).add(c["fetch"]["sha256"])
+    split = {k: len(v) for k, v in bodies_per_list.items() if len(v) > 1}
+    if split:
+        n_lists, n_bodies = len(split), max(split.values())
+        ledger_caption = (
+            f"{word(n_lists).capitalize()} list came back in {word(n_bodies)} different sets of "
+            f"bytes while every field this page reads stayed identical"
+            if n_lists == 1 else
+            f"{word(n_lists).capitalize()} lists came back in more than one set of bytes each "
+            f"while every field this page reads stayed identical"
+        ) + " — a copy's fingerprint is not the list's identity, which is why the table carries both."
+    else:
+        ledger_caption = (
+            "Every saved copy of a list came back in identical bytes — a copy's fingerprint is "
+            "not the list's identity, which is why the table carries both."
+        )
 
     ledger = []
     for c in caps_now:
@@ -182,14 +247,15 @@ def build():
             "edition_source": "https://frankbueltge.de/ghost-fleet/",
             "window_quote": caps_now[-1]["method"]["window_quote"],
         },
+        "lede": lede,
         "field": field,
         "fall": {
             "then": share_line(then),
             "now": share_line(now),
             "as_of": PRIOR_AS_OF,
             "held": (
-                f"{now['knowable_on_the_day_OBSERVED']} did not move. No later night can put a "
-                "name into an edition that did not carry it."
+                f"The {word(now['knowable_on_the_day_OBSERVED'])} did not move, and cannot. No "
+                "later night can put a name into a list that did not carry it."
             ),
             "moved": moved,
             "published": (
@@ -203,25 +269,25 @@ def build():
             # full day: the ancestor said the share can only fall, but it is not this
             # sentence, and a quotation may not borrow its ancestor's date.
             "published_when": (
-                "printed on this page 6 August 2026 at 04:57 UTC, in commit 5968048 — "
-                "before the capture that made it fall"
+                f"printed on this page {printed_date(pub.date().isoformat())} at "
+                f"{pub.strftime('%H:%M')} UTC, in commit {PUBLISHED_COMMIT} — before the "
+                "capture that made it fall"
             ),
+            "then_published": f"at {pub.strftime('%H:%M')} UTC on {pub.day} {FULL_MONTHS[pub.month - 1]}",
         },
-        "ledger": {
-            "rows": ledger,
-            "caption": (
-                f"{len(ledger)} captures · {len({r['edition_date_printed'] for r in ledger})} editions · "
-                f"{len({r['content_sha256'] for r in ledger})} contents · "
-                f"{len({r['sha256'] for r in ledger})} bodies — a raw body hash is not an edition's "
-                "identity; the content column is."
-            ),
-        },
+        "ledger": {"rows": ledger, "caption": ledger_caption},
+        # The command carries its own truncation, so that what stands under "verbatim,
+        # unedited" is the whole output of the command as printed. Sixteen per-ship lines
+        # restated the rows above in worse type (DRAMATURG-72 §B.6); the pipe cuts them
+        # where a reader would, and day.py handles the closed pipe without a traceback.
         "commands": [
-            {"label": "the day", "cmd": f"python3 projects/season1/capture/day.py {DAY}"},
+            {"label": "the day", "cmd": f"python3 projects/season1/capture/day.py {DAY} | head -6"},
+            {"label": "every ship, and when it arrived",
+             "cmd": f"python3 projects/season1/capture/day.py {DAY}"},
             {"label": "the night before",
              "cmd": f"python3 projects/season1/capture/day.py {DAY} --as-of {PRIOR_AS_OF}"},
         ],
-        "output": run_day(),
+        "output": "".join(run_day().splitlines(keepends=True)[:6]),
         "floor": (
             f"No number closes this. A method that counts a disappearance only when the ship comes "
             f"back cannot see the ships that never come back. {now['vessels_dark_on_day']['band'][1]} "
