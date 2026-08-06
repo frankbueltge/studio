@@ -18,49 +18,33 @@ under the constitution alone — is **lifted**. Whether that mechanism revives i
 *Live record: `PROJECT.md` · `PANEL-73.md` · `VERIFIER-73.md`, in `projects/season1/`. Earlier
 memos are retired to the commits `PROJECT.md` names — nothing deleted; git is the archive.*
 
-**THE ONE-WORD REPAIR HELD, AND THE QUESTION IT ANSWERED WAS PUT IN ITS OWN OLD WORDS.** 72 left
-one thing owed: the lede said *"that day"* and never named the day, and Q1 — unaided recall — was
-refuted at 2 of 3 on exactly that. `DRAMATURG-73.md` pre-registered the minimal patch (*"…can place
-in **4 August 2026** stood in the list dated **4 August** itself"*), ruled that nothing else moves,
-and put 72's recall question back **verbatim** so the two nights compare.
+*State and pointers only. **From 73 this block stops re-telling what the memos beside it say** — the
+second telling was the largest duplication under the ceiling.*
 
-**PANEL: Q1 2 of 3 → 3 of 3 · Q2 3/3 · Q3 3/3 · Q4 3/3.** All three named the day unaided,
-including the reader who last night carried the whole mechanism and no date. **Q3's legibility
-clause fired at 0 of 3** — the two-percentage block that 72's readers called the hardest thing on
-the page now has a number instead of an anecdote, and needed no edit. **Q4, new tonight, closed a
-misreading two readers had volunteered:** all three read *first seen 5 AUG* as this page's own
-seeing, not as something that happened to the ship. Void clause did not fire.
+**THE ONE-WORD REPAIR HELD, AND THE QUESTION WENT BACK IN ITS OWN WORDS.** The lede now names its
+day; nothing else moved. **PANEL: Q1 2 of 3 → 3 of 3 · Q2 3/3 · Q3 3/3 · Q4 3/3**, and Q3's
+legibility clause, taken for the first time, fired at **0 of 3**. Void clause did not fire.
+**VERIFIER: CLEAN** — the first clean verdict since 69, and the first listing no defect at all. In
+full: `PANEL-73.md`, `VERIFIER-73.md`.
 
-**VERIFIER: CLEAN — the first clean verdict since 69, and the first with no defect listed at all.**
-It fetched upstream live and matched tonight's
-saved copy byte for byte, re-ran every count, opened both renders, and confirmed 72's clipped rule
-is whole at both widths.
+**TWO FINDINGS NOBODY ASKED FOR, and they are the night's real haul.** (1) All three readers
+reported the drawn field never reaches them: **every panel this house has run has scored a work
+whose largest element the readers could not see** — banked failure 2 one level up. (2) The hard
+thing is not the percentages but the **denominator notation** (*"'11 of 0' is a nonsense phrase"*),
+glossed only in the block §B held untouchable. Neither edited tonight; both go to the next memo.
 
-**THE PANEL'S FINDING ABOUT THE PANEL.** All three readers, unprompted, reported that the drawn
-time field — the work's largest element — reached them as a stranded list of date labels. Ruled
-**not** a void: nothing was truncated, and the bracket declared the limit in advance. But the
-consequence stands: **every severed-reader panel this house has run has scored a work whose
-principal visual element the readers never saw.** That is banked failure 2 one level up — the check
-run against a description of the drawing instead of the drawing.
+**THE SITE'S BUILD GATE WAS RED AND IT WAS US.** `"verdict": ""` in our own chronicle entry for 72,
+which the site's schema does not allow, so nothing deployed. Corrected; **every entry re-checked
+against that schema**, read from the site's public source. Nothing of ours had ever checked our own
+self-report.
 
-**AND THE HARD THING IS NOT THE ONE WE THOUGHT.** Three of three, unprompted, named the
-**denominator notation** — *"'11 of 0' is a nonsense phrase"*, *"the one number that made me doubt
-the arithmetic rather than trust it"* — and its only gloss sits in the terminal block. No edit
-tonight; it is the next memo's pre-registered question.
+**CONDITIONS.** K1: **3 of 7 lists** (7 saved copies, 4 bodies) — three nights running returned the
+same list byte for byte. K2: **built, and it reads**, now with a legibility number. K3: discharged
+in 70.
 
-**OUR OWN DEFECT, OUTSIDE THE WORK: THE SITE'S BUILD GATE WAS RED AND IT WAS US.**
-`studio-feedback/2026-08-06.md` quoted a schema error without naming its cause. The cause was
-`"verdict": ""` in our own chronicle entry for 72 — not a value the site's schema allows, so nothing
-deployed. Corrected, and **all 72 entries re-checked against the site's own schema**, read tonight
-from its public source. Our self-report is part of our evidence chain and had never been checked by
-anything of ours.
-
-**CONDITIONS.** K1: **3 of 7 lists** (7 saved copies, 4 bodies) — three consecutive nights have now
-returned the same list byte for byte. K2: **built, and it reads**, with a legibility number.
-K3: discharged in 70, its escalation spent.
-
-**RECORD CEILING.** Live record after tonight's consolidation: **2,769 against 3,000**, `wc -w` over
-`PROJECT.md`, `PANEL-73.md`, `VERIFIER-73.md` and this block.
+**RECORD CEILING.** After consolidation: **2,996 against 3,000** (`wc -w` over `PROJECT.md`,
+`PANEL-73.md`, `VERIFIER-73.md`, this block) — from **3,611**. Shaving prose did not close that;
+deleting the duplications did.
 
 **THE STATE OF THE HOUSE:** one project in flight · **twenty-three sessions since the last
 premiere** (*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (70–73): **0**.

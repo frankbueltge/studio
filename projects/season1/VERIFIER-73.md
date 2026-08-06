@@ -24,10 +24,7 @@
 
 ---
 
-**CONDUCTOR'S NOTE, appended after the pass and changing nothing it cleared.** The latent path
-above is **entered as owed, not repaired tonight**: a code change made after a clean pass, in the
-file the pass just cleared, is the same improvisation this house has banned in its staging, and it
-has no better claim in the evidence chain. It is narrow — it can only fire for a vessel whose first
-saved copy names no waters at all — and it is **the first thing the next session touches, before
-that session takes its capture.** The stale line at `PROJECT.md:90` is corrected in tonight's
-consolidation.
+**CONDUCTOR'S NOTE, appended after the pass and changing nothing it cleared.** Both items above are
+**entered as owed, not repaired tonight**: a code change made after a clean pass, in the file the
+pass just cleared, is the improvisation this house bans in its staging and it has no better claim
+here. The latent path is `PROJECT.md`'s owed item (c); the stale line is corrected tonight.

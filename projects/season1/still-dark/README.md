@@ -11,7 +11,15 @@ this house calls the things it collects; on the page they are **the list** the i
 and **the saved copy** this page holds, and both survive as columns of the OBSERVED ledger, where
 the filing system is itself the object on show. The three tier words stay — they are the labeling
 law — and each now earns itself on a plain verb phrase before it is used anywhere else. Three
-severed readers placed all three tiers correctly with the nouns gone (`../PANEL-72.md`, Q2 3 of 3).
+severed readers placed all three tiers correctly with the nouns gone in 72, and three more in 73
+(`../PANEL-73.md`, Q2 3 of 3).
+
+**Since session 73 the lede names its day.** It said *"that day"* and never named it, and 72's
+unaided-recall question was refuted at 2 of 3 on exactly that. The day is now written where the
+anaphor stood and named once more in the same sentence; nothing else on the page moved, and the
+question, put back verbatim, went to 3 of 3. TUNAMAR's waters joined its row the same night: the
+instrument prints the case of the day as prose and never as a list row, so the string is recovered
+from that prose at read time — SOURCED, with no saved copy rewritten (`../capture/edition.py`).
 
 **The turn is the record's, not the reader's.** This work published a law on its own face — *a
 ceiling that can only fall* — and on 6 August it fell, unaided:
@@ -19,13 +27,13 @@ ceiling that can only fall* — and on 6 August it fell, unaided:
 | | share knowable on the day | |
 |---|---|---|
 | as published, 4 saved copies / 2 lists, to `2026-08-06T04:36:19Z` | **79 %–100 %** | 11 of 0–14 |
-| as measured now, 6 saved copies / 3 lists | **69 %–100 %** | 11 of 0–16 |
+| as measured now, 7 saved copies / 3 lists | **69 %–100 %** | 11 of 0–16 |
 
 The numerator did not move and cannot: no later night can put a name into a list that did not
 carry it. The total moved, by **ALBACORA CUATRO** (ESP) and **BONAMI** (KOR), two ships that
-entered the record with the list of 6 August — two days after the day. **The sixth saved copy,
-taken 2026-08-06T14:22:17Z, returned the 6 August list byte for byte: no vessel entered this day
-between 08:16 and 14:22**, and the share stands unchanged. Both figures are re-runnable by anyone:
+entered the record with the list of 6 August — two days after the day. **The seventh saved copy, taken
+2026-08-06T15:28:00Z, returned the 6 August list byte for byte — the third night running to do
+so**, and the share stands unchanged. Both figures are re-runnable by anyone:
 
 ```
 python3 projects/season1/capture/day.py 2026-08-04
@@ -53,8 +61,9 @@ of off a record (sessions 66 and 70); both were caught, neither should have been
 | `2026-08-06T043619Z.json` | `aed92f4f…` | `47338b03…` | 5 August 2026 | 8 |
 | `2026-08-06T081642Z.json` | `f673e2f7…` | `53114dfe…` | 6 August 2026 | 7 |
 | `2026-08-06T142217Z.json` | `f673e2f7…` | `53114dfe…` | 6 August 2026 | 7 |
+| `2026-08-06T152800Z.json` | `f673e2f7…` | `53114dfe…` | 6 August 2026 | 7 |
 
-**Six saved copies, four bodies, three lists.** The fourth moved its body hash at an identical
+**Seven saved copies, four bodies, three lists.** The fourth moved its body hash at an identical
 byte count while every field this work reads stayed identical — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. What
 moved outside this work's reading is not claimed, because the earlier bodies were never kept. See
@@ -76,7 +85,10 @@ screen reader receives, used unedited as panel material — plus `render-1400.pn
 `render-900.png`, the two legibility widths the staging law names. **The text extraction is not
 enough on its own:** session 72 found the labelled rule at 4 August clipped in half at both widths
 by the field wrapper's overflow, a defect invisible in `STATE-1.txt`, where the label reads
-perfectly. It was found by cropping the render and looking at it, and fixed. Run:
+perfectly. It was found by cropping the render and looking at it, and fixed. **Nor is the render
+enough:** in 73 all three severed readers reported that the drawn field never reaches them at all,
+so every reading panel this house has run has scored a work whose largest element the readers could
+not see (`../PANEL-73.md`). Run:
 `NODE_PATH=<global node_modules> node render.mjs`.
 **Dependencies, named honestly:** node ≥ 18 and **playwright** (Apache-2.0) with Chromium
 (BSD-3-Clause; its bundled third-party components carry their own licences — the Verifier's
