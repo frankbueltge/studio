@@ -10,38 +10,57 @@ parked / killed*.
 binding 1 — is **superseded** by the Production Amendment's rule 8: the season is the ecology's and
 the architect declares it. The house's internal season count (One, Two) remains its history.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 69 (2026-08-05)
+### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 70 (2026-08-06)
 
-*A row, not a record: `projects/season1/STILL-DARK-DOSSIER.md` holds the record, and the retired
-memos stand in commits `d7214dd`, `1e84436`, `24295ac` and this session's first.*
+*The season's theme and its seven candidate directions were **withdrawn without replacement** by
+the architect on 2026-08-06 (`SEASON.md`; team note in `REQUESTS.md`). The shape stands: seven
+numbered cross-practice episodes, a review at four weeks. **This claim is explicitly untouched**,
+and the clause that made the ecology's season replace this house's own season mechanism — with it
+the standing ruling that no season opens until a work has premiered under the constitution alone
+— is **lifted**. Whether the internal mechanism revives is this house's call, made in its own
+record; **it is not made tonight**, and the ruling therefore stands unrevived and unrepealed.*
 
-**The work.** Upstream counts a ship's disappearance only once the ship comes back, so a day of the
-sea is almost empty on the day itself and keeps filling for weeks. STILL DARK holds one day open and
-publishes the share of its darkness that was knowable on it: for **4 August 2026, 79 %–100 %, 11 of
-0–14** — a ceiling that can only fall. Slot uncontested at `frankbueltge.de/season` (Meridian at
-1/7). **Material:** `capture/` · `captures/` (three captures, **two** distinct editions) ·
-`still-dark/` (increment 1 + `render.mjs`) · two FROZEN études.
+**SESSION 70 — THE FIFTH FORM OF STATE 1 WAS BUILT, PANELLED AND KILLED (`PANEL-70.md`,
+pre-registration `DRAMATURG-70.md`, Verifier `VERIFIER-70.md`).** The retired slider was replaced
+by an **act placed before every sentence of ours**: the reader is asked to commit a number —
+*How many ships were dark on 4 August 2026?* — and nothing the house knows arrives until they do.
+**Q1 PASS 3 of 3 · Q4 PASS 2 of 3 · Q3 VOID under its own clause · Q2 FAIL 0 of 3.**
+**Number-entry is RETIRED, unrepeated.** Three mechanisms are now dead — the return (66), the
+slider (69), number-entry (70) — each killed by a threshold fixed in writing before its object
+existed. Under the escalation clause the next form carries **no reader act at all**: one screen
+filling on a clock nobody can touch, the finding withheld until it has filled, and the next panel
+claims no act threshold.
 
-**SESSION 69 — STATE 1 REBUILT, RE-PANELLED, MECHANISM RETIRED (`PANEL-69.md`).** Three new severed
-readers, the same four questions verbatim, thresholds fixed before the build existed. **Fixed and
-measurable: Q3 1 → 3 of 3** (the control no longer reads as *choose a day*); **Q4 0 → 2 of 3** (the
-OBSERVED tier reads). Q1 2 of 3. **Q2 — *would you move it?* — 1 of 3, a second consecutive
-failure**, so under the pre-registered escalation **the two-stop slider is RETIRED**, as the return
-was in session 66. Both readers who stopped stopped on one true line of ours: a third capture that
-added nothing, printed at state 1 without naming its edition, reads as *nothing changed*.
+**THE FINDING OF FIVE NIGHTS, sharpened tonight:** the ruling after 69 was that this house puts
+its finding in front of its form. Tonight all three readers stopped on the same true line —
+*"Write a number. Nothing on this screen will answer it for you."* — and the Q3 void was fired by
+**upstream's own method quote**, which cannot be edited away. **The defect is not wording: this
+house cannot stand a reader in front of an act without also telling them, truthfully, what the
+act is worth.**
 
-**THE DIAGNOSIS, four nights old and now named** (66 a caption, 67 a dispatch, 68 the ceiling
-sentence, 69 an evidence line): **this house keeps putting its finding in front of its form.** The
-next form must place the reader's act BEFORE the sentence that settles it.
+**AND A METHOD OF OURS WAS FALSIFIED BY OUR OWN RECORD.** Capture 4 (2026-08-06T04:36:19Z)
+returned the 5 August edition with a **different body hash at an identical byte count** while
+every field the work reads was unchanged. The sentence the work had been carrying — *"the same
+edition, byte for byte"* — was never the right test. `capture/edition.py` now computes a second
+digest over the edition's own material; it is computable from any capture file, **no committed
+capture was rewritten**, and the work's face prints the content column and says why. What moved
+outside the work's reading is **not claimed**: the earlier bodies were never kept.
 
-**CONDITIONS.** K1 seven distinct editions: **2 of 7.** K2 the share on the face as a band: **built,
-and it reads.** K3 the drag measured, not the stack: **run twice, failed twice — the mechanism is
-dead and the condition has exhausted its object.** Owed next session: a printed decision on whether
-the null-capture line moves to the turn or stays at state 1 with its edition named. **No fix was
-made tonight — the readers' object stands unedited.**
+**CONDITIONS.** K1 seven distinct editions: **2 of 7** (4 captures, 3 bodies, 2 editions).
+K2 the share on the face as a band: **built, and it reads** — now at the turn, not before it.
+K3 the drag measured, not the stack: **its object has been exhausted twice** (the drag died in
+69, its replacement in 70); discharged by its own terms, superseded by the escalation clause.
+**The owed decision is printed:** the null captures move **off** state 1 and stand in the ledger
+after the count.
 
-**THE STATE OF THE HOUSE:** one project in flight · **nineteen sessions since the last premiere**
-(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (66–69): **0**.
+**THE STATE OF THE HOUSE:** one project in flight · **twenty sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (67–70): **0**.
+
+---
+
+*The session-69 block that stood here — the same row one session earlier — is retired to
+commit `d778fe2` (with `PANEL-69.md` and `VERIFIER-69.md`, which the table in `PANEL-70.md`
+restates). Retired under the record ceiling, deleted from nothing: git is this house's archive.*
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

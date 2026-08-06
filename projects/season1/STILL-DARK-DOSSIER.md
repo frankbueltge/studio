@@ -47,19 +47,32 @@ ends — or observed from a committed capture. Session 66's `+2d` stamps have no
 
 ## 4. The state of the measurement, honestly
 
-**Three captures are committed, holding TWO distinct editions** (`projects/season1/captures/`;
-K1 counts editions, and needs seven):
+**Four captures are committed, holding THREE bodies and TWO distinct editions**
+(`projects/season1/captures/`; K1 counts editions, and needs seven):
 
-| capture | status · bytes · sha256 | edition | vessels |
-|---|---|---|---|
-| `2026-08-05T043932Z.json` | 200 · 35,473 · `ed3e54ec…` | 4 August 2026 | 11 |
-| `2026-08-05T125400Z.json` | 200 · 35,485 · `17c07fc3…` | 5 August 2026 | 8 |
-| `2026-08-05T191755Z.json` | 200 · 35,485 · `17c07fc3…` | 5 August 2026 | 8 |
+| capture | status · bytes · body sha256 | content | edition | vessels |
+|---|---|---|---|---|
+| `2026-08-05T043932Z.json` | 200 · 35,473 · `ed3e54ec…` | `ee555746…` | 4 August 2026 | 11 |
+| `2026-08-05T125400Z.json` | 200 · 35,485 · `17c07fc3…` | `47338b03…` | 5 August 2026 | 8 |
+| `2026-08-05T191755Z.json` | 200 · 35,485 · `17c07fc3…` | `47338b03…` | 5 August 2026 | 8 |
+| `2026-08-06T043619Z.json` | 200 · 35,485 · `aed92f4f…` | `47338b03…` | 5 August 2026 | 8 |
 
-The third is byte-identical to the second — a night that added nothing, kept because a work about
-publication latency owes its null measurements the same page as its findings. Since 69 `day.py`
-prints editions beside captures and takes `--as-of <UTC>`: the record as it stood at any past
-instant is re-runnable by anyone.
+Two captures added nothing, kept because a work about publication latency owes its null
+measurements the same page as its findings. Since 69 `day.py` prints editions beside captures and
+takes `--as-of <UTC>`: the record as it stood at any past instant is re-runnable by anyone.
+
+**A method the work had published was wrong, and the record caught it (70).** Until 6 August an
+edition's identity was the **sha256 of the raw body**, and the work's own face carried the
+sentence *"the same edition, byte for byte."* The fourth capture broke that test: **the body hash
+moved at an identical byte count while every field this work reads — edition date, aggregates,
+case of the day, all eight vessels with flags, durations and waters — stayed identical.** What
+moved is not claimed: the earlier bodies were never kept, only their hashes, so the cause is
+unrecoverable and is left so. `capture/edition.py` now computes a second digest over the
+edition's own material, computable from any capture file including those written before it
+existed; **no committed capture was rewritten** to carry it. The work's face prints the content
+column and says why. From now on `capture.py` also records the site's fingerprinted asset paths —
+outside the edition, outside every tier — so the next such move can be attributed instead of
+guessed at.
 
 **The number is measured, not derived** (68). Of the **fourteen** vessels our captures place in the
 day-band of **4 August 2026**, **eleven** stood in the edition of 4 August itself. The three that
@@ -122,21 +135,31 @@ verbatim:**
 3. *The next panel measures the drag, not the stack: a reader sees state 1 alone, with no
    house-written description of the field, asked whether to continue. Checked in the next
    `projects/season1/PANEL-*.md`. If the page cannot be dispatched without house prose, say so and
-   claim no first-encounter threshold at all.*
+   claim no first-encounter threshold at all.* — **K3 has exhausted its object twice over: the drag
+   died in 69, and the act that replaced it died in 70.** The condition is discharged by its own
+   terms; what stands in its place is the escalation clause, which orders a form with no act.
 
 **The panels.** 66 and 67, five readers each (minuted in their journals): **the return is dead as a
 mechanism** and **five of five had to reverse-engineer the piece**. Twice the house **voided a
-threshold that passed**, both times because the decisive words were ours. 68 and 69 stand in one
-table in `PANEL-69.md`.
+threshold that passed**, both times because the decisive words were ours. 68, 69 and 70 stand in
+one table in `PANEL-70.md`.
 
-**TWO MECHANISMS ARE DEAD, both killed by pre-registered thresholds:** the return (66) and, from
-69, **the two-stop slider** (Q2 ≤ 1 of 3 on two consecutive panels). What killed it four nights
-running was not the control but **a true sentence of ours placed before the reader's act**. The next
-form must put the act **before** the sentence that settles it, and the gate should treat any first
-screen that states the finding as presumed dead on arrival.
+**THREE MECHANISMS ARE DEAD, each killed by a threshold fixed in writing before its object
+existed:** the return (66), the two-stop slider (69), and **number-entry** (70 — Q2 0 of 3, the
+readers asked to commit a figure before the house said anything, and all three refused).
 
-**What increment 1 is, as of 69:** `still-dark/README.md`, and `render.mjs` makes the panel material
-and both legibility widths from the built file itself.
+**The finding of five nights, and it is about this house's hand.** 66 a caption · 67 a dispatch ·
+68 a methodological sentence · 69 an evidence line · 70 an instruction, *and beside it an
+inherited quotation*. The ruling after 69 was that this house puts its finding in front of its
+form. **70 refines it and makes it worse: this house cannot stand a reader in front of an act
+without also telling them, truthfully, what the act is worth.** *"Nothing on this screen will
+answer it for you"* is honest, load-bearing and a reason to stop; the void that fired on Q3 was
+fired by **upstream's own method quote**, which cannot be edited away. Under the pre-registered
+escalation the next form carries **no reader act at all** — one screen filling on a clock nobody
+can touch, the finding withheld until it has filled — and the next panel claims no act threshold.
+
+**What increment 1 is, as of 70:** `still-dark/README.md`; `render.mjs` makes the panel material
+and both legibility widths from the built file itself; `capture/edition.py` makes the ledger.
 
 **The banked failures, this house's own.** (1) *66* — a vessel dropped from a shelf the conductor
 had called first-hand: **eleven**, not ten, and it travelled into the claim before the Verifier

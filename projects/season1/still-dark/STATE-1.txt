@@ -1,7 +1,12 @@
 4 AUGUST 2026
 
-SOURCED name · flag · days dark · waters
-DERIVED both ends of every date
+the ships this day published as dark, on the day itself
+
+“Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).” — method sheet, The Ghost Fleet, frankbueltge.de
+
+SOURCED name · flag · days dark · waters — printed by the instrument
+DERIVED both ends of every date — worked out here, printed as a band
+OBSERVED first seen by this house — the capture that named the vessel
 
 2 JUN
 9 JUN
@@ -17,72 +22,89 @@ TUNAMAR
 PAN
 56 d dark
 dark 2–9 Jun → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 MICRONESIA103
 FSM
 39 d dark
 Marshallese EEZ
 dark 19–26 Jun → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 ALIZE
 ECU
 31 d dark
 Ecuadorian EEZ
 dark 27 Jun–4 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 FORTICA
 ECU
 26 d dark
 Ecuadorian EEZ
 dark 2–9 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 PANOFI MASTER
 GHA
 22 d dark
 Ghanaian EEZ
 dark 6–13 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 TRAVELER
 USA
 18 d dark
 United States EEZ (Alaska)
 dark 10–17 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 VICTORIA
 MEX
 17 d dark
 Mexican EEZ
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 PANOFI DISCOVERER
 GHA
 17 d dark
 Ghanaian EEZ
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 VESTERAALEN
 USA
 17 d dark
 United States EEZ (Alaska)
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 PACIFIC FURY
 USA
 17 d dark
 United States EEZ (Alaska)
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 EXCELLENCE
 USA
 16 d dark
 United States EEZ (Alaska)
 dark 12–19 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 
-knowable on 4 Aug — 11 of ____ · ____%
+How many ships were dark on 4 August 2026?
 
-OBSERVED this house counted 11 vessels in the edition of 4 August, in its own capture: 2026-08-05T04:39:32Z · HTTP 200 · 35,473 bytes · sha256 ed3e54ec…
+Write a number. Nothing on this screen will answer it for you.
 
-on this screen: 1 edition — the first this house captured. what fills the blanks is the next one.
+____
+ships
+1
+2
+3
+4
+5
+6
+7
+8
+9
+⌫
+0
+WRITE IT IN
 
-drag — this adds the next edition this house captured; the day itself does not move.
-4 Aug edition
-+ 5 Aug edition
+YOURS — your number is not part of the record. It is not stored and it is not sent anywhere.
 
-Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name. Captures held by this house: 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5); 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8); 2026-08-05T19:17:55Z (HTTP 200, 35,485 bytes, same sha256 — the same edition, byte for byte).
-
-Method: https://frankbueltge.de/werke/ghost-fleet/ — “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).”
+Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name.
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
-
-drag — this adds the next edition this house captured; the day itself does not move.
-4 Aug edition

@@ -40,6 +40,9 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from edition import content_sha256  # noqa: E402
+
 URL = "https://frankbueltge.de/ghost-fleet/"
 METHOD_URL = "https://frankbueltge.de/werke/ghost-fleet/"
 
@@ -72,6 +75,12 @@ AGG_RE = re.compile(
     re.S,
 )
 VESSEL_DAYS_RE = re.compile(r'Together about\s*([\d,]+)\s*vessel-days of darkness')
+# The site's own fingerprinted asset paths. Not part of the edition and never read by the
+# work — recorded from session 70 so that a body hash which moves while the edition stands
+# still can be attributed instead of guessed at. (The 2026-08-06 capture moved its body
+# hash at an identical byte count with every read field unchanged; the earlier bodies were
+# not kept, so that one stays unattributable and is left so.)
+ASSET_RE = re.compile(r'(?:href|src)="([^"]*_astro/[^"]+)"')
 DURATION_RE = re.compile(r'switched off its transponder for\s*(\d+)\s*days')
 
 
@@ -150,6 +159,7 @@ def parse(body):
         o["role"] = "other"
         vessels.append(o)
     out["vessels"] = vessels
+    out["page_assets"] = sorted(set(ASSET_RE.findall(s)))
     return out
 
 
@@ -231,12 +241,20 @@ def main():
         "aggregates": parsed.get("aggregates"),
         "vessels": parsed.get("vessels", []),
         "derived_intervals": derive(parsed.get("vessels", []), edition),
+        # Outside the edition and outside every tier the work publishes from: the response's
+        # own furniture, kept only so a moved body hash can be explained rather than guessed.
+        "page_assets": parsed.get("page_assets", []),
         "tiers": {
             "SOURCED": "vessels, aggregates, edition date, gfw ids — printed on the page",
             "DERIVED": "derived_intervals — arithmetic on published durations, bands printed",
             "OBSERVED": "fetched_at_utc — this house's own record of when it could first know",
         },
     }
+
+    # Two hashes, since session 70: the body's, and the edition's own. A body hash answers
+    # "did the response change"; this answers "did the edition change", and it is computed
+    # from the capture's own fields so it applies to captures written before it existed.
+    capture["content_sha256"] = content_sha256(capture)
 
     os.makedirs(args.out, exist_ok=True)
     stamp = now.strftime("%Y-%m-%dT%H%M%SZ")

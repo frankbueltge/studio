@@ -37,6 +37,10 @@ import datetime
 import glob
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from edition import content_sha256  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CAPTURES = os.path.normpath(os.path.join(HERE, "..", "captures"))
@@ -145,6 +149,13 @@ def analyse(target, caps):
         # only as strong as the number of DISTINCT editions behind it, so that is what
         # gets printed beside it.
         "editions_read": sorted({c["edition_date"] for c in caps if c.get("edition_date")}),
+        # Three counts, not two, since session 70. A capture on 2026-08-06 returned the
+        # 5 August edition with a DIFFERENT body hash at an identical byte count, while
+        # every field this work reads was unchanged: the response moved, the edition did
+        # not. So "distinct bodies" is a fact about the site and "distinct contents" is
+        # the fact about the sea. See capture/edition.py.
+        "distinct_bodies": len({c["fetch"]["sha256"] for c in caps}),
+        "distinct_contents": len({content_sha256(c) for c in caps}),
         "capture_range": [
             min((c["fetch"]["fetched_at_utc"] for c in caps), default=None),
             max((c["fetch"]["fetched_at_utc"] for c in caps), default=None),
@@ -215,7 +226,8 @@ def main():
     n_ed = len(res["editions_read"])
     print(
         f"day {res['target_day']}  ·  {res['captures_read']} capture(s) read, "
-        f"{n_ed} distinct edition(s)"
+        f"{n_ed} distinct edition(s), {res['distinct_contents']} distinct content(s), "
+        f"{res['distinct_bodies']} distinct bod(y/ies)"
     )
     print(f"  vessels dark on that day .......... {b[0]}–{b[1]} (certain–possible)")
     print(f"  knowable on the day, DERIVED ...... {res['knowable_on_the_day_DERIVED']}")

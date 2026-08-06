@@ -46,20 +46,25 @@ async function open(width, height) {
 
 // innerText of the work's root: the browser's own rendering of what is readable,
 // with hidden subtrees absent rather than merely invisible.
+//
+// The one thing innerText cannot carry is the number field: an <input> has a value, not
+// text, and at state 1 that value is empty. So before reading, the field's own string —
+// its value if the reader has typed one, otherwise its placeholder — is echoed into a
+// span at exactly the position the field occupies, and removed again afterwards. The
+// string is the page's own; no word of the house's is added by this script, so the
+// panel's void clause cannot fire on the extraction.
 const readText = (page) => page.evaluate(() => {
   const root = document.querySelector(".sd-root");
-  const control = document.getElementById("sd-hand");
+  const field = document.getElementById("sd-num");
+  let echo = null;
+  if (field) {
+    echo = document.createElement("span");
+    echo.textContent = field.value || field.getAttribute("placeholder") || "";
+    field.after(echo);
+  }
   const text = root.innerText.replace(/\n{3,}/g, "\n\n").trim();
-  // The control is an <input>: it has a value, not text. A screen reader announces both
-  // its label and that value; innerText carries neither. Both strings below are the
-  // page's own — no word of the house's is added, so the panel's void clause cannot fire
-  // on the extraction.
-  const label = control && document.querySelector('label[for="' + control.id + '"]');
-  const ctl = control
-    ? "\n\n" + (label ? label.innerText.trim() + "\n" : "") +
-      (control.getAttribute("aria-valuetext") ?? control.value)
-    : "";
-  return text + ctl;
+  if (echo) echo.remove();
+  return text;
 });
 
 // state 1 — as it loads, untouched
@@ -68,13 +73,13 @@ const readText = (page) => page.evaluate(() => {
   writeFileSync(join(here, "STATE-1.txt"), (await readText(page)) + "\n");
   await page.screenshot({ path: join(here, "render-1400.png"), fullPage: true });
 
-  // state 2 — one notch, the way a hand moves it
-  const hand = page.locator("#sd-hand");
-  await hand.evaluate((el) => {
-    el.value = String(Number(el.max));
-    el.dispatchEvent(new Event("input", { bubbles: true }));
-    el.dispatchEvent(new Event("change", { bubbles: true }));
-  });
+  // state 2 — the act performed, the way a hand performs it: a number typed into the
+  // field and the button pressed. The figure used here is 11, deterministically: it is
+  // the count visible on state 1 and therefore the answer the screen invites. It is this
+  // script's choice, not the work's — the work accepts any number of up to four digits.
+  await page.locator("#sd-num").fill("11");
+  await page.locator("#sd-commit").click();
+  await page.waitForSelector("#sd-last:not(:empty)");
   writeFileSync(join(here, "STATE-2.txt"), (await readText(page)) + "\n");
   await page.screenshot({ path: join(here, "render-1400-state2.png"), fullPage: true });
   await ctx.close();

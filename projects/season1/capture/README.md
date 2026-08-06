@@ -6,11 +6,28 @@ Two scripts, no dependencies beyond Python 3 and `curl`.
 python3 capture.py                      # fetch tonight's edition, write one immutable capture
 python3 day.py 2026-07-15               # hold one calendar day open and ask the work's question
 python3 day.py 2026-07-15 --json        # the same, machine-readable
+python3 edition.py                      # every capture: body hash, edition hash, edition, vessels
 ```
 
 `capture.py` writes `../captures/<UTC timestamp>.json` and never overwrites. Each capture
 records the URL, the UTC fetch time, the HTTP status, the byte count and the **sha256 of the raw
 body**, so anyone can re-fetch the page, hash it, and check that our parse belongs to those bytes.
+
+**Two hashes, since 2026-08-06 (session 70), because the record contradicted the instrument.**
+Until that night an edition was identified by the sha256 of the raw body, and on that test the
+19:17 capture of 5 August was "the same edition, byte for byte" as the 12:54 one. The capture of
+2026-08-06T04:36:19Z broke the test: **the body hash moved at an identical byte count while every
+field this work reads stayed identical.** So `edition.py` computes a second digest,
+`content_sha256`, over the edition's own material only — the printed edition date, the
+aggregates, the case of the day, the vessels. A body hash answers *did the response change*; the
+content hash answers *did the edition change*. It is computed from a capture file alone, so it
+applies to captures written before it existed, and **no committed capture was rewritten to add
+it**: captures are immutable, and a record that gets edited when the method improves is not a
+record. From that night's capture onward, `page_assets` also records the site's own fingerprinted
+asset paths — outside the edition and outside every tier, kept only so that a body hash which
+moves while the edition stands still can be attributed rather than guessed at. For the
+2026-08-06 capture it cannot: the earlier bodies were never kept, only their hashes, and this
+house does not claim to know what moved.
 
 `day.py` reads every committed capture and answers: for one calendar day, how many vessels were
 dark on it, and how many of them were knowable on the day itself. It prints **two** answers and

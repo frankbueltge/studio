@@ -1,7 +1,12 @@
 4 AUGUST 2026
 
-SOURCED name · flag · days dark · waters
-DERIVED both ends of every date
+the ships this day published as dark, on the day itself
+
+“Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).” — method sheet, The Ghost Fleet, frankbueltge.de
+
+SOURCED name · flag · days dark · waters — printed by the instrument
+DERIVED both ends of every date — worked out here, printed as a band
+OBSERVED first seen by this house — the capture that named the vessel
 
 2 JUN
 9 JUN
@@ -17,96 +22,125 @@ TUNAMAR
 PAN
 56 d dark
 dark 2–9 Jun → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 MICRONESIA103
 FSM
 39 d dark
 Marshallese EEZ
 dark 19–26 Jun → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 ALIZE
 ECU
 31 d dark
 Ecuadorian EEZ
 dark 27 Jun–4 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 FORTICA
 ECU
 26 d dark
 Ecuadorian EEZ
 dark 2–9 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 PANOFI MASTER
 GHA
 22 d dark
 Ghanaian EEZ
 dark 6–13 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 TRAVELER
 USA
 18 d dark
 United States EEZ (Alaska)
 dark 10–17 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 VICTORIA
 MEX
 17 d dark
 Mexican EEZ
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 PANOFI DISCOVERER
 GHA
 17 d dark
 Ghanaian EEZ
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 VESTERAALEN
 USA
 17 d dark
 United States EEZ (Alaska)
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 PACIFIC FURY
 USA
 17 d dark
 United States EEZ (Alaska)
 dark 11–18 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 EXCELLENCE
 USA
 16 d dark
 United States EEZ (Alaska)
 dark 12–19 Jul → back 28 Jul–4 Aug
+first seen 2026-08-05T04:39:32Z
 SOUTHERN SEAS NO.302
 SLB
 29 d dark
 Micronesian EEZ
 dark 30 Jun–7 Jul → back 29 Jul–5 Aug
-first seen in the edition of 5 August
+first seen 2026-08-05T12:54:00Z — edition of 5 August, the night after the day
 RICKY
 GBR
 28 d dark
 Ecuadorian EEZ (Galapagos)
 dark 1–8 Jul → back 29 Jul–5 Aug
-first seen in the edition of 5 August
+first seen 2026-08-05T12:54:00Z — edition of 5 August, the night after the day
 ALTAR 10
 ECU
 18 d dark
 Ecuadorian EEZ (Galapagos)
 dark 11–18 Jul → back 29 Jul–5 Aug
-first seen in the edition of 5 August
+first seen 2026-08-05T12:54:00Z — edition of 5 August, the night after the day
 
-knowable on 4 Aug — 11 of 0–14 · 79%–100%
+How many ships were dark on 4 August 2026?
 
-OBSERVED 11 vessels counted in the edition of 4 August (capture 2026-08-05T04:39:32Z · HTTP 200 · 35,473 bytes · sha256 ed3e54ec…); three more in the edition of 5 August (capture 2026-08-05T12:54:00Z · HTTP 200 · 35,485 bytes · sha256 17c07fc3…). A third capture, 2026-08-05T19:17:55Z, returned that same edition byte for byte and added nothing.
+Write a number. Nothing on this screen will answer it for you.
 
-on this screen: 2 editions, 3 captures by this house.
+11
+ships
 
-a ceiling from 2 editions, 3 captures: further nights can only add vessels to this day, so this share can only fall.
+YOURS — your number is not part of the record. It is not stored and it is not sent anywhere.
 
-drag — this adds the next edition this house captured; the day itself does not move.
-4 Aug edition
-+ 5 Aug edition
+YOU WROTE 11.
 
-the first screen ·$ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T05:00:00Z
-this screen ·$ python3 projects/season1/capture/day.py 2026-08-04
+11 of the 14 ships this record now places in 4 August 2026 stood in the edition of 4 August itself. Knowable on the day: 79 %–100 % — 11 of 0–14. A band, because the denominator is a band.
 
-day 2026-08-04  ·  3 capture(s) read, 2 distinct edition(s)
+A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.
+
+OBSERVED — every capture this house holds
+fetched (UTC)	status	bytes	body sha256	content	edition	vessels
+2026-08-05T04:39:32Z	200	35,473	ed3e54ec…	ee555746…	4 August 2026	11
+2026-08-05T12:54:00Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8
+2026-08-05T19:17:55Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8
+2026-08-06T04:36:19Z	200	35,485	aed92f4f…	47338b03…	5 August 2026	8
+
+4 captures. 2 editions.
+
+Two of these four captures added nothing to this day. They are printed here, after the count and not before it: a capture that adds nothing is a measurement, but on a first screen it reads as an answer, and it is not one.
+
+The fourth capture differs from the two before it in the hash of its bytes, at an identical byte count, while every field this work reads — edition date, vessel names, flags, durations, waters — is identical. Something outside this work's reading moved; this house does not claim to know what, because the earlier bodies were not kept. A raw body hash is not an edition's identity. The edition, and the list of vessels it carries, are — which is what the content column counts.
+
+State 1 is a state of this reading, not of this file. Everything the turn withholds stands in the source of this page, and always did.
+
+the day ·$ python3 projects/season1/capture/day.py 2026-08-04
+the editions ·$ python3 projects/season1/capture/edition.py
+
+day 2026-08-04  ·  4 capture(s) read, 2 distinct edition(s), 2 distinct content(s), 3 distinct bod(y/ies)
   vessels dark on that day .......... 0–14 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 79%–100%  (11 of 0–14)
-    (a ceiling from 2 edition(s), 3 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 2 edition(s), 4 capture(s): further nights can only add vessels to this day, so this share can only fall)
   possible TUNAMAR              PAN   56 d dark  arrived 0–0 days after the day
   possible MICRONESIA103        FSM   39 d dark  arrived 0–0 days after the day
   possible ALIZE                ECU   31 d dark  arrived 0–0 days after the day
@@ -124,11 +158,8 @@ day 2026-08-04  ·  3 capture(s) read, 2 distinct edition(s)
 
 verbatim, unedited
 
-Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name. Captures held by this house: 2026-08-05T04:39:32Z (HTTP 200, 35,473 bytes, sha256 ed3e54ec4557264d92a74e4052c1740cfba96cf26e0d310e355b7d42fd1336e5); 2026-08-05T12:54:00Z (HTTP 200, 35,485 bytes, sha256 17c07fc3312b10aa9c9a2ed9b9fe7aa49e11f954da4cea0e609858305775b3a8); 2026-08-05T19:17:55Z (HTTP 200, 35,485 bytes, same sha256 — the same edition, byte for byte).
+No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Ours is a floor: 14 is what this record can place in 4 August 2026, not what was on the sea that day.
 
-Method: https://frankbueltge.de/werke/ghost-fleet/ — “Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).”
+Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name.
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
-
-drag — this adds the next edition this house captured; the day itself does not move.
-4 Aug edition + 5 Aug edition
