@@ -67,44 +67,61 @@ def vessel_key(v):
 def index(caps):
     """One row per distinct vessel, carrying its first sighting in OUR record.
 
-    Waters are filled from whichever capture carried them, not only the first — the case
-    of the day has no waters field at all (upstream prints it as prose), so a vessel that
-    entered this record as the case of the day would otherwise stand on the face with no
-    waters for as long as the record lasts. `case_waters` recovers the printed string from
-    the prose; see `edition.py` for the warrant and its exact size. Everything else still
-    takes the FIRST capture: first sighting is the measurement, and it may not be revised.
+    EVERY published field of a vessel comes from ONE capture — the first sighting — and
+    that is why this runs in two passes rather than one. First sighting is the
+    measurement, and it may not be revised.
+
+    Rewritten session 74 (2026-08-07), discharging the latent defect
+    `VERIFIER-73.md` recorded and `PROJECT.md` carried as owed item (c). The single-pass
+    version filled a missing waters string from *whichever* capture happened to carry
+    one, so a vessel first seen without waters could later stand on the face with waters
+    read out of a different night's edition — a field silently taken from a capture that
+    is not the vessel's own first sighting. It was never live (today every vessel's
+    waters come from its first-sighting capture), and a defect is repaired before it
+    goes live or the repair is a story about luck.
+
+    The case of the day still needs its exception, and it is now exactly one capture
+    wide: upstream prints that one vessel's waters as prose and never as a list row, so
+    `case_waters` recovers the printed string — from the FIRST-SIGHTING capture only.
+    See `edition.py` for the warrant and its size.
     """
-    rows = {}
+    # Pass 1 — for each vessel, which capture is its first sighting? Earliest edition
+    # date wins; captures arrive in fetch order, so an equal edition date keeps the
+    # earlier fetch. Nothing is read off a vessel here except its identity.
+    first = {}
     for c in caps:
         ed = c.get("edition_date")
-        cw = case_waters(c)
         for v in c.get("vessels", []):
             k = vessel_key(v)
-            r = rows.setdefault(
-                k,
-                {
-                    "name": v["name"],
-                    "flag": v["flag"],
-                    "days_dark": v.get("days_dark"),
-                    "waters": v.get("waters"),
-                    "first_edition_date": ed,
-                    "first_capture": c["_path"],
-                    "first_seen_utc": c["fetch"]["fetched_at_utc"],
-                    "editions": [],
-                },
-            )
-            if not r["waters"]:
-                r["waters"] = v.get("waters") or (
-                    cw if v.get("role") == "case_of_the_day" else None
-                )
-            if ed and ed not in r["editions"]:
+            prev = first.get(k)
+            if prev is None or (ed and prev[0] and ed < prev[0]):
+                first[k] = (ed, c, v)
+
+    # Pass 2 — build each row from its own first-sighting capture, and only there.
+    rows = {}
+    for k, (ed, c, v) in first.items():
+        rows[k] = {
+            "name": v["name"],
+            "flag": v["flag"],
+            "days_dark": v.get("days_dark"),
+            "waters": v.get("waters")
+            or (case_waters(c) if v.get("role") == "case_of_the_day" else None),
+            "first_edition_date": ed,
+            "first_capture": c["_path"],
+            "first_seen_utc": c["fetch"]["fetched_at_utc"],
+            "editions": [],
+        }
+
+    # The edition list is the one field that is legitimately cumulative: it records every
+    # edition in which this record has seen the vessel, which is a fact about the record.
+    for c in caps:
+        ed = c.get("edition_date")
+        if not ed:
+            continue
+        for v in c.get("vessels", []):
+            r = rows.get(vessel_key(v))
+            if r is not None and ed not in r["editions"]:
                 r["editions"].append(ed)
-            if ed and r["first_edition_date"] and ed < r["first_edition_date"]:
-                r.update(
-                    first_edition_date=ed,
-                    first_capture=c["_path"],
-                    first_seen_utc=c["fetch"]["fetched_at_utc"],
-                )
     return rows
 
 

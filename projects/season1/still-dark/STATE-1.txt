@@ -133,9 +133,11 @@ The share of this day's darkness that was knowable on the day itself:
 as this page published it at 04:57 UTC on 6 August, from 4 saved copies of 2 lists —
 79 %–100 %
 11 of 0–14
-as this record measures it now, from 7 saved copies of 3 lists —
+as this record measures it now, from 8 saved copies of 3 lists —
 69 %–100 %
 11 of 0–16
+
+Sixteen ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–16, and the share runs from 11 of 16 to 11 of 11.
 
 The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.
 
@@ -148,12 +150,12 @@ the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z
 
-day 2026-08-04  ·  7 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)
+day 2026-08-04  ·  8 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 5 distinct bod(y/ies)
   vessels dark on that day .......... 0–16 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 69%–100%  (11 of 0–16)
-    (a ceiling from 3 edition(s), 7 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 3 edition(s), 8 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 
@@ -166,8 +168,9 @@ fetched (UTC)	status	bytes	body sha256	content	edition	vessels
 2026-08-06T08:16:42Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
 2026-08-06T14:22:17Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
 2026-08-06T15:28:00Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
+2026-08-07T04:38:28Z	200	36,071	74f093f7…	53114dfe…	6 August 2026	7
 
-One list came back in two different sets of bytes while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both.
+Two lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both.
 
 No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 16 is what this record can place in 4 August 2026, not what was on the sea that day.
 

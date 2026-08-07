@@ -275,6 +275,12 @@
     margin: 0 0 0.35rem;
   }
   .sd-root .sd-fall-line b { font-weight: 700; }
+  /* The denominator gloss sits directly under the figures it explains and is set no
+     louder than the lines around it: it is a repair, not a new voice.
+     NOT named .sd-band: that class is already the per-vessel date band on every row of
+     the field, and a second meaning for it would have recoloured sixteen rows while the
+     edit's own diff looked like one line. */
+  .sd-root .sd-bandnote { margin-top: 0.15rem; color: var(--sd-dim); }
   .sd-root .sd-quoted {
     margin: 0.6rem 0 0;
     padding-left: 1.4ch;
@@ -701,9 +707,10 @@
       "figure": "69 %–100 %",
       "of": "11 of 0–16",
       "editions": 3,
-      "captures": 7
+      "captures": 8
     },
     "as_of": "2026-08-06T04:36:19Z",
+    "band": "Sixteen ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–16, and the share runs from 11 of 16 to 11 of 11.",
     "held": "The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.",
     "moved": "What grew was the total: ALBACORA CUATRO and BONAMI — two ships that entered the record with the list of 6 AUG, two days after the day.",
     "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
@@ -774,9 +781,18 @@
         "content_sha256": "53114dfe",
         "edition_date_printed": "6 August 2026",
         "vessels": 7
+      },
+      {
+        "fetched_at_utc": "2026-08-07T04:38:28Z",
+        "http_status": 200,
+        "bytes": 36071,
+        "sha256": "74f093f7",
+        "content_sha256": "53114dfe",
+        "edition_date_printed": "6 August 2026",
+        "vessels": 7
       }
     ],
-    "caption": "One list came back in two different sets of bytes while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both."
+    "caption": "Two lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both."
   },
   "commands": [
     {
@@ -792,7 +808,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z"
     }
   ],
-  "output": "day 2026-08-04  ·  7 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 4 distinct bod(y/ies)\n  vessels dark on that day .......... 0–16 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)\n    (a ceiling from 3 edition(s), 7 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  8 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 5 distinct bod(y/ies)\n  vessels dark on that day .......... 0–16 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)\n    (a ceiling from 3 edition(s), 8 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 16 is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -823,6 +839,10 @@
   <section class="sd-fall">
     <p class="sd-fall-q" id="sd-fall-q"></p>
     <div class="sd-shares" id="sd-shares"></div>
+    <!-- The gloss on the denominator, ordered by DRAMATURG-74 §A and placed here, below
+         the figures, because a reader does not want a definition before they know they
+         have a problem. -->
+    <p class="sd-fall-line sd-bandnote" id="sd-bandnote"></p>
     <p class="sd-fall-line" id="sd-held"></p>
     <p class="sd-fall-line" id="sd-moved"></p>
     <blockquote class="sd-quoted" id="sd-quoted"></blockquote>
@@ -1085,6 +1105,7 @@
     "sd-share-now"
   ));
 
+  document.getElementById("sd-bandnote").textContent = data.fall.band;
   document.getElementById("sd-held").textContent = data.fall.held;
   document.getElementById("sd-moved").textContent = data.fall.moved;
 

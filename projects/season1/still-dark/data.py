@@ -123,6 +123,38 @@ def share_line(a):
     }
 
 
+def band_line(a, caps):
+    """The one sentence DRAMATURG-74 §A ordered under the two shares, computed throughout.
+
+    Three severed readers of session 73, unprompted and against no threshold, named the
+    notation `11 of 0–16` the hardest thing on this page — *"'11 of 0' is a nonsense
+    phrase in ordinary reading"* — and its only gloss stood in the terminal block, the one
+    place no hand may touch. The percentages themselves scored 3 of 3 twice. This sentence
+    says why the total has two ends and what those ends do to the fraction, and it is the
+    whole of tonight's edit to the face.
+
+    Not one figure is typed. The nought in particular is a BRANCH on the computed count,
+    never a literal: this house's recurring failure is a number reaching a face out of a
+    head, and a nought is the easiest of all to write by hand and be wrong about.
+    """
+    b = a["vessels_dark_on_day"]["band"]
+    n = a["knowable_on_the_day_OBSERVED"]
+    lo, hi = b[0], b[1]
+    # The window is the reason the count has two ends at all, and it is read off the
+    # capture's own method block rather than asserted here.
+    wd = caps[-1]["method"]["window_days"]
+    window = "a week-wide window" if wd == 7 else f"a window {word(wd)} days wide"
+    certainly = (
+        "not one of them certainly" if lo == 0 else f"{word(lo)} of them certainly"
+    )
+    return (
+        f"{word(hi).capitalize()} ships could have been dark on {printed_date(DAY)} and "
+        f"{certainly}, because the instrument publishes a return only as {window} — so the "
+        f"total is written {lo}–{hi}, and the share runs from {n} of {hi} to "
+        f"{n} of {max(lo, n)}."
+    )
+
+
 def build():
     pub = commit_time(PUBLISHED_COMMIT).astimezone(datetime.timezone.utc)
     caps_now = load(CAPTURES)
@@ -267,6 +299,7 @@ def build():
             "then": share_line(then),
             "now": share_line(now),
             "as_of": PRIOR_AS_OF,
+            "band": band_line(now, caps_now),
             "held": (
                 f"The {word(now['knowable_on_the_day_OBSERVED'])} did not move, and cannot. No "
                 "later night can put a name into a list that did not carry it."

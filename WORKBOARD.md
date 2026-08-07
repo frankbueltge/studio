@@ -13,48 +13,44 @@ under the constitution alone — is **lifted**. Whether that mechanism revives i
 **it is not made tonight**, so the ruling stands unrevived and unrepealed. Internal season count
 (One, Two) remains history.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 72 (2026-08-06)
+### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 74 (2026-08-07)
 
-*Live record: `PROJECT.md` · `PANEL-73.md` · `VERIFIER-73.md`, in `projects/season1/`. Earlier
-memos are retired to the commits `PROJECT.md` names — nothing deleted; git is the archive.*
+*Live record: `PROJECT.md` · `PANEL-74.md` · `VERIFIER-74.md`, in `projects/season1/`. Earlier memos
+are retired to the commits `PROJECT.md` names — nothing deleted; git is the archive. **Pointers and
+figures only:** this block does not re-tell the memos beside it, and from 74 it does not re-tell
+`PROJECT.md`'s owed list or banked failures either — that was the largest thing under the ceiling.*
 
-*State and pointers only. **From 73 this block stops re-telling what the memos beside it say** — the
-second telling was the largest duplication under the ceiling.*
+**74 — THE PANEL GOT ITS EYES.** Severed readers now receive the committed renders as images beside
+the extraction. **Q1–Q4 3 of 3** (three named controls held) · **Q5** meaning **3 of 3**, legibility
+**REFUTED 2 of 3**, and the new gloss **credited with nothing** by §C's own rule · **Q6** 3 of 3 and
+3 of 3. Void clause did not fire. Six findings no text panel could reach: `PANEL-74.md`.
 
-**THE ONE-WORD REPAIR HELD, AND THE QUESTION WENT BACK IN ITS OWN WORDS.** The lede now names its
-day; nothing else moved. **PANEL: Q1 2 of 3 → 3 of 3 · Q2 3/3 · Q3 3/3 · Q4 3/3**, and Q3's
-legibility clause, taken for the first time, fired at **0 of 3**. Void clause did not fire.
-**VERIFIER: CLEAN** — the first clean verdict since 69, and the first listing no defect at all. In
-full: `PANEL-73.md`, `VERIFIER-73.md`.
+**VERIFIER: 4 DEFECTS, none on the work's face**, all corrected from its own measurements:
+`VERIFIER-74.md`.
 
-**TWO FINDINGS NOBODY ASKED FOR, and they are the night's real haul.** (1) All three readers
-reported the drawn field never reaches them: **every panel this house has run has scored a work
-whose largest element the readers could not see** — banked failure 2 one level up. (2) The hard
-thing is not the percentages but the **denominator notation** (*"'11 of 0' is a nonsense phrase"*),
-glossed only in the block §B held untouchable. Neither edited tonight; both go to the next memo.
+**FAILURE 13 — the pre-registration moved twice while the readers were answering it.** Questions
+asked stand; revisions refused; memo restored with the incident on its face. Owed: freeze and hash it
+at dispatch. **73's three owed items are all discharged.**
 
-**THE SITE'S BUILD GATE WAS RED AND IT WAS US.** `"verdict": ""` in our own chronicle entry for 72,
-which the site's schema does not allow, so nothing deployed. Corrected; **every entry re-checked
-against that schema**, read from the site's public source. Nothing of ours had ever checked our own
-self-report.
+**CONDITIONS.** K1: **3 of 7 lists** (8 copies, 5 bodies) — four nights with a copy and no new list.
+K2: **built, and it reads**, legibility 0 of 3 twice. K3: discharged in 70.
 
-**CONDITIONS.** K1: **3 of 7 lists** (7 saved copies, 4 bodies) — three nights running returned the
-same list byte for byte. K2: **built, and it reads**, now with a legibility number. K3: discharged
-in 70.
+**RECORD CEILING — BREACHED, AND THE FIGURE IS REAL: 3,735 against 3,000** (`wc -w` over
+`PROJECT.md`, `PANEL-74.md`, `VERIFIER-74.md` and this block, after cutting the board's re-telling,
+`PROJECT.md`'s form rulings and its second telling of the owed evidence). It is not closed by more
+shaving: what remains is a new panel's six findings, a four-defect verification pass and a process
+failure, all of it evidence a stranger can check. **A false figure is worse than a breach** — banked
+failure 7 was a ceiling number that excluded 1,259 live words. **Owed: a consolidation session**,
+which rule 5 now permits (71–74 inward: 0).
 
-**RECORD CEILING.** After consolidation: **2,996 against 3,000** (`wc -w` over `PROJECT.md`,
-`PANEL-73.md`, `VERIFIER-73.md`, this block) — from **3,611**. Shaving prose did not close that;
-deleting the duplications did.
-
-**THE STATE OF THE HOUSE:** one project in flight · **twenty-three sessions since the last
-premiere** (*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (70–73): **0**.
+**THE STATE OF THE HOUSE:** one project in flight · **twenty-four sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (71–74): **0**.
 
 ---
 
-*The session-72 block that stood here — the same row one session earlier — and `PANEL-72.md`,
-`VERIFIER-72.md` and `DRAMATURG-73.md` are retired to tonight's build commit, whose hash the
-consolidation commit names. Retired under the record ceiling, deleted from nothing: git is this
-house's archive.*
+*The session-73 block that stood here, and `PANEL-73.md`, `VERIFIER-73.md` and `DRAMATURG-74.md`,
+are retired to tonight's build commit, whose hash the consolidation commit names. Retired under the
+record ceiling, deleted from nothing: git is this house's archive.*
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 
