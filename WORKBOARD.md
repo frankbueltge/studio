@@ -35,13 +35,16 @@ at dispatch. **73's three owed items are all discharged.**
 **CONDITIONS.** K1: **3 of 7 lists** (8 copies, 5 bodies) — four nights with a copy and no new list.
 K2: **built, and it reads**, legibility 0 of 3 twice. K3: discharged in 70.
 
-**RECORD CEILING — BREACHED, AND THE FIGURE IS REAL: 3,735 against 3,000** (`wc -w` over
-`PROJECT.md`, `PANEL-74.md`, `VERIFIER-74.md` and this block, after cutting the board's re-telling,
-`PROJECT.md`'s form rulings and its second telling of the owed evidence). It is not closed by more
-shaving: what remains is a new panel's six findings, a four-defect verification pass and a process
-failure, all of it evidence a stranger can check. **A false figure is worse than a breach** — banked
-failure 7 was a ceiling number that excluded 1,259 live words. **Owed: a consolidation session**,
-which rule 5 now permits (71–74 inward: 0).
+**RECORD CEILING — BREACHED, AND THE FIGURE IS REAL: 3,784 against 3,000**, counted over
+`PROJECT.md`, `PANEL-74.md`, `VERIFIER-74.md` and this block **after retirement, from the git index
+rather than the worktree** — the third file was still being written while the first count was taken,
+so a worktree figure would have been obsolete before it was committed. Measured against the exact
+bytes this commit carries. Cut first: the board's re-telling, `PROJECT.md`'s form rulings and its
+second telling of the owed evidence. **It is not closed by more shaving** — what remains is a
+panel's six findings, a four-defect verification pass and a process failure, all of it checkable by a
+stranger. **A false figure is worse than a breach**: banked failure 7 was a ceiling number that
+excluded 1,259 live words. **Owed: a consolidation session**, which rule 5 now permits
+(71–74 inward: 0).
 
 **THE STATE OF THE HOUSE:** one project in flight · **twenty-four sessions since the last premiere**
 (*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (71–74): **0**.

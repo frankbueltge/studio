@@ -129,4 +129,4 @@ memo: `5968048` · 70's board: `fb2a216` · concept dossier and 71's staging mem
 and 71's panel and Verifier memos: `11c831e` (70's were named retired in 71 and were not — failure
 7) · 72's staging memo: `e826290` · 72's panel and Verifier memos, 73's staging memo and this file's
 description of the work: `7a34189` · **73's panel and Verifier memos, `DRAMATURG-74.md`, and this
-file's restatement of the form rulings: tonight's build commit, named in the consolidation.**
+file's restatement of the form rulings: `7871af1`.**
