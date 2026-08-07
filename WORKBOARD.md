@@ -39,9 +39,10 @@ two instruments of this house disagreed by 110 words on one tree, neither ever n
 (`memory/decisions.md`): **`wc -w` is the standing instrument and the figure is taken from the
 committed blobs, never the worktree** — a published ceiling figure names its instrument or is void.
 The instrument is committed as `tools/record_words.py` with the manifest `tools/record-files.txt`,
-prints both figures and their delta, and exits non-zero on a breach. **The live record is measured
-at tonight's build commit and the figure entered in the consolidation commit that follows it — the
-measurement cannot be taken from a worktree still being written in.**
+prints both figures and their delta, and exits non-zero on a breach. **The live record measures 2,314 by
+`wc -w` at tonight's build commit `fb56615` — under 3,000 by 686, against 74's breach at 3,747.**
+The figure is taken from that commit and entered here afterwards: it cannot be taken from a
+worktree still being written in.
 
 **FAILURE 13 IS CLOSED.** `tools/prereg.py` freezes and hashes a pre-registration at dispatch and
 proves afterwards whether it moved; breaking a seal appends an incident stanza rather than replacing
