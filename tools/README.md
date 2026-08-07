@@ -1,0 +1,81 @@
+# tools/
+
+Three dependency-free instruments. Python 3 stdlib only; `git` and `wc` on
+`PATH`.
+
+## `record_words.py` — the record ceiling, with the instrument named
+
+**Repairs:** a measurement whose instrument was unstated. A session once
+published 3,784 words for a project's process record; the same committed
+tree measured 3,857 by Python's `str.split()` and 3,747 by `wc -w`, because
+`wc -w` merges tokens around em dashes and curly quotes. Sessions 71-73 had
+all reported `wc -w` without ever saying so.
+
+**Ruling, standing as of tonight:** `wc -w` is this house's standing
+instrument. The figure is taken from the **committed** blobs
+(`git show <ref>:<path>`), never the worktree — a worktree figure can be
+obsolete before it is even committed.
+
+```
+python3 tools/record_words.py
+```
+
+Reads `tools/record-files.txt` (repo-relative paths, whole files or
+`path :: <heading text>` for one section), prints a table under both
+instruments — `wc -w` as THE STANDING INSTRUMENT, `str.split()` as
+reference only — and their delta, then `UNDER by N` or `BREACH by N`
+against a ceiling (`--ceiling`, default 3000).
+
+Options: `--manifest <file>`, `--ref <git ref>` (default `HEAD`),
+`--worktree` (working tree instead, with a loud warning). Exit codes: `0`
+under/equal, `1` breach, `2` on error (missing path, ambiguous heading, not
+a git repo).
+
+## `prereg.py` — freeze and verify a pre-registration
+
+**Repairs:** a pre-registration that moved twice while severed readers were
+answering it. The staging memo of questions and pass marks, written before
+dispatch, was rewritten mid-panel — found only by accident. Nothing had
+ever frozen, hashed or checked the one document whose value is that it
+cannot move after a reading.
+
+```
+python3 tools/prereg.py freeze <file>                # seal it at dispatch
+python3 tools/prereg.py verify <file>                # UNMOVED / MOVED
+python3 tools/prereg.py freeze <file> --break-seal   # deliberate, traced change
+python3 tools/prereg.py status [dir]                 # scan a directory of seals
+```
+
+`freeze` writes a `<file>.frozen` sidecar: sha256, byte length, UTC
+timestamp, path. A second `freeze` without `--break-seal` is refused (exit
+`3`). `--break-seal` never replaces the record — it appends a stanza, so a
+moved memo always leaves a trace. `verify` exits `0`/`UNMOVED` if bytes
+match the first seal, `1`/`MOVED` if not, `2` if no seal exists — unfrozen
+is a failure, not a pass.
+
+## `premiere_gaps.py` — what a diagram of this record is drawn from
+
+**Repairs nothing; answers a question this house cannot otherwise answer.**
+On 2026-08-07 the site's build gate was red all day on an assertion in the
+site's own suite — `RECOVERY overlaps ONE TAP` — about two work names being
+lettered over each other on a diagram built from this record. This house
+cannot read that repository and cannot run that test. It can print what the
+diagram is drawn from.
+
+```
+python3 tools/premiere_gaps.py          # or --json
+```
+
+Reads `chronicle.json`: every `"ship"` entry that names a work, in date
+order, with the gap to the previous premiere, the smallest gap named, and
+the record's span in days. Nothing typed by hand.
+
+## `selftest.sh` — proof the instruments work
+
+```
+bash tools/selftest.sh
+```
+
+Runs a full freeze/verify/break-seal cycle in a throwaway temp directory it
+cleans up, plus a real run of `record_words.py` against the manifest.
+Prints `SELFTEST PASSED` and exits 0 only if every assertion holds.

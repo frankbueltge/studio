@@ -2,7 +2,7 @@
 
 one day of the sea, and how much of it was knowable on the day itself
 
-Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Five arrived later — two of them after this page had printed its figure.
+Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Six arrived later — one of them after this page had printed its figure.
 
 A ship's disappearance reaches the instrument's daily list only when the ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for weeks afterwards. This page holds one day open and publishes how much of its darkness could be placed in it on the day, and how much arrived later.
 
@@ -128,34 +128,43 @@ Marshallese EEZ
 dark 8–15 Jul → back 30 Jul–6 Aug
 first seen 6 AUG
 
+ADDED BY THE LIST OF 7 AUG — three days after the day (1 ship)
+
+WANGBIAO-8730
+CHN
+19 d dark
+Tuvaluan EEZ
+dark 12–19 Jul → back 31 Jul–7 Aug
+first seen 7 AUG
+
 The share of this day's darkness that was knowable on the day itself:
 
-as this page published it at 04:57 UTC on 6 August, from 4 saved copies of 2 lists —
-79 %–100 %
-11 of 0–14
-as this record measures it now, from 8 saved copies of 3 lists —
+as this page published it at 08:36 UTC on 6 August, from 8 saved copies of 3 lists —
 69 %–100 %
 11 of 0–16
+as this record measures it now, from 9 saved copies of 4 lists —
+65 %–100 %
+11 of 0–17
 
-Sixteen ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–16, and the share runs from 11 of 16 to 11 of 11.
+17 ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–17, and the share runs from 11 of 17 to 11 of 11.
 
 The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.
 
-What grew was the total: ALBACORA CUATRO and BONAMI — two ships that entered the record with the list of 6 AUG, two days after the day.
+What grew was the total: WANGBIAO-8730 — one ship that entered the record with the list of 7 AUG, three days after the day.
 
 “A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.”
-printed on this page 6 August 2026 at 04:57 UTC, in commit 5968048 — before the capture that made it fall.
+printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall.
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
-the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z
+the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-07T04:38:28Z
 
-day 2026-08-04  ·  8 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 5 distinct bod(y/ies)
-  vessels dark on that day .......... 0–16 (certain–possible)
+day 2026-08-04  ·  9 capture(s) read, 4 distinct edition(s), 4 distinct content(s), 6 distinct bod(y/ies)
+  vessels dark on that day .......... 0–17 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
-  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)
-    (a ceiling from 3 edition(s), 8 capture(s): further nights can only add vessels to this day, so this share can only fall)
+  SHARE knowable on the day ......... 65%–100%  (11 of 0–17)
+    (a ceiling from 4 edition(s), 9 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 
@@ -169,10 +178,11 @@ fetched (UTC)	status	bytes	body sha256	content	edition	vessels
 2026-08-06T14:22:17Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
 2026-08-06T15:28:00Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
 2026-08-07T04:38:28Z	200	36,071	74f093f7…	53114dfe…	6 August 2026	7
+2026-08-07T18:15:53Z	200	36,065	4f4413b0…	988267cf…	7 August 2026	6
 
 Two lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both.
 
-No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 16 is what this record can place in 4 August 2026, not what was on the sea that day.
+No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 17 is what this record can place in 4 August 2026, not what was on the sea that day.
 
 Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name.
 

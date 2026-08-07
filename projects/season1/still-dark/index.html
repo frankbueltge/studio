@@ -394,7 +394,7 @@
     "edition_source": "https://frankbueltge.de/ghost-fleet/",
     "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories)."
   },
-  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Five arrived later — two of them after this page had printed its figure.",
+  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Six arrived later — one of them after this page had printed its figure.",
   "field": [
     {
       "edition": "2026-08-04",
@@ -694,28 +694,54 @@
           "seen": "first seen 6 AUG"
         }
       ]
+    },
+    {
+      "edition": "2026-08-07",
+      "edition_printed": "7 August 2026",
+      "days_after": 3,
+      "label": "ADDED BY THE LIST OF 7 AUG — three days after the day",
+      "count": 1,
+      "rows": [
+        {
+          "name": "WANGBIAO-8730",
+          "flag": "CHN",
+          "days_dark": 19,
+          "waters": "Tuvaluan EEZ",
+          "went_dark_between": [
+            "2026-07-12",
+            "2026-07-19"
+          ],
+          "resurfaced_between": [
+            "2026-07-31",
+            "2026-08-07"
+          ],
+          "band_text": "dark 12–19 Jul → back 31 Jul–7 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/0c20b9a08-80de-4ba9-52f7-561ae5f7c705",
+          "seen": "first seen 7 AUG"
+        }
+      ]
     }
   ],
   "fall": {
     "then": {
-      "figure": "79 %–100 %",
-      "of": "11 of 0–14",
-      "editions": 2,
-      "captures": 4
-    },
-    "now": {
       "figure": "69 %–100 %",
       "of": "11 of 0–16",
       "editions": 3,
       "captures": 8
     },
-    "as_of": "2026-08-06T04:36:19Z",
-    "band": "Sixteen ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–16, and the share runs from 11 of 16 to 11 of 11.",
+    "now": {
+      "figure": "65 %–100 %",
+      "of": "11 of 0–17",
+      "editions": 4,
+      "captures": 9
+    },
+    "as_of": "2026-08-07T04:38:28Z",
+    "band": "17 ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–17, and the share runs from 11 of 17 to 11 of 11.",
     "held": "The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.",
-    "moved": "What grew was the total: ALBACORA CUATRO and BONAMI — two ships that entered the record with the list of 6 AUG, two days after the day.",
+    "moved": "What grew was the total: WANGBIAO-8730 — one ship that entered the record with the list of 7 AUG, three days after the day.",
     "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
-    "published_when": "printed on this page 6 August 2026 at 04:57 UTC, in commit 5968048 — before the capture that made it fall",
-    "then_published": "at 04:57 UTC on 6 August"
+    "published_when": "printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall",
+    "then_published": "at 08:36 UTC on 6 August"
   },
   "ledger": {
     "rows": [
@@ -790,6 +816,15 @@
         "content_sha256": "53114dfe",
         "edition_date_printed": "6 August 2026",
         "vessels": 7
+      },
+      {
+        "fetched_at_utc": "2026-08-07T18:15:53Z",
+        "http_status": 200,
+        "bytes": 36065,
+        "sha256": "4f4413b0",
+        "content_sha256": "988267cf",
+        "edition_date_printed": "7 August 2026",
+        "vessels": 6
       }
     ],
     "caption": "Two lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both."
@@ -805,11 +840,11 @@
     },
     {
       "label": "the night before",
-      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z"
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-07T04:38:28Z"
     }
   ],
-  "output": "day 2026-08-04  ·  8 capture(s) read, 3 distinct edition(s), 3 distinct content(s), 5 distinct bod(y/ies)\n  vessels dark on that day .......... 0–16 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 69%–100%  (11 of 0–16)\n    (a ceiling from 3 edition(s), 8 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
-  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 16 is what this record can place in 4 August 2026, not what was on the sea that day."
+  "output": "day 2026-08-04  ·  9 capture(s) read, 4 distinct edition(s), 4 distinct content(s), 6 distinct bod(y/ies)\n  vessels dark on that day .......... 0–17 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 65%–100%  (11 of 0–17)\n    (a ceiling from 4 edition(s), 9 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 17 is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
 

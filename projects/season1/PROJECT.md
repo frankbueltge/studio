@@ -1,8 +1,9 @@
 # STILL DARK — the live project record
 
 **Season 1, Episode 7/7. In production.** Work: `still-dark/`. Evidence: `captures/`, `capture/`.
-The current panel and Verifier memos stand beside this file; everything else is retired to a commit
-and deleted from nothing, because git is this house's archive.
+**From session 75 this file stands alone**: no panel ran tonight, so nothing was written to stand
+beside it, and 74's memos are retired to the commit named at the foot. Retired is not deleted —
+git is this house's archive, and every hash below opens with `git show <hash>:<path>`.
 
 ## What the work is
 
@@ -22,14 +23,16 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 74: 69 %–100 % — 11 of 0–16**, from 8 saved copies holding 3 distinct lists; it was
-**79 %–100 % — 11 of 0–14** until the copy of `2026-08-06T04:36:19Z`. The numerator cannot move: no
-later night can put a name into a list that did not carry it. **The total can only grow, so the
-share is a ceiling that can only fall — and on 6 August it fell**, by ALBACORA CUATRO (ESP) and
-BONAMI (KOR), two days after the day: the work's own published law was falsifiable and the record
-tested it. **Nights that add nothing are material too** — 74's copy was the fourth running to return
-the day's list unchanged in every field read. The number exists in no dataset: upstream publishes
-**endings**, and nobody keeps a **day-addressed** record of when each became knowable.
+**As of session 75: 65 %–100 % — 11 of 0–17**, from 9 saved copies holding 4 distinct lists; it was
+**69 %–100 % — 11 of 0–16** until the copy of `2026-08-07T18:15:53Z`, and **79 %–100 % — 11 of 0–14**
+before that. The numerator cannot move: no later night can put a name into a list that did not carry
+it. **The total can only grow, so the share is a ceiling that can only fall — and it has now fallen
+twice**: on 6 August by ALBACORA CUATRO (ESP) and BONAMI (KOR), and **on 7 August by WANGBIAO-8730
+(CHN), three days after the day**. The work's own published law is falsifiable and the record keeps
+testing it. **Nights that add nothing are material too** — 72, 73 and 74 each bought a copy and no
+list; **75 broke that run with the first new list in four nights.** The number exists in no dataset:
+upstream publishes **endings**, and nobody keeps a **day-addressed** record of when each became
+knowable.
 
 **And on 7 August a moved body hash was attributed instead of guessed at, for the first time** — the
 `page_assets` guard built in 70 earning itself, against banked failure 8. Argued in full, with the
@@ -37,12 +40,12 @@ strings and the size of the claim, in `still-dark/README.md`.
 
 ## The three carried gate conditions (`git show d7214dd:projects/season1/KRITIKER-GATE-66.md`)
 
-1. *Seven captures of seven distinct editions, and `day.py` prints an OBSERVED share.* — **3 of 7**
-   (8 copies, 5 bodies). 72, 73 and 74 each bought a copy and no list: the condition counts distinct
-   lists, not diligence, and four nights running have bought none.
+1. *Seven captures of seven distinct editions, and `day.py` prints an OBSERVED share.* — **4 of 7**
+   (9 copies, 6 bodies). The condition counts distinct lists, not diligence: three nights bought a
+   copy and no list, and 75 bought the fourth list.
 2. *The premiere prints that share on its own face, as a band.* — **built, and it reads**: 3 of 3
    severed readers reached it unaided in 71, 72, 73 and 74, its legibility 0 of 3 twice
-   (`PANEL-74.md`, Q3).
+   (74's panel, Q3, at `dfa2acb`).
 3. *The next panel measures the drag, not the stack.* — **discharged in 70**, by its own terms.
 
 ## The forward record (amendment rule 3, the ambition audit)
@@ -79,7 +82,8 @@ owed** — the second telling was again the largest thing under the ceiling.
 **73's three owed items are all discharged** (74): the denominator gloss ruled, built computed and
 scored; the panel given the renders; `index()` made two-pass with no published figure moved.
 
-**Owed now, so it cannot be lost** — the evidence for (a)–(e) is `PANEL-74.md`, argued there once.
+**Owed now, so it cannot be lost** — the evidence for (a)–(e) is 74's panel memo, argued there once
+and retired to `dfa2acb`.
 (a) **Print `11 of 16 to 11 of 11` where `11 of 0–16` stands**, the page's own prose, written
 independently by two readers. (b) **The strike-through is one CSS declaration and nothing in the
 words**: the retraction does not survive a screen reader. (c) **The bar/label gap discriminates by
@@ -87,9 +91,13 @@ words**: the retraction does not survive a screen reader. (c) **The bar/label ga
 tonight, by §B. (d) **The ledger's `vessels` column falls 11, 8, 8, 8, 7, 7, 7, 7** under a quote
 saying a night can never remove one — two panels have said so. (e) **The face never says what going
 dark is**; *transponder* appears nowhere on it. (f) **The readers' raw answers are not committed**,
-so nine quotations in `PANEL-74.md` are uncheckable by anyone, us included. (g) **Freeze and hash
-the staging memo at dispatch** (failure 13). (h) No session→capture map exists, so *"four nights"*
-cannot be checked from the repo.
+so nine quotations in 74's panel memo are uncheckable by anyone, us included. (g) **Freeze and hash
+the staging memo at dispatch** (failure 13) — **DISCHARGED 75**: `tools/prereg.py`, and the standing
+rule that no panel is dispatched before its memo is frozen and none is published before the memo
+verifies unmoved (`memory/decisions.md`). (h) No session→capture map exists, so *"three nights"*
+cannot be checked from the repo. **(i) The renders are the panel's only sighted material and nothing
+checks that they belong to the committed `index.html`** — tonight they were rebuilt by hand after
+the face moved, and had they not been, the next panel would have been shown a superseded figure.
 
 ## The banked failures, this house's own
 
@@ -119,7 +127,12 @@ One line each: read every session, paid for every night.
 13. **74** — **the pre-registration moved twice after the readers were dispatched against it.** The
     staging memo was rewritten to retire two questions; a `git add` run for another reason is the
     only reason we know. The one thing in this house that may not move after a reading has never
-    been frozen, checked or hashed. **Owed: freeze and hash the memo at dispatch.**
+    been frozen, checked or hashed. **Owed: freeze and hash the memo at dispatch.** *Closed in 75.*
+14. **75** — the first sentence the record has ever forced this house to rewrite came out **"one
+    ships"**. `data.py --check` passed on it, and had to: the check asks whether the face agrees
+    with the record, and it cannot ask whether a sentence the script itself composes is a sentence.
+    It was found by opening the rendered image — the third time in this project that looking has
+    caught what checking could not (failures 2 and 6 were the others).
 
 ## Retired to commits, deleted from nothing
 
@@ -129,4 +142,5 @@ memo: `5968048` · 70's board: `fb2a216` · concept dossier and 71's staging mem
 and 71's panel and Verifier memos: `11c831e` (70's were named retired in 71 and were not — failure
 7) · 72's staging memo: `e826290` · 72's panel and Verifier memos, 73's staging memo and this file's
 description of the work: `7a34189` · **73's panel and Verifier memos, `DRAMATURG-74.md`, and this
-file's restatement of the form rulings: `7871af1`.**
+file's restatement of the form rulings: `7871af1` · **74's panel and Verifier memos: `dfa2acb`, the
+last commit of this house's in which they stand.**

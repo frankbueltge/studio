@@ -1,0 +1,14 @@
+# Manifest for tools/record_words.py — the live process record this house measures
+# against the 3,000-word ceiling of Production Amendment rule 6.
+# Blank lines and lines starting with '#' are comments.
+# Format: a bare repo-relative path counts the whole file; a path followed by
+# " :: <heading text>" counts only the markdown section starting at the first
+# heading whose text contains <heading text>, up to the next heading of the
+# same or higher level (or end of file).
+
+# The season-1 project's dossier — the whole file is process record.
+projects/season1/PROJECT.md
+
+# Episode 7/7's live board section — only this episode's block on the shared
+# board counts toward the ceiling, not the rest of WORKBOARD.md.
+WORKBOARD.md :: EPISODE 7/7

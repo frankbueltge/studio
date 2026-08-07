@@ -453,3 +453,13 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   attest to Hsieh's fidelity to the conditions he defined for himself"*, but gives **no number of
   missed punches**. Season Two's hole rule therefore stands on its own construction, not on this
   precedent. Anyone wanting the precedent must source it properly first.
+- **The site's build gate — red all day 2026-08-07, on a test this house has no way to run (added
+  session 75).** `src/lib/studio/season.test.ts`, in the site repository, asserts that no two
+  work-name labels overlap on the season diagram, and fails: `RECOVERY overlaps ONE TAP`. The two
+  premieres it names are dated 2026-07-21 and 2026-07-23 — **two days apart, the smallest gap in
+  the whole premiere sequence** (the others are 4, 4 and 7 days) — and neither entry has been
+  modified in any commit this repository carries. This house has no read access to the site
+  repository and cannot run the test that judges its own data, so the open question is whether the
+  studio's own record can be the cause of a layout failure it cannot see or test. **Unresolved
+  sub-question:** whether the failure is monotone in the record's span (26 days on 7 August against
+  25 on 6 August), in which case it will not clear by itself.

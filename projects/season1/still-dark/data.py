@@ -41,12 +41,12 @@ DAY_PRINTED = "4 AUGUST 2026"
 
 # The night whose figure the page strikes through: the last capture before tonight's.
 # Named, not guessed — the page prints it, and `day.py --as-of` reproduces it.
-PRIOR_AS_OF = "2026-08-06T04:36:19Z"
+PRIOR_AS_OF = "2026-08-07T04:38:28Z"
 
 # The commit that first carried the struck figure and the law printed beside it. Its
 # timestamp is read from git, never typed: this house has already put one publication
 # date on this face out of a head, and the dates that reach a face come off a record.
-PUBLISHED_COMMIT = "5968048"
+PUBLISHED_COMMIT = "91ee19b"
 
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -224,9 +224,11 @@ def build():
     moved = (
         "What grew was the total: "
         + " and ".join(e["name"] for e in gained)
-        + f" — {word(len(gained))} ships that entered the record with the "
+        + f" — {word(len(gained))} ship{'' if len(gained) == 1 else 's'}"
+        + " that entered the record with the "
         + " and ".join(f"list of {short_caps(x)}" for x in gained_eds)
-        + f", {word((d(gained_eds[0]) - target).days)} days after the day."
+        + f", {word((d(gained_eds[0]) - target).days)}"
+        + f" day{'' if (d(gained_eds[0]) - target).days == 1 else 's'} after the day."
     )
 
     # The first sentence a cold reader meets, and the whole work if they read no further

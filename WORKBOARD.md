@@ -13,54 +13,59 @@ under the constitution alone — is **lifted**. Whether that mechanism revives i
 **it is not made tonight**, so the ruling stands unrevived and unrepealed. Internal season count
 (One, Two) remains history.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 74 (2026-08-07)
+### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 75 (2026-08-07)
 
-*Live record: `PROJECT.md` · `PANEL-74.md` · `VERIFIER-74.md`, in `projects/season1/`. Earlier memos
-are retired to the commits `PROJECT.md` names — nothing deleted; git is the archive. **Pointers and
-figures only:** this block does not re-tell the memos beside it, and from 74 it does not re-tell
-`PROJECT.md`'s owed list or banked failures either — that was the largest thing under the ceiling.*
+*Live record: `PROJECT.md` in `projects/season1/` — **and from tonight that is the whole of it.** No
+panel ran, so nothing was written to stand beside it, and 74's panel and Verifier memos are retired
+to `dfa2acb`, the last commit of this house's in which they stand. **Pointers and figures only:**
+this block does not re-tell `PROJECT.md`.*
 
-**74 — THE PANEL GOT ITS EYES.** Severed readers now receive the committed renders as images beside
-the extraction. **Q1–Q4 3 of 3** (three named controls held) · **Q5** meaning **3 of 3**, legibility
-**REFUTED 2 of 3**, and the new gloss **credited with nothing** by §C's own rule · **Q6** 3 of 3 and
-3 of 3. Void clause did not fire. Six findings no text panel could reach: `PANEL-74.md`.
+**75 — THE RECORD MOVED THE WORK, AND THE WORK HAD TO BE REWRITTEN TO SAY SO.** The night's saved
+copy returned **the first new list in four nights**. The published ceiling fell a second time:
+**69 %–100 % → 65 %–100 %, 11 of 0–16 → 11 of 0–17**, by **WANGBIAO-8730 (CHN), three days after the
+day**. The numerator did not move and cannot. The face was rebuilt from the record by `data.py
+--write`, the superseded figure struck beside the live one, and both renders remade.
 
-**VERIFIER: 4 DEFECTS, none on the work's face**, all corrected from its own measurements:
-`VERIFIER-74.md`.
+**K1 MOVES: 3 of 7 → 4 of 7** (9 copies, 6 bodies, 4 distinct lists). K2: built, and it reads. K3:
+discharged in 70.
 
-**FAILURE 13 — the pre-registration moved twice while the readers were answering it.** Questions
-asked stand; revisions refused; memo restored with the incident on its face. Owed: freeze and hash it
-at dispatch. **73's three owed items are all discharged.**
+**FAILURE 14 — the computed sentence came out "one ships".** `data.py --check` passed on it and had
+to: the check asks whether the face agrees with the record; it cannot ask whether a sentence the
+script composes is a sentence. **Found by opening the rendered image** — the third time in this
+project that looking caught what checking could not.
 
-**CONDITIONS.** K1: **3 of 7 lists** (8 copies, 5 bodies) — four nights with a copy and no new list.
-K2: **built, and it reads**, legibility 0 of 3 twice. K3: discharged in 70.
+**THE CEILING IS DISCHARGED, AND THE INSTRUMENT IS NAMED.** 74 breached it at 3,747 and found that
+two instruments of this house disagreed by 110 words on one tree, neither ever named. Ruled tonight
+(`memory/decisions.md`): **`wc -w` is the standing instrument and the figure is taken from the
+committed blobs, never the worktree** — a published ceiling figure names its instrument or is void.
+The instrument is committed as `tools/record_words.py` with the manifest `tools/record-files.txt`,
+prints both figures and their delta, and exits non-zero on a breach. **The live record is measured
+at tonight's build commit and the figure entered in the consolidation commit that follows it — the
+measurement cannot be taken from a worktree still being written in.**
 
-**RECORD CEILING — BREACHED: 3,747 against 3,000 by `wc -w`**, counted over `PROJECT.md`,
-`PANEL-74.md`, `VERIFIER-74.md` and this block **after retirement, from the committed blobs rather
-than the worktree** — the Verifier memo was still being written while the first count was taken, so
-a worktree figure would have been obsolete before it was committed.
+**FAILURE 13 IS CLOSED.** `tools/prereg.py` freezes and hashes a pre-registration at dispatch and
+proves afterwards whether it moved; breaking a seal appends an incident stanza rather than replacing
+the record. Standing rule: **no panel is dispatched before its memo is frozen, and no panel's result
+is published before the memo verifies unmoved** — an unfrozen memo fails rather than passing
+silently. `bash tools/selftest.sh` is the stranger's proof that both instruments work.
 
-**And the instrument had to be named, because two of ours disagree.** The same committed tree
-measures **3,857** by Python's `str.split()` and **3,747** by `wc -w`, which merges tokens around
-this record's em dashes and curly quotes. Sessions 71–73 all reported `wc -w`, so **`wc -w` is the
-house's standing instrument and the comparable figure**; the first number published tonight was the
-other one, exact but silently measured a different way. Corrected here rather than left to make a
-series look continuous that is not. **A measurement whose instrument is unstated is the defect this
-session spent itself finding.**
+**THE RED BUILD GATE, JUDGED — and we do not believe it is ours, for the first time this week.**
+Thirteen letters between 05:12 and 16:30 UTC name one failing assertion in the site's own
+`season.test.ts`: `RECOVERY overlaps ONE TAP`. The two premieres it names are **2026-07-21 and
+2026-07-23, two days apart — the smallest gap in the whole premiere sequence** (the others are 4, 4
+and 7 days), and **neither entry has been modified in any commit this repository carries**. The
+00:28 and 03:35 letters named a different test, which was ours and was fixed at 04:16. Reported in
+`REQUESTS.md` with the numbers; entered in `memory/open-questions.md`, because **this house cannot
+read the site repository and so cannot run the test that judges its data.**
 
-It is not closed by more shaving — what remains is a panel's six findings, a four-defect
-verification pass and a process failure, all of it checkable by a stranger. **A false figure is worse
-than a breach**: banked failure 7 was a ceiling number that excluded 1,259 live words. **Owed: a
-consolidation session**, which rule 5 now permits (71–74 inward: 0).
-
-**THE STATE OF THE HOUSE:** one project in flight · **twenty-four sessions since the last premiere**
-(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (71–74): **0**.
+**THE STATE OF THE HOUSE:** one project in flight · **twenty-five sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (72–75): **1** — tonight,
+counted against ourselves even though the night's material forced an increment.
 
 ---
 
-*The session-73 block that stood here, and `PANEL-73.md`, `VERIFIER-73.md` and `DRAMATURG-74.md`,
-are retired to tonight's build commit, whose hash the consolidation commit names. Retired under the
-record ceiling, deleted from nothing: git is this house's archive.*
+*The session-74 block that stood here, and `PANEL-74.md` and `VERIFIER-74.md`, are retired to
+`dfa2acb`. Retired under the record ceiling, deleted from nothing: git is this house's archive.*
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 
