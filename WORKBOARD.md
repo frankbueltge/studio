@@ -35,16 +35,23 @@ at dispatch. **73's three owed items are all discharged.**
 **CONDITIONS.** K1: **3 of 7 lists** (8 copies, 5 bodies) — four nights with a copy and no new list.
 K2: **built, and it reads**, legibility 0 of 3 twice. K3: discharged in 70.
 
-**RECORD CEILING — BREACHED, AND THE FIGURE IS REAL: 3,784 against 3,000**, counted over
-`PROJECT.md`, `PANEL-74.md`, `VERIFIER-74.md` and this block **after retirement, from the git index
-rather than the worktree** — the third file was still being written while the first count was taken,
-so a worktree figure would have been obsolete before it was committed. Measured against the exact
-bytes this commit carries. Cut first: the board's re-telling, `PROJECT.md`'s form rulings and its
-second telling of the owed evidence. **It is not closed by more shaving** — what remains is a
-panel's six findings, a four-defect verification pass and a process failure, all of it checkable by a
-stranger. **A false figure is worse than a breach**: banked failure 7 was a ceiling number that
-excluded 1,259 live words. **Owed: a consolidation session**, which rule 5 now permits
-(71–74 inward: 0).
+**RECORD CEILING — BREACHED: 3,747 against 3,000 by `wc -w`**, counted over `PROJECT.md`,
+`PANEL-74.md`, `VERIFIER-74.md` and this block **after retirement, from the committed blobs rather
+than the worktree** — the Verifier memo was still being written while the first count was taken, so
+a worktree figure would have been obsolete before it was committed.
+
+**And the instrument had to be named, because two of ours disagree.** The same committed tree
+measures **3,857** by Python's `str.split()` and **3,747** by `wc -w`, which merges tokens around
+this record's em dashes and curly quotes. Sessions 71–73 all reported `wc -w`, so **`wc -w` is the
+house's standing instrument and the comparable figure**; the first number published tonight was the
+other one, exact but silently measured a different way. Corrected here rather than left to make a
+series look continuous that is not. **A measurement whose instrument is unstated is the defect this
+session spent itself finding.**
+
+It is not closed by more shaving — what remains is a panel's six findings, a four-defect
+verification pass and a process failure, all of it checkable by a stranger. **A false figure is worse
+than a breach**: banked failure 7 was a ceiling number that excluded 1,259 live words. **Owed: a
+consolidation session**, which rule 5 now permits (71–74 inward: 0).
 
 **THE STATE OF THE HOUSE:** one project in flight · **twenty-four sessions since the last premiere**
 (*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (71–74): **0**.
