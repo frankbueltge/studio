@@ -36,6 +36,7 @@ import glob
 import hashlib
 import json
 import os
+import re
 
 # Exactly the fields the work publishes from. Nothing about the fetch, nothing about the
 # response, nothing this house derives afterwards — those belong to other tiers and would
@@ -67,6 +68,39 @@ def content_sha256(capture):
         separators=(",", ":"),
     ).encode("utf-8")
     return hashlib.sha256(blob).hexdigest()
+
+
+# --- the case of the day's waters, added 2026-08-06 (session 73) ---------------------
+#
+# Upstream prints the case of the day ONCE, as a prose sentence, and never as a row of the
+# list. The list rows carry a waters field; the prose carries the same information inside
+# a sentence, and the parser only ever read the rows. So the vessel the instrument gives
+# the most space to was the one vessel on this work's face with no waters at all
+# (TUNAMAR, 4 August). The string is printed by the instrument, so recovering it is
+# SOURCED, not derived — but it is recovered at READ time, from `case_of_the_day.prose`,
+# which every capture has always carried. No capture is rewritten: captures are immutable,
+# and — the reason that matters here — `content_sha256` digests the vessel records, so a
+# parser that wrote a new field would have made two captures of one unchanged edition
+# disagree about their identity. The work's own identity test would have been falsified by
+# a repair. (Session 70 learned that lesson the other way round; this is the same law.)
+#
+# The warrant, and its exact size: MICRONESIA103 (FSM, 39 d) stands as a list row in the
+# edition of 4 August with waters "Marshallese EEZ", and as the case of the day in the
+# editions of 5 and 6 August with prose ending "in Marshallese EEZ". The strings agree.
+# That is ONE vessel seen both ways, and it is the whole of the warrant. What the page
+# does NOT state is what either field refers to — the prose names the waters at the
+# RESURFACING point; the list column names no referent at all. This house therefore does
+# not assert the two are the same field, only that both are strings the instrument printed
+# about that vessel's waters.
+CASE_WATERS_RE = re.compile(r",\s*in\s+([^,]+?)\s*\.\s*$")
+
+
+def case_waters(capture):
+    """The waters named in the case-of-the-day prose, or None if it names none."""
+    case = capture.get("case_of_the_day") or {}
+    prose = case.get("prose") or ""
+    m = CASE_WATERS_RE.search(prose)
+    return m.group(1).strip() if m else None
 
 
 def main():

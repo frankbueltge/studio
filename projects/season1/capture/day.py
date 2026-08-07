@@ -40,7 +40,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from edition import content_sha256  # noqa: E402
+from edition import case_waters, content_sha256  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CAPTURES = os.path.normpath(os.path.join(HERE, "..", "captures"))
@@ -65,10 +65,19 @@ def vessel_key(v):
 
 
 def index(caps):
-    """One row per distinct vessel, carrying its first sighting in OUR record."""
+    """One row per distinct vessel, carrying its first sighting in OUR record.
+
+    Waters are filled from whichever capture carried them, not only the first — the case
+    of the day has no waters field at all (upstream prints it as prose), so a vessel that
+    entered this record as the case of the day would otherwise stand on the face with no
+    waters for as long as the record lasts. `case_waters` recovers the printed string from
+    the prose; see `edition.py` for the warrant and its exact size. Everything else still
+    takes the FIRST capture: first sighting is the measurement, and it may not be revised.
+    """
     rows = {}
     for c in caps:
         ed = c.get("edition_date")
+        cw = case_waters(c)
         for v in c.get("vessels", []):
             k = vessel_key(v)
             r = rows.setdefault(
@@ -84,6 +93,10 @@ def index(caps):
                     "editions": [],
                 },
             )
+            if not r["waters"]:
+                r["waters"] = v.get("waters") or (
+                    cw if v.get("role") == "case_of_the_day" else None
+                )
             if ed and ed not in r["editions"]:
                 r["editions"].append(ed)
             if ed and r["first_edition_date"] and ed < r["first_edition_date"]:
