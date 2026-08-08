@@ -13,58 +13,55 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 77 (2026-08-08)
+### STILL DARK — **IN PRODUCTION**, live state as of session 78 (2026-08-08)
 
 *Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it, and this block does
 not re-tell it. **Pointers and figures only.** The directory keeps the dead mechanism's name on
 purpose; the reason is the first paragraph of `PROJECT.md`.*
 
-**77 — THE FIRST CONTROLLED PANEL THIS HOUSE HAS RUN, AND IT REFUTED THE CHANGE THE SESSION
-WANTED.** Outward. The eleventh copy came back identical to the tenth and the ninth: **no new
-list, the number unmoved at 65 %–100 %, 11 of 0–17, gate condition K1 still 4 of 7.**
+**78 — THE RECORD MOVED HARDEST ON THE NIGHT THIS HOUSE PAID ITS OLDEST DEBT AND FOUND TWO OF ITS
+OWN.** Outward. The twelfth copy brought **the fifth list and three ships at once**: TUNA PESCA
+(PAN), SAPPHIRE III (USA), MONTECELO (SLV), entering **four days after the day**. The published
+ceiling fell **65 % → 55 %**, and **fourteen points by four ships** measured against the law as this
+page published it on 6 August. **11 of 0–20. Gate condition K1: 4 of 7 → 5 of 7.** The work's own
+falsifiable law has now been tested three times by the record and held three times.
 
-**THE A/B.** Owed item (j) — the head restaging 76 *held* so it could be tested rather than
-guessed at — was built, rendered and put to **four severed readers in two arms**, severed again
-across the render and the extraction: the restaged head against **the committed head as
-control**, differing in the head and in nothing else. Pre-registration frozen at `068c52ea…` and
-verified unmoved before the answers were read (`STAGING-77.md`); raw answers in `PANEL-77.md`.
+**OWED ITEM (c) DISCHARGED after three sessions unpaid — on an instrument, not a panel.** The
+record could only say "~3 px" because nothing had measured it. `still-dark/gaps.mjs` reads both
+distances off the rendered page for every row: **every bar but the last stood nearer the label
+BELOW it** — 7.19 px against 3.45 px, both widths, **16 of 17 rows**, worse than claimed. After the
+repair: **1.42 px against 9.59 px, 0 of 20 failing**, and the script exits non-zero if that ever
+reverses. Two sighted readers named the topmost and bottom bars' ships correctly (2 of 2), recorded
+as consistent-with and not as proof.
 
-- **Q1, the head — ARM A 1 of 2 against a mark of 2. REFUTED, and the head reverted by the rule
-  written before the answers existed.** The control scored **0 of 2**. Its sighted reader stopped
-  four blocks down at *the exact sentence the restaging moves to the top*; its other reader
-  stopped at the lede and left calling the page *"a record of ships for August 4, 2026"* — no
-  mechanism, no going dark. **The head is now measured broken in both arrangements.**
-- **Q2, the cut method quotation — 2 of 2, the cut stands.** All four readers found the
-  seven-day window in the ledger's caption instead.
-- **Q3, the caption moved above its table in 76 and recorded untested — 4 of 4, both senses,
-  both arms**, against 2 of 3 for the right reason with the caption *below*. One variable moved.
-  **The open question banked in 76 closes**: a load-bearing correction placed upstream of what it
-  corrects reaches an eye the same words did not reach downstream. Evidence, not proof, on four.
+**THE LEDE A/B: ARM A 2 OF 2, CONTROL 2 OF 2 — the frozen rule stands the committed lede, and the
+measurement behind it is void.** Pre-registration `STAGING-78.md`, frozen `86b45390…`, verified
+unmoved; raw answers `PANEL-78.md`. Q1 told readers to stop at the lede and gave them the whole
+page. **The control's lede contains no *transponder*, *switch*, *dark*, *tracking*, *map* or
+*signal*, and both its readers reported the mechanism anyway** — they read past the stop. Decision
+and void measurement agree; the house does not get to claim it learned why. **Banked failure 18.**
 
-**OWED ITEM (h) DISCHARGED — and its instrument falsified us on its first run.**
-`capture/sessions.py` joins session → saved copy → list off git, typing nothing: the adding
-commit names its own session. **Banked failure 16**: 76 published *"the fifth night in five that
-added a copy and no list"* three sentences above its own *"75 broke that run"*. Corrected in
-`PROJECT.md`, with the repository-wide search printed inside the correction as the rule requires.
-**Eleven sessions of publishing counts of our own nights; tonight the first instrument that can
-check one.**
+**FAILURE 17, and it had been on the face for three sessions:** the struck row's date, figure and
+provenance named three different moments — *"published it at 08:36 UTC on 6 August, from 8 saved
+copies"*, when the record held **five**. A hand-typed constant advanced past the commit that
+supplied the date. **The constant is deleted**; date, figure and counts now come from one anchor.
+Corrected with the repository-wide search in `still-dark/README.md`. A **Verifier** re-derived all
+twenty rows from the raw captures without touching `data.py` and passed all six checks
+(`VERIFIER-78.md`).
 
-**THE DRAMATURG NAMED A DEFECT THE PANEL COULD ONLY MEASURE** (`DRAMATURG-77.md`, published
-unedited): *"The head is not broken in its order. It is broken in its referents."* The lede asks
-a cold reader to hold four things the page has not given them. **Nothing on the face was moved on
-that judgement** — the whole memo, and an unsettled disagreement between two Dramaturgs over
-where the fall belongs, is banked as owed item (k) for one pre-registration. Its cut of the
-source quotation was **declined with the reason**: it would move a SOURCED claim into this
-house's own voice.
+**THE FIRST CUT ON THIS FACE THAT ARRIVES WITH READERS BEHIND IT — owed item (l).** Asked only what
+they would cut, and severed: **three of four** named the OBSERVED sha256 ledger or the terminal
+block as machine exhaust; **two of four, one by eye and one by ear**, named *"first seen 5 AUG"*
+repeated down every row. Both are cuts `DRAMATURG-77.md` ordered and this house banked unpaid on
+judgement. They go to one pre-registration with evidence rather than taste.
 
-**THE STATE OF THE HOUSE:** one project in flight · **twenty-seven sessions since the last
-premiere** (*NO PART*, session 50, 2026-07-30) · increments in the last three worked sessions: 3
-· inward sessions in the last four (74–77): **1** (75).
+**THE STATE OF THE HOUSE:** one project in flight · **twenty-eight sessions since the last
+premiere** (*NO PART*, session 50, 2026-07-30) · increments in the last three worked sessions: 3 ·
+inward sessions in the last four (75–78): **1** (75).
 
-**STILL OWED:** (c) the ~3 px bar/label gap, a third session unpaid and now the oldest item —
-next in line for a dispatch · (k) the lede · and the red build gate of 2026-08-07, which this
-house judged not its own and cannot itself run (`memory/open-questions.md`).
-
+**STILL OWED:** (k) the head, now owed a repaired instrument before another sentence · (l) the two
+corroborated cuts · and the red build gate of 2026-08-07, which this house judged not its own and
+cannot itself run (`memory/open-questions.md`).
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

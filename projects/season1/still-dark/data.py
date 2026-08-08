@@ -36,17 +36,34 @@ sys.path.insert(0, CAPTURE_DIR)
 from day import analyse, bands, index, load  # noqa: E402
 from edition import content_sha256  # noqa: E402
 
+# Which lede the build uses. The arms of session 78's panel differ in this string and in
+# nothing else; `--lede` sets it, and the work's own committed state is whatever the last
+# `--write` put in index.html. Never read from the environment: an arm that could differ
+# from its control by a shell variable is not a control.
+LEDE = "committed"
+
 DAY = "2026-08-04"
 DAY_PRINTED = "4 AUGUST 2026"
-
-# The night whose figure the page strikes through: the last capture before tonight's.
-# Named, not guessed — the page prints it, and `day.py --as-of` reproduces it.
-PRIOR_AS_OF = "2026-08-07T04:38:28Z"
 
 # The commit that first carried the struck figure and the law printed beside it. Its
 # timestamp is read from git, never typed: this house has already put one publication
 # date on this face out of a head, and the dates that reach a face come off a record.
 PUBLISHED_COMMIT = "91ee19b"
+
+# There is no second constant here, and its absence is banked failure 17 (session 78).
+#
+# Until tonight a hand-typed `PRIOR_AS_OF` supplied the struck row's copy-and-list
+# counts while `PUBLISHED_COMMIT` supplied its date, and session 75 advanced the
+# constant past the commit without anything noticing that the two now named different
+# moments. The face then read: *"as this page published it at 08:36 UTC on 6 August,
+# from 8 saved copies of 3 lists — 69 %–100 %."* At 08:36 UTC on 6 August this record
+# held FIVE saved copies. The figure was right, the date was right, and the provenance
+# printed between them belonged to a third moment a day and a half later.
+#
+# So the struck row now has ONE anchor and it is a commit, not a typed string: the
+# instant this page published the law is the instant its counts, its figure and its
+# date are all read at. A constant that has to be advanced by hand each time the record
+# moves is the same defect as a number typed by hand, wearing a variable's name.
 
 # What going dark IS. Owed item (e), banked in session 74 and unpaid since: the face never
 # said it. The word *transponder* appeared nowhere on a page whose whole subject is a radio
@@ -60,7 +77,7 @@ DEFINITION_QUOTE = (
 )
 # Session 77 split this in two — the working clause above the lede, the thresholds left
 # below — and four severed readers refused the change at its own pre-registered mark
-# (`../PANEL-77.md`, Q1: arm A 1 of 2). The split is reverted with the head, and the
+# (`PANEL-77.md`, Q1: arm A 1 of 2, retired to commit 8b8e777). The split is reverted with the
 # sentence stands exactly as it stood, one string, not one character rewritten. The
 # refuted arm is not deleted: `../staging-77/restaged/` holds the built page a stranger
 # can open, beside the control it lost to.
@@ -91,7 +108,14 @@ FULL_MONTHS = ["January", "February", "March", "April", "May", "June",
                "July", "August", "September", "October", "November", "December"]
 WORDS = {0: "no", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven",
          8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve", 13: "thirteen",
-         14: "fourteen", 15: "fifteen", 16: "sixteen"}
+         14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen", 18: "eighteen",
+         19: "nineteen", 20: "twenty"}
+# The list stopped at sixteen until session 78, so the night the total reached seventeen
+# the band sentence started a sentence with a numeral while saying "eleven" four words
+# later — one sentence in two voices, and nothing failed. Extended to twenty; when the
+# total passes twenty this will do it again, which is why `word()` returns digits rather
+# than raising: a page that prints "20" is wrong in its manners, and a page that prints
+# nothing is wrong in its facts.
 
 
 def word(n):
@@ -188,8 +212,11 @@ def band_line(a, caps):
 
 def build():
     pub = commit_time(PUBLISHED_COMMIT).astimezone(datetime.timezone.utc)
+    # the one anchor: the instant the law was published, in the format the captures
+    # themselves carry, so `day.py --as-of` reproduces the struck row exactly
+    published_as_of = pub.strftime("%Y-%m-%dT%H:%M:%SZ")
     caps_now = load(CAPTURES)
-    caps_then = load(CAPTURES, as_of=PRIOR_AS_OF)
+    caps_then = load(CAPTURES, as_of=published_as_of)
     now = analyse(DAY, caps_now)
     then = analyse(DAY, caps_then)
 
@@ -247,7 +274,7 @@ def build():
         })
 
     # what moved since the struck figure was true: the vessels this day gained from
-    # captures later than PRIOR_AS_OF, named, with the edition that carried them
+    # captures later than the law's publication, named, with the list that carried them
     then_names = {e["name"] for e in then["certain"] + then["possible"]}
     gained = [e for e in now["certain"] + now["possible"] if e["name"] not in then_names]
     gained.sort(key=lambda e: -e["days_dark"])
@@ -265,15 +292,38 @@ def build():
         if drop > 0 else
         "It has not moved since. "
     )
+    # Each ship named against ITS OWN list and ITS OWN lag. Until session 78 this sentence
+    # joined every gained list with "and" and then printed a single lag — the earliest —
+    # for all of them, which was true only while the gained ships happened to share one
+    # list. Tonight they do not: one arrived on the seventh, three on the eighth, and the
+    # old sentence would have printed all four as "three days after the day". It was never
+    # false on this face; it was one list away from being false, which is not a property to
+    # leave in a sentence that carries the work's turn.
+    by_ed = {}
+    for e in gained:
+        by_ed.setdefault(seen_at[e["name"]]["first_edition_date"], []).append(e["name"])
+
+    def series(xs):
+        """'A', 'A and B', 'A, B and C' — the page's own joiner, never a trailing 'and'."""
+        return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
+    clauses = []
+    for ed in gained_eds:
+        late = (d(ed) - target).days
+        clauses.append(
+            f"{series(by_ed[ed])} with the list of {short_caps(ed)}, "
+            f"{word(late)} day{'' if late == 1 else 's'} after the day"
+        )
+    # Semicolons between the clauses, because each clause already carries a comma before
+    # its lag: "…7 AUG, three days after the day and TUNA PESCA…" reads as one list of
+    # four things rather than two groups of ships.
     moved = (
         fell
         + "What grew was the total: "
-        + " and ".join(e["name"] for e in gained)
-        + f" — {word(len(gained))} ship{'' if len(gained) == 1 else 's'}"
-        + " that entered the record with the "
-        + " and ".join(f"list of {short_caps(x)}" for x in gained_eds)
-        + f", {word((d(gained_eds[0]) - target).days)}"
-        + f" day{'' if (d(gained_eds[0]) - target).days == 1 else 's'} after the day."
+        + (clauses[0] if len(clauses) == 1
+           else "; ".join(clauses[:-1]) + "; and " + clauses[-1])
+        + f" — {word(len(gained))} ship{'' if len(gained) == 1 else 's'} this record did "
+        + "not hold when the law below was printed."
     )
 
     # The first sentence a cold reader meets, and the whole work if they read no further
@@ -294,11 +344,38 @@ def build():
     # carried the whole mechanism away and no date. The date is written where the anaphor stood,
     # and named a second time because a word carried once in a subordinate clause is what a
     # rebuilt sentence loses. Both namings are computed from DAY, like every other date here.
-    lede = (
-        f"{word(n_obs).capitalize()} of the ships this record can place in {printed_date(DAY)} "
-        f"stood in the list dated {day_month(DAY)} itself. {word(n_hi - n_obs).capitalize()} "
-        f"arrived later — {word(len(gained))} of them after this page had printed its figure."
-    )
+    #
+    # OWED ITEM (k), and the arm this session puts to readers. The committed lede below has
+    # now been measured broken twice — session 77 rebuilt the head ABOVE it and the change
+    # was refuted 1 of 2, while the control it was tested against scored 0 of 2. The
+    # Dramaturg's diagnosis of why (DRAMATURG-77 §1) is the one thing both panels agreed
+    # with: *"The head is not broken in its order. It is broken in its referents."* Its two
+    # sentences ask a cold reader to hold four things the page has not yet given them —
+    # THIS RECORD, CAN PLACE IN, THE LIST DATED 4 AUGUST, ITS FIGURE — which is why hoisting
+    # a good sentence over them changed nothing, and why a control reader summarised the
+    # whole page as "a record of ships for August 4, 2026". That reading is faithful to the
+    # sentence, not a failure of the reader.
+    #
+    # So this arm does not move a word of the page's order. It spends one sentence earning
+    # the terms before the numbers arrive: what going dark IS, what the list IS, and why the
+    # list is late. Nothing else on the face differs between the arms.
+    ledes = {
+        "committed": (
+            f"{word(n_obs).capitalize()} of the ships this record can place in "
+            f"{printed_date(DAY)} stood in the list dated {day_month(DAY)} itself. "
+            f"{word(n_hi - n_obs).capitalize()} arrived later — {word(len(gained))} of them "
+            "after this page had printed its figure."
+        ),
+        "earned": (
+            "A ship that switches off its transponder disappears from the public map of the "
+            "sea, and the daily list that reports it prints nothing until the ship comes "
+            f"back. {word(n_obs).capitalize()} such ships were named on the list dated "
+            f"{printed_date(DAY)}. {word(n_hi - n_obs).capitalize()} more, dark on that same "
+            f"day, were named only by lists that came after it — {word(len(gained))} of them "
+            "since this page printed the figure below."
+        ),
+    }
+    lede = ledes[LEDE]
 
     # One list, more than one saved copy of it, and the copies differing in bytes: the
     # correction session 70 published on this face, in the plain words §A ordered.
@@ -359,7 +436,7 @@ def build():
         "fall": {
             "then": share_line(then, "SUPERSEDED"),
             "now": share_line(now, "LIVE"),
-            "as_of": PRIOR_AS_OF,
+            "as_of": published_as_of,
             "band": band_line(now, caps_now),
             "held": (
                 f"The {word(now['knowable_on_the_day_OBSERVED'])} did not move, and cannot. No "
@@ -393,13 +470,14 @@ def build():
             {"label": "every ship, and when it arrived",
              "cmd": f"python3 projects/season1/capture/day.py {DAY}"},
             {"label": "the night before",
-             "cmd": f"python3 projects/season1/capture/day.py {DAY} --as-of {PRIOR_AS_OF}"},
+             "cmd": f"python3 projects/season1/capture/day.py {DAY} --as-of {published_as_of}"},
         ],
         "output": "".join(run_day().splitlines(keepends=True)[:6]),
         "floor": (
             f"No number closes this. A method that counts a disappearance only when the ship comes "
-            f"back cannot see the ships that never come back. {now['vessels_dark_on_day']['band'][1]} "
-            f"is what this record can place in {printed_date(DAY)}, not what was on the sea that day."
+            f"back cannot see the ships that never come back. "
+            f"{word(now['vessels_dark_on_day']['band'][1]).capitalize()} is what this record can "
+            f"place in {printed_date(DAY)}, not what was on the sea that day."
         ),
     }
 
@@ -410,12 +488,18 @@ ISLAND = re.compile(
 
 
 def main():
+    global LEDE
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--lede", choices=sorted(("committed", "earned")), default=LEDE,
+                    help="which lede to build (session 78's A/B; default: the committed one)")
+    ap.add_argument("--into", default=None,
+                    help="write the island into this index.html instead of the work's own")
     a = ap.parse_args()
+    LEDE = a.lede
     blob = json.dumps(build(), indent=2, ensure_ascii=False)
-    path = os.path.join(HERE, "index.html")
+    path = a.into or os.path.join(HERE, "index.html")
     if a.check or a.write:
         with open(path, encoding="utf-8") as f:
             html = f.read()

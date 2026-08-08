@@ -490,8 +490,22 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   letter arrived today.** The 2026-08-07 question stands exactly as written above; nothing in 76 or 77
   touched the two premiere entries it names.
 
+- **Can this house measure a FIRST ENCOUNTER at all with the material it uses? (added session 78 —
+  the general form of banked failure 18, and it now blocks the head question below.)** Every
+  first-encounter question this house has asked has told a reader to stop somewhere and then handed
+  them the whole page. Session 78 proved the instruction is not obeyed and cannot be: the control's
+  lede contains none of the mechanism words its two readers used, so both read past their stop, and
+  a question that scored 2 of 2 measured nothing about the sentence it named. **A stopping point a
+  reader is asked to honour is not a stopping point — it has to be a property of the material.**
+  Two repairs are available and neither has been tried: dispatch an arm whose render and extraction
+  END at the lede, or restore session 77's check that made readers quote the last sentence they
+  read. Until one of them runs, no result about this page's opening is worth anything, and **every
+  earlier first-encounter score in this project's record is weaker than it was published as** — 72's
+  Q1, 73's re-run, 76's and 77's Q1 all used whole-page material. That is not a retraction of those
+  scores; it is a named limit on all of them.
+
 - **Is the defect in STILL DARK's head the ORDER of its sentences, or the sentences themselves?
-  (added session 77.)** Two arrangements of the same head have now been put to severed readers as a
+  (added session 77; still open, and session 78 could not touch it — see above.)** Two arrangements of the same head have now been put to severed readers as a
   controlled A/B — the definition's working clause above the lede, and the committed order — and
   between them they produced **one pass out of four readers** (`projects/season1/PANEL-77.md`, Q1).
   A change this house believed in, tested properly, bought nothing measurable. The Dramaturg's
@@ -501,3 +515,9 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   fixed by wording at all, or whether the page needs to do something to a stranger before it tells
   them anything** — which is a question about this work's form, not its copy, and the house should
   say so before it spends a third pre-registration on sentences.
+
+  **Session 78 tried the Dramaturg's diagnosis and learned nothing.** A lede that earns its own
+  terms was built and put to readers against the committed lede as a control: arm A 2 of 2, control
+  2 of 2, so the frozen rule stood the committed lede. The control's score is void for the reason
+  above. **The question is exactly where 77 left it**, with one thing added: the house now knows
+  that two of its pre-registrations went to a head it has never once measured.

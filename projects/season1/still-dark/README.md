@@ -1,10 +1,12 @@
 # STILL DARK — increment 1
 
 **One screen. No interaction, no state, nothing withheld.** `4 AUGUST 2026` held fixed while
-sixteen vessels stand on a 2 June–6 August field, crossed by a labelled rule at 4 August, both
-ends of every band hatched seven days wide. The rows are grouped by the list that first carried
-them: **eleven in the list of 4 August — the day itself**, three added by the list of 5 August,
-two added by the list of 6 August.
+every vessel this record can place in that day stands on a dated field, crossed by a labelled rule
+at 4 August, both ends of every band hatched seven days wide. The rows are grouped by the list that
+first carried them — **eleven in the list of 4 August, the day itself**, and the rest added by lists
+published one, two, three and four days after it. **The counts are not typed here**, because they
+grow: `python3 ../capture/day.py 2026-08-04` prints them, and the face computes them
+(`python3 data.py --check`).
 
 **Since session 72 the house's filing words are off the face.** *Edition* and *capture* are what
 this house calls the things it collects; on the page they are **the list** the instrument publishes
@@ -21,11 +23,12 @@ question, put back verbatim, went to 3 of 3. TUNAMAR's waters joined its row the
 instrument prints the case of the day as prose and never as a list row, so the string is recovered
 from that prose at read time — SOURCED, with no saved copy rewritten (`../capture/edition.py`).
 
-**Since session 74 the denominator carries one glossing sentence** (`../DRAMATURG-74.md` §A),
-computed like every other figure here: *"Sixteen ships could have been dark on 4 August 2026 and not
-one of them certainly, because the instrument publishes a return only as a week-wide window — so the
-total is written 0–16, and the share runs from 11 of 16 to 11 of 11."* Three of three readers now say
-what the 0 and the 16 count — and **two of three still read `11 of 0–16` itself as broken**, so the
+**Since session 74 the denominator carries one glossing sentence** (`../DRAMATURG-74.md` §A): it
+says how many ships could have been dark on the day, that not one of them is certain, that the
+reason is the instrument's week-wide window, and what the two ends of the total therefore do to the
+fraction. **Its figures are not quoted here, because they move** — the sentence is built by `data.py`
+from the captures and is read off the face itself. Three of three readers say what the two ends of
+the total count — and **two of three still read the `11 of 0–N` notation itself as broken**, so the
 notation is refuted on legibility and the sentence is credited with nothing under its own
 pre-registered scoring rule (`../PANEL-74.md`, Q5).
 
@@ -42,17 +45,46 @@ ceiling that can only fall* — and on 6 August it fell, unaided:
 | | share knowable on the day | |
 |---|---|---|
 | as published, 4 saved copies / 2 lists, to `2026-08-06T04:36:19Z` | **79 %–100 %** | 11 of 0–14 |
-| as measured now, 8 saved copies / 3 lists | **69 %–100 %** | 11 of 0–16 |
+| as this page published the law, 5 saved copies / 3 lists, at `2026-08-06T08:36:39Z` | **69 %–100 %** | 11 of 0–16 |
+| as measured now, 12 saved copies / 5 lists | **55 %–100 %** | 11 of 0–20 |
 
-The numerator did not move and cannot: no later night can put a name into a list that did not
-carry it. The total moved, by **ALBACORA CUATRO** (ESP) and **BONAMI** (KOR), two ships that
-entered the record with the list of 6 August — two days after the day. **The eighth saved copy, taken
-2026-08-07T04:38:28Z, returned the 6 August list unchanged in every field this work reads — the
-fourth night running**, and the share stands unchanged. Both figures are re-runnable by anyone:
+> **CORRECTION, session 78 (2026-08-08).** The middle row read *"as measured now, 8 saved
+> copies / 3 lists"* until tonight, and *now* had been three sessions ago. Worse, the same
+> pairing of a 6-August publication date with an 8-copy provenance had reached **the work's
+> own face**, where it was false rather than merely stale: at 08:36 UTC on 6 August this
+> record held **five** saved copies. Repaired at the root — the struck row on the face is
+> now computed from one anchor, the commit that published the law, so its date, its figure
+> and its copy counts cannot name three different moments again (banked failure 17,
+> `../PROJECT.md`). *Repository-wide search for the superseded string, as the standing rule
+> requires:* `grep -rn "8 saved copies"` over every `.md`, `.json`, `.html`, `.py` and `.txt`
+> outside `archive/` returns **ten lines**, and **not one of them is a live assertion**.
+> Eight are the string quoted *inside* a correction of it — this block, `data.py`'s comment,
+> `../PROJECT.md`'s banked failure 17, `../VERIFIER-78.md` twice, tonight's journal entry,
+> `memory/decisions.md`, and the studio's report in `REQUESTS.md`. The remaining two are
+> `../staging-77/control/STATE-1.txt` and `../staging-77/restaged/STATE-1.txt`. **No
+> correction is owed to those two and none may be made to them**: they are the frozen arms of
+> session 77's dispatch, evidence of what four readers were actually shown, and a panel arm
+> edited after the reading is not evidence of anything. **The two live occurrences — the
+> work's own face and the table above — are both corrected, and the count above was itself
+> re-run after this record was written, because the first count went stale while the session
+> was still writing.**
+
+**Every figure in this file is typed by hand and every one of them goes stale.** The
+authority is the command below, not this page; where the two disagree, this page is wrong.
+The work's own face has no such problem — nothing in it is typed (`data.py --check`).
+
+The numerator did not move and cannot: no later night can put a name into a list that did
+not carry it. **The total has now grown three times, each time from a list published after
+the day it describes:** by **ALBACORA CUATRO** (ESP) and **BONAMI** (KOR) with the list of
+6 August, two days after; by **WANGBIAO-8730** (CHN) with the list of 7 August, three days
+after; and by **TUNA PESCA** (PAN), **SAPPHIRE III** (USA) and **MONTECELO** (SLV) with the
+list of 8 August, **four days after the day**. The published law has been tested three
+times by the record and has held three times. All figures are re-runnable by anyone:
 
 ```
 python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T04:36:19Z
+python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 ```
 
 **Five mechanisms of a reader act were built; three died by pre-registered threshold** — the
@@ -68,19 +100,14 @@ apparatus, the keypad, the button and everything the turn used to withhold.
 island and the captures disagree. Two figures had previously reached a face out of a head instead
 of off a record (sessions 66 and 70); both were caught, neither should have been possible.
 
-| capture | body sha256 | content | edition | vessels |
-|---|---|---|---|---|
-| `2026-08-05T043932Z.json` | `ed3e54ec…` | `ee555746…` | 4 August 2026 | 11 |
-| `2026-08-05T125400Z.json` | `17c07fc3…` | `47338b03…` | 5 August 2026 | 8 |
-| `2026-08-05T191755Z.json` | `17c07fc3…` | `47338b03…` | 5 August 2026 | 8 |
-| `2026-08-06T043619Z.json` | `aed92f4f…` | `47338b03…` | 5 August 2026 | 8 |
-| `2026-08-06T081642Z.json` | `f673e2f7…` | `53114dfe…` | 6 August 2026 | 7 |
-| `2026-08-06T142217Z.json` | `f673e2f7…` | `53114dfe…` | 6 August 2026 | 7 |
-| `2026-08-06T152800Z.json` | `f673e2f7…` | `53114dfe…` | 6 August 2026 | 7 |
-| `2026-08-07T043828Z.json` | `74f093f7…` | `53114dfe…` | 6 August 2026 | 7 |
+**The table of every saved copy is not reproduced here, and that is deliberate.** It grew a row
+every working night and this file re-typed it every time; `python3 ../capture/edition.py` prints it
+live — fetch time, body hash, content hash, list date, ship count — and the work's own face carries
+it as the OBSERVED ledger. A hand-typed copy of a record is a second record that can disagree with
+the first, and in session 78 one did (see the correction above).
 
-**Eight saved copies, five bodies, three lists.** Two lists have now come back in more than one set
-of bytes each while every field this work reads stayed identical — so the face prints a **content**
+**Twelve saved copies, seven bodies, five lists, as of session 78.** Two lists have come back in
+more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.
 
@@ -115,6 +142,17 @@ work whose largest element the readers could not see. **Closed in 74** — the r
 panel with the extraction, and the first sighted panel found the misalignment of every bar with its
 label, which eight text panels had passed (`../PANEL-74.md`). Run:
 `NODE_PATH=<global node_modules> node render.mjs`.
+
+**`gaps.mjs`** is the second thing the browser is asked, added in session 78 to pay a debt three
+sessions old. A bar in the time field belongs to the row above it, and until that night every bar
+but the last stood **nearer the label below it** — 7.19 px to its own ship's name against 3.45 px to
+the next one's, at both widths, in 16 of 17 rows. Three readers of session 74's panel had
+misassigned bars to labels and the record could only say "about 3 px", because nothing had measured
+it. `gaps.mjs` reads both distances off the rendered page for every row and exits non-zero if any
+bar is nearer the wrong label; after the repair the same field reads 1.42 px against 9.59 px, 0 of
+20 rows failing. **The rule it enforces is not a matter of taste** — a layout that puts a bar nearer
+the wrong name is telling the eye the opposite of what the markup says, and no amount of reading
+fixes it. Run: `NODE_PATH=<global node_modules> node gaps.mjs`.
 **Dependencies, named honestly:** node ≥ 18 and **playwright** (Apache-2.0) with Chromium
 (BSD-3-Clause; its bundled third-party components carry their own licences — the Verifier's
 session-71 pass did not re-check either over the network, and says so). They are the house's check
