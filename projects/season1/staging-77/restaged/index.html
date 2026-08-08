@@ -71,17 +71,17 @@
     line-height: 1.1;
     margin: 0 0 0.15rem;
   }
-  /* The slot under the date. Session 77 put the definition's working clause here and cut
-     this sub-line; four severed readers refused the change at its own pre-registered mark
-     (../PANEL-77.md, Q1), so the sub-line stands — by a rule written before the answers
-     existed, not by preference. It is not thereby endorsed: the control it belongs to
-     scored 0 of 2 on the same question, and the head is now measured broken in both
-     arrangements. The next attempt is owed a different idea, not this one again. */
-  .sd-root .sd-sub {
-    margin: 0 0 0.5rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.02em;
-    color: var(--sd-dim);
+  /* The slot under the date, the best real estate on the page. It carried a sub-line
+     restating the heading above the figures almost verbatim until session 77; it now
+     carries the working clause of the definition — the page's first full sentence in
+     its own register, before any finding and before anyone else's voice. Set below the
+     lede in weight, above the body text in size: a stranger should read it, not skim it. */
+  .sd-root .sd-clause {
+    margin: 0 0 0.55rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    max-width: 72ch;
+    color: var(--sd-ink);
   }
   /* the first sentence a cold reader meets: the whole work if they read no further */
   .sd-root .sd-lede {
@@ -418,7 +418,9 @@
     "edition_source": "https://frankbueltge.de/ghost-fleet/",
     "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
     "definition_quote": "The AIS picture of the seas looks complete. It is not — ships switch off their transponder on purpose to vanish.",
-    "definition": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore."
+    "definition": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore.",
+    "definition_lead": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked.",
+    "definition_rest": "The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore."
   },
   "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Six arrived later — one of them after this page had printed its figure.",
   "field": [
@@ -895,7 +897,7 @@
   </script>
 
   <h1 class="sd-day" id="sd-day">4 AUGUST 2026</h1>
-  <p class="sd-sub">one day of the sea, and how much of it was knowable on the day itself</p>
+  <p class="sd-clause" id="sd-clause"></p>
 
   <p class="sd-lede" id="sd-lede"></p>
 
@@ -906,13 +908,11 @@
   weeks afterwards. This page holds one day open and publishes how much of its darkness could be
   placed in it on the day, and how much arrived later.</p>
   <!-- The second method-sheet quotation stood here — "Daily. Window: disabling events that
-       ended in the last 7 days" — and was cut in session 77 (DRAMATURG-76 §3), because the
-       page said the seven-day window three times. The cut was not taken on judgement: it
-       was question 2 of that night's frozen pre-registration, and it held. Both readers of
-       the arm without it gave the window and quoted the ledger's caption for it, 2 of 2 at
-       the pass mark — and both readers of the arm that still HAD it quoted the caption too,
-       unprompted. All four found the window where it does work. The source is still on this
-       face, linked, in the definition above. (../PANEL-77.md, Q2.) -->
+       ended in the last 7 days" — and was cut in session 77 (DRAMATURG-76 §3). The
+       seven-day window is not lost with it: the ledger's caption states it in the page's
+       own words, at the table where it does work. Whether that is enough is not a
+       judgement here; it is question 2 of the night's pre-registration, and the quotation
+       returns if a reader of either arm cannot find the window. -->
 
   <p class="sd-legend" id="sd-legend"></p>
 
@@ -1001,6 +1001,12 @@
   function pct(dt) { return (diffDays(fieldStart, dt) / layoutDays) * 100; }
 
   document.getElementById("sd-day").textContent = data.day.printed;
+
+  // the working clause, above the lede since session 77: what going dark IS, in this
+  // page's own register, before the finding that assumes it. Never typed here — it is
+  // half of the same island string the paragraph below completes.
+  document.getElementById("sd-clause").textContent = data.method.definition_lead;
+
   document.getElementById("sd-lede").textContent = data.lede;
 
   // what going dark is: the instrument's own sentence first, then the plain gloss.
@@ -1020,7 +1026,7 @@
   dsrc.appendChild(dlink);
   dsrc.appendChild(document.createTextNode(". "));
   defEl.appendChild(dsrc);
-  defEl.appendChild(document.createTextNode(data.method.definition));
+  defEl.appendChild(document.createTextNode(data.method.definition_rest));
 
   // weekly ticks across the field's real (labelled) span only — the margin
   // past dataEnd carries no tick, because nothing is known to mark there

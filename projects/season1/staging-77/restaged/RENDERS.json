@@ -1,0 +1,10 @@
+{
+  "rendered_from": "index.html",
+  "index_sha256": "f2a49fb4cbbd0a5c5f53cc0ef26da5a321f938750b06ed11db9db05ec54c705c",
+  "outputs": {
+    "STATE-1.txt": "40f06e78d66c0acf794fae457d290879c12243ba70391e61df671aa142bbe440",
+    "render-1400.png": "0c21195fb40670e60b672f4d0ad97a25658aeed0fb27efc31d6e1e2473d5590b",
+    "render-900.png": "662d1e97930c4b5e8e8b18f2e9501342ac40b4f3cb267ed1e2dd4dc030569915"
+  },
+  "note": "Written by render.mjs. Checked by tools/renders.py, which recomputes every hash here from the committed files and exits non-zero if any render was made from a different index.html than the one committed beside it."
+}

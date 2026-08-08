@@ -58,6 +58,12 @@ DEFINITION_QUOTE = (
     "The AIS picture of the seas looks complete. It is not — ships switch off their "
     "transponder on purpose to vanish."
 )
+# Session 77 split this in two — the working clause above the lede, the thresholds left
+# below — and four severed readers refused the change at its own pre-registered mark
+# (`../PANEL-77.md`, Q1: arm A 1 of 2). The split is reverted with the head, and the
+# sentence stands exactly as it stood, one string, not one character rewritten. The
+# refuted arm is not deleted: `../staging-77/restaged/` holds the built page a stranger
+# can open, beside the control it lost to.
 DEFINITION = (
     "Going dark is a ship switching off its AIS transponder — the radio signal that puts it "
     "on the public picture of the sea — so that it stops being tracked. The instrument this "

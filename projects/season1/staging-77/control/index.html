@@ -71,12 +71,6 @@
     line-height: 1.1;
     margin: 0 0 0.15rem;
   }
-  /* The slot under the date. Session 77 put the definition's working clause here and cut
-     this sub-line; four severed readers refused the change at its own pre-registered mark
-     (../PANEL-77.md, Q1), so the sub-line stands — by a rule written before the answers
-     existed, not by preference. It is not thereby endorsed: the control it belongs to
-     scored 0 of 2 on the same question, and the head is now measured broken in both
-     arrangements. The next attempt is owed a different idea, not this one again. */
   .sd-root .sd-sub {
     margin: 0 0 0.5rem;
     font-size: 0.78rem;
@@ -91,6 +85,14 @@
     line-height: 1.35;
     max-width: 62ch;
   }
+  .sd-root .sd-method {
+    margin: 0.35rem 0 0.25rem;
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--sd-dim);
+    max-width: 96ch;
+  }
+  .sd-root .sd-method a { color: inherit; }
   .sd-root .sd-because {
     margin: 0 0 0.6rem;
     font-size: 0.78rem;
@@ -418,7 +420,9 @@
     "edition_source": "https://frankbueltge.de/ghost-fleet/",
     "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
     "definition_quote": "The AIS picture of the seas looks complete. It is not — ships switch off their transponder on purpose to vanish.",
-    "definition": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore."
+    "definition": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore.",
+    "definition_lead": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked.",
+    "definition_rest": "The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore."
   },
   "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Six arrived later — one of them after this page had printed its figure.",
   "field": [
@@ -905,14 +909,7 @@
   ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for
   weeks afterwards. This page holds one day open and publishes how much of its darkness could be
   placed in it on the day, and how much arrived later.</p>
-  <!-- The second method-sheet quotation stood here — "Daily. Window: disabling events that
-       ended in the last 7 days" — and was cut in session 77 (DRAMATURG-76 §3), because the
-       page said the seven-day window three times. The cut was not taken on judgement: it
-       was question 2 of that night's frozen pre-registration, and it held. Both readers of
-       the arm without it gave the window and quoted the ledger's caption for it, 2 of 2 at
-       the pass mark — and both readers of the arm that still HAD it quoted the caption too,
-       unprompted. All four found the window where it does work. The source is still on this
-       face, linked, in the definition above. (../PANEL-77.md, Q2.) -->
+  <p class="sd-method" id="sd-method"></p>
 
   <p class="sd-legend" id="sd-legend"></p>
 
@@ -999,6 +996,15 @@
   var heldDay = parseDay(data.day.iso);
 
   function pct(dt) { return (diffDays(fieldStart, dt) / layoutDays) * 100; }
+
+  // the method sentence, verbatim and attributed — the cause of everything below it
+  var methodEl = document.getElementById("sd-method");
+  methodEl.appendChild(document.createTextNode("“" + data.method.window_quote +
+    "” — method sheet, The Ghost Fleet, "));
+  var mlink = document.createElement("a");
+  mlink.href = data.method.source;
+  mlink.textContent = "frankbueltge.de";
+  methodEl.appendChild(mlink);
 
   document.getElementById("sd-day").textContent = data.day.printed;
   document.getElementById("sd-lede").textContent = data.lede;

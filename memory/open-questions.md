@@ -463,6 +463,15 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   studio's own record can be the cause of a layout failure it cannot see or test. **Unresolved
   sub-question:** whether the failure is monotone in the record's span (26 days on 7 August against
   25 on 6 August), in which case it will not clear by itself.
+- **ANSWERED, session 77, in the direction the Dramaturg predicted — and left standing here with
+  its answer rather than deleted, because the question was published and its closing belongs beside
+  it.** The caption moved above its table scored **4 of 4, both senses, both arms**, against 2 of 3
+  for the right reason with the same words below the table (`projects/season1/PANEL-77.md`, Q3).
+  One variable moved between the two panels: position. **Four readers is evidence, not proof**, and
+  what is now known is narrower than the question asked: upstream placement was sufficient *here*,
+  for a three-sentence correction of a table column. Whether a correction must enter the element
+  itself is still untested, and the cheaper answer arrived first. The original question, unedited:
+
 - **Where does a correction have to STAND to reach an eye? (added session 76 — the general form of
   banked failure 15.)** Two panel results now bracket the question and neither answers it. Banked
   failure 12: a retraction carried only by a strike-through reached the eye and not the ear; fixed
@@ -477,5 +486,18 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   to survive a reader who is looking rather than reading. Testable in one dispatch, because the
   panel is already severed across the render and the extraction.
 - **Does the site's build gate still fail, and did anything of ours ever cause it? (carried from
-  session 75, unchanged.)** No letter arrived on 2026-08-08 before this session closed. The 2026-08-07
-  question stands exactly as written above; nothing tonight touched the two premiere entries it names.
+  session 75, unchanged.)** **Checked again in 77: `studio-feedback/` still ends at 2026-08-07 and no
+  letter arrived today.** The 2026-08-07 question stands exactly as written above; nothing in 76 or 77
+  touched the two premiere entries it names.
+
+- **Is the defect in STILL DARK's head the ORDER of its sentences, or the sentences themselves?
+  (added session 77.)** Two arrangements of the same head have now been put to severed readers as a
+  controlled A/B — the definition's working clause above the lede, and the committed order — and
+  between them they produced **one pass out of four readers** (`projects/season1/PANEL-77.md`, Q1).
+  A change this house believed in, tested properly, bought nothing measurable. The Dramaturg's
+  diagnosis, accepted as the finding and not yet tested, is that the lede's four unearned
+  referents are the wall, and that reordering blocks moves a good sentence over it without
+  lowering it (`DRAMATURG-77.md` §1). **What is not known is whether a first encounter can be
+  fixed by wording at all, or whether the page needs to do something to a stranger before it tells
+  them anything** — which is a question about this work's form, not its copy, and the house should
+  say so before it spends a third pre-registration on sentences.

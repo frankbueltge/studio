@@ -36,8 +36,15 @@ import { createHash } from "node:crypto";
 // CommonJS resolution, so a globally installed playwright on NODE_PATH is found too.
 const { chromium } = createRequire(import.meta.url)("playwright");
 
+// Since 2026-08-08 (session 77) it takes an optional directory, so an A/B arm staged
+// beside the work can be rendered by the SAME script that renders the work — a control
+// rendered by a second, hand-adjusted copy of this file would differ from its arm in
+// whatever that copy got wrong. Outputs are always written next to the index.html read.
+//
+//   node render.mjs ../staging-77/control
 const here = dirname(fileURLToPath(import.meta.url));
-const page_url = "file://" + join(here, "index.html");
+const target = process.argv[2] ? join(here, process.argv[2]) : here;
+const page_url = "file://" + join(target, "index.html");
 
 const browser = await chromium.launch();
 
@@ -63,15 +70,15 @@ const readText = (page) => page.evaluate(() => {
 
 {
   const { ctx, page } = await open(1400, 900);
-  writeFileSync(join(here, "STATE-1.txt"), (await readText(page)) + "\n");
-  await page.screenshot({ path: join(here, "render-1400.png"), fullPage: true });
+  writeFileSync(join(target, "STATE-1.txt"), (await readText(page)) + "\n");
+  await page.screenshot({ path: join(target, "render-1400.png"), fullPage: true });
   await ctx.close();
 }
 
 // the narrow width the legibility law names
 {
   const { ctx, page } = await open(900, 900);
-  await page.screenshot({ path: join(here, "render-900.png"), fullPage: true });
+  await page.screenshot({ path: join(target, "render-900.png"), fullPage: true });
   await ctx.close();
 }
 
@@ -82,13 +89,13 @@ const sha = (p) => createHash("sha256").update(readFileSync(p)).digest("hex");
 const outputs = ["STATE-1.txt", "render-1400.png", "render-900.png"];
 const manifest = {
   rendered_from: "index.html",
-  index_sha256: sha(join(here, "index.html")),
-  outputs: Object.fromEntries(outputs.map((f) => [f, sha(join(here, f))])),
+  index_sha256: sha(join(target, "index.html")),
+  outputs: Object.fromEntries(outputs.map((f) => [f, sha(join(target, f))])),
   note:
     "Written by render.mjs. Checked by tools/renders.py, which recomputes every hash " +
     "here from the committed files and exits non-zero if any render was made from a " +
     "different index.html than the one committed beside it.",
 };
-writeFileSync(join(here, "RENDERS.json"), JSON.stringify(manifest, null, 2) + "\n");
+writeFileSync(join(target, "RENDERS.json"), JSON.stringify(manifest, null, 2) + "\n");
 
 console.log("STATE-1.txt, render-1400.png, render-900.png, RENDERS.json written");

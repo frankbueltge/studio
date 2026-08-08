@@ -8,6 +8,8 @@ Eleven of the ships this record can place in 4 August 2026 stood in the list dat
 
 A ship's disappearance reaches the instrument's daily list only when the ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for weeks afterwards. This page holds one day open and publishes how much of its darkness could be placed in it on the day, and how much arrived later.
 
+“Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).” — method sheet, The Ghost Fleet, frankbueltge.de
+
 SOURCED name · flag · days dark · waters — printed by the instrument
 DERIVED the dark-and-return spans — worked out here, printed with both ends
 OBSERVED what this page saw, and when it first saw it
