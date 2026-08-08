@@ -21,10 +21,17 @@
 // dependency of the WORK — index.html is a single self-contained file with no runtime
 // dependency at all. They are the house's own check on itself.
 
+// Since 2026-08-08 (session 76) it also writes RENDERS.json: the sha256 of the index.html
+// these outputs were made FROM, beside the sha256 of each output. Owed item (i): the renders
+// are the only sighted material a panel ever receives, and nothing checked that they belonged
+// to the committed page. In session 75 the face moved and the renders were remade by hand;
+// had that hand forgotten, the next panel would have been shown a superseded figure and no
+// instrument in this house could have said so. `python3 tools/renders.py` is that instrument.
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { writeFileSync } from "node:fs";
+import { writeFileSync, readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 // CommonJS resolution, so a globally installed playwright on NODE_PATH is found too.
 const { chromium } = createRequire(import.meta.url)("playwright");
@@ -69,4 +76,19 @@ const readText = (page) => page.evaluate(() => {
 }
 
 await browser.close();
-console.log("STATE-1.txt, render-1400.png, render-900.png written");
+
+// the provenance sidecar: what these outputs were rendered FROM, and what they are.
+const sha = (p) => createHash("sha256").update(readFileSync(p)).digest("hex");
+const outputs = ["STATE-1.txt", "render-1400.png", "render-900.png"];
+const manifest = {
+  rendered_from: "index.html",
+  index_sha256: sha(join(here, "index.html")),
+  outputs: Object.fromEntries(outputs.map((f) => [f, sha(join(here, f))])),
+  note:
+    "Written by render.mjs. Checked by tools/renders.py, which recomputes every hash " +
+    "here from the committed files and exits non-zero if any render was made from a " +
+    "different index.html than the one committed beside it.",
+};
+writeFileSync(join(here, "RENDERS.json"), JSON.stringify(manifest, null, 2) + "\n");
+
+console.log("STATE-1.txt, render-1400.png, render-900.png, RENDERS.json written");

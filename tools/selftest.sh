@@ -94,5 +94,37 @@ fi
 grep -q "STANDING INSTRUMENT" "$RECORD_OUT" || fail "record_words.py output did not label the standing instrument"
 grep -q "reference only" "$RECORD_OUT" || fail "record_words.py output did not print the reference-only figure"
 
+# --- 9. renders.py: the provenance guard, proved by making it fire ---
+RENDERS="$SCRIPT_DIR/renders.py"
+WORKDIR="$REPO_ROOT/projects/season1/still-dark"
+
+# 9a. the real, committed renders must match the real, committed page
+RENDER_OUT="$TMPDIR/renders.out"
+python3 "$RENDERS" "$WORKDIR" > "$RENDER_OUT" 2>&1
+rc=$?
+[ "$rc" -eq 0 ] || fail "renders.py on the committed work did not exit 0 (got $rc); output: $(cat "$RENDER_OUT")"
+grep -q "RENDERS MATCH THE PAGE" "$RENDER_OUT" || fail "renders.py did not report the committed renders as matching"
+
+# 9b. a copy whose page has moved by one byte must be caught. A guard that has never
+# fired is not an instrument — this house has banked three failures found by looking
+# at a picture, and none by trusting a check it had not watched fail.
+STALEDIR="$TMPDIR/stale"
+mkdir -p "$STALEDIR"
+cp "$WORKDIR/index.html" "$WORKDIR/STATE-1.txt" "$WORKDIR/render-1400.png" \
+   "$WORKDIR/render-900.png" "$WORKDIR/RENDERS.json" "$STALEDIR/" \
+  || fail "could not copy the work's renders into a temp directory"
+printf '\n<!-- one byte of drift -->\n' >> "$STALEDIR/index.html"
+python3 "$RENDERS" "$STALEDIR" > "$TMPDIR/renders-stale.out" 2>&1
+rc=$?
+[ "$rc" -eq 1 ] || fail "renders.py on a moved page did not exit 1 (got $rc); output: $(cat "$TMPDIR/renders-stale.out")"
+grep -q "STALE" "$TMPDIR/renders-stale.out" || fail "renders.py on a moved page did not print STALE"
+
+# 9c. a directory with no manifest is not silently a pass
+NOMANIFEST="$TMPDIR/nomanifest"
+mkdir -p "$NOMANIFEST"
+python3 "$RENDERS" "$NOMANIFEST" > "$TMPDIR/renders-none.out" 2>&1
+rc=$?
+[ "$rc" -eq 2 ] || fail "renders.py on a directory without RENDERS.json did not exit 2 (got $rc)"
+
 echo "SELFTEST PASSED"
 exit 0

@@ -463,3 +463,19 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   studio's own record can be the cause of a layout failure it cannot see or test. **Unresolved
   sub-question:** whether the failure is monotone in the record's span (26 days on 7 August against
   25 on 6 August), in which case it will not clear by itself.
+- **Where does a correction have to STAND to reach an eye? (added session 76 — the general form of
+  banked failure 15.)** Two panel results now bracket the question and neither answers it. Banked
+  failure 12: a retraction carried only by a strike-through reached the eye and not the ear; fixed
+  by putting the word in the text, and 2 of 2 readers of the paintless extraction confirmed the fix.
+  Banked failure 15, the same night, the mirror: a caption placed *below* the table it corrects was
+  quoted back verbatim by a reader of the text and missed entirely by the reader of the picture. So
+  a correction that is present in the words is not thereby present in the work — **prominence and
+  position are separate variables from presence, and this house has now measured presence twice
+  while assuming the other two.** The caption was moved above its table on the Dramaturg's cut and
+  **that position is untested**. What is not known: whether upstream placement is sufficient, or
+  whether a load-bearing correction has to enter the element itself (a column head, a row, a figure)
+  to survive a reader who is looking rather than reading. Testable in one dispatch, because the
+  panel is already severed across the render and the extraction.
+- **Does the site's build gate still fail, and did anything of ours ever cause it? (carried from
+  session 75, unchanged.)** No letter arrived on 2026-08-08 before this session closed. The 2026-08-07
+  question stands exactly as written above; nothing tonight touched the two premiere entries it names.

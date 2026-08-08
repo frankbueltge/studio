@@ -1,6 +1,11 @@
 # STILL DARK — the live project record
 
-**Season 1, Episode 7/7. In production.** Work: `still-dark/`. Evidence: `captures/`, `capture/`.
+**In production, under Studio Protocol v2** (the season layer was deleted 2026-08-08 and this
+work sheds its episode number, keeping every obligation it earned). *The directory is still
+called `season1/` on purpose: its path is printed on the work's own face as the command a
+stranger runs to check the number, and it is cited across a published record. The name is a
+fossil of a deleted mechanism; renaming it mid-flight would break the reproduction path for
+the sake of tidiness.* Work: `still-dark/`. Evidence: `captures/`, `capture/`.
 **From session 75 this file stands alone**: no panel ran tonight, so nothing was written to stand
 beside it, and 74's memos are retired to the commit named at the foot. Retired is not deleted —
 git is this house's archive, and every hash below opens with `git show <hash>:<path>`.
@@ -23,7 +28,10 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 75: 65 %–100 % — 11 of 0–17**, from 9 saved copies holding 4 distinct lists; it was
+**As of session 76: 65 %–100 % — 11 of 0–17**, from 10 saved copies holding 4 distinct lists.
+**76 bought the tenth copy and it was the seventh night's list again, byte for byte and field
+for field** — the fifth night in five that added a copy and no list. The number did not move,
+and a night that moves nothing is the thing this work is measuring. It was
 **69 %–100 % — 11 of 0–16** until the copy of `2026-08-07T18:15:53Z`, and **79 %–100 % — 11 of 0–14**
 before that. The numerator cannot move: no later night can put a name into a list that did not carry
 it. **The total can only grow, so the share is a ceiling that can only fall — and it has now fallen
@@ -82,22 +90,45 @@ owed** — the second telling was again the largest thing under the ceiling.
 **73's three owed items are all discharged** (74): the denominator gloss ruled, built computed and
 scored; the panel given the renders; `index()` made two-pass with no published figure moved.
 
-**Owed now, so it cannot be lost** — the evidence for (a)–(e) is 74's panel memo, argued there once
-and retired to `dfa2acb`.
-(a) **Print `11 of 16 to 11 of 11` where `11 of 0–16` stands**, the page's own prose, written
-independently by two readers. (b) **The strike-through is one CSS declaration and nothing in the
-words**: the retraction does not survive a screen reader. (c) **The bar/label gap discriminates by
-~3 px in thirteen of sixteen rows**, and three readers misassigned them; not one pixel moved
-tonight, by §B. (d) **The ledger's `vessels` column falls 11, 8, 8, 8, 7, 7, 7, 7** under a quote
-saying a night can never remove one — two panels have said so. (e) **The face never says what going
-dark is**; *transponder* appears nowhere on it. (f) **The readers' raw answers are not committed**,
-so nine quotations in 74's panel memo are uncheckable by anyone, us included. (g) **Freeze and hash
-the staging memo at dispatch** (failure 13) — **DISCHARGED 75**: `tools/prereg.py`, and the standing
-rule that no panel is dispatched before its memo is frozen and none is published before the memo
-verifies unmoved (`memory/decisions.md`). (h) No session→capture map exists, so *"three nights"*
-cannot be checked from the repo. **(i) The renders are the panel's only sighted material and nothing
-checks that they belong to the committed `index.html`** — tonight they were rebuilt by hand after
-the face moved, and had they not been, the next panel would have been shown a superseded figure.
+**Owed now, so it cannot be lost.** Five of the nine were discharged in 76 and are struck here
+rather than deleted; the evidence for (a)–(e) is 74's panel memo, retired to `dfa2acb`.
+
+- (a) **Print `11 of 16 to 11 of 11` where `11 of 0–16` stands.** ~~Owed~~ **DISCHARGED 74** —
+  the computed band sentence carries it; confirmed still on the face in 76.
+- (b) **The retraction was one CSS declaration and nothing in the words.** **DISCHARGED 76** —
+  the two figures carry the words SUPERSEDED and LIVE, and `<s>` marks the struck one in the
+  markup. **Tested, not asserted:** two severed readers of the text-only extraction, 2 of 2 at
+  the pass mark, each naming 65 %–100 % as the live figure and the word as how they knew.
+  Banked failure 12 is closed.
+- (c) **The bar/label gap discriminates by ~3 px in thirteen of sixteen rows**, and three
+  readers misassigned them. **STILL OWED.** Not one pixel moved in 76 either: it is a layout
+  change that needs a sighted panel of its own, and this session's pre-registration was spent
+  on the head.
+- (d) **The ledger's last column falls under a quote saying a night can never remove one** —
+  two panels said so. **DISCHARGED 76, with a caveat that is the night's real finding**: the
+  column head now says what it counts, and a computed caption says a list holds only its own
+  seven days, so a ship leaves the list without leaving the day. 3 of 3 readers answered "not
+  a contradiction" — but only 2 of 3 for the right reason, against a pass mark of 3. See
+  failure 15.
+- (e) **The face never said what going dark is**; *transponder* appeared nowhere on it.
+  **DISCHARGED 76** — a definition paragraph opening with the source's own sentence, quoted
+  verbatim and linked, with the instrument's thresholds. **3 of 3 severed readers, at the pass
+  mark**, named the ship's own AIS transponder, switched off by the ship.
+- (f) **The readers' raw answers are not committed**, so nine quotations in 74's panel memo are
+  uncheckable by anyone, us included. **DISCHARGED 76 forward** — `PANEL-76.md` commits all
+  four answers verbatim. 74's remain uncheckable and that does not change.
+- (g) **Freeze and hash the staging memo at dispatch** (failure 13) — **DISCHARGED 75**;
+  76 is the first panel it governed, frozen at 00:52:28Z and verified unmoved before results.
+- (h) No session→capture map exists, so *"three nights"* cannot be checked from the repo.
+  **STILL OWED.**
+- (i) **Nothing checked that the renders belong to the committed `index.html`.**
+  **DISCHARGED 76** — `render.mjs` writes `RENDERS.json` at render time; `tools/renders.py`
+  recomputes every hash and exits non-zero on drift; `tools/selftest.sh` §9 proves it by
+  making it fire on a page moved by one byte.
+- **(j) NEW, owed from 76: restage the head** — the definition's working clause above the
+  lede, the sub-line cut (`DRAMATURG-76.md` §1, §3). It is the one cut that would move what
+  this night's panel scored, so it is pre-registered and put to readers against the current
+  order as control, not adopted on judgement.
 
 ## The banked failures, this house's own
 
@@ -133,6 +164,13 @@ One line each: read every session, paid for every night.
     with the record, and it cannot ask whether a sentence the script itself composes is a sentence.
     It was found by opening the rendered image — the third time in this project that looking has
     caught what checking could not (failures 2 and 6 were the others).
+15. **76 — a correction reached the ear and not the eye, which is failure 12 with the senses
+    swapped.** The caption written this session to stop a twice-reported misreading was quoted
+    back verbatim by a reader of the text and missed entirely by a reader of the picture, who
+    answered right and wrote that "the denominator shrinks as certainty narrows" — the exact
+    inverse of the one law this work publishes about itself. The words were correct, small,
+    grey, and **downstream of the misreading they existed to prevent**. Moved above the table
+    the same night; the new position is untested and is recorded as untested.
 
 ## Retired to commits, deleted from nothing
 

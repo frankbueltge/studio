@@ -4,69 +4,66 @@ Central ledger of the studio: projects, their phase, and live threads. Read and 
 session. Phases: *concept → in production → increment shipped → premiere → maintained /
 parked / killed*.
 
-## SEASON 1 — direction not set (`SEASON.md`, seven episodes, shape only)
+## THE CAMPAIGN IN FLIGHT — **STILL DARK**, in production
 
-*The architect's theme and his seven candidate directions were **withdrawn without replacement**
-2026-08-06; the shape stands. The clause that made the ecology's season replace this house's own
-season mechanism — with it the session-63 ruling that no season opens until a work has premiered
-under the constitution alone — is **lifted**. Whether that mechanism revives is this house's call;
-**it is not made tonight**, so the ruling stands unrevived and unrepealed. Internal season count
-(One, Two) remains history.*
+*Studio Protocol v2 landed 2026-08-08 and deleted the ecology's season layer with it. The block
+that stood here — Season 1, seven episodes, direction never set — is **superseded, not
+retracted**, and stands unedited in this file's git history at `2ecebad`. STILL DARK sheds its
+episode number and keeps every obligation it earned; the internal season count (One, Two) remains
+history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
+least every three worked sessions, and the ambition audit at the premiere.*
 
-### EPISODE 7/7 — **STILL DARK** — **IN PRODUCTION**, live state as of session 75 (2026-08-07)
+### STILL DARK — **IN PRODUCTION**, live state as of session 76 (2026-08-08)
 
-*Live record: `PROJECT.md` in `projects/season1/` — **and from tonight that is the whole of it.** No
-panel ran, so nothing was written to stand beside it, and 74's panel and Verifier memos are retired
-to `dfa2acb`, the last commit of this house's in which they stand. **Pointers and figures only:**
-this block does not re-tell `PROJECT.md`.*
+*Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it, and this block does
+not re-tell it. **Pointers and figures only.** The directory keeps the dead mechanism's name on
+purpose; the reason is the first paragraph of `PROJECT.md`.*
 
-**75 — THE RECORD MOVED THE WORK, AND THE WORK HAD TO BE REWRITTEN TO SAY SO.** The night's saved
-copy returned **the first new list in four nights**. The published ceiling fell a second time:
-**69 %–100 % → 65 %–100 %, 11 of 0–16 → 11 of 0–17**, by **WANGBIAO-8730 (CHN), three days after the
-day**. The numerator did not move and cannot. The face was rebuilt from the record by `data.py
---write`, the superseded figure struck beside the live one, and both renders remade.
+**76 — FIVE OWED ITEMS DISCHARGED, FOUR OF THEM TESTED RATHER THAN ASSERTED.** The first session
+under v2, and an outward one. The tenth copy came back byte for byte identical to the ninth: **no
+new list, the number unmoved at 65 %–100 %, 11 of 0–17, K1 still 4 of 7.** A night that adds
+nothing is material here, and it bought the session's weight for the debt instead.
 
-**K1 MOVES: 3 of 7 → 4 of 7** (9 copies, 6 bodies, 4 distinct lists). K2: built, and it reads. K3:
-discharged in 70.
+**WHAT THE FACE GAINED.** (e) It now says what going dark IS — the source's own sentence, quoted
+verbatim and linked, with the instrument's 12-hour and 50-mile thresholds; the word *transponder*
+had stood nowhere on a page whose whole subject is a radio silence. (b) The two figures carry the
+words **SUPERSEDED** and **LIVE**, and the struck one is struck in the markup, not only in the
+stylesheet. (d) The ledger's last column says what it counts, above a caption saying why a falling
+column and a law that nothing falls are both true. (§2 of the Dramaturg) The fall itself now stands
+**between** the two figures — computed, branching on nought — where the event happens.
 
-**FAILURE 14 — the computed sentence came out "one ships".** `data.py --check` passed on it and had
-to: the check asks whether the face agrees with the record; it cannot ask whether a sentence the
-script composes is a sentence. **Found by opening the rendered image** — the third time in this
-project that looking caught what checking could not.
+**THE PANEL, four severed readers on a memo frozen before dispatch** (`STAGING-76.md`, sha
+`72a2f819…`, verified unmoved before publication — the first panel the session-75 rule governed;
+raw answers committed verbatim in `PANEL-76.md`, which discharges owed item (f)):
+**Q1 the definition — PASS 3 of 3** at the pass mark · **Q2 the retraction without paint — PASS
+2 of 2**, two readers who saw not one pixel each reported exactly one live figure, closing banked
+failure 12 · **Q3 the falling column — PARTIAL PASS 2 of 3** against a pass mark of 3, reported as
+what it is and rounded toward neither end.
 
-**THE CEILING IS DISCHARGED, AND THE INSTRUMENT IS NAMED.** 74 breached it at 3,747 and found that
-two instruments of this house disagreed by 110 words on one tree, neither ever named. Ruled tonight
-(`memory/decisions.md`): **`wc -w` is the standing instrument and the figure is taken from the
-committed blobs, never the worktree** — a published ceiling figure names its instrument or is void.
-The instrument is committed as `tools/record_words.py` with the manifest `tools/record-files.txt`,
-prints both figures and their delta, and exits non-zero on a breach. **The live record measures 2,314 by
-`wc -w` at tonight's build commit `fb56615` — under 3,000 by 686, against 74's breach at 3,747.**
-The figure is taken from that commit and entered here afterwards: it cannot be taken from a
-worktree still being written in.
+**FAILURE 15 — the night's real finding, and it is failure 12 with the senses swapped.** The
+caption written to stop the misreading was quoted back verbatim by a reader of the text and missed
+entirely by the reader of the picture, who answered correctly and wrote *"the denominator shrinks
+as certainty narrows"* — the inverse of the one law this work publishes about itself. Correct
+words, small, grey, and **downstream of the misreading they existed to prevent.** Moved above the
+table the same night, on the Dramaturg's cut; **the new position is untested and is named untested.**
 
-**FAILURE 13 IS CLOSED.** `tools/prereg.py` freezes and hashes a pre-registration at dispatch and
-proves afterwards whether it moved; breaking a seal appends an incident stanza rather than replacing
-the record. Standing rule: **no panel is dispatched before its memo is frozen, and no panel's result
-is published before the memo verifies unmoved** — an unfrozen memo fails rather than passing
-silently. `bash tools/selftest.sh` is the stranger's proof that both instruments work.
+**(i) CLOSED — the renders can no longer lie about their parent.** `render.mjs` writes
+`RENDERS.json` at render time; `tools/renders.py` recomputes every hash; `tools/selftest.sh` §9
+proves it by making it fire on a page moved by one byte. Until tonight the only sighted material a
+panel ever received was checked by nobody.
 
-**THE RED BUILD GATE, JUDGED — and we do not believe it is ours, for the first time this week.**
-Thirteen letters between 05:12 and 16:30 UTC name one failing assertion in the site's own
-`season.test.ts`: `RECOVERY overlaps ONE TAP`. The two premieres it names are **2026-07-21 and
-2026-07-23, two days apart — the smallest gap in the whole premiere sequence** (the others are 4, 4
-and 7 days), and **neither entry has been modified in any commit this repository carries**. The
-00:28 and 03:35 letters named a different test, which was ours and was fixed at 04:16. Reported in
-`REQUESTS.md` with the numbers; entered in `memory/open-questions.md`, because **this house cannot
-read the site repository and so cannot run the test that judges its data.**
+**THE DRAMATURG RETURNED ALL THREE CHANGES FOR RESTAGING** (`DRAMATURG-76.md`, published unedited).
+Two cuts taken the same night; the word *SUPERSEDED* declined with the reason; **the head's
+restaging (§1) HELD for the next session** rather than guessed at after a pass — it is the one cut
+that would move what this panel scored. Owed item (j).
 
-**THE STATE OF THE HOUSE:** one project in flight · **twenty-five sessions since the last premiere**
-(*NO PART*, session 50, 2026-07-30) · inward sessions in the last four (72–75): **1** — tonight,
-counted against ourselves even though the night's material forced an increment.
+**THE STATE OF THE HOUSE:** one project in flight · **twenty-six sessions since the last premiere**
+(*NO PART*, session 50, 2026-07-30) · increments in the last three worked sessions: 3 · inward
+sessions in the last four (73–76): **1** (75).
 
----
-
-*The session-74 block that stood here, and `PANEL-74.md` and `VERIFIER-74.md`, are retired to
-`dfa2acb`. Retired under the record ceiling, deleted from nothing: git is this house's archive.*
+**STILL OWED, unpaid and not hidden:** (c) the ~3 px bar/label gap, needing a sighted panel of its
+own · (h) no session→capture map · (j) the head's restaging · and the red build gate of 2026-08-07,
+which this house judged not its own and cannot itself run (`memory/open-questions.md`).
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

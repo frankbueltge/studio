@@ -1,0 +1,183 @@
+{
+  "capture_version": 1,
+  "fetch": {
+    "url": "https://frankbueltge.de/ghost-fleet/",
+    "fetched_at_utc": "2026-08-08T00:44:58Z",
+    "http_status": 200,
+    "bytes": 36065,
+    "sha256": "4f4413b039be93f508c7fb254dee3270c0791f3bc24e1188e9cacd39a901a3f2"
+  },
+  "method": {
+    "source": "https://frankbueltge.de/werke/ghost-fleet/",
+    "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
+    "window_days": 7
+  },
+  "edition_date_printed": "7 August 2026",
+  "edition_date": "2026-08-07",
+  "case_of_the_day": {
+    "name": "ALBACORA CUATRO",
+    "flag": "ESP",
+    "days_dark": 37,
+    "prose": "A vessel flagged ESP switched off its transponder for 37 days — vanished at 1.0°S, 57.2°E, resurfaced at 1.0°S, 57.0°E, in Seychellois EEZ.",
+    "gfw_url": "https://globalfishingwatch.org/map/vessel/31f3807c8-8763-fae4-d474-a445d6fc0eec"
+  },
+  "aggregates": {
+    "dark_inside_national_waters": 116,
+    "disappearances_examined": 242,
+    "in_the_window": 5507,
+    "vessel_days_of_darkness_approx": 2713
+  },
+  "vessels": [
+    {
+      "name": "ALBACORA CUATRO",
+      "flag": "ESP",
+      "days_dark": 37,
+      "prose": "A vessel flagged ESP switched off its transponder for 37 days — vanished at 1.0°S, 57.2°E, resurfaced at 1.0°S, 57.0°E, in Seychellois EEZ.",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/31f3807c8-8763-fae4-d474-a445d6fc0eec",
+      "role": "case_of_the_day",
+      "waters": null
+    },
+    {
+      "name": "SOUTHERN SEAS NO.302",
+      "flag": "SLB",
+      "days_dark": 29,
+      "waters": "Micronesian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/fbdba1e34-41d3-d737-11df-022bb7f0db73",
+      "role": "other"
+    },
+    {
+      "name": "RICKY",
+      "flag": "GBR",
+      "days_dark": 28,
+      "waters": "Ecuadorian EEZ (Galapagos)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/99a1e9d7c-cc99-0a64-8794-918241e3e1b5",
+      "role": "other"
+    },
+    {
+      "name": "BONAMI",
+      "flag": "KOR",
+      "days_dark": 22,
+      "waters": "Marshallese EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/0c912612b-bec9-e0fb-af7e-e7d52e7d2304",
+      "role": "other"
+    },
+    {
+      "name": "WANGBIAO-8730",
+      "flag": "CHN",
+      "days_dark": 19,
+      "waters": "Tuvaluan EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/0c20b9a08-80de-4ba9-52f7-561ae5f7c705",
+      "role": "other"
+    },
+    {
+      "name": "ALTAR 10",
+      "flag": "ECU",
+      "days_dark": 18,
+      "waters": "Ecuadorian EEZ (Galapagos)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/0a0229027-76e4-3f79-a61c-d9c9362459b4",
+      "role": "other"
+    }
+  ],
+  "derived_intervals": [
+    {
+      "name": "ALBACORA CUATRO",
+      "flag": "ESP",
+      "days_dark": 37,
+      "went_dark_between": [
+        "2026-06-24",
+        "2026-07-01"
+      ],
+      "resurfaced_between": [
+        "2026-07-31",
+        "2026-08-07"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "SOUTHERN SEAS NO.302",
+      "flag": "SLB",
+      "days_dark": 29,
+      "went_dark_between": [
+        "2026-07-02",
+        "2026-07-09"
+      ],
+      "resurfaced_between": [
+        "2026-07-31",
+        "2026-08-07"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "RICKY",
+      "flag": "GBR",
+      "days_dark": 28,
+      "went_dark_between": [
+        "2026-07-03",
+        "2026-07-10"
+      ],
+      "resurfaced_between": [
+        "2026-07-31",
+        "2026-08-07"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "BONAMI",
+      "flag": "KOR",
+      "days_dark": 22,
+      "went_dark_between": [
+        "2026-07-09",
+        "2026-07-16"
+      ],
+      "resurfaced_between": [
+        "2026-07-31",
+        "2026-08-07"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "WANGBIAO-8730",
+      "flag": "CHN",
+      "days_dark": 19,
+      "went_dark_between": [
+        "2026-07-12",
+        "2026-07-19"
+      ],
+      "resurfaced_between": [
+        "2026-07-31",
+        "2026-08-07"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "ALTAR 10",
+      "flag": "ECU",
+      "days_dark": 18,
+      "went_dark_between": [
+        "2026-07-13",
+        "2026-07-20"
+      ],
+      "resurfaced_between": [
+        "2026-07-31",
+        "2026-08-07"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    }
+  ],
+  "page_assets": [
+    "/_astro/Base.BvXYJsAy.css",
+    "/_astro/Base.astro_astro_type_script_index_0_lang.CRoAemHu.js"
+  ],
+  "tiers": {
+    "SOURCED": "vessels, aggregates, edition date, gfw ids — printed on the page",
+    "DERIVED": "derived_intervals — arithmetic on published durations, bands printed",
+    "OBSERVED": "fetched_at_utc — this house's own record of when it could first know"
+  },
+  "content_sha256": "988267cfaf4af3a968584d9fa2a6ccc96abf19ab7ca67589583afecb3edc10be"
+}

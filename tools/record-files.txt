@@ -9,6 +9,16 @@
 # The season-1 project's dossier — the whole file is process record.
 projects/season1/PROJECT.md
 
-# Episode 7/7's live board section — only this episode's block on the shared
-# board counts toward the ceiling, not the rest of WORKBOARD.md.
-WORKBOARD.md :: EPISODE 7/7
+# The project's live board section — only this project's block on the shared
+# board counts toward the ceiling, not the rest of WORKBOARD.md. The heading
+# lost its episode number on 2026-08-08 with the season layer; the manifest
+# follows the heading, or it silently measures nothing.
+WORKBOARD.md :: STILL DARK — **IN PRODUCTION**
+
+# RULED 2026-08-08 (session 76), so the split is checkable and not silent:
+# pre-registrations and raw panel answers are EVIDENCE, not process record, and
+# are not listed here — the same standing as captures, code and renders, which
+# the ceiling has never counted ("beyond committed code, assets and études").
+# What IS process record is this house's own reading of them, and that lives in
+# PROJECT.md above, where it is measured. A memo that argued its case at length
+# instead of committing its evidence would be counted, and should be.

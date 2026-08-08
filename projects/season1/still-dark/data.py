@@ -48,6 +48,23 @@ PRIOR_AS_OF = "2026-08-07T04:38:28Z"
 # date on this face out of a head, and the dates that reach a face come off a record.
 PUBLISHED_COMMIT = "91ee19b"
 
+# What going dark IS. Owed item (e), banked in session 74 and unpaid since: the face never
+# said it. The word *transponder* appeared nowhere on a page whose whole subject is a radio
+# silence — a stranger was asked to read about an absence whose mechanism was never named,
+# which is the terminal test failing at the first line. The quotation is verbatim from the
+# "What this is" section of the method sheet named in `method.source`; the gloss beside it
+# says nothing that sheet does not say, and both of its figures are the source's own.
+DEFINITION_QUOTE = (
+    "The AIS picture of the seas looks complete. It is not — ships switch off their "
+    "transponder on purpose to vanish."
+)
+DEFINITION = (
+    "Going dark is a ship switching off its AIS transponder — the radio signal that puts it "
+    "on the public picture of the sea — so that it stops being tracked. The instrument this "
+    "page reads counts only disabling its own source classifies as high-confidence and "
+    "intentional: at least 12 hours dark, at least 50 nautical miles offshore."
+)
+
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 MONTHS_CAPS = [m.upper() for m in MONTHS]
@@ -110,12 +127,20 @@ def run_day(*args):
     return out.stdout
 
 
-def share_line(a):
-    """(figure, numerator, denominator band) for one analysis, from the script's own fields."""
+def share_line(a, status):
+    """(figure, numerator, denominator band) for one analysis, from the script's own fields.
+
+    `status` is the one word that makes the pair of figures readable without eyes. Until
+    tonight the superseded figure was retracted by a single CSS declaration — banked failure
+    12, found by 74's panel: a reader who hears this page was given two live percentages for
+    one day, and a tier the eye can read and the ear cannot is a blurred tier. The word is
+    part of the row's text, so it survives every extraction the strike-through does not.
+    """
     lo, hi = a["share_knowable_OBSERVED"]
     n = a["knowable_on_the_day_OBSERVED"]
     b = a["vessels_dark_on_day"]["band"]
     return {
+        "status": status,
         "figure": f"{round(lo * 100)} %–{round(hi * 100)} %",
         "of": f"{n} of {b[0]}–{b[1]}",
         "editions": len(a["editions_read"]),
@@ -221,8 +246,22 @@ def build():
     gained = [e for e in now["certain"] + now["possible"] if e["name"] not in then_names]
     gained.sort(key=lambda e: -e["days_dark"])
     gained_eds = sorted({seen_at[e["name"]]["first_edition_date"] for e in gained})
+    # The fall itself, in points, between the two figures — DRAMATURG-76 §2: the page had
+    # the event of a number falling and staged it as two rows of bookkeeping, leaving the
+    # reader to subtract 69 from 65 across two lines that both end "–100 %". The drop is
+    # computed from the two analyses, never typed, and it branches on nought: a session
+    # that adds a copy and no list must not print a fall that did not happen.
+    drop = round(then["share_knowable_OBSERVED"][0] * 100) - round(
+        now["share_knowable_OBSERVED"][0] * 100
+    )
+    fell = (
+        f"It fell {word(drop)} point{'' if drop == 1 else 's'}. "
+        if drop > 0 else
+        "It has not moved since. "
+    )
     moved = (
-        "What grew was the total: "
+        fell
+        + "What grew was the total: "
         + " and ".join(e["name"] for e in gained)
         + f" — {word(len(gained))} ship{'' if len(gained) == 1 else 's'}"
         + " that entered the record with the "
@@ -276,6 +315,18 @@ def build():
             "not the list's identity, which is why the table carries both."
         )
 
+    # Owed item (d), reported by two panels: the last column falls, and it stands four
+    # inches under a quotation saying a night can never remove a ship. Both readings were
+    # right about the page and wrong about the world — the column counts a LIST, and every
+    # list holds only its own seven days. Neither the column nor the quotation moves; what
+    # was missing was the sentence that lets them stand together.
+    ledger_caption += (
+        " The last column counts the ships in each saved list, not the ships this page can "
+        f"place in {printed_date(DAY)}: every list holds only the "
+        f"{word(caps_now[-1]['method']['window_days'])} days before its own date, so a ship "
+        "leaves the list as that window moves past it. It never leaves the day."
+    )
+
     ledger = []
     for c in caps_now:
         ledger.append({
@@ -294,12 +345,14 @@ def build():
             "source": "https://frankbueltge.de/werke/ghost-fleet/",
             "edition_source": "https://frankbueltge.de/ghost-fleet/",
             "window_quote": caps_now[-1]["method"]["window_quote"],
+            "definition_quote": DEFINITION_QUOTE,
+            "definition": DEFINITION,
         },
         "lede": lede,
         "field": field,
         "fall": {
-            "then": share_line(then),
-            "now": share_line(now),
+            "then": share_line(then, "SUPERSEDED"),
+            "now": share_line(now, "LIVE"),
             "as_of": PRIOR_AS_OF,
             "band": band_line(now, caps_now),
             "held": (

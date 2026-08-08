@@ -100,6 +100,18 @@
     max-width: 82ch;
     color: var(--sd-ink);
   }
+  /* what going dark is — the first thing a stranger needs and the last thing this
+     page gave them. Set at the weight of .sd-because, above it. */
+  .sd-root .sd-define {
+    margin: 0 0 0.6rem;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    max-width: 82ch;
+    color: var(--sd-ink);
+  }
+  .sd-root .sd-define-q { font-weight: 700; }
+  .sd-root .sd-define-src { color: var(--sd-dim); }
+  .sd-root .sd-define-src a { color: inherit; }
 
   /* time field: weekly-tick scale + rows + labelled rule at 4 August.
      One layout at every width: each row's own text line, its own bar
@@ -262,12 +274,26 @@
     min-width: 11ch;
   }
   .sd-root .sd-share-of { font-size: 0.72rem; color: var(--sd-dim); }
+  /* the status word carries the retraction in TEXT. The rule below carries it in
+     paint, for the eye that never reads a word. Neither is load-bearing alone. */
+  .sd-root .sd-share-status {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--sd-ink);
+  }
+  .sd-root .sd-share-then .sd-share-status { color: var(--sd-dim); }
   .sd-root .sd-share-then .sd-share-fig {
     color: var(--sd-dim);
     text-decoration: line-through;
     text-decoration-thickness: 2px;
   }
 
+  /* the fall, standing between the two figures it happened between */
+  .sd-root .sd-fell {
+    margin: 0.25rem 0 0.35rem;
+    padding-left: 1.2ch;
+    border-left: 2px solid var(--sd-frame);
+  }
   .sd-root .sd-fall-line {
     font-size: 0.78rem;
     line-height: 1.55;
@@ -392,7 +418,9 @@
   "method": {
     "source": "https://frankbueltge.de/werke/ghost-fleet/",
     "edition_source": "https://frankbueltge.de/ghost-fleet/",
-    "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories)."
+    "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
+    "definition_quote": "The AIS picture of the seas looks complete. It is not — ships switch off their transponder on purpose to vanish.",
+    "definition": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore."
   },
   "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Six arrived later — one of them after this page had printed its figure.",
   "field": [
@@ -724,21 +752,23 @@
   ],
   "fall": {
     "then": {
+      "status": "SUPERSEDED",
       "figure": "69 %–100 %",
       "of": "11 of 0–16",
       "editions": 3,
       "captures": 8
     },
     "now": {
+      "status": "LIVE",
       "figure": "65 %–100 %",
       "of": "11 of 0–17",
       "editions": 4,
-      "captures": 9
+      "captures": 10
     },
     "as_of": "2026-08-07T04:38:28Z",
     "band": "17 ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–17, and the share runs from 11 of 17 to 11 of 11.",
     "held": "The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.",
-    "moved": "What grew was the total: WANGBIAO-8730 — one ship that entered the record with the list of 7 AUG, three days after the day.",
+    "moved": "It fell four points. What grew was the total: WANGBIAO-8730 — one ship that entered the record with the list of 7 AUG, three days after the day.",
     "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
     "published_when": "printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall",
     "then_published": "at 08:36 UTC on 6 August"
@@ -825,9 +855,18 @@
         "content_sha256": "988267cf",
         "edition_date_printed": "7 August 2026",
         "vessels": 6
+      },
+      {
+        "fetched_at_utc": "2026-08-08T00:44:58Z",
+        "http_status": 200,
+        "bytes": 36065,
+        "sha256": "4f4413b0",
+        "content_sha256": "988267cf",
+        "edition_date_printed": "7 August 2026",
+        "vessels": 6
       }
     ],
-    "caption": "Two lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both."
+    "caption": "Two lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day."
   },
   "commands": [
     {
@@ -843,7 +882,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-07T04:38:28Z"
     }
   ],
-  "output": "day 2026-08-04  ·  9 capture(s) read, 4 distinct edition(s), 4 distinct content(s), 6 distinct bod(y/ies)\n  vessels dark on that day .......... 0–17 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 65%–100%  (11 of 0–17)\n    (a ceiling from 4 edition(s), 9 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  10 capture(s) read, 4 distinct edition(s), 4 distinct content(s), 6 distinct bod(y/ies)\n  vessels dark on that day .......... 0–17 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 65%–100%  (11 of 0–17)\n    (a ceiling from 4 edition(s), 10 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 17 is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -852,6 +891,8 @@
   <p class="sd-sub">one day of the sea, and how much of it was knowable on the day itself</p>
 
   <p class="sd-lede" id="sd-lede"></p>
+
+  <p class="sd-define" id="sd-define"></p>
 
   <p class="sd-because">A ship's disappearance reaches the instrument's daily list only when the
   ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for
@@ -879,7 +920,6 @@
          have a problem. -->
     <p class="sd-fall-line sd-bandnote" id="sd-bandnote"></p>
     <p class="sd-fall-line" id="sd-held"></p>
-    <p class="sd-fall-line" id="sd-moved"></p>
     <blockquote class="sd-quoted" id="sd-quoted"></blockquote>
   </section>
 
@@ -889,8 +929,13 @@
       <pre id="sd-raw-pre"></pre>
       <p class="sd-raw-cap">verbatim, unedited</p>
     </div>
-    <div class="sd-ledger" id="sd-ledger"></div>
+    <!-- The caption stands ABOVE its table from session 76 (DRAMATURG-76 §3). Below it,
+         it read perfectly and reached nobody's eye: a reader of the wide render answered
+         the panel's question on it correctly and for an invented reason, having already
+         learned the wrong model from the column head three inches higher. A load-bearing
+         correction does not sit downstream of the misreading it exists to prevent. -->
     <p class="sd-ledger-cap" id="sd-ledger-cap"></p>
+    <div class="sd-ledger" id="sd-ledger"></div>
   </section>
 
   <p class="sd-floor" id="sd-floor"></p>
@@ -952,6 +997,25 @@
 
   document.getElementById("sd-day").textContent = data.day.printed;
   document.getElementById("sd-lede").textContent = data.lede;
+
+  // what going dark is: the instrument's own sentence first, then the plain gloss.
+  // Owed item (e) — the face carried no definition of its own subject, and the word
+  // "transponder" stood nowhere on it.
+  var defEl = document.getElementById("sd-define");
+  var dq = document.createElement("span");
+  dq.className = "sd-define-q";
+  dq.textContent = "“" + data.method.definition_quote + "”";
+  defEl.appendChild(dq);
+  var dsrc = document.createElement("span");
+  dsrc.className = "sd-define-src";
+  dsrc.appendChild(document.createTextNode(" — method sheet, The Ghost Fleet, "));
+  var dlink = document.createElement("a");
+  dlink.href = data.method.source;
+  dlink.textContent = "frankbueltge.de";
+  dsrc.appendChild(dlink);
+  dsrc.appendChild(document.createTextNode(". "));
+  defEl.appendChild(dsrc);
+  defEl.appendChild(document.createTextNode(data.method.definition));
 
   // weekly ticks across the field's real (labelled) span only — the margin
   // past dataEnd carries no tick, because nothing is known to mark there
@@ -1109,8 +1173,17 @@
     row.className = "sd-share " + cls;
     var w = document.createElement("span");
     w.className = "sd-share-when";
-    w.textContent = when;
-    var f = document.createElement("span");
+    // the status word is TEXT, so the retraction survives into anything that takes
+    // the words and leaves the paint — a screen reader, an extraction, a quotation
+    var st = document.createElement("span");
+    st.className = "sd-share-status";
+    st.textContent = s.status;
+    w.appendChild(st);
+    w.appendChild(document.createTextNode(" · " + when));
+    // and the struck figure is struck in the MARKUP as well as in the stylesheet:
+    // <s> is the element for a statement no longer accurate, and it survives a page
+    // read without its CSS, which text-decoration alone does not
+    var f = document.createElement(s.status === "SUPERSEDED" ? "s" : "span");
     f.className = "sd-share-fig";
     f.textContent = s.figure;
     var o = document.createElement("span");
@@ -1134,6 +1207,13 @@
     "as this page published it " + data.fall.then_published + ", " + from(data.fall.then) + " —",
     "sd-share-then"
   ));
+  // the fall itself, BETWEEN the two figures — where the event happens. It stood three
+  // paragraphs downstream until session 76, so the page's one dramatic turn was staged
+  // as two rows of bookkeeping and a reader was left to do the subtraction (DRAMATURG-76 §2).
+  var fellEl = document.createElement("p");
+  fellEl.className = "sd-fall-line sd-fell";
+  fellEl.textContent = data.fall.moved;
+  sharesEl.appendChild(fellEl);
   sharesEl.appendChild(shareRow(
     data.fall.now,
     "as this record measures it now, " + from(data.fall.now) + " —",
@@ -1142,7 +1222,6 @@
 
   document.getElementById("sd-bandnote").textContent = data.fall.band;
   document.getElementById("sd-held").textContent = data.fall.held;
-  document.getElementById("sd-moved").textContent = data.fall.moved;
 
   var q = document.getElementById("sd-quoted");
   q.appendChild(document.createTextNode("“" + data.fall.published + "”"));
@@ -1175,7 +1254,11 @@
   cap.textContent = "OBSERVED — every saved copy this page holds";
   t.appendChild(cap);
   var head = document.createElement("tr");
-  ["fetched (UTC)", "status", "bytes", "body sha256", "content", "edition", "vessels"]
+  // "vessels" counted the ships in each SAVED LIST, four inches under a quotation
+  // saying a night can never remove one — and the column falls. Two panels reported
+  // it as a contradiction; both were reading the header, which named neither what is
+  // counted nor where. The column is unchanged; the head now says what it holds.
+  ["fetched (UTC)", "status", "bytes", "body sha256", "content", "edition", "ships in that list"]
     .forEach(function (h) {
       var th = document.createElement("th");
       th.textContent = h;
