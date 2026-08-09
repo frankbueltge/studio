@@ -117,9 +117,22 @@ def main():
     print()
     print(f"{len(rows)} capture(s) over {len(sessions)} committed session(s) "
           f"({sessions[0]}–{sessions[-1]}) · {lists} distinct list(s)")
-    copies_only = [r for r in rows if not r["bought_a_list"] and r["session"] is not None]
+    # Counted per SESSION, not per capture. Until session 79 every session had bought
+    # exactly one copy, so the distinction had never mattered and the line simply walked
+    # the captures — which printed "79, 79" the first night a session bought two (it
+    # straddled 00:00 UTC). A session that bought two copies and no list is one such
+    # session, not two, and a line that says otherwise is a count of this house's own
+    # nights that is wrong; this record has already banked two of those (failures 16, 17).
+    # A session counts here only if NONE of its captures brought a list.
+    with_list = {r["session"] for r in rows if r["bought_a_list"]}
+    copies_only = []
+    for r in rows:
+        s = r["session"]
+        if s is None or s in with_list or s in copies_only:
+            continue
+        copies_only.append(s)
     if copies_only:
-        run = ", ".join(str(r["session"]) for r in copies_only)
+        run = ", ".join(str(s) for s in copies_only)
         print(f"sessions that bought a copy and no list: {run}")
     return 0
 

@@ -42,6 +42,15 @@ from edition import content_sha256  # noqa: E402
 # from its control by a shell variable is not a control.
 LEDE = "committed"
 
+# Whether the build hoists the repeated OBSERVED line out of the rows: stated once per
+# block instead of identically on every row. Staged as an arm in session 79 and ADOPTED
+# the same night on its own frozen rule — 0 of 2 severed readers named the line or its
+# replacement, against 2 of 4 naming the repetition on the uncut page the night before
+# (`STAGING-79.md` Q4, `PANEL-79.md`). `--no-cuts` rebuilds the superseded shape, because
+# retired is not deleted and a shape this house can no longer produce is a shape it can no
+# longer be checked on. index.html renders both.
+CUTS = True
+
 DAY = "2026-08-04"
 DAY_PRINTED = "4 AUGUST 2026"
 
@@ -210,6 +219,23 @@ def band_line(a, caps):
     )
 
 
+def seen_all(rows):
+    """The one OBSERVED date a whole block shares, or None if it shares none.
+
+    Returns the block-level sentence only when every row in the block carries the
+    identical `seen` string. One differing row is enough to refuse the hoist, and the
+    refusal is the point: the rows would then be saying different things and a single
+    line above them would say a third.
+    """
+    dates = {r["seen"] for r in rows}
+    if len(dates) != 1:
+        return None
+    when = dates.pop().replace("first seen ", "")
+    if len(rows) == 1:
+        return f"this page first saw it on {when}"
+    return f"this page first saw all {WORDS.get(len(rows), str(len(rows)))} on {when}"
+
+
 def build():
     pub = commit_time(PUBLISHED_COMMIT).astimezone(datetime.timezone.utc)
     # the one anchor: the instant the law was published, in the format the captures
@@ -270,7 +296,20 @@ def build():
                 f"{'one day' if late == 1 else WORDS.get(late, str(late)) + ' days'} after the day"
             ),
             "count": len(rows),
-            "rows": rows,
+            # Session 79's staged cut, owed item (l), and the first cut on this face that
+            # arrives with readers behind it: `first seen 5 AUG` printed identically down
+            # eleven rows of the first block, and two of four severed readers named that
+            # repetition unprompted (`PANEL-78.md` Q3; `DRAMATURG-77.md` §2 ordered it a
+            # night earlier on judgement alone). Under --cuts the line is stated ONCE per
+            # block and the rows go quiet — but ONLY where every row in the block carries
+            # the same date. Where they differ, the hoist is refused and every row keeps
+            # its own line: an OBSERVED date is this house's record of its own knowing,
+            # and a summary that averaged two of them would be a blurred tier bought with
+            # ink. The condition is checked here, per block, every build.
+            "seen_all": seen_all(rows) if CUTS else None,
+            "rows": [
+                dict(r, seen="") if CUTS and seen_all(rows) else r for r in rows
+            ],
         })
 
     # what moved since the struck figure was true: the vessels this day gained from
@@ -488,16 +527,20 @@ ISLAND = re.compile(
 
 
 def main():
-    global LEDE
+    global LEDE, CUTS
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--lede", choices=sorted(("committed", "earned")), default=LEDE,
                     help="which lede to build (session 78's A/B; default: the committed one)")
+    ap.add_argument("--no-cuts", action="store_true",
+                    help="rebuild the shape session 79's reading superseded: the OBSERVED "
+                         "line printed on every row instead of once per block")
     ap.add_argument("--into", default=None,
                     help="write the island into this index.html instead of the work's own")
     a = ap.parse_args()
     LEDE = a.lede
+    CUTS = not a.no_cuts
     blob = json.dumps(build(), indent=2, ensure_ascii=False)
     path = a.into or os.path.join(HERE, "index.html")
     if a.check or a.write:

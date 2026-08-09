@@ -42,8 +42,25 @@ const { chromium } = createRequire(import.meta.url)("playwright");
 // whatever that copy got wrong. Outputs are always written next to the index.html read.
 //
 //   node render.mjs ../staging-77/control
+// Since 2026-08-09 (session 79) it takes an optional `--stop-after=<css selector>`, and
+// that flag is an instrument, not a staging preference. Banked failure 18: every
+// first-encounter question this house has ever asked told a reader to stop somewhere and
+// then handed them the whole page, and session 78 proved the instruction is not obeyed —
+// both readers of a lede containing no mechanism word reported the mechanism. A stopping
+// point a reader is asked to honour is not a stopping point; it has to be a property of
+// the material. With the flag, everything after the named element is REMOVED from the
+// rendered document before the screenshot and the extraction are taken, so the material
+// itself ends there and no instruction is needed. The page is loaded and built first: the
+// truncation happens to the SAME DOM the work produces, not to a second, hand-cut copy of
+// its markup.
+//
+//   node render.mjs ../staging-79/stop --stop-after=#sd-lede
 const here = dirname(fileURLToPath(import.meta.url));
-const target = process.argv[2] ? join(here, process.argv[2]) : here;
+const argv = process.argv.slice(2);
+const dirArg = argv.find((a) => !a.startsWith("--"));
+const stopArg = argv.find((a) => a.startsWith("--stop-after="));
+const stopAfter = stopArg ? stopArg.slice("--stop-after=".length) : null;
+const target = dirArg ? join(here, dirArg) : here;
 const page_url = "file://" + join(target, "index.html");
 
 const browser = await chromium.launch();
@@ -57,7 +74,28 @@ async function open(width, height) {
   const page = await ctx.newPage();
   await page.goto(page_url);
   await page.waitForLoadState("load");
+  if (stopAfter) await truncate(page, stopAfter);
   return { ctx, page };
+}
+
+// Everything after the named element goes, at every level between it and the work's
+// root, so what remains is the material a reader receives and nothing follows it. Exits
+// non-zero rather than rendering a whole page if the selector matches nothing: a stop
+// that silently did not happen would be banked failure 18 a second time.
+async function truncate(page, sel) {
+  const ok = await page.evaluate((s) => {
+    const root = document.querySelector(".sd-root");
+    const el = root && root.querySelector(s);
+    if (!el) return false;
+    for (let n = el; n && n !== root; n = n.parentElement) {
+      while (n.nextElementSibling) n.nextElementSibling.remove();
+    }
+    return true;
+  }, sel);
+  if (!ok) {
+    console.error(`--stop-after=${sel} matched nothing inside .sd-root`);
+    process.exit(1);
+  }
 }
 
 // innerText of the work's root: the browser's own rendering of what is readable.
@@ -89,6 +127,7 @@ const sha = (p) => createHash("sha256").update(readFileSync(p)).digest("hex");
 const outputs = ["STATE-1.txt", "render-1400.png", "render-900.png"];
 const manifest = {
   rendered_from: "index.html",
+  stopped_after: stopAfter,
   index_sha256: sha(join(target, "index.html")),
   outputs: Object.fromEntries(outputs.map((f) => [f, sha(join(target, f))])),
   note:

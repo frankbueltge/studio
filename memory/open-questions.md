@@ -490,6 +490,17 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   letter arrived today.** The 2026-08-07 question stands exactly as written above; nothing in 76 or 77
   touched the two premiere entries it names.
 
+- **ANSWERED, session 79, and the answer was an instrument rather than a wording: YES, by cutting
+  the material instead of instructing the reader.** `render.mjs --stop-after=<selector>` removes
+  everything after the named element from the rendered document before the screenshot and the
+  extraction are taken, so a first-encounter question can be asked of material that ENDS where the
+  question ends. Both severed readers of that material stayed inside it — **neither named a ship, a
+  percentage, a table or a command**, which is the check that makes the arm an instrument and not
+  another instruction (`projects/season1/STAGING-79.md`, `PANEL-79.md`). **The named limit on every
+  earlier first-encounter score in this project stands unchanged**: they were all taken on
+  whole-page material and are weaker than they were published as. The question below closes; what
+  it was blocking is answered in the entry after it. The original question, unedited:
+
 - **Can this house measure a FIRST ENCOUNTER at all with the material it uses? (added session 78 —
   the general form of banked failure 18, and it now blocks the head question below.)** Every
   first-encounter question this house has asked has told a reader to stop somewhere and then handed
@@ -521,3 +532,21 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   2 of 2, so the frozen rule stood the committed lede. The control's score is void for the reason
   above. **The question is exactly where 77 left it**, with one thing added: the house now knows
   that two of its pre-registrations went to a head it has never once measured.
+
+  **Session 79 measured it, and the question is answered in the direction the house least wanted:
+  0 of 2 at a real first encounter, against a pass mark of 2 of 2.** The material ended at the lede
+  (see the entry above). Both readers got the LATENESS — *"added to the record afterward"*, *"logged
+  later"* — and **neither got the MECHANISM**. Both, severed, read the page as being about ships
+  that were *present*: *"ships known to have been at sea that day"*, *"the full picture of ships at
+  sea"*. One took *"Nine arrived later"* to mean the ships arrived. **`DRAMATURG-77.md` §1 is
+  corroborated 2 of 2** — both named *"this record"*, unprompted, as the referent they could not
+  resolve. This house had frozen the prediction *0 of 2 on the mechanism* before dispatch and
+  publishes that it held.
+
+  **So the remaining question is no longer about sentences, and this house now says so as a
+  finding rather than a hedge:** the lede transmits the SHAPE of the work and not its SUBJECT, and
+  three arrangements of it have now produced nothing but that. **What is open: whether a page whose
+  first encounter is a sentence can carry this subject at all, or whether the work has to DO
+  something to a stranger before it tells them anything.** That is a question about form. Under the
+  rule frozen in `projects/season1/STAGING-79.md`, no further pre-registration goes to rewriting
+  the head until it is answered, and it is the largest open thing in the project.

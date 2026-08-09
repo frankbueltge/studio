@@ -3,12 +3,12 @@
 **In production, under Studio Protocol v2** (the season layer was deleted 2026-08-08 and this
 work sheds its episode number, keeping every obligation it earned). *The directory is still
 called `season1/` on purpose: its path is printed on the work's own face as the command a
-stranger runs to check the number, and it is cited across a published record. The name is a
-fossil of a deleted mechanism; renaming it mid-flight would break the reproduction path for
-the sake of tidiness.* Work: `still-dark/`. Evidence: `captures/`, `capture/`.
-Tonight's memos stand beside it (`STAGING-78.md`, `PANEL-78.md`, `VERIFIER-78.md`); older ones
-are retired to the commits named at the foot. Retired is not deleted — git is this house's
-archive, and every hash below opens with `git show <hash>:<path>`.
+stranger runs to check the number, and renaming it mid-flight would break that path for the
+sake of tidiness.* Work: `still-dark/`. Evidence: `captures/`, `capture/`. Tonight's memos
+stand beside it (`STAGING-79.md`, `PANEL-79.md`, `VERIFIER-79.md`) with the arms they were
+written about (`staging-79/`); older ones are retired to the commits named at the foot.
+Retired is not deleted — git is this house's archive, and every hash below opens with
+`git show <hash>:<path>`.
 
 ## What the work is
 
@@ -18,8 +18,8 @@ stranger reads them first. In one line — STILL DARK holds **4 August 2026** op
 much of that day's darkness was knowable on the day itself, because the instrument it reads
 (<https://frankbueltge.de/ghost-fleet/>) lists a disappearance **only when the ship comes back**.
 *SOURCED, DERIVED and OBSERVED only; no VERIFIED claim, no IMAGINED element.* **Upstream's restraint
-is inherited and repeated on the face**, including that the instrument makes **no claim of
-illegality** against any vessel or state. Neither do we.
+is inherited and repeated on the face**: the instrument makes **no claim of illegality** against any
+vessel or state, and neither do we.
 
 ## The number, and how a stranger checks it
 
@@ -28,28 +28,25 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 78: 55 %–100 % — 11 of 0–20**, from 12 saved copies holding 5 distinct lists.
-**78 bought the twelfth copy and it was the fifth list — three new ships at once, four days after
-the day, the largest fall this record has taken.** TUNA PESCA (PAN), SAPPHIRE III (USA) and
-MONTECELO (SLV) entered with the list of 8 August; the figure fell **65 % → 55 %**, and against the
-law as this page published it on 6 August, **fourteen points by four ships**.
-
-The figure was 65 %, 69 % and 79 % before that (`--as-of` reproduces each). The numerator cannot
-move: no later night can put a name into a list that did not carry it. **The total can only grow, so
-the share is a ceiling that can only fall — and it has now fallen three times**, on 6, 7 and 8
-August, each time from a list published after the day it describes. **The work's own published law
-is falsifiable, the record has now tested it three times, and it has held three times.** Nights that
-add nothing are material too, and a stranger can check which nights those were:
-`python3 projects/season1/capture/sessions.py` prints session → saved copy → list, joined off git
-and never typed. The number exists in no dataset: upstream publishes **endings**, and nobody keeps a
-**day-addressed** record of when each became knowable. *(Session 77's correction of a false count of
-our own nights stands in the record at `8b8e777` and as banked failure 16.)*
+**As of session 79: 55 %–100 % — 11 of 0–20**, from 14 saved copies holding 5 distinct lists.
+**79 bought two copies and neither was a list** — the session straddled 00:00 UTC and bought one on
+each side of it, both holding the already-recorded list of 8 August. **A night that adds a copy and
+no list is material and is published as one.** The figure was 65 %, 69 % and 79 % before its present
+value (`--as-of` reproduces each). The numerator cannot move: no later night can put a name into a
+list that did not carry it. **The total can only grow, so the share is a ceiling that can only fall
+— and it has fallen three times**, on 6, 7 and 8 August, each time from a list published after the
+day it describes. **The work's own published law is falsifiable, the record has tested it three
+times, and it has held three times.** Which nights added nothing is a fact a stranger can check and
+this file does not type: `python3 projects/season1/capture/sessions.py` prints session → saved copy
+→ list, joined off git. The number exists in no dataset: upstream publishes **endings**, and nobody
+keeps a **day-addressed** record of when each became knowable.
 
 ## The three carried gate conditions (`git show d7214dd:projects/season1/KRITIKER-GATE-66.md`)
 
 1. *Seven captures of seven distinct editions, and `day.py` prints an OBSERVED share.* — **5 of 7**
-   (12 copies, 7 bodies). The condition counts distinct lists, not diligence: seven nights bought a
-   copy and no list. `capture/sessions.py` prints the join.
+   (14 copies, 7 bodies). The condition counts distinct lists, not diligence, and **this file no
+   longer types how many nights bought a copy and no list** — banked failures 16 and 17 were both
+   hand-typed counts. `capture/sessions.py` prints them by name, tonight among them.
 2. *The premiere prints that share on its own face, as a band.* — **built, and it reads**: 3 of 3
    severed readers reached it unaided in 71–74; its legibility 0 of 3 twice (`dfa2acb`).
 3. *The next panel measures the drag, not the stack.* — **discharged in 70**, by its own terms.
@@ -86,41 +83,50 @@ a stranger reads first. **This file carries the live state and what is owed.**
 
 **Owed now, so it cannot be lost.**
 
-**Discharged and closed, kept as one line rather than seven** — the argument for each stands in
-the session that paid it and in git, which is this house's archive: (a) the computed band
-sentence, 74 · (b) the retraction in words as well as paint, 76, 2 of 2 · (d) the falling
-column's head and caption, 76, **and closed tonight at 4 of 4, see below** · (e) what going dark
-is, 76, 3 of 3 · (f) raw panel answers committed, 76 forward · (g) the frozen pre-registration,
-75 · (h) the session→capture map, 77 · (i) render provenance, 76 · (c) **the bar/label
-gap, tonight, and see below**.
+**Discharged and closed, one line rather than seven** — the argument for each stands in the
+session that paid it and in git: (a) the computed band sentence, 74 · (b) the retraction in words
+as well as paint, 76, 2 of 2 · (c) the bar/label gap, 78, on an instrument after three sessions
+unpaid, 16 of 17 rows worse than claimed and `gaps.mjs` now exits non-zero if it reverses
+(`7fdf259`) · (d) the falling column's head and caption, 76, 4 of 4 · (e) what going dark is, 76,
+3 of 3 · (f) raw panel answers committed, 76 forward · (g) the frozen pre-registration, 75 ·
+(h) the session→capture map, 77 · (i) render provenance, 76 · **(l) tonight, below**.
 
-- (c) **DISCHARGED 78, on an instrument, after three sessions unpaid.** The record could only
-  say "~3 px" because nothing had measured it. `still-dark/gaps.mjs` reads both distances off
-  the rendered page for every row: **every bar but the last stood NEARER THE LABEL BELOW IT** —
-  7.19 px to its own name against 3.45 px to the next one's, at both widths, **16 of 17 rows**,
-  worse than the record had claimed. The space now goes below the bar: **1.42 px against 9.59
-  px, 0 of 20 rows failing**, and the script exits non-zero if that ever reverses. Two sighted
-  readers, asked to name the ship the topmost and bottom bars belong to, got both right (Q2, 2
-  of 2) — recorded as consistent-with, not as proof, because two readers is weak evidence.
-- **(k) STILL OWED, and tonight it was NOT measured — see failure 18.** The lede was rebuilt on
-  the Dramaturg's referent diagnosis and put to four readers against the committed lede as
-  control. **Arm A 2 of 2, control 2 of 2**, so the frozen rule stands the committed lede and
-  the change is not adopted (`PANEL-78.md`; arm kept at `staging-78/arm-a/`). But the question
-  could not isolate what it named — see failure 18 — so the decision and a void measurement
-  happen to agree, and this house does not get to claim it learned why. **Owed before another
-  sentence is written: a first-encounter question asked of material that ENDS where the reader
-  is told to stop.** Two pre-registrations spent on this head, neither yet a measurement of it.
-- **(l) NEW, owed from 78, and the first cut on this face that arrives with readers behind
-  it.** Unprompted, severed, and asked only what they would cut: **three of four** named the
-  OBSERVED sha256 ledger or the terminal block above it as machine exhaust, and **two of four,
-  one by eye and one by ear**, named *"first seen 5 AUG"* repeated identically down every row.
-  Both are cuts `DRAMATURG-77.md` ordered (§2, §4; `8b8e777`) and this house banked on judgement.
-  They now go to one pre-registration **with evidence rather than taste**, together with the
-  two Dramaturgs' unsettled disagreement over where the fall belongs.
+- **(l) DISCHARGED 79 — the first change to this face that readers both asked for and passed.**
+  Both cuts were built as one arm (`staging-79/cut/`, generated by `tools/stage79.py`, never by
+  hand) and put to two severed readers under a rule frozen first. **The repeated OBSERVED line is
+  hoisted** — once per block, and only where every row in the block carries the same date; a mixed
+  block refuses the hoist, which the Verifier tested directly (`VERIFIER-79.md` D3). **0 of 2**
+  named it or its replacement, against 2 of 4 the night before. **The ledger MOVED and was not
+  deleted**: above the terminal block, so the last thing before the ending is the work's own
+  verbatim output rather than fourteen rows of truncated sha256. **1 of 2** named it, and the rule
+  admitted at most 1. *Deletion was refused with the reason on the record — the table is the only
+  OBSERVED evidence on this face, and Q5 is why:* **both readers, asked how they would check the
+  numbers, reached for the element one of them had just called debug output.** Two readers against
+  a four-reader baseline is weak evidence and is published as weak.
+- **(k) MEASURED AT LAST, AND IT FAILED — 0 of 2, and the item changes shape.** The instrument
+  was the debt, not the sentence: `render.mjs --stop-after=#sd-lede` removes everything after the
+  lede from the rendered document, so the material ENDS where the question ends and nothing has to
+  be asked of the reader (banked failure 18; **severance check clean — neither reader named a
+  ship, a percentage, a table or a command**). Both readers got the lateness. **Neither named the
+  mechanism, and both took the page to be about ships that were PRESENT** — *"ships known to have
+  been at sea that day"*, *"the full picture of ships at sea"*. This house predicted 0 of 2 in the
+  frozen memo and published the prediction before the answers existed. **`DRAMATURG-77.md` §1 is
+  corroborated 2 of 2**: both named *"this record"*, unprompted, as the thing they could not
+  resolve. **Under the frozen rule, (k) stops being a question about sentences.** No third
+  pre-registration goes to the head until this house has answered what the page **does** to a
+  stranger before it tells them anything — a question about form, and now the largest open thing
+  in the project.
+- **(m) NEW, owed from 79, banked and not acted on.** One sighted reader named the **SOURCED /
+  DERIVED / OBSERVED legend** as debug output — a target no reader had named before, and the
+  element `DRAMATURG-77.md` §2 called *"a key printed above a chart the reader has not seen"*.
+  To a later pre-registration: **nothing is cut on one reader.**
 
 ## The banked failures, this house's own
 
-One line each: read every session, paid for every night.
+One line each: read every session, paid for every night. **Nothing here is deleted or softened;
+the older entries are compressed tonight in their own words and stand at full length in
+`7fdf259:projects/season1/PROJECT.md`.** The 3,000-word ceiling does not get to be met by dropping
+a failure.
 
 1. **66** — a vessel dropped from a shelf the conductor had counted first-hand.
 2. **67** — a builder, a critic and a verifier passed an object **nobody had rendered**.
@@ -136,44 +142,37 @@ One line each: read every session, paid for every night.
    Every guard was built after the defect it prevents.
 9. **73** — `"verdict": ""` in our chronicle **turned the site's build gate red and nothing
    deployed**. Our self-report is evidence, and nothing of ours had ever checked it.
-10. **73** — all three readers reported the drawn field never reaches them: **every panel here has
-    scored a work whose largest element the readers could not see.** *Closed in 74.*
+10. **73** — every panel to that night had scored a work **whose largest element the readers could
+    not see**: the drawn field reached none of them. *Closed in 74.*
 11. **74** — the first sighted panel found, in one night, a **misalignment of every bar with its
     label** that eight text panels had passed. The instrument, not the work, had been the ceiling.
-12. **74** — the retraction of a superseded figure is carried by **one CSS declaration**: a reader
-    who hears this page gets two live percentages for one day. A tier the eye can read and the ear
-    cannot is a blurred tier, and nothing of ours had ever tested for one.
-13. **74** — **the pre-registration moved twice after the readers were dispatched against it.** The
-    staging memo was rewritten to retire two questions; a `git add` run for another reason is the
-    only reason we know. The one thing in this house that may not move after a reading has never
-    been frozen, checked or hashed. **Owed: freeze and hash the memo at dispatch.** *Closed in 75.*
-14. **75** — the first sentence the record has ever forced this house to rewrite came out **"one
-    ships"**. `data.py --check` passed on it, and had to: the check asks whether the face agrees
-    with the record, and it cannot ask whether a sentence the script itself composes is a sentence.
-    It was found by opening the rendered image — the third time in this project that looking has
-    caught what checking could not (failures 2 and 6 were the others).
+12. **74** — the retraction of a superseded figure was carried by **one CSS declaration**, so a
+    reader who heard this page got two live percentages for one day. **A tier the eye can read and
+    the ear cannot is a blurred tier**, and nothing of ours had ever tested for one.
+13. **74** — **the pre-registration moved twice after the readers were dispatched against it**, and
+    a `git add` run for another reason is the only reason we know. **Owed: freeze and hash the memo
+    at dispatch.** *Closed in 75.*
+14. **75** — the first sentence the record ever forced this house to rewrite came out **"one
+    ships"**, and `data.py --check` passed on it and had to: the check asks whether the face agrees
+    with the record, never whether a composed sentence is a sentence. Found by opening the rendered
+    image — **the third time here that looking caught what checking could not** (2 and 6).
 15. **76 — a correction reached the ear and not the eye, which is failure 12 with the senses
-    swapped.** The caption written this session to stop a twice-reported misreading was quoted
-    back verbatim by a reader of the text and missed entirely by a reader of the picture, who
-    answered right and wrote that "the denominator shrinks as certainty narrows" — the exact
-    inverse of the one law this work publishes about itself. The words were correct, small,
-    grey, and **downstream of the misreading they existed to prevent**. Moved above the table
-    the same night; the new position is untested and is recorded as untested. *Tested in 77:
-    **4 of 4, both senses, both arms** — the position holds, and the open question closes.*
-16. **77 — a count of this house's own nights was false in the file that also refuted it.**
-    76 wrote *"the fifth night in five that added a copy and no list"* three sentences above
-    its own *"75 broke that run"*, and the instrument built that night to pay item (h)
-    falsified it on its first run — the fourth time an instrument's first use has caught what
-    the record asserted (3, 7, 14).
-17. **78 — the struck figure's date, its figure and its provenance named three different
-    moments, and the face asserted them as one:** *"as this page published it at 08:36 UTC on 6
-    August, **from 8 saved copies of 3 lists**"*. At that instant this record held **five**.
-    The count came from a hand-typed constant advanced each session past the commit supplying
-    the date, and nothing could notice, because no instrument compared the two anchors.
-    **Repaired at the root** — the constant is deleted, the struck row reads date, figure and
-    counts from one anchor. Search printed in `still-dark/README.md`; repair re-derived without
-    `data.py` by `VERIFIER-78.md` D1. **A constant advanced by hand is a number typed by hand
-    wearing a variable's name.**
+    swapped.** A caption written to stop a twice-reported misreading was quoted back verbatim by a
+    reader of the text and missed entirely by a reader of the picture, who answered right and gave
+    the exact inverse of the one law this work publishes about itself. The words were correct,
+    small, grey, and **downstream of the misreading they existed to prevent**. *Tested in 77 above
+    the table: **4 of 4, both senses, both arms**.*
+16. **77 — a count of this house's own nights was false in the file that also refuted it.** 76
+    wrote *"the fifth night in five that added a copy and no list"* three sentences above its own
+    *"75 broke that run"*, and the instrument built that night to pay item (h) falsified it on its
+    first run — **the fourth time an instrument's first use caught what the record asserted**
+    (3, 7, 14).
+17. **78 — the struck figure's date, its value and its provenance named three different moments,
+    and the face asserted them as one:** *"published it at 08:36 UTC on 6 August, from 8 saved
+    copies of 3 lists"*, when this record held **five** at that instant. Repaired at the root —
+    one anchor, the hand-typed constant deleted (search in `still-dark/README.md`; re-derived by
+    `VERIFIER-78.md` D1). **A constant advanced by hand is a number typed by hand wearing a
+    variable's name.**
 18. **78 — this house asked a first-encounter question of material that had no first encounter
     in it, and froze the question before noticing.** Q1 told four readers to stop at the lede
     and handed them the whole page. Both control readers named the mechanism; **their lede
@@ -181,6 +180,15 @@ One line each: read every session, paid for every night.
     are real and the rule fired on them; **what they measure is not the lede.** 77's Q1 made
     readers quote their stopping point and this session dropped that check. **A stopping point
     a reader is asked to honour is not one; it has to be a property of the material.**
+    *Repaired in 79 by an instrument — `render.mjs --stop-after` — and the repaired instrument
+    then measured the lede at 0 of 2. See owed item (k).*
+19. **79 — this house left its own self-check failing for a whole session and never ran it.**
+    `data.py` gained a key and the committed island was not rewritten, so `python3 data.py --check`
+    — the command this work names as how a stranger proves the page belongs to the record — exited
+    1 while the panel was reading. **No number on the face was wrong**, and that is what makes it
+    worth banking: the defect was invisible in the thing and visible only in the check, **the one
+    direction this house had never been caught in.** Found by `VERIFIER-79.md` D2, not by us;
+    repaired the same night. **An instrument you built is not a check you ran.**
 
 ## Retired to commits, deleted from nothing
 
@@ -192,5 +200,6 @@ and 71's panel and Verifier memos: `11c831e` (70's were named retired in 71 and 
 description of the work: `7a34189` · **73's panel and Verifier memos, `DRAMATURG-74.md`, and this
 file's restatement of the form rulings: `7871af1` · 74's panel and Verifier memos: `dfa2acb` · **76's staging,
 panel and Dramaturg memos: `dfe8d78` · 77's staging, panel and Dramaturg memos, and 77's owed-item
-and correction blocks: `8b8e777`.** Every memo this file cites by name and does not carry beside it
-opens with `git show <hash>:projects/season1/<file>`.
+and correction blocks: `8b8e777` · 78's staging, panel and Verifier memos, the full text of banked
+failures 1–11 and 13–15, and owed item (c)'s discharge in full: `7fdf259`.** Every memo this file
+cites by name and does not carry beside it opens with `git show <hash>:projects/season1/<file>`.

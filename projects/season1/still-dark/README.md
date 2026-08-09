@@ -46,7 +46,7 @@ ceiling that can only fall* — and on 6 August it fell, unaided:
 |---|---|---|
 | as published, 4 saved copies / 2 lists, to `2026-08-06T04:36:19Z` | **79 %–100 %** | 11 of 0–14 |
 | as this page published the law, 5 saved copies / 3 lists, at `2026-08-06T08:36:39Z` | **69 %–100 %** | 11 of 0–16 |
-| as measured now, 12 saved copies / 5 lists | **55 %–100 %** | 11 of 0–20 |
+| as measured now, 14 saved copies / 5 lists | **55 %–100 %** | 11 of 0–20 |
 
 > **CORRECTION, session 78 (2026-08-08).** The middle row read *"as measured now, 8 saved
 > copies / 3 lists"* until tonight, and *now* had been three sessions ago. Worse, the same
@@ -95,6 +95,28 @@ act without also telling them, truthfully, what the act is worth.** Under the pr
 escalation this form carries **no reader act at all** — and with the act went the two-state
 apparatus, the keypad, the button and everything the turn used to withhold.
 
+**Since session 79 two things on this face were cut by readers rather than by taste, and one was
+refused.** Asked only what they would cut, and severed from each other, three of four readers in
+session 78 named the OBSERVED sha256 ledger or the terminal block above it as machine exhaust, and
+two named *"first seen 5 AUG"* printed identically down every row. Both went to a frozen
+pre-registration with the refuting numbers written first (`../STAGING-79.md`, `../PANEL-79.md`).
+**The repeated line is now stated once per block** — 0 of 2 readers named it or its replacement.
+**The ledger MOVED above the terminal block and was NOT deleted**, so the page's last words are its
+own verbatim output and not fourteen rows of truncated sha256 — 1 of 2 named it, against 3 of 4 on
+the uncut page. *Deleting it was refused, and the reason is the same panel:* **both readers, asked
+what they would do if they doubted the numbers, reached for that table.** The element one of them
+called debug output is the element both used to check the work.
+
+**And the page's first sentence was measured for the first time, by cutting the material rather
+than instructing the reader.** Every first-encounter question this house had ever asked told a
+reader to stop somewhere and handed them the whole page; session 78 proved the instruction is not
+obeyed. `node render.mjs <dir> --stop-after=#sd-lede` removes everything after the lede from the
+rendered document before the screenshot and the extraction are taken, so the material itself ends
+there. **Both readers of that material got the lateness. Neither named the mechanism, and both took
+this page to be about ships that were present rather than ships that had gone dark.** The result is
+0 of 2 against a pass mark of 2 of 2, published with the prediction this house had frozen before
+dispatch, and it stands as the honest measure of this head until a form answers it.
+
 **Every figure on the face is computed from the committed captures, never typed.**
 `data.py` builds the page's JSON island from `../captures/*.json`; `data.py --check` fails if the
 island and the captures disagree. Two figures had previously reached a face out of a head instead
@@ -106,7 +128,7 @@ live — fetch time, body hash, content hash, list date, ship count — and the 
 it as the OBSERVED ledger. A hand-typed copy of a record is a second record that can disagree with
 the first, and in session 78 one did (see the correction above).
 
-**Twelve saved copies, seven bodies, five lists, as of session 78.** Two lists have come back in
+**Fourteen saved copies, seven bodies, five lists, as of session 79.** Two lists have come back in
 more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.
@@ -127,8 +149,10 @@ session 70 has now, once, done the job it was built for.
   links to its Global Fishing Watch page.
 - **DERIVED** — `both ends of every date`: arithmetic on published durations and the published
   7-day window. Both ends always printed, and hatched on the bar.
-- **OBSERVED** — this house's own record: `first seen` per vessel, which edition first carried it,
-  and every capture's timestamp, status, byte count and both hashes.
+- **OBSERVED** — this house's own record: when this page first saw each vessel, which edition first
+  carried it, and every capture's timestamp, status, byte count and both hashes. **Since session 79
+  the date is stated once per block instead of on every row** — see below; it is refused, and the
+  rows keep their own lines, wherever a block's rows do not share one date.
 
 **`render.mjs`** renders the built page in a headless browser and writes `STATE-1.txt` — what a
 screen reader receives, used unedited as panel material — plus `render-1400.png` and
