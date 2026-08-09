@@ -2,6 +2,45 @@
 
 one day of the sea, and how much of it was knowable on the day itself
 
+SHIPS THE LISTS PUT INTO 4 AUGUST 2026
+
+dark — the ship's AIS transponder switched off, so it stops being tracked. A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.
+
+20
+counting the lists up to 8 AUG — four days after the day had ended
+TUNAMAR · PAN
+MICRONESIA103 · FSM
+ALIZE · ECU
+FORTICA · ECU
+PANOFI MASTER · GHA
+TRAVELER · USA
+VICTORIA · MEX
+PANOFI DISCOVERER · GHA
+VESTERAALEN · USA
+PACIFIC FURY · USA
+EXCELLENCE · USA
+SOUTHERN SEAS NO.302 · SLB
+RICKY · GBR
+ALTAR 10 · ECU
+ALBACORA CUATRO · ESP
+BONAMI · KOR
+WANGBIAO-8730 · CHN
+TUNA PESCA · PAN
+SAPPHIRE III · USA
+MONTECELO · SLV
+4 AUG
+5 AUG
+6 AUG
+7 AUG
+8 AUG
+run it again
+
+A ship reaches the list only after it comes back, so a day that is over keeps being answered. Five lists, five answers, one day — the last of them four days after the day had ended. That last answer is today's, and no later night can make it smaller.
+
+DERIVED — whether a name belongs to this day at all: a return is published only as a week-wide band, so every count here is a possible and not a certain. OBSERVED — which saved copy first carried each name. This stop is the possible end of 0–20 on the line “vessels dark on that day” in: python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-08T21:37:19Z
+
+“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
+
 Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Nine arrived later — four of them after this page had printed its figure.
 
 “The AIS picture of the seas looks complete. It is not — ships switch off their transponder on purpose to vanish.” — method sheet, The Ghost Fleet, frankbueltge.de. Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore.
@@ -156,7 +195,7 @@ SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved c
 
 It fell fourteen points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; and TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day — four ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 14 saved copies of 5 lists —
+LIVE · as this record measures it now, from 15 saved copies of 5 lists —
 55 %–100 %
 11 of 0–20
 
@@ -167,7 +206,7 @@ The eleven did not move, and cannot. No later night can put a name into a list t
 “A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.”
 printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall.
 
-Two lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day.
+Three lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day.
 
 OBSERVED — every saved copy this page holds
 fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list
@@ -185,17 +224,18 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list
 2026-08-08T21:37:19Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6
 2026-08-08T23:57:35Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6
 2026-08-09T00:00:53Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6
+2026-08-09T04:37:35Z	200	37,901	680c1c71…	5c89d9ec…	8 August 2026	6
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  14 capture(s) read, 5 distinct edition(s), 5 distinct content(s), 7 distinct bod(y/ies)
+day 2026-08-04  ·  15 capture(s) read, 5 distinct edition(s), 5 distinct content(s), 8 distinct bod(y/ies)
   vessels dark on that day .......... 0–20 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 55%–100%  (11 of 0–20)
-    (a ceiling from 5 edition(s), 14 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 5 edition(s), 15 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 

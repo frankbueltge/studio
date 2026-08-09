@@ -97,6 +97,17 @@ DEFINITION = (
     "intentional: at least 12 hours dark, at least 50 nautical miles offshore."
 )
 
+# Upstream's restraint, inherited and repeated wherever these numbers travel. It stood
+# hand-written in the page's foot until session 80; it is a constant here now because the
+# running head names twenty vessels ABOVE that foot, and a restraint that does not travel
+# with the names it restrains is a restraint on the wrong page. One string, two places, no
+# drift possible.
+RESTRAINT = (
+    "“Intentional” is a machine estimate by Global Fishing Watch — a probability, not "
+    "proof; the instrument makes no claim of illegality against any vessel or state, and "
+    "neither do we."
+)
+
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 MONTHS_CAPS = [m.upper() for m in MONTHS]
@@ -312,6 +323,151 @@ def build():
             ],
         })
 
+    # ── THE ARRIVAL — owed item (k), and the first thing this page DOES. ──────────────
+    #
+    # Session 79 measured this face's opening sentence for the first time, with an
+    # instrument rather than an instruction (`render.mjs --stop-after`), and it failed
+    # 0 of 2 against a frozen mark of 2 of 2: both severed readers got the lateness and
+    # NEITHER named the mechanism, and both read the page as being about ships that were
+    # PRESENT on the day. Under the rule frozen before those answers existed, owed item
+    # (k) stopped being a question about sentences and became one about form: *what does
+    # this page do to a stranger before it tells them anything?*
+    #
+    # This is the answer, and it is not a fourth rewrite of the lede. The subject of this
+    # work is a DELAY IN KNOWING, and a page of prose can only assert a delay. So the day
+    # is run forward instead: the question stays fixed on 4 August 2026 while the list
+    # answering it moves, list by list, through the five editions this record holds — and
+    # the count of ships climbs while the day it describes stays finished. A reader
+    # watches a past day get bigger before a word of the page has explained anything.
+    #
+    # Not one figure here is new and not one is typed. Every stop is a block of `field`
+    # above — the same OBSERVED grouping the page has printed for weeks — with a running
+    # total taken across it. The head therefore cannot disagree with the body: they are
+    # one computation. Each stop is reproducible by a stranger with one command, which the
+    # block prints BESIDE THE STOP rather than asking to be believed.
+    #
+    # THE COMMAND IS PER-STOP AND ITS ARGUMENT IS AN INSTANT, and both of those are
+    # `VERIFIER-80.md` D2, which caught this line the same night it was written. The first
+    # draft printed one command and invited a stranger to substitute the dates from the
+    # head's own buttons. NOT ONE OF THE FIVE STOPS CHECKS OUT THAT WAY: `day.py --as-of`
+    # compares against a capture's FETCH INSTANT, and every edition is captured the
+    # following day, so two of the five exit non-zero and three silently return the
+    # PREVIOUS stop's total. Nor is it fixable by shifting the date a day — the editions of
+    # 4 and 5 August were both captured on 5 August, so no date-only argument can ever
+    # isolate stop 0. A page whose published refutation of its own takedown is *the number
+    # is checkable against a committed record* had put a command on its face that checked
+    # nothing. The instant is the fetch time of the earliest saved copy carrying that
+    # stop's list, read off the captures, never typed.
+    #
+    # TIERS, and this is `VERIFIER-80.md` D3. The grouping is OBSERVED — which saved copy
+    # first carried a name is this house's measurement of its own record. But WHETHER A
+    # NAME BELONGS TO THIS DAY AT ALL IS DERIVED, from a return published only as a
+    # week-wide band. The first draft stamped the whole block OBSERVED without
+    # qualification, and stood it ABOVE the page's own legend, where a stranger gets a mark
+    # and no key. Both tiers are named here now, the gate first.
+    arrive_stops = []
+    running = 0
+    for g in field:
+        running += g["count"]
+        late = g["days_after"]
+        as_of = min(seen_at[r["name"]]["first_seen_utc"] for r in g["rows"])
+        # The band this stop's count is the possible end OF, re-run through the same
+        # analysis the page uses rather than asserted — `VERIFIER-80.md` D2, second half:
+        # a stranger told to check a bare `11` against `day.py` meets
+        # `0–11 (certain–possible)` and has to be told which end they are looking at.
+        # The certain end is a computed branch here as everywhere else, never a typed nought.
+        st = analyse(DAY, load(CAPTURES, as_of=as_of))["vessels_dark_on_day"]["band"]
+        arrive_stops.append({
+            "as_of": as_of,
+            "check": f"python3 projects/season1/capture/day.py {DAY} --as-of {as_of}",
+            "check_lead": (
+                f"This stop is the possible end of {st[0]}–{st[1]} on the line “vessels "
+                "dark on that day” in: "
+            ),
+            "edition": g["edition"],
+            "printed": short_caps(g["edition"]),
+            "days_after": late,
+            "total": running,
+            "added": [{"name": r["name"], "flag": r["flag"]} for r in g["rows"]],
+            # The count is CUMULATIVE, so the line under it may not name one list as
+            # having produced it. The first draft of this block read "named by the list
+            # dated 8 AUG" over a total of twenty, and the list of 8 August named three:
+            # a sentence that was true of the number's last increment and false of the
+            # number. "Counting the lists up to" is the accumulation the total actually
+            # is, and it stays true at every stop including the first.
+            "when": (
+                f"counting the lists up to {short_caps(g['edition'])} — the day itself"
+                if late == 0 else
+                f"counting the lists up to {short_caps(g['edition'])} — "
+                f"{'a day' if late == 1 else word(late) + ' days'} after the day had ended"
+            ),
+        })
+    n_stops = len(arrive_stops)
+    last_late = arrive_stops[-1]["days_after"]
+    arrive = {
+        # NOT "ships dark on 4 August 2026", which is what this line said in its first
+        # draft and which the page's own body denies four inches lower: of these names
+        # not one is CERTAINLY dark on this day, because a list gives a return only as a
+        # week-wide band. A head asserting a certainty the body retracts is a blurred
+        # tier — this house's cardinal sin — and it would have been the largest one on
+        # this face, at the top of it. The count is a count of what the lists have put
+        # into the day; that is an OBSERVED fact about the record, and it is what the
+        # number under this line actually is.
+        "subject": f"SHIPS THE LISTS PUT INTO {DAY_PRINTED}",
+        # The whole 0-of-2 of session 79 was a reader taking this page to be about ships
+        # that were PRESENT. The word carrying the subject is glossed where it first
+        # appears, in the page's own terms and no further: no claim of intent is made
+        # here, because upstream makes none — "intentional" is a machine estimate, a
+        # probability and not proof, and the restraint travels with the material. The
+        # second sentence carries the band, and its count is a BRANCH on the computed
+        # certain-end, never a literal nought.
+        "subject_gloss": (
+            "dark — the ship's AIS transponder switched off, so it stops being tracked. "
+            "A list gives a ship's return only to the nearest week, so "
+            + (
+                "not one of these names is certainly dark on this day."
+                if now["vessels_dark_on_day"]["band"][0] == 0 else
+                f"{word(now['vessels_dark_on_day']['band'][0])} of these names are "
+                "certainly dark on this day and the rest are possible."
+            )
+        ),
+        "stops": arrive_stops,
+        # The mechanism, said once, under the thing that has just enacted it. The word
+        # order matters: the reason comes first, so a reader who arrives after the run
+        # has finished still gets why the number moved.
+        "caption": (
+            "A ship reaches the list only after it comes back, so a day that is over "
+            f"keeps being answered. {word(n_stops).capitalize()} lists, "
+            f"{word(n_stops)} answers, one day — the last of them "
+            f"{'a day' if last_late == 1 else word(last_late) + ' days'} after the day "
+            "had ended. That last answer is today's, and no later night can make it "
+            "smaller."
+            # It said "Twenty is today's answer" until this line was looked at against a
+            # frame of the running head at its FIRST stop, where the count reads eleven.
+            # A caption that stands under a moving number may not name one of the
+            # number's values, or the page contradicts itself for four seconds of every
+            # visit — and the frame is how that was caught, not the reading of the string.
+        ),
+        # Self-contained, because this block stands ABOVE the page's tier legend and a
+        # mark whose key is further down the page is a mark a reader cannot read. Session
+        # 79 banked owed item (m) on exactly that: one reader called the legend debug
+        # output. The command that completes this line is the STOP's own (see `check`
+        # above), so what a stranger is told to run always reproduces the state they are
+        # looking at.
+        "tier": (
+            "DERIVED — whether a name belongs to this day at all: a return is published "
+            "only as a week-wide band, so every count here is a possible and not a "
+            "certain. OBSERVED — which saved copy first carried each name. "
+        ),
+        # The upstream restraint, and it travels with the NAMES. This block names twenty
+        # vessels and their flags and stands above the foot that has always carried this
+        # sentence — and in the material actually dispatched to session 80's readers,
+        # truncated at this block, the foot did not exist at all (`VERIFIER-80.md` D3,
+        # note b). One string, used here and in the foot, so the two cannot drift.
+        "restraint": RESTRAINT,
+        "replay": "run it again",
+    }
+
     # what moved since the struck figure was true: the vessels this day gained from
     # captures later than the law's publication, named, with the list that carried them
     then_names = {e["name"] for e in then["certain"] + then["possible"]}
@@ -469,7 +625,9 @@ def build():
             "window_quote": caps_now[-1]["method"]["window_quote"],
             "definition_quote": DEFINITION_QUOTE,
             "definition": DEFINITION,
+            "restraint": RESTRAINT,
         },
+        "arrive": arrive,
         "lede": lede,
         "field": field,
         "fall": {

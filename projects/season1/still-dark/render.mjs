@@ -55,11 +55,29 @@ const { chromium } = createRequire(import.meta.url)("playwright");
 // its markup.
 //
 //   node render.mjs ../staging-79/stop --stop-after=#sd-lede
+//
+// Since 2026-08-09 (session 80) it takes an optional `--at-step=<n>`, and that flag
+// exists because the page's head now RUNS. A screenshot of a moving element is one
+// frame of it, and a frame nobody chose is whatever the clock happened to be showing
+// when the shutter fell — which is the same defect as a number reaching a face out of a
+// head, with a camera instead of a hand. The flag drives the arrival to a named stop
+// through the page's own `window.__sdArrive.show`, so the frame is chosen, stated in
+// RENDERS.json, and reproducible. Without the flag nothing is driven: the render
+// context asks for reduced motion, the page honours that by showing its last stop, and
+// the committed outputs are that state.
+//
+//   node render.mjs ../staging-80/head --stop-after=#sd-arrive --at-step=0
 const here = dirname(fileURLToPath(import.meta.url));
 const argv = process.argv.slice(2);
 const dirArg = argv.find((a) => !a.startsWith("--"));
 const stopArg = argv.find((a) => a.startsWith("--stop-after="));
 const stopAfter = stopArg ? stopArg.slice("--stop-after=".length) : null;
+const stepArg = argv.find((a) => a.startsWith("--at-step="));
+const atStep = stepArg ? Number(stepArg.slice("--at-step=".length)) : null;
+if (stepArg && !Number.isInteger(atStep)) {
+  console.error(`--at-step must be an integer, got ${stepArg.slice("--at-step=".length)}`);
+  process.exit(1);
+}
 const target = dirArg ? join(here, dirArg) : here;
 const page_url = "file://" + join(target, "index.html");
 
@@ -74,8 +92,27 @@ async function open(width, height) {
   const page = await ctx.newPage();
   await page.goto(page_url);
   await page.waitForLoadState("load");
+  if (atStep !== null) await drive(page, atStep);
   if (stopAfter) await truncate(page, stopAfter);
   return { ctx, page };
+}
+
+// Drive the running head to a chosen stop. Exits non-zero rather than photographing an
+// undriven page: a `--at-step` that silently did nothing would put a frame in front of a
+// panel under a label naming a different one, and this house has already banked a night
+// of readers shown material that was not what its memo said it was.
+async function drive(page, n) {
+  const result = await page.evaluate((step) => {
+    const a = window.__sdArrive;
+    if (!a) return "no running head on this page";
+    if (step < 0 || step >= a.stops) return `step ${step} is outside 0..${a.stops - 1}`;
+    a.show(step);
+    return null;
+  }, n);
+  if (result) {
+    console.error(`--at-step=${n}: ${result}`);
+    process.exit(1);
+  }
 }
 
 // Everything after the named element goes, at every level between it and the work's
@@ -128,6 +165,7 @@ const outputs = ["STATE-1.txt", "render-1400.png", "render-900.png"];
 const manifest = {
   rendered_from: "index.html",
   stopped_after: stopAfter,
+  at_step: atStep,
   index_sha256: sha(join(target, "index.html")),
   outputs: Object.fromEntries(outputs.map((f) => [f, sha(join(target, f))])),
   note:
