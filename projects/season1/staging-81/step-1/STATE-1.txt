@@ -1,0 +1,43 @@
+4 AUGUST 2026
+
+one day of the sea, and how much of it was knowable on the day itself
+
+HOW MUCH OF 4 AUGUST 2026 WAS KNOWABLE ON 4 AUGUST 2026
+
+dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, the public instrument this page reads. A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.
+
+79 %–100 %
+of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 5 AUG, a day after the day had ended.
+
+IN THE LIST DATED 4 AUG — eleven ships, all that the day held about itself
+
+TUNAMAR · PAN
+MICRONESIA103 · FSM
+ALIZE · ECU
+FORTICA · ECU
+PANOFI MASTER · GHA
+TRAVELER · USA
+VICTORIA · MEX
+PANOFI DISCOVERER · GHA
+VESTERAALEN · USA
+PACIFIC FURY · USA
+EXCELLENCE · USA
+
+NAMED ONLY BY LATER LISTS — three ships dark on that same day that nobody could have had on it
+
+SOUTHERN SEAS NO.302 · SLB
+RICKY · GBR
+ALTAR 10 · ECU
+ON THE DAY
++1 DAY
++2 DAYS
++3 DAYS
++4 DAYS
++5 DAYS
+run it again
+
+A ship reaches the list only after it comes back, so a day that is over keeps being answered. Six lists, six answers, one day — the last of them five days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them. That is why the figure above falls, and why it can only go on falling.
+
+DERIVED — whether a name belongs to this day at all, and with it the arithmetic of the figure: a return is published only as a week-wide band, which is why the figure has two ends. OBSERVED — which saved copy first carried each name, and so which lists could have held it. This stop's figure is the line “SHARE knowable on the day” in: python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T12:54:00Z
+
+“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.

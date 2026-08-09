@@ -132,21 +132,13 @@
     letter-spacing: 0.08em;
     color: var(--sd-dim);
   }
-  /* NOT `:empty { display: none }`, and the reason is a measurement. The block below
-     these headings grows as the run proceeds, and with `display: none` on the empty
-     state the whole of the head under it — the stop buttons included — was pushed 136 px
-     down the page between the first stop and the last, measured in the browser at 1400 px
-     wide (329 → 465). The visitor is invited to press those buttons WHILE the thing runs;
-     a control that walks out from under a resting cursor is not a control. The space both
-     blocks will need is reserved from the first stop instead, by the page measuring its
-     own last stop on load — see `reserve()` below. Nothing is typed here: an empty block
-     stays in the flow and holds height it computed for itself. */
-  .sd-root .sd-arrive-group:empty { visibility: hidden; }
+  .sd-root .sd-arrive-group:empty { display: none; }
   .sd-root .sd-arrive-when {
     font-size: clamp(0.82rem, 1.5vw, 0.98rem);
     line-height: 1.35;
     max-width: 44ch;
   }
+  .sd-root .sd-arrive-names:empty { display: none; }
   .sd-root .sd-arrive-names {
     list-style: none;
     margin: 0 0 0.55rem;
@@ -1680,37 +1672,6 @@
   replay.textContent = arrive.replay;
   replay.addEventListener("click", run);
   ladderEl.appendChild(replay);
-
-  // The head reserves the room its own last stop needs, before it takes its first. It is
-  // a repair and it was found by measuring, not by looking: DRAMATURG-81 §4 named the
-  // button row as walking down the page during the run, and the browser put 136 px on it
-  // (329 → 465 at 1400 px wide, over six stops). Every stop is a button and a visitor is
-  // invited to press one WHILE the run continues; a target that moves under a resting
-  // cursor is a control in name only. The page measures its own last stop and holds that
-  // height from the first — no constant is typed, and the reservation is recomputed on
-  // resize because the block wraps differently at every width.
-  // The headline is reserved with them: the last stop is the only one whose line under
-  // the figure says which end of it moves, and that one extra sentence was worth 42 px
-  // of the 136 on its own. Measuring caught it; reading the markup had not.
-  var headlineEl = document.querySelector(".sd-arrive-headline");
-  function reserve() {
-    var held = [headlineEl, sinceHeadEl, sinceEl];
-    held.forEach(function (el) { el.style.minHeight = ""; });
-    showStop(stops.length - 1);
-    held.forEach(function (el) { el.style.minHeight = el.offsetHeight + "px"; });
-  }
-  reserve();
-  var reflow = null;
-  window.addEventListener("resize", function () {
-    if (reflow) clearTimeout(reflow);
-    reflow = setTimeout(function () {
-      var at = stopButtons.findIndex(function (b) {
-        return b.getAttribute("aria-current") === "true";
-      });
-      reserve();
-      showStop(at < 0 ? 0 : at);
-    }, 120);
-  });
 
   // DRAMATURG-80 §5, and the whole of what changed about who gets what: the resting
   // state is the FIRST stop, not the last. A reader given no motion is given the day's

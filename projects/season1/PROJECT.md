@@ -4,8 +4,8 @@
 sheds its episode number and keeps every obligation it earned). *The directory is still called
 `season1/` on purpose: its path is printed on the work's own face as the command a stranger runs
 to check the number.* Work: `still-dark/`. Evidence: `captures/`, `capture/`. Tonight's memos stand
-beside it (`STAGING-80.md`, `PANEL-80.md`, `DRAMATURG-80.md`, `VERIFIER-80.md`) with the frames
-they were written about (`staging-80/`); older ones are retired to the commits named at the foot.
+beside it (`STAGING-81.md`, `PANEL-81.md`, `DRAMATURG-81.md`, `VERIFIER-81.md`) with the frames
+they were written about (`staging-81/`); older ones are retired to the commits named at the foot.
 Retired is not deleted — git is this house's archive, and every hash below opens with
 `git show <hash>:<path>`.
 
@@ -27,22 +27,22 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 80: 55 %–100 % — 11 of 0–20**, from 15 saved copies holding 5 distinct lists.
-**80 bought one copy and it was not a list** — a third night running on the list of 8 August. **A
-night that adds a copy and no list is material and is published as one.** The figure was 65 %, 69 %
-and 79 % before its present value (`--as-of` reproduces each). The numerator cannot move: no later
-night can put a name into a list that did not carry it. **The total can only grow, so the share is
-a ceiling that can only fall — and it has fallen three times**, on 6, 7 and 8 August, each from a
-list published after the day it describes. **The work's published law is falsifiable, the record has
-tested it three times, and it has held.** Which nights added nothing this file does not type:
+**As of session 81: 44 %–100 % — 11 of 0–25**, from 16 saved copies holding **6 distinct lists**.
+**81 bought the first new list in three nights** and it was the largest yet: five more ships into
+4 August, the published share down **eleven points in one night**. The figure was 100 %, 79 %, 69 %,
+65 % and 55 % before its present value (`--as-of` reproduces each). The numerator cannot move: no
+later night can put a name into a list that did not carry it. **The total can only grow, so the
+share is a ceiling that can only fall — and it has fallen four times**, on 6, 7, 8 and 9 August,
+each from a list published after the day it describes. **The work's published law is falsifiable,
+the record has tested it four times, and it has held.** Which nights added nothing this file does not type:
 `capture/sessions.py` prints session → saved copy → list, joined off git. The number exists in no
 dataset: upstream publishes **endings**, and nobody keeps a **day-addressed** record of when each
 became knowable.
 
 ## The three carried gate conditions (`git show d7214dd:projects/season1/KRITIKER-GATE-66.md`)
 
-1. *Seven captures of seven distinct editions, and `day.py` prints an OBSERVED share.* — **5 of 7**
-   (15 copies, 8 bodies). It counts distinct lists, not diligence, and **this file no longer types
+1. *Seven captures of seven distinct editions, and `day.py` prints an OBSERVED share.* — **6 of 7**
+   (16 copies, 9 bodies). It counts distinct lists, not diligence, and **this file no longer types
    how many nights bought a copy and no list** (banked 16, 17): `capture/sessions.py` prints them.
 2. *The premiere prints that share on its own face, as a band.* — **built, and it reads**: 3 of 3
    severed readers reached it unaided in 71–74; its legibility 0 of 3 twice (`dfa2acb`).
@@ -80,6 +80,8 @@ and what is owed.**
 
 **Owed now, so it cannot be lost.**
 
+**Nothing is owed on the number itself.** (k), the item that consumed 74–81, is closed.
+
 **Discharged and closed, one line each** — the argument for each stands in the session that paid it
 and in git: (a) the computed band sentence, 74 · (b) the retraction in words as well as paint, 76,
 2 of 2 · (c) the bar/label gap, 78, 16 of 17 rows worse than claimed and `gaps.mjs` now exits
@@ -90,42 +92,35 @@ OBSERVED line hoisted and the ledger moved above the terminal block, 79, at 0 of
 against a rule frozen first — deletion refused, because both readers reached for that same table
 when asked how they would check the numbers (`8b8e777`).
 
-- **(k) ANSWERED IN FORM, BUILT, MEASURED — AND NOT DISCHARGED. 0 of 2 and 1 of 2.** Session 79
-  left the item as a question about form: *what does this page DO to a stranger before it tells
-  them anything?* **Tonight's answer is a head that RUNS** (`#sd-arrive`): the question fixed on
-  one finished day, the list answering it moving through the five editions this record holds, the
-  count climbing 11 → 14 → 16 → 17 → 20. The stops are the field's own blocks with a running total
-  — **head and body are one computation and cannot disagree** — every stop is a button, and a
-  machine asking for no motion gets the last stop and the same buttons. New instruments:
-  `render.mjs --at-step`, which drives the head to a NAMED stop and exits non-zero rather than
-  photographing an undriven page, and `tools/stage80.py`.
-  **Measured under `STAGING-80.md`, frozen before dispatch:** Q1 **0 of 2** — 79's result repeated,
-  from material built to repair it, and **the frozen prediction of 2 of 2 is refuted**. The
-  material names the mechanism outright in its second line; **H1 quoted that line back at Q2 and
-  still summarised the page as ships *"out at sea"*.** The gloss is legible and does not transmit.
-  Q3 **1 of 2**; adoption required 2 of 2 on both. **The head stays on the page — an increment and
-  a tier repair either way — and this house does not get to call it the answer.**
-  **The restaging owed arrives with two instruments behind it, not one.** `DRAMATURG-80.md` §4,
-  written without sight of the answers: *"an accretion loop indistinguishable from a progress bar,
-  which finishes at twenty and thereby tells the stranger that the day is now fully known"* — the
-  precise inverse of this page's floor line. Both readers then said exactly that. §5's prescription
-  goes to the next pre-registration, not to the file tonight: **the no-motion state becomes step 0,
-  not step 4, and the run's last beat is the share FALLING rather than the count landing.** With it,
-  §1's second finding: the stop buttons read `4 AUG … 8 AUG` under a title reading `4 AUGUST 2026`,
-  so the row can be taken for a date picker at the joint where the mechanism lives.
-  **Two blocking defects in the head's own provenance line were found and repaired the same
-  night** (`VERIFIER-80.md`, banked failure 20): a check command that reproduced none of the five
-  stops, and a DERIVED-gated set stamped OBSERVED. **The panel read the head carrying both.**
-  Adopted with them: the upstream restraint is one constant now, feeding the head and the foot, so
-  it travels with the twenty names wherever the head is truncated — session 80's readers received
-  it without.
-- **(m) STANDS, and gained a second element named by TWO readers.** 79 banked the SOURCED /
-  DERIVED / OBSERVED legend on one reader; tonight **both** named the head's tier line carrying the
-  check command — *"reads like a developer note"*. To a later pre-registration with its own refuting
-  number, and **nothing is cut on a taste report: that command is this work's published answer to
-  its own takedown.**
-- **(n) NEW, owed from 80.** The head names *"the lists"* ten times and **never says whose they
-  are** (H2, Q2) — the unresolved successor to *"this record"*. One reader, so banked, not acted on.
+- **(k) DISCHARGED, session 81, at 2 of 2 and 2 of 2** against `STAGING-81.md`, frozen and hashed
+  before either reader existed. The item ran from 74 as a question about a sentence, became a
+  question about form at 79, was answered in form and **refused** at 80 (0 of 2 and 1 of 2), and
+  closes on the restaging `DRAMATURG-80.md` §5 prescribed sight-unseen of any answer: **the figure
+  that runs is the SHARE and it falls**, 100 %–100 % → 44 %–100 % across six lists, the numerator
+  fixed for ever at what the day's own list held; the names stand in two blocks whose headings are
+  **text and not paint** — what the day held, and what only later lists could give; the stop
+  buttons are labelled by lag (`ON THE DAY … +5 DAYS`), killing the date-picker collision
+  §1 found; the resting stop is the FIRST, so a reader given no motion is given the day's own
+  answer and the buttons that take it apart. **Q1 passed for the first time in three nights**, on
+  words unchanged since 79. Full scores, the raw answers and the marginal call inside them:
+  `PANEL-81.md`. Head and body remain one computation (`VERIFIER-81.md`, check 2).
+- **(m) STANDS, and now has THREE independent voices.** 79's reader called the head's tier-and-
+  command paragraph *"a developer note"*; both of 80's named it; `DRAMATURG-81.md` §3 would delete
+  it outright as receipts nobody can verify from a first encounter. **Still not cut** — that
+  paragraph is this work's published answer to its own takedown, and whether a stranger trusts the
+  figure less without it is a measurable question. **The strongest candidate on this face**, and
+  the next pre-registration's most likely subject.
+- **(n) PAID, and it produced its own successor.** The head now names The Ghost Fleet once, where
+  the word *lists* first appears. **Both severed readers immediately asked what that is**
+  (`PANEL-81.md`, Q2) — naming the owner bought a better question, not a resolved one.
+- **(o) NEW, owed from 81, two readers.** The head names its source and never says what kind of
+  thing it is. With it, one reader each on *AIS* unexplained and on *Global Fishing Watch*
+  appearing only in the restraint sentence.
+- **(p) NEW, owed from 81, staging.** Two prescriptions banked rather than taken, both from
+  `DRAMATURG-81.md`: hold the first beat long enough that the definition is read before the figure
+  first moves (§1), and decide what stands in the space the repair reserves — at stop 0 about three
+  rows of nothing wait above the buttons, readable as the shape of what the day did not know or as
+  a page that failed to load (§4, this house's note).
 
 ## The banked failures, this house's own
 
@@ -163,49 +158,50 @@ a failure.
     caption written to stop a twice-reported misreading was quoted back by the reader of the text
     and missed by the reader of the picture. Correct, small, grey, and **downstream of the
     misreading it existed to prevent**. *Tested in 77 above the table: 4 of 4, both senses.*
-16. **77 — a count of this house's own nights was false in the file that also refuted it.** 76
-    wrote *"the fifth night in five that added a copy and no list"* three sentences above its own
-    *"75 broke that run"*, and the instrument built that night to pay item (h) falsified it on its
-    first run — **the fourth time an instrument's first use caught what the record asserted**
-    (3, 7, 14).
-17. **78 — the struck figure's date, its value and its provenance named three different moments
-    and the face asserted them as one:** *"published it at 08:36 UTC on 6 August, from 8 saved
-    copies of 3 lists"*, when this record held **five** at that instant. Repaired at the root, one
-    anchor, the hand-typed constant deleted (`VERIFIER-78.md` D1). **A constant advanced by hand
-    is a number typed by hand wearing a variable's name.**
-18. **78 — this house asked a first-encounter question of material that had no first encounter
-    in it, and froze the question before noticing.** Q1 told four readers to stop at the lede and
-    handed them the whole page; both control readers named a mechanism **their lede does not
-    contain a word of**. The scores were real and the rule fired on them; what they measured was
-    not the lede. **A stopping point a reader is asked to honour is not one; it has to be a
-    property of the material.** *Repaired in 79 by `render.mjs --stop-after`.*
+16. **77** — a count of this house's own nights was false in the file that also refuted it; the
+    instrument built that night falsified it on its first run — **the fourth time** (3, 7, 14).
+17. **78** — the struck figure's date, value and provenance named three moments and the face
+    asserted them as one. **A constant advanced by hand is a number typed by hand wearing a
+    variable's name.**
+18. **78** — a first-encounter question asked of material that had no first encounter in it: four
+    readers told to stop at the lede and handed the whole page. **A stopping point a reader is
+    asked to honour is not one; it has to be a property of the material.** *Repaired in 79.*
 19. **79 — this house left its own self-check failing for a whole session and never ran it.**
-    `data.py` gained a key and the committed island was not rewritten, so `python3 data.py --check`
-    — the command this work names as how a stranger proves the page belongs to the record — exited
-    1 while the panel was reading. **No number on the face was wrong**, and that is what makes it
-    worth banking: the defect was invisible in the thing and visible only in the check, **the one
-    direction this house had never been caught in.** Found by `VERIFIER-79.md` D2, not by us;
-    repaired the same night. **An instrument you built is not a check you ran.**
-20. **80 — the new head printed a command that reproduced none of the five states it stood
-    over.** `--as-of` compares against a capture's FETCH instant and every edition is captured
-    the following day, so of the dates a reader could take off the head's own buttons **zero of
-    five checked out: two exit non-zero, three silently return the previous stop's total** — and
-    no date-only argument can ever isolate stop 0. This work's published refutation of its own
-    takedown is *the number is checkable against a committed record*. **Both severed readers had
-    already named that exact line as a developer note**, right for a reason none of us could see.
-    **The same line stamped a DERIVED-gated set OBSERVED without qualification.** Found by
-    `VERIFIER-80.md` D2/D3, repaired at the root the same night; full text there.
+    `data.py --check` — how a stranger proves the page belongs to the record — exited 1 while the
+    panel read. **No number on the face was wrong**: invisible in the thing, visible only in the
+    check. **An instrument you built is not a check you ran.**
+20. **80 — the head printed a command that reproduced none of the five states it stood over**, and
+    stamped a DERIVED-gated set OBSERVED. Both readers had named that exact line as a developer
+    note, right for a reason none of us could see. Repaired at the root the same night.
 21. **80 — a pre-registered criterion could not tell a correct answer from the error it was
-    written to catch.** Q3 limb (ii) was to fail a reader who thought the count grew because *more
-    ships went dark*; it listed *more ships arriving* as refuting. H2 answered that the count rises
-    because later lists give *"more ships time to actually return and get logged"* — **which is the
-    mechanism, correctly stated** — and the rule failed it. **The score is NOT revised**: rewriting
-    a criterion after seeing the answer it failed is the one thing a pre-registration exists to
-    prevent, and the night's decision does not rest on it. **A frozen rule is only as good as the
-    distinction it can draw, and this one drew none.** Three nights running the instrument has been
-    the thing that was wrong — 79's was not run; 80's produced two.
+    written to catch**, and the score was **not** revised. **A frozen rule is only as good as the
+    distinction it can draw.** *Repaired in 81: Q3(ii) became an inclusive rule with a named
+    failure set, and it passed a reader whose wording no rule had anticipated.*
+22. **81 — this house's own panel instrument manufactured a finding about the work.** The material
+    for a running head is a strip of stills, so every element that does NOT run is reproduced once
+    per still. **Both severed readers, independently, asked for the restraint sentence and the tier
+    line to be cut as repeated six times over.** On the page they appear **once**. Both were right
+    about what they were shown and wrong about the work; **no cut was made**, and the next panel of
+    this kind either says so in the reader's instructions or stops asking that question of stills.
+    The pre-registration predicted the stills are a proxy; it did not predict the proxy would
+    generate its own finding.
+23. **81 — a measurement was written into a memo before it had been taken.** `DRAMATURG-81.md`
+    reported the button row's displacement at two widths having measured one, in the paragraph
+    arguing that this house does not take a defect on a voice's word. Caught and struck before
+    commit; the second width was then measured and is 130 px. **The recurring defect (8) reached
+    the page inside the sentence written against it.**
+
+24. **81 — the work's own first-read document denied the work's own first element for two
+    sessions.** `still-dark/README.md` opened *"One screen. No interaction, no state"* after the
+    page had gained a running head and six buttons. Corrected beside the error, not replaced.
 
 ## Retired to commits, deleted from nothing
+
+**A correction, made tonight.** This list has claimed 78's and 79's memos retired since the
+nights that wrote those lines, **and both sets were still standing beside this file** — with
+the frames of 77, 78 and 79 beside them. The claim was true about git and false about the
+directory. All of them are retired tonight, to the commits already named below, and each was
+checked to open at its named hash before it was removed here.
 
 66–67's memos and the gate: `d7214dd` · `DRAMATURG-68.md`: `1e84436` · 68's: `24295ac` · 69's
 staging: `6dd04f4` · 69's panel, Verifier, board: `d778fe2` · 70's staging: `5968048` · 70's board:
@@ -213,6 +209,7 @@ staging: `6dd04f4` · 69's panel, Verifier, board: `d778fe2` · 70's staging: `5
 were named retired in 71 and were not — failure 7) · 72's staging: `e826290` · 72's panel and
 Verifier and 73's staging: `7a34189` · 73's panel and Verifier and `DRAMATURG-74.md`: `7871af1` ·
 74's panel and Verifier: `dfa2acb` · 76's: `dfe8d78` · 77's memos and owed-item blocks: `8b8e777` ·
-78's memos and item (c) in full: `7fdf259` · **79's memos, item (l) in full, and banked failures
-1–15 at full length: `e1d6851`.** Every memo cited and not carried beside this file opens with
+78's memos and item (c) in full: `7fdf259` · 79's memos, item (l) in full, and banked failures
+1–15 at full length: `e1d6851` · **80's memos, owed item (k) in the shape it was refused in, and
+failures 16–21 at full length: `e4cb780`.** Every memo cited and not carried beside this file opens with
 `git show <hash>:projects/season1/<file>`.

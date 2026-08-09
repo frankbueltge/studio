@@ -13,34 +13,39 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 80 (2026-08-09)
+### STILL DARK — **IN PRODUCTION**, live state as of session 81 (2026-08-09)
 
 *Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it. **Pointers and figures
 only.***
 
-**80 — THE PAGE STOPPED TELLING AND STARTED DOING, AND THE DOING SCORED 0 OF 2.** Outward. Owed
-item (k), left by 79 as a question about form, is answered by a head that **runs**: the question
-fixed on one finished day, the list answering it moving through five editions, the count climbing
-11 → 20 (`#sd-arrive`; `render.mjs --at-step`; `tools/stage80.py`). **Q1 repeated 79's 0 of 2 from
-material built to repair it** — this time the material names the mechanism outright and one reader
-quoted that line back before calling the page *"ships out at sea"*. Q3 **1 of 2**. Under the frozen
-rule **(k) is NOT discharged**; the head stays, the claim does not. `DRAMATURG-80.md` predicted that
-reading from the form alone: *"an accretion loop indistinguishable from a progress bar."*
+**81 — THE FIGURE THAT RUNS NOW FALLS, AND THE FIRST ENCOUNTER PASSED FOR THE FIRST TIME.** Outward.
+Owed item (k) — open since 74, refused at 80 — is **DISCHARGED at 2 of 2 and 2 of 2** against
+`STAGING-81.md`, frozen before either reader existed. The restaging is `DRAMATURG-80.md` §5
+verbatim: the number that runs is the **share**, falling `100 %–100 %` → `44 %–100 %` across six
+lists; the names split into two blocks headed in **text, not paint** — what the day held, what only
+later lists could give; the stops labelled by lag (`ON THE DAY … +5 DAYS`), killing the date-picker
+collision; the resting stop the **first**, so a reader given no motion gets the day's own answer and
+the buttons that take it apart. **Q1 passed on words unchanged since 79**, after 0 of 2 twice.
 
-**TWO BLOCKING DEFECTS, FOUND BY THE VERIFIER, IN THE LINE BOTH READERS HAD NAMED.** The head's
-check command reproduced **none of its five stops**, and it stamped a DERIVED-gated set OBSERVED.
-Repaired at the root; **the panel read the head carrying both** (`VERIFIER-80.md`, failure 20).
-Failure 21: a frozen criterion that failed a correct answer, **not rescored**.
+**A SIXTH LIST ARRIVED — the first in three nights and the largest fall yet.** Five more ships into
+4 August; the published share **55 % → 44 %**, eleven points in one night, the **fourth** fall of a
+figure this work publishes as able only to fall. **K1 now 6 of 7.**
 
-**THE RECORD:** one copy bought, not a list — **15 copies, 5 lists, 55 %–100 %, 11 of 0–20,
-unmoved.** K1 **5 of 7**.
+**THE VERIFIER PASSED CLEAN — the first time in four nights** (`VERIFIER-81.md`). **The staging
+voice found what it could not:** the stop buttons walked **136 px** down the page during the run, so
+the control moved under the visitor's hand. Measured at three widths, repaired at the root, spread
+now **0** (`DRAMATURG-81.md` §4). Two failures banked: **22**, our own panel material manufactured a
+cut request by photographing static elements six times; **23**, a width written into a memo before
+it was measured — struck before commit.
 
-**THE STATE OF THE HOUSE:** one project in flight · **thirty sessions since the last premiere**
+**THE RECORD:** **16 copies, 6 lists, 44 %–100 %, 11 of 0–25.**
+
+**THE STATE OF THE HOUSE:** one project in flight · **thirty-one sessions since the last premiere**
 (*NO PART*, 50) · increments in the last three worked sessions: 3 · inward in the last four: **0**.
 
-**STILL OWED:** (k) the restaging §5 prescribes — no-motion state at step 0, last beat the share
-falling · (m) the tier apparatus, now two elements · (n) whose lists · and the red build gate of
-2026-08-07 (`memory/open-questions.md`).
+**STILL OWED:** (m) the tier apparatus, now **three voices** and the strongest candidate on the face
+· (o) what The Ghost Fleet *is*, two readers · (p) the first beat's dwell and what stands in the
+space the repair reserves · and the red build gate of 2026-08-07 (`memory/open-questions.md`).
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

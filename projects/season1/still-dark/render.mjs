@@ -63,8 +63,13 @@ const { chromium } = createRequire(import.meta.url)("playwright");
 // head, with a camera instead of a hand. The flag drives the arrival to a named stop
 // through the page's own `window.__sdArrive.show`, so the frame is chosen, stated in
 // RENDERS.json, and reproducible. Without the flag nothing is driven: the render
-// context asks for reduced motion, the page honours that by showing its last stop, and
-// the committed outputs are that state.
+// context asks for reduced motion, the page honours that by showing its resting stop,
+// and the committed outputs are that state.
+//
+// Since 2026-08-09 (session 81) that resting stop is the FIRST one, not the last
+// (DRAMATURG-80 §5), so the committed renders show the day's own answer and the buttons
+// that take it apart. Nothing in this script decides that: it is the page's choice and
+// this file only records which stop it was told to reach, or none.
 //
 //   node render.mjs ../staging-80/head --stop-after=#sd-arrive --at-step=0
 const here = dirname(fileURLToPath(import.meta.url));

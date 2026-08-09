@@ -1,12 +1,29 @@
 # STILL DARK — increment 1
 
-**One screen. No interaction, no state, nothing withheld.** `4 AUGUST 2026` held fixed while
-every vessel this record can place in that day stands on a dated field, crossed by a labelled rule
-at 4 August, both ends of every band hatched seven days wide. The rows are grouped by the list that
-first carried them — **eleven in the list of 4 August, the day itself**, and the rest added by lists
-published one, two, three and four days after it. **The counts are not typed here**, because they
+**One screen, nothing withheld — and since session 80 one element of it runs.** `4 AUGUST 2026`
+held fixed while every vessel this record can place in that day stands on a dated field, crossed by
+a labelled rule at 4 August, both ends of every band hatched seven days wide. The rows are grouped
+by the list that first carried them — **eleven in the list of 4 August, the day itself**, and the
+rest added by lists published in the days after it. **The counts are not typed here**, because they
 grow: `python3 ../capture/day.py 2026-08-04` prints them, and the face computes them
 (`python3 data.py --check`).
+
+> **CORRECTED, session 81.** This paragraph opened *"One screen. No interaction, no state, nothing
+> withheld"* for two sessions after the page had gained a head that runs by itself and six buttons a
+> visitor presses — **the work's own first-read document denying the work's own first element.** The
+> head arrived in session 80; nothing in this house checked what the README said about it. The
+> correction stands here beside the error rather than replacing it, and it is banked as failure 24.
+
+**The head, and what it does.** The page opens on the day's own answer: the eleven ships the list
+dated 4 August held, and the share of that day's darkness they represent — `100 %–100 %`, because on
+the day itself the day appeared to know all of it. Then the later lists arrive, one stop at a time,
+and the figure falls to its live value. **The numerator never moves; only the total grows**, so the
+one number that runs runs downward. Every stop is a button labelled by how late it is, `ON THE DAY`
+through `+5 DAYS`; a visitor whose machine asks for no motion is given the first stop and the same
+buttons, so the delay is something they do rather than watch. Each stop prints the command that
+reproduces its own figure. The stops are the body's own blocks — **head and body are one computation
+and cannot disagree** — and `node render.mjs <dir> --at-step=<n>` drives the head to a named stop, so
+a still of a moving thing is a chosen frame.
 
 **Since session 72 the house's filing words are off the face.** *Edition* and *capture* are what
 this house calls the things it collects; on the page they are **the list** the instrument publishes
@@ -115,7 +132,18 @@ rendered document before the screenshot and the extraction are taken, so the mat
 there. **Both readers of that material got the lateness. Neither named the mechanism, and both took
 this page to be about ships that were present rather than ships that had gone dark.** The result is
 0 of 2 against a pass mark of 2 of 2, published with the prediction this house had frozen before
-dispatch, and it stands as the honest measure of this head until a form answers it.
+dispatch.
+
+**It was answered by a form, and the form was measured too.** Session 80 replaced the sentence-first
+head with one that runs, and it repeated the same 0 of 2 — the material named the mechanism in its
+second line and a reader quoted that line back while still calling the page ships *"out at sea"*. The
+number that ran was a **count of ships climbing**, which the staging voice named, from the form alone
+and before any answer existed, as *"an accretion loop indistinguishable from a progress bar, which
+finishes at twenty and thereby tells the stranger that the day is now fully known"* — the inverse of
+this page's floor line. **Session 81 turned the figure around**: the share, falling. Asked the same
+question in the same words, two severed readers came back **2 of 2**, and 2 of 2 again on what the
+figure is measuring and why it moves. Three nights, three faces, one question, and the wording never
+changed — only the direction the number ran in.
 
 **Every figure on the face is computed from the committed captures, never typed.**
 `data.py` builds the page's JSON island from `../captures/*.json`; `data.py --check` fails if the

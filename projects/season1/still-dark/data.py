@@ -365,29 +365,73 @@ def build():
     # week-wide band. The first draft stamped the whole block OBSERVED without
     # qualification, and stood it ABOVE the page's own legend, where a stranger gets a mark
     # and no key. Both tiers are named here now, the gate first.
+    # THE RESTAGING OF SESSION 81, and it is `DRAMATURG-80.md` §5 verbatim: *make the
+    # no-motion reader's state step 0, not step 4, and let the run's fifth beat be the
+    # share falling rather than the count landing.* That memo was written on the finished
+    # object without sight of any answer, and the panel it could not see then produced the
+    # same reading it had predicted from the form alone — both severed readers took a page
+    # about ships that switch themselves OFF to be about ships at sea, because the head
+    # animated names switching themselves ON. Its diagnosis, unedited: *"an accretion loop
+    # indistinguishable from a progress bar, which finishes at twenty and thereby tells the
+    # stranger that the day is now fully known"* — the precise inverse of this page's floor
+    # line.
+    #
+    # So the number that runs is no longer the count. It is the SHARE, and it falls. The
+    # numerator is fixed for ever at what the list dated 4 August held; every later list can
+    # only enlarge the denominator; so the one figure that moves in this head moves DOWN,
+    # and it is the same figure the body of this page publishes and strikes. Head and body
+    # remain one computation: the figure is built by `share_line`, the same function that
+    # builds the two rows of the law below, so the head cannot drift from the face.
+    #
+    # The names are split in two, and the split is TEXT and not paint (banked failures 12
+    # and 15 — a correction that reached the eye and not the ear, then one with the senses
+    # swapped). One block is what the day itself held; the other is headed by what it is —
+    # names no one could have had on the day — so the growing block reads as the measure of
+    # a hole and not as a progress bar filling. At stop 0 the second block does not exist.
     arrive_stops = []
     running = 0
     for g in field:
         running += g["count"]
         late = g["days_after"]
         as_of = min(seen_at[r["name"]]["first_seen_utc"] for r in g["rows"])
-        # The band this stop's count is the possible end OF, re-run through the same
-        # analysis the page uses rather than asserted — `VERIFIER-80.md` D2, second half:
-        # a stranger told to check a bare `11` against `day.py` meets
-        # `0–11 (certain–possible)` and has to be told which end they are looking at.
-        # The certain end is a computed branch here as everywhere else, never a typed nought.
-        st = analyse(DAY, load(CAPTURES, as_of=as_of))["vessels_dark_on_day"]["band"]
+        # The state of the record AT this stop, re-run through the same analysis the page
+        # uses rather than asserted — `VERIFIER-80.md` D2, second half: a stranger told to
+        # check a bare `11` against `day.py` meets `0–11 (certain–possible)` and has to be
+        # told which end they are looking at. Nothing here is typed; the nought in
+        # particular is computed, as everywhere else on this face.
+        a_st = analyse(DAY, load(CAPTURES, as_of=as_of))
+        st = a_st["vessels_dark_on_day"]["band"]
+        sh = share_line(a_st, "LIVE")
         arrive_stops.append({
             "as_of": as_of,
             "check": f"python3 projects/season1/capture/day.py {DAY} --as-of {as_of}",
+            # It names the LINE and not the string. The head prints `44 %–100 %` and the
+            # script prints `44%–100%`, and a lead that asserted the two were the same
+            # characters would be this house's own recurring defect — a face making a
+            # claim about an output nobody had put side by side with it — in the one line
+            # whose whole job is to be checkable.
             "check_lead": (
-                f"This stop is the possible end of {st[0]}–{st[1]} on the line “vessels "
-                "dark on that day” in: "
+                "This stop's figure is the line “SHARE knowable on the day” in: "
             ),
             "edition": g["edition"],
-            "printed": short_caps(g["edition"]),
+            # The stop buttons are labelled by LATENESS since tonight, and the reason is
+            # `DRAMATURG-80.md` §1: they read `4 AUG … 8 AUG` under a title reading
+            # `4 AUGUST 2026`, so the same string meant the day-being-held-open at the top
+            # and the edition-doing-the-holding forty pixels lower — *"to a stranger the
+            # row reads as a date picker: pick a day, see its ships"*, which is session
+            # 79's and 80's misreading rebuilt in hardware at the exact joint where the
+            # mechanism lives. A row of lags cannot be a date picker, and it says the
+            # delay in the one place a reader's hand goes first. The edition itself is not
+            # lost: it is named in the line under the figure, and its instant is in the
+            # command beside it.
+            "printed": (
+                "ON THE DAY" if late == 0
+                else f"+{late} DAY" if late == 1
+                else f"+{late} DAYS"
+            ),
             "days_after": late,
             "total": running,
+            "share": sh["figure"],
             "added": [{"name": r["name"], "flag": r["flag"]} for r in g["rows"]],
             # The count is CUMULATIVE, so the line under it may not name one list as
             # having produced it. The first draft of this block read "named by the list
@@ -395,15 +439,36 @@ def build():
             # a sentence that was true of the number's last increment and false of the
             # number. "Counting the lists up to" is the accumulation the total actually
             # is, and it stays true at every stop including the first.
+            #
+            # The last stop, and only the last, says which end of the figure moves. That
+            # is `DRAMATURG-80.md` §2: *"the run has an ending only in the sense that it
+            # has a last frame."* An ending is a sentence about direction, and it may not
+            # be spatial — "the left-hand number" is a fact for the eye and nothing at all
+            # for the ear (banked failure 12).
             "when": (
-                f"counting the lists up to {short_caps(g['edition'])} — the day itself"
-                if late == 0 else
-                f"counting the lists up to {short_caps(g['edition'])} — "
-                f"{'a day' if late == 1 else word(late) + ' days'} after the day had ended"
+                f"of {DAY_PRINTED}’s darkness was knowable on the day itself, "
+                f"counting the lists up to {short_caps(g['edition'])}"
+                + ("." if late == 0 else
+                   f", {'a day' if late == 1 else word(late) + ' days'} after the day had "
+                   "ended.")
+                # The fraction that produced the figure is NOT repeated here. Three severed
+                # readers of session 73 named the notation `11 of 0–16` the hardest thing
+                # on this page, and its gloss lives in the body — a head truncated above
+                # that gloss may not carry the notation it explains. Both of its numbers
+                # stand in the two block headings below, in words.
+            ),
+            "heading_since": (
+                None if late == 0 else
+                f"NAMED ONLY BY LATER LISTS — {word(running - arrive_stops[0]['total'])} "
+                f"ship{'' if running - arrive_stops[0]['total'] == 1 else 's'} dark on "
+                "that same day that nobody could have had on it"
             ),
         })
     n_stops = len(arrive_stops)
     last_late = arrive_stops[-1]["days_after"]
+    arrive_stops[-1]["when"] += (
+        " Only the lower end has moved, and the next list can only lower it again."
+    )
     arrive = {
         # NOT "ships dark on 4 August 2026", which is what this line said in its first
         # draft and which the page's own body denies four inches lower: of these names
@@ -413,7 +478,13 @@ def build():
         # this face, at the top of it. The count is a count of what the lists have put
         # into the day; that is an OBSERVED fact about the record, and it is what the
         # number under this line actually is.
-        "subject": f"SHIPS THE LISTS PUT INTO {DAY_PRINTED}",
+        # THE QUESTION, NOT THE SHIPS. Until tonight this line began with the word SHIPS,
+        # and the whole measured failure of sessions 79 and 80 is a reader carrying away
+        # ships. The subject of this work is not a fleet; it is how much of one finished
+        # day was knowable while it was still happening. The line is a question that does
+        # not move while everything under it does — which is the one thing the running head
+        # was built to stage, and it was staged with the wrong noun at the top of it.
+        "subject": f"HOW MUCH OF {DAY_PRINTED} WAS KNOWABLE ON {DAY_PRINTED}",
         # The whole 0-of-2 of session 79 was a reader taking this page to be about ships
         # that were PRESENT. The word carrying the subject is glossed where it first
         # appears, in the page's own terms and no further: no claim of intent is made
@@ -421,15 +492,29 @@ def build():
         # probability and not proof, and the restraint travels with the material. The
         # second sentence carries the band, and its count is a BRANCH on the computed
         # certain-end, never a literal nought.
+        # OWED ITEM (n), banked by session 80 on one reader and paid here: this head named
+        # "the lists" ten times and never once said whose they were — the unresolved
+        # successor to "this record", which two readers had named the night before. The
+        # owner is named at the first appearance of the word and nowhere else, because a
+        # possessive repeated down a block is the repetition item (l) was written against.
         "subject_gloss": (
             "dark — the ship's AIS transponder switched off, so it stops being tracked. "
-            "A list gives a ship's return only to the nearest week, so "
+            "The lists below are the daily editions of The Ghost Fleet, the public "
+            "instrument this page reads. A list gives a ship's return only to the nearest "
+            "week, so "
             + (
                 "not one of these names is certainly dark on this day."
                 if now["vessels_dark_on_day"]["band"][0] == 0 else
                 f"{word(now['vessels_dark_on_day']['band'][0])} of these names are "
                 "certainly dark on this day and the rest are possible."
             )
+        ),
+        # The first block's heading is constant across every stop, because its count is:
+        # the numerator of this work's figure cannot grow, and a heading that never moves
+        # while the one under it does is the fixed point the run turns on.
+        "heading_then": (
+            f"IN THE LIST DATED {short_caps(DAY)} — {word(field[0]['count'])} ships, "
+            "all that the day held about itself"
         ),
         "stops": arrive_stops,
         # The mechanism, said once, under the thing that has just enacted it. The word
@@ -440,8 +525,9 @@ def build():
             f"keeps being answered. {word(n_stops).capitalize()} lists, "
             f"{word(n_stops)} answers, one day — the last of them "
             f"{'a day' if last_late == 1 else word(last_late) + ' days'} after the day "
-            "had ended. That last answer is today's, and no later night can make it "
-            "smaller."
+            f"had ended. The {word(field[0]['count'])} names the day itself held cannot "
+            "grow; every list since has only made the day larger underneath them. That is "
+            "why the figure above falls, and why it can only go on falling."
             # It said "Twenty is today's answer" until this line was looked at against a
             # frame of the running head at its FIRST stop, where the count reads eleven.
             # A caption that stands under a moving number may not name one of the
@@ -455,9 +541,10 @@ def build():
         # above), so what a stranger is told to run always reproduces the state they are
         # looking at.
         "tier": (
-            "DERIVED — whether a name belongs to this day at all: a return is published "
-            "only as a week-wide band, so every count here is a possible and not a "
-            "certain. OBSERVED — which saved copy first carried each name. "
+            "DERIVED — whether a name belongs to this day at all, and with it the "
+            "arithmetic of the figure: a return is published only as a week-wide band, "
+            "which is why the figure has two ends. OBSERVED — which saved copy first "
+            "carried each name, and so which lists could have held it. "
         ),
         # The upstream restraint, and it travels with the NAMES. This block names twenty
         # vessels and their flags and stands above the foot that has always carried this
