@@ -129,7 +129,9 @@ FULL_MONTHS = ["January", "February", "March", "April", "May", "June",
 WORDS = {0: "no", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven",
          8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve", 13: "thirteen",
          14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen", 18: "eighteen",
-         19: "nineteen", 20: "twenty"}
+         19: "nineteen", 20: "twenty", 21: "twenty-one", 22: "twenty-two",
+         23: "twenty-three", 24: "twenty-four", 25: "twenty-five", 26: "twenty-six",
+         27: "twenty-seven", 28: "twenty-eight", 29: "twenty-nine", 30: "thirty"}
 # The list stopped at sixteen until session 78, so the night the total reached seventeen
 # the band sentence started a sentence with a numeral while saying "eleven" four words
 # later — one sentence in two voices, and nothing failed. Extended to twenty; when the
@@ -192,6 +194,14 @@ def share_line(a, status):
     return {
         "status": status,
         "figure": f"{round(lo * 100)} %–{round(hi * 100)} %",
+        # The two ends, apart, from the same arithmetic that builds the joined string —
+        # session 83, the staging voice's own one change, banked verbatim in 82 and taken
+        # here: *"one figure falls 56 points while the other cannot move at all … the
+        # piece's actual subject … on screen for eighteen seconds, and nothing marks it."*
+        # They are split HERE and not in the browser, so no instrument of this house can
+        # be shown a figure the page did not compute.
+        "figure_falling": f"{round(lo * 100)} %",
+        "figure_fixed": f"–{round(hi * 100)} %",
         "of": f"{n} of {b[0]}–{b[1]}",
         "editions": len(a["editions_read"]),
         "captures": a["captures_read"],
@@ -428,6 +438,8 @@ def build():
             "days_after": late,
             "total": running,
             "share": sh["figure"],
+            "share_falling": sh["figure_falling"],
+            "share_fixed": sh["figure_fixed"],
             "added": [{"name": r["name"], "flag": r["flag"]} for r in g["rows"]],
             # The count is CUMULATIVE, so the line under it may not name one list as
             # having produced it. The first draft of this block read "named by the list
@@ -441,6 +453,19 @@ def build():
             # has a last frame."* An ending is a sentence about direction, and it may not
             # be spatial — "the left-hand number" is a fact for the eye and nothing at all
             # for the ear (banked failure 12).
+            # SPLIT IN SESSION 83, and the split is the whole point. `DRAMATURG-82.md` §3:
+            # *"the head re-renders an unchanging clause 55 characters long on every beat
+            # while the visitor is looking for what changed … the clause should be static
+            # and only the tail should move. That is not a wording preference; it is what a
+            # reader's eye needs in a 1.6 s beat."* The two pieces are joined back into
+            # `when` for anything that reads one string; the browser writes only the tail.
+            "when_fixed": f"of {DAY_PRINTED}’s darkness was knowable on the day itself,",
+            "when_tail": (
+                f"counting the lists up to {short_caps(g['edition'])}"
+                + ("." if late == 0 else
+                   f", {'a day' if late == 1 else word(late) + ' days'} after the day had "
+                   "ended.")
+            ),
             "when": (
                 f"of {DAY_PRINTED}’s darkness was knowable on the day itself, "
                 f"counting the lists up to {short_caps(g['edition'])}"
@@ -471,9 +496,14 @@ def build():
         })
     n_stops = len(arrive_stops)
     last_late = arrive_stops[-1]["days_after"]
-    arrive_stops[-1]["when"] += (
-        " Only the lower end has moved, and the next list can only lower it again."
-    )
+    # WHAT STOOD HERE UNTIL SESSION 83, and why it went. The last stop, and only the last,
+    # appended *"Only the lower end has moved, and the next list can only lower it again."*
+    # `DRAMATURG-82.md` §2 ruled that sentence a turn's content staged as boilerplate: it
+    # arrived as lines four and five of a paragraph four repetitions had trained the reader
+    # to stop reading, in the same 1.6 s beat as the largest chip-fill of the run. It is not
+    # deleted — it is promoted out of the run entirely, into the static line below, where it
+    # stands from the first frame instead of for 1.6 seconds at the end.
+
     arrive = {
         # NOT "ships dark on 4 August 2026", which is what this line said in its first
         # draft and which the page's own body denies four inches lower: of these names
@@ -509,11 +539,35 @@ def build():
         # sentence that says so carries the mechanism: a register that can name a ship only
         # once it has come back. That is the clause three panels failed to carry, and it now
         # stands in the PREMISE rather than only in the caption below the run.
+        # OWED ITEMS (q), (r) AND (u), all three paid in this one sentence in session 83,
+        # because all three were the same defect wearing three names: the premise said what
+        # the lists ARE without saying whose they are, what they leave out, or what word
+        # they are built on.
+        #
+        # (u) — *"a public register"* is struck. Upstream disclaims exactly the completeness
+        # that phrase asserts, in its own method sheet, fetched again tonight: *"Only
+        # offshore (≥ 50 nm) and well-observed: nearshore disabling is missing — so marine
+        # protected areas (mostly coastal) almost never appear; what is measured is the open
+        # sea."* A caveat carried by the upstream and dropped by us is the publishing
+        # condition this house accepted, broken.
+        #
+        # (q) — three of four severed readers in 82, both arms, made Global Fishing Watch
+        # the publisher of these lists. It is not: it supplies the events. The list is
+        # published at frankbueltge.de and the sentence now says so before GFW is named
+        # anywhere on the face.
+        #
+        # (r) — the word the head's own restraint line disclaims — *"intentional"* — stood
+        # nowhere in the head. Upstream, verbatim: *"GFW returns only high-confidence,
+        # intentional-classified disabling: ≥ 12 h, ≥ 50 nm offshore, good satellite
+        # coverage."* So the word is not decoration here: it is the filter that makes these
+        # lists shorter than the sea. It is anchored at its first appearance, and the
+        # caveat that follows it below now has a subject on the same screen.
         "subject_gloss": (
             "dark — the ship's AIS transponder switched off, so it stops being tracked. "
-            "The lists below are the daily editions of The Ghost Fleet, a public register "
-            "of such disappearances published at frankbueltge.de, which can name a ship "
-            "only once it has come back."
+            "The lists below are the daily editions of The Ghost Fleet, published at "
+            "frankbueltge.de, which name a ship only once it has come back. They carry "
+            "only offshore switch-offs a machine model classed as intentional, so they are "
+            "never all of a day's darkness."
         ),
         # The hedge that stood in the premise until tonight moves DOWN to the names it
         # qualifies. It was never about the figure; it is about whether a given name belongs
@@ -537,6 +591,88 @@ def build():
             "all that the day held about itself"
         ),
         "stops": arrive_stops,
+        # THE CONSTANT, MARKED — session 83. The staging voice's one banked change, and the
+        # only one it named as the change that would most improve the head: *"one figure
+        # falls 56 points while the other cannot move at all — because a register that names
+        # a ship only when it comes back can never rule out a ship that never comes back.
+        # That is the piece's actual subject. It is present in every frame, on screen for
+        # eighteen seconds, and nothing marks it."*
+        #
+        # It is marked TWICE, and the second one is the point: the two ends of the figure
+        # are now set apart in weight and colour AND said apart in words, standing still
+        # under a figure that moves. A mark the eye can read and the ear cannot is banked
+        # failure 12, and this house has now paid for that failure twice (12, 15). The
+        # sentence says "upper end" and not "the right-hand number" for the same reason.
+        # WHAT THIS SENTENCE SAID FOR ONE BUILD, AND WHY IT WAS FALSE — banked failure 31,
+        # and it is the most serious thing this house has published in a fortnight. It read:
+        # *"The upper end never moves. A list that can name a ship only when it comes back
+        # can never rule out one that never comes back — so the lower end is the only end
+        # this record can lower."* Both halves fail. The upper end is
+        # `obs / max(certain, obs)`: it stands at 100 % only while NO ship is CERTAINLY dark
+        # on this day, and `capture/day.py 2026-08-01` already returns thirteen certain — so
+        # 4 August's upper end falls as soon as the bands close on its own names. And the
+        # reason offered argued for an unbounded TOTAL, which lowers the LOWER end; it never
+        # touched the upper one. The sentence was the staging voice's own formulation,
+        # adopted here because it was well put, and it was published without being run
+        # against the instrument that computes the number it described. Banked failure 23 in
+        # its purest form. Caught by the verifying pass, blocking, before commit — and after
+        # four severed readers had passed it at 4 of 4.
+        "constant": (
+            "Neither end of this figure can rise. The upper end has not moved at all: it "
+            "holds at 100 % while no ship here is CERTAINLY dark on this day — a list gives "
+            "a return only to the nearest week, so every one of them is merely possible — "
+            "and it falls the moment one of them becomes certain. Only the lower end has "
+            "moved so far, and the next list can lower it again."
+        ),
+        # THE RUN, SAID — session 83, owed items (s) and (t), paid by one set of strings
+        # that reaches the eye and the ear from the same place.
+        #
+        # (t) was the largest thing this project owed: `[aria-live],[role=status],[role=alert]`
+        # returned 0 on the committed page, so a visitor using a screen reader and no
+        # reduced-motion preference had a document rewritten six times behind their cursor
+        # with nothing announced. (s) was the cost of the beat we built in 82: a stop pressed
+        # inside the first eleven seconds killed the only authored sequence the object has,
+        # silently and permanently.
+        #
+        # The repair is one line under the buttons, in the page's own words, in a region that
+        # announces its own changes. TWO announcements in an untouched run — one at the
+        # start, one at the end — and not six, because six announcements in eighteen seconds
+        # is the noise this house refused to ship unmeasured in 82. Every other announcement
+        # is one the visitor asked for by pressing something.
+        #
+        # `waiting` also answers `DRAMATURG-82.md` §1, which is the other half of (s): eleven
+        # seconds of stillness *"reads as an invitation"* to press a button, because nothing
+        # says a performance is pending. Now something does, and it says what pressing will
+        # cost.
+        "run_states": {
+            # `waiting` is completed below, once the derived first beat is known: the
+            # duration it states is the page's own arithmetic and not a number typed beside
+            # it. Banked failure 17 — *"a constant advanced by hand is a number typed by
+            # hand wearing a variable's name"* — and 8, dates and figures reaching a face
+            # out of a head.
+            "waiting": None,
+            # SESSION 83, SECOND PASS. The run's own beginning was the one event in this
+            # piece with no words at all: the beat ended, the figure started falling, and
+            # nothing said so to anyone who could not see it. Found by the staging voice on
+            # the running object, in the same breath as the defect below.
+            "started": (
+                "The run has started: the figure is falling from the day's own answer to "
+                "this record's live one."
+            ),
+            "done": (
+                "The run has finished. The figure now standing is this record's live one "
+                "— press any button to go back through it."
+            ),
+            "stopped": "You stopped the run at {stop}. Press “{replay}” to see it whole.",
+            "held": "Holding {stop}. Nothing is playing; press “{replay}” to run it.",
+            # What a visitor whose machine asks for no motion is told, and it is the state
+            # this house's own renderer is served — so the material a panel reads says
+            # plainly that nothing was running for it either.
+            "rest": (
+                "Your machine asks for no motion, so nothing runs: this is the day's own "
+                "answer, and each button below holds a later state."
+            ),
+        },
         # The mechanism, said once, under the thing that has just enacted it. The word
         # order matters: the reason comes first, so a reader who arrives after the run
         # has finished still gets why the number moved.
@@ -615,7 +751,8 @@ def build():
     # travels with the figure and is not softened: 238 is a MEAN, the same paper puts most
     # adults between 175 and 300 wpm and reports slower rates for children, older adults and
     # non-native English readers — so this beat is too short for a large share of the people
-    # it is set for, and every one of them still has six buttons and no clock.
+    # it is set for, and every one of them still has a button for every stop and no clock —
+    # and, since session 83, one line that says how long the run is before it starts.
     #
     # Only the FIRST beat is derived. The rest stay at 1.6 s: they carry no new prose, and a
     # run whose every step waited out a reading rate would not be a run.
@@ -631,6 +768,15 @@ def build():
     arrive["first_dwell_note"] = (
         f"{gloss_words} words at 238 wpm (Brysbaert 2019, mean adult silent reading of "
         "non-fiction English)"
+    )
+    # The run's whole length, computed from the two clocks that produce it and rounded to
+    # the second the visitor is being promised. Nothing here is typed: change the gloss and
+    # this sentence changes with it.
+    run_seconds = round((arrive["first_dwell_ms"] + (n_stops - 1) * 1600) / 1000)
+    arrive["run_states"]["waiting"] = (
+        f"This figure runs by itself: {word(n_stops)} states over about "
+        f"{word(run_seconds)} seconds, starting after a pause as long as the paragraph "
+        "under the title takes to read. Any button below holds a state and stops the run."
     )
 
     # what moved since the struck figure was true: the vessels this day gained from
@@ -724,7 +870,15 @@ def build():
             f"{word(n_obs).capitalize()} of the ships this record can place in "
             f"{printed_date(DAY)} stood in the list dated {day_month(DAY)} itself. "
             f"{word(n_hi - n_obs).capitalize()} arrived later — {word(len(gained))} of them "
-            "after this page had printed its figure."
+            "after this page had printed its figure. All three counts are DERIVED: worked "
+            "out here, from saved copies of those lists."
+            # SESSION 83, on the verifying pass, blocking. These three counts stood on the
+            # page's first sentence with no tier word anywhere near them, and ABOVE the
+            # legend that carries the tier words in reading order — so the first numbers a
+            # stranger meets were the only unmarked ones on the face. That is failure 25
+            # exactly: the legend is the authority every instrument here trusts, and nothing
+            # this house owns asks whether a published figure carries a tier. The mark is
+            # self-contained rather than a pointer, for the same reason the head's is.
         ),
         "earned": (
             "A ship that switches off its transponder disappears from the public map of the "

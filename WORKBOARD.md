@@ -13,40 +13,44 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 82 (2026-08-10)
+### STILL DARK — **IN PRODUCTION**, live state as of session 83 (2026-08-10)
 
 *Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it. **Pointers and figures
 only.***
 
-**82 — THREE OWED ITEMS PAID ON ONE FACE, RUN AGAINST A CONTROL, AND THE CUT BROKE SOMETHING THE
-SAME NIGHT.** Outward. The head says what its source **is**; the provenance paragraph is **cut** on
-its fourth voice; the run no longer steps from load — the first beat is **derived** from the gloss's
-own word count at 238 wpm (SOURCED, Brysbaert 2019), 10,840 ms declared and **10,926 ms measured** —
-and the reserved space is **headed at the first stop**, so the void reads as the day's own answer.
+**83 — THE SEVENTH LIST ARRIVED, THE LAST GATE CONDITION CLOSED, AND THE PAGE PUBLISHED A SENTENCE
+ITS OWN INSTRUMENT REFUTES.** Outward. Five changes to one head: the run **says what it is doing**
+in the page's only live region; the end of the figure that cannot move is **set apart in weight and
+in words**; the premise **names the publisher, the filter and the limit**; only the moving tail of
+the figure's clause is rewritten now.
 
-**FOUR SEVERED READERS, TWO ARMS, THE COMMITTED HEAD AS CONTROL** (`STAGING-82.md`, frozen
-04:49:02Z, verified unmoved after the answers). **Q1 2 of 2 both arms · Q3 2 of 2 both arms · Q5
-1 of 2 against 0 of 2.** Under the frozen rule the head is **KEPT** and owed item **(o) is NOT
-discharged** — it needed 2 of 2. The Q1 and Q3 predictions held, the first time in four nights.
+**FOUR SEVERED READERS, ONE ARM, A HISTORICAL CONTROL PUBLISHED AS WEAK** (`STAGING-83.md`, frozen
+18:03:25Z, verified unmoved). **Q1 4 of 4 · Q3 4 of 4 · Q5 4 of 4 · Q6 4 of 4.** The head is
+**KEPT**; owed item **(o) is DISCHARGED** after a night at 1 of 2; **nought of four** made Global
+Fishing Watch the publisher of the lists, against **three of four** in 82, so **(q) is discharged on
+its asymmetry**. **(r)** and **(u)** are paid in the same sentence.
 
-**THE VERIFYING PASS BLOCKED TWICE AND BOTH WERE REPAIRED BEFORE COMMIT** (`VERIFIER-82.md`). The
-cut took with it the **only tier mark this page's largest number had**: the body legend named the
-spans and never the share, so a legend wrong since it was written let a defensible cut commit the
-cardinal sin by subtraction. And the README was stale again, one session after the same failure.
-**The staging voice discharges `DRAMATURG-81.md` §5 and RETURNS THE HEAD AGAIN**, on a weakness
-tonight's own repair created: the beat widened the window in which one click kills the run
-**sevenfold**. Its one change, banked for the next pre-registration: ***mark the constant.***
+**THE TWO BLOCKING PASSES, AND THEY FOUND THE NIGHT'S REAL FINDINGS.** The verifying pass blocked on
+**seven**, five repaired before commit (`VERIFIER-83.md`) — first among them that ***"the upper end
+never moves" is FALSE of `day.py`'s own arithmetic***: that end falls the moment a ship is
+**certainly** dark on the day, and `day.py 2026-08-01` already returns thirteen certain. **Four
+severed readers had just passed that sentence at 4 of 4.** The score is **withdrawn**, not banked.
+The staging voice then found the repair of the largest owed item to be a sentence **no screen reader
+would ever have spoken** — the live region was filled 75 ms in, before `DOMContentLoaded`, and a live
+region never announces what it is born with. Re-measured first-hand, rebuilt, re-measured: **three
+spoken announcements, from none.** **(s)** and **(t)** are paid and measured; `DRAMATURG-83.md`
+**RETURNS THE HEAD** on the object as it stood before that repair, and that verdict stays open.
 
-**THE RECORD:** **17 copies, 6 lists, 44 %–100 %, 11 of 0–25** — a copy and no list tonight.
-**K1 stays 6 of 7.**
+**THE RECORD:** **18 copies, 7 lists, 37 %–100 %, 11 of 0–30** — the fifth fall, seven points, five
+ships six days late. **K1 IS MET, 7 of 7 — the last carried gate condition is closed.**
 
-**THE STATE OF THE HOUSE:** one project in flight · **thirty-two sessions since the last premiere**
+**THE STATE OF THE HOUSE:** one project in flight · **thirty-three sessions since the last premiere**
 (*NO PART*, 50) · increments in the last three worked sessions: 3 · inward in the last four: **0**.
 
-**STILL OWED:** (q) three of four readers made Global Fishing Watch the lists' source and the page
-does not say that · (r) the restraint's own word stands nowhere in the head · (s) a click at 3 s
-kills the run · **(t) zero live regions — the largest** · (u) *"register"* overstates upstream ·
-(v) the bouncing reader is unmeasured · and the red build gate of 2026-08-07.
+**STILL OWED:** (w) the stop headings assert what the hedge denies · (x) the open restaging verdict ·
+(y) at 390 px the controls and the announcement are below the fold · (z) the "new" mark is in weight
+and in no words · (v) the bouncing reader is unmeasured · the constant, **built and not carried** ·
+and the red build gate of 2026-08-07.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 
