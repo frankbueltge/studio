@@ -222,6 +222,26 @@
     color: var(--sd-bg);
   }
   .sd-root .sd-arrive-ladder .sd-arrive-replay { margin-left: 1.2ch; }
+  /* OWED ITEM (y), session 84. Below 480 px the head is taller than the screen — thirty
+     name chips wrap into rows a phone cannot hold beside the figure — and the two elements
+     that must not leave the reader are the controls and the line that speaks. They are
+     pinned to the bottom edge of the viewport for as long as the block they belong to is
+     on screen, and released the moment it is not. Sticky and not fixed, on purpose: a
+     fixed bar would sit over the caption, the tier line and the body for the whole page.
+     The band paints its own ground and rules itself off, because type over moving type is
+     unreadable and this house does not ship decoration that costs legibility. Nothing here
+     applies above 480 px, where DRAMATURG-83 measured no fold at all. */
+  @media (max-width: 480px) {
+    .sd-root .sd-arrive-controls {
+      position: sticky;
+      bottom: 0;
+      z-index: 2;
+      background: var(--sd-bg);
+      border-top: 1px solid var(--sd-rule);
+      padding-top: 0.45rem;
+      margin-top: 0.35rem;
+    }
+  }
   .sd-root .sd-arrive-cap {
     margin: 0 0 0.3rem;
     font-size: 0.78rem;
@@ -693,7 +713,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 5 AUG, a day after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 5 AUG, a day after the day had ended.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — three ships dark on that same day that nobody could have had on it"
+        "heading_since": "NAMED ONLY BY LATER LISTS — three ships that could have been dark on that same day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 5 AUG."
       },
       {
         "as_of": "2026-08-06T08:16:42Z",
@@ -718,7 +738,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 6 AUG, two days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 6 AUG, two days after the day had ended.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — five ships dark on that same day that nobody could have had on it"
+        "heading_since": "NAMED ONLY BY LATER LISTS — five ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 6 AUG."
       },
       {
         "as_of": "2026-08-07T18:15:53Z",
@@ -739,7 +759,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 7 AUG, three days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 7 AUG, three days after the day had ended.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — six ships dark on that same day that nobody could have had on it"
+        "heading_since": "NAMED ONLY BY LATER LISTS — six ships that could have been dark on that same day and that nobody could have had on it. The last of them, in darker ink, arrived with the list of 7 AUG."
       },
       {
         "as_of": "2026-08-08T21:37:19Z",
@@ -768,7 +788,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 8 AUG, four days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 8 AUG, four days after the day had ended.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — nine ships dark on that same day that nobody could have had on it"
+        "heading_since": "NAMED ONLY BY LATER LISTS — nine ships that could have been dark on that same day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 8 AUG."
       },
       {
         "as_of": "2026-08-09T20:36:58Z",
@@ -805,7 +825,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 9 AUG, five days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 9 AUG, five days after the day had ended.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — fourteen ships dark on that same day that nobody could have had on it"
+        "heading_since": "NAMED ONLY BY LATER LISTS — fourteen ships that could have been dark on that same day and that nobody could have had on it. The last five, in darker ink, arrived with the list of 9 AUG."
       },
       {
         "as_of": "2026-08-10T17:47:21Z",
@@ -842,7 +862,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 10 AUG, six days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 10 AUG, six days after the day had ended.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — nineteen ships dark on that same day that nobody could have had on it"
+        "heading_since": "NAMED ONLY BY LATER LISTS — nineteen ships that could have been dark on that same day and that nobody could have had on it. The last five, in darker ink, arrived with the list of 10 AUG."
       }
     ],
     "constant": "Neither end of this figure can rise. The upper end has not moved at all: it holds at 100 % while no ship here is CERTAINLY dark on this day — a list gives a return only to the nearest week, so every one of them is merely possible — and it falls the moment one of them becomes certain. Only the lower end has moved so far, and the next list can lower it again.",
@@ -1461,7 +1481,7 @@
       "figure_fixed": "–100 %",
       "of": "11 of 0–30",
       "editions": 7,
-      "captures": 18
+      "captures": 19
     },
     "as_of": "2026-08-06T08:36:39Z",
     "band": "Thirty ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–30, and the share runs from 11 of 30 to 11 of 11.",
@@ -1634,6 +1654,15 @@
         "content_sha256": "7b3444ad",
         "edition_date_printed": "10 August 2026",
         "vessels": 10
+      },
+      {
+        "fetched_at_utc": "2026-08-10T22:04:56Z",
+        "http_status": 200,
+        "bytes": 32240,
+        "sha256": "90bd7aec",
+        "content_sha256": "7b3444ad",
+        "edition_date_printed": "10 August 2026",
+        "vessels": 10
       }
     ],
     "caption": "Four lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day."
@@ -1652,7 +1681,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  18 capture(s) read, 7 distinct edition(s), 7 distinct content(s), 11 distinct bod(y/ies)\n  vessels dark on that day .......... 0–30 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 37%–100%  (11 of 0–30)\n    (a ceiling from 7 edition(s), 18 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  19 capture(s) read, 7 distinct edition(s), 7 distinct content(s), 11 distinct bod(y/ies)\n  vessels dark on that day .......... 0–30 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 37%–100%  (11 of 0–30)\n    (a ceiling from 7 edition(s), 19 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -1696,14 +1725,27 @@
     <p class="sd-arrive-group" id="sd-arrive-head-since"></p>
     <ul class="sd-arrive-names" id="sd-arrive-names-since"></ul>
     <p class="sd-arrive-hedge" id="sd-arrive-hedge"></p>
-    <div class="sd-arrive-ladder" id="sd-arrive-ladder"></div>
-    <!-- The run, said. One line, under the buttons it is about, in a region that announces
-         its own changes — so the visitor who can see the figure move and the visitor who
-         cannot are told the same thing in the same words at the same moment. Session 83,
-         owed items (s) and (t). It is deliberately NOT the mutating head: the figure, the
-         headings and the name list stay silent, and this line speaks for them twice in a
-         run. -->
-    <p class="sd-arrive-state" id="sd-arrive-state" role="status" aria-live="polite"></p>
+    <!-- OWED ITEM (y), paid in session 84. The wrapper is the whole repair and it adds no
+         word, no element the reader hears, and nothing at all above 480 px: it exists so
+         that the two things a phone was losing — the buttons that drive the run and the
+         line that says what the run is doing — can be held to the bottom of the viewport
+         while the block above them fills. `DRAMATURG-83.md` §4 measured the loss at
+         390×844: figure at y=248 and visible, ladder at y=938, state line at y=991, both
+         below an 844 px fold. A reader on a phone therefore watched the number fall with
+         the controls and the announcement off-screen — the piece staging its own argument
+         against itself for the second time in two sessions.
+         DOM order is untouched, so the order a screen reader takes is the order it always
+         took; only the paint moves, and only where the fold is real. -->
+    <div class="sd-arrive-controls" id="sd-arrive-controls">
+      <div class="sd-arrive-ladder" id="sd-arrive-ladder"></div>
+      <!-- The run, said. One line, under the buttons it is about, in a region that announces
+           its own changes — so the visitor who can see the figure move and the visitor who
+           cannot are told the same thing in the same words at the same moment. Session 83,
+           owed items (s) and (t). It is deliberately NOT the mutating head: the figure, the
+           headings and the name list stay silent, and this line speaks for them twice in a
+           run. -->
+      <p class="sd-arrive-state" id="sd-arrive-state" role="status" aria-live="polite"></p>
+    </div>
     <p class="sd-arrive-cap" id="sd-arrive-cap"></p>
     <p class="sd-arrive-tier" id="sd-arrive-tier"></p>
     <p class="sd-arrive-tier" id="sd-arrive-restraint"></p>

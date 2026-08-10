@@ -258,7 +258,7 @@ SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved c
 
 It fell 32 points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; and ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day — fourteen ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 18 saved copies of 7 lists —
+LIVE · as this record measures it now, from 19 saved copies of 7 lists —
 37 %–100 %
 11 of 0–30
 
@@ -291,17 +291,18 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list
 2026-08-09T20:36:58Z	200	36,897	8bf3c1ff…	aa53ae8b…	9 August 2026	9
 2026-08-10T04:36:45Z	200	32,189	95c28f17…	aa53ae8b…	9 August 2026	9
 2026-08-10T17:47:21Z	200	32,240	90bd7aec…	7b3444ad…	10 August 2026	10
+2026-08-10T22:04:56Z	200	32,240	90bd7aec…	7b3444ad…	10 August 2026	10
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  18 capture(s) read, 7 distinct edition(s), 7 distinct content(s), 11 distinct bod(y/ies)
+day 2026-08-04  ·  19 capture(s) read, 7 distinct edition(s), 7 distinct content(s), 11 distinct bod(y/ies)
   vessels dark on that day .......... 0–30 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 37%–100%  (11 of 0–30)
-    (a ceiling from 7 edition(s), 18 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 7 edition(s), 19 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 

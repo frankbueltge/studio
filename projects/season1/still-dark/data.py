@@ -485,13 +485,43 @@ def build():
             # to load. It is now labelled from the first stop: the emptiness is the day's own
             # answer to this work's question, and a stranger is told so rather than left to
             # guess. Nothing is drawn in it; this house's rule is text and not paint.
+            # OWED ITEM (w), paid in session 84, and OWED ITEM (z) with it.
+            #
+            # (w): until tonight this heading read "N ships DARK on that same day", which
+            # asserts as fact exactly what the hedge two lines below it denies — "not one
+            # of these names is certainly dark on this day" — and what the band under the
+            # law denies again: "Thirty ships COULD HAVE BEEN dark on 4 August 2026 and not
+            # one of them certainly". A list gives a return only to the nearest week, so
+            # every one of these names is possible and none is certain. The heading now
+            # says what the arithmetic says, in the band's own words. `VERIFIER-83.md` 1c
+            # found it; it was left standing that night on purpose, because four severed
+            # readers had been scored on it hours earlier and moving material under a
+            # finished reading is this house's banked failure 29.
+            #
+            # (z): the names a stop adds are drawn in the page's darker ink with a darker
+            # border and heavier type, and the stylesheet calls them "the only thing on
+            # this page that is meant to be seen changing" — while no word anywhere on the
+            # face said what the mark meant. A mark the eye can read and the ear cannot is
+            # banked failure 12, and its mirror is 15; this house has now committed both.
+            # The repair is words, in the block's own heading, immediately before the names
+            # they describe, so eye and ear get them in the same place and in the same
+            # order. They name the mark twice over — by POSITION ("the last five"), which a
+            # reader who cannot see ink can check by counting, and by ink, which a reader
+            # who can see it is looking at.
             "heading_since": (
                 "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of "
                 "this day that nobody could have had on it."
                 if late == 0 else
                 f"NAMED ONLY BY LATER LISTS — {word(running - arrive_stops[0]['total'])} "
-                f"ship{'' if running - arrive_stops[0]['total'] == 1 else 's'} dark on "
-                "that same day that nobody could have had on it"
+                f"ship{'' if running - arrive_stops[0]['total'] == 1 else 's'} that could "
+                "have been dark on that same day and that nobody could have had on it. "
+                + (
+                    f"The last of them, in darker ink, arrived with the list of "
+                    f"{short_caps(g['edition'])}."
+                    if g["count"] == 1 else
+                    f"The last {word(g['count'])}, in darker ink, arrived with the list "
+                    f"of {short_caps(g['edition'])}."
+                )
             ),
         })
     n_stops = len(arrive_stops)

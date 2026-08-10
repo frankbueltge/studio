@@ -21,10 +21,14 @@ and the figure falls to its live value. **The numerator never moves; only the to
 one number that runs runs downward. Every stop is a button labelled by how late it is, `ON THE DAY`
 through `+6 DAYS`; a visitor whose machine asks for no motion is given the first stop and the same
 buttons, so the delay is something they do rather than watch. **The run does not start on load: the
-first stop is held for the time its own definition paragraph takes to read** — 51 words at 238 words
+first stop is held for the time its own subject paragraph takes to read** — 56 words at 238 words
 per minute, the mean adult silent-reading rate for non-fiction English in a meta-analysis of 190
 studies and 18,573 participants (Marc Brysbaert, *Journal of Memory and Language* 109, 2019,
-<https://biblio.ugent.be/publication/8647789>), which is 12,857 ms; every step after it is 1,600 ms.
+<https://biblio.ugent.be/publication/8647789>), which is 14,118 ms; every step after it is 1,600 ms.
+**That number is not chosen and not typed:** it is the paragraph's own word count divided by that
+rate, so every word this house adds to the premise lengthens the silence before the run — the eight
+words that made the premise honest in session 83 cost 2,017 ms of it, and the two sentences the
+verifying pass required cost 1,261 ms more.
 **That rate is a MEAN.** The same paper puts most adults at 175–300 wpm and reports slower rates for
 children, older adults and non-native English readers, so the beat is too short for many of the
 people it is set for; what they have instead is seven buttons and no clock. Under the figure the
@@ -76,6 +80,27 @@ lists, against three of four the night before** (`../PANEL-83.md`).
 > withdrawn rather than banked, and banked as failure 31 — **a panel measures what a page carries,
 > never whether it is true.**
 
+**Since session 84 the head says only what its own arithmetic says, the mark it draws is
+explained in words, and a phone keeps the controls.** Three repairs, each one an item this work
+owed itself:
+
+- **The hole's heading no longer asserts what the hedge under it denies.** It read *"N ships DARK
+  on that same day"*; a list gives a return only to the nearest week, so not one of those names is
+  certainly dark on that day, and the page says so twice elsewhere. It now reads *"N ships that
+  could have been dark on that same day"* — the band's own words.
+- **The mark on the names a stop adds is now said in words**, in the heading immediately above
+  them: *"The last five, in darker ink, arrived with the list of 10 AUG."* The names were drawn in
+  darker ink, a darker border and heavier type — the only thing on the page meant to be seen
+  changing — with nothing anywhere saying what the mark meant. They are named by **position** as
+  well as by ink, so a reader who cannot see the ink can count instead.
+- **Below 480 px the buttons and the run's line are held to the bottom of the screen.** A phone
+  cannot hold this head: measured at 390×844, the controls stood at y=1004 and the live line at
+  y=1057, both below the fold, so a reader watched the figure fall with the controls that drive it
+  and the line that announces it off-screen — this page staging its own subject against itself.
+  They are now inside the viewport at every stop and at every scroll position within the head
+  (`tools/fold.mjs`, committed, which exits non-zero if either leaves it). DOM order is untouched:
+  only the paint moves, and only where the fold is real.
+
 **Since session 72 the house's filing words are off the face.** *Edition* and *capture* are what
 this house calls the things it collects; on the page they are **the list** the instrument publishes
 and **the saved copy** this page holds, and both survive as columns of the OBSERVED ledger, where
@@ -114,7 +139,7 @@ ceiling that can only fall* — and on 6 August it fell, unaided:
 |---|---|---|
 | as published, 4 saved copies / 2 lists, to `2026-08-06T04:36:19Z` | **79 %–100 %** | 11 of 0–14 |
 | as this page published the law, 5 saved copies / 3 lists, at `2026-08-06T08:36:39Z` | **69 %–100 %** | 11 of 0–16 |
-| as measured at session 83, 18 saved copies / 7 lists | **37 %–100 %** | 11 of 0–30 |
+| as measured at session 84, 19 saved copies / 7 lists | **37 %–100 %** | 11 of 0–30 |
 
 > **CORRECTION, session 78 (2026-08-08).** The middle row read *"as measured now, 8 saved
 > copies / 3 lists"* until tonight, and *now* had been three sessions ago. Worse, the same
@@ -142,7 +167,7 @@ authority is the command below, not this page; where the two disagree, this page
 The work's own face has no such problem — nothing in it is typed (`data.py --check`).
 
 The numerator did not move and cannot: no later night can put a name into a list that did
-not carry it. **The total has now grown four times, each time from a list published after
+not carry it. **The total has now grown five times, each time from a list published after
 the day it describes:** by **ALBACORA CUATRO** (ESP) and **BONAMI** (KOR) with the list of
 6 August, two days after; by **WANGBIAO-8730** (CHN) with the list of 7 August, three days
 after; by **TUNA PESCA** (PAN), **SAPPHIRE III** (USA) and **MONTECELO** (SLV) with the
@@ -219,7 +244,7 @@ live — fetch time, body hash, content hash, list date, ship count — and the 
 it as the OBSERVED ledger. A hand-typed copy of a record is a second record that can disagree with
 the first, and in session 78 one did (see the correction above).
 
-**Eighteen saved copies, eleven bodies, seven lists, as of session 83.** Four lists have come back in
+**Nineteen saved copies, eleven bodies, seven lists, as of session 84.** Four lists have come back in
 more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.
@@ -267,9 +292,18 @@ the next one's, at both widths, in 16 of 17 rows. Three readers of session 74's 
 misassigned bars to labels and the record could only say "about 3 px", because nothing had measured
 it. `gaps.mjs` reads both distances off the rendered page for every row and exits non-zero if any
 bar is nearer the wrong label; after the repair the same field reads 1.42 px against 9.59 px, 0 of
-30 rows failing as of session 83, re-run on the night the field grew. **The rule it enforces is not a matter of taste** — a layout that puts a bar nearer
+30 rows failing as of session 84, re-run every night the face is rebuilt. **The rule it enforces is not a matter of taste** — a layout that puts a bar nearer
 the wrong name is telling the eye the opposite of what the markup says, and no amount of reading
 fixes it. Run: `NODE_PATH=<global node_modules> node gaps.mjs`.
+**`tools/fold.mjs`** is the third, added in session 84 for the same reason as the second: a defect
+this house could not have found by reading. The staging voice drove the built page at 390×844 and
+reported the controls and the live line below the fold; nothing here could confirm it, and nothing
+here could have said whether a repair worked. It walks both viewports and every stop, at the top of
+the page and scrolled to the foot of the head, prints the top and bottom of the figure, the hole's
+heading, the controls and the run's line, and **exits non-zero if the controls or the live line
+leave the viewport at any stop below 481 px**. On the page as committed before tonight it returns
+**14 losses**; on tonight's, none. Run: `NODE_PATH=<global node_modules> node tools/fold.mjs`.
+
 **Dependencies, named honestly:** node ≥ 18 and **playwright** (Apache-2.0) with Chromium
 (BSD-3-Clause; its bundled third-party components carry their own licences — the Verifier's
 session-71 pass did not re-check either over the network, and says so). They are the house's check
