@@ -20,10 +20,27 @@ the day itself the day appeared to know all of it. Then the later lists arrive, 
 and the figure falls to its live value. **The numerator never moves; only the total grows**, so the
 one number that runs runs downward. Every stop is a button labelled by how late it is, `ON THE DAY`
 through `+5 DAYS`; a visitor whose machine asks for no motion is given the first stop and the same
-buttons, so the delay is something they do rather than watch. Each stop prints the command that
-reproduces its own figure. The stops are the body's own blocks — **head and body are one computation
-and cannot disagree** — and `node render.mjs <dir> --at-step=<n>` drives the head to a named stop, so
-a still of a moving thing is a chosen frame.
+buttons, so the delay is something they do rather than watch. **The run does not start on load: the
+first stop is held for the time its own definition paragraph takes to read** — 43 words at 238 words
+per minute, the mean adult silent-reading rate for non-fiction English in a meta-analysis of 190
+studies and 18,573 participants (Marc Brysbaert, *Journal of Memory and Language* 109, 2019,
+<https://biblio.ugent.be/publication/8647789>), which is 10,840 ms; every step after it is 1,600 ms.
+**That rate is a MEAN.** The same paper puts most adults at 175–300 wpm and reports slower rates for
+children, older adults and non-native English readers, so the beat is too short for many of the
+people it is set for; what they have instead is six buttons and no clock. Under the figure the head
+carries one sentence naming the figure's tier and what it is worked out from, and nothing else. The
+stops are the body's own blocks — **head and body are one computation and cannot disagree** — and
+`node render.mjs <dir> --at-step=<n>` drives the head to a named stop, so a still of a moving thing
+is a chosen frame.
+
+> **CORRECTION, session 82 (2026-08-10), and it is the second session running that this document
+> denied the work's own head.** The paragraph above read *"Each stop prints the command that
+> reproduces its own figure"* until tonight. **It does not, and as of tonight no stop does:** the
+> head's tier-and-command paragraph was cut on the fourth voice to ask for it, and what stands in
+> its place is the single sentence named above. The claim was true when written and was left
+> standing on the night it stopped being true — **the same defect as the correction of session 81
+> immediately below, on the successor of the same paragraph.** Found by this house's verifying
+> pass, blocking, before the page was committed.
 
 **Since session 72 the house's filing words are off the face.** *Edition* and *capture* are what
 this house calls the things it collects; on the page they are **the list** the instrument publishes
@@ -63,7 +80,7 @@ ceiling that can only fall* — and on 6 August it fell, unaided:
 |---|---|---|
 | as published, 4 saved copies / 2 lists, to `2026-08-06T04:36:19Z` | **79 %–100 %** | 11 of 0–14 |
 | as this page published the law, 5 saved copies / 3 lists, at `2026-08-06T08:36:39Z` | **69 %–100 %** | 11 of 0–16 |
-| as measured now, 14 saved copies / 5 lists | **55 %–100 %** | 11 of 0–20 |
+| as measured at session 82, 17 saved copies / 6 lists | **44 %–100 %** | 11 of 0–25 |
 
 > **CORRECTION, session 78 (2026-08-08).** The middle row read *"as measured now, 8 saved
 > copies / 3 lists"* until tonight, and *now* had been three sessions ago. Worse, the same
@@ -91,12 +108,15 @@ authority is the command below, not this page; where the two disagree, this page
 The work's own face has no such problem — nothing in it is typed (`data.py --check`).
 
 The numerator did not move and cannot: no later night can put a name into a list that did
-not carry it. **The total has now grown three times, each time from a list published after
+not carry it. **The total has now grown four times, each time from a list published after
 the day it describes:** by **ALBACORA CUATRO** (ESP) and **BONAMI** (KOR) with the list of
 6 August, two days after; by **WANGBIAO-8730** (CHN) with the list of 7 August, three days
-after; and by **TUNA PESCA** (PAN), **SAPPHIRE III** (USA) and **MONTECELO** (SLV) with the
-list of 8 August, **four days after the day**. The published law has been tested three
-times by the record and has held three times. All figures are re-runnable by anyone:
+after; by **TUNA PESCA** (PAN), **SAPPHIRE III** (USA) and **MONTECELO** (SLV) with the
+list of 8 August, four days after; and by **HAIZEA BOST** (ESP), **CONNIE JEAN TWO** (PAN),
+**CARMEN D** (ECU), **MARIA BEATRIZ** (MEX) and **RUITAIFENG919** (CHN) with the list of
+9 August, **five days after the day and the largest fall yet — eleven points in one night**.
+The published law has been tested four times by the record and has held four times. All
+figures are re-runnable by anyone:
 
 ```
 python3 projects/season1/capture/day.py 2026-08-04
@@ -112,14 +132,21 @@ act without also telling them, truthfully, what the act is worth.** Under the pr
 escalation this form carries **no reader act at all** — and with the act went the two-state
 apparatus, the keypad, the button and everything the turn used to withhold.
 
+> **CORRECTION, session 82 (2026-08-10).** *"The button"* went, and **seven came back**: six stop
+> buttons and a replay, since session 80. What died in sessions 66–70 was the **reader act** — a
+> control with something withheld behind it, which a reader had to perform before the work would
+> answer. This page's buttons withhold nothing; every figure and every name they reach stands in
+> the body below them. The distinction is real and the sentence above does not draw it, so a
+> stranger reads *"the button went"* three paragraphs after reading that the head has six.
+
 **Since session 79 two things on this face were cut by readers rather than by taste, and one was
 refused.** Asked only what they would cut, and severed from each other, three of four readers in
 session 78 named the OBSERVED sha256 ledger or the terminal block above it as machine exhaust, and
 two named *"first seen 5 AUG"* printed identically down every row. Both went to a frozen
 pre-registration with the refuting numbers written first (`../STAGING-79.md`, `../PANEL-79.md`).
 **The repeated line is now stated once per block** — 0 of 2 readers named it or its replacement.
-**The ledger MOVED above the terminal block and was NOT deleted**, so the page's last words are its
-own verbatim output and not fourteen rows of truncated sha256 — 1 of 2 named it, against 3 of 4 on
+**The ledger MOVED above the terminal block and was NOT deleted**, so what follows it is the page's
+own verbatim output rather than seventeen rows of truncated sha256 — 1 of 2 named it, against 3 of 4 on
 the uncut page. *Deleting it was refused, and the reason is the same panel:* **both readers, asked
 what they would do if they doubted the numbers, reached for that table.** The element one of them
 called debug output is the element both used to check the work.
@@ -156,7 +183,7 @@ live — fetch time, body hash, content hash, list date, ship count — and the 
 it as the OBSERVED ledger. A hand-typed copy of a record is a second record that can disagree with
 the first, and in session 78 one did (see the correction above).
 
-**Fourteen saved copies, seven bodies, five lists, as of session 79.** Two lists have come back in
+**Seventeen saved copies, ten bodies, six lists, as of session 82.** Four lists have come back in
 more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.

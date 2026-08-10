@@ -4,7 +4,7 @@ one day of the sea, and how much of it was knowable on the day itself
 
 HOW MUCH OF 4 AUGUST 2026 WAS KNOWABLE ON 4 AUGUST 2026
 
-dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, the public instrument this page reads. A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.
+dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, a public register of such disappearances published at frankbueltge.de, which can name a ship only once it has come back.
 
 100 %–100 %
 of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 4 AUG.
@@ -22,6 +22,11 @@ PANOFI DISCOVERER · GHA
 VESTERAALEN · USA
 PACIFIC FURY · USA
 EXCELLENCE · USA
+
+NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of this day that nobody could have had on it.
+
+A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.
+
 ON THE DAY
 +1 DAY
 +2 DAYS
@@ -32,7 +37,7 @@ run it again
 
 A ship reaches the list only after it comes back, so a day that is over keeps being answered. Six lists, six answers, one day — the last of them five days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them. That is why the figure above falls, and why it can only go on falling.
 
-DERIVED — whether a name belongs to this day at all, and with it the arithmetic of the figure: a return is published only as a week-wide band, which is why the figure has two ends. OBSERVED — which saved copy first carried each name, and so which lists could have held it. This stop's figure is the line “SHARE knowable on the day” in: python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T04:39:32Z
+DERIVED — this share is worked out here, from saved copies of those lists. Nobody publishes it.
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
 
@@ -43,7 +48,7 @@ Eleven of the ships this record can place in 4 August 2026 stood in the list dat
 A ship's disappearance reaches the instrument's daily list only when the ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for weeks afterwards. This page holds one day open and publishes how much of its darkness could be placed in it on the day, and how much arrived later.
 
 SOURCED name · flag · days dark · waters — printed by the instrument
-DERIVED the dark-and-return spans — worked out here, printed with both ends
+DERIVED the dark-and-return spans, and this page's share — worked out here, both ends printed
 OBSERVED what this page saw, and when it first saw it
 
 2 JUN
@@ -220,7 +225,7 @@ SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved c
 
 It fell 25 points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; and HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day — nine ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 16 saved copies of 6 lists —
+LIVE · as this record measures it now, from 17 saved copies of 6 lists —
 44 %–100 %
 11 of 0–25
 
@@ -231,7 +236,7 @@ The eleven did not move, and cannot. No later night can put a name into a list t
 “A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.”
 printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall.
 
-Three lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day.
+Four lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day.
 
 OBSERVED — every saved copy this page holds
 fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list
@@ -251,17 +256,18 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list
 2026-08-09T00:00:53Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6
 2026-08-09T04:37:35Z	200	37,901	680c1c71…	5c89d9ec…	8 August 2026	6
 2026-08-09T20:36:58Z	200	36,897	8bf3c1ff…	aa53ae8b…	9 August 2026	9
+2026-08-10T04:36:45Z	200	32,189	95c28f17…	aa53ae8b…	9 August 2026	9
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  16 capture(s) read, 6 distinct edition(s), 6 distinct content(s), 9 distinct bod(y/ies)
+day 2026-08-04  ·  17 capture(s) read, 6 distinct edition(s), 6 distinct content(s), 10 distinct bod(y/ies)
   vessels dark on that day .......... 0–25 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 44%–100%  (11 of 0–25)
-    (a ceiling from 6 edition(s), 16 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 6 edition(s), 17 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 

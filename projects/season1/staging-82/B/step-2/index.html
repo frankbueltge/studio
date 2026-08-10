@@ -198,20 +198,16 @@
     line-height: 1.5;
     max-width: 84ch;
   }
-  /* The hedge about the NAMES, moved down beside the names it qualifies (session 82,
-     owed item (o)). It sits at the caption's size and not the foot's: a load-bearing
-     caveat reads at the prominence of the material it qualifies, which is this house's
-     own publishing condition applied to itself. */
-  .sd-root .sd-arrive-hedge {
-    margin: 0.2rem 0 0.5rem;
-    font-size: 0.78rem;
-    line-height: 1.5;
-    max-width: 84ch;
+  .sd-root .sd-arrive-tier code {
+    font: inherit;
+    color: var(--sd-ink);
   }
   .sd-root .sd-arrive-tier {
     margin: 0 0 0.2rem;
     font-size: 0.68rem;
     line-height: 1.45;
+    /* wide enough that the command it names does not wrap between its own angle
+       brackets, which is where 80's first render broke it */
     max-width: 104ch;
     color: var(--sd-dim);
   }
@@ -571,13 +567,13 @@
   },
   "arrive": {
     "subject": "HOW MUCH OF 4 AUGUST 2026 WAS KNOWABLE ON 4 AUGUST 2026",
-    "subject_gloss": "dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, a public register of such disappearances published at frankbueltge.de, which can name a ship only once it has come back.",
-    "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+    "subject_gloss": "dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, the public instrument this page reads. A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
     "heading_then": "IN THE LIST DATED 4 AUG — eleven ships, all that the day held about itself",
     "stops": [
       {
         "as_of": "2026-08-05T04:39:32Z",
         "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T04:39:32Z",
+        "check_lead": "This stop's figure is the line “SHARE knowable on the day” in: ",
         "edition": "2026-08-04",
         "printed": "ON THE DAY",
         "days_after": 0,
@@ -630,11 +626,12 @@
           }
         ],
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 4 AUG.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of this day that nobody could have had on it."
+        "heading_since": null
       },
       {
         "as_of": "2026-08-05T12:54:00Z",
         "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T12:54:00Z",
+        "check_lead": "This stop's figure is the line “SHARE knowable on the day” in: ",
         "edition": "2026-08-05",
         "printed": "+1 DAY",
         "days_after": 1,
@@ -660,6 +657,7 @@
       {
         "as_of": "2026-08-06T08:16:42Z",
         "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:16:42Z",
+        "check_lead": "This stop's figure is the line “SHARE knowable on the day” in: ",
         "edition": "2026-08-06",
         "printed": "+2 DAYS",
         "days_after": 2,
@@ -681,6 +679,7 @@
       {
         "as_of": "2026-08-07T18:15:53Z",
         "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-07T18:15:53Z",
+        "check_lead": "This stop's figure is the line “SHARE knowable on the day” in: ",
         "edition": "2026-08-07",
         "printed": "+3 DAYS",
         "days_after": 3,
@@ -698,6 +697,7 @@
       {
         "as_of": "2026-08-08T21:37:19Z",
         "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-08T21:37:19Z",
+        "check_lead": "This stop's figure is the line “SHARE knowable on the day” in: ",
         "edition": "2026-08-08",
         "printed": "+4 DAYS",
         "days_after": 4,
@@ -723,6 +723,7 @@
       {
         "as_of": "2026-08-09T20:36:58Z",
         "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-09T20:36:58Z",
+        "check_lead": "This stop's figure is the line “SHARE knowable on the day” in: ",
         "edition": "2026-08-09",
         "printed": "+5 DAYS",
         "days_after": 5,
@@ -755,11 +756,9 @@
       }
     ],
     "caption": "A ship reaches the list only after it comes back, so a day that is over keeps being answered. Six lists, six answers, one day — the last of them five days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them. That is why the figure above falls, and why it can only go on falling.",
-    "tier": "DERIVED — this share is worked out here, from saved copies of those lists. Nobody publishes it.",
+    "tier": "DERIVED — whether a name belongs to this day at all, and with it the arithmetic of the figure: a return is published only as a week-wide band, which is why the figure has two ends. OBSERVED — which saved copy first carried each name, and so which lists could have held it. ",
     "restraint": "“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.",
-    "replay": "run it again",
-    "first_dwell_ms": 10840,
-    "first_dwell_note": "43 words at 238 wpm (Brysbaert 2019, mean adult silent reading of non-fiction English)"
+    "replay": "run it again"
   },
   "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Fourteen arrived later — nine of them after this page had printed its figure.",
   "field": [
@@ -1262,7 +1261,7 @@
       "figure": "44 %–100 %",
       "of": "11 of 0–25",
       "editions": 6,
-      "captures": 17
+      "captures": 16
     },
     "as_of": "2026-08-06T08:36:39Z",
     "band": "25 ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–25, and the share runs from 11 of 25 to 11 of 11.",
@@ -1417,18 +1416,9 @@
         "content_sha256": "aa53ae8b",
         "edition_date_printed": "9 August 2026",
         "vessels": 9
-      },
-      {
-        "fetched_at_utc": "2026-08-10T04:36:45Z",
-        "http_status": 200,
-        "bytes": 32189,
-        "sha256": "95c28f17",
-        "content_sha256": "aa53ae8b",
-        "edition_date_printed": "9 August 2026",
-        "vessels": 9
       }
     ],
-    "caption": "Four lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day."
+    "caption": "Three lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day."
   },
   "commands": [
     {
@@ -1444,7 +1434,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  17 capture(s) read, 6 distinct edition(s), 6 distinct content(s), 10 distinct bod(y/ies)\n  vessels dark on that day .......... 0–25 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 44%–100%  (11 of 0–25)\n    (a ceiling from 6 edition(s), 17 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  16 capture(s) read, 6 distinct edition(s), 6 distinct content(s), 9 distinct bod(y/ies)\n  vessels dark on that day .......... 0–25 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 44%–100%  (11 of 0–25)\n    (a ceiling from 6 edition(s), 16 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. 25 is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -1483,10 +1473,9 @@
     <ul class="sd-arrive-names" id="sd-arrive-names-then"></ul>
     <p class="sd-arrive-group" id="sd-arrive-head-since"></p>
     <ul class="sd-arrive-names" id="sd-arrive-names-since"></ul>
-    <p class="sd-arrive-hedge" id="sd-arrive-hedge"></p>
     <div class="sd-arrive-ladder" id="sd-arrive-ladder"></div>
     <p class="sd-arrive-cap" id="sd-arrive-cap"></p>
-    <p class="sd-arrive-tier" id="sd-arrive-tier"></p>
+    <p class="sd-arrive-tier" id="sd-arrive-tier"><span id="sd-arrive-tier-words"></span><span id="sd-arrive-check-lead"></span><code id="sd-arrive-check"></code></p>
     <p class="sd-arrive-tier" id="sd-arrive-restraint"></p>
   </section>
 
@@ -1616,27 +1605,17 @@
   document.getElementById("sd-arrive-subject").textContent = arrive.subject;
   document.getElementById("sd-arrive-gloss").textContent = arrive.subject_gloss;
   document.getElementById("sd-arrive-cap").textContent = arrive.caption;
-  document.getElementById("sd-arrive-hedge").textContent = arrive.hedge;
-  // One sentence, not the paragraph that was cut: it carries the tier word for the figure
-  // above it and says what the figure is worked out FROM, and it does not move between
-  // stops. Put back the same night the cut was made, on a blocking verifying pass — the
-  // cut had left this page's largest number unlabelled by this page's own labelling law.
-  document.getElementById("sd-arrive-tier").textContent = arrive.tier;
+  document.getElementById("sd-arrive-tier-words").textContent = arrive.tier;
   document.getElementById("sd-arrive-restraint").textContent = arrive.restraint;
   document.getElementById("sd-restraint").textContent = data.method.restraint;
+  var checkEl = document.getElementById("sd-arrive-check");
+  var checkLeadEl = document.getElementById("sd-arrive-check-lead");
 
   var stopButtons = [];
   var timer = null;
-  var beat = null;
 
-  // Two handles since session 82, because the run now has two clocks: one beat the length
-  // of the premise, then the steps. A `halt()` that cleared only the interval would leave
-  // the first beat armed, and a visitor who pressed a button during it would be overwritten
-  // by the page a moment later — which is banked failure 22's cousin, a control that is a
-  // control in name only.
   function halt() {
     if (timer) { clearInterval(timer); timer = null; }
-    if (beat) { clearTimeout(beat); beat = null; }
   }
 
   function names(into, added, fresh) {
@@ -1655,14 +1634,17 @@
     // the head and the face cannot drift apart.
     countEl.textContent = s.share;
     whenEl.textContent = s.when;
+    // the command that reproduces THIS stop, not a form of it a stranger has to fill in:
+    // VERIFIER-80 D2 found that no date a reader could take off these buttons reproduces
+    // any stop at all
+    checkLeadEl.textContent = s.check_lead;
+    checkEl.textContent = s.check;
     // The day's own list is the fixed block: it is redrawn identically at every stop
     // because it is the numerator, and the numerator cannot grow.
     thenEl.textContent = "";
     names(thenEl, stops[0].added, false);
-    // Everything a later list gave, and since session 82 the block is HEADED at the first
-    // stop too, where it holds nothing: the room the page reserves for it stood as three
-    // rows of unexplained nothing above the buttons, and a stranger cannot tell the shape
-    // of a hole from a page that failed to load unless the page says which it is.
+    // Everything a later list gave. Its heading says what it is — the hole, not progress
+    // — and at the first stop the block and its heading do not exist at all.
     sinceEl.textContent = "";
     sinceHeadEl.textContent = s.heading_since || "";
     for (var j = 1; j <= i; j++) {
@@ -1673,38 +1655,15 @@
     });
   }
 
-  // The first beat is as long as its own premise; the rest are 1.6 s (session 82, owed
-  // item (p), first limb). DRAMATURG-81 §5 asked for it and §1 said why: the run stepped
-  // from load, so the definition was still being read when the figure it explains began to
-  // fall — the plainest available account of two panels that got the lateness and missed
-  // the mechanism. The length is not chosen here: `data.py` divides the gloss's own word
-  // count by 238 wpm, the mean adult silent-reading rate for non-fiction English in a
-  // meta-analysis of 190 studies and 18,573 participants: Marc Brysbaert, "How many words
-  // do we read per minute? A review and meta-analysis of reading rate", Journal of Memory
-  // and Language 109 (2019) — https://biblio.ugent.be/publication/8647789 . The URL stands
-  // HERE, in the file making the claim. It said "the page's README cites it" for one build
-  // and the README did not, which left this work's one new SOURCED figure with no
-  // retrievable address anywhere in the single self-contained file that ships. Found by the
-  // verifying pass the same night. The island carries the arithmetic in `first_dwell_note`.
-  // It is a MEAN — most adults fall
-  // between 175 and 300 wpm, and children, older adults and non-native readers are slower
-  // — so this beat is too short for many of the people it is set for. What it buys them is
-  // not enough time; it is a first state that stands still long enough to be a state.
   function run() {
     halt();
     var i = 0;
     showStop(0);
-    // A beat, then the run — so the premise is never overwritten by its own consequence.
-    beat = setTimeout(function () {
-      beat = null;
-      timer = setInterval(function () {
-        i += 1;
-        if (i >= stops.length) { halt(); return; }
-        showStop(i);
-      }, 1600);
-      i = 1;
-      showStop(1);
-    }, arrive.first_dwell_ms);
+    timer = setInterval(function () {
+      i += 1;
+      if (i >= stops.length) { halt(); return; }
+      showStop(i);
+    }, 1600);
   }
 
   stops.forEach(function (s, i) {
@@ -1733,27 +1692,12 @@
   // The headline is reserved with them: the last stop is the only one whose line under
   // the figure says which end of it moves, and that one extra sentence was worth 42 px
   // of the 136 on its own. Measuring caught it; reading the markup had not.
-  //
-  // SESSION 82 corrects this measurement, and the correction was created by tonight's own
-  // change. Until tonight it measured the LAST stop and held that, which was right only
-  // because the last stop was the tallest of every held element — the block grows, and at
-  // stop 0 its heading did not exist. Tonight stop 0 is headed, with a longer sentence than
-  // any later stop carries, so the last stop is no longer the maximum and reserving it
-  // would have put the buttons back on the walk this repair exists to stop. It now measures
-  // EVERY stop and holds the largest — which is what "reserve the room the head needs"
-  // always meant, and the old code was a coincidence that happened to hold.
   var headlineEl = document.querySelector(".sd-arrive-headline");
   function reserve() {
     var held = [headlineEl, sinceHeadEl, sinceEl];
     held.forEach(function (el) { el.style.minHeight = ""; });
-    var max = held.map(function () { return 0; });
-    for (var s = 0; s < stops.length; s++) {
-      showStop(s);
-      held.forEach(function (el, k) {
-        if (el.offsetHeight > max[k]) max[k] = el.offsetHeight;
-      });
-    }
-    held.forEach(function (el, k) { el.style.minHeight = max[k] + "px"; });
+    showStop(stops.length - 1);
+    held.forEach(function (el) { el.style.minHeight = el.offsetHeight + "px"; });
   }
   reserve();
   var reflow = null;
@@ -1845,11 +1789,7 @@
     // "every date on this page" was false and blurred two tiers: the list dates are
     // SOURCED and the fetch times OBSERVED. Corrected after the panel, on the Verifier's
     // blocking pass (VERIFIER-72 D1); the readers saw the over-broad line.
-    // Session 82, on the verifying pass, blocking: this line named the spans and NOT the
-    // share, so when the head's own tier paragraph was cut the same night, the largest
-    // number on this page was left with no tier word anywhere on the face. The legend now
-    // names the figure it always covered and never said it covered.
-    ["DERIVED", "the dark-and-return spans, and this page's share — worked out here, both ends printed"],
+    ["DERIVED", "the dark-and-return spans — worked out here, printed with both ends"],
     ["OBSERVED", "what this page saw, and when it first saw it"]
   ];
   var legendEl = document.getElementById("sd-legend");

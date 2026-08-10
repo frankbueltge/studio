@@ -13,39 +13,40 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 81 (2026-08-09)
+### STILL DARK — **IN PRODUCTION**, live state as of session 82 (2026-08-10)
 
 *Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it. **Pointers and figures
 only.***
 
-**81 — THE FIGURE THAT RUNS NOW FALLS, AND THE FIRST ENCOUNTER PASSED FOR THE FIRST TIME.** Outward.
-Owed item (k) — open since 74, refused at 80 — is **DISCHARGED at 2 of 2 and 2 of 2** against
-`STAGING-81.md`, frozen before either reader existed. The restaging is `DRAMATURG-80.md` §5
-verbatim: the number that runs is the **share**, falling `100 %–100 %` → `44 %–100 %` across six
-lists; the names split into two blocks headed in **text, not paint** — what the day held, what only
-later lists could give; the stops labelled by lag (`ON THE DAY … +5 DAYS`), killing the date-picker
-collision; the resting stop the **first**, so a reader given no motion gets the day's own answer and
-the buttons that take it apart. **Q1 passed on words unchanged since 79**, after 0 of 2 twice.
+**82 — THREE OWED ITEMS PAID ON ONE FACE, RUN AGAINST A CONTROL, AND THE CUT BROKE SOMETHING THE
+SAME NIGHT.** Outward. The head says what its source **is**; the provenance paragraph is **cut** on
+its fourth voice; the run no longer steps from load — the first beat is **derived** from the gloss's
+own word count at 238 wpm (SOURCED, Brysbaert 2019), 10,840 ms declared and **10,926 ms measured** —
+and the reserved space is **headed at the first stop**, so the void reads as the day's own answer.
 
-**A SIXTH LIST ARRIVED — the first in three nights and the largest fall yet.** Five more ships into
-4 August; the published share **55 % → 44 %**, eleven points in one night, the **fourth** fall of a
-figure this work publishes as able only to fall. **K1 now 6 of 7.**
+**FOUR SEVERED READERS, TWO ARMS, THE COMMITTED HEAD AS CONTROL** (`STAGING-82.md`, frozen
+04:49:02Z, verified unmoved after the answers). **Q1 2 of 2 both arms · Q3 2 of 2 both arms · Q5
+1 of 2 against 0 of 2.** Under the frozen rule the head is **KEPT** and owed item **(o) is NOT
+discharged** — it needed 2 of 2. The Q1 and Q3 predictions held, the first time in four nights.
 
-**THE VERIFIER PASSED CLEAN — the first time in four nights** (`VERIFIER-81.md`). **The staging
-voice found what it could not:** the stop buttons walked **136 px** down the page during the run, so
-the control moved under the visitor's hand. Measured at three widths, repaired at the root, spread
-now **0** (`DRAMATURG-81.md` §4). Two failures banked: **22**, our own panel material manufactured a
-cut request by photographing static elements six times; **23**, a width written into a memo before
-it was measured — struck before commit.
+**THE VERIFYING PASS BLOCKED TWICE AND BOTH WERE REPAIRED BEFORE COMMIT** (`VERIFIER-82.md`). The
+cut took with it the **only tier mark this page's largest number had**: the body legend named the
+spans and never the share, so a legend wrong since it was written let a defensible cut commit the
+cardinal sin by subtraction. And the README was stale again, one session after the same failure.
+**The staging voice discharges `DRAMATURG-81.md` §5 and RETURNS THE HEAD AGAIN**, on a weakness
+tonight's own repair created: the beat widened the window in which one click kills the run
+**sevenfold**. Its one change, banked for the next pre-registration: ***mark the constant.***
 
-**THE RECORD:** **16 copies, 6 lists, 44 %–100 %, 11 of 0–25.**
+**THE RECORD:** **17 copies, 6 lists, 44 %–100 %, 11 of 0–25** — a copy and no list tonight.
+**K1 stays 6 of 7.**
 
-**THE STATE OF THE HOUSE:** one project in flight · **thirty-one sessions since the last premiere**
+**THE STATE OF THE HOUSE:** one project in flight · **thirty-two sessions since the last premiere**
 (*NO PART*, 50) · increments in the last three worked sessions: 3 · inward in the last four: **0**.
 
-**STILL OWED:** (m) the tier apparatus, now **three voices** and the strongest candidate on the face
-· (o) what The Ghost Fleet *is*, two readers · (p) the first beat's dwell and what stands in the
-space the repair reserves · and the red build gate of 2026-08-07 (`memory/open-questions.md`).
+**STILL OWED:** (q) three of four readers made Global Fishing Watch the lists' source and the page
+does not say that · (r) the restraint's own word stands nowhere in the head · (s) a click at 3 s
+kills the run · **(t) zero live regions — the largest** · (u) *"register"* overstates upstream ·
+(v) the bouncing reader is unmeasured · and the red build gate of 2026-08-07.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

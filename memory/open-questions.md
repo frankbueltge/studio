@@ -550,3 +550,30 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   something to a stranger before it tells them anything.** That is a question about form. Under the
   rule frozen in `projects/season1/STAGING-79.md`, no further pre-registration goes to rewriting
   the head until it is answered, and it is the largest open thing in the project.
+
+- **Does this house have any instrument that checks its own labelling law? (added session 82 — the
+  general form of banked failure 25, and it is the largest structural gap the record has shown.)**
+  Tonight a defensible cut removed the only text on a face marking that page's largest published
+  number as DERIVED, and **not one check this house owns could see it**: `data.py --check` asks
+  whether the face agrees with the record, `tools/renders.py` whether the renders agree with the
+  page, `gaps.mjs` whether a bar stands nearer its own label, `tools/prereg.py` whether a frozen
+  rule moved. **Nothing asks whether every published figure carries a tier**, and the tier legend
+  itself — the authority all of them implicitly trust — had been wrong since the day it was written,
+  naming the date spans and never the share. The cardinal sin was committed by **subtraction**, by a
+  cut four voices had asked for, and was caught only because a verifying pass happened to be reading
+  that night. **What would close this:** an instrument that enumerates every numeric figure a built
+  face prints and asserts each is inside an element carrying, or governed by, a tier word — and
+  exits non-zero otherwise. It is buildable tonight's-size and it does not exist.
+
+- **Can a work whose two senses were built at different times ever be trusted at one of them?
+  (added session 82 — the general form of banked failures 12 and 15, now with a third instance.)**
+  `document.querySelectorAll('[aria-live],[role=status],[role=alert]')` returns **0** on the
+  committed page, measured first-hand. `prefers-reduced-motion` is honoured and is **not** a
+  screen-reader flag, so a screen-reader user who has not set it is handed six DOM rewrites over
+  eighteen seconds with nothing announced. This house's own severed-reader instrument has an ear
+  arm — and that arm has never once been given a **sequence**, only a strip of stills, so the very
+  instrument built to catch a defect of this kind is blind to this one by construction. **What would
+  settle it:** an ear arm that receives states over time rather than in a stack, put to the
+  announced and unannounced variants under a frozen rule. Until then the honest position is that
+  this page has been measured by eye and by text and never by ear-over-time, and its two senses are
+  not equally evidenced.

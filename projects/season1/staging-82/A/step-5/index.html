@@ -755,11 +755,10 @@
       }
     ],
     "caption": "A ship reaches the list only after it comes back, so a day that is over keeps being answered. Six lists, six answers, one day — the last of them five days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them. That is why the figure above falls, and why it can only go on falling.",
-    "tier": "DERIVED — this share is worked out here, from saved copies of those lists. Nobody publishes it.",
     "restraint": "“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.",
     "replay": "run it again",
-    "first_dwell_ms": 10840,
-    "first_dwell_note": "43 words at 238 wpm (Brysbaert 2019, mean adult silent reading of non-fiction English)"
+    "first_dwell_ms": 11092,
+    "first_dwell_note": "44 words at 238 wpm (Brysbaert 2019, mean adult silent reading of non-fiction English)"
   },
   "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Fourteen arrived later — nine of them after this page had printed its figure.",
   "field": [
@@ -1486,7 +1485,6 @@
     <p class="sd-arrive-hedge" id="sd-arrive-hedge"></p>
     <div class="sd-arrive-ladder" id="sd-arrive-ladder"></div>
     <p class="sd-arrive-cap" id="sd-arrive-cap"></p>
-    <p class="sd-arrive-tier" id="sd-arrive-tier"></p>
     <p class="sd-arrive-tier" id="sd-arrive-restraint"></p>
   </section>
 
@@ -1617,11 +1615,6 @@
   document.getElementById("sd-arrive-gloss").textContent = arrive.subject_gloss;
   document.getElementById("sd-arrive-cap").textContent = arrive.caption;
   document.getElementById("sd-arrive-hedge").textContent = arrive.hedge;
-  // One sentence, not the paragraph that was cut: it carries the tier word for the figure
-  // above it and says what the figure is worked out FROM, and it does not move between
-  // stops. Put back the same night the cut was made, on a blocking verifying pass — the
-  // cut had left this page's largest number unlabelled by this page's own labelling law.
-  document.getElementById("sd-arrive-tier").textContent = arrive.tier;
   document.getElementById("sd-arrive-restraint").textContent = arrive.restraint;
   document.getElementById("sd-restraint").textContent = data.method.restraint;
 
@@ -1679,14 +1672,8 @@
   // fall — the plainest available account of two panels that got the lateness and missed
   // the mechanism. The length is not chosen here: `data.py` divides the gloss's own word
   // count by 238 wpm, the mean adult silent-reading rate for non-fiction English in a
-  // meta-analysis of 190 studies and 18,573 participants: Marc Brysbaert, "How many words
-  // do we read per minute? A review and meta-analysis of reading rate", Journal of Memory
-  // and Language 109 (2019) — https://biblio.ugent.be/publication/8647789 . The URL stands
-  // HERE, in the file making the claim. It said "the page's README cites it" for one build
-  // and the README did not, which left this work's one new SOURCED figure with no
-  // retrievable address anywhere in the single self-contained file that ships. Found by the
-  // verifying pass the same night. The island carries the arithmetic in `first_dwell_note`.
-  // It is a MEAN — most adults fall
+  // meta-analysis of 190 studies (Brysbaert 2019; the page's README cites it, and the
+  // island carries the arithmetic in `first_dwell_note`). It is a MEAN — most adults fall
   // between 175 and 300 wpm, and children, older adults and non-native readers are slower
   // — so this beat is too short for many of the people it is set for. What it buys them is
   // not enough time; it is a first state that stands still long enough to be a state.
@@ -1845,11 +1832,7 @@
     // "every date on this page" was false and blurred two tiers: the list dates are
     // SOURCED and the fetch times OBSERVED. Corrected after the panel, on the Verifier's
     // blocking pass (VERIFIER-72 D1); the readers saw the over-broad line.
-    // Session 82, on the verifying pass, blocking: this line named the spans and NOT the
-    // share, so when the head's own tier paragraph was cut the same night, the largest
-    // number on this page was left with no tier word anywhere on the face. The legend now
-    // names the figure it always covered and never said it covered.
-    ["DERIVED", "the dark-and-return spans, and this page's share — worked out here, both ends printed"],
+    ["DERIVED", "the dark-and-return spans — worked out here, printed with both ends"],
     ["OBSERVED", "what this page saw, and when it first saw it"]
   ];
   var legendEl = document.getElementById("sd-legend");

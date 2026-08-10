@@ -404,15 +404,11 @@ def build():
         sh = share_line(a_st, "LIVE")
         arrive_stops.append({
             "as_of": as_of,
+            # Kept in the data island and printed on the face nowhere since tonight (see
+            # the cut of owed item (m) below): the stop's own as-of instant, in the form
+            # that reproduces it, for this house's instruments and for anyone reading the
+            # committed source.
             "check": f"python3 projects/season1/capture/day.py {DAY} --as-of {as_of}",
-            # It names the LINE and not the string. The head prints `44 %–100 %` and the
-            # script prints `44%–100%`, and a lead that asserted the two were the same
-            # characters would be this house's own recurring defect — a face making a
-            # claim about an output nobody had put side by side with it — in the one line
-            # whose whole job is to be checkable.
-            "check_lead": (
-                "This stop's figure is the line “SHARE knowable on the day” in: "
-            ),
             "edition": g["edition"],
             # The stop buttons are labelled by LATENESS since tonight, and the reason is
             # `DRAMATURG-80.md` §1: they read `4 AUG … 8 AUG` under a title reading
@@ -457,8 +453,17 @@ def build():
                 # that gloss may not carry the notation it explains. Both of its numbers
                 # stand in the two block headings below, in words.
             ),
+            # OWED ITEM (p), second limb. Until tonight this heading did not exist at the
+            # first stop, so the room the page reserves for it — the repair that stopped the
+            # buttons walking 136 px down the page — stood as about three rows of nothing
+            # above the controls, readable as the shape of the hole OR as a page that failed
+            # to load. It is now labelled from the first stop: the emptiness is the day's own
+            # answer to this work's question, and a stranger is told so rather than left to
+            # guess. Nothing is drawn in it; this house's rule is text and not paint.
             "heading_since": (
-                None if late == 0 else
+                "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of "
+                "this day that nobody could have had on it."
+                if late == 0 else
                 f"NAMED ONLY BY LATER LISTS — {word(running - arrive_stops[0]['total'])} "
                 f"ship{'' if running - arrive_stops[0]['total'] == 1 else 's'} dark on "
                 "that same day that nobody could have had on it"
@@ -497,11 +502,26 @@ def build():
         # successor to "this record", which two readers had named the night before. The
         # owner is named at the first appearance of the word and nowhere else, because a
         # possessive repeated down a block is the repetition item (l) was written against.
+        # OWED ITEM (o), banked by session 81 on two readers and paid here: the head named
+        # its source and never said what KIND of thing it is. Both severed readers, asked
+        # what they could not resolve, went straight at it — naming the owner had bought a
+        # better question, not a resolved one. It now says what the thing IS, and the
+        # sentence that says so carries the mechanism: a register that can name a ship only
+        # once it has come back. That is the clause three panels failed to carry, and it now
+        # stands in the PREMISE rather than only in the caption below the run.
         "subject_gloss": (
             "dark — the ship's AIS transponder switched off, so it stops being tracked. "
-            "The lists below are the daily editions of The Ghost Fleet, the public "
-            "instrument this page reads. A list gives a ship's return only to the nearest "
-            "week, so "
+            "The lists below are the daily editions of The Ghost Fleet, a public register "
+            "of such disappearances published at frankbueltge.de, which can name a ship "
+            "only once it has come back."
+        ),
+        # The hedge that stood in the premise until tonight moves DOWN to the names it
+        # qualifies. It was never about the figure; it is about whether a given name belongs
+        # to this day, and a caveat reads at equal prominence beside its own material. It
+        # also bought the room the sentence above needed: `DRAMATURG-81.md` §1 found the
+        # premise four dense lines long and the run outrunning it.
+        "hedge": (
+            "A list gives a ship's return only to the nearest week, so "
             + (
                 "not one of these names is certainly dark on this day."
                 if now["vessels_dark_on_day"]["band"][0] == 0 else
@@ -534,17 +554,44 @@ def build():
             # number's values, or the page contradicts itself for four seconds of every
             # visit — and the frame is how that was caught, not the reading of the string.
         ),
-        # Self-contained, because this block stands ABOVE the page's tier legend and a
-        # mark whose key is further down the page is a mark a reader cannot read. Session
-        # 79 banked owed item (m) on exactly that: one reader called the legend debug
-        # output. The command that completes this line is the STOP's own (see `check`
-        # above), so what a stranger is told to run always reproduces the state they are
-        # looking at.
+        # OWED ITEM (m), CUT TONIGHT after four sessions of standing. What stood here was
+        # the head's own tier line and, after it, the command reproducing the stop being
+        # looked at. Four voices asked for it: session 79's reader called it a developer
+        # note, both of session 80's put a finger on it without being able to say why —
+        # and `VERIFIER-80.md` then found they were right for a reason none of them could
+        # see, the command reproducing none of the five stops it stood over —
+        # and `DRAMATURG-81.md` §3 named the cut outright: *"a stranger meeting the head's
+        # version gets an unglossed command line whose only variable, across six frames, is
+        # a timestamp ticking forward — which nobody reads as evidence in 1.6 seconds; it
+        # reads as noise that happens to look rigorous."*
+        #
+        # WHAT IS LOST, written here and not softened: the head loses its receipts for a
+        # visitor who never scrolls. This work's published takedown — *"a studio watched a
+        # website update for a month and called its own patience a measurement"* — is
+        # refuted by a number a stranger can re-run, and that refutation now begins one
+        # scroll below the fold. It is not deleted: the tier legend, the three commands,
+        # the verbatim output of one of them and the table of every saved copy all stand in
+        # the body, which is where session 79's own measurement found both readers reaching
+        # when asked how they would check a number (owed item (l)). The head keeps the
+        # plain-language sentence the receipts were decorating.
+        #
+        # `check` survives on every stop for the page's own instruments and is printed
+        # nowhere on the face; the body's commands are built from the record, not from it.
+        #
+        # WHAT THE CUT TOOK WITH IT, AND WHAT HAD TO GO BACK THE SAME NIGHT. The deleted
+        # paragraph was the only text on the face marking the SHARE as DERIVED — the page's
+        # legend marks the dark-and-return spans and not the figure — so for one build this
+        # work's largest number stood on its own face with no tier word anywhere near it,
+        # which is this house's cardinal sin committed by subtraction. Found by the verifying
+        # pass, blocking, the night the cut was made. The line below is what went back: one
+        # sentence, no command, and self-contained, because a tier mark whose key is 400 px
+        # further down is a mark the head's own reader cannot read. It also pays what the
+        # staging voice asked for in the same breath — *"the head no longer says anywhere
+        # that this page is reading saved copies … six words would fix it"* — so the mark and
+        # the evidence arrive in the same clause instead of as two additions.
         "tier": (
-            "DERIVED — whether a name belongs to this day at all, and with it the "
-            "arithmetic of the figure: a return is published only as a week-wide band, "
-            "which is why the figure has two ends. OBSERVED — which saved copy first "
-            "carried each name, and so which lists could have held it. "
+            "DERIVED — this share is worked out here, from saved copies of those lists. "
+            "Nobody publishes it."
         ),
         # The upstream restraint, and it travels with the NAMES. This block names twenty
         # vessels and their flags and stands above the foot that has always carried this
@@ -554,6 +601,37 @@ def build():
         "restraint": RESTRAINT,
         "replay": "run it again",
     }
+    # OWED ITEM (p), first limb. `DRAMATURG-81.md` §5: *"use the freed first beat to hold
+    # state 0 long enough that the definition paragraph is legible before the number first
+    # moves."* The run stepped every 1.6 s from load, so the premise was still being read
+    # when the figure it explains began to fall — §1's finding, and the plainest available
+    # explanation of why two panels got the lateness and missed the mechanism.
+    #
+    # The beat is DERIVED and not chosen: the gloss's own word count divided by the mean
+    # adult silent-reading rate for non-fiction English, 238 wpm, from the meta-analysis of
+    # 190 studies and 18,573 participants in Marc Brysbaert, "How many words do we read per
+    # minute? A review and meta-analysis of reading rate", Journal of Memory and Language
+    # 109 (2019) — <https://biblio.ugent.be/publication/8647789>. SOURCED. The caveat
+    # travels with the figure and is not softened: 238 is a MEAN, the same paper puts most
+    # adults between 175 and 300 wpm and reports slower rates for children, older adults and
+    # non-native English readers — so this beat is too short for a large share of the people
+    # it is set for, and every one of them still has six buttons and no clock.
+    #
+    # Only the FIRST beat is derived. The rest stay at 1.6 s: they carry no new prose, and a
+    # run whose every step waited out a reading rate would not be a run.
+    #
+    # THE COUNT IS OF WORDS AND NOT OF TOKENS, and it was not on its first run. `.split()`
+    # returned 44 for this paragraph, of which one was a bare em dash — so the page published
+    # "44 words" of a 43-word sentence and held its first beat 252 ms too long. Caught by the
+    # verifying pass on the night it was built. It is banked failure 8 again, in its purest
+    # form: a number reaching a face out of a library call nobody had put beside the thing it
+    # counts. A word here is a token with a letter or a digit in it.
+    gloss_words = sum(1 for t in arrive["subject_gloss"].split() if any(c.isalnum() for c in t))
+    arrive["first_dwell_ms"] = round(gloss_words / 238 * 60 * 1000)
+    arrive["first_dwell_note"] = (
+        f"{gloss_words} words at 238 wpm (Brysbaert 2019, mean adult silent reading of "
+        "non-fiction English)"
+    )
 
     # what moved since the struck figure was true: the vessels this day gained from
     # captures later than the law's publication, named, with the list that carried them
