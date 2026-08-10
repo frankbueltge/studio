@@ -61,9 +61,27 @@ VESSEL_RE = re.compile(
     r'<a class="[^"]*" href="([^"]+)"',
     re.S,
 )
+# REPAIRED IN SESSION 84, and the repair is a correction of the record itself.
+#
+# Until tonight this pattern required a three-letter flag, `\(([A-Z]{3})\)`. The edition of
+# 10 August 2026 prints its case of the day with **no flag at all** — "HY928-21%-81% (—)",
+# a vessel upstream itself calls "flagged —" — so the pattern did not match, the case of the
+# day was written as `null`, and a ship the instrument had published was in neither of that
+# night's two saved copies. The case of the day is not decoration here: it is the first
+# vessel of every list this house has saved (TUNAMAR on 4 August, TUNA PESCA on 9 August),
+# and dropping it dropped a disappearance out of the day's total. **Membership of this
+# record must not depend on whether upstream printed a flag.** The flag is now optional and
+# is recorded as `null` when it is absent, which is what upstream itself publishes.
+#
+# What this does NOT do: rewrite the two captures of 10 August. Captures are immutable, and
+# a record that gets edited when its parser improves is not a record. The vessel enters from
+# the next capture forward, and the gap it left is published rather than closed — see
+# `../still-dark/README.md` and `../PROJECT.md`. A work about the delay between a thing
+# happening and a thing being knowable lost a ship inside its own instrument for six hours,
+# and the honest place for that is the face of the work, not a silent re-parse.
 CASE_RE = re.compile(
     r'The case of the day\s*</p>\s*<p class="[^"]*">([^<]+?)\s*'
-    r'<span class="font-mono text-sm text-fg-faint">\(([A-Z]{3})\)</span></p>\s*'
+    r'<span class="font-mono text-sm text-fg-faint">\((?:([A-Z]{3})|—|-|&mdash;)\)</span></p>\s*'
     r'<p class="[^"]*">\s*(.*?)\s*</p>.*?href="(https://globalfishingwatch\.org[^"]+)"',
     re.S,
 )

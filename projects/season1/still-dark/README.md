@@ -73,16 +73,21 @@ In the same session the end of the figure that **cannot** move was set apart fro
 readers scored both at 4 of 4, and **nought of four made Global Fishing Watch the publisher of the
 lists, against three of four the night before** (`../PANEL-83.md`).
 
-> **AND THE SENTENCE THEY PASSED WAS FALSE.** It read *"The upper end never moves."* That end is
-> `obs / max(certain, obs)`: it holds at 100 % only while no ship is **certainly** dark on the day,
-> and `python3 ../capture/day.py 2026-08-01` already returns thirteen certain. The verifying pass
-> caught it, blocking, hours after four readers had confirmed it. Repaired before commit, the score
-> withdrawn rather than banked, and banked as failure 31 — **a panel measures what a page carries,
-> never whether it is true.**
+> **AND THE SENTENCE THEY PASSED WAS FALSE — AND SO WAS ITS REPAIR.** It read *"The upper end never
+> moves."* That end is `obs / max(certain, obs)` with `obs` = 11, so it holds at 100 % while **no
+> more than eleven** ships are certainly dark on the day and falls when a twelfth is. The verifying
+> pass of session 83 caught the first version, blocking, hours after four readers had confirmed it,
+> and this house repaired it to *"it falls the moment one of them becomes certain"* — **also false**,
+> because one certain ship gives 11/11. That second falsehood was committed, published in a commit
+> message and carried into a premiere gate, where the verifying pass of session 84 proved it on
+> probe capture sets: 1 certain → 100 %, 11 certain → 100 %, **12 certain → 92 %**. Repaired a
+> second time and banked as failure 31 — **a sentence about arithmetic is not checked by reading it,
+> however well it is put.** Both false versions were adopted because they read better than what they
+> replaced.
 
-**Since session 84 the head says only what its own arithmetic says, the mark it draws is
-explained in words, and a phone keeps the controls.** Three repairs, each one an item this work
-owed itself:
+**Since session 84 the head says only what its own arithmetic says, and the mark it draws is
+explained in words.** Two repairs paid, one attempted and withdrawn, and a ship recovered that this
+house had lost inside its own instrument:
 
 - **The hole's heading no longer asserts what the hedge under it denies.** It read *"N ships DARK
   on that same day"*; a list gives a return only to the nearest week, so not one of those names is
@@ -93,13 +98,46 @@ owed itself:
   darker ink, a darker border and heavier type — the only thing on the page meant to be seen
   changing — with nothing anywhere saying what the mark meant. They are named by **position** as
   well as by ink, so a reader who cannot see the ink can count instead.
-- **Below 480 px the buttons and the run's line are held to the bottom of the screen.** A phone
-  cannot hold this head: measured at 390×844, the controls stood at y=1004 and the live line at
-  y=1057, both below the fold, so a reader watched the figure fall with the controls that drive it
-  and the line that announces it off-screen — this page staging its own subject against itself.
-  They are now inside the viewport at every stop and at every scroll position within the head
-  (`tools/fold.mjs`, committed, which exits non-zero if either leaves it). DOM order is untouched:
-  only the paint moves, and only where the fold is real.
+- **A third repair was built, measured, and WITHDRAWN the same night.** A phone cannot hold this
+  head: at 390×844 the controls stood at y=1004 and the live line at y=1057, both below the fold,
+  so a reader watched the figure fall with the controls that drive it and the line that announces
+  it off-screen. This house pinned both to the bottom of the viewport below 480 px — and they
+  arrived on screen by being **painted over the reserved space the whole head exists to reveal**:
+  at stop 6 and scroll 0, twelve of nineteen name chips under the band and ten painted out. The
+  art critic found it, the staging voice measured **0 of 19 chips readable at 390×844 against
+  19 of 19 one pixel wider**, and the verifying pass found **ten visible before the repair and none
+  after**. It is withdrawn. **Item (y) is owed again**, now with its numbers, and the staging
+  voice's prescription — keep the sticky rule and bring the section, at the instant the beat ends,
+  to the frame where the band clears the space — is **banked and not built**, because a viewport
+  moved under a reader is a mechanism this house has never shipped and will not ship unjudged.
+
+**And this house's own new instrument passed the defect it was built for.** `tools/fold.mjs`
+watched the two elements it was told to keep on screen and never asked what they were standing on,
+and it sampled two scroll positions out of a head that scrolls through more than a thousand
+pixels — so it certified the band green while the band covered the material. It is rebuilt: it
+carries a list of material that **must not be covered**, hit-tests it, and walks the head's whole
+scroll range in nine steps. On the page as it now stands it returns **63 failures**; on the
+withdrawn band, **73**. The repair this house believed in made its own instrument's number worse,
+and neither number was available until the instrument could see occlusion.
+
+**AND THE RECORD LOST A SHIP TO ITS OWN PARSER, for six hours, on the night before this one.**
+The edition of 10 August prints its case of the day with **no flag at all** — upstream itself
+writes *"A vessel flagged —"* — and `capture.py` required three capital letters, so the case was
+written as `null` and a disappearance upstream had published stood in neither of that night's two
+saved copies. The case of the day is not decoration in this record: it is the **first vessel of
+every list this house has saved** (TUNAMAR on 4 August, TUNA PESCA on 9 August). Membership of this
+record was depending on whether upstream printed a flag. Found by this house's verifying pass at the
+premiere gate, re-run first-hand before it was believed, and repaired: the flag is optional and is
+recorded as `null` when it is absent, which is what upstream publishes.
+
+**What that did to the published figure: 37 %–100 %, 11 of 0–30 → 35 %–100 %, 11 of 0–31.** This is
+the first movement of this work's number that was **not** caused by a later list. Every fall before
+it was the world arriving late; this one is this house's own instrument having been wrong, and the
+two must never be counted together. **The two captures of 10 August are not rewritten** — captures
+are immutable, and a record edited when its parser improves is not a record. The vessel enters from
+the twentieth copy forward, and the six-hour hole it left is published here rather than closed. A
+work about the delay between a thing happening and a thing being knowable lost a ship inside its own
+reading of the list that named it.
 
 **Since session 72 the house's filing words are off the face.** *Edition* and *capture* are what
 this house calls the things it collects; on the page they are **the list** the instrument publishes
@@ -139,7 +177,7 @@ ceiling that can only fall* — and on 6 August it fell, unaided:
 |---|---|---|
 | as published, 4 saved copies / 2 lists, to `2026-08-06T04:36:19Z` | **79 %–100 %** | 11 of 0–14 |
 | as this page published the law, 5 saved copies / 3 lists, at `2026-08-06T08:36:39Z` | **69 %–100 %** | 11 of 0–16 |
-| as measured at session 84, 19 saved copies / 7 lists | **37 %–100 %** | 11 of 0–30 |
+| as measured at session 84, 20 saved copies / 7 lists | **35 %–100 %** | 11 of 0–31 |
 
 > **CORRECTION, session 78 (2026-08-08).** The middle row read *"as measured now, 8 saved
 > copies / 3 lists"* until tonight, and *now* had been three sessions ago. Worse, the same
@@ -198,7 +236,7 @@ apparatus, the keypad, the button and everything the turn used to withhold.
 > control with something withheld behind it, which a reader had to perform before the work would
 > answer. This page's buttons withhold nothing; every figure and every name they reach stands in
 > the body below them. The distinction is real and the sentence above does not draw it, so a
-> stranger reads *"the button went"* three paragraphs after reading that the head has six.
+> stranger reads *"the button went"* three paragraphs after reading that the head has seven.
 
 **Since session 79 two things on this face were cut by readers rather than by taste, and one was
 refused.** Asked only what they would cut, and severed from each other, three of four readers in
@@ -207,7 +245,7 @@ two named *"first seen 5 AUG"* printed identically down every row. Both went to 
 pre-registration with the refuting numbers written first (`../STAGING-79.md`, `../PANEL-79.md`).
 **The repeated line is now stated once per block** — 0 of 2 readers named it or its replacement.
 **The ledger MOVED above the terminal block and was NOT deleted**, so what follows it is the page's
-own verbatim output rather than eighteen rows of truncated sha256 — 1 of 2 named it, against 3 of 4 on
+own verbatim output rather than twenty rows of truncated sha256 — 1 of 2 named it, against 3 of 4 on
 the uncut page. *Deleting it was refused, and the reason is the same panel:* **both readers, asked
 what they would do if they doubted the numbers, reached for that table.** The element one of them
 called debug output is the element both used to check the work.
@@ -244,7 +282,7 @@ live — fetch time, body hash, content hash, list date, ship count — and the 
 it as the OBSERVED ledger. A hand-typed copy of a record is a second record that can disagree with
 the first, and in session 78 one did (see the correction above).
 
-**Nineteen saved copies, eleven bodies, seven lists, as of session 84.** Four lists have come back in
+**Twenty saved copies, eleven bodies, seven lists — and eight distinct contents, as of session 84.** The eighth content is not an eighth list: it is this house's own parser, repaired tonight, reading the list of 10 August correctly for the first time. A content digest answers *did the edition change*, and it cannot tell that question from *did our reading of it change* — so tonight it moved without upstream moving, and this is the sentence that says so. Four lists have come back in
 more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.
@@ -303,6 +341,17 @@ the page and scrolled to the foot of the head, prints the top and bottom of the 
 heading, the controls and the run's line, and **exits non-zero if the controls or the live line
 leave the viewport at any stop below 481 px**. On the page as committed before tonight it returns
 **14 losses**; on tonight's, none. Run: `NODE_PATH=<global node_modules> node tools/fold.mjs`.
+
+**`tools/tiers.mjs`** is the fourth, and it is the instrument `memory/open-questions.md` has been
+asking for since session 82, when a cut removed the only text marking this page's largest number as
+DERIVED and **not one check this house owned could see it**. It enumerates every figure the built
+page prints, finds the nearest enclosing `<section>`, and asserts a tier word stands inside it —
+exiting non-zero otherwise. On its first run it found **nine figures with no tier word in their own
+section**, including the live headline share and the struck one above it, both of which had been
+relying on a legend three blocks up in a different section. The tier word now stands in that
+section. **What it cannot say**, printed in its own output: that a tier word which is present is the
+RIGHT one — two ledger columns captioned OBSERVED were in fact SOURCED, and no proximity rule can
+catch that. Run: `NODE_PATH=<global node_modules> node tools/tiers.mjs`.
 
 **Dependencies, named honestly:** node ≥ 18 and **playwright** (Apache-2.0) with Chromium
 (BSD-3-Clause; its bundled third-party components carry their own licences — the Verifier's

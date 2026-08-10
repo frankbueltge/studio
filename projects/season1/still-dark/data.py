@@ -126,12 +126,27 @@ def span(a, b):
 
 FULL_MONTHS = ["January", "February", "March", "April", "May", "June",
                "July", "August", "September", "October", "November", "December"]
-WORDS = {0: "no", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven",
-         8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve", 13: "thirteen",
-         14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen", 18: "eighteen",
-         19: "nineteen", 20: "twenty", 21: "twenty-one", 22: "twenty-two",
-         23: "twenty-three", 24: "twenty-four", 25: "twenty-five", 26: "twenty-six",
-         27: "twenty-seven", 28: "twenty-eight", 29: "twenty-nine", 30: "thirty"}
+_UNITS = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+          "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+          "seventeen", "eighteen", "nineteen"]
+_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty",
+         "ninety"]
+# BUILT, NOT TYPED, SINCE SESSION 84 — and the reason is that the typed version's own
+# comment predicted tonight. It read: *"The list stopped at sixteen until session 78, so
+# the night the total reached seventeen the band sentence started a sentence with a numeral
+# while saying 'eleven' four words later — one sentence in two voices, and nothing failed.
+# Extended to twenty; when the total passes twenty this will do it again."* It was extended
+# to thirty instead, and tonight the total reached THIRTY-ONE — so the page printed "31
+# ships could have been dark" beside "the eleven the day itself named", in one sentence, in
+# two voices, and nothing failed again. A ceiling a hand has to raise is banked failure 17
+# in another costume: a constant advanced by hand is a number typed by hand wearing a
+# variable's name. The table now covers every count this work can reach and stops being a
+# thing anyone must remember.
+WORDS = {n: _UNITS[n] for n in range(20)}
+for _t in range(2, 10):
+    WORDS[_t * 10] = _TENS[_t]
+    for _u in range(1, 10):
+        WORDS[_t * 10 + _u] = f"{_TENS[_t]}-{_UNITS[_u]}"
 # The list stopped at sixteen until session 78, so the night the total reached seventeen
 # the band sentence started a sentence with a numeral while saying "eleven" four words
 # later — one sentence in two voices, and nothing failed. Extended to twenty; when the
@@ -647,12 +662,34 @@ def build():
         # against the instrument that computes the number it described. Banked failure 23 in
         # its purest form. Caught by the verifying pass, blocking, before commit — and after
         # four severed readers had passed it at 4 of 4.
+        # REPAIRED TWICE IN TWO SESSIONS, AND THE SECOND REPAIR WAS STILL FALSE — session 84.
+        #
+        # This sentence has now been wrong in three successive forms, each one better written
+        # than the last. It said "the upper end never moves" (session 83): false, and four
+        # severed readers passed it. It was repaired to "it falls the moment one of them
+        # becomes certain" (session 83, in the same night's blocking pass): ALSO FALSE, and
+        # this house committed it, published it in a commit message, and put it to a
+        # premiere gate. `day.py:214` computes that end as `obs / max(n_lo, obs)` with
+        # `obs = 11`. One ship becoming certain does nothing: the quotient is 11/11. The end
+        # falls when the certain count passes the ELEVEN the day itself named — at twelve
+        # certain the upper end is 11/12, 92 %. The verifying pass proved it on probe capture
+        # sets and this house re-ran it before believing it.
+        #
+        # The lesson this house is paying for twice: a sentence about arithmetic is not
+        # checked by reading it, however well it is put. It is checked by running the
+        # arithmetic. Both false versions were adopted because they were clearer than what
+        # they replaced.
+        # Both counts below are COMPUTED, like every other number on this face. The first
+        # false version of this sentence typed nothing and was wrong anyway; the repair is
+        # not allowed to introduce a hand-typed number on top (banked failure 17).
         "constant": (
-            "Neither end of this figure can rise. The upper end has not moved at all: it "
-            "holds at 100 % while no ship here is CERTAINLY dark on this day — a list gives "
-            "a return only to the nearest week, so every one of them is merely possible — "
-            "and it falls the moment one of them becomes certain. Only the lower end has "
-            "moved so far, and the next list can lower it again."
+            "Neither end of this figure can rise. The upper end has not moved yet: it holds "
+            "at 100 % while no more of these ships are CERTAINLY dark on this day than the "
+            f"{word(field[0]['count'])} the day itself named — a list gives a return only to "
+            f"the nearest week, so all {word(now['vessels_dark_on_day']['band'][1])} are "
+            f"merely possible today — and it falls as soon as one more than those "
+            f"{word(field[0]['count'])} is certain. Only the lower end has moved so far, and "
+            "the next list can lower it again."
         ),
         # THE RUN, SAID — session 83, owed items (s) and (t), paid by one set of strings
         # that reaches the eye and the ear from the same place.

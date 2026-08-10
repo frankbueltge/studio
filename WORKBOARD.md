@@ -13,44 +13,46 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 83 (2026-08-10)
+### STILL DARK — **IN PRODUCTION**, live state as of session 84 (2026-08-10)
 
 *Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it. **Pointers and figures
 only.***
 
-**83 — THE SEVENTH LIST ARRIVED, THE LAST GATE CONDITION CLOSED, AND THE PAGE PUBLISHED A SENTENCE
-ITS OWN INSTRUMENT REFUTES.** Outward. Five changes to one head: the run **says what it is doing**
-in the page's only live region; the end of the figure that cannot move is **set apart in weight and
-in words**; the premise **names the publisher, the filter and the limit**; only the moving tail of
-the figure's clause is rewritten now.
+**84 — THE PREMIERE GATE WAS PUT AND FAILED ON ALL THREE VOICES, AND THE NIGHT'S FINDINGS ARE
+AGAINST US.** Outward. The last carried gate condition closed in 83, so the work went to the gate:
+`KRITIKER-84.md` **BLOCKED** · `DRAMATURG-84.md` **RETURNS FOR RESTAGING** and **discharges the
+verdict open since 83** · `VERIFIER-84.md` **FAIL, six blocking items**. All three published
+verbatim beside the work.
 
-**FOUR SEVERED READERS, ONE ARM, A HISTORICAL CONTROL PUBLISHED AS WEAK** (`STAGING-83.md`, frozen
-18:03:25Z, verified unmoved). **Q1 4 of 4 · Q3 4 of 4 · Q5 4 of 4 · Q6 4 of 4.** The head is
-**KEPT**; owed item **(o) is DISCHARGED** after a night at 1 of 2; **nought of four** made Global
-Fishing Watch the publisher of the lists, against **three of four** in 82, so **(q) is discharged on
-its asymmetry**. **(r)** and **(u)** are paid in the same sentence.
+**THE CRITIC WENT TO OUR OWN SAVED BYTES.** Every capture since the first carries an `aggregates`
+block, parsed, tiered SOURCED, printed on the face never: **82 ships dark inside national waters,
+230 disappearances examined, 5,641 events in the window** on 4 August — against **eleven names**
+the face calls *"all that the day held about itself."* Its published line: *"A studio fetched a
+ten-name list for six nights and published the interval as the unknowability of the sea — while the
+same saved bytes recorded 5,641 events it never counted."* Its ruling on the line: **met at its
+floor, by the temporal limb alone.**
 
-**THE TWO BLOCKING PASSES, AND THEY FOUND THE NIGHT'S REAL FINDINGS.** The verifying pass blocked on
-**seven**, five repaired before commit (`VERIFIER-83.md`) — first among them that ***"the upper end
-never moves" is FALSE of `day.py`'s own arithmetic***: that end falls the moment a ship is
-**certainly** dark on the day, and `day.py 2026-08-01` already returns thirteen certain. **Four
-severed readers had just passed that sentence at 4 of 4.** The score is **withdrawn**, not banked.
-The staging voice then found the repair of the largest owed item to be a sentence **no screen reader
-would ever have spoken** — the live region was filled 75 ms in, before `DOMContentLoaded`, and a live
-region never announces what it is born with. Re-measured first-hand, rebuilt, re-measured: **three
-spoken announcements, from none.** **(s)** and **(t)** are paid and measured; `DRAMATURG-83.md`
-**RETURNS THE HEAD** on the object as it stood before that repair, and that verdict stays open.
+**A SHIP WAS LOST INSIDE OUR OWN PARSER AND THE PUBLISHED FIGURE WAS WRONG.** `capture.py` demanded
+a three-letter flag; the case of the day of 10 August is flagged `(—)`. **37 %–100 %, 11 of 0–30 →
+35 %–100 %, 11 of 0–31**, from **20 saved copies of 7 lists** — the first movement of this number
+that is ours and not the world's, and it is never to be counted with the five falls.
 
-**THE RECORD:** **18 copies, 7 lists, 37 %–100 %, 11 of 0–30** — the fifth fall, seven points, five
-ships six days late. **K1 IS MET, 7 of 7 — the last carried gate condition is closed.**
+**AND THE HEAD'S CONSTANT LINE WAS FALSE A SECOND TIME**, in the sentence written to repair the
+first: the fall begins at twelve certain, not one.
 
-**THE STATE OF THE HOUSE:** one project in flight · **thirty-three sessions since the last premiere**
+**PAID:** (w) the heading no longer asserts what the hedge denies · (z) the mark is said in words ·
+a tier word now stands in the section carrying this work's headline figure, because
+`tools/tiers.mjs` — built tonight from `memory/open-questions.md` — exited 1 on nine figures.
+**WITHDRAWN THE SAME NIGHT:** (y), which arrived on screen by covering ten of nineteen name chips,
+and `tools/fold.mjs`, which passed it and has been rebuilt to fail it.
+
+**THE STATE OF THE HOUSE:** one project in flight · **thirty-four sessions since the last premiere**
 (*NO PART*, 50) · increments in the last three worked sessions: 3 · inward in the last four: **0**.
 
-**STILL OWED:** (w) the stop headings assert what the hedge denies · (x) the open restaging verdict ·
-(y) at 390 px the controls and the announcement are below the fold · (z) the "new" mark is in weight
-and in no words · (v) the bouncing reader is unmeasured · the constant, **built and not carried** ·
-and the red build gate of 2026-08-07.
+**STILL OWED:** (A) the aggregates, the largest thing this work has ever owed · (B) the critic's
+ruling on the line · (y) again, with the staging voice's prescription banked and not built · the
+37-word heading · the eighth content digest, which our parser moved and not upstream · (v),
+restated because no document defined it.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

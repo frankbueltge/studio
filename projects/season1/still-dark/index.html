@@ -222,26 +222,25 @@
     color: var(--sd-bg);
   }
   .sd-root .sd-arrive-ladder .sd-arrive-replay { margin-left: 1.2ch; }
-  /* OWED ITEM (y), session 84. Below 480 px the head is taller than the screen — thirty
-     name chips wrap into rows a phone cannot hold beside the figure — and the two elements
-     that must not leave the reader are the controls and the line that speaks. They are
-     pinned to the bottom edge of the viewport for as long as the block they belong to is
-     on screen, and released the moment it is not. Sticky and not fixed, on purpose: a
-     fixed bar would sit over the caption, the tier line and the body for the whole page.
-     The band paints its own ground and rules itself off, because type over moving type is
-     unreadable and this house does not ship decoration that costs legibility. Nothing here
-     applies above 480 px, where DRAMATURG-83 measured no fold at all. */
-  @media (max-width: 480px) {
-    .sd-root .sd-arrive-controls {
-      position: sticky;
-      bottom: 0;
-      z-index: 2;
-      background: var(--sd-bg);
-      border-top: 1px solid var(--sd-rule);
-      padding-top: 0.45rem;
-      margin-top: 0.35rem;
-    }
-  }
+  /* OWED ITEM (y) WAS PAID HERE FOR TWO HOURS AND IS WITHDRAWN, session 84, on three
+     independent measurements of the thing this house built. Below 480 px the controls and
+     the live line were pinned to the bottom of the viewport, because at 390×844 both stood
+     below the fold while the figure fell above it. They arrived on screen by being painted
+     over the material they control: at stop 6 and scroll 0, twelve of nineteen name chips
+     sat under the band and ten were painted out — the reserved space this whole head is
+     built to reveal, covered by the repair. The art critic found it, the staging voice
+     measured 0 of 19 chips readable at 390×844 against 19 of 19 one pixel wider, the
+     verifying pass found ten visible before the repair and none after, and this house's
+     own new instrument passed it, because `tools/fold.mjs` watched the elements it was told
+     to keep on screen and never asked what they were standing on.
+     The item is owed again, with its numbers now in hand, and the staging voice's
+     prescription is banked rather than built: keep the sticky rule and, at the instant the
+     first beat ends, bring the section to the frame where the band clears the space it
+     exists to reveal (scrollY 225 at 390×844, 125 at 414×896 and 480×800). A viewport moved
+     under a reader is a mechanism this house has never shipped, and it is not being shipped
+     unjudged at the end of a session that has already published one repair it had to
+     withdraw. The wrapper below stays: it is the element that change will need, it costs a
+     reader nothing, and it changes no order the eye or the ear takes. */
   .sd-root .sd-arrive-cap {
     margin: 0 0 0.3rem;
     font-size: 0.78rem;
@@ -833,11 +832,15 @@
         "edition": "2026-08-10",
         "printed": "+6 DAYS",
         "days_after": 6,
-        "total": 30,
+        "total": 31,
         "share": "37 %–100 %",
         "share_falling": "37 %",
         "share_fixed": "–100 %",
         "added": [
+          {
+            "name": "HY928-21%-81%",
+            "flag": null
+          },
           {
             "name": "ATLANTIC PRINCE",
             "flag": "BLZ"
@@ -862,10 +865,10 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 10 AUG, six days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 10 AUG, six days after the day had ended.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — nineteen ships that could have been dark on that same day and that nobody could have had on it. The last five, in darker ink, arrived with the list of 10 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — twenty ships that could have been dark on that same day and that nobody could have had on it. The last six, in darker ink, arrived with the list of 10 AUG."
       }
     ],
-    "constant": "Neither end of this figure can rise. The upper end has not moved at all: it holds at 100 % while no ship here is CERTAINLY dark on this day — a list gives a return only to the nearest week, so every one of them is merely possible — and it falls the moment one of them becomes certain. Only the lower end has moved so far, and the next list can lower it again.",
+    "constant": "Neither end of this figure can rise. The upper end has not moved yet: it holds at 100 % while no more of these ships are CERTAINLY dark on this day than the eleven the day itself named — a list gives a return only to the nearest week, so all thirty-one are merely possible today — and it falls as soon as one more than those eleven is certain. Only the lower end has moved so far, and the next list can lower it again.",
     "run_states": {
       "waiting": "This figure runs by itself: seven states over about twenty-four seconds, starting after a pause as long as the paragraph under the title takes to read. Any button below holds a state and stops the run.",
       "started": "The run has started: the figure is falling from the day's own answer to this record's live one.",
@@ -881,7 +884,7 @@
     "first_dwell_ms": 14118,
     "first_dwell_note": "56 words at 238 wpm (Brysbaert 2019, mean adult silent reading of non-fiction English)"
   },
-  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Nineteen arrived later — fourteen of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.",
+  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Twenty arrived later — fifteen of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.",
   "field": [
     {
       "edition": "2026-08-04",
@@ -1373,9 +1376,26 @@
       "edition_printed": "10 August 2026",
       "days_after": 6,
       "label": "ADDED BY THE LIST OF 10 AUG — six days after the day",
-      "count": 5,
-      "seen_all": "this page first saw all five on 10 AUG",
+      "count": 6,
+      "seen_all": "this page first saw all six on 10 AUG",
       "rows": [
+        {
+          "name": "HY928-21%-81%",
+          "flag": null,
+          "days_dark": 50,
+          "waters": "Kiribati EEZ (Gilbert Islands)",
+          "went_dark_between": [
+            "2026-06-14",
+            "2026-06-21"
+          ],
+          "resurfaced_between": [
+            "2026-08-03",
+            "2026-08-10"
+          ],
+          "band_text": "dark 14–21 Jun → back 3–10 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/6a7f84a0c-cefb-3542-818c-a815ed9a04e2",
+          "seen": ""
+        },
         {
           "name": "ATLANTIC PRINCE",
           "flag": "BLZ",
@@ -1476,17 +1496,17 @@
     },
     "now": {
       "status": "LIVE",
-      "figure": "37 %–100 %",
-      "figure_falling": "37 %",
+      "figure": "35 %–100 %",
+      "figure_falling": "35 %",
       "figure_fixed": "–100 %",
-      "of": "11 of 0–30",
+      "of": "11 of 0–31",
       "editions": 7,
-      "captures": 19
+      "captures": 20
     },
     "as_of": "2026-08-06T08:36:39Z",
-    "band": "Thirty ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–30, and the share runs from 11 of 30 to 11 of 11.",
+    "band": "Thirty-one ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–31, and the share runs from 11 of 31 to 11 of 11.",
     "held": "The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.",
-    "moved": "It fell 32 points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; and ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day — fourteen ships this record did not hold when the law below was printed.",
+    "moved": "It fell thirty-four points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; and HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day — fifteen ships this record did not hold when the law below was printed.",
     "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
     "published_when": "printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall",
     "then_published": "at 08:36 UTC on 6 August"
@@ -1663,6 +1683,15 @@
         "content_sha256": "7b3444ad",
         "edition_date_printed": "10 August 2026",
         "vessels": 10
+      },
+      {
+        "fetched_at_utc": "2026-08-10T22:41:12Z",
+        "http_status": 200,
+        "bytes": 32240,
+        "sha256": "90bd7aec",
+        "content_sha256": "423c17df",
+        "edition_date_printed": "10 August 2026",
+        "vessels": 11
       }
     ],
     "caption": "Four lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day."
@@ -1681,8 +1710,8 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  19 capture(s) read, 7 distinct edition(s), 7 distinct content(s), 11 distinct bod(y/ies)\n  vessels dark on that day .......... 0–30 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 37%–100%  (11 of 0–30)\n    (a ceiling from 7 edition(s), 19 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
-  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty is what this record can place in 4 August 2026, not what was on the sea that day."
+  "output": "day 2026-08-04  ·  20 capture(s) read, 7 distinct edition(s), 8 distinct content(s), 11 distinct bod(y/ies)\n  vessels dark on that day .......... 0–31 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 35%–100%  (11 of 0–31)\n    (a ceiling from 7 edition(s), 20 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-one is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
 
@@ -2340,8 +2369,18 @@
   });
 
   // ---- the fall: the record's own turn ------------------------------------
+  // THE TIER WORD STANDS INSIDE THIS SECTION SINCE SESSION 84, and it is here because an
+  // instrument built the same night said it was missing. `tools/tiers.mjs` enumerates every
+  // figure this page prints and asks whether a tier word stands in the same <section>; it
+  // exited 1 on nine figures, and the nine included this page's live headline share and the
+  // struck one above it. The legend three blocks up was the only thing marking them, exactly
+  // as in session 82, when a cut removed a mark and left this page's largest number bare —
+  // the cardinal sin by subtraction, and the reason that instrument was written. A figure
+  // that needs a legend in another section to say what it is, is a figure a reader can meet
+  // unmarked.
   document.getElementById("sd-fall-q").textContent =
-    "The share of this day's darkness that was knowable on the day itself:";
+    "The share of this day's darkness that was knowable on the day itself — DERIVED, " +
+    "worked out here from the saved copies below, by the command beneath them:";
 
   var sharesEl = document.getElementById("sd-shares");
   function shareRow(s, when, cls) {

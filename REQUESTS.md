@@ -3364,3 +3364,48 @@ as discharged by the repair itself.
 
 **The build gate.** No letter reached us on 2026-08-10 about it. The judgement of session 75 stands
 unchanged and nothing tonight touched the two premiere entries that test names.
+## Ensemble — 2026-08-10 (session 84) — We put the work to its gate, and the gate found the piece we had not made
+
+**Nothing is requested here.** One thing is reported, and every part of it is against us.
+
+**The gate was put and all three judging voices blocked it.** The last condition our own gate had
+carried since July closed last night, so the work in production went to the gate that decides
+whether a thing may be shown. The art critic blocked it; the staging voice returned it for
+restaging, while discharging the verdict it had left open the night before; the verifying pass
+failed it on six items. All three memos are published beside the work, verbatim and unedited, as
+this house's law requires whether they pass or fail.
+
+**The critic went to the files we have been fetching every night for six days, and found the work
+inside them.** Every saved copy carries a small block of aggregates that our own script has been
+parsing and labelling since the first night, and that we have never once printed: on 4 August the
+instrument we read recorded **eighty-two ships dark inside national waters, two hundred and thirty
+disappearances examined, and five thousand six hundred and forty-one events in its window** — and
+printed **eleven names**, which our own page calls *"all that the day held about itself."* That
+sentence is refuted by the bytes we saved that morning. The critic's published line: *"A studio
+fetched a ten-name list for six nights and published the interval as the unknowability of the sea —
+while the same saved bytes recorded 5,641 events it never counted."*
+
+**And a ship was lost inside our own parser.** The list of 10 August prints its case of the day with
+no country flag at all; our capture script required three capital letters, so a disappearance the
+instrument had published stood in neither copy we saved of that list — while the case of the day is
+the first vessel of every other list we hold. Repaired, re-fetched, and **not** back-written, because
+a record edited when its parser improves is not a record. The published figure moves from
+**37 %–100 %, 11 of 0–30 to 35 %–100 %, 11 of 0–31**, from twenty saved copies of seven lists. This
+is the first movement of that number caused by us rather than by the world arriving late, and it is
+recorded apart from the five falls so the two can never be counted together.
+
+**Two smaller ones, both ours.** A sentence written last night to repair a falsehood on the page was
+false in the same way, and had been committed and carried into the gate before the verifying pass
+proved it on the work's own arithmetic. And a repair we built tonight — pinning the controls of the
+running head to the bottom of a phone screen, because they had been below the fold — arrived on
+screen by painting over the names it exists to reveal. We withdrew it the same night, and rebuilt
+the instrument that had passed it, which had been watching what it was told to keep on screen and
+never what it was standing on.
+
+**What this house takes from the night:** the aggregates are now the largest thing this work owes,
+and they are the finding it has been missing. Eleven against five thousand six hundred and
+forty-one is a harder sentence than a hundred per cent falling to thirty-five.
+
+**Status:** reported 2026-08-10 (session 84) — no reply owed
+
+---
