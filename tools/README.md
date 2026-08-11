@@ -21,7 +21,8 @@ python3 tools/record_words.py
 ```
 
 Reads `tools/record-files.txt` (repo-relative paths, whole files or
-`path :: <heading text>` for one section), prints a table under both
+`path :: <heading text>` for one section, and `path :: <heading text> :: first`
+where a file deliberately holds more than one heading of that name), prints a table under both
 instruments — `wc -w` as THE STANDING INSTRUMENT, `str.split()` as
 reference only — and their delta, then `UNDER by N` or `BREACH by N`
 against a ceiling (`--ceiling`, default 3000).
@@ -70,6 +71,41 @@ Reads `chronicle.json`: every `"ship"` entry that names a work, in date
 order, with the gap to the previous premiere, the smallest gap named, and
 the record's span in days. Nothing typed by hand.
 
+## `frame.mjs` — can one screen hold the figure and the controls that drive it?
+
+**Repairs:** a number this record quoted for four sessions that no committed
+instrument produced. *Figure-top to controls-bottom at 390×844* was taken by
+hand with a throwaway script each night, and session 86 had to print in the
+record that its own two series were **not comparable**, because nobody could
+re-run the first.
+
+```
+NODE_PATH=<global node_modules> node tools/frame.mjs
+NODE_PATH=... node tools/frame.mjs --dir=<a directory holding an index.html>
+```
+
+Drives the work at 390×844 and 1400×900, clicks every stop, and reports the
+distance from the top of the figure to the bottom of the controls, with the
+height of every part of the head between them and a mark against the ones the
+frame does not contain. Exits 1 if the two do not fit one phone screen.
+
+**It is not `fold.mjs` and does not replace it.** `fold.mjs` asks whether the
+controls are inside the viewport at nine scroll positions of every stop — a
+question only a pinned bar can answer yes to, and a pinned bar over a head twice
+the viewport's height stands on the material somewhere. This one asks whether
+one frame holds the figure and the buttons. **The two disagreed for the first
+time in session 87**, when a change closed this instrument (951 → 311 px) and
+reddened that one (64 → 88 failures). Both counts are published.
+
+**Two defects of its own, found the night it was written** and named here
+because an instrument's own failures belong in its documentation: it advertised
+a `--ref=HEAD` control in its header that was never implemented — it ignored the
+flag and measured the working tree, so it would have reported the object under
+test as its own control — and its budget line subtracted parts the frame no
+longer contained, printing a space of **−601 px**. The flag was removed rather
+than added; a control is taken with `git show HEAD:<path> > /tmp/x/index.html`
+and `--dir=/tmp/x`.
+
 ## `selftest.sh` — proof the instruments work
 
 ```
@@ -77,5 +113,15 @@ bash tools/selftest.sh
 ```
 
 Runs a full freeze/verify/break-seal cycle in a throwaway temp directory it
-cleans up, plus a real run of `record_words.py` against the manifest.
-Prints `SELFTEST PASSED` and exits 0 only if every assertion holds.
+cleans up, plus a real run of `record_words.py` against the manifest and the
+provenance guard on the work's renders. Prints `SELFTEST PASSED` and exits 0
+only if every assertion holds.
+
+**It earned its keep on 2026-08-11 (session 87).** It failed — and what it
+caught was that `record_words.py` had been exiting 2 on every run since the
+previous night's final commit, because that commit added a superseded board
+block under the live block's own heading and made the manifest entry ambiguous.
+The word ceiling had therefore gone unmeasured for a session, and **it was
+breached by 1,060 words**. The commit that broke the ceiling disabled the
+instrument that measures it, and nothing noticed until something ran this file.
+The manifest now says `:: first` and says why.

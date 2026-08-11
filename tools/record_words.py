@@ -95,7 +95,21 @@ def find_headings(text):
     return headings
 
 
-def extract_section(text, needle, path_label):
+def extract_section(text, needle, path_label, first=False):
+    """One section of a markdown file, named by a heading.
+
+    `first=True` — written as ` :: first` in the manifest — takes the FIRST matching
+    heading instead of refusing an ambiguous one. It exists because of a real break, not
+    for convenience: this house keeps a superseded block beside the live one under the same
+    heading text, so from 2026-08-11 the manifest entry for the board matched two headings
+    and this instrument exited 2 on every run. **The word ceiling was therefore unmeasured
+    for a session and nothing noticed, because nothing ran it** — `tools/selftest.sh` is
+    what finally said so. The alternatives were worse: editing the superseded block's
+    heading edits a block this house keeps unedited, and writing the session number into
+    the manifest is a constant advanced by hand, which is banked failure 17. Ambiguity is
+    still an error by default; the qualifier makes the choice explicit and visible in the
+    manifest, and the label printed for the entry says which heading it took.
+    """
     lines = text.splitlines()
     headings = find_headings(text)
     matches = [h for h in headings if needle in h[2]]
@@ -103,6 +117,8 @@ def extract_section(text, needle, path_label):
         raise RecordError(
             "no heading matching '{}' found in {}".format(needle, path_label)
         )
+    if len(matches) > 1 and first:
+        matches = matches[:1]
     if len(matches) > 1:
         detail = "; ".join(
             "line {}: '{}'".format(idx + 1, txt) for idx, _lvl, txt in matches
@@ -136,15 +152,25 @@ def parse_manifest(manifest_path):
             path_part, heading_part = line.split("::", 1)
             path = path_part.strip()
             heading = heading_part.strip()
+            first = False
+            if "::" in heading:
+                heading, qualifier = [x.strip() for x in heading.split("::", 1)]
+                if qualifier != "first":
+                    raise RecordError(
+                        "manifest {} line {}: unknown qualifier '{}' (only 'first')".format(
+                            manifest_path, lineno, qualifier
+                        )
+                    )
+                first = True
             if not path or not heading:
                 raise RecordError(
                     "manifest {} line {}: malformed entry '{}'".format(
                         manifest_path, lineno, line
                     )
                 )
-            entries.append((path, heading))
+            entries.append((path, heading, first))
         else:
-            entries.append((line, None))
+            entries.append((line, None, False))
     if not entries:
         raise RecordError("manifest {} has no entries".format(manifest_path))
     return entries
@@ -219,15 +245,15 @@ def main():
             )
 
         rows = []  # (label, wc_count, split_count)
-        for path, heading in entries:
+        for path, heading, first in entries:
             if args.worktree:
                 text = read_worktree(repo_root, path)
             else:
                 text = read_committed(repo_root, args.ref, path)
 
             if heading is not None:
-                section_text = extract_section(text, heading, path)
-                label = "{} :: {}".format(path, heading)
+                section_text = extract_section(text, heading, path, first=first)
+                label = "{} :: {}{}".format(path, heading, " :: first" if first else "")
             else:
                 section_text = text
                 label = path

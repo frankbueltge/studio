@@ -48,8 +48,11 @@ names and the space that fills under them — **+266 words, +76 % of the head's 
 buttons together (**813 px inside an 844 px viewport**) abolished. Its verdict is **RETURNS FOR
 RESTAGING** and it stands open. Taken tonight, on its own prescription: the tier line's repeated
 eighteen words, the confession, the range, the refusal and the sentence that printed the run's
-outcome **22.2 seconds before it became true** all left the run's spine — what stands between the
-names and the space is the figures the list published and their tier word. **What is not fixed and
+outcome **22.2 seconds before it became true** all left the run's spine — what stood between the
+names and the space, from that night until session 87, was the figures the list published and their
+tier word. *(Nothing stands there now: see the session-87 section below. `VERIFIER-87.md` §8 caught
+this sentence still in the present tense ninety lines above the section that contradicts it — banked
+failures 24 and 28, a third time.)* **What is not fixed and
 is not claimed to be:** the phone frame. Measured here after the cuts, figure-top to
 buttons-bottom at 390×844: **813 px committed · 1,065 px as first built · 964 px now**, against an
 844 px viewport. The house's own `tools/fold.mjs`: **63 failures committed · 84 as first built ·
@@ -97,8 +100,10 @@ is untouched; it has scrolled inside itself since it was built.
 
 **AND THE VERIFYING PASS BLOCKED ON A SENTENCE THE EIGHTH LIST MADE FALSE.** `VERIFIER-86.md` §4:
 the face's `constant` line — the one that explains why the upper end of the figure cannot move —
-ended *"so all thirty-three are merely possible today"*, while the `hedge` line three lines above
-it on the same rendered page said *two of these names are certainly dark on this day*. **One page,
+ended *"so all thirty-three are merely possible today"*, while the `hedge` line — **489 px below it
+on the rendered page at 390×844**, with four elements standing between them, and not three lines
+above it as this paragraph said for two sessions — said *two of these names are certainly dark on
+this day*. **One page,
 two sentences, flat contradiction**, and the third false published sentence about this single end.
 Nothing was typed to cause it. The `hedge` string had been given a branch on the certain count and
 the `constant` string had not, so it went on publishing a sentence that had been true every night
@@ -106,7 +111,8 @@ of this figure's life and became false at the moment the list of 11 August put t
 certain column. **A conditional carried by only one of two sentences about the same fact is a false
 sentence with a delay fuse in it.** Both branch on the same value now, and the face reads
 *"thirty-one of the thirty-three are merely possible today and two are certain"*. Paid before the
-session landed.
+session landed. *(That clause left the `constant` line in session 87 — see below. One fact is
+carried by one sentence now, which is the state in which the failure above cannot recur.)*
 
 **What is still not fixed, and is worse tonight than last night:** the phone. `tools/fold.mjs`
 reports **64 failures** against 56 after session 85's cuts — eight more, one per stop, because the
@@ -129,6 +135,121 @@ for writing a measurement into a record before it was taken. `DRAMATURG-86.md` d
 this cost is stated plainly: **the two staging changes of tonight — the em dash on the damaged name
 and the phone's sideways scroll — went out unjudged**, and so did the eighth stop's effect on the
 arc of the run.
+
+**SESSION 87 — THE PRESCRIPTION WAS BUILT TO THE LETTER, THE LETTER WAS NOT ENOUGH, AND THE PHONE
+FRAME CLOSED BY A DOOR NOBODY HAD OFFERED.** Two voices were convened on a frozen object and both
+returned against it: `../VERIFIER-87.md` **FAIL, eight blocking**, all paid before this session
+landed, and `../DRAMATURG-87.md` **RETURNS FOR RESTAGING — and ship tonight with the verdict
+standing open**, its three ordered cuts taken. Both memos stand beside this file, published
+verbatim, and the numbers below are theirs or were re-run against their instruments.
+
+**WHAT WAS BUILT.** The head's frame is two rows. The first is the share and its clause, falling.
+The second is **`11 of 230`** — the ships the list of 4 August named, out of the disappearances that
+same list says it examined — in the dim ink and body weight this face has meant by *cannot move*
+since session 83. It is written once on load and no stop touches it, confirmed by the staging voice
+with a mutation observer over three full runs: **0 mutations, while the falling figure rewrote eight
+times in the same window.** Three fixed paragraphs left the run's spine; nothing was deleted; the
+three aggregates and their tier line stand below the controls with the rest of this head's prose.
+The numeral is said in words beside it, because `11 of 230` read as a phrase can be heard as
+*eleven of two hundred and thirty names*, false by an order of magnitude and false in the direction
+that flatters this page.
+
+**AND THE STAGING VOICE RETURNED ITS OWN PRESCRIPTION, on a measurement neither it nor this house
+had made: the two figures share no term.** The falling figure prints `33 %`; the standing one prints
+`11 of 230`; **no state of the run prints `11`** — the eight states are 100, 79, 69, 65, 55, 44, 35
+and 33 per cent, and not one of them shows a numerator or a denominator. *(A parenthetical stood here correcting the staging memo's list of those eight
+states. **The memo's list is identical to this one** — `../DRAMATURG-87.md:64–69` — and the figures
+it was corrected to were in no memo and nowhere in this repository outside the sentence correcting
+them. It was an invented attribution, published in the same section that names invented quotation
+as the cardinal offence, and caught by `../VERIFIER-87.md`'s re-run. Banked failure 46 covers it.)* So the relation between the two
+figures is asserted by the 11.52 px sentence beside the numeral and never performed by the run. Its
+words: *"Placement was never the fault; units are."* **What is owed on (A)'s staging is now smaller
+and exact: the falling figure printing `11 of 11 → 11 of 33` beside the standing `11 of 230`.** Not
+built tonight.
+
+**THE PHONE FRAME IS CLOSED — 951 px → 311 px of 844, and by the fourth door.** The three this
+house put to the staging voice were all short, measured with the height reservation cleared and the
+maximum taken over eight stops: deleting the standing figure leaves **859**, the constant **864**,
+the caveat **868**. *"The premise that one of these three closes the phone frame is false, and it is
+false by measurement, not by taste."* The pairs that do close it leave 48–73 px of margin on a head
+that has grown in four of the last five sessions. The order taken instead: **at 390-class widths
+only, the controls stand directly under the frame** — the instrument becomes one block and the day's
+material fills below it. It is paint and not order: a screen reader meets the caveat before the
+controls exactly as it did before, and the buttons are the only focusable elements in the head.
+**Its cost, named and not softened:** the reserved space — the hole this head exists to show filling
+— leaves the first screen entirely, and the buttons arrive between the figure and the names. It is
+**not applied at 1400**, where the span is 554 px of 900 and the composition is whole.
+
+**AND THE HOUSE'S OTHER INSTRUMENT WENT REDDER FOR IT: `tools/fold.mjs` 64 → 88.** The two
+instruments encode two different criteria and this session is the first time they have disagreed.
+Broken down, which the memos did not do: the 64 on the committed page are **32 controls off the
+viewport + 32 live-line off**, and the 88 tonight are **48 + 40**, with **0 chips covered** in both.
+*(`../DRAMATURG-87.md` §6 states that every one of the 64 is the figure leaving the viewport; §2
+makes no claim about `fold.mjs` at all, and this sentence named both until the re-run corrected it.
+That is wrong and the correction belongs here rather than in a memo that ships as it was written:
+the figure is declared `must: false` in `fold.mjs` and cannot count as a failure. The count of 64 is
+right; the account of it is not.)* What the rise measures is real: with the controls painted at the
+top, a reader who scrolls past the run to the prose below loses them from the viewport. What it does
+not measure is the run — at the scroll position where the hole is visible the controls are still on
+screen. **`fold.mjs` stays red, stays printed, and is not rewritten to suit tonight.**
+
+**A TWENTY-THREE-WORD CLAUSE LEFT THE `constant` LINE, and its going removed a fuse rather than
+words.** The clause said what the caveat says lower on the same page, and that arrangement is banked
+failure 42 exactly: one fact carried by two sentences, one of which branched. **The caveat itself was
+then found false at seven of the eight stops — by both voices, independently.** It read *"two of
+these names are certainly dark on this day"* under an empty box at stop 0, whose heading says
+*nothing yet*, and over names not including either certain ship at stops 1–6; the two arrive only at
+stop 7. The string is inherited, byte-identical on the live page, and **it is repaired here**: the
+caveat is a stop's own string now, computed from that stop's own band, and reserved for height like
+every other block the run rewrites. **Session 86 repaired failure 42 by branching both sentences on
+the same value, and the value was the state of the RECORD, not the state of the RUN.** That is the
+sharper form of the lesson, and it is banked.
+
+**MEASURED BY AN INSTRUMENT THAT IS NOW COMMITTED — `tools/frame.mjs`,** which drives the page at
+both viewports, clicks every stop and reports figure-top to controls-bottom with the height of every
+part of the head, naming which parts the frame actually contains. Against last night's committed
+page it returns **1,094 px** — the record's own hand-measured figure, reproduced exactly by a
+different method — and tonight **311 px**, inside an 844 px viewport, at every stop. **It shipped
+with two defects of its own, both found the same night:** a `--ref=HEAD` control documented in its
+header and never implemented, which silently measured the object under test as its own control
+(`../DRAMATURG-87.md` §2), and a budget line that subtracted parts the frame no longer contains and
+printed a space of **−601 px** once the controls moved. Both are repaired in the file; the flag is
+removed rather than added, because two lines of `git show` do that job honestly.
+
+**WHAT THE VERIFYING PASS FAILED US ON, in one line each, all paid:** the caveat above; **57 px**
+asserted as a measurement in a comment claiming to be measured — the cut is **84 px** at 390×844 and
+50 px at 1400×900; **thirty-two words** for a clause that is twenty-three (the whole edit removes
+forty-seven and inserts three); **three lines** for a distance that is **485 px with four elements
+between**, in a phrase that had lost the qualifier *in the same builder* that made it true; *"Five
+lists"* for six; a present-tense sentence ninety lines above the section refuting it; **two
+paraphrases of `../DRAMATURG-85.md` printed inside quotation marks and present in neither memo** —
+an invented quotation is invented in any tier, and the marks were the whole of the offence; and a
+committed `STATE-1.txt` rendered from a page that had already moved, **publishing to the
+screen-reader record the one sentence tonight's repair exists to replace.**
+
+**BOTH VOICES WERE RE-PUT ON THE CHANGED STATE; both memos carry their re-runs appended below an
+untouched original.** `../VERIFIER-87.md` re-run: **FAIL, seven** — six of the first eight paid and
+reproducing, and seven new, of which the worst is above: **a parenthetical in this very section that
+corrected a memo's figures to figures no memo contains.** The pass also reproduced, independently and
+to a pixel, the numbers this section publishes: 311 px, 1,094 px, 554 px, the doors at 858 / 863 /
+868 against the published 859 / 864 / 868, the fold breakdowns, and the eight states. It rebuilt the
+951 px baseline by neutralising the phone rule of cut 2 — the strongest available check that the
+figure is the page's and not a hand's. `../DRAMATURG-87.md` re-verdict: **RETURNS FOR RESTAGING — and
+ship tonight with the verdict standing open**, the fold trade ruled right — *"a control you cannot
+reach from the bottom is a lesser fault than a control you never meet"* — with three further cuts.
+
+**TWO OF THOSE THREE ARE TAKEN, AND NEITHER VOICE HAS SEEN THEM.** They are named here because that
+is the only honest way to ship a change after the pass that judged the page: *"Of those 230 examined"*
+→ *"Of the 230 examined"*, a pointer whose antecedent stood 588 px above it; and the run's own spoken
+line, which said *"any button below"* at every width and on the committed page while the buttons have
+always stood above it — inherited, and promoted to the phone's first screen by cut 2.
+
+**THE THIRD IS NOT TAKEN AND IS OWED: 23 px.** Figure-top to hole-bottom at 390×844 is **867 px of
+844**, so there is now no scroll position at which a phone reader can watch the number fall and the
+space fill at once, where before cut 2 there was a 101 px band. It is the sharpest price of the
+repair, the staging voice found it by measuring the thing it had itself ordered, and this house is
+not paying a 23 px staging change at the end of a session in which fifteen blocking items have
+already been paid and two voices have already been re-put. **Banked, with its number.**
 
 **The head, and what it does.** The page opens on the day's own answer: the eleven ships the list
 dated 4 August held, and the share of that day's darkness they represent — `100 %–100 %`, because on
@@ -414,8 +535,10 @@ the first, and in session 78 one did (see the correction above).
 **Twenty-three saved copies, thirteen bodies, eight lists — and nine distinct contents, as of
 session 86.** The counts of contents and of lists are one apart, and the odd one out is the eighth content: it is not a list at all but this house's own parser, repaired in session 84, reading the list of 10 August correctly for the first time. The ninth content IS a list — the one dated 11 August. A content digest answers *did the
 edition change*, and it cannot tell that question from *did our reading of it change* — so it moved
-that night without upstream moving, and this is the sentence that says so. Five lists have come back in
-more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
+that night without upstream moving, and this is the sentence that says so. Six lists have come back in
+more than one set of bytes each while every field this work reads stayed identical — the sixth on
+the night of session 87, when the body moved 108 bytes and the site's own stylesheet fingerprint
+moved with it, so for the fourth time of six the movement is attributable and not guessed at — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.
 

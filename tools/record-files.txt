@@ -13,7 +13,12 @@ projects/season1/PROJECT.md
 # board counts toward the ceiling, not the rest of WORKBOARD.md. The heading
 # lost its episode number on 2026-08-08 with the season layer; the manifest
 # follows the heading, or it silently measures nothing.
-WORKBOARD.md :: STILL DARK — **IN PRODUCTION**
+# `:: first` since 2026-08-11 (session 87), and the reason is a break, not a taste: the
+# board keeps each superseded block whole under the same heading text, so from session 86
+# this entry matched two headings and `record_words.py` exited 2 on every run — the ceiling
+# went unmeasured for a session and nothing noticed, because nothing ran it. The live block
+# is the first in the file. Ambiguity without the qualifier is still an error.
+WORKBOARD.md :: STILL DARK — **IN PRODUCTION** :: first
 
 # RULED 2026-08-08 (session 76), so the split is checkable and not silent:
 # pre-registrations and raw panel answers are EVIDENCE, not process record, and

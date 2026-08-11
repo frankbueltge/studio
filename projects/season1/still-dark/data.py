@@ -616,6 +616,32 @@ def build():
             # order. They name the mark twice over — by POSITION ("the last five"), which a
             # reader who cannot see ink can check by counting, and by ink, which a reader
             # who can see it is looking at.
+            # THE CAVEAT BRANCHES ON THE STOP FROM SESSION 87, AND UNTIL TONIGHT IT COULD
+            # NOT. It was one string in the island, written from the record's live certain
+            # count and printed unchanged under all eight stops: *"two of these names are
+            # certainly dark on this day"*, standing over an empty box at stop 0 under a
+            # heading that reads *nothing yet*, and over names that do not include either
+            # certain ship at stops 1–6. **Both voices convened tonight found it
+            # independently** (`VERIFIER-87.md` §5, `DRAMATURG-87.md` §5) and the count is
+            # theirs: true at one stop of eight, and the stop a reader whose machine asks
+            # for no motion never leaves is one of the seven.
+            #
+            # It is banked failure 42 one session after 42 was banked, and it is worse than
+            # 42 in one respect that this record is going to state plainly: session 86
+            # repaired that failure by giving both sentences a branch on the same value, and
+            # **the value was the state of the RECORD, not the state of the RUN**. A branch
+            # on the record cannot be false on the night it is written and cannot be true on
+            # the screen it is printed on. The stop already computes its own band; the
+            # caveat now reads off that band, like every other string a stop owns.
+            "hedge": (
+                "A list gives a ship's return only to the nearest week, so "
+                + (
+                    "not one of these names is certainly dark on this day."
+                    if st[0] == 0 else
+                    f"{word(st[0])} of these names are certainly dark on this day and the "
+                    "rest are possible."
+                )
+            ),
             "heading_since": (
                 "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of "
                 "this day that nobody could have had on it."
@@ -712,15 +738,12 @@ def build():
         # to this day, and a caveat reads at equal prominence beside its own material. It
         # also bought the room the sentence above needed: `DRAMATURG-81.md` §1 found the
         # premise four dense lines long and the run outrunning it.
-        "hedge": (
-            "A list gives a ship's return only to the nearest week, so "
-            + (
-                "not one of these names is certainly dark on this day."
-                if now["vessels_dark_on_day"]["band"][0] == 0 else
-                f"{word(now['vessels_dark_on_day']['band'][0])} of these names are "
-                "certainly dark on this day and the rest are possible."
-            )
-        ),
+        # GONE FROM THE ISLAND'S TOP LEVEL IN SESSION 87, and the deletion is the repair.
+        # A string written once from the record's live band and printed under eight
+        # different screens is a sentence that can only be true about one of them. It now
+        # belongs to the stop, above, where it is computed from that stop's own band. The
+        # top-level key is not kept as a fallback: a fallback is how a wrong sentence
+        # survives a repair.
         # OWED ITEM (A), SECOND LIMB — the caveat beside its own material, which is this
         # house's own publishing condition applied to itself. The block above this line is
         # the hole: names that reached this record only after the day. Once the list is
@@ -810,10 +833,25 @@ def build():
             # dark inside national waters", the "them" reaches back past the nearer number
             # and says something upstream does not. The subset stands beside the set it is
             # a subset of, and the window figure goes last.
+            # CUT IN SESSION 87 ON `DRAMATURG-87.md` §3, ORDERED: the first two figures of
+            # this line — the count of names and the count examined — stand in the head's
+            # own frame now as the numeral `11 of 230`, and this copy was set larger and
+            # blacker than the numeral it repeats, 588 px below it at 1400 px and 1,060 px
+            # below it at 390. *"The page states its finding twice and gives the stronger
+            # typographic voice to the copy that is 680 px away from the figure it is
+            # about"* — the memo's words, and it is session 85's own standard (twenty
+            # identical words, 466 px apart, cut) applied to this house a second time. What
+            # survives is the content the numeral does NOT carry, and it keeps its subset
+            # order: the ships dark inside national waters are a subset of the examined,
+            # which is why that figure is named against `230` and the window figure goes
+            # last.
+            # `DRAMATURG-87.md`'s re-verdict, cut 1: *those* installed a pointer whose
+            # antecedent stands 588 px above it at 1400 px and 1,060 px above it at 390. The
+            # numeral itself stays, because the subset clause after it needs a set to be a
+            # subset of.
             "figures": (
-                f"{day_cut['printed']} names printed · "
-                f"{day_cut['examined']:,} disappearances examined, "
-                f"{day_cut['dark_inside_national_waters']} of them dark inside national "
+                f"Of the {day_cut['examined']:,} examined, "
+                f"{day_cut['dark_inside_national_waters']} were dark inside national "
                 f"waters · {day_cut['in_window']:,} events in the window"
             ),
             # CUT FROM 63 WORDS TO 20, AND WHAT SURVIVED IS THE SENTENCE THAT IS NOT ABOUT
@@ -887,6 +925,40 @@ def build():
                 "in the words the parser matched in them. The count of names, and the count "
                 "of lists below, are this house's own."
             ),
+            # SESSION 87 — THE DISCLOSURE ENTERS THE NUMERAL. `DRAMATURG-85.md` ruled the
+            # block above annotation and not staging, on one measurement — it counted the
+            # block's mutations across a full run and got none — and prescribed a build
+            # rather than a cut. Its words, quoted as they stand at `DRAMATURG-85.md:245`
+            # and :257: *"Take the four fixed paragraphs out of the run's spine and put the
+            # disclosure inside the numeral"*, and *"`230` standing still in the same frame
+            # as `35 %–100 %` while it falls."* The paraphrase this comment carried until
+            # `VERIFIER-87.md` §9 caught it was inside quotation marks and in neither memo;
+            # an invented quotation is invented in any tier, and the marks were the whole of
+            # the offence. This is that figure. It stands in the head's
+            # own frame beside the share, at every stop, in the dim ink and the body weight
+            # this face has meant since session 83 by *cannot move* — the same mark the
+            # fixed end of the share already carries. The run then has two figures in one
+            # frame and shows the difference between them by doing it: one falls sixty-seven
+            # points in twenty-five seconds and the other is the same number at the last
+            # stop as at the first, because it is what the list of the day printed and no
+            # later list can reach it.
+            "standing": f"{day_cut['printed']} of {day_cut['examined']:,}",
+            # The clause the numeral needs, and its tier in the same breath: a figure whose
+            # tier word travelled in a paragraph that has moved elsewhere is banked failure
+            # 25, the cardinal sin by subtraction, and it is not being committed twice.
+            # THE NUMERAL IS SAID IN WORDS BESIDE IT, and not because the ear needs a copy of
+            # what the eye gets. `11 of 230` read as a phrase can be heard as *eleven of two
+            # hundred and thirty NAMES*, which is false by an order of magnitude: the list
+            # named eleven ships and says it examined two hundred and thirty disappearances.
+            # A figure whose shortest reading is a wrong one does not stand on this face
+            # without the sentence that closes it — and the sentence carries the tier, so
+            # the eye and the ear get the same figure and the same word for where it came
+            # from.
+            "standing_note": (
+                f"— the list of {short_caps(DAY)} named {word(day_cut['printed'])} ships out "
+                f"of the {day_cut['examined']:,} disappearances it says it examined. No stop "
+                "moves this figure. SOURCED — the count of names is this house's own."
+            ),
         },
         "stops": arrive_stops,
         # THE CONSTANT, MARKED — session 83. The staging voice's one banked change, and the
@@ -940,28 +1012,42 @@ def build():
         # *"so all {band[1]} are merely possible today"* and it was true every night this
         # figure has existed, because the certain count was zero every night. Tonight the
         # list of 11 August made two of them certain, and the sentence went on saying ALL
-        # thirty-three are merely possible — while the `hedge` string three lines above it,
-        # on the same rendered page, correctly said two of them are not. One page, two
+        # thirty-three are merely possible — while the `hedge` string, 489 px BELOW it on the
+        # rendered page at 390×844, correctly said two of them are not. (That distance and
+        # its direction are `VERIFIER-87.md`'s re-run, item 2: this comment said *three lines
+        # above* for two sessions, wrong in magnitude and in direction both.) One page, two
         # sentences, direct contradiction. Nothing was typed to cause it: the defect was
         # structural, waiting since the string was written for the first night the certain
         # count left zero, and the hedge had been given the branch it needed and this had
         # not. **A conditional that only one of two sentences about the same fact carries is
         # a false sentence with a delay fuse in it.** Both now branch on the same value.
+        # SESSION 87 — THE MIDDLE CLAUSE IS GONE, AND ITS GOING IS THE SAFER STATE. A
+        # twenty-three-word clause of this sentence said what the `hedge` line says lower on
+        # the same rendered page — **489 px lower at 390×844 on the object as committed**,
+        # with the day's heading, eleven names, the hole's heading and twenty-two names
+        # standing between them (`VERIFIER-87.md`'s re-run, items 1 and 4; the 278 px the
+        # staging voice measures at 1400 is its §4). (Three lines apart in the RENDERED
+        # ISLAND at the last stop, which is where that phrase came from; in this builder they
+        # are 403 lines apart, and on the page they were never on one screen.) The clause: a list gives a
+        # return only to the nearest week, so n of the total are merely possible and the
+        # rest are certain. The whole edit removes forty-seven words and inserts three. Two sentences, one fact — and
+        # that arrangement is exactly banked failure 42: last night one of the two carried a
+        # branch on the certain count and the other did not, and the one without it published
+        # *"all thirty-three are merely possible"* on the first night two of them were not.
+        # Both were given the branch. Tonight the duplicate is removed instead: one fact, one
+        # sentence, one branch, and no second copy that can be left behind by a change to the
+        # first. Measured by `tools/frame.mjs`, this paragraph falls from 167 px to 83 px at
+        # 390×844 and from 117 px to 67 px at 1400×900: an 84 px cut of a phone frame that
+        # was 250 px over. The figure this comment carried before the pass — 57 px — was
+        # reproduced by no run of that instrument, and it was written in a sentence claiming
+        # it was measured by it (`VERIFIER-87.md` §6). Banked failure 26's class: a
+        # hand-checkable number published without running the check, in the one comment that
+        # boasted of running it.
         "constant": (
-            "Neither end of this figure can rise. The upper end has not moved yet: it holds "
-            "at 100 % while no more of these ships are CERTAINLY dark on this day than the "
-            f"{word(field[0]['count'])} the day itself named — a list gives a return only to "
-            "the nearest week, so "
-            + (
-                f"all {word(now['vessels_dark_on_day']['band'][1])} are merely possible today"
-                if now["vessels_dark_on_day"]["band"][0] == 0 else
-                f"{word(now['vessels_dark_on_day']['band'][1] - now['vessels_dark_on_day']['band'][0])} "
-                f"of the {word(now['vessels_dark_on_day']['band'][1])} are merely possible "
-                f"today and {word(now['vessels_dark_on_day']['band'][0])} are certain"
-            )
-            + " — and it falls as soon as one more than those "
-            f"{word(field[0]['count'])} is certain. Only the lower end has moved so far, and "
-            "the next list can lower it again."
+            "Neither end of this figure can rise. The upper end holds at 100 % until more of "
+            "these ships are certainly dark on this day than the "
+            f"{word(field[0]['count'])} the day itself named; only the lower end has moved "
+            "so far, and the next list can lower it again."
         ),
         # THE RUN, SAID — session 83, owed items (s) and (t), paid by one set of strings
         # that reaches the eye and the ear from the same place.
@@ -1009,7 +1095,7 @@ def build():
             # plainly that nothing was running for it either.
             "rest": (
                 "Your machine asks for no motion, so nothing runs: this is the day's own "
-                "answer, and each button below holds a later state."
+                "answer, and each button above holds a later state."
             ),
         },
         # The mechanism, said once, under the thing that has just enacted it. The word
@@ -1132,7 +1218,7 @@ def build():
     arrive["run_states"]["waiting"] = (
         f"This figure runs by itself: {word(n_stops)} states over about "
         f"{word(run_seconds)} seconds, starting after a pause as long as the paragraph "
-        "under the title takes to read. Any button below holds a state and stops the run."
+        "under the title takes to read. Any button above holds a state and stops the run."
     )
 
     # what moved since the struck figure was true: the vessels this day gained from
