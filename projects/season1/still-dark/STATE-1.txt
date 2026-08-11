@@ -11,7 +11,7 @@ of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists
 
 Neither end of this figure can rise. The upper end has not moved yet: it holds at 100 % while no more of these ships are CERTAINLY dark on this day than the eleven the day itself named — a list gives a return only to the nearest week, so all thirty-one are merely possible today — and it falls as soon as one more than those eleven is certain. Only the lower end has moved so far, and the next list can lower it again.
 
-IN THE LIST DATED 4 AUG — eleven ships, all that the day held about itself
+IN THE LIST DATED 4 AUG — the eleven names it printed
 
 TUNAMAR · PAN
 MICRONESIA103 · FSM
@@ -24,6 +24,12 @@ PANOFI DISCOVERER · GHA
 VESTERAALEN · USA
 PACIFIC FURY · USA
 EXCELLENCE · USA
+
+WHAT THE LIST OF 4 AUG WAS THE TOP OF
+
+11 names printed · 230 disappearances examined, 82 of them dark inside national waters · 5,641 events in the window
+
+SOURCED — the three figures the list published, read off the saved copies in the words the parser matched in them. The count of names, and the count of lists below, are this house's own.
 
 NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of this day that nobody could have had on it.
 
@@ -40,6 +46,14 @@ run it again
 
 A ship reaches the list only after it comes back, so a day that is over keeps being answered. Seven lists, seven answers, one day — the last of them six days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them. That is why the figure above falls, and why it can only go on falling.
 
+The instrument says so itself, in its method sheet: “The index counts all examined; the case and list show named vessels.” The share this page publishes is a share of what those lists print, not of what they count.
+
+This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of every name added since 4 August still reaches back to it. The first list that could add a name ruled out of that list would be one dated 12 August 2026.
+
+Each of the seven lists this record holds prints six to eleven names of the 213 to 250 disappearances it says it examined. This record has saved that block every night since the first, and no face of this work printed one of its figures until tonight.
+
+How the figure would move if the lists were longer is not published here: a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists would add to the total, so both ends of it would grow and nothing in this record measures by how much.
+
 DERIVED — this share is worked out here, from saved copies of those lists. Nobody publishes it.
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
@@ -50,8 +64,8 @@ Eleven of the ships this record can place in 4 August 2026 stood in the list dat
 
 A ship's disappearance reaches the instrument's daily list only when the ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for weeks afterwards. This page holds one day open and publishes how much of its darkness could be placed in it on the day, and how much arrived later.
 
-SOURCED name · flag · days dark · waters · each list's own date and ship count — printed by the instrument
-DERIVED the dark-and-return spans, and this page's share — worked out here, both ends printed
+SOURCED name · flag · days dark · waters · each list's own date · what each list says it examined, how many of those were inside national waters, and how many events were in its window — printed by the instrument
+DERIVED the dark-and-return spans, this page's share, and the count of names in each list — worked out here, both ends printed
 OBSERVED what this page saw, and when it first saw it
 
 2 JUN
@@ -262,7 +276,7 @@ SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved c
 
 It fell thirty-four points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; and HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day — fifteen ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 20 saved copies of 7 lists —
+LIVE · as this record measures it now, from 22 saved copies of 7 lists —
 35 %–100 %
 11 of 0–31
 
@@ -273,41 +287,43 @@ The eleven did not move, and cannot. No later night can put a name into a list t
 “A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.”
 printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall.
 
-Four lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day.
+Five lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first and, until tonight, printed never.
 
 OBSERVED — every saved copy this page holds
-fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list
-2026-08-05T04:39:32Z	200	35,473	ed3e54ec…	ee555746…	4 August 2026	11
-2026-08-05T12:54:00Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8
-2026-08-05T19:17:55Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8
-2026-08-06T04:36:19Z	200	35,485	aed92f4f…	47338b03…	5 August 2026	8
-2026-08-06T08:16:42Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
-2026-08-06T14:22:17Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
-2026-08-06T15:28:00Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7
-2026-08-07T04:38:28Z	200	36,071	74f093f7…	53114dfe…	6 August 2026	7
-2026-08-07T18:15:53Z	200	36,065	4f4413b0…	988267cf…	7 August 2026	6
-2026-08-08T00:44:58Z	200	36,065	4f4413b0…	988267cf…	7 August 2026	6
-2026-08-08T04:36:25Z	200	36,065	4f4413b0…	988267cf…	7 August 2026	6
-2026-08-08T21:37:19Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6
-2026-08-08T23:57:35Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6
-2026-08-09T00:00:53Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6
-2026-08-09T04:37:35Z	200	37,901	680c1c71…	5c89d9ec…	8 August 2026	6
-2026-08-09T20:36:58Z	200	36,897	8bf3c1ff…	aa53ae8b…	9 August 2026	9
-2026-08-10T04:36:45Z	200	32,189	95c28f17…	aa53ae8b…	9 August 2026	9
-2026-08-10T17:47:21Z	200	32,240	90bd7aec…	7b3444ad…	10 August 2026	10
-2026-08-10T22:04:56Z	200	32,240	90bd7aec…	7b3444ad…	10 August 2026	10
-2026-08-10T22:41:12Z	200	32,240	90bd7aec…	423c17df…	10 August 2026	11
+fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list	disappearances examined
+2026-08-05T04:39:32Z	200	35,473	ed3e54ec…	ee555746…	4 August 2026	11	230
+2026-08-05T12:54:00Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8	236
+2026-08-05T19:17:55Z	200	35,485	17c07fc3…	47338b03…	5 August 2026	8	236
+2026-08-06T04:36:19Z	200	35,485	aed92f4f…	47338b03…	5 August 2026	8	236
+2026-08-06T08:16:42Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7	234
+2026-08-06T14:22:17Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7	234
+2026-08-06T15:28:00Z	200	35,517	f673e2f7…	53114dfe…	6 August 2026	7	234
+2026-08-07T04:38:28Z	200	36,071	74f093f7…	53114dfe…	6 August 2026	7	234
+2026-08-07T18:15:53Z	200	36,065	4f4413b0…	988267cf…	7 August 2026	6	242
+2026-08-08T00:44:58Z	200	36,065	4f4413b0…	988267cf…	7 August 2026	6	242
+2026-08-08T04:36:25Z	200	36,065	4f4413b0…	988267cf…	7 August 2026	6	242
+2026-08-08T21:37:19Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6	250
+2026-08-08T23:57:35Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6	250
+2026-08-09T00:00:53Z	200	36,059	4110d2b0…	5c89d9ec…	8 August 2026	6	250
+2026-08-09T04:37:35Z	200	37,901	680c1c71…	5c89d9ec…	8 August 2026	6	250
+2026-08-09T20:36:58Z	200	36,897	8bf3c1ff…	aa53ae8b…	9 August 2026	9	227
+2026-08-10T04:36:45Z	200	32,189	95c28f17…	aa53ae8b…	9 August 2026	9	227
+2026-08-10T17:47:21Z	200	32,240	90bd7aec…	7b3444ad…	10 August 2026	10	213
+2026-08-10T22:04:56Z	200	32,240	90bd7aec…	7b3444ad…	10 August 2026	10	213
+2026-08-10T22:41:12Z	200	32,240	90bd7aec…	423c17df…	10 August 2026	11	213
+2026-08-11T04:39:04Z	200	32,348	e5ddbb89…	423c17df…	10 August 2026	11	213
+2026-08-11T04:47:45Z	200	32,348	e5ddbb89…	423c17df…	10 August 2026	11	213
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  20 capture(s) read, 7 distinct edition(s), 8 distinct content(s), 11 distinct bod(y/ies)
+day 2026-08-04  ·  22 capture(s) read, 7 distinct edition(s), 8 distinct content(s), 12 distinct bod(y/ies)
   vessels dark on that day .......... 0–31 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 35%–100%  (11 of 0–31)
-    (a ceiling from 7 edition(s), 20 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 7 edition(s), 22 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 

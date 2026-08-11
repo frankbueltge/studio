@@ -348,6 +348,83 @@ def build():
             ],
         })
 
+    # ── THE CUT — owed item (A), the largest thing this work has ever owed. ───────────
+    #
+    # Every capture this record holds carries an `aggregates` block. `capture/capture.py`
+    # has parsed it since the first night, `capture/README.md` tiers it SOURCED, and no
+    # face of this work has ever printed one number of it. The list dated 4 August prints
+    # eleven names and says, in the same page, that it examined 230 disappearances out of
+    # 5,641 events in its window. The heading over those eleven names called them "all
+    # that the day held about itself" for nineteen sessions.
+    #
+    # That heading was false against bytes this house saved itself, and the art critic of
+    # session 84 found it by opening the captures and asking the one question five severed
+    # panels, three blocking voices and four instruments had never asked: not *does the
+    # page agree with the captures*, but *what are the captures a sample of*. The answer
+    # is a top-of-list display. Every list this record reads prints six to eleven names of
+    # the couple of hundred it says it examined, and the share this work publishes is
+    # therefore computed over a cut whose size is chosen upstream.
+    #
+    # WHAT IS COMPUTED HERE AND WHAT IS REFUSED. The figures are SOURCED, read off the
+    # saved copies, never typed. The one thing this block does NOT do is say which way the
+    # share would move if the lists were longer. `KRITIKER-84.md` §2 states that doubling
+    # the list length roughly halves the figure; this house cannot check that and does not
+    # adopt it. Both ends of the quotient would grow — a longer list dated 4 August could
+    # carry names the numerator does not have, and longer later lists add to the total —
+    # and nothing in this record measures by how much. Banked failures 31 and 33 were both
+    # well-put sentences about arithmetic that nobody ran. This is the third such sentence
+    # in three sessions and it is being refused rather than written.
+    #
+    # THE TWO EARLIER COPIES OF THE 10 AUGUST LIST HOLD TEN NAMES AND TONIGHT'S HOLDS
+    # ELEVEN, and the names printed per edition below are the UNION over that edition's
+    # copies for exactly that reason: the eleventh was lost to this house's own regex and
+    # recovered at the gate of session 84 (banked failure 34). The captures are immutable
+    # and are not rewritten; the union is how a repaired parser reaches an edition it read
+    # wrong, and it is named here rather than smoothed away.
+    editions = sorted({c["edition_date"] for c in caps_now})
+    cut_rows = []
+    for ed in editions:
+        copies = [c for c in caps_now if c["edition_date"] == ed]
+        names = {v["name"] for c in copies for v in c.get("vessels", [])}
+        aggs = {json.dumps(c.get("aggregates"), sort_keys=True) for c in copies}
+        # An assumption this house has not checked is an assumption this house has been
+        # burned by. The aggregates of one edition are identical across its copies in the
+        # record as it stands; if a night ever breaks that, the build stops rather than
+        # picking a copy.
+        if len(aggs) != 1:
+            raise SystemExit(
+                f"aggregates differ between saved copies of the list dated {ed}: {aggs}"
+            )
+        agg = copies[0]["aggregates"]
+        cut_rows.append({
+            "edition": ed,
+            "printed": len(names),
+            "examined": agg["disappearances_examined"],
+            "in_window": agg["in_the_window"],
+            "dark_inside_national_waters": agg["dark_inside_national_waters"],
+            "vessel_days": agg["vessel_days_of_darkness_approx"],
+            "copies": len(copies),
+        })
+    day_cut = next(r for r in cut_rows if r["edition"] == DAY)
+
+    # THE TWENTY THAT ARRIVED LATER, AND WHAT THIS RECORD CANNOT SAY ABOUT THEM. A name
+    # this house first saw in a later list is a name that COULD have stood in the list of
+    # the day itself: the end of a dark interval is published only as "within the last 7
+    # days", so a name added by the list of 10 August has an end band reaching back to
+    # 3 August. Where that band reaches the day, the record cannot tell a ship that came
+    # back later from a ship the list did not print.
+    #
+    # THE STRUCTURAL PART IS SAID ON THE FACE AND NOT LEFT AS A FINDING. This is 20 of 20
+    # tonight partly because every list so far is dated within the window's own length of
+    # the day — the first edition whose additions could be ruled out of it is one dated
+    # 12 August. That sentence is printed beside the count, because a number that must
+    # come out this way until a given date is not evidence until that date has passed.
+    window_days = caps_now[-1]["method"]["window_days"]
+    later = [e for e in now["certain"] + now["possible"]
+             if seen_at[e["name"]]["first_edition_date"] != DAY]
+    not_ruled_out = [e for e in later if bands(seen_at[e["name"]])[0] <= d(DAY)]
+    first_excluding = d(DAY) + datetime.timedelta(days=window_days + 1)
+
     # ── THE ARRIVAL — owed item (k), and the first thing this page DOES. ──────────────
     #
     # Session 79 measured this face's opening sentence for the first time, with an
@@ -418,7 +495,23 @@ def build():
     for g in field:
         running += g["count"]
         late = g["days_after"]
-        as_of = min(seen_at[r["name"]]["first_seen_utc"] for r in g["rows"])
+        # THE STOP IS THE INSTANT THIS RECORD HAD READ THE WHOLE OF THAT LIST, AND UNTIL
+        # SESSION 85 IT WAS THE INSTANT IT HAD READ ANY OF IT — a one-word difference that
+        # put two different numbers for one state on this face. `min` gave the last stop an
+        # as-of of 17:47 on 10 August, when this record held ten names of that list, because
+        # the eleventh was still lost inside this house's own regex (banked failure 34) and
+        # entered at 22:41. So the run ended on `37 %–100 %` — the share of a total of
+        # thirty — under a block of thirty-one chips, while the body of the same page
+        # published `35 %–100 %, 11 of 0–31`. Both numbers were honestly computed and one
+        # page cannot carry both. Found by the conductor tonight, on the built object,
+        # while looking at something else; it shipped in session 84 and stood at HEAD.
+        #
+        # `max` is the right instant and not merely the convenient one: every stop already
+        # claims to be the record as it stood when that list had arrived, and a list this
+        # house had read two-thirds of had not arrived here. The captures are untouched —
+        # 17:47 still holds the ten names it was written with, and `--as-of 17:47` still
+        # returns 37 %. What changes is which instant the run calls the arrival of a list.
+        as_of = max(seen_at[r["name"]]["first_seen_utc"] for r in g["rows"])
         # The state of the record AT this stop, re-run through the same analysis the page
         # uses rather than asserted — `VERIFIER-80.md` D2, second half: a stranger told to
         # check a bare `11` against `day.py` meets `0–11 (certain–possible)` and has to be
@@ -628,13 +721,173 @@ def build():
                 "certainly dark on this day and the rest are possible."
             )
         ),
+        # OWED ITEM (A), SECOND LIMB — the caveat beside its own material, which is this
+        # house's own publishing condition applied to itself. The block above this line is
+        # the hole: names that reached this record only after the day. Once the list is
+        # known to be a cut, "arrived later" stops being a fact about the sea and becomes a
+        # fact this record cannot separate from "was not printed" — and the separation is
+        # not merely unmeasured, it is impossible under the published window, because the
+        # end of a dark interval is given only to the nearest seven days.
+        #
+        # THE COUNT AND ITS EXPIRY, TOGETHER. It is all of them tonight, and it must be all
+        # of them until a list dated more than the window's own length after the day
+        # arrives: only an edition of 12 August or later — computed below, never typed —
+        # can add a name whose end band cannot reach 4 August. Printing the count without
+        # that date would publish as a finding a number that arithmetic guarantees. Both
+        # are computed; the branch exists because the day the date passes, the sentence has
+        # to be able to say a smaller number without a hand touching it.
+        "since_note": (
+            # SAID SO THAT IT IS TRUE AT EVERY STOP. This line does not move between stops
+            # and the block above it does: at the first stop that space is empty and says
+            # so. A fixed sentence beginning "not one of these twenty names" stood over
+            # nothing for the first fourteen seconds of the run — caught in the render,
+            # before any voice was convened. The names are named by the stop that brings
+            # them, not by a demonstrative that has nothing to point at yet.
+            # THE OPENING CLAUSE PRINTED THE RUN'S OUTCOME BEFORE THE RUN, AND IS CUT.
+            # `DRAMATURG-85.md` §4, measured on three loads: the sentence stood on the first
+            # screen at 1400×900 from load, nine pixels under the space it describes, while
+            # the heading over that space said *"nothing yet"* — the outcome legible **22.2
+            # seconds before it became true**, against a first figure change at 14.2 s and a
+            # twentieth chip at 22.2 s. *"The one beat this work has bought with an honest
+            # premise, it spent tonight in a subordinate clause."* Forty-six of eighty-four
+            # words go, and with them the third statement of the hedge in one head.
+            #
+            # AND THE LAST CLAUSE SAID `that day` WHERE THE COMPUTATION SAYS `that list` —
+            # `VERIFIER-85.md` §2, blocking. A name ruled out of the DAY never enters this
+            # block at all; the exclusion computed here is exclusion from the LIST dated
+            # 4 August. The page's own ledger caption three blocks lower draws exactly that
+            # line — *"a ship leaves the list as that window moves past it. It never leaves
+            # the day"* — and one sentence may not erase what another spends a caption
+            # drawing. One word.
+            #
+            # THE BRANCH STAYS. The count is all of them tonight and must be until a list
+            # dated after 11 August arrives; the day it is not, this sentence has to be able
+            # to say a smaller number without a hand touching it.
+            "This record cannot tell a ship that came back later from a ship the list did "
+            "not print: a list gives a return only to the nearest "
+            f"{word(window_days)} days, so the return window of "
+            + (
+                "every name added since " + day_month(DAY)
+                if len(not_ruled_out) == len(later) else
+                f"{word(len(not_ruled_out))} of the {word(len(later))} names added since "
+                + day_month(DAY)
+            )
+            + " still reaches back to it. The first list that could add a name ruled out of "
+            f"that list would be one dated {printed_date(first_excluding.isoformat())}."
+        ),
         # The first block's heading is constant across every stop, because its count is:
         # the numerator of this work's figure cannot grow, and a heading that never moves
         # while the one under it does is the fixed point the run turns on.
+        # THE OVERCLAIM, STRUCK — owed item (A), session 85. This heading said
+        # *"{n} ships, all that the day held about itself"* from session 71 to session 84
+        # inclusive, and it was refuted by the file this house saved on the morning of the
+        # day it names: the same edition reported 230 disappearances examined and 5,641
+        # events in its window. What the day held about itself is not eleven. Eleven is
+        # what the list printed, and the heading now says only that. The refutation is
+        # under the names, in the block this heading no longer has to carry.
         "heading_then": (
-            f"IN THE LIST DATED {short_caps(DAY)} — {word(field[0]['count'])} ships, "
-            "all that the day held about itself"
+            f"IN THE LIST DATED {short_caps(DAY)} — the {word(field[0]['count'])} names "
+            "it printed"
         ),
+        # ── THE CUT, ON THE FACE. Owed item (A). ─────────────────────────────────────
+        #
+        # Four short strings under the eleven names, and they are the disclosure this work
+        # has owed since its first capture. `figures` is SOURCED and carries upstream's own
+        # words around each number, because those words are what the parser matched: a
+        # match of `AGG_RE` proves the phrases "ships went dark inside national waters
+        # lately — of", "disappearances examined (" and "in the window)." stood in those
+        # bytes in that order, with these numbers in them. That is why they are printed as
+        # upstream's words and not paraphrased, and why no sentence here is set in
+        # quotation marks: the record holds the numbers and the parser's literal pattern,
+        # not the edition's raw sentence. From tonight `capture.py` also stores the matched
+        # span verbatim, so a later face can quote instead of reconstruct — the twenty-one
+        # captures already committed are immutable and do not get one retrospectively.
+        "cut": {
+            "heading": f"WHAT THE LIST OF {short_caps(DAY)} WAS THE TOP OF",
+            # THE ORDER IS THE MEANING. Upstream's own sentence makes the count of ships
+            # dark inside national waters a subset of the disappearances EXAMINED, not of
+            # the events in the window. Written as "… · 5,641 in the window · 82 of them
+            # dark inside national waters", the "them" reaches back past the nearer number
+            # and says something upstream does not. The subset stands beside the set it is
+            # a subset of, and the window figure goes last.
+            "figures": (
+                f"{day_cut['printed']} names printed · "
+                f"{day_cut['examined']:,} disappearances examined, "
+                f"{day_cut['dark_inside_national_waters']} of them dark inside national "
+                f"waters · {day_cut['in_window']:,} events in the window"
+            ),
+            # CUT FROM 63 WORDS TO 20, AND WHAT SURVIVED IS THE SENTENCE THAT IS NOT ABOUT
+            # THIS HOUSE — `DRAMATURG-85.md` §2, on the running object: of the three
+            # sentences that stood here, *"the third — 'The figure above is a share of what
+            # those lists print, not of what they count' — is the disclosure, and it arrives
+            # 27 words in, behind two sentences that are the house talking about the
+            # house."* The confession and the range are not deleted; they move below the
+            # controls, where this head's other prose already lives and where nothing
+            # measures a fold, and the range's one printed instance is there.
+            #
+            # AND THE HEADING'S CLAIM IS NOW UPSTREAM'S OWN, NOT AN INFERENCE. §2 of the
+            # same memo objected that *"the top of"* asserts a selection rule the block then
+            # disclaims. The objection is answered with evidence rather than by yielding:
+            # the method sheet says it in words, fetched first-hand tonight (200, 27,748
+            # bytes) — *"case of the day by region brisance, then duration. The index counts
+            # all examined; the case and list show named vessels."* Found by
+            # `VERIFIER-85.md` §5, which recorded that the strongest support for this whole
+            # block was cited nowhere on the face. It is a genuine short quotation with its
+            # source named on the face, which is the only kind this work prints.
+            # AND THE WORD `above` WENT WITH THE MOVE. `DRAMATURG-85.md`, re-measured after
+            # its own cuts were taken and pricing a cost it had not priced: this sentence —
+            # *"the one line that turns the material into the finding"* — now stands 740 px
+            # below the figure at 1400×900 and 1,216 px below it at 390×844, on the far side
+            # of the reserved space, the buttons and the caption, and it still said *"the
+            # figure above"*. A spatial word is a claim about a page, and this one had been
+            # made false by the repair that moved it. It names the figure instead of
+            # pointing at it.
+            "said": (
+                "The instrument says so itself, in its method sheet: “The index counts all "
+                "examined; the case and list show named vessels.” The share this page "
+                "publishes is a share of what those lists print, not of what they count."
+            ),
+            # MOVED OUT OF THE SPINE, NOT WITHDRAWN — `DRAMATURG-85.md` §2: *"fifty-four
+            # words, in the head's dimmest type, entirely in the negative, whose whole
+            # content is that a quantity has not been measured. That is a method sheet
+            # inside a work."* The refusal is this house's answer to the critic's §2 and the
+            # verifying pass ruled it the defensible one of the two, so it is not cut; it
+            # stands below the controls with the caption.
+            "refused": (
+                "How the figure would move if the lists were longer is not published here: "
+                "a longer list dated "
+                f"{day_month(DAY)} could carry names this record counts as arriving late, "
+                "and longer later lists would add to the total, so both ends of it would "
+                "grow and nothing in this record measures by how much."
+            ),
+            # BELOW THE CONTROLS WITH THE REFUSAL: the confession, and the one printed
+            # instance of the range. `DRAMATURG-85.md` §2 found the range's other instance
+            # word-for-word inside the DERIVED tier line, twenty identical words 466 px
+            # apart, and ordered that line back to doing the only job a tier line has.
+            "kept": (
+                f"Each of the {word(len(cut_rows))} lists this record holds prints "
+                f"{word(min(r['printed'] for r in cut_rows))} to "
+                f"{word(max(r['printed'] for r in cut_rows))} names of the "
+                f"{min(r['examined'] for r in cut_rows)} to "
+                f"{max(r['examined'] for r in cut_rows)} disappearances it says it examined. "
+                "This record has saved that block every night since the first, and no face "
+                "of this work printed one of its figures until tonight."
+            ),
+            # THE TIER LINE STOPPED CLAIMING WHAT IT COULD NOT COVER — `VERIFIER-85.md` §1,
+            # blocking, and it is the cardinal sin in its subtlest form for the second night
+            # running. The line read *"every figure in this block is read off the saved
+            # copies, in the words the parser matched in them"* — a universally quantified
+            # claim, false for two of the figures standing under it. `11 names printed` is
+            # not published by upstream at all: it is this house's count of parsed vessel
+            # entries, and the same `11` stands under a DERIVED word four blocks lower. The
+            # count of lists is OBSERVED by this record's own definitions. Three figures are
+            # upstream's and the line now says which three, and whose the others are.
+            "tier": (
+                "SOURCED — the three figures the list published, read off the saved copies "
+                "in the words the parser matched in them. The count of names, and the count "
+                "of lists below, are this house's own."
+            ),
+        },
         "stops": arrive_stops,
         # THE CONSTANT, MARKED — session 83. The staging voice's one banked change, and the
         # only one it named as the change that would most improve the head: *"one figure
@@ -792,6 +1045,23 @@ def build():
         # staging voice asked for in the same breath — *"the head no longer says anywhere
         # that this page is reading saved copies … six words would fix it"* — so the mark and
         # the evidence arrive in the same clause instead of as two additions.
+        #
+        # THE LABEL WAS TRUE AND ITS BASIS WAS NOT STATED — owed item (A), session 85, and
+        # this is the sharpest form of the critic's finding. *"Worked out here, from saved
+        # copies of those lists"* is exact and checkable, and it says nothing about what
+        # those lists are: ten-odd names at the top of a couple of hundred. Under this
+        # house's own labelling law a tier word whose declared basis is true and whose real
+        # basis is unstated does not hold. The clause is added here, in the head, and not
+        # only in the block below — this sentence is what a reader who scrolls no further
+        # carries away about the number above it.
+        #
+        # AND THE CLAUSE ADDED TONIGHT IS CUT THE SAME NIGHT — `DRAMATURG-85.md` §2, the one
+        # cut it named exactly, with the string: the eighteen words appended here stood
+        # word-for-word in the block above, 466 px away at 1400 and 860 px at 390. *"The
+        # fact keeps the one place where it is argued rather than repeated; the tier line
+        # goes back to doing the only job a tier line has."* The basis the critic said was
+        # unstated is stated — in the block that carries the figures, under a tier word of
+        # its own, twice the size of this line and above it in reading order.
         "tier": (
             "DERIVED — this share is worked out here, from saved copies of those lists. "
             "Nobody publishes it."
@@ -984,11 +1254,29 @@ def build():
     # right about the page and wrong about the world — the column counts a LIST, and every
     # list holds only its own seven days. Neither the column nor the quotation moves; what
     # was missing was the sentence that lets them stand together.
+    # SAID OF A NAMED COLUMN AND NOT OF A POSITION — session 85. This sentence began "the
+    # last column" and stopped being true the moment owed item (A) put a column after it.
+    # A caption that points by position is a caption that breaks silently when the table
+    # grows, which is the same defect as a tier mark lost to a cut (banked failure 25).
     ledger_caption += (
-        " The last column counts the ships in each saved list, not the ships this page can "
-        f"place in {printed_date(DAY)}: every list holds only the "
+        " The “ships in that list” column counts the ships in each saved list, not the ships "
+        f"this page can place in {printed_date(DAY)}: every list holds only the "
         f"{word(caps_now[-1]['method']['window_days'])} days before its own date, so a ship "
         "leaves the list as that window moves past it. It never leaves the day."
+    )
+    # OWED ITEM (A), THE TABLE'S LIMB — session 85. The two count columns are the finding
+    # in one place: what a saved copy printed, and what the same copy said the instrument
+    # had examined to print it. Both have stood in every capture since the first; until
+    # tonight this table carried only the first.
+    # NAMED BY THE COLUMN'S OWN NAME, not by a word the table does not print —
+    # `VERIFIER-85.md` §7, which found this caption pointing at columns called SHIPS and
+    # EXAMINED in a table whose headers read "ships in that list" and "disappearances
+    # examined". Nothing false, and a caption that names a column should use the column's
+    # name; the positional pointer this replaced broke the moment a column was added.
+    ledger_caption += (
+        " “Disappearances examined” is what that same copy says the instrument examined to "
+        "produce those ships — a figure this record has saved every night since the first "
+        "and, until tonight, printed never."
     )
 
     ledger = []
@@ -1001,6 +1289,14 @@ def build():
             "content_sha256": content_sha256(c)[:8],
             "edition_date_printed": c["edition_date_printed"],
             "vessels": len(c.get("vessels", [])),
+            # OWED ITEM (A) IN THE TABLE — session 85. The column beside it counts the
+            # names a saved copy holds; this one counts what that same copy says the
+            # instrument examined to produce them. Both numbers have been in every capture
+            # since the first and only one of them has ever been printed. It is one column
+            # and not four because the table is a record of this house's fetching, not a
+            # restatement of upstream's summary: the other three aggregates stand in the
+            # head, beside the eleven names they are about.
+            "examined": (c.get("aggregates") or {}).get("disappearances_examined"),
         })
 
     return {
