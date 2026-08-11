@@ -9,7 +9,7 @@ dark — the ship's AIS transponder switched off, so it stops being tracked. The
 100 %–100 %
 of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 4 AUG.
 
-Neither end of this figure can rise. The upper end has not moved yet: it holds at 100 % while no more of these ships are CERTAINLY dark on this day than the eleven the day itself named — a list gives a return only to the nearest week, so all thirty-one are merely possible today — and it falls as soon as one more than those eleven is certain. Only the lower end has moved so far, and the next list can lower it again.
+Neither end of this figure can rise. The upper end has not moved yet: it holds at 100 % while no more of these ships are CERTAINLY dark on this day than the eleven the day itself named — a list gives a return only to the nearest week, so all thirty-three are merely possible today — and it falls as soon as one more than those eleven is certain. Only the lower end has moved so far, and the next list can lower it again.
 
 IN THE LIST DATED 4 AUG — the eleven names it printed
 
@@ -33,7 +33,7 @@ SOURCED — the three figures the list published, read off the saved copies in t
 
 NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of this day that nobody could have had on it.
 
-A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.
+A list gives a ship's return only to the nearest week, so two of these names are certainly dark on this day and the rest are possible.
 
 ON THE DAY
 +1 DAY
@@ -42,15 +42,16 @@ ON THE DAY
 +4 DAYS
 +5 DAYS
 +6 DAYS
++7 DAYS
 run it again
 
-A ship reaches the list only after it comes back, so a day that is over keeps being answered. Seven lists, seven answers, one day — the last of them six days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them. That is why the figure above falls, and why it can only go on falling.
+A ship reaches the list only after it comes back, so a day that is over keeps being answered. Eight lists, eight answers, one day — the last of them seven days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them. That is why the figure above falls, and why it can only go on falling.
 
 The instrument says so itself, in its method sheet: “The index counts all examined; the case and list show named vessels.” The share this page publishes is a share of what those lists print, not of what they count.
 
 This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of every name added since 4 August still reaches back to it. The first list that could add a name ruled out of that list would be one dated 12 August 2026.
 
-Each of the seven lists this record holds prints six to eleven names of the 213 to 250 disappearances it says it examined. This record has saved that block every night since the first, and no face of this work printed one of its figures until tonight.
+Each of the eight lists this record holds prints six to eleven names of the 189 to 250 disappearances it says it examined. This record has saved that block every night since the first, and no face of this work printed one of its figures until tonight.
 
 How the figure would move if the lists were longer is not published here: a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists would add to the total, so both ends of it would grow and nothing in this record measures by how much.
 
@@ -58,13 +59,13 @@ DERIVED — this share is worked out here, from saved copies of those lists. Nob
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
 
-Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Twenty arrived later — fifteen of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.
+Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Twenty-two arrived later — seventeen of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.
 
 “The AIS picture of the seas looks complete. It is not — ships switch off their transponder on purpose to vanish.” — method sheet, The Ghost Fleet, frankbueltge.de. Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore.
 
 A ship's disappearance reaches the instrument's daily list only when the ship comes back. So a day of the sea is nearly empty on the day itself and keeps filling for weeks afterwards. This page holds one day open and publishes how much of its darkness could be placed in it on the day, and how much arrived later.
 
-SOURCED name · flag · days dark · waters · each list's own date · what each list says it examined, how many of those were inside national waters, and how many events were in its window — printed by the instrument
+SOURCED name · flag · days dark · waters · each list's own date · what each list says it examined, how many of those were inside national waters, and how many events were in its window — printed by the instrument, and printed here unrepaired: one name arrives with a machine's percentages inside it and no flag, and “—” is what the list shows in that place
 DERIVED the dark-and-return spans, this page's share, and the count of names in each list — worked out here, both ends printed
 OBSERVED what this page saw, and when it first saw it
 
@@ -77,6 +78,7 @@ OBSERVED what this page saw, and when it first saw it
 14 JUL
 21 JUL
 28 JUL
+11 AUG
 4 AUG
 
 IN THE LIST OF 4 AUG — the day itself (11 ships)
@@ -239,6 +241,7 @@ ADDED BY THE LIST OF 10 AUG — six days after the day (6 ships)
 this page first saw all six on 10 AUG
 
 HY928-21%-81%
+—
 50 d dark
 Kiribati EEZ (Gilbert Islands)
 dark 14–21 Jun → back 3–10 Aug
@@ -268,19 +271,34 @@ USA
 United States EEZ (Hawaii)
 dark 11–18 Jul → back 3–10 Aug
 
+ADDED BY THE LIST OF 11 AUG — seven days after the day (2 ships)
+
+this page first saw all two on 11 AUG
+
+PANOFI FORE RUNNER
+GHA
+27 d dark
+Ghanaian EEZ
+dark 8–15 Jul → back 4–11 Aug
+HEATHER LYNN
+USA
+21 d dark
+United States EEZ
+dark 14–21 Jul → back 4–11 Aug
+
 The share of this day's darkness that was knowable on the day itself — DERIVED, worked out here from the saved copies below, by the command beneath them:
 
 SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved copies of 3 lists —
 69 %–100 %
 11 of 0–16
 
-It fell thirty-four points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; and HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day — fifteen ships this record did not hold when the law below was printed.
+It fell thirty-six points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; and PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day — seventeen ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 22 saved copies of 7 lists —
-35 %–100 %
-11 of 0–31
+LIVE · as this record measures it now, from 23 saved copies of 8 lists —
+33 %–100 %
+11 of 2–33
 
-Thirty-one ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–31, and the share runs from 11 of 31 to 11 of 11.
+Thirty-three ships could have been dark on 4 August 2026 and two of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 2–33, and the share runs from 11 of 33 to 11 of 11.
 
 The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.
 
@@ -313,21 +331,22 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list	disapp
 2026-08-10T22:41:12Z	200	32,240	90bd7aec…	423c17df…	10 August 2026	11	213
 2026-08-11T04:39:04Z	200	32,348	e5ddbb89…	423c17df…	10 August 2026	11	213
 2026-08-11T04:47:45Z	200	32,348	e5ddbb89…	423c17df…	10 August 2026	11	213
+2026-08-11T11:19:15Z	200	32,333	a3107ddd…	a7ab0eb1…	11 August 2026	11	189
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  22 capture(s) read, 7 distinct edition(s), 8 distinct content(s), 12 distinct bod(y/ies)
-  vessels dark on that day .......... 0–31 (certain–possible)
+day 2026-08-04  ·  23 capture(s) read, 8 distinct edition(s), 9 distinct content(s), 13 distinct bod(y/ies)
+  vessels dark on that day .......... 2–33 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
-  SHARE knowable on the day ......... 35%–100%  (11 of 0–31)
-    (a ceiling from 7 edition(s), 22 capture(s): further nights can only add vessels to this day, so this share can only fall)
+  SHARE knowable on the day ......... 33%–100%  (11 of 2–33)
+    (a ceiling from 8 edition(s), 23 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 
-No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-one is what this record can place in 4 August 2026, not what was on the sea that day.
+No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-three is what this record can place in 4 August 2026, not what was on the sea that day.
 
 Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name.
 

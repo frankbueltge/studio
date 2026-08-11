@@ -1,0 +1,300 @@
+{
+  "capture_version": 1,
+  "fetch": {
+    "url": "https://frankbueltge.de/ghost-fleet/",
+    "fetched_at_utc": "2026-08-11T11:19:15Z",
+    "http_status": 200,
+    "bytes": 32333,
+    "sha256": "a3107dddbe1f35c8d1a65fc1dc68ba59117efcd7a9ea0292294ffc6bd908810c"
+  },
+  "method": {
+    "source": "https://frankbueltge.de/werke/ghost-fleet/",
+    "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
+    "window_days": 7
+  },
+  "edition_date_printed": "11 August 2026",
+  "edition_date": "2026-08-11",
+  "case_of_the_day": {
+    "name": "HY928-21%-81%",
+    "flag": null,
+    "days_dark": 50,
+    "prose": "A vessel flagged — switched off its transponder for 50 days — vanished at 2.7°S, 177.7°E, resurfaced at 3.1°S, 175.2°W, in Kiribati EEZ (Gilbert Islands).",
+    "gfw_url": "https://globalfishingwatch.org/map/vessel/6a7f84a0c-cefb-3542-818c-a815ed9a04e2"
+  },
+  "aggregates": {
+    "dark_inside_national_waters": 73,
+    "disappearances_examined": 189,
+    "in_the_window": 5731,
+    "vessel_days_of_darkness_approx": 2743
+  },
+  "aggregates_text": "73 ships went dark inside national waters lately — of 189 disappearances examined (5,731 in the window).",
+  "vessel_days_text": "Together about 2,743 vessel-days of darkness",
+  "vessels": [
+    {
+      "name": "HY928-21%-81%",
+      "flag": null,
+      "days_dark": 50,
+      "prose": "A vessel flagged — switched off its transponder for 50 days — vanished at 2.7°S, 177.7°E, resurfaced at 3.1°S, 175.2°W, in Kiribati EEZ (Gilbert Islands).",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/6a7f84a0c-cefb-3542-818c-a815ed9a04e2",
+      "role": "case_of_the_day",
+      "waters": null
+    },
+    {
+      "name": "ATLANTIC PRINCE",
+      "flag": "BLZ",
+      "days_dark": 39,
+      "waters": "Ivorian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/a8fa13d03-3876-ae64-a357-4823082c2984",
+      "role": "other"
+    },
+    {
+      "name": "HAIZEA BOST",
+      "flag": "ESP",
+      "days_dark": 34,
+      "waters": "Seychellois EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/65f4d3fcc-c7c5-2d21-2507-0828fc41cd1e",
+      "role": "other"
+    },
+    {
+      "name": "CONNIE JEAN TWO",
+      "flag": "PAN",
+      "days_dark": 33,
+      "waters": "Ecuadorian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/e9281cbbc-c453-a79c-a008-1b061cfd1678",
+      "role": "other"
+    },
+    {
+      "name": "CARMEN D",
+      "flag": "ECU",
+      "days_dark": 32,
+      "waters": "Ecuadorian EEZ (Galapagos)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/93b926961-1535-a027-db16-c28a7bd86533",
+      "role": "other"
+    },
+    {
+      "name": "GENPUKUMARU NO.18",
+      "flag": "JPN",
+      "days_dark": 32,
+      "waters": "Micronesian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/ac00d8361-1918-00cf-c451-21541b31ef61",
+      "role": "other"
+    },
+    {
+      "name": "DIVA MARIA",
+      "flag": "PAN",
+      "days_dark": 28,
+      "waters": "Ecuadorian EEZ (Galapagos)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/d5540ee68-8265-6a88-f861-f59bc4abdc0b",
+      "role": "other"
+    },
+    {
+      "name": "PANOFI FORE RUNNER",
+      "flag": "GHA",
+      "days_dark": 27,
+      "waters": "Ghanaian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/04b95cb83-31d8-06e7-0845-8691696643f5",
+      "role": "other"
+    },
+    {
+      "name": "OCEAN WARRIOR",
+      "flag": "NRU",
+      "days_dark": 23,
+      "waters": "Kiribati EEZ (Line Group)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/fa750f73c-c76d-1036-3655-692739b178ac",
+      "role": "other"
+    },
+    {
+      "name": "ST. MARIANNE",
+      "flag": "USA",
+      "days_dark": 23,
+      "waters": "United States EEZ (Hawaii)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/6c16015c4-4e84-8aef-1b6d-ff66d1e7a561",
+      "role": "other"
+    },
+    {
+      "name": "HEATHER LYNN",
+      "flag": "USA",
+      "days_dark": 21,
+      "waters": "United States EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/395358792-2ac0-d275-16a9-bd8cad811778",
+      "role": "other"
+    }
+  ],
+  "derived_intervals": [
+    {
+      "name": "HY928-21%-81%",
+      "flag": null,
+      "days_dark": 50,
+      "went_dark_between": [
+        "2026-06-15",
+        "2026-06-22"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "ATLANTIC PRINCE",
+      "flag": "BLZ",
+      "days_dark": 39,
+      "went_dark_between": [
+        "2026-06-26",
+        "2026-07-03"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "HAIZEA BOST",
+      "flag": "ESP",
+      "days_dark": 34,
+      "went_dark_between": [
+        "2026-07-01",
+        "2026-07-08"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "CONNIE JEAN TWO",
+      "flag": "PAN",
+      "days_dark": 33,
+      "went_dark_between": [
+        "2026-07-02",
+        "2026-07-09"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "CARMEN D",
+      "flag": "ECU",
+      "days_dark": 32,
+      "went_dark_between": [
+        "2026-07-03",
+        "2026-07-10"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "GENPUKUMARU NO.18",
+      "flag": "JPN",
+      "days_dark": 32,
+      "went_dark_between": [
+        "2026-07-03",
+        "2026-07-10"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "DIVA MARIA",
+      "flag": "PAN",
+      "days_dark": 28,
+      "went_dark_between": [
+        "2026-07-07",
+        "2026-07-14"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "PANOFI FORE RUNNER",
+      "flag": "GHA",
+      "days_dark": 27,
+      "went_dark_between": [
+        "2026-07-08",
+        "2026-07-15"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "OCEAN WARRIOR",
+      "flag": "NRU",
+      "days_dark": 23,
+      "went_dark_between": [
+        "2026-07-12",
+        "2026-07-19"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "ST. MARIANNE",
+      "flag": "USA",
+      "days_dark": 23,
+      "went_dark_between": [
+        "2026-07-12",
+        "2026-07-19"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "HEATHER LYNN",
+      "flag": "USA",
+      "days_dark": 21,
+      "went_dark_between": [
+        "2026-07-14",
+        "2026-07-21"
+      ],
+      "resurfaced_between": [
+        "2026-08-04",
+        "2026-08-11"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    }
+  ],
+  "page_assets": [
+    "/_astro/Base.BDo6THrI.css",
+    "/_astro/Base.astro_astro_type_script_index_0_lang.CRoAemHu.js"
+  ],
+  "tiers": {
+    "SOURCED": "vessels, aggregates, edition date, gfw ids — printed on the page",
+    "DERIVED": "derived_intervals — arithmetic on published durations, bands printed",
+    "OBSERVED": "fetched_at_utc — this house's own record of when it could first know"
+  },
+  "content_sha256": "a7ab0eb1788c691783299db9023e146c0b9472b15da3366f885110bd1f1772f0"
+}

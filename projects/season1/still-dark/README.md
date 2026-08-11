@@ -57,6 +57,50 @@ buttons-bottom at 390×844: **813 px committed · 1,065 px as first built · 964
 *the disclosure inside the numeral*, a second figure standing still in the same frame while the
 first falls — and it is **banked, not built**.
 
+**SESSION 86 — THE EIGHTH LIST, AND THE FIRST DAY THIS RECORD CAN NAME A SHIP AS CERTAINLY DARK ON
+4 AUGUST.** The list dated 11 August 2026 added **PANOFI FORE RUNNER** (GHA, 27 days dark, Ghanaian
+EEZ) and **HEATHER LYNN** (USA, 21 days, United States EEZ). The published share fell again, the
+sixth fall from a later list since this page printed its law on 6 August — 6, 7, 8, 9, 10 and now
+11 August: **35 %–100 %, 11 of 0–31 → 33 %–100 %, 11 of 2–33**, from 23 saved copies holding 8
+lists. (The 37 → 35 movement of session 84 is this house's own parser and is never counted here.) **The lower end of the total left zero for the first time in this work's life.**
+Both new names went dark far enough back and came back inside a window whose every end lies on or
+after 4 August, so each of them was dark on that day under *every* end of its band — the definition
+of `certain` in `../capture/day.py`. The hedge on the face changed itself accordingly, from *"not
+one of these names is certainly dark on this day"* to *"two of these names are certainly dark on
+this day and the rest are possible"*; no hand typed either sentence. **The upper end still does not
+move**, and the reason is the one the constant line has printed since session 83: it falls only
+when more ships are certainly dark on the day than the eleven the day itself named, and two is not
+more than eleven.
+
+**And the chip that read `HY928-21%-81% · null` is two defects with two different owners.**
+`../DRAMATURG-85.md` found it on the running face and no memo in this project had named it. The
+`null` was **ours**: a JSON null concatenated into a chip's text, a parser's value leaking onto a
+face. Repaired in session 86 — and repaired to what the edition actually prints in that position,
+an em dash, not to a word of ours; the same absence was painting nothing at all in the OBSERVED
+table, where a blank reads as a column that happens to be empty rather than as a flag the list did
+not print, and both places now say the one true thing. **The name is upstream's and is not
+repaired.** `HY928-21%-81%` is the string the instrument publishes: it is the case of the day in
+the list of 10 August and again in the list of 11 August, fetched first-hand tonight
+(<https://frankbueltge.de/ghost-fleet/>, 2026-08-11T11:19:15Z, HTTP 200, 32,333 bytes,
+`../captures/2026-08-11T111915Z.json`). A record that tidies its own evidence is not a record, and
+the constitution forbids patching an upstream error sideways: it is **reported through the channel
+that publishes it** (`REQUESTS.md`, session 86) and printed here as printed. The SOURCED legend now
+carries that sentence, because a legend claiming these values are *printed by the instrument*, on a
+page showing one that is visibly damaged, otherwise leaves the reader to charge the damage here.
+
+**And the page stopped scrolling sideways on a phone.** The same memo reported the document 665 px
+wide inside a 390 px viewport. Measured tonight to a single element: the label beside each share
+figure carried `flex: 0 0 auto` with text longer than its 46ch minimum, so it took its max-content
+width — 643 px — and refused to shrink. Below 480 px it now wraps. `documentElement.scrollWidth` at
+390 px and at 360 px: **665 → 390** and **→ 360**. The wide ledger table was **not** the cause and
+is untouched; it has scrolled inside itself since it was built.
+
+**What is still not fixed, and is worse tonight than last night:** the fold. `tools/fold.mjs`
+reports **64 failures** against 56 after session 85's cuts — eight more, one per stop, because the
+run gained an eighth stop and the defect is per-stop. Nothing about it was repaired; it grew
+because the work grew, which is exactly what a defect measured per-stop does, and the restaging
+verdict stays open.
+
 **The head, and what it does.** The page opens on the day's own answer: the eleven ships the list
 dated 4 August held, and the share of that day's darkness they represent — `100 %–100 %`, because on
 the day itself the day appeared to know all of it. Then the later lists arrive, one stop at a time,
@@ -193,7 +237,7 @@ list, which is what a stop has always claimed to be. **The captures are untouche
 2026-08-10T17:47:21Z` still returns 37 %, because at that instant this record did hold thirty, and
 the reason it held thirty is printed above. What changed is which instant the run calls the arrival
 of a list. Every stop's figure is now the share of its own displayed total, checkable by counting
-chips: 11/11, 11/14, 11/16, 11/17, 11/20, 11/25, 11/31.
+chips: 11/11, 11/14, 11/16, 11/17, 11/20, 11/25, 11/31, 11/33.
 
 **Since session 72 the house's filing words are off the face.** *Edition* and *capture* are what
 this house calls the things it collects; on the page they are **the list** the instrument publishes
@@ -233,7 +277,7 @@ ceiling that can only fall* — and on 6 August it fell, unaided:
 |---|---|---|
 | as published, 4 saved copies / 2 lists, to `2026-08-06T04:36:19Z` | **79 %–100 %** | 11 of 0–14 |
 | as this page published the law, 5 saved copies / 3 lists, at `2026-08-06T08:36:39Z` | **69 %–100 %** | 11 of 0–16 |
-| as measured at session 84, 20 saved copies / 7 lists | **35 %–100 %** | 11 of 0–31 |
+| as measured at session 86, 23 saved copies / 8 lists | **33 %–100 %** | 11 of 2–33 |
 
 > **CORRECTION, session 78 (2026-08-08).** The middle row read *"as measured now, 8 saved
 > copies / 3 lists"* until tonight, and *now* had been three sessions ago. Worse, the same
@@ -338,9 +382,8 @@ live — fetch time, body hash, content hash, list date, ship count — and the 
 it as the OBSERVED ledger. A hand-typed copy of a record is a second record that can disagree with
 the first, and in session 78 one did (see the correction above).
 
-**Twenty-two saved copies, twelve bodies, seven lists — and eight distinct contents, as of session
-85.** The eighth content is not an eighth list: it is this house's own parser, repaired in session
-84, reading the list of 10 August correctly for the first time. A content digest answers *did the
+**Twenty-three saved copies, thirteen bodies, eight lists — and nine distinct contents, as of
+session 86.** The counts of contents and of lists are one apart, and the odd one out is the eighth content: it is not a list at all but this house's own parser, repaired in session 84, reading the list of 10 August correctly for the first time. The ninth content IS a list — the one dated 11 August. A content digest answers *did the
 edition change*, and it cannot tell that question from *did our reading of it change* — so it moved
 that night without upstream moving, and this is the sentence that says so. Five lists have come back in
 more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
