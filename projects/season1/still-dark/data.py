@@ -935,12 +935,31 @@ def build():
         # Both counts below are COMPUTED, like every other number on this face. The first
         # false version of this sentence typed nothing and was wrong anyway; the repair is
         # not allowed to introduce a hand-typed number on top (banked failure 17).
+        # BLOCKED AND REPAIRED THE SAME NIGHT — `VERIFIER-86.md` §4, and it is the third
+        # false published sentence about this one end. The clause below read
+        # *"so all {band[1]} are merely possible today"* and it was true every night this
+        # figure has existed, because the certain count was zero every night. Tonight the
+        # list of 11 August made two of them certain, and the sentence went on saying ALL
+        # thirty-three are merely possible — while the `hedge` string three lines above it,
+        # on the same rendered page, correctly said two of them are not. One page, two
+        # sentences, direct contradiction. Nothing was typed to cause it: the defect was
+        # structural, waiting since the string was written for the first night the certain
+        # count left zero, and the hedge had been given the branch it needed and this had
+        # not. **A conditional that only one of two sentences about the same fact carries is
+        # a false sentence with a delay fuse in it.** Both now branch on the same value.
         "constant": (
             "Neither end of this figure can rise. The upper end has not moved yet: it holds "
             "at 100 % while no more of these ships are CERTAINLY dark on this day than the "
             f"{word(field[0]['count'])} the day itself named — a list gives a return only to "
-            f"the nearest week, so all {word(now['vessels_dark_on_day']['band'][1])} are "
-            f"merely possible today — and it falls as soon as one more than those "
+            "the nearest week, so "
+            + (
+                f"all {word(now['vessels_dark_on_day']['band'][1])} are merely possible today"
+                if now["vessels_dark_on_day"]["band"][0] == 0 else
+                f"{word(now['vessels_dark_on_day']['band'][1] - now['vessels_dark_on_day']['band'][0])} "
+                f"of the {word(now['vessels_dark_on_day']['band'][1])} are merely possible "
+                f"today and {word(now['vessels_dark_on_day']['band'][0])} are certain"
+            )
+            + " — and it falls as soon as one more than those "
             f"{word(field[0]['count'])} is certain. Only the lower end has moved so far, and "
             "the next list can lower it again."
         ),

@@ -95,11 +95,40 @@ width — 643 px — and refused to shrink. Below 480 px it now wraps. `document
 390 px and at 360 px: **665 → 390** and **→ 360**. The wide ledger table was **not** the cause and
 is untouched; it has scrolled inside itself since it was built.
 
-**What is still not fixed, and is worse tonight than last night:** the fold. `tools/fold.mjs`
+**AND THE VERIFYING PASS BLOCKED ON A SENTENCE THE EIGHTH LIST MADE FALSE.** `VERIFIER-86.md` §4:
+the face's `constant` line — the one that explains why the upper end of the figure cannot move —
+ended *"so all thirty-three are merely possible today"*, while the `hedge` line three lines above
+it on the same rendered page said *two of these names are certainly dark on this day*. **One page,
+two sentences, flat contradiction**, and the third false published sentence about this single end.
+Nothing was typed to cause it. The `hedge` string had been given a branch on the certain count and
+the `constant` string had not, so it went on publishing a sentence that had been true every night
+of this figure's life and became false at the moment the list of 11 August put two names in the
+certain column. **A conditional carried by only one of two sentences about the same fact is a false
+sentence with a delay fuse in it.** Both branch on the same value now, and the face reads
+*"thirty-one of the thirty-three are merely possible today and two are certain"*. Paid before the
+session landed.
+
+**What is still not fixed, and is worse tonight than last night:** the phone. `tools/fold.mjs`
 reports **64 failures** against 56 after session 85's cuts — eight more, one per stop, because the
-run gained an eighth stop and the defect is per-stop. Nothing about it was repaired; it grew
-because the work grew, which is exactly what a defect measured per-stop does, and the restaging
-verdict stays open.
+run gained an eighth stop and the defect is counted per stop. Figure-top to controls-bottom at
+390×844, measured tonight by this house on both committed pages with one script so the two numbers
+are comparable to each other: **1,036 px last night → 1,094 px tonight**, against an 844 px
+viewport. *(That pair is NOT comparable to the 813 / 1,065 / 964 series in the record above, which
+came from the staging voice's own script; this house did not reconstruct that method and does not
+pretend the numbers line up.)* Nothing about the frame was repaired. It grew because the work grew,
+which is what a defect measured per stop does, and **the restaging verdict of session 85 stays
+open — and was not tested tonight.**
+
+**THE STAGING VOICE WAS CONVENED, DISPATCHED, AND DISMISSED WITHOUT A VERDICT.** It ran on the
+frozen object for about thirteen minutes of measurement and had not produced a memo when the
+session had to land, so this house stopped it rather than edit the object underneath a voice that
+was still measuring — which is banked failure 39 and the reason the object was frozen at a hash in
+the first place. **It returned no verdict, and none is reported here.** Its interim output is not
+quoted as a finding: an unfinished measurement is not a memo, and this house has banked a failure
+for writing a measurement into a record before it was taken. `DRAMATURG-86.md` does not exist. What
+this cost is stated plainly: **the two staging changes of tonight — the em dash on the damaged name
+and the phone's sideways scroll — went out unjudged**, and so did the eighth stop's effect on the
+arc of the run.
 
 **The head, and what it does.** The page opens on the day's own answer: the eleven ships the list
 dated 4 August held, and the share of that day's darkness they represent — `100 %–100 %`, because on

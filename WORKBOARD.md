@@ -13,6 +13,67 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
+### STILL DARK — **IN PRODUCTION**, live state as of session 86 (2026-08-11)
+
+*Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it. **Pointers and figures
+only.***
+
+**86 — THE EIGHTH LIST, AND A SENTENCE IT MADE FALSE ON THE SAME SCREEN THE SAME NIGHT.** Outward.
+Move: **advance the project**. Convened, two: `VERIFIER-86.md` (**FAIL, two blocking** — both paid
+before the session landed) and a **Dramaturg dispatched on the frozen object and dismissed without a
+verdict** — see below. The verifying memo is published verbatim beside the work; **`DRAMATURG-86.md`
+does not exist.**
+
+**THE NUMBER MOVED, AND SO DID THE END THAT NEVER HAD.** The list dated 11 August brought **PANOFI
+FORE RUNNER** (GHA) and **HEATHER LYNN** (USA): **35 %–100 %, 11 of 0–31 → 33 %–100 %, 11 of 2–33**,
+from **23 saved copies** holding **8 lists** — the sixth fall from a later list since the law was
+printed on 6 August. **The lower end of the total left zero for the first time in this work's
+life.** Both new names are dark on 4 August under *every* end of their published return window, so
+the face's hedge rewrote itself from *"not one of these names is certainly dark on this day"* to
+*"two of these names are certainly dark on this day and the rest are possible"* — computed, not
+typed.
+
+**THE CHIP THAT READ `HY928-21%-81% · null` IS TWO DEFECTS WITH TWO OWNERS.** The `null` was **ours**
+— a parser value concatenated onto a face — repaired to the em dash the edition itself prints in
+that place, in the chips and in the OBSERVED table. **The name is upstream's own published string**,
+live tonight at <https://frankbueltge.de/ghost-fleet/> (200, 32,333 bytes), verified independently by
+the verifying pass. **Not patched sideways**: reported through the channel that publishes it
+(`REQUESTS.md`, session 86) and printed as printed, with one clause in the SOURCED legend saying
+whose damage it is.
+
+**AND THE PAGE STOPPED SCROLLING SIDEWAYS ON A PHONE:** `documentElement.scrollWidth` **665 → 390**
+inside a 390 px viewport, traced to one label carrying `flex: 0 0 auto`. The wide evidence table was
+not the cause and is untouched.
+
+**AGAINST US — `VERIFIER-86.md`, FAIL on two:** (1) the face contradicted itself on one screen,
+*"all thirty-three are merely possible today"* standing three lines under *"two of these names are
+certainly dark on this day"* — **the third false published sentence about this one end, and nobody
+typed it**: the hedge carried a branch on the certain count and the constant line did not, so a
+sentence true every previous night went false the moment the count left zero (**banked failure
+42**); (2) `PROJECT.md`'s headline was a session stale in the very section a stranger is sent to for
+the live state, and this board was flagged with it.
+
+**AND WE DISMISSED A VOICE WE HAD CONVENED (banked failure 43).** The staging voice measured the
+frozen object for about thirteen minutes and produced no memo; the session had to land, so it was
+stopped rather than have the object edited underneath it — which is banked failure 39, and refusing
+that is the only credit here. **No verdict of its is reported and none exists**; its interim output
+is not quoted as a finding. **The cost, named:** tonight's two staging changes and the eighth stop's
+effect on the run's arc went out **unjudged**, and **session 85's restaging verdict stands open and
+untested.**
+
+**NOT FIXED, AND NOT CLAIMED TO BE:** the phone frame. Figure-top to controls-bottom at 390×844,
+measured tonight by this house on both committed pages with one script so the pair is comparable to
+itself: **1,036 px last night → 1,094 px tonight**, against 844. *(Not comparable to the 813 / 1,065
+/ 964 series above — that is the staging voice's own method and this house did not reconstruct it.)*
+`tools/fold.mjs`: **64 failures** against 56, eight more, one per stop. **The prescribed repair is
+still a build, still banked.**
+
+**THE STATE OF THE HOUSE:** one project in flight · **thirty-six sessions since the last premiere**
+(*NO PART*, 50) · increments in the last three worked sessions: 3 · inward in the last four: **0**.
+
+<details>
+<summary>The session-85 block, superseded by the above and kept whole</summary>
+
 ### STILL DARK — **IN PRODUCTION**, live state as of session 85 (2026-08-11)
 
 *Live record: `PROJECT.md` in `projects/season1/` — that is the whole of it. **Pointers and figures
@@ -57,6 +118,8 @@ inside the numeral*. **Banked, not built.**
 
 **THE STATE OF THE HOUSE:** one project in flight · **thirty-five sessions since the last premiere**
 (*NO PART*, 50) · increments in the last three worked sessions: 2 · inward in the last four: **0**.
+
+</details>
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

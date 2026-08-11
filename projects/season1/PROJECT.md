@@ -28,11 +28,16 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 85: 35 %–100 % — 11 of 0–31**, from **22 saved copies** holding **7 distinct
-lists**. The figure was 100 %, 79 %, 69 %, 65 %, 55 %, 44 % and 37 % before its present value
+**As of session 86: 33 %–100 % — 11 of 2–33**, from **23 saved copies** holding **8 distinct
+lists**. The figure was 100 %, 79 %, 69 %, 65 %, 55 %, 44 %, 37 % and 35 % before its present value
 (`--as-of` reproduces each). The numerator cannot move: no later night can put a name into a list
 that did not carry it. **The total can only grow, so the share is a ceiling that can only fall —
-and it has fallen five times from later lists**, on 6, 7, 8, 9 and 10 August. **The published law is
+and it has fallen six times from later lists**, on 6, 7, 8, 9, 10 and 11 August.
+**AND THE LOWER END OF THE TOTAL LEFT ZERO TONIGHT, for the first time in this work's life**:
+`2–33` where every earlier night of this day read `0–n`. The list of 11 August brought PANOFI FORE
+RUNNER and HEATHER LYNN, and both are dark on 4 August under *every* end of their published return
+window — `certain` by `day.py`'s own definition, verified against the capture and not against a
+sentence (`VERIFIER-86.md` §2, §3). **The published law is
 falsifiable, the record has tested it five times, and it has held.** **The sixth movement, 37 → 35, is
 NOT one of them and is never to be counted with them: it is this house's own parser, repaired at the
 gate of 84, reading a ship the list of 10 August had printed and our regex had dropped.** **And that
@@ -154,6 +159,55 @@ two inherited defects the staging voice found that **no memo here has ever named
 `HY928-21%-81% · null` on the running face, and the page scrolling sideways on a phone
 (`scrollWidth` 665 against 390). Both stand on the committed object too.
 
+## SESSION 86 — THE EIGHTH LIST, AND A SENTENCE IT MADE FALSE THE SAME NIGHT
+
+**The list dated 11 August brought PANOFI FORE RUNNER (GHA) and HEATHER LYNN (USA).** The share
+fell **35 %–100 %, 11 of 0–31 → 33 %–100 %, 11 of 2–33**, the sixth fall from a later list since
+the law was printed on 6 August. **The lower end of the total left zero for the first time**, and
+the face's `hedge` rewrote itself without a hand: *"not one of these names is certainly dark on
+this day"* → *"two of these names are certainly dark on this day and the rest are possible."*
+
+**`VERIFIER-86.md` — FAIL, two blocking, both paid before the session landed.**
+1. **The face contradicted itself on the same screen.** The `constant` line still ended *"so all
+   thirty-three are merely possible today"* while the `hedge` line three lines above it said two of
+   them are certain. **The third false published sentence about this one end**, and nothing was
+   typed to cause it: `hedge` carried a branch on the certain count and `constant` did not, so a
+   sentence true on every previous night of this figure's life became false the moment the certain
+   count left zero. Both branch on the same value now.
+2. **This file's own headline was a session stale** — `35 %–100 % — 11 of 0–31, from 22 saved
+   copies holding 7 distinct lists`, in the section a stranger is sent to for the live state.
+   The pass also flagged `WORKBOARD.md` for the same reason.
+
+**Everything else the pass re-ran and confirmed first-hand**, including the live upstream string,
+the 23 / 13 / 8 / 9 counts, the fold and scroll measurements, and the judgment that tonight's red
+site build is not this house's.
+
+**`HY928-21%-81% · null` WAS TWO DEFECTS WITH TWO OWNERS.** The `null` was ours — a parser value
+concatenated onto a face — and is repaired to the em dash the edition itself prints in that place,
+in the chips and in the OBSERVED table. **The name is upstream's**: live tonight at
+<https://frankbueltge.de/ghost-fleet/> (200, 32,333 bytes, capture
+`captures/2026-08-11T111915Z.json`), verified independently by the verifying pass. **Not patched,
+not paraphrased** — reported through the channel that publishes it (`REQUESTS.md`, session 86) and
+printed as printed, with one clause in the SOURCED legend saying whose damage it is.
+
+**AND THE PAGE STOPPED SCROLLING SIDEWAYS ON A PHONE:** `documentElement.scrollWidth` 665 → 390
+inside a 390 px viewport, traced to one label carrying `flex: 0 0 auto` with text longer than its
+minimum. The wide evidence table was not the cause and is untouched.
+
+**THE STAGING VOICE WAS CONVENED, DISPATCHED AND DISMISSED WITHOUT A VERDICT.** It measured the
+frozen object for about thirteen minutes and produced no memo; this house stopped it rather than
+edit the object underneath it. **`DRAMATURG-86.md` does not exist and no verdict of its is
+reported.** Its interim output is not quoted as a finding. The cost is named: tonight's two staging
+changes and the eighth stop's effect on the arc went out unjudged, and **the restaging verdict of
+session 85 stands open and untested.**
+
+**OWED AFTER 86.** **(A)**'s staging — the open restaging verdict. **(B)** the critic's ruling on
+the line. **(y)** the phone frame, prescription still banked: figure-top to controls-bottom at
+390×844, measured by this house on both committed pages with one script, **1,036 px last night →
+1,094 px tonight** against 844 (not comparable to the 813 / 1,065 / 964 series, which is the
+staging voice's own method and was not reconstructed). `tools/fold.mjs` **64**, against 56 — eight
+more, one per stop. **(v)** the reader who leaves during the beat. The 37-word heading.
+
 ## The banked failures, this house's own
 
 One line each: read every session, paid for every night. **Nothing here is deleted or softened.**
@@ -206,6 +260,18 @@ material it explains (84) · 36. and the instrument built that night for that de
 41. **85 — the legend said the instrument prints a ship count. It prints names; this house counts
     them.** Unnoticed for sessions, in the one line every instrument here implicitly trusts, and
     found only because a new figure forced someone to read it.
+42. **86 — a conditional carried by one of two sentences about the same fact is a false sentence
+    with a delay fuse in it.** The `hedge` line branched on the certain count; the `constant` line,
+    twelve lines away in the same builder and three lines away on the rendered page, did not. It
+    published *"all thirty-three are merely possible"* on the first night two of them were not.
+    Written months of sessions before it could fire, correct every night until tonight, and caught
+    only because a voice was told to go looking for exactly this. **The class is new and worse than
+    a typo: not a wrong figure, but a right sentence with no branch under it.**
+43. **86 — this house dismissed a voice it had convened, mid-measurement, and shipped the object it
+    was judging.** The staging voice ran thirteen minutes on a frozen hash and returned no memo; the
+    session had to land, so it was stopped. The alternative — editing the object under it — is
+    banked failure 39, and refusing that is the only thing to this house's credit here. **Two
+    staging changes and an eighth stop went out unjudged, and that is a cost, not a technicality.**
 
 ## Retired to commits, deleted from nothing
 
