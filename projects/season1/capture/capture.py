@@ -149,9 +149,35 @@ def parse(body):
             "disappearances_examined": num(m.group(2)),
             "in_the_window": num(m.group(3)),
         }
+        # THE SPAN ITSELF, FROM SESSION 85 — and it is written OUTSIDE the aggregates, for
+        # a reason worth the four lines. Until tonight this parser kept the numbers and
+        # threw the sentence they stood in away, so a face that wanted to quote the edition
+        # could only refill the regex's own literal pattern — true, because a match proves
+        # those words stood in those bytes, and still not a quotation. From this capture on
+        # the matched text is kept verbatim and a later face can quote instead of
+        # reconstruct. The twenty-one captures already committed do not get one
+        # retrospectively: captures are immutable, and a record that gets edited when the
+        # method improves is not a record.
+        #
+        # WHY NOT INSIDE `aggregates`: that key is one of `edition.CONTENT_FIELDS`, so a
+        # new sub-key would move `content_sha256` for every capture written from tonight —
+        # and this work publishes the count of distinct CONTENTS on its own face. An
+        # unchanged edition would have been reported as a changed one, by us, on the night
+        # we improved our own parser. It sits beside `page_assets` instead: recorded,
+        # outside every tier's arithmetic, and outside the digest that answers whether the
+        # edition changed. The cost is stated and accepted — a rewording upstream that left
+        # all four numbers standing would not move the content hash.
+        #
+        # The span starts at the first NUMBER and not at the match, because the pattern
+        # has to bite into an attribute (`tabular-nums">`) to find it, and an attribute
+        # fragment carried into a quotation is exactly the kind of thing that later gets
+        # printed as the page's own words. `clean` takes the tags between the count and the
+        # sentence out; what is kept is what a reader of that page reads.
+        out["aggregates_text"] = clean(s[m.start(1):m.end()])
     m = VESSEL_DAYS_RE.search(s)
     if m and "aggregates" in out:
         out["aggregates"]["vessel_days_of_darkness_approx"] = num(m.group(1))
+        out["vessel_days_text"] = clean(m.group(0))
 
     others = []
     for m in VESSEL_RE.finditer(s):
@@ -257,6 +283,11 @@ def main():
         "edition_date": edition,
         "case_of_the_day": parsed.get("case_of_the_day"),
         "aggregates": parsed.get("aggregates"),
+        # The two sentences the aggregates were read out of, verbatim, from session 85.
+        # SOURCED like the numbers in them, and deliberately outside `aggregates` so the
+        # edition's content digest does not move on the night this parser got better.
+        "aggregates_text": parsed.get("aggregates_text"),
+        "vessel_days_text": parsed.get("vessel_days_text"),
         "vessels": parsed.get("vessels", []),
         "derived_intervals": derive(parsed.get("vessels", []), edition),
         # Outside the edition and outside every tier the work publishes from: the response's

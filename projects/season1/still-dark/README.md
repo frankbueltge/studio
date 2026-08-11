@@ -14,6 +14,49 @@ grow: `python3 ../capture/day.py 2026-08-04` prints them, and the face computes 
 > head arrived in session 80; nothing in this house checked what the README said about it. The
 > correction stands here beside the error rather than replacing it, and it is banked as failure 24.
 
+**Since session 85 the head says what its own number is a number OF, and this is the largest thing
+this work has ever owed.** The list dated 4 August printed **eleven names**. On the same page it
+also reported **230 disappearances examined**, of which **82 ships dark inside national waters**,
+in a window of **5,641 events** — three figures that stand in every capture this record holds,
+that `../capture/capture.py` has parsed since the first night, that the same file tiers SOURCED
+(its docstring and the `tiers` block it writes into every capture; `../capture/README.md` tiers
+only `day.py`'s two answers and says nothing about the aggregates — corrected on
+`../VERIFIER-85.md` §3, which ran the grep this sentence's first draft had not), and that no face
+of this work had ever printed. The count of **eleven names** is a fourth figure and it is **not**
+upstream's: the instrument prints names and this house counts them, so it is marked apart from the
+three (`../VERIFIER-85.md` §1). The heading over the eleven names said,
+for nineteen sessions, that they were *"all that the day held about itself."* **That was refuted by
+a file this house saved itself, on the morning of the day it names.** The heading now says only
+`the eleven names it printed`; the four figures stand under them; and the tier line for the running
+share now names what the lists are a cut of. Found by the art critic at the premiere gate of
+session 84 (`../KRITIKER-84.md` §2), confirmed by that night's verifying pass, paid here.
+**What is deliberately NOT published: which way the share would move if the lists were longer.**
+The critic's memo states that doubling the list length roughly halves it. This house cannot check
+that — a longer list dated 4 August could carry names this record counts as arriving late, and
+longer later lists add to the total, so both ends of the quotient grow — and two of this record's
+banked failures are well-written sentences about its own arithmetic that nobody ran. **The
+verifying pass ruled on the two positions and against the critic** (`../VERIFIER-85.md` §4): the
+halving claim holds the numerator fixed at eleven, and the numerator is the count of names in the
+list dated 4 August — one of the lists being lengthened. It also verified the first limb of the
+refusal first-hand: all twenty later names have return windows reaching back past 4 August, so all
+twenty are names a longer list dated 4 August could have carried.
+
+**And the block's placement did not survive the staging voice.** `../DRAMATURG-85.md`, measured on
+the running object: as first built, the disclosure was five fixed paragraphs between the eleven
+names and the space that fills under them — **+266 words, +76 % of the head's prose**, the controls
+**586 px** further down at 390×844, and the one phone frame that had held the figure and the
+buttons together (**813 px inside an 844 px viewport**) abolished. Its verdict is **RETURNS FOR
+RESTAGING** and it stands open. Taken tonight, on its own prescription: the tier line's repeated
+eighteen words, the confession, the range, the refusal and the sentence that printed the run's
+outcome **22.2 seconds before it became true** all left the run's spine — what stands between the
+names and the space is the figures the list published and their tier word. **What is not fixed and
+is not claimed to be:** the phone frame. Measured here after the cuts, figure-top to
+buttons-bottom at 390×844: **813 px committed · 1,065 px as first built · 964 px now**, against an
+844 px viewport. The house's own `tools/fold.mjs`: **63 failures committed · 84 as first built ·
+56 now** — less red than what shipped, still red. The prescribed repair is a build and not a cut —
+*the disclosure inside the numeral*, a second figure standing still in the same frame while the
+first falls — and it is **banked, not built**.
+
 **The head, and what it does.** The page opens on the day's own answer: the eleven ships the list
 dated 4 August held, and the share of that day's darkness they represent — `100 %–100 %`, because on
 the day itself the day appeared to know all of it. Then the later lists arrive, one stop at a time,
@@ -138,6 +181,19 @@ are immutable, and a record edited when its parser improves is not a record. The
 the twentieth copy forward, and the six-hour hole it left is published here rather than closed. A
 work about the delay between a thing happening and a thing being knowable lost a ship inside its own
 reading of the list that named it.
+
+**AND THE REPAIRED NUMBER DID NOT REACH THE RUN, so for one session this page carried two different
+figures for one state — found in session 85, on the built object.** The head's last stop read
+`37 %–100 %` under a block of **thirty-one** name chips while the body of the same page published
+`35 %–100 %, 11 of 0–31`. Both were honestly computed and one page cannot carry both. The cause is
+one word: each stop took its instant from the **first** name of that list this record had seen, and
+for the list of 10 August that instant is 17:47, when this house had read ten of its eleven names.
+A stop now takes its instant from the **last** — the moment this record had read the whole of that
+list, which is what a stop has always claimed to be. **The captures are untouched:** `--as-of
+2026-08-10T17:47:21Z` still returns 37 %, because at that instant this record did hold thirty, and
+the reason it held thirty is printed above. What changed is which instant the run calls the arrival
+of a list. Every stop's figure is now the share of its own displayed total, checkable by counting
+chips: 11/11, 11/14, 11/16, 11/17, 11/20, 11/25, 11/31.
 
 **Since session 72 the house's filing words are off the face.** *Edition* and *capture* are what
 this house calls the things it collects; on the page they are **the list** the instrument publishes
@@ -282,10 +338,29 @@ live — fetch time, body hash, content hash, list date, ship count — and the 
 it as the OBSERVED ledger. A hand-typed copy of a record is a second record that can disagree with
 the first, and in session 78 one did (see the correction above).
 
-**Twenty saved copies, eleven bodies, seven lists — and eight distinct contents, as of session 84.** The eighth content is not an eighth list: it is this house's own parser, repaired tonight, reading the list of 10 August correctly for the first time. A content digest answers *did the edition change*, and it cannot tell that question from *did our reading of it change* — so tonight it moved without upstream moving, and this is the sentence that says so. Four lists have come back in
+**Twenty-two saved copies, twelve bodies, seven lists — and eight distinct contents, as of session
+85.** The eighth content is not an eighth list: it is this house's own parser, repaired in session
+84, reading the list of 10 August correctly for the first time. A content digest answers *did the
+edition change*, and it cannot tell that question from *did our reading of it change* — so it moved
+that night without upstream moving, and this is the sentence that says so. Five lists have come back in
 more than one set of bytes each while every field this work reads stayed identical — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.
+
+**From session 85 the parser keeps the aggregate sentences verbatim, and it keeps them OUTSIDE the
+digest on purpose.** Until that night it kept the four numbers and threw away the sentence they
+stood in, so a face wanting to quote the edition could only refill the parser's own literal pattern
+— true, because a match proves those words stood in those bytes, and still not a quotation. The
+matched spans are now written as top-level `aggregates_text` and `vessel_days_text`. They are
+**not** inside `aggregates`, because that key is one of `edition.CONTENT_FIELDS`: putting them there
+would have moved `content_sha256` for every capture written from that night on, and this work
+publishes the count of distinct contents on its own face — an unchanged edition would have been
+reported as a changed one, by us, on the night we improved our own parser. It is checkable in the record itself, not
+only in this sentence: `2026-08-11T044745Z.json` is the first capture carrying the spans and its
+content digest is `423c17df…`, the same digest as the two copies of that list written before them. The cost is stated and accepted: a rewording upstream that left all four numbers standing
+would not move the content hash. **The twenty-one captures written before it do not get a span
+retrospectively** — captures are immutable, and a record that gets edited when the method improves
+is not a record.
 
 **And on 7 August a moved body hash was ATTRIBUTED for the first time rather than guessed at.** The
 `page_assets` field, recorded since session 70 for exactly this purpose and read by no part of the
@@ -299,12 +374,18 @@ session 70 has now, once, done the job it was built for.
 <https://frankbueltge.de/werke/ghost-fleet/>.
 
 **Tiers on the face**, named in a three-line legend where the eye is:
-- **SOURCED** — `name · flag · days dark · waters`, printed by the instrument; every vessel name
-  links to its Global Fishing Watch page.
-- **DERIVED** — `the dark-and-return spans, and this page's share`: arithmetic on published
-  durations and the published 7-day window. Both ends always printed, and hatched on the bar. *The
-  legend named only the spans until session 82, when a cut removed the share's only other tier mark
-  and left this page's largest number unmarked for one build.*
+- **SOURCED** — `name · flag · days dark · waters`, each list's own date, and **what each list says
+  it examined, how many of those were inside national waters, and how many events were in its
+  window**, printed by the instrument; every vessel name links to its Global Fishing Watch page.
+- **DERIVED** — `the dark-and-return spans, this page's share, and the count of names in each
+  list`: arithmetic on published durations and the published 7-day window. Both ends always
+  printed, and hatched on the bar. *The legend named only the spans until session 82, when a cut
+  removed the share's only other tier mark and left this page's largest number unmarked for one
+  build. And it called the count of names in a list SOURCED — "printed by the instrument" — until
+  session 85, when a new figure forced someone to read it: upstream prints names, and this house
+  counts them. Banked failure 41. This file said it too, in bullets rewritten the same night
+  against a face that had already moved; corrected on `../VERIFIER-85.md`'s re-run, which blocked
+  on it.*
 - **OBSERVED** — this house's own record: when this page first saw each vessel, which edition first
   carried it, and every capture's timestamp, status, byte count and both hashes. **Since session 79
   the date is stated once per block instead of on every row** — see below; it is refused, and the

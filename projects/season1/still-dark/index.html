@@ -257,6 +257,20 @@
     line-height: 1.5;
     max-width: 84ch;
   }
+  /* OWED ITEM (A), session 85. The figures the list itself printed, at the weight of the
+     figure they qualify and not at the weight of a footnote: this line is the material
+     the heading above it overclaimed against for nineteen sessions, and a caveat that
+     refutes a page's own heading reads at the prominence of that heading. It is the only
+     new ink on this face tonight — the three sentences under it stand at sizes this page
+     already uses, because a disclosure that arrives as a new typographic register reads
+     as decoration and this house has withdrawn one repair for arriving that way already. */
+  .sd-root .sd-arrive-cut-figs {
+    margin: 0 0 0.35rem;
+    font-size: clamp(0.86rem, 1.7vw, 1.05rem);
+    line-height: 1.45;
+    max-width: 72ch;
+    color: var(--sd-ink);
+  }
   .sd-root .sd-arrive-tier {
     margin: 0 0 0.2rem;
     font-size: 0.68rem;
@@ -622,7 +636,16 @@
     "subject": "HOW MUCH OF 4 AUGUST 2026 WAS KNOWABLE ON 4 AUGUST 2026",
     "subject_gloss": "dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, published at frankbueltge.de, which name a ship only once it has come back. They carry only offshore switch-offs a machine model classed as intentional, so they are never all of a day's darkness.",
     "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
-    "heading_then": "IN THE LIST DATED 4 AUG — eleven ships, all that the day held about itself",
+    "since_note": "This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of every name added since 4 August still reaches back to it. The first list that could add a name ruled out of that list would be one dated 12 August 2026.",
+    "heading_then": "IN THE LIST DATED 4 AUG — the eleven names it printed",
+    "cut": {
+      "heading": "WHAT THE LIST OF 4 AUG WAS THE TOP OF",
+      "figures": "11 names printed · 230 disappearances examined, 82 of them dark inside national waters · 5,641 events in the window",
+      "said": "The instrument says so itself, in its method sheet: “The index counts all examined; the case and list show named vessels.” The share this page publishes is a share of what those lists print, not of what they count.",
+      "refused": "How the figure would move if the lists were longer is not published here: a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists would add to the total, so both ends of it would grow and nothing in this record measures by how much.",
+      "kept": "Each of the seven lists this record holds prints six to eleven names of the 213 to 250 disappearances it says it examined. This record has saved that block every night since the first, and no face of this work printed one of its figures until tonight.",
+      "tier": "SOURCED — the three figures the list published, read off the saved copies in the words the parser matched in them. The count of names, and the count of lists below, are this house's own."
+    },
     "stops": [
       {
         "as_of": "2026-08-05T04:39:32Z",
@@ -827,14 +850,14 @@
         "heading_since": "NAMED ONLY BY LATER LISTS — fourteen ships that could have been dark on that same day and that nobody could have had on it. The last five, in darker ink, arrived with the list of 9 AUG."
       },
       {
-        "as_of": "2026-08-10T17:47:21Z",
-        "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-10T17:47:21Z",
+        "as_of": "2026-08-10T22:41:12Z",
+        "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-10T22:41:12Z",
         "edition": "2026-08-10",
         "printed": "+6 DAYS",
         "days_after": 6,
         "total": 31,
-        "share": "37 %–100 %",
-        "share_falling": "37 %",
+        "share": "35 %–100 %",
+        "share_falling": "35 %",
         "share_fixed": "–100 %",
         "added": [
           {
@@ -1501,7 +1524,7 @@
       "figure_fixed": "–100 %",
       "of": "11 of 0–31",
       "editions": 7,
-      "captures": 20
+      "captures": 22
     },
     "as_of": "2026-08-06T08:36:39Z",
     "band": "Thirty-one ships could have been dark on 4 August 2026 and not one of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 0–31, and the share runs from 11 of 31 to 11 of 11.",
@@ -1520,7 +1543,8 @@
         "sha256": "ed3e54ec",
         "content_sha256": "ee555746",
         "edition_date_printed": "4 August 2026",
-        "vessels": 11
+        "vessels": 11,
+        "examined": 230
       },
       {
         "fetched_at_utc": "2026-08-05T12:54:00Z",
@@ -1529,7 +1553,8 @@
         "sha256": "17c07fc3",
         "content_sha256": "47338b03",
         "edition_date_printed": "5 August 2026",
-        "vessels": 8
+        "vessels": 8,
+        "examined": 236
       },
       {
         "fetched_at_utc": "2026-08-05T19:17:55Z",
@@ -1538,7 +1563,8 @@
         "sha256": "17c07fc3",
         "content_sha256": "47338b03",
         "edition_date_printed": "5 August 2026",
-        "vessels": 8
+        "vessels": 8,
+        "examined": 236
       },
       {
         "fetched_at_utc": "2026-08-06T04:36:19Z",
@@ -1547,7 +1573,8 @@
         "sha256": "aed92f4f",
         "content_sha256": "47338b03",
         "edition_date_printed": "5 August 2026",
-        "vessels": 8
+        "vessels": 8,
+        "examined": 236
       },
       {
         "fetched_at_utc": "2026-08-06T08:16:42Z",
@@ -1556,7 +1583,8 @@
         "sha256": "f673e2f7",
         "content_sha256": "53114dfe",
         "edition_date_printed": "6 August 2026",
-        "vessels": 7
+        "vessels": 7,
+        "examined": 234
       },
       {
         "fetched_at_utc": "2026-08-06T14:22:17Z",
@@ -1565,7 +1593,8 @@
         "sha256": "f673e2f7",
         "content_sha256": "53114dfe",
         "edition_date_printed": "6 August 2026",
-        "vessels": 7
+        "vessels": 7,
+        "examined": 234
       },
       {
         "fetched_at_utc": "2026-08-06T15:28:00Z",
@@ -1574,7 +1603,8 @@
         "sha256": "f673e2f7",
         "content_sha256": "53114dfe",
         "edition_date_printed": "6 August 2026",
-        "vessels": 7
+        "vessels": 7,
+        "examined": 234
       },
       {
         "fetched_at_utc": "2026-08-07T04:38:28Z",
@@ -1583,7 +1613,8 @@
         "sha256": "74f093f7",
         "content_sha256": "53114dfe",
         "edition_date_printed": "6 August 2026",
-        "vessels": 7
+        "vessels": 7,
+        "examined": 234
       },
       {
         "fetched_at_utc": "2026-08-07T18:15:53Z",
@@ -1592,7 +1623,8 @@
         "sha256": "4f4413b0",
         "content_sha256": "988267cf",
         "edition_date_printed": "7 August 2026",
-        "vessels": 6
+        "vessels": 6,
+        "examined": 242
       },
       {
         "fetched_at_utc": "2026-08-08T00:44:58Z",
@@ -1601,7 +1633,8 @@
         "sha256": "4f4413b0",
         "content_sha256": "988267cf",
         "edition_date_printed": "7 August 2026",
-        "vessels": 6
+        "vessels": 6,
+        "examined": 242
       },
       {
         "fetched_at_utc": "2026-08-08T04:36:25Z",
@@ -1610,7 +1643,8 @@
         "sha256": "4f4413b0",
         "content_sha256": "988267cf",
         "edition_date_printed": "7 August 2026",
-        "vessels": 6
+        "vessels": 6,
+        "examined": 242
       },
       {
         "fetched_at_utc": "2026-08-08T21:37:19Z",
@@ -1619,7 +1653,8 @@
         "sha256": "4110d2b0",
         "content_sha256": "5c89d9ec",
         "edition_date_printed": "8 August 2026",
-        "vessels": 6
+        "vessels": 6,
+        "examined": 250
       },
       {
         "fetched_at_utc": "2026-08-08T23:57:35Z",
@@ -1628,7 +1663,8 @@
         "sha256": "4110d2b0",
         "content_sha256": "5c89d9ec",
         "edition_date_printed": "8 August 2026",
-        "vessels": 6
+        "vessels": 6,
+        "examined": 250
       },
       {
         "fetched_at_utc": "2026-08-09T00:00:53Z",
@@ -1637,7 +1673,8 @@
         "sha256": "4110d2b0",
         "content_sha256": "5c89d9ec",
         "edition_date_printed": "8 August 2026",
-        "vessels": 6
+        "vessels": 6,
+        "examined": 250
       },
       {
         "fetched_at_utc": "2026-08-09T04:37:35Z",
@@ -1646,7 +1683,8 @@
         "sha256": "680c1c71",
         "content_sha256": "5c89d9ec",
         "edition_date_printed": "8 August 2026",
-        "vessels": 6
+        "vessels": 6,
+        "examined": 250
       },
       {
         "fetched_at_utc": "2026-08-09T20:36:58Z",
@@ -1655,7 +1693,8 @@
         "sha256": "8bf3c1ff",
         "content_sha256": "aa53ae8b",
         "edition_date_printed": "9 August 2026",
-        "vessels": 9
+        "vessels": 9,
+        "examined": 227
       },
       {
         "fetched_at_utc": "2026-08-10T04:36:45Z",
@@ -1664,7 +1703,8 @@
         "sha256": "95c28f17",
         "content_sha256": "aa53ae8b",
         "edition_date_printed": "9 August 2026",
-        "vessels": 9
+        "vessels": 9,
+        "examined": 227
       },
       {
         "fetched_at_utc": "2026-08-10T17:47:21Z",
@@ -1673,7 +1713,8 @@
         "sha256": "90bd7aec",
         "content_sha256": "7b3444ad",
         "edition_date_printed": "10 August 2026",
-        "vessels": 10
+        "vessels": 10,
+        "examined": 213
       },
       {
         "fetched_at_utc": "2026-08-10T22:04:56Z",
@@ -1682,7 +1723,8 @@
         "sha256": "90bd7aec",
         "content_sha256": "7b3444ad",
         "edition_date_printed": "10 August 2026",
-        "vessels": 10
+        "vessels": 10,
+        "examined": 213
       },
       {
         "fetched_at_utc": "2026-08-10T22:41:12Z",
@@ -1691,10 +1733,31 @@
         "sha256": "90bd7aec",
         "content_sha256": "423c17df",
         "edition_date_printed": "10 August 2026",
-        "vessels": 11
+        "vessels": 11,
+        "examined": 213
+      },
+      {
+        "fetched_at_utc": "2026-08-11T04:39:04Z",
+        "http_status": 200,
+        "bytes": 32348,
+        "sha256": "e5ddbb89",
+        "content_sha256": "423c17df",
+        "edition_date_printed": "10 August 2026",
+        "vessels": 11,
+        "examined": 213
+      },
+      {
+        "fetched_at_utc": "2026-08-11T04:47:45Z",
+        "http_status": 200,
+        "bytes": 32348,
+        "sha256": "e5ddbb89",
+        "content_sha256": "423c17df",
+        "edition_date_printed": "10 August 2026",
+        "vessels": 11,
+        "examined": 213
       }
     ],
-    "caption": "Four lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The last column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day."
+    "caption": "Five lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first and, until tonight, printed never."
   },
   "commands": [
     {
@@ -1710,7 +1773,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  20 capture(s) read, 7 distinct edition(s), 8 distinct content(s), 11 distinct bod(y/ies)\n  vessels dark on that day .......... 0–31 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 35%–100%  (11 of 0–31)\n    (a ceiling from 7 edition(s), 20 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  22 capture(s) read, 7 distinct edition(s), 8 distinct content(s), 12 distinct bod(y/ies)\n  vessels dark on that day .......... 0–31 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 35%–100%  (11 of 0–31)\n    (a ceiling from 7 edition(s), 22 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-one is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -1751,6 +1814,25 @@
     <p class="sd-arrive-constant" id="sd-arrive-constant"></p>
     <p class="sd-arrive-group" id="sd-arrive-head-then"></p>
     <ul class="sd-arrive-names" id="sd-arrive-names-then"></ul>
+    <!-- OWED ITEM (A), session 85 — the disclosure this work has carried in its own saved
+         bytes since the first night and printed never. It stands HERE, immediately under
+         the eleven names, because the heading over those names said for nineteen sessions
+         that they were "all that the day held about itself" and the file this house saved
+         that morning says otherwise.
+         CUT TO THREE LINES THE SAME NIGHT IT WAS BUILT. It arrived as five fixed
+         paragraphs and `DRAMATURG-85.md` measured what they cost on the running object:
+         +266 words, +76 % of the head's prose, the controls 362 px further down at
+         1400×900 and 586 px at 390×844, and the one phone frame that had held the figure
+         and the buttons together — 813 px inside an 844 px viewport — abolished. What
+         stays between the names and the space is the figures the list itself printed, the
+         instrument's own sentence about what those figures are, and the tier word. The
+         confession, the range and the refusal are not withdrawn: they stand below the
+         controls with the caption, where this head's other prose already lives.
+         Nothing in this block moves between stops — and that, the same memo rules, is why
+         it is annotation and not yet staging. The prescription is banked, not built. -->
+    <p class="sd-arrive-group" id="sd-arrive-cut-head"></p>
+    <p class="sd-arrive-cut-figs" id="sd-arrive-cut-figs"></p>
+    <p class="sd-arrive-tier" id="sd-arrive-cut-tier"></p>
     <p class="sd-arrive-group" id="sd-arrive-head-since"></p>
     <ul class="sd-arrive-names" id="sd-arrive-names-since"></ul>
     <p class="sd-arrive-hedge" id="sd-arrive-hedge"></p>
@@ -1776,6 +1858,17 @@
       <p class="sd-arrive-state" id="sd-arrive-state" role="status" aria-live="polite"></p>
     </div>
     <p class="sd-arrive-cap" id="sd-arrive-cap"></p>
+    <!-- MOVED HERE FROM THE SPINE, session 85, on the staging voice's measurements. The
+         second limb of (A) — this record cannot tell a ship that came back later from a
+         ship the list did not print — and, with it, the confession, the range across the
+         seven lists and the refusal to say which way the share would move if the lists
+         were longer. All four were true where they stood and all four were between the
+         eleven names and the space that fills under them, which is the one comparison this
+         piece has. Nothing measures a fold down here. -->
+    <p class="sd-arrive-cap" id="sd-arrive-cut-said"></p>
+    <p class="sd-arrive-cap" id="sd-arrive-since-note"></p>
+    <p class="sd-arrive-cap" id="sd-arrive-cut-kept"></p>
+    <p class="sd-arrive-tier" id="sd-arrive-cut-refused"></p>
     <p class="sd-arrive-tier" id="sd-arrive-tier"></p>
     <p class="sd-arrive-tier" id="sd-arrive-restraint"></p>
   </section>
@@ -1911,6 +2004,18 @@
   document.getElementById("sd-arrive-gloss").textContent = arrive.subject_gloss;
   document.getElementById("sd-arrive-cap").textContent = arrive.caption;
   document.getElementById("sd-arrive-hedge").textContent = arrive.hedge;
+  // OWED ITEM (A), session 85 — written once, never touched by the run. Everything the
+  // stops rewrite is below or above it; this block is the fixed statement the falling
+  // figure is a figure OF.
+  document.getElementById("sd-arrive-cut-head").textContent = arrive.cut.heading;
+  document.getElementById("sd-arrive-cut-figs").textContent = arrive.cut.figures;
+  document.getElementById("sd-arrive-cut-said").textContent = arrive.cut.said;
+  document.getElementById("sd-arrive-cut-tier").textContent = arrive.cut.tier;
+  // Below the controls, with the caption: the prose the staging voice took out of the
+  // run's spine tonight. Same strings, same island, different place on the page.
+  document.getElementById("sd-arrive-cut-kept").textContent = arrive.cut.kept;
+  document.getElementById("sd-arrive-cut-refused").textContent = arrive.cut.refused;
+  document.getElementById("sd-arrive-since-note").textContent = arrive.since_note;
   // One sentence, not the paragraph that was cut: it carries the tier word for the figure
   // above it and says what the figure is worked out FROM, and it does not move between
   // stops. Put back the same night the cut was made, on a blocking verifying pass — the
@@ -2237,8 +2342,20 @@
     // the saved copy. The legend named no dates on the SOURCED side, so the wrong tier
     // word was the visible one. Failure 25's shape again: a legend that does not cover a
     // published value lets the face carry a tier it did not earn.
-    ["SOURCED", "name · flag · days dark · waters · each list's own date and ship count " +
-                "— printed by the instrument"],
+    // Session 85, owed item (A): the face began printing four aggregate figures the lists
+    // themselves publish, and a legend that does not cover a published value is failure 25
+    // waiting to happen a fourth time. The addition is made in the same commit as the
+    // figures, not in the session after it.
+    // Session 85, owed item (A): the face began printing three aggregate figures the lists
+    // themselves publish, and a legend that does not cover a published value is failure 25
+    // waiting to happen a fourth time. Corrected the same night on `VERIFIER-85.md` §8,
+    // which found the first version two of the three short — and which found, in the same
+    // line, an older error this house had never noticed: the SHIP COUNT is not printed by
+    // the instrument. Upstream prints names; this house counts them. It moves to the
+    // DERIVED line, where it belongs, and the SOURCED line names only what upstream prints.
+    ["SOURCED", "name · flag · days dark · waters · each list's own date · what each list " +
+                "says it examined, how many of those were inside national waters, and how " +
+                "many events were in its window — printed by the instrument"],
     // "every date on this page" was false and blurred two tiers: the list dates are
     // SOURCED and the fetch times OBSERVED. Corrected after the panel, on the Verifier's
     // blocking pass (VERIFIER-72 D1); the readers saw the over-broad line.
@@ -2246,7 +2363,7 @@
     // share, so when the head's own tier paragraph was cut the same night, the largest
     // number on this page was left with no tier word anywhere on the face. The legend now
     // names the figure it always covered and never said it covered.
-    ["DERIVED", "the dark-and-return spans, and this page's share — worked out here, both ends printed"],
+    ["DERIVED", "the dark-and-return spans, this page's share, and the count of names in each list — worked out here, both ends printed"],
     ["OBSERVED", "what this page saw, and when it first saw it"]
   ];
   var legendEl = document.getElementById("sd-legend");
@@ -2473,7 +2590,11 @@
   // saying a night can never remove one — and the column falls. Two panels reported
   // it as a contradiction; both were reading the header, which named neither what is
   // counted nor where. The column is unchanged; the head now says what it holds.
-  ["fetched (UTC)", "status", "bytes", "body sha256", "content", "edition", "ships in that list"]
+  // OWED ITEM (A) — session 85. The last header is new and it is the disclosure this
+  // table has been one column short of since the first night: beside the ships a copy
+  // printed stands what the same copy says the instrument examined to print them.
+  ["fetched (UTC)", "status", "bytes", "body sha256", "content", "edition",
+   "ships in that list", "disappearances examined"]
     .forEach(function (h) {
       var th = document.createElement("th");
       th.textContent = h;
@@ -2489,7 +2610,10 @@
       c.sha256 + "…",
       c.content_sha256 + "…",
       c.edition_date_printed,
-      String(c.vessels)
+      String(c.vessels),
+      // An em dash where a copy carries no aggregate block, never a nought: a figure this
+      // record does not hold is not a figure this record read as zero.
+      c.examined === null || c.examined === undefined ? "—" : c.examined.toLocaleString("en-US")
     ].forEach(function (v) {
       var td = document.createElement("td");
       td.textContent = v;

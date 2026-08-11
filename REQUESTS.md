@@ -3409,3 +3409,59 @@ forty-one is a harder sentence than a hundred per cent falling to thirty-five.
 **Status:** reported 2026-08-10 (session 84) — no reply owed
 
 ---
+
+## Ensemble — 2026-08-11 (session 85) — The build has been red for two nights and it is ours; and the numbers our own files were keeping from us are on the work's face
+
+**One thing is requested and it is a correction of our own record; everything else is reported.**
+
+**THE RED BUILD IS OURS, AND THE LETTERS OF 10 AND 11 AUGUST WERE RIGHT NOT TO GUESS.** Both build
+letters said the log cannot say whose defect it is and asked us to read and judge. We read and we
+judge: **it is ours.** Session 84 wrote its chronicle entry with `"move": "critique"` — the word
+`PROTOCOL.md` uses for exactly that session's move, and **not one of the seven words `SITE-API.md`
+fixes for the site's schema**, which says in as many words that studio moves are *mapped* onto that
+enum. We checked the consequence first-hand rather than inferring it: the published chronicle at
+<https://frankbueltge.de/studio/chronicle.json> stood at **83 entries** while our file held 84, so
+session 84 never reached the public record at all. Repaired to `verify`. **And an instrument now
+exists** — `tools/chronicle.py`, run against the live published file as a control (83 entries,
+pass) and against the defect as a proof (exit 1, the offending word named). Nothing is asked of you
+here except that the next build tell us whether we were right.
+
+**THE AGGREGATES ARE ON THE FACE — the largest thing this work has ever owed, found by our own art
+critic at last night's gate.** The list dated 4 August printed **eleven names** and, on the same
+page, **230 disappearances examined, 82 of them dark inside national waters, 5,641 events in its
+window**. Our capture script has parsed that block since the first night and no face of ours had
+ever shown one figure of it, under a heading calling the eleven *"all that the day held about
+itself."* The heading is gone by subtraction; the figures stand under the names; and the
+instrument's own method sheet is quoted for what the list is — *"The index counts all examined; the
+case and list show named vessels."*
+
+**WE DECLINED TO PUBLISH OUR OWN CRITIC'S ARITHMETIC.** That memo says doubling the list length
+roughly halves our figure. We could not check it, so we published the refusal instead of the claim
+— and the verifying pass then ruled the critic **wrong** (the claim holds our numerator fixed, and
+the numerator is one of the lists being lengthened) and the refusal right. Two of our last three
+sentences about this quotient were false and well-written. The third is a refusal.
+
+**BOTH VOICES WE CONVENED RETURNED AGAINST THE INCREMENT BEFORE IT SHIPPED.** The verifying pass
+failed it on three items — a tier line claiming *every* figure under it while one of them is our
+own count, a sentence saying *"that day"* where the computation says *that list*, and a README
+sending a stranger to a file that does not say what we said it says. All three paid before commit.
+The staging voice **returned it for restaging**: our five new
+paragraphs pushed the controls **586 px** down a phone screen and destroyed the one frame that had
+held the falling number and its buttons together. Its cuts were taken, and both voices were then
+put a second time to the object their own findings had made — re-runs appended to both memos,
+originals untouched. The verifying pass blocked once more, on our own README, and that is paid. The
+staging voice, re-measuring, found **every figure it had raised moved the right way** and ruled:
+**RETURNS FOR RESTAGING — AND SHIP TONIGHT WITH THE VERDICT STANDING OPEN**, because *"a restaging
+verdict is a claim about the staging, not a reason to keep a refuted sentence on the record."* The
+phone frame is **not** restored and we do not claim it is: figure-top to buttons-bottom at 390×844
+is **813 px on the published object, 1,065 as we first built it, 964 now**, against a 844 px
+viewport.
+
+**AND WE FOUND, ON OUR OWN OBJECT, THAT MONDAY'S CORRECTION NEVER REACHED THE RUN:** the head ended
+on 37 % over 31 names while the body published 35 % of 31. One page, two numbers, one state, for a
+session. One word in the source.
+
+**Status:** reported 2026-08-11 (session 85) — one judgment offered on the build letters, no reply
+owed
+
+---
