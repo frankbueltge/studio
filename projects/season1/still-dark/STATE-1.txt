@@ -8,8 +8,10 @@ dark — the ship's AIS transponder switched off, so it stops being tracked. The
 
 100 %–100 %
 of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 4 AUG.
+11 of 11
+— the falling end as a division: the names the day's list had already given, of the ships that could have been dark on it. The other end is 11 of 11 at every stop. OBSERVED over DERIVED — the count of names is this record's own.
 11 of 230
-— the list of 4 AUG named eleven ships out of the 230 disappearances it says it examined. No stop moves this figure. SOURCED — the count of names is this house's own.
+— eleven ships named, of 230 disappearances the list says it examined. SOURCED.
 
 Neither end of this figure can rise. The upper end holds at 100 % until more of these ships are certainly dark on this day than the eleven the day itself named; only the lower end has moved so far, and the next list can lower it again.
 
@@ -296,7 +298,7 @@ SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved c
 
 It fell thirty-six points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; and PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day — seventeen ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 24 saved copies of 8 lists —
+LIVE · as this record measures it now, from 25 saved copies of 8 lists —
 33 %–100 %
 11 of 2–33
 
@@ -335,17 +337,18 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list	disapp
 2026-08-11T04:47:45Z	200	32,348	e5ddbb89…	423c17df…	10 August 2026	11	213
 2026-08-11T11:19:15Z	200	32,333	a3107ddd…	a7ab0eb1…	11 August 2026	11	189
 2026-08-11T21:58:00Z	200	32,441	e506a522…	a7ab0eb1…	11 August 2026	11	189
+2026-08-12T04:36:39Z	200	31,631	e21f57d8…	a7ab0eb1…	11 August 2026	11	189
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  24 capture(s) read, 8 distinct edition(s), 9 distinct content(s), 14 distinct bod(y/ies)
+day 2026-08-04  ·  25 capture(s) read, 8 distinct edition(s), 9 distinct content(s), 15 distinct bod(y/ies)
   vessels dark on that day .......... 2–33 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 33%–100%  (11 of 2–33)
-    (a ceiling from 8 edition(s), 24 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 8 edition(s), 25 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 

@@ -143,6 +143,21 @@
     color: var(--sd-dim);
     max-width: 62ch;
   }
+  /* THE FALLING END AS A DIVISION (session 88). Same size, same tabular numerals and same
+     line-height as the standing figure under it, so the two rows are visibly one kind of
+     thing: a numerator over a denominator, in ships. Everything else about it is the
+     opposite — the live ink and the display weight the falling percentage wears — because
+     what the run has to show is that one of these two divisions is rewritten eight times
+     while the other is written once. The mark this face has meant by CANNOT MOVE since
+     session 83 keeps its one meaning: it is on the row that does not move and off the row
+     that does. */
+  .sd-root .sd-arrive-frac {
+    font-size: clamp(1.1rem, 2.3vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
   /* The figure that runs. It carries both ends of its own band since session 81 — it is
      the page's published share, not a new number — so it is wider and smaller than the
      bare count it replaces, and tabular so the digits do not dance as it falls. */
@@ -716,8 +731,9 @@
       "kept": "Each of the eight lists this record holds prints six to eleven names of the 189 to 250 disappearances it says it examined. This record has saved that block every night since the first, and no face of this work printed one of its figures until tonight.",
       "tier": "SOURCED — the three figures the list published, read off the saved copies in the words the parser matched in them. The count of names, and the count of lists below, are this house's own.",
       "standing": "11 of 230",
-      "standing_note": "— the list of 4 AUG named eleven ships out of the 230 disappearances it says it examined. No stop moves this figure. SOURCED — the count of names is this house's own."
+      "standing_note": "— eleven ships named, of 230 disappearances the list says it examined. SOURCED."
     },
+    "fraction_note": "— the falling end as a division: the names the day's list had already given, of the ships that could have been dark on it. The other end is 11 of 11 at every stop. OBSERVED over DERIVED — the count of names is this record's own.",
     "stops": [
       {
         "as_of": "2026-08-05T04:39:32Z",
@@ -729,6 +745,8 @@
         "share": "100 %–100 %",
         "share_falling": "100 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 11",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "TUNAMAR",
@@ -791,6 +809,8 @@
         "share": "79 %–100 %",
         "share_falling": "79 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 14",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "SOUTHERN SEAS NO.302",
@@ -821,6 +841,8 @@
         "share": "69 %–100 %",
         "share_falling": "69 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 16",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "ALBACORA CUATRO",
@@ -847,6 +869,8 @@
         "share": "65 %–100 %",
         "share_falling": "65 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 17",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "WANGBIAO-8730",
@@ -869,6 +893,8 @@
         "share": "55 %–100 %",
         "share_falling": "55 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 20",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "TUNA PESCA",
@@ -899,6 +925,8 @@
         "share": "44 %–100 %",
         "share_falling": "44 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 25",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "HAIZEA BOST",
@@ -937,6 +965,8 @@
         "share": "35 %–100 %",
         "share_falling": "35 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 31",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "HY928-21%-81%",
@@ -979,6 +1009,8 @@
         "share": "33 %–100 %",
         "share_falling": "33 %",
         "share_fixed": "–100 %",
+        "share_falling_of": "11 of 33",
+        "share_fixed_of": "11 of 11",
         "added": [
           {
             "name": "PANOFI FORE RUNNER",
@@ -1662,6 +1694,8 @@
       "figure": "69 %–100 %",
       "figure_falling": "69 %",
       "figure_fixed": "–100 %",
+      "fraction_falling": "11 of 16",
+      "fraction_fixed": "11 of 11",
       "of": "11 of 0–16",
       "editions": 3,
       "captures": 5
@@ -1671,9 +1705,11 @@
       "figure": "33 %–100 %",
       "figure_falling": "33 %",
       "figure_fixed": "–100 %",
+      "fraction_falling": "11 of 33",
+      "fraction_fixed": "11 of 11",
       "of": "11 of 2–33",
       "editions": 8,
-      "captures": 24
+      "captures": 25
     },
     "as_of": "2026-08-06T08:36:39Z",
     "band": "Thirty-three ships could have been dark on 4 August 2026 and two of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 2–33, and the share runs from 11 of 33 to 11 of 11.",
@@ -1924,6 +1960,16 @@
         "edition_date_printed": "11 August 2026",
         "vessels": 11,
         "examined": 189
+      },
+      {
+        "fetched_at_utc": "2026-08-12T04:36:39Z",
+        "http_status": 200,
+        "bytes": 31631,
+        "sha256": "e21f57d8",
+        "content_sha256": "a7ab0eb1",
+        "edition_date_printed": "11 August 2026",
+        "vessels": 11,
+        "examined": 189
       }
     ],
     "caption": "Six lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first and, until tonight, printed never."
@@ -1942,7 +1988,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  24 capture(s) read, 8 distinct edition(s), 9 distinct content(s), 14 distinct bod(y/ies)\n  vessels dark on that day .......... 2–33 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 33%–100%  (11 of 2–33)\n    (a ceiling from 8 edition(s), 24 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  25 capture(s) read, 8 distinct edition(s), 9 distinct content(s), 15 distinct bod(y/ies)\n  vessels dark on that day .......... 2–33 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 33%–100%  (11 of 2–33)\n    (a ceiling from 8 edition(s), 25 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-three is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -1999,7 +2045,25 @@
            run prints `11`, so the relation between them is carried by the 11.52 px sentence
            beside the numeral and not by the run. Its prescription — the falling figure
            printing `11 of 11 → 11 of 33` beside the standing `11 of 230` — is what is owed
-           on this item now, and it is not built tonight. -->
+           on this item now, and it is BUILT IN SESSION 88 — the row immediately below.
+           The frame is three rows from tonight: the percentage, the division that
+           percentage is, and the division the day's own list is. The middle row is the
+           only thing added; the top row is untouched and the bottom row lost one
+           sentence — the one the middle row now performs instead of asserting. -->
+      <!-- THE FALLING END, IN SHIPS. `DRAMATURG-87.md` at :105 and :402, ruling on its own
+           built prescription: *"Placement was never the problem; units were … the falling
+           figure must print its own fraction, not only its percentage, so that the run
+           shows `11 of 11 → 11 of 33` while `11 of 230` stands underneath. Then the
+           numerator repeats down the column, the denominators diverge, the run does the
+           arguing, and the 11.52 px sentence can go."* This is that row. It is set in the
+           standing figure's size and its tabular numerals — the same species of object,
+           deliberately — and in the LIVE ink and the display weight, because the one
+           difference between the two rows is the one the run exists to show: this numeral
+           is rewritten at every stop and the one under it is written once. -->
+      <div class="sd-arrive-row">
+        <span class="sd-arrive-frac" id="sd-arrive-frac"></span>
+        <span class="sd-arrive-standing-note" id="sd-arrive-frac-note"></span>
+      </div>
       <div class="sd-arrive-row">
         <span class="sd-arrive-standing-fig" id="sd-arrive-standing-fig"></span>
         <span class="sd-arrive-standing-note" id="sd-arrive-standing-note"></span>
@@ -2183,6 +2247,7 @@
   var countEl = document.getElementById("sd-arrive-count");
   var countFallEl = document.getElementById("sd-arrive-count-falling");
   var countFixedEl = document.getElementById("sd-arrive-count-fixed");
+  var fracEl = document.getElementById("sd-arrive-frac");
   var stateEl = document.getElementById("sd-arrive-state");
   var whenFixedEl = document.getElementById("sd-arrive-when-fixed");
   var whenTailEl = document.getElementById("sd-arrive-when-tail");
@@ -2212,6 +2277,11 @@
   // length of the run, is the piece.
   document.getElementById("sd-arrive-standing-fig").textContent = arrive.cut.standing;
   document.getElementById("sd-arrive-standing-note").textContent = arrive.cut.standing_note;
+  // The clause under the moving fraction is written once, like every other clause in this
+  // head: the row's numeral is the only thing a stop is allowed to touch (`DRAMATURG-82.md`
+  // §3 — a clause that re-renders on every beat while the visitor is looking for what
+  // changed is noise, and this head has paid that price once already).
+  document.getElementById("sd-arrive-frac-note").textContent = arrive.fraction_note;
   document.getElementById("sd-arrive-cut-head").textContent = arrive.cut.heading;
   document.getElementById("sd-arrive-cut-figs").textContent = arrive.cut.figures;
   document.getElementById("sd-arrive-cut-said").textContent = arrive.cut.said;
@@ -2304,6 +2374,10 @@
     // cannot print a share the page did not compute (session 83).
     countFallEl.textContent = s.share_falling;
     countFixedEl.textContent = s.share_fixed;
+    // The same end, said in ships (session 88). Two numerals now move together at every
+    // beat and they are the same quotient in two notations — one the page has printed since
+    // it had a head, one the eye can hold against the figure standing under it.
+    fracEl.textContent = s.share_falling_of;
     // Only the tail is rewritten: the clause that says what the figure means is the same
     // at every stop and it stood still on the page while being replaced six times in
     // eighteen seconds (session 83, `DRAMATURG-82.md` §3). It is written once, on load.

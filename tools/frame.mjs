@@ -63,6 +63,15 @@ const VIEWPORTS = [
 // as a reader meets them, not as the DOM holds them.
 const TOP = "#sd-arrive-count";
 const BOTTOM = "#sd-arrive-controls";
+// THE SECOND SPAN, added in session 88 for the same reason the first one exists. Sessions
+// 87 and 88 both owed an item stated as *figure-top to hole-bottom at 390×844* — whether one
+// screen can hold the falling number and the space that fills under it, which is the piece's
+// own argument in one frame — and both quoted it from a number nobody could re-run. It is
+// measured here, at every stop, beside the first. It does NOT change this file's exit
+// contract: the frame test still decides the exit code, and this span is reported red or
+// green and left to the session to argue. An instrument that failed the build on a
+// measurement no gate has ruled on would be legislating.
+const HOLE_BOTTOM = "#sd-arrive-names-since";
 const PARTS = [
   [".sd-arrive-headline", "the frame: both figures and their clauses"],
   ["#sd-arrive-constant", "what the ends of the figure can do"],
@@ -94,6 +103,7 @@ for (const vp of VIEWPORTS) {
   // Every stop, because the head reserves its heights from the tallest stop and a
   // reservation that failed would show up here as a frame that changes under the run.
   const frames = [];
+  const holes = [];
   for (let i = 0; i < stops; i++) {
     await page.$$eval(
       "#sd-arrive-ladder button:not(.sd-arrive-replay)",
@@ -101,16 +111,20 @@ for (const vp of VIEWPORTS) {
       i,
     );
     await page.waitForTimeout(40);
-    frames.push(
+    const span = async (t, b) =>
       await page.evaluate(
-        ([t, b]) => {
-          const top = document.querySelector(t).getBoundingClientRect().top;
-          const bot = document.querySelector(b).getBoundingClientRect().bottom;
+        ([t2, b2]) => {
+          const el = document.querySelector(b2);
+          if (!el) return null;
+          const top = document.querySelector(t2).getBoundingClientRect().top;
+          const bot = el.getBoundingClientRect().bottom;
           return Math.round(bot - top);
         },
-        [TOP, BOTTOM],
-      ),
-    );
+        [t, b],
+      );
+    frames.push(await span(TOP, BOTTOM));
+    const h = await span(TOP, HOLE_BOTTOM);
+    if (h !== null) holes.push(h);
   }
   const lo = Math.min(...frames);
   const hi = Math.max(...frames);
@@ -120,6 +134,17 @@ for (const vp of VIEWPORTS) {
       `of ${vp.h} — ${verdict}`,
   );
   if (hi > vp.h && vp.w <= 480) over = hi - vp.h;
+
+  // The same question asked of the other end of the piece's argument: the falling figure and
+  // the space that fills under it. Reported, never enforced — see the note at HOLE_BOTTOM.
+  if (holes.length) {
+    const hLo = Math.min(...holes);
+    const hHi = Math.max(...holes);
+    console.log(
+      `  figure-top to hole-bottom: ${hLo === hHi ? hHi : `${hLo}–${hHi}`} px ` +
+        `of ${vp.h} — ${hHi <= vp.h ? "HOLDS" : `OVER by ${hHi - vp.h}`}`,
+    );
+  }
 
   // THE BUDGET, AND WHICH PARTS THE FRAME ACTUALLY CONTAINS. The first version of this
   // report assumed every part listed lies between the two ends and subtracted their sum
