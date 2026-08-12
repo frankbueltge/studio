@@ -63,14 +63,30 @@ const VIEWPORTS = [
 // as a reader meets them, not as the DOM holds them.
 const TOP = "#sd-arrive-count";
 const BOTTOM = "#sd-arrive-controls";
-// THE SECOND SPAN, added in session 88 for the same reason the first one exists. Sessions
-// 87 and 88 both owed an item stated as *figure-top to hole-bottom at 390×844* — whether one
-// screen can hold the falling number and the space that fills under it, which is the piece's
-// own argument in one frame — and both quoted it from a number nobody could re-run. It is
-// measured here, at every stop, beside the first. It does NOT change this file's exit
-// contract: the frame test still decides the exit code, and this span is reported red or
-// green and left to the session to argue. An instrument that failed the build on a
-// measurement no gate has ruled on would be legislating.
+// THE SECOND SPAN WAS STRUCK IN SESSION 89, by order of `DRAMATURG-89.md` cut 1, and the
+// reason is the only reason an instrument should ever be restated: THE ITEM WAS THE MISTAKE.
+//
+// Sessions 87 and 88 owed an item stated as *figure-top to hole-BOTTOM at 390×844*, and this
+// file measured it from 88: 867 px, then 786 — green for the first time in the work's life,
+// bought with 157 px of staging. It survived one night. The ninth list added two ship names,
+// the hole grew two rows, and the span read 849 of 844. Rebuilt at n chips it is 23 px per
+// row, one row per two names: 26 chips → over by 28, 28 → over by 51, 32 → over by 97.
+//
+// The hole is this work's SUBJECT — the part of a finished day nobody could have had on it —
+// and it grows every night the work succeeds at what it does. An item whose far end is the
+// subject therefore goes RED ON SUCCESS, and a house paying it in prose pays 23 px a night
+// forever. That is not a frame test; it is a tax on the work's own accumulation.
+//
+// WHAT REPLACES IT is the bounded fact the struck span was a proxy for, and it is bounded
+// because its far end is the VIEWPORT and not the hole: with the whole figure on screen, how
+// much of the hole shares the frame with it. Measured across the scroll range at every stop,
+// reported at its best position, floored at session 89's own reading — 268 px and 22 of 24
+// chips at 390×844. The floor is a number a stranger re-runs, and it cannot drift upward as
+// the hole grows: more chips do not move the figure, and the viewport does not change size.
+//
+// Neither span changes this file's exit contract: the frame test still decides the exit code.
+// An instrument that failed the build on a measurement no gate has ruled on would be
+// legislating — and the gate that ruled on this one ordered it restated, not enforced.
 const HOLE_BOTTOM = "#sd-arrive-names-since";
 const PARTS = [
   [".sd-arrive-headline", "the frame: both figures and their clauses"],
@@ -123,8 +139,43 @@ for (const vp of VIEWPORTS) {
         [t, b],
       );
     frames.push(await span(TOP, BOTTOM));
-    const h = await span(TOP, HOLE_BOTTOM);
-    if (h !== null) holes.push(h);
+    // THE SHARED FRAME, at this stop. Scan the scroll range; keep only positions where the
+    // WHOLE figure is on screen; among those, take the one showing most of the hole. Chips
+    // count only when a chip is wholly inside the viewport — a name cut in half is not a
+    // name a visitor read.
+    const shared = await page.evaluate(
+      ([topSel, holeSel]) => {
+        const fig = document.querySelector(topSel);
+        const hole = document.querySelector(holeSel);
+        if (!fig || !hole) return null;
+        const chips = [...hole.querySelectorAll("li")];
+        const vh = window.innerHeight;
+        const range = Math.max(
+          0,
+          document.documentElement.scrollHeight - vh,
+        );
+        const y0 = window.scrollY;
+        let best = { px: -1, chips: 0, scrollY: 0 };
+        for (let k = 0; k <= 240; k++) {
+          window.scrollTo(0, Math.round((range * k) / 240));
+          const f = fig.getBoundingClientRect();
+          if (f.top < 0 || f.bottom > vh) continue;
+          const h = hole.getBoundingClientRect();
+          const px = Math.round(
+            Math.max(0, Math.min(h.bottom, vh) - Math.max(h.top, 0)),
+          );
+          const seen = chips.filter((c) => {
+            const r = c.getBoundingClientRect();
+            return r.top >= 0 && r.bottom <= vh;
+          }).length;
+          if (px > best.px) best = { px, chips: seen, scrollY: window.scrollY };
+        }
+        window.scrollTo(0, y0);
+        return best.px < 0 ? null : { ...best, of: chips.length };
+      },
+      [TOP, HOLE_BOTTOM],
+    );
+    if (shared) holes.push(shared);
   }
   const lo = Math.min(...frames);
   const hi = Math.max(...frames);
@@ -135,14 +186,29 @@ for (const vp of VIEWPORTS) {
   );
   if (hi > vp.h && vp.w <= 480) over = hi - vp.h;
 
-  // The same question asked of the other end of the piece's argument: the falling figure and
-  // the space that fills under it. Reported, never enforced — see the note at HOLE_BOTTOM.
+  // The other end of the piece's argument, asked so that the answer is bounded: with the
+  // whole figure on screen, how much of the hole is on screen with it. Reported, never
+  // enforced — see the note at HOLE_BOTTOM. The floor is session 89's own reading and only
+  // the phone carries it; the wide viewport holds the whole hole and has nothing to floor.
   if (holes.length) {
-    const hLo = Math.min(...holes);
-    const hHi = Math.max(...holes);
+    // The px is the reserved height and is the same at every stop; what grows is the chip
+    // count, and it grows to its largest at the LAST stop — the state the run rests on and
+    // the one the next list makes bigger. So the floor is read there. The earlier stops are
+    // reported as a range so a reservation that failed would show up as a moving number.
+    const live = holes[holes.length - 1];
+    const pxLo = Math.min(...holes.map((h) => h.px));
+    const pxHi = Math.max(...holes.map((h) => h.px));
+    const floorPx = vp.w <= 480 ? 268 : null;
+    const floorChips = vp.w <= 480 ? 22 : null;
+    const under =
+      floorPx !== null && (live.px < floorPx || live.chips < floorChips);
     console.log(
-      `  figure-top to hole-bottom: ${hLo === hHi ? hHi : `${hLo}–${hHi}`} px ` +
-        `of ${vp.h} — ${hHi <= vp.h ? "HOLDS" : `OVER by ${hHi - vp.h}`}`,
+      `  the hole sharing a frame with the whole figure: ` +
+        `${pxLo === pxHi ? pxHi : `${pxLo}–${pxHi}`} px, ` +
+        `${live.chips} of ${live.of} chips at the last stop` +
+        (floorPx === null
+          ? ""
+          : ` — floor ${floorPx} px / ${floorChips} chips — ${under ? "UNDER" : "HOLDS"}`),
     );
   }
 

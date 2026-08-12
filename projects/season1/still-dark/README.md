@@ -41,6 +41,20 @@ list dated 4 August — one of the lists being lengthened. It also verified the 
 refusal first-hand: all twenty later names have return windows reaching back past 4 August, so all
 twenty are names a longer list dated 4 August could have carried.
 
+> **CORRECTED, session 89** (`../VERIFIER-89.md`, noted). **That sentence was true when it was
+> written and is false in the present tense tonight.** It was measured in session 85 over twenty
+> later names; there are now twenty-four, and **two of them — ISABELLA (USA) and LUCKY TJ (USA),
+> both first named by the list of 12 August — have return windows that do NOT reach back to
+> 4 August.** They are the first two names in this work's life that a longer list dated 4 August
+> could *not* have carried, and the face computes the count itself: *"the return window of
+> twenty-two of the twenty-four names added since 4 August still reaches back to it."* The
+> ruling above is unaffected — it is about the numerator, not about these two — and the sentence
+> stands unedited beside this correction rather than being replaced.
+> *Repository-wide search for the superseded string (memory decision 5), run tonight:*
+> `grep -rn "all twenty later names\|all twenty are names"` over every `.md`, `.py`, `.mjs` and
+> `.html` in this repository returns **one instance, the line above**, and it carries this
+> correction beside it. No other file asserts it.
+
 **And the block's placement did not survive the staging voice.** `../DRAMATURG-85.md`, measured on
 the running object: as first built, the disclosure was five fixed paragraphs between the eleven
 names and the space that fills under them — **+266 words, +76 % of the head's prose**, the controls
@@ -700,6 +714,44 @@ relying on a legend three blocks up in a different section. The tier word now st
 section. **What it cannot say**, printed in its own output: that a tier word which is present is the
 RIGHT one — two ledger columns captioned OBSERVED were in fact SOURCED, and no proximity rule can
 catch that. Run: `NODE_PATH=<global node_modules> node tools/tiers.mjs`.
+
+## THE STATE OF EVERY GUARD, SESSION 89 — printed because two of them are not green
+
+*`KRITIKER-89.md` condition 3, paid here. The critic's words: the guards must be green, or their
+current output printed truthfully with each instrument's pass criterion. **One of them is red on the
+page as committed, and this is where a stranger is told so before they run it.** Every figure below
+was taken tonight on the committed object; each line names the command and what makes it pass.*
+
+| instrument | pass criterion | tonight, on this page | exit |
+|---|---|---|---|
+| `python3 data.py --check` | the rendered island is byte-identical to a fresh build from the captures | `island matches the captures` | **0** |
+| `node announce.mjs` | **none — it reports, it does not judge.** Its only non-zero exit is `2` when the browser library is missing | 1 live region · 3 spoken announcements · 10 figure rewrites · a stop pressed at 3 s announced at 3.2 s | **0** |
+| `node gaps.mjs` | no bar stands nearer another row's label, at either width | 1.42 px own · 9.59 px next, 0 of 35 rows failing | **0** |
+| `node ../../../tools/tiers.mjs` | every printed figure sits in a scope carrying a tier word | pass, **and it cannot say the word is the RIGHT one** | **0** |
+| `node ../../../tools/frame.mjs` | the figure and the controls fit one screen at every stop, both widths | 327 px of 844 · 479 px of 900 — HOLDS | **0** |
+| `node ../../../tools/fold.mjs` | **no must-hold element leaves the viewport, or stands on the material, at ≤ 480 px** | **99 failures — RED** | **1** |
+
+**`fold.mjs` is red and is published red.** What it reports is **the figure scrolled off the top** —
+at the scroll positions where a reader is down among the ship names, the falling number is above the
+viewport. It reports **zero occlusions**: no chip of the growing names is covered at any stop or
+scroll position, which is the defect it was built for in session 84 and which is fixed. The count is
+**11 failures per stop**, and it therefore tracks the number of stops and nothing else: it read 88 at
+eight stops and reads 99 at nine. **That is not a regression and this record does not print it as
+one** (`DRAMATURG-89.md` cut 2) — a ninth list added a ninth stop, and eleven times nine is
+ninety-nine. The house has been told twice now that a number moving with a ruler is not a
+measurement, and it is printed here so nobody has to be told a third time.
+
+**What `frame.mjs` measures changed tonight, and the reason is published in the instrument's own
+header.** Until tonight it also reported *figure-top to hole-bottom*, an item sessions 87 and 88 paid
+157 px to take green at 786 of 844. It survived one night: the ninth list added two ship names, the
+hole grew two rows, and it read 849 of 844. Rebuilt at n chips, the span costs **23 px per row, one
+row per two names** — so the item goes **red on exactly the nights this work succeeds**, because its
+far end is the work's own subject. `DRAMATURG-89.md` cut 1 ruled the **item** the mistake, not the
+object, and ordered it restated against a bounded end: with the whole figure on screen, how much of
+the hole shares the frame with it — **273 px and 24 of 24 chips tonight, against the floor of 268 px
+and 22 chips the staging voice set from its own reading.** *Tonight's prose cuts shortened the head,
+and none of that height is claimed against this floor: the cuts were ordered for truth, and the voice
+that ordered them named banked failure 48 in advance if the house booked their pixels.*
 
 **Dependencies, named honestly:** node ≥ 18 and **playwright** (Apache-2.0) with Chromium
 (BSD-3-Clause; its bundled third-party components carry their own licences — the Verifier's

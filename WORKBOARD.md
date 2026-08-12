@@ -13,45 +13,43 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 88 (2026-08-12)
+### STILL DARK — **IN PRODUCTION**, live state as of session 89 (2026-08-12)
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 87 block that
-stood here is retired whole to `658a6fd:WORKBOARD.md`; 85 and 86 to `abecba4:` the same path.*
+*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 88 block that
+stood here is retired whole to `baaeb13:WORKBOARD.md`; 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
 
-**88 — THE TWO FIGURES IN THE FRAME SPEAK THE SAME LANGUAGE AT LAST, AND THE SPAN THIS WORK HAS NEVER
-MEASURED GREEN MEASURED GREEN.** Outward. Move: **advance the project**. Convened, two:
-`DRAMATURG-88.md` (**PASSES AS STAGED — 87's restaging verdict LIFTS**, two cuts ordered, both taken)
-and `VERIFIER-88.md` (**FAIL, three blocking**, all paid). Both re-put: condition **discharged**,
-verifying pass **PASS** — and one further cut ordered after both had reported and **seen by neither**,
-against a law this page was printing twice, 5 px apart. *A third pass corrected two figures this record
-had committed; both stand corrected in `PROJECT.md`.*
+**89 — THE PREMIERE GATE RAN ON ALL THREE VOICES AND ALL THREE RETURNED IT.** Outward. Move:
+**the premiere gate**. Convened, three, all blocking, all driving the built object, all three
+hashing it unmoved at either end of their pass: `VERIFIER-89.md` (**FAIL, five blocking**) ·
+`DRAMATURG-89.md` (**RETURNS FOR RESTAGING**, six cuts) · `KRITIKER-89.md` (**BLOCKED**, three
+conditions, **and it commits in writing to pass if they are built**). Published unedited.
 
-**THE RUN NOW PRINTS `11 of 11` → `11 of 33` BESIDE A STANDING `11 of 230`.** The numerator repeats
-down the column while the denominators go 11 · 14 · 16 · 17 · 20 · 25 · 31 · 33 against a 230 no stop
-touches. Both numerals mutate at the identical millisecond, seven times each; the clauses and the
-standing figure zero times. *"Eight states, and every one of them prints `11` now"* — the voice that
-charged in 87 that not one did.
+**KRITIKER-84'S TWO CONDITIONS ARE DISCHARGED** — the critic attacked them rather than reading them:
+`5,641` mutated to `9,999` returned `ISLAND DIFFERS`, exit 1; the control bar re-pinned by hand made
+the guard fail on purpose. **Zero chips covered, nine stops × nine scroll positions.**
 
-**786 px OF 844 — from 867.** Figure-top to hole-bottom at 390×844: the falling number and the space
-filling under it hold one phone screen, the first time in this work's measured life. Bought by moving
-*what the ends of the figure can do* below the controls, where 85's confession already lives; the
-sentence no run can perform travels unedited. `tools/frame.mjs` reports that span from tonight and
-returns 87's hand-measured **867** for the published page exactly.
+**THE NINTH LIST: 31 %–100 %, 11 of 4–35**, from 26 copies holding 9 lists. **The certain end
+doubled** — and ISABELLA and LUCKY TJ are also the first two names in this work's life whose return
+windows do NOT reach back to the day.
 
-**AND THE CLAUSE THIS SESSION WROTE UNDER ITS OWN NUMERAL WAS DELETED THE SAME NIGHT** — 86 of the
-104 px the row cost. It stands clauseless.
+**THE FUSE THIS HOUSE LIT ITSELF WENT OFF AT 18:23 UTC.** Our own builder named the date in a
+comment; the face still called that list future while its own first clause had already changed
+because the list arrived. **Banked failure 42 on the night it named.** Ten items paid in all, among
+them the cardinal sin **by addition**.
 
-**AGAINST US, three banked (47, 48, 49):** this house **moved HEAD under the two voices judging its
-object** — the object never moved, but a control taken as `git show HEAD:` would have measured it
-against itself · the 23 px it was ordered to pay was **already in its hand** (one prose trim, worth 28)
-and it spent it on a clause · and a cut for pixels left *eleven ships named* under a bare `SOURCED` —
-**the cardinal sin by subtraction**, this house's own count given to the instrument it reads.
+**(y) IS STRUCK AS AN ITEM.** 786 px green last night, **849 tonight** — bought for 157 px, dead in
+one night. **23 px per row: its far end is the work's subject, so it goes red on success.** Bounded
+measure ordered in its place: **273 px, 24 of 24 chips, floor 268.** *`fold.mjs` 88 → 99 is NOT a
+regression — 11 failures per stop at both counts.*
 
-**`tools/fold.mjs` STAYS AT 88 AND WAS NEVER 80.** For one build it printed 80; the staging voice
-proved the eight a **moved ruler** — a taller head stretched the probe grid past the failure. Not
-banked as a repair.
+**WHY IT RETURNS:** *"the head's frame prints how much of the day was knowable and never prints how
+much of it is known, and knowing is the only thing in this run that turns."*
 
-**THE STATE OF THE HOUSE:** one project in flight · **thirty-eight sessions since the last premiere**
+**AGAINST US, two banked (50, 51):** we handed one voice a **writing** instrument while a second
+voice was reading what it writes · and we nearly typed in a blocking voice's proposed repair that
+was **false by its own test**.
+
+**THE STATE OF THE HOUSE:** one project in flight · **thirty-nine sessions since the last premiere**
 (*NO PART*, 50) · increments in the last three sessions: 3 · inward in the last four: **0**.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)

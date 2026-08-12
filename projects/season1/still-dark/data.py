@@ -441,6 +441,18 @@ def build():
              if seen_at[e["name"]]["first_edition_date"] != DAY]
     not_ruled_out = [e for e in later if bands(seen_at[e["name"]])[0] <= d(DAY)]
     first_excluding = d(DAY) + datetime.timedelta(days=window_days + 1)
+    # THE FUSE, AND THE NIGHT IT WENT OFF — `VERIFIER-89.md` §1, blocking at the premiere
+    # gate. The comment four lines above predicted the date: *"the first edition whose
+    # additions could be ruled out of it is one dated 12 August."* That edition reached this
+    # record at 18:23 UTC on 12 August and did exactly what the sentence said it would do —
+    # and the sentence went on calling it future, in the same breath as its own first clause
+    # counted the consequence and fell from "every name" to "twenty-two of the twenty-four".
+    # Banked failure 42 in its own words: a conditional carried by one of two sentences about
+    # the same fact is a false sentence with a delay fuse in it. One half of this string was
+    # built to move and the other was not. Both halves branch now, on the same record.
+    excluding_arrived = any(
+        c["edition_date"] >= first_excluding.isoformat() for c in caps_now
+    )
 
     # ── THE ARRIVAL — owed item (k), and the first thing this page DOES. ──────────────
     #
@@ -722,7 +734,9 @@ def build():
         # day was knowable while it was still happening. The line is a question that does
         # not move while everything under it does — which is the one thing the running head
         # was built to stage, and it was staged with the wrong noun at the top of it.
-        "subject": f"HOW MUCH OF {DAY_PRINTED} WAS KNOWABLE ON {DAY_PRINTED}",
+        # `"subject"` — the island key that fed the deleted subject line — goes with it
+        # (`DRAMATURG-89.md` cut 6). `subject_gloss` stays: it is the paragraph whose
+        # reading time sets the run's opening dwell, and `gloss_words` below counts it.
         # The whole 0-of-2 of session 79 was a reader taking this page to be about ships
         # that were PRESENT. The word carrying the subject is glossed where it first
         # appears, in the page's own terms and no further: no claim of intent is made
@@ -834,8 +848,18 @@ def build():
                 f"{word(len(not_ruled_out))} of the {word(len(later))} names added since "
                 + day_month(DAY)
             )
-            + " still reaches back to it. The first list that could add a name ruled out of "
-            f"that list would be one dated {printed_date(first_excluding.isoformat())}."
+            + " still reaches back to it. Both counts are this record's own: the names are "
+            "OBSERVED in the saved copies, and how far each window reaches is DERIVED from "
+            "the duration the list published. "
+            + (
+                "The first list that could add a name ruled out of that list is the one "
+                f"dated {printed_date(first_excluding.isoformat())}, and it has arrived: "
+                f"{word(len(later) - len(not_ruled_out))} of the {word(len(later))} are "
+                "ruled out of it."
+                if excluding_arrived else
+                "The first list that could add a name ruled out of that list would be one "
+                f"dated {printed_date(first_excluding.isoformat())}."
+            )
         ),
         # The first block's heading is constant across every stop, because its count is:
         # the numerator of this work's figure cannot grow, and a heading that never moves
@@ -947,9 +971,17 @@ def build():
                 f"{word(max(r['printed'] for r in cut_rows))} names of the "
                 f"{min(r['examined'] for r in cut_rows)} to "
                 f"{max(r['examined'] for r in cut_rows)} disappearances it says it examined. "
-                "This record has saved that block every night since the first, and no face "
-                "of this work printed one of its figures until tonight."
+                "This record has saved that block every night since the first."
             ),
+            # *"…and no face of this work printed one of its figures UNTIL TONIGHT"* — struck
+            # here, `VERIFIER-89.md` §3, blocking. True the night it was written (85) and
+            # false on every face since: 86, 87, 88 and the commit at HEAD all printed those
+            # figures. A session-relative adverb frozen into a string that outlives the
+            # session — banked failures 24 and 28, caught a third time.
+            # THE VERIFIER'S OWN REPAIR IS NOT TAKEN, and the reason is that it is false by
+            # the same test: *"no face printed one of them before this one did"* is refuted by
+            # the four faces that did. A clause whose only content is which night it is has
+            # nothing left to say once the night passes, so it goes rather than moves.
             # THE TIER LINE STOPPED CLAIMING WHAT IT COULD NOT COVER — `VERIFIER-85.md` §1,
             # blocking, and it is the cardinal sin in its subtlest form for the second night
             # running. The line read *"every figure in this block is read off the saved
@@ -1107,9 +1139,15 @@ def build():
         "constant": (
             "Neither end of this figure can rise. The upper end holds at 100 % until more of "
             "these ships are certainly dark on this day than the "
-            f"{word(field[0]['count'])} the day itself named; only the lower end has moved "
-            "so far, and the next list can lower it again."
+            f"{word(field[0]['count'])} the day itself named; the next list can lower the "
+            "falling end again."
         ),
+        # *"only the lower end has moved so far, and the next list can lower IT again"* —
+        # struck, `DRAMATURG-89.md` cut 5. The run performs that clause at eight mutations
+        # to zero: the falling end rewrites itself eight times while the standing one never
+        # does, so the sentence spends words telling a visitor what the object in front of
+        # them is doing. What could not go with it is the pointer: once the clause naming
+        # the end is gone, *"it"* has no referent, so the survivor names the end it lowers.
         # THE RUN, SAID — session 83, owed items (s) and (t), paid by one set of strings
         # that reaches the eye and the ear from the same place.
         #
@@ -1164,11 +1202,17 @@ def build():
         # has finished still gets why the number moved.
         "caption": (
             "A ship reaches the list only after it comes back, so a day that is over "
-            f"keeps being answered. {word(n_stops).capitalize()} lists, "
-            f"{word(n_stops)} answers, one day — the last of them "
-            f"{'a day' if last_late == 1 else word(last_late) + ' days'} after the day "
-            f"had ended. The {word(field[0]['count'])} names the day itself held cannot "
-            "grow; every list since has only made the day larger underneath them."
+            "keeps being answered."
+            # AND ITS SECOND AND THIRD SENTENCES WENT IN SESSION 89, ordered by
+            # `DRAMATURG-89.md` cut 4, both for the same reason and both refuted by the
+            # object standing over them. *"Nine lists, nine answers, one day — the last of
+            # them eight days after the day had ended"* is printed verbatim 911 px higher,
+            # in live per-stop ink that rewrites itself at every one of the nine stops
+            # (`when_tail`); a static copy of a running string is the defect this house
+            # struck twice already. *"The eleven names the day itself held cannot grow"*
+            # is the frame's own left-hand column: `11 of 11 → 11 of 35`, eight mutations
+            # of a numerator that never moves. The caption keeps the mechanism, which is
+            # its job and the one thing on this face no state of the run performs.
             # AND THE LAST CLAUSE WENT IN SESSION 88, ordered by `DRAMATURG-88.md`'s re-put
             # after both voices had already reported. Moving *what the ends of the figure
             # can do* below the controls landed it **5 px** under this caption — so a
@@ -1294,9 +1338,14 @@ def build():
     run_seconds = round((arrive["first_dwell_ms"] + (n_stops - 1) * 1600) / 1000)
     arrive["run_states"]["waiting"] = (
         f"This figure runs by itself: {word(n_stops)} states over about "
-        f"{word(run_seconds)} seconds, starting after a pause as long as the paragraph "
-        "under the title takes to read. Any button above holds a state and stops the run."
+        f"{word(run_seconds)} seconds. Any button above holds a state and stops the run."
     )
+    # *", starting after a pause as long as the paragraph under the title takes to read"* —
+    # struck, `DRAMATURG-89.md` cut 3, and it was false as read. `run_seconds` is computed
+    # one line above from `first_dwell_ms + (n_stops - 1) * 1600`, so the pause is INSIDE
+    # the number the sentence promises, not before it — and it is the largest part of it:
+    # 14.1 s of 26.9 s, longer than all eight moving states together. A sentence promising
+    # twenty-seven seconds AND a pause before them promised a run this object does not have.
 
     # what moved since the struck figure was true: the vessels this day gained from
     # captures later than the law's publication, named, with the list that carried them
@@ -1457,9 +1506,10 @@ def build():
     # name; the positional pointer this replaced broke the moment a column was added.
     ledger_caption += (
         " “Disappearances examined” is what that same copy says the instrument examined to "
-        "produce those ships — a figure this record has saved every night since the first "
-        "and, until tonight, printed never."
+        "produce those ships — a figure this record has saved every night since the first."
     )
+    # *"and, UNTIL TONIGHT, printed never"* — struck with its twin above, same finding,
+    # same reason (`VERIFIER-89.md` §3).
 
     ledger = []
     for c in caps_now:

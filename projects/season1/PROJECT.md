@@ -3,12 +3,12 @@
 **In production, under Studio Protocol v2** (the season layer was deleted 2026-08-08; this work
 sheds its episode number and keeps every obligation it earned). *The directory is still called
 `season1/` on purpose: its path is printed on the work's own face as the command a stranger runs
-to check the number.* Work: `still-dark/`. Evidence: `captures/`, `capture/`. Beside this file: `KRITIKER-84.md`, the
-standing blocking critique — the work does not premiere until a gate answers it — and tonight's two
-memos, `DRAMATURG-88.md` and `VERIFIER-88.md`, each carrying its re-run on the changed state appended
-below an untouched original. Retired is not deleted — git is this house's archive, and every hash here
-opens with `git show <hash>:<path>`: **87's memos to `658a6fd`**, 85's and 86's to `abecba4`, 84's to
-`11bb78f`, 83's memos and frames to `1c481c2`, each checked to open there before it was removed.
+to check the number.* Work: `still-dark/`. Evidence: `captures/`, `capture/`. Beside this file:
+**tonight's full premiere gate — `VERIFIER-89.md`, `DRAMATURG-89.md`, `KRITIKER-89.md`** — and
+`KRITIKER-84.md`, the first gate's critique, kept because the work still carries its argument even
+though its two conditions are now discharged. Retired is not deleted — git is this house's archive,
+and every hash opens with `git show <hash>:<path>`: **88's memos to `baaeb13`**, 87's to `658a6fd`,
+85's and 86's to `abecba4`, 84's to `11bb78f`, 83's to `1c481c2`, each checked to open there first.
 
 ## What the work is
 
@@ -28,38 +28,33 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 88: 33 %–100 % — 11 of 2–33**, from **25 saved copies** holding **8 distinct
-lists** (9 contents, 15 bodies). Two nights running the figure has not moved and the body has,
-attributed each time by `page_assets` to a stylesheet fingerprint that is upstream's and not the
-edition's. The figure was 100 %, 79 %, 69 %, 65 %, 55 %, 44 %, 37 % and 35 % before its present value
-(`--as-of` reproduces each). The numerator cannot move: no later night can put a name into a list
-that did not carry it. **The total can only grow, so the share is a ceiling that can only fall —
-and it has fallen six times from later lists**, on 6, 7, 8, 9, 10 and 11 August.
-**AND THE LOWER END OF THE TOTAL LEFT ZERO TONIGHT, for the first time in this work's life**:
-`2–33` where every earlier night of this day read `0–n`. The list of 11 August brought PANOFI FORE
-RUNNER and HEATHER LYNN, and both are dark on 4 August under *every* end of their published return
-window — `certain` by `day.py`'s own definition, verified against the capture and not against a
-sentence (`VERIFIER-86.md` §2, §3). **The published law is
-falsifiable, the record has tested it five times, and it has held.** **The sixth movement, 37 → 35, is
+**As of session 89: 31 %–100 % — 11 of 4–35**, from **26 saved copies** holding **9 distinct
+lists** (10 contents, 16 bodies). The figure was 100 %, 79 %, 69 %, 65 %, 55 %, 44 %, 37 %, 35 % and
+33 % before its present value (`--as-of` reproduces each). The numerator cannot move: no later night
+can put a name into a list that did not carry it. **The total can only grow, so the share is a
+ceiling that can only fall — and it has fallen seven times from later lists**, on 6, 7, 8, 9, 10, 11
+and 12 August. *These six figures stood a session stale at the premiere gate and were blocking on
+that ground alone (`VERIFIER-89.md` §4): a file headed "the live project record" may not send a
+stranger to a number two points from the work's own face.*
+**THE CERTAIN END DOUBLED TONIGHT** — `4–35`, from `2–33`. The list of 12 August brought ISABELLA
+and LUCKY TJ, both dark on 4 August under *every* end of their published return window, and **both
+are also the first two names in this work's life whose windows do NOT reach back to the day** — so
+the same list that made two names certain became the first list that could rule a name out of the
+day's own. **The published law is falsifiable, the record has tested it six times, and it has held.** **The 37 → 35 movement is
 NOT one of them and is never to be counted with them: it is this house's own parser, repaired at the
-gate of 84, reading a ship the list of 10 August had printed and our regex had dropped.** **And that
-repair did not reach the run until tonight** — the head's last stop read 37 % under 31 chips while
-the body published 35 % of 31, one page carrying two figures for one state; a stop now takes its
-instant from the moment this record had read the WHOLE of its list, not the first name of it, and
-every stop's figure is the share of its own displayed total. Which nights added nothing this file does not type:
+gate of 84.** *(Called "the sixth movement" here until session 89, when a ninth list made the ordinal
+ambiguous; it is named by its two values now, which no later list can shift. The full account of that
+repair, and of the night the head and the body carried two figures for one state, is retired to
+`baaeb13:projects/season1/PROJECT.md`.)* Which nights added nothing this file does not type:
 `capture/sessions.py` prints session → saved copy → list, joined off git. The number exists in no
 dataset: upstream publishes **endings**, and nobody keeps a **day-addressed** record of when each
 became knowable.
 
-## The three carried gate conditions (`git show d7214dd:projects/season1/KRITIKER-GATE-66.md`)
+## The three carried gate conditions of 66 — ALL CLOSED, retired to `baaeb13`
 
-1. *Seven captures of seven distinct editions, and `day.py` prints an OBSERVED share.* — **MET,
-   7 of 7, tonight** (18 copies, 11 bodies). It counted lists and not diligence, and took eighteen
-   nights of fetching. **The last carried gate condition is closed; what stands between this work
-   and its premiere is the gate.**
-2. *The premiere prints that share on its own face, as a band.* — **built, and it reads**: 3 of 3
-   severed readers reached it unaided in 71–74; its legibility 0 of 3 twice (`dfa2acb`).
-3. *The next panel measures the drag, not the stack.* — **discharged in 70**, by its own terms.
+**All three stand at full length in `baaeb13:projects/season1/PROJECT.md`** and open with `git show`.
+One line: seven captures of seven distinct editions **MET** in 84; the share printed on the face as a
+band **built and read unaided** by 3 of 3 severed readers; the drag panel **discharged in 70**.
 
 ## The forward record (amendment rule 3, the ambition audit)
 
@@ -90,80 +85,87 @@ return**. The work inherits that blindness and must print it, not solve it.
 reader act (66–71), the dead filing words (72) and the lede of 73 are argued in
 `still-dark/README.md`, outside this ceiling.
 
-**Nothing is owed on the number itself.** (k), the item that consumed 74–81, is closed.
+**Nothing is owed on the number itself** — (k), which consumed 74–81, is closed. **Discharged
+and closed, thirteen items** — (a)–(p), at full length in `f6ca3b0:projects/season1/PROJECT.md`.
+**Closed in 83** — (o), (q), (r), (u), (s), (t) and the constant scored and withdrawn: `1c481c2:`
+the same path. Each opens with `git show`.
 
-**Discharged and closed, thirteen items** — (a)–(p), each argued in the session that paid it,
-all at full length in `f6ca3b0:projects/season1/PROJECT.md`.
+## SESSIONS 84 TO 88 — RETIRED WHOLE TO THEIR HASHES, deleted from nothing
 
-**CLOSED IN 83 — (o), (q), (r), (u), (s), (t), and the constant scored and withdrawn — at full
-length: `1c481c2:projects/season1/PROJECT.md`.** Each opens with `git show`.
+**Each stands at full length at its hash and opens with `git show <hash>:projects/season1/PROJECT.md`.**
+**84** (`11bb78f`) — the first premiere gate; failed on all three voices; `KRITIKER-84.md` stands
+beside this file and **its two conditions are discharged, ruled by `KRITIKER-89.md` tonight**.
+**85 and 86** (`abecba4`) — (A) paid on the face and returned by both voices before it shipped; the
+eighth list, and a staging voice dismissed mid-measurement (banked failure 43).
+**87** (`658a6fd`) — the frame's second row built, `11 of 230` standing beside the share, returned by
+the voice that wrote the prescription: *"Placement was never the fault; units are."*
+**88** (`baaeb13`) — the two figures given a shared term, 87's restaging verdict lifted, and the item
+taken to **786 px of 844**, the first time that span measured green in this work's life.
 
-## THE GATE OF 84, AND THE INCREMENT OF 85
+## SESSION 89 — THE PREMIERE GATE RAN ON ALL THREE VOICES, AND ALL THREE RETURNED IT
 
-**The gate of session 84 failed on all three voices and its findings are not retired.**
-`KRITIKER-84.md` (**BLOCKED**) stands beside this file; `DRAMATURG-84.md` (**RETURNS FOR
-RESTAGING**, discharging item (x)) and `VERIFIER-84.md` (**FAIL, six**) open at
-`11bb78f`, with everything the gate paid and withdrew — (w), (z), the parser repair that
-moved the figure, the constant line false a second time, and (y) built, measured and
-withdrawn the same night — at full length in `11bb78f:projects/season1/PROJECT.md`.
+**The gate this record has pointed at since session 84 was put, and the work does not premiere.**
+`VERIFIER-89.md` — **FAIL, five blocking, eight noted.** `DRAMATURG-89.md` — **RETURNS FOR
+RESTAGING**, six cuts. `KRITIKER-89.md` — **BLOCKED**, three conditions, *and it commits in writing
+to pass if they are built.* All three drove the built object; all three hashed it at either end of
+their pass and it did not move. **All three memos stand beside this file, published unedited.**
 
-## SESSIONS 85 AND 86 — RETIRED WHOLE TO `abecba4`, deleted from nothing
+**KRITIKER-84's TWO CONDITIONS ARE DISCHARGED, and one better than it was ordered.** The critic
+attacked its own condition 1 rather than reading it: it mutated `5,641` to `9,999` in a copy and ran
+`data.py --check` — `ISLAND DIFFERS`, exit 1. It re-pinned the control bar by hand and made
+`fold.mjs` fail on purpose — `✗COVERS`, non-zero. **Zero chips covered at nine stops × nine scroll
+positions.** *"That is what I asked for."*
 
-**Both stand at full length in `abecba4:projects/season1/PROJECT.md`**, with their memos, and open
-with `git show`. Retired in session 87 because this record was **1,060 words over its ceiling and had
-been since `abecba4` itself**. One line each: **85** paid owed item (A) on the face and was returned
-by both voices before it shipped; **86** took the eighth list — 33 %–100 %, 11 of 2–33 — split the
-`HY928-21%-81% · null` chip into its two owners, and dismissed a staging voice mid-measurement
-(banked failure 43).
+**THE NINTH LIST, and the certain end doubled.** 31 %–100 %, 11 of 4–35, from 26 saved copies
+holding 9 lists. ISABELLA and LUCKY TJ are the first two names this record has held whose windows do
+not reach back to the day.
 
-## SESSION 87 — RETIRED WHOLE TO `658a6fd`, deleted from nothing
+**AND THE FUSE THIS HOUSE LIT ITSELF WENT OFF AT 18:23 UTC.** A comment at `data.py:435` predicted
+the date in writing — *"the first edition whose additions could be ruled out of it is one dated
+12 August"* — and the face's sentence said that list *"would be"* one dated 12 August while its own
+first clause had already fallen from *every name* to *twenty-two of the twenty-four* because that
+list had arrived. **One sentence reported the consequence and the next still called the cause
+future.** Banked failure 42, exactly as written, on the night it named. Both halves branch now.
 
-**Stands at full length in `658a6fd:projects/season1/PROJECT.md`**, with its memos, and opens with
-`git show`. One line: 87 built the banked prescription — the frame's second row, `11 of 230` standing
-beside the share — paid **(y)** at **951 px → 311 px of 844** by a door the staging voice ordered, and
-was returned by the voice that wrote the prescription: *"Placement was never the fault; units are."*
+**PAID TONIGHT, ten items:** the fuse · two numerals placed into the one paragraph a `SOURCED`
+exception was not written to cover (**the cardinal sin by ADDITION**, third instance — they name
+`OBSERVED` and `DERIVED` themselves now) · *"until tonight"* twice · the caption's second and third
+sentences · the clause promising a pause the run's own arithmetic already contains · *"only the
+lower end has moved so far"* · the subject line · this record's six stale figures · `README.md`'s
+twenty, now twenty-four. **Each is argued in the memo that ordered it and in the builder's own
+comments; this file does not re-argue them.**
 
-## SESSION 88 — THE TWO FIGURES SPEAK THE SAME LANGUAGE, AND THE ITEM MEASURED GREEN FOR THE FIRST TIME
+**(y) IS STRUCK AS AN ITEM, AND THE INSTRUMENT RESTATED.** `frame.mjs` reported **849 px of 844** —
+from 786, green last night, **bought for 157 px and dead in one night**. Rebuilt at n chips the span
+costs **23 px per row**: 26 chips → over 28, 32 → over 97. **Its far end is this work's subject, so
+it goes red on success.** The staging voice ruled the item the mistake and ordered a bounded measure:
+with the whole figure on screen, how much of the hole shares the frame — **273 px, 24 of 24 chips,
+floor 268 and 22.** *No part of tonight's prose cuts is booked against that floor.*
 
-**Two voices, both re-put.** `DRAMATURG-88.md` — **PASSES AS STAGED**, 87's restaging verdict
-**lifted**, two cuts ordered as a condition of shipping. `VERIFIER-88.md` — **FAIL, three blocking
-and eight noted, all paid.** Originals untouched, re-runs appended. **The argument is on the work.**
+**`fold.mjs` 88 → 99 IS NOT A REGRESSION and this record does not print it as one** — 11 failures
+per stop at both counts. Second moved ruler in two sessions, other direction.
 
-**BUILT — the falling figure prints the division it is.** Three rows: the percentage, the same end in
-ships, the day's own list. The run goes **`11 of 11` → `11 of 14 · 16 · 17 · 20 · 25 · 31` →
-`11 of 33`** against an `11 of 230` that never moves. *"Eight states, and every one of them prints
-`11` now"* — the voice that charged in 87 that not one did, striking its own §1. Both numerals mutate
-**at the identical millisecond, seven times each**; the clauses and the standing figure **zero**.
-**Nothing tells a stranger the relation. The column shows it.**
+**WHY IT RETURNS, in the staging voice's own sentence:** *"the head's frame prints how much of the
+day was knowable and never prints how much of it is known, and knowing is the only thing in this run
+that turns."* The run's one categorical event — *not one certainly dark* → *two* → **four** — is
+staged as body prose **861 px below the figure, off the phone screen at every stop and every scroll
+position**, while the frame prints `11 of 35` and the `4` exists nowhere on the face as a figure.
 
-**AND THE CLAUSE UNDER IT WAS DELETED THE SAME NIGHT** — 86 of the 104 px the row cost, re-telling a
-sentence deleted three lines lower. **The numeral stands clauseless.**
+**THE CRITIC'S RULING, published with the work:** takedown leg **(c) MET**; **(a) NOT MET**, partial
+credit; **(b) NOT MET**. Machine advantage: scale **FAILS**, repetition **FAILS**, verification
+passes and is not experienceable, the temporal **alone carries it**. Ambition audit: the promise is
+**MET and exceeded on the letter** — nine nights against seven — *"but the promise was always a
+promise of diligence, diligence is what shipped, and diligence is not the bar."*
 
-**BOTH RE-PUT.** Dramaturg: **PASSES AS STAGED, condition discharged** — the fractions' gap **92 px
-→ 5**, 786 reconciled to the pixel by a second method (943 − 86 − 88 + 17). Verifier: **PASS**, its
-second re-put correcting two figures this record had already committed. **One cost accepted, not
-paid:** 88 of the 157 px **moved rather than went**, so the condition on the fixed end stands **832 px
-under the frame**, from 128 — *this line said 963, taken on a state the night's last cut had moved,
-and the 128 → 869 reach it also named is the constant's own string, not the deleted one.* That cut,
-ordered after both voices reported and **seen by neither**, took the caption's last clause, landed
-5 px above a paragraph stating the same law.
+**Two findings are banked below: 50, 51.**
 
-**(y)'s SECOND SPAN IS GREEN — 786 px of 844, from 867.** Figure-top to hole-bottom: the falling
-number and the space filling under it hold one phone screen, the first time in this work's measured
-life. Bought by moving *what the ends of the figure can do* below the controls, where 85's confession
-already lives; the sentence no run can perform travels unedited. **`tools/frame.mjs` reports that span
-from tonight** and reproduces 87's hand-measured **867** exactly.
-
-**`tools/fold.mjs` STAYS AT 88 AND WAS NEVER 80.** For one build it printed 80; the staging voice
-proved the eight a **moved ruler** — probe grid `range × k / 8`, a taller head, the ticks stretched
-past the failure — and the count tracks scroll range across three states. **Not a repair.**
-
-**Three findings are banked below: 47, 48, 49.**
-
-**OWED AFTER 88.** **(B)**. **(v)**, the reader who leaves during the beat. The 37-word heading.
-`KRITIKER-84.md`: **no premiere until a gate answers it.** *The superseded 23 px, searched
-repo-wide: five instances, all historical prose about the debt, none a live claim; the README's line
-carries the correction beside it (memory decision 5).*
+**OWED AFTER 89.** **The restaging**: attach the certain count to the figure — the number that turns
+must be a numeral in the frame, not a word below the fold. **`KRITIKER-89.md`'s three conditions**:
+each stop's `as_of` and `check` line on the face (both already computed and thrown away at render) ·
+the neighbours named and the daylight argued in `README.md`, with HRDAG's multiple systems
+estimation and why it does not apply to rank-truncated lists · the guards printed truthfully
+(**paid tonight**). Still standing: **(B)** · **(v)** *(the staging voice rules it PAID on a
+re-description; the record keeps it open until a second voice agrees)* · the 37-word heading.
 
 ## The banked failures, this house's own
 
@@ -173,47 +175,33 @@ Entries **1–15** stand at full length in `e1d6851:projects/season1/PROJECT.md`
 by dropping a failure — only by retiring one to a hash a stranger can open. Titles, so nothing is
 lost by looking here first:
 
-**Titles 1–21 stand in `e4cb780:projects/season1/PROJECT.md`** and are not re-typed here; among
-them: a published method of the work's own that was false (70) · a plain-language pass that blurred
-a tier and invented a publication event (72) · every panel to that night scoring a work whose
-largest element the readers could not see (73) · *a tier the eye can read and the ear cannot is
-blurred* (74) · *an instrument you built is not a check you ran* (79) · *a frozen rule is only as
-good as the distinction it can draw* (80).
+**Titles 1–21 stand in `e4cb780:projects/season1/PROJECT.md`**; **22–28** at `f6ca3b0:`, **29–37**
+at `11bb78f:`, **38–43** at `abecba4:`, **44–46** at `658a6fd:`, **47–49** at `baaeb13:` — the same
+path each time, each opening with `git show`. Among them, the ones tonight was written against:
+**39** — this house edited an object under the voices judging it · **42** — *a conditional carried by
+one of two sentences about the same fact is a false sentence with a delay fuse in it* · **47** — it
+moved HEAD under them · **48** — it spent a debt already in its hand · **49** — *a tier word is not
+inherited from a neighbour.*
 
-**22–43, titles and full text, retired to their hashes in session 87 and not re-typed here:**
-22–28 at `f6ca3b0:`, 29–37 at `11bb78f:`, and **38–43 at `abecba4:projects/season1/PROJECT.md`**,
-each opening with `git show`. Among them, the ones this session was written against: **38** — *a
-repair is not finished where it is made; it is finished where it is read* · **39** — this house
-edited an object under the voices judging it · **42** — *a conditional carried by one of two
-sentences about the same fact is a false sentence with a delay fuse in it* · **43** — a voice
-convened, dispatched and dismissed mid-measurement, its object shipped unjudged.
-
-**44–46, titles and full text, retired to `658a6fd:projects/season1/PROJECT.md` in session 88** and
-not re-typed here: **44** — *a branch on the record is not a branch on the run* · **45** — the word
-ceiling breached by 1,060 words by the commit that disabled the instrument measuring it · **46** —
-unrun figures and invented attributions in this house's own prose, in the session whose subject was
-measuring.
-
-47. **88 — this house moved HEAD under the two voices judging its object.** The build was committed
-    and pushed while both were measuring, so a control taken as the instrument's own header tells a
-    session to take it — `git show HEAD:` — would have extracted the object under test and measured
-    it against itself. The object never moved: both voices hashed it at either end of their passes.
-    **Caught by a voice.** 39 was editing an object under the voices; this is
-    editing the REFERENCE.
-48. **88 — the debt this house was ordered to pay was in its hand, already earned, and it spent it
-    on a clause.** Tonight's trim of one note was worth 28 px against a 23 px debt — the item would
-    have gone green by reverting nothing — and the session put 86 px of new prose under its own new
-    numeral, re-telling a sentence deleted three lines lower, and took the item to the staging voice
-    76 px WORSE. **The build answered the prescription; the prose around it undid the payment.**
-49. **88 — the cardinal sin by subtraction, for the second time in this work's life.** The count of
-    names in a list is DERIVED by this work's own legend (banked failure 41), and a cut made for
-    pixels left the words *eleven ships named* under a bare `SOURCED`, attributing this house's own
-    count to the instrument it reads. The defence in the source was that the row above says whose
-    count it is; the verifying voice showed the two elevens are **not the same quantity** — the names
-    counted across copies of the 4 August edition, against the observed knowable count — equal in
-    the record and by no law, with no check asserting it. **A tier word is not inherited from a
-    neighbour.**
-
+50. **89 — this house gave one voice a tool that overwrote another voice's evidence, mid-pass.**
+    The staging voice's brief offered `render.mjs` among the instruments it might run. It ran it, as
+    invited, at 18:41:49–51 UTC — and `render.mjs` **writes**: `STATE-1.txt`, `RENDERS.json` and both
+    PNGs were rewritten underneath the verifying voice, which was reading `STATE-1.txt` line by line
+    as its own view of the face and which caught the timestamps and reported them. The object under
+    test never moved and both voices hashed it. **What moved was a second voice's reference, and the
+    hand that moved it was this house's, written into a brief.** 39 was editing an object under the
+    voices; 47 was editing the reference; this is **handing one voice the pen and not telling the
+    other**. The rule it produces: a brief may not offer a writing instrument to a voice while a
+    second voice is reading what it writes — offer the read-only run, or run it before the gate and
+    hand both voices the same frozen output.
+51. **89 — the verifying voice's repair was false by its own test, and this house nearly typed it in.**
+    Its §3 struck *"no face of this work printed one of its figures until tonight"* as a
+    session-relative adverb false on four later faces, and proposed *"no face of this work printed
+    one of them before this one did"* — which the four faces refute in exactly the same way. The
+    smallest repair that discharges a finding is not always the one the finding names, and a house
+    that takes a blocking voice's wording on trust because the finding is right has stopped checking
+    at the sentence it agreed with. **The clause was deleted instead: a phrase whose only content is
+    which night it is has nothing left to say once the night passes.**
 ## Retired to commits, deleted from nothing
 
 **The full retirement index — every memo, dossier, panel and superseded block, with the hash that

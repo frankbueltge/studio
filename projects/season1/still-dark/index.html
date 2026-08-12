@@ -95,12 +95,6 @@
     border-bottom: 1px solid var(--sd-frame);
     max-width: 96ch;
   }
-  .sd-root .sd-arrive-subject {
-    margin: 0;
-    font-size: 0.74rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-  }
   .sd-root .sd-arrive-gloss {
     margin: 0.1rem 0 0.45rem;
     font-size: 0.72rem;
@@ -556,7 +550,6 @@
        already stands on one screen; this is a breakpoint, not a redesign. */
     .sd-root .sd-arrive { display: flex; flex-direction: column; }
     .sd-root .sd-arrive > * { order: 2; }
-    .sd-root .sd-arrive-subject,
     .sd-root .sd-arrive-gloss,
     .sd-root .sd-arrive-headline { order: 0; }
     .sd-root .sd-arrive-controls { order: 1; }
@@ -718,16 +711,15 @@
     "restraint": "“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we."
   },
   "arrive": {
-    "subject": "HOW MUCH OF 4 AUGUST 2026 WAS KNOWABLE ON 4 AUGUST 2026",
     "subject_gloss": "dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, published at frankbueltge.de, which name a ship only once it has come back. They carry only offshore switch-offs a machine model classed as intentional, so they are never all of a day's darkness.",
-    "since_note": "This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of every name added since 4 August still reaches back to it. The first list that could add a name ruled out of that list would be one dated 12 August 2026.",
+    "since_note": "This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of twenty-two of the twenty-four names added since 4 August still reaches back to it. Both counts are this record's own: the names are OBSERVED in the saved copies, and how far each window reaches is DERIVED from the duration the list published. The first list that could add a name ruled out of that list is the one dated 12 August 2026, and it has arrived: two of the twenty-four are ruled out of it.",
     "heading_then": "IN THE LIST DATED 4 AUG — the eleven names it printed",
     "cut": {
       "heading": "WHAT THE LIST OF 4 AUG WAS THE TOP OF",
       "figures": "Of the 230 examined, 82 were dark inside national waters · 5,641 events in the window",
       "said": "The instrument says so itself, in its method sheet: “The index counts all examined; the case and list show named vessels.” The share this page publishes is a share of what those lists print, not of what they count.",
       "refused": "How the figure would move if the lists were longer is not published here: a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists would add to the total, so both ends of it would grow and nothing in this record measures by how much.",
-      "kept": "Each of the eight lists this record holds prints six to eleven names of the 189 to 250 disappearances it says it examined. This record has saved that block every night since the first, and no face of this work printed one of its figures until tonight.",
+      "kept": "Each of the nine lists this record holds prints six to eleven names of the 189 to 257 disappearances it says it examined. This record has saved that block every night since the first.",
       "tier": "SOURCED — the three figures the list published, read off the saved copies in the words the parser matched in them. The count of names, and the count of lists below, are this house's own.",
       "standing": "11 of 230",
       "standing_note": "— eleven ships named, of 230 disappearances the list says it examined. SOURCED — the count of names is this house's own."
@@ -1024,25 +1016,53 @@
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 11 AUG, seven days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so two of these names are certainly dark on this day and the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — twenty-two ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 11 AUG."
+      },
+      {
+        "as_of": "2026-08-12T18:23:12Z",
+        "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-12T18:23:12Z",
+        "edition": "2026-08-12",
+        "printed": "+8 DAYS",
+        "days_after": 8,
+        "total": 35,
+        "share": "31 %–100 %",
+        "share_falling": "31 %",
+        "share_fixed": "–100 %",
+        "share_falling_of": "11 of 35",
+        "share_fixed_of": "11 of 11",
+        "added": [
+          {
+            "name": "ISABELLA",
+            "flag": "USA"
+          },
+          {
+            "name": "LUCKY TJ",
+            "flag": "USA"
+          }
+        ],
+        "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
+        "when_tail": "counting the lists up to 12 AUG, eight days after the day had ended.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 12 AUG, eight days after the day had ended.",
+        "hedge": "A list gives a ship's return only to the nearest week, so four of these names are certainly dark on this day and the rest are possible.",
+        "heading_since": "NAMED ONLY BY LATER LISTS — twenty-four ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 12 AUG."
       }
     ],
-    "constant": "Neither end of this figure can rise. The upper end holds at 100 % until more of these ships are certainly dark on this day than the eleven the day itself named; only the lower end has moved so far, and the next list can lower it again.",
+    "constant": "Neither end of this figure can rise. The upper end holds at 100 % until more of these ships are certainly dark on this day than the eleven the day itself named; the next list can lower the falling end again.",
     "run_states": {
-      "waiting": "This figure runs by itself: eight states over about twenty-five seconds, starting after a pause as long as the paragraph under the title takes to read. Any button above holds a state and stops the run.",
+      "waiting": "This figure runs by itself: nine states over about twenty-seven seconds. Any button above holds a state and stops the run.",
       "started": "The run has started: the figure is falling from the day's own answer to this record's live one.",
       "done": "The run has finished. The figure now standing is this record's live one — press any button to go back through it.",
       "stopped": "You stopped the run at {stop}. Press “{replay}” to see it whole.",
       "held": "Holding {stop}. Nothing is playing; press “{replay}” to run it.",
       "rest": "Your machine asks for no motion, so nothing runs: this is the day's own answer, and each button above holds a later state."
     },
-    "caption": "A ship reaches the list only after it comes back, so a day that is over keeps being answered. Eight lists, eight answers, one day — the last of them seven days after the day had ended. The eleven names the day itself held cannot grow; every list since has only made the day larger underneath them.",
+    "caption": "A ship reaches the list only after it comes back, so a day that is over keeps being answered.",
     "tier": "DERIVED — this share is worked out here, from saved copies of those lists. Nobody publishes it.",
     "restraint": "“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.",
     "replay": "run it again",
     "first_dwell_ms": 14118,
     "first_dwell_note": "56 words at 238 wpm (Brysbaert 2019, mean adult silent reading of non-fiction English)"
   },
-  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Twenty-two arrived later — seventeen of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.",
+  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Twenty-four arrived later — nineteen of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.",
   "field": [
     {
       "edition": "2026-08-04",
@@ -1684,6 +1704,50 @@
           "seen": ""
         }
       ]
+    },
+    {
+      "edition": "2026-08-12",
+      "edition_printed": "12 August 2026",
+      "days_after": 8,
+      "label": "ADDED BY THE LIST OF 12 AUG — eight days after the day",
+      "count": 2,
+      "seen_all": "this page first saw all two on 12 AUG",
+      "rows": [
+        {
+          "name": "ISABELLA",
+          "flag": "USA",
+          "days_dark": 27,
+          "waters": "Ecuadorian EEZ (Galapagos)",
+          "went_dark_between": [
+            "2026-07-09",
+            "2026-07-16"
+          ],
+          "resurfaced_between": [
+            "2026-08-05",
+            "2026-08-12"
+          ],
+          "band_text": "dark 9–16 Jul → back 5–12 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/cbcf2936a-af57-4c61-2723-ae67baecb0a9",
+          "seen": ""
+        },
+        {
+          "name": "LUCKY TJ",
+          "flag": "USA",
+          "days_dark": 22,
+          "waters": "United States EEZ (Hawaii)",
+          "went_dark_between": [
+            "2026-07-14",
+            "2026-07-21"
+          ],
+          "resurfaced_between": [
+            "2026-08-05",
+            "2026-08-12"
+          ],
+          "band_text": "dark 14–21 Jul → back 5–12 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/60a877daa-a23b-e4cc-18bc-3ed151267b0a",
+          "seen": ""
+        }
+      ]
     }
   ],
   "fall": {
@@ -1700,19 +1764,19 @@
     },
     "now": {
       "status": "LIVE",
-      "figure": "33 %–100 %",
-      "figure_falling": "33 %",
+      "figure": "31 %–100 %",
+      "figure_falling": "31 %",
       "figure_fixed": "–100 %",
-      "fraction_falling": "11 of 33",
+      "fraction_falling": "11 of 35",
       "fraction_fixed": "11 of 11",
-      "of": "11 of 2–33",
-      "editions": 8,
-      "captures": 25
+      "of": "11 of 4–35",
+      "editions": 9,
+      "captures": 26
     },
     "as_of": "2026-08-06T08:36:39Z",
-    "band": "Thirty-three ships could have been dark on 4 August 2026 and two of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 2–33, and the share runs from 11 of 33 to 11 of 11.",
+    "band": "Thirty-five ships could have been dark on 4 August 2026 and four of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 4–35, and the share runs from 11 of 35 to 11 of 11.",
     "held": "The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.",
-    "moved": "It fell thirty-six points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; and PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day — seventeen ships this record did not hold when the law below was printed.",
+    "moved": "It fell thirty-eight points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day; and ISABELLA and LUCKY TJ with the list of 12 AUG, eight days after the day — nineteen ships this record did not hold when the law below was printed.",
     "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
     "published_when": "printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall",
     "then_published": "at 08:36 UTC on 6 August"
@@ -1968,9 +2032,19 @@
         "edition_date_printed": "11 August 2026",
         "vessels": 11,
         "examined": 189
+      },
+      {
+        "fetched_at_utc": "2026-08-12T18:23:12Z",
+        "http_status": 200,
+        "bytes": 31635,
+        "sha256": "14ddeb5c",
+        "content_sha256": "005c4e9f",
+        "edition_date_printed": "12 August 2026",
+        "vessels": 10,
+        "examined": 257
       }
     ],
-    "caption": "Six lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first and, until tonight, printed never."
+    "caption": "Six lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first."
   },
   "commands": [
     {
@@ -1986,8 +2060,8 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  25 capture(s) read, 8 distinct edition(s), 9 distinct content(s), 15 distinct bod(y/ies)\n  vessels dark on that day .......... 2–33 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 33%–100%  (11 of 2–33)\n    (a ceiling from 8 edition(s), 25 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
-  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-three is what this record can place in 4 August 2026, not what was on the sea that day."
+  "output": "day 2026-08-04  ·  26 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 16 distinct bod(y/ies)\n  vessels dark on that day .......... 4–35 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 31%–100%  (11 of 4–35)\n    (a ceiling from 9 edition(s), 26 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-five is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
 
@@ -2015,7 +2089,13 @@
        a reader who is given no motion is given the day's own answer and five buttons, and
        the delay is something they do rather than watch. -->
   <section class="sd-arrive" id="sd-arrive">
-    <p class="sd-arrive-subject" id="sd-arrive-subject"></p>
+    <!-- THE SUBJECT LINE IS GONE — `DRAMATURG-89.md` cut 6. It read HOW MUCH OF 4 AUGUST
+         2026 WAS KNOWABLE ON 4 AUGUST 2026, and it was the third printing of one thesis
+         inside the first 353 px of a phone screen: the `<h1>` above it prints the day, the
+         `.sd-sub` under that prints "one day of the sea, and how much of it was knowable on
+         the day itself", and then this line said it a third time in capitals. Nothing is
+         claimed for its height against any frame measurement — the staging voice ordered it
+         for economy and named banked failure 48 in advance if the house booked the pixels. -->
     <p class="sd-arrive-gloss" id="sd-arrive-gloss"></p>
     <div class="sd-arrive-headline">
       <div class="sd-arrive-row">
@@ -2282,7 +2362,6 @@
   // the page under a resting finger.
   var hedgeEl = document.getElementById("sd-arrive-hedge");
   thenHeadEl.textContent = arrive.heading_then;
-  document.getElementById("sd-arrive-subject").textContent = arrive.subject;
   document.getElementById("sd-arrive-gloss").textContent = arrive.subject_gloss;
   document.getElementById("sd-arrive-cap").textContent = arrive.caption;
   // OWED ITEM (A), session 85 — written once, never touched by the run. Everything the
