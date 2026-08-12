@@ -438,3 +438,114 @@ instrument this session built for it and which reproduces last night's hand figu
 The open item is not in the work but in the record: `PROJECT.md:150` and `WORKBOARD.md:64` still carry
 23 px. I will re-check them when they land. Until then, this memo, not the board, holds the true
 figure.
+
+---
+---
+
+# SECOND RE-PUT — the record files landed, and the page moved twice more
+
+**Stamped.** `index.html` `8f4db05693ee…` · `data.py` `6e544651403a…` · `PROJECT.md` `c969b33d1ead…` ·
+`WORKBOARD.md` `923a5278c7c9…`. The index hash was read before and after every run below and did not
+move under any of them. The two changes since the re-run section above are the `§§3–4` citation
+repair and the deletion of the caption's last clause; both are checked here.
+
+## S1. Finding 5's open item — PAID, and the figures in the record are right
+
+`PROJECT.md:144-150` and `WORKBOARD.md:33-37` now read **786 px of 844, from 867**, and name
+`tools/frame.mjs` as the instrument. Both halves reproduce on my own runs: the final page returns
+`figure-top to hole-bottom: 786 px of 844 — HOLDS`, and the same instrument pointed at `658a6fd`
+returns `867 px of 844 — OVER by 23`, which is session 87's hand figure. `PROJECT.md:32` now reads
+*"As of session 88: 33 %–100 % — 11 of 2–33, from 25 saved copies holding 8 distinct lists (9
+contents, 15 bodies)"* — which is `day.py`'s output for tonight, and pays finding 11.
+
+## S2. The record's count of this memo — true, with one word to correct
+
+`WORKBOARD.md:23-25` says *"`VERIFIER-88.md` (**FAIL, three blocking and eight noted**, all paid)"*.
+Three blocking, all paid: yes. Eight noted: six in the first pass (4, 7, 8 × three, 11) and two in
+the re-run (R5, R8) — the count is right. *All paid* is right for seven of them; **R5 is not paid,
+it is accepted**, and what it costs is in S4 below. The three banked failures 47, 48 and 49
+(`WORKBOARD.md:44-49`) describe what I found, in my figures, including 49 as the cardinal sin by
+subtraction.
+
+## S3. The record's other new figures — checked, and one caught on its way out
+
+Re-run, not taken:
+
+- *"Eight states, and every one of them prints `11` now"* (`WORKBOARD.md:29-30`) — byte-exact at
+  `DRAMATURG-88.md:55`.
+- **`fold.mjs` stays at 88 and the count tracks scroll range** — reproduced across all three states:
+  `658a6fd` 88 failures with a probe grid ending at y 1290; `1003f95` 80 with the grid stretched to
+  y 1368; the final page 88 with the grid back at 1290. The instrument is unchanged in all three.
+- **The body moved under a still edition on two nights running, attributed both times** — verified
+  in the captures: the stylesheet fingerprint went `Base.BDo6THrI.css` → `Base.P8Knfq78.css` →
+  `Base.yW6q2ssk.css` while the script's fingerprint stayed identical through all three.
+- **86 of the 104 px** — reconciles with my own arithmetic in R6: the row cost 104 and the clause 86.
+
+**And one that did not reproduce, caught while it stood.** For part of this pass `PROJECT.md:153`
+read *"104 `✗OFF` marks and 0 chips covered on both builds"*. I could not reproduce 104 anywhere:
+`fold.mjs` prints **216** marks on `658a6fd` (176 at 390), **208** on `1003f95` (168 at 390) and
+**216** on the final page; counting only the must-hold elements gives 144 and 136. *0 chips covered*
+is true — no `✗COVERS` line appears in any of the three runs. The sentence is no longer in the file:
+it now reads *"the count tracks scroll range across three states"*, which does reproduce, as above.
+Recorded as caught-and-gone rather than as a standing item, and named because it is failure 46's
+shape and this pass has now met it twice.
+
+## S4. The caption's last clause — the cut is right, and one measured number is on the wrong string — NOTED
+
+The clause *"That is why the figure above falls, and why it can only go on falling."* is deleted from
+`arrive.caption` (`data.py`, island `index.html:1038`).
+
+- **The defect it repairs is real.** Measured at 390×844 on the state before this cut: the caption
+  ended at y 1280 and `#sd-arrive-constant` opened at y 1285 with *"Neither end of this figure can
+  rise"* — 5 px apart, same size, same ink. That is the same law printed twice, and it was created
+  by the constant's move, not inherited.
+- **Nothing lost.** *"It can only go on falling"* still stands in the constant, in the body's ceiling
+  law, and verbatim in the terminal block this page prints (`a ceiling from 8 edition(s), 25
+  capture(s) … so this share can only fall`). No claim on the face lost its source.
+- **The number is on the wrong string.** The comment says the deleted clause carried *"the figure
+  above, a spatial pointer whose reach had stretched from 128 px to 869 by the same move"*. The
+  128 → 869 stretch is `DRAMATURG-88.md`'s R2 measurement of *"this figure"* — the pointer inside the
+  **constant**, which was not deleted; the same memo calls the caption's *"the figure above"* 880 px
+  and **inherited**. Measured myself at 390: the constant stood 128 px under the frame on `658a6fd`
+  (575 against a frame ending at 447) and stands 832 px under it now (1285 against 453), while the
+  caption did not move down by the cut at all — it moved **up** 81 px, from 1230 to 1149. The
+  deletion is justified by the 5 px doubling; the sentence justifying it attributes a real
+  measurement to a phrase it was not taken on.
+
+## S5. Every instrument, on the final page
+
+```
+python3 projects/season1/capture/day.py 2026-08-04   25 captures · 8 editions · 9 contents · 15 bodies
+                                                     33 %–100 %  (11 of 2–33)
+data.py --check                                      island matches the captures
+data.py --write --into <copy>                        byte-identical to the committed island
+tools/tiers.mjs --dir=…/still-dark                   exit 0
+tools/frame.mjs   390×844  figure→controls 317 HOLDS · figure→hole-bottom 786 HOLDS
+                 1400×900  figure→controls 495 HOLDS · figure→hole-bottom 364 HOLDS
+tools/fold.mjs                                       88 failure(s), exit 1 — unchanged, not claimed as repaired
+tools/renders.py                                     RENDERS MATCH THE PAGE
+bash tools/selftest.sh                               SELFTEST PASSED
+python3 tools/record_words.py                        2,998 of 3,000 by wc -w — UNDER by 2
+```
+
+The eight fractions are unchanged by everything above: `11 of 11 · 14 · 16 · 17 · 20 · 25 · 31 · 33`
+against `100 · 79 · 69 · 65 · 55 · 44 · 35 · 33 %`, each re-derived from `day.py --as-of` at its own
+stop in finding 1, and the island that carries them is a byte-exact build.
+
+---
+
+## FINAL VERDICT
+
+**PASS — three blocking findings raised and paid, nine noted across three passes (4, 7, 8 × three, 11,
+R5, R8, S4), of which eight are paid or gone and one is accepted with its cost named here.**
+
+The work as it now stands says only true things about its own arithmetic: the falling figure prints
+the division it is at every one of the eight stops, the count this house makes itself is attributed to
+this house, the 25th capture is the live source page byte for byte, and the span this record has never
+measured green measures 786 of 844. The word ceiling holds at 2,998 with two words of room.
+
+The house's own prose remains the weak place, and this pass caught four numbers in it that no run
+supported: an unrunnable `142 px`, a `104 ✗OFF marks` that reproduces on no build, a citation to a
+line that does not hold the quotation, and a px range attached to the wrong pointer. Three are gone
+and one stands in a comment. Failure 46 was banked one session ago for exactly this, and one session
+was not long enough.

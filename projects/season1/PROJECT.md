@@ -131,20 +131,22 @@ and eight noted, all paid.** Originals untouched, re-runs appended. **The argume
 
 **BUILT — the falling figure prints the division it is.** Three rows: the percentage, the same end in
 ships, the day's own list. The run goes **`11 of 11` → `11 of 14 · 16 · 17 · 20 · 25 · 31` →
-`11 of 33`** against a `11 of 230` that never moves. *"Eight states, and every one of them prints `11`
-now"* — the voice that charged in 87 that not one of them did, striking its own §1. Both numerals
-mutate **at the identical millisecond, seven times each**; both clauses and the standing figure
-**zero**. **Nothing tells a stranger the relation. The column shows it.**
+`11 of 33`** against an `11 of 230` that never moves. *"Eight states, and every one of them prints
+`11` now"* — the voice that charged in 87 that not one did, striking its own §1. Both numerals mutate
+**at the identical millisecond, seven times each**; the clauses and the standing figure **zero**.
+**Nothing tells a stranger the relation. The column shows it.**
 
-**AND THE CLAUSE WRITTEN UNDER IT WAS DELETED THE SAME NIGHT** — 86 of the 104 px the row cost,
-re-telling a sentence deleted three lines lower. **The numeral stands clauseless.**
+**AND THE CLAUSE UNDER IT WAS DELETED THE SAME NIGHT** — 86 of the 104 px the row cost, re-telling a
+sentence deleted three lines lower. **The numeral stands clauseless.**
 
-**BOTH RE-PUT.** Dramaturg: **PASSES AS STAGED, condition discharged** — the gap between the two
-fractions **92 px → 5**, and 786 reconciled to the pixel by a second method (943 − 86 − 88 + 17).
-Verifier: **PASS**. **Two costs named, unrepaired:** 88 of the 157 px **moved rather than went**, so
-the condition on the fixed end stands 963 px below the figure it is about on a phone; and a cut
-ordered after both voices reported, **seen by neither**, took the caption's last clause — it had
-landed 5 px above a paragraph stating the same law, carrying a pointer stretched to 869 px.
+**BOTH RE-PUT.** Dramaturg: **PASSES AS STAGED, condition discharged** — the fractions' gap **92 px
+→ 5**, 786 reconciled to the pixel by a second method (943 − 86 − 88 + 17). Verifier: **PASS**, its
+second re-put correcting two figures this record had already committed. **One cost accepted, not
+paid:** 88 of the 157 px **moved rather than went**, so the condition on the fixed end stands **832 px
+under the frame**, from 128 — *this line said 963, taken on a state the night's last cut had moved,
+and the 128 → 869 reach it also named is the constant's own string, not the deleted one.* That cut,
+ordered after both voices reported and **seen by neither**, took the caption's last clause, landed
+5 px above a paragraph stating the same law.
 
 **(y)'s SECOND SPAN IS GREEN — 786 px of 844, from 867.** Figure-top to hole-bottom: the falling
 number and the space filling under it hold one phone screen, the first time in this work's measured
@@ -153,8 +155,8 @@ already lives; the sentence no run can perform travels unedited. **`tools/frame.
 from tonight** and reproduces 87's hand-measured **867** exactly.
 
 **`tools/fold.mjs` STAYS AT 88 AND WAS NEVER 80.** For one build it printed 80; the staging voice
-proved the eight a **moved ruler** — the probe grid is `range × k / 8`, the head grew, the ticks
-stretched past the failure, and the count tracks scroll range across three states. **Not a repair.**
+proved the eight a **moved ruler** — probe grid `range × k / 8`, a taller head, the ticks stretched
+past the failure — and the count tracks scroll range across three states. **Not a repair.**
 
 **Three findings are banked below: 47, 48, 49.**
 
@@ -195,23 +197,22 @@ measuring.
 47. **88 — this house moved HEAD under the two voices judging its object.** The build was committed
     and pushed while both were measuring, so a control taken as the instrument's own header tells a
     session to take it — `git show HEAD:` — would have extracted the object under test and measured
-    it as its own control. The object never moved: both voices hashed it at either end of their
-    passes. **Caught by a voice, not by the house.** 39 was editing an object under the voices; this
-    is editing the REFERENCE they measure it against.
+    it against itself. The object never moved: both voices hashed it at either end of their passes.
+    **Caught by a voice.** 39 was editing an object under the voices; this is
+    editing the REFERENCE.
 48. **88 — the debt this house was ordered to pay was in its hand, already earned, and it spent it
     on a clause.** Tonight's trim of one note was worth 28 px against a 23 px debt — the item would
     have gone green by reverting nothing — and the session put 86 px of new prose under its own new
-    numeral, re-telling a sentence it had deleted three lines lower, and took the item to the staging
-    voice 76 px WORSE. **The build answered the prescription; the prose around it undid the payment
-    the same night.**
+    numeral, re-telling a sentence deleted three lines lower, and took the item to the staging voice
+    76 px WORSE. **The build answered the prescription; the prose around it undid the payment.**
 49. **88 — the cardinal sin by subtraction, for the second time in this work's life.** The count of
     names in a list is DERIVED by this work's own legend (banked failure 41), and a cut made for
     pixels left the words *eleven ships named* under a bare `SOURCED`, attributing this house's own
     count to the instrument it reads. The defence in the source was that the row above says whose
     count it is; the verifying voice showed the two elevens are **not the same quantity** — the names
-    counted across copies of the 4 August edition, against the observed knowable count — equal in the
-    record as it stands and by no law, with no check asserting it. **A tier word is not inherited
-    from a neighbour.**
+    counted across copies of the 4 August edition, against the observed knowable count — equal in
+    the record and by no law, with no check asserting it. **A tier word is not inherited from a
+    neighbour.**
 
 ## Retired to commits, deleted from nothing
 

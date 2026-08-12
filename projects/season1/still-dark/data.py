@@ -1175,9 +1175,14 @@ def build():
             # caption ending *"and why it can only go on falling"* was read as one block
             # with a paragraph opening *"Neither end of this figure can rise"*: **one law
             # printed twice at 5 px, by a house that struck a figure printed twice at 588.**
-            # The clause deleted here is also the one carrying *the figure above*, a spatial
-            # pointer whose reach had stretched from 128 px to 869 by the same move — the
-            # defect this house paid for in session 85 and would have re-published tonight.
+            # CORRECTED THE SAME NIGHT, BEFORE THE CUT'S OWN PROSE HAD SHIPPED A SECOND TIME:
+            # this comment said the deleted clause also carried *the figure above*, *"a spatial
+            # pointer whose reach had stretched from 128 px to 869 by the same move"*. **That
+            # measurement is of a different string.** 128 → 869 is the reach of *this figure*,
+            # the pointer inside the CONSTANT, which was not deleted; the caption's *the figure
+            # above* is 880 px and INHERITED, and the caption did not move down by this cut at
+            # all — it moved up 81 px (`VERIFIER-88.md` S4, measured at 390). The cut stands on
+            # the 5 px doubling, which is its own reason and needs no borrowed number.
             # The survivor states the law and the condition together, in the paragraph that
             # is only about the ends of the figure. The caption keeps the mechanism, which
             # is its job, and ends on the sentence that says what the later lists did.

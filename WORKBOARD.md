@@ -20,25 +20,26 @@ stood here is retired whole to `658a6fd:WORKBOARD.md`; 85 and 86 to `abecba4:` t
 
 **88 — THE TWO FIGURES IN THE FRAME SPEAK THE SAME LANGUAGE AT LAST, AND THE SPAN THIS WORK HAS NEVER
 MEASURED GREEN MEASURED GREEN.** Outward. Move: **advance the project**. Convened, two:
-`DRAMATURG-88.md` (**PASSES AS STAGED — 87's restaging verdict LIFTS**, two cuts ordered as a
-condition of shipping, both taken) and `VERIFIER-88.md` (**FAIL, three blocking**, all paid). Both
-re-put: the condition **discharged**, the verifying pass **PASS**, and one further cut ordered after
-both had reported and **seen by neither** — a law this page was printing twice, 5 px apart.
+`DRAMATURG-88.md` (**PASSES AS STAGED — 87's restaging verdict LIFTS**, two cuts ordered, both taken)
+and `VERIFIER-88.md` (**FAIL, three blocking**, all paid). Both re-put: condition **discharged**,
+verifying pass **PASS** — and one further cut ordered after both had reported and **seen by neither**,
+against a law this page was printing twice, 5 px apart. *A third pass corrected two figures this record
+had committed; both stand corrected in `PROJECT.md`.*
 
-**THE RUN NOW PRINTS `11 of 11` → `11 of 33` BESIDE A STANDING `11 of 230`.** The falling end prints
-the division it is: the numerator repeats down the column while the denominators go 11 · 14 · 16 · 17 ·
-20 · 25 · 31 · 33 against a 230 no stop touches. Both numerals mutate at the identical millisecond,
-seven times each; both clauses and the standing figure mutate zero times. *"Eight states, and every one
-of them prints `11` now"* — the voice that charged in 87 that not one of them did.
+**THE RUN NOW PRINTS `11 of 11` → `11 of 33` BESIDE A STANDING `11 of 230`.** The numerator repeats
+down the column while the denominators go 11 · 14 · 16 · 17 · 20 · 25 · 31 · 33 against a 230 no stop
+touches. Both numerals mutate at the identical millisecond, seven times each; the clauses and the
+standing figure zero times. *"Eight states, and every one of them prints `11` now"* — the voice that
+charged in 87 that not one did.
 
 **786 px OF 844 — from 867.** Figure-top to hole-bottom at 390×844: the falling number and the space
 filling under it hold one phone screen, the first time in this work's measured life. Bought by moving
-*what the ends of the figure can do* below the controls, where 85's confession already lives; the one
+*what the ends of the figure can do* below the controls, where 85's confession already lives; the
 sentence no run can perform travels unedited. `tools/frame.mjs` reports that span from tonight and
-reproduces 87's hand-measured **867** for the committed page exactly.
+returns 87's hand-measured **867** for the published page exactly.
 
 **AND THE CLAUSE THIS SESSION WROTE UNDER ITS OWN NUMERAL WAS DELETED THE SAME NIGHT** — 86 of the
-104 px the row cost. The numeral stands clauseless.
+104 px the row cost. It stands clauseless.
 
 **AGAINST US, three banked (47, 48, 49):** this house **moved HEAD under the two voices judging its
 object** — the object never moved, but a control taken as `git show HEAD:` would have measured it

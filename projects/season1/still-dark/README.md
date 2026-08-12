@@ -288,7 +288,11 @@ exact figure taken by hand in 87: an instrument that reproduces the hand measure
 been checked. The reconciliation, by a second method: **943 − 86 − 88 + 17 = 786.**
 
 **TWO COSTS, NAMED AND NOT REPAIRED.** **88 of the 157 px moved rather than went** — on a phone the
-condition on the fixed end now stands 963 px below the figure it is about, and below the chips.
+condition on the fixed end now stands **832 px under the frame**, from 128 px on the published page,
+and below the chips. *(This section said 963 px for one commit. That figure was measured on the state
+before the last cut of the night and the cut moved the page under it; 832 is the final page's, taken
+by `VERIFIER-88.md` S4. A number measured on a state that no longer exists is banked failure 46's
+shape, and it is corrected here rather than quietly replaced.)*
 And **`tools/fold.mjs` printed 80 for one build and it was never a repair**: the staging voice proved
 the eight fallen failures a **moved ruler** — the probe grid is `range × k / 8`, the head grew, the
 ticks stretched past the failure — and the count tracks scroll range across three states. It stands
@@ -308,8 +312,10 @@ because that is the only honest way to ship a change after the pass that judged 
 constant landed it **5 px** under a caption ending *"and why it can only go on falling"*, so a
 paragraph opening *"Neither end of this figure can rise"* read as one block with it — **one law
 printed twice at 5 px, by a house that struck a figure printed twice at 588.** The caption's last
-clause is cut. It also carried *the figure above*, a pointer whose reach the same move had stretched
-from 128 px to 869.
+clause is cut. *(This section also said the clause carried a pointer *"stretched from 128 px to 869"*.
+It did not: that reach is the constant's own *this figure*, which was not deleted, and the caption's
+*the figure above* is 880 px and inherited — `VERIFIER-88.md` S4. The cut stands on the 5 px
+doubling.)*
 
 **AND THIS HOUSE MOVED `HEAD` UNDER THE TWO VOICES JUDGING ITS OBJECT** — the build was committed and
 pushed while both were still measuring, so a control taken the way `tools/frame.mjs`'s own header
