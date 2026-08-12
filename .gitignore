@@ -8,3 +8,4 @@ projects/no-part/build/_dev_*.py
 # python
 __pycache__/
 *.pyc
+memory/index.jsonl
