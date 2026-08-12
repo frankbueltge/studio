@@ -244,12 +244,78 @@ is the only honest way to ship a change after the pass that judged the page: *"O
 line, which said *"any button below"* at every width and on the committed page while the buttons have
 always stood above it — inherited, and promoted to the phone's first screen by cut 2.
 
-**THE THIRD IS NOT TAKEN AND IS OWED: 23 px.** Figure-top to hole-bottom at 390×844 is **867 px of
-844**, so there is now no scroll position at which a phone reader can watch the number fall and the
+**THE THIRD IS NOT TAKEN AND IS OWED: 23 px.** *(Paid in session 88, below, and the figure it names
+is confirmed by the instrument built for it: `tools/frame.mjs` returns 867 px for this page. It stood
+at 943 for one build of 88 before the cuts, and stands at 786 now.)* Figure-top to hole-bottom at
+390×844 is **867 px of 844**, so there is now no scroll position at which a phone reader can watch the number fall and the
 space fill at once, where before cut 2 there was a 101 px band. It is the sharpest price of the
 repair, the staging voice found it by measuring the thing it had itself ordered, and this house is
 not paying a 23 px staging change at the end of a session in which fifteen blocking items have
 already been paid and two voices have already been re-put. **Banked, with its number.**
+
+**SESSION 88 — THE TWO FIGURES SPEAK THE SAME LANGUAGE, AND THE 23 PX WENT GREEN AT 786.** Two
+voices were convened on the built object and both were re-put on the changed state; both memos stand
+beside this file, published verbatim, with their re-runs appended below untouched originals.
+`../DRAMATURG-88.md` — **PASSES AS STAGED**, the restaging verdict of 87 **lifted**, two cuts ordered
+as a condition of shipping and both taken, the condition then **discharged** on the re-put.
+`../VERIFIER-88.md` — **FAIL, three blocking and eight noted, all paid**, then **PASS** on the closing
+state.
+
+**WHAT WAS BUILT: the falling figure prints the division it is.** The frame is three rows — the
+percentage, the same end in ships, and the day's own list — and the run goes `11 of 11 · 11 of 14 ·
+16 · 17 · 20 · 25 · 31 · 11 of 33` against an `11 of 230` no stop touches. **The numerator repeats
+down the column while the denominators pull apart.** Read off the live DOM by the staging voice at
+all eight stops: *"Eight states, and every one of them prints `11` now"* — the voice's own charge of
+87 was *"Eight states, and not one of them prints `11`"*, and it struck it. Both numerals rewrite at
+the **identical millisecond, seven times each**; both clauses and the standing figure rewrite **zero
+times**. Nothing on the face tells a stranger the relation between the two figures. The column shows
+it, and that is the whole difference this row was built for.
+
+**AND THE CLAUSE THIS HOUSE WROTE UNDER ITS OWN NEW NUMERAL WAS DELETED THE SAME NIGHT.** It cost
+**86 of the 104 px** the row cost a phone frame, it re-told a sentence this session had deleted three
+lines lower, it printed `11 of 11` twice at stop 0 for two different ends, and it stood as 92 px of
+grey between the two fractions it was written to join. The numeral stands with no clause; the gap
+between the two fractions is **5 px** at both widths, from 92 and 56.
+
+**THE OWED 23 PX IS PAID, AND THE SPAN IS GREEN FOR THE FIRST TIME IN THIS WORK'S MEASURED LIFE —
+786 px of 844.** Figure-top to hole-bottom: one phone screen now holds the falling number and the
+space filling under it. It was bought by moving *what the ends of the figure can do* out of the run's
+spine to below the controls, where session 85's confession already stands and where nothing measures
+a fold; the string travels **byte-identical**, and the one clause in it that no run can perform —
+the condition under which the fixed end holds, this face's most expensive sentence — is not lost.
+`tools/frame.mjs` reports that span from tonight and returns **867 px** for the published page, the
+exact figure taken by hand in 87: an instrument that reproduces the hand measurement it replaces has
+been checked. The reconciliation, by a second method: **943 − 86 − 88 + 17 = 786.**
+
+**TWO COSTS, NAMED AND NOT REPAIRED.** **88 of the 157 px moved rather than went** — on a phone the
+condition on the fixed end now stands 963 px below the figure it is about, and below the chips.
+And **`tools/fold.mjs` printed 80 for one build and it was never a repair**: the staging voice proved
+the eight fallen failures a **moved ruler** — the probe grid is `range × k / 8`, the head grew, the
+ticks stretched past the failure — and the count tracks scroll range across three states. It stands
+at **88**, level with the published page, red, printed, not rewritten.
+
+**WHAT THE VERIFYING PASS BLOCKED, all paid:** the count of names in a list is **DERIVED** by this
+work's own legend, and a cut made for pixels left the words *eleven ships named* standing under a
+bare `SOURCED` — this house's own count attributed to the instrument it reads, **the cardinal sin by
+subtraction**, and the defence written into the source was wrong twice over: the two elevens are
+`day_cut["printed"]` and the observed knowable count, equal in the record as it stands and by no law,
+with no check asserting it. The attribution is back. Also blocked: this record's live sections still
+carried **23 px** for a span its own new instrument measured at 99, and a **142 px** figure that no
+command could reproduce, published in a session whose subject was measuring. Both paid.
+
+**ONE CUT WAS ORDERED AFTER BOTH VOICES HAD REPORTED AND IS SEEN BY NEITHER**, and it is named here
+because that is the only honest way to ship a change after the pass that judged the page. Moving the
+constant landed it **5 px** under a caption ending *"and why it can only go on falling"*, so a
+paragraph opening *"Neither end of this figure can rise"* read as one block with it — **one law
+printed twice at 5 px, by a house that struck a figure printed twice at 588.** The caption's last
+clause is cut. It also carried *the figure above*, a pointer whose reach the same move had stretched
+from 128 px to 869.
+
+**AND THIS HOUSE MOVED `HEAD` UNDER THE TWO VOICES JUDGING ITS OBJECT** — the build was committed and
+pushed while both were still measuring, so a control taken the way `tools/frame.mjs`'s own header
+tells a session to take it would have extracted the object under test and measured it against itself.
+The object never moved: both voices hashed it at either end of their passes. Caught by a voice, not
+by the house, and banked.
 
 **The head, and what it does.** The page opens on the day's own answer: the eleven ships the list
 dated 4 August held, and the share of that day's darkness they represent — `100 %–100 %`, because on

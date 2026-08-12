@@ -218,12 +218,17 @@ def share_line(a, status):
         "figure_falling": f"{round(lo * 100)} %",
         "figure_fixed": f"–{round(hi * 100)} %",
         # THE FRACTION EACH END IS, session 88, and it is the whole of tonight's build.
-        # `DRAMATURG-87.md` (:105, :108, :402) returned its own prescription after this
-        # house built it to the letter: *"Placement was never the problem; units were …
-        # the falling figure must print its own fraction, not only its percentage, so that
-        # the run shows `11 of 11 → 11 of 33` while `11 of 230` stands underneath."* The
-        # two figures in the frame had no digit in common at any of the eight stops, so the
-        # relation between them was carried entirely by an 11.52 px sentence. These are the
+        # `DRAMATURG-87.md:105-110` returned its own prescription after this house built it
+        # to the letter: *"Placement was never the problem; units were … the falling figure
+        # must print its own fraction, not only its percentage, so that the run shows
+        # `11 of 11 → 11 of 33` while `11 of 230` stands underneath."* The line range is the
+        # quotation's own and not the ruling's nearest restatement: this comment cited
+        # `:402` for one night, where the same voice says the same thing in different words
+        # and none of the quoted text stands, and a reader sent to a line that does not hold
+        # what the marks promise has been misdirected by a citation
+        # (`VERIFIER-88.md` §7). The two figures in the frame shared no TERM at any of the
+        # eight stops — not one of them printed `11`, and not one printed a denominator —
+        # so the relation between them was carried entirely by an 11.52 px sentence. These are the
         # same two quotients `day.py` divides to get the percentages above — `obs / hi` and
         # `obs / max(lo, obs)` — written as the divisions they are, and split HERE, so no
         # face of this work can print a fraction the record did not compute.
@@ -678,29 +683,22 @@ def build():
         })
     n_stops = len(arrive_stops)
     last_late = arrive_stops[-1]["days_after"]
-    # THE CLAUSE UNDER THE MOVING FRACTION — fixed at every stop, like `when_fixed`, so the
-    # one thing that moves in that row is the numeral (`DRAMATURG-82.md` §3, this head's
-    # standing rule). Two things are said and both are computed, never typed. First, which
-    # end of the two-ended percentage the fraction is the arithmetic of — said as a
-    # direction and not as a position, because "the left-hand number" is a fact for the eye
-    # and nothing at all for the ear (banked failure 12). Second, the other end, and it is a
-    # BRANCH on the run's own values: while every stop's fixed end is the same quotient it
-    # is named as the constant it is, and the night the bands close on this day's own names
-    # — `day.py` computes that end as `obs / max(lo, obs)`, so it falls once more than
-    # eleven of these ships are certainly dark — this sentence stops claiming it and prints
-    # the two ends it actually has. A sentence about arithmetic that cannot survive the
-    # arithmetic moving is banked failure 31, and this house has published that one twice.
-    fixed_fracs = [s["share_fixed_of"] for s in arrive_stops]
-    if len(set(fixed_fracs)) == 1:
-        # NOT "the end that cannot move", however well the dim ink means it: this house
-        # has twice published a sentence saying that end never moves and been wrong both
-        # times (banked failure 31, and its repair). The sentence states what the run does,
-        # for the run's length, and claims nothing about the next list.
-        other_end = f"The other end is {fixed_fracs[0]} at every stop."
-    else:
-        other_end = (
-            f"The other end moves too, from {fixed_fracs[0]} to {fixed_fracs[-1]}."
-        )
+    # THE CLAUSE UNDER THE MOVING FRACTION WAS WRITTEN AND DELETED IN ONE SESSION, and the
+    # deletion is the staging voice's order, taken. It said which end the fraction was the
+    # arithmetic of and named the other end — and `DRAMATURG-88.md` §§3–4 measured what that
+    # cost: the 11.52 px prose in the frame went from 166 characters to 307, it re-told the
+    # sentence this session had just deleted three lines below it, it printed `11 of 11`
+    # twice at stop 0 meaning two different ends, and it wedged 92 px of grey between the
+    # two fractions it was written to join. *"The row is worth it. The clause is not, and
+    # the clause is 86 of the 104 px."* — that ruling and its accounting stand at `:235` and
+    # `:258-259`, in §4, and the character counts and the 92 px in §3; this comment cited §3
+    # alone for one hour, and a section number is a citation like any other
+    # (`VERIFIER-88.md` R8). The 86 px is the same voice's own prescription's
+    # last clause, unbuilt until now: *"the run does the arguing, and the 11.52 px sentence
+    # can go"* (`DRAMATURG-87.md:109-110`).
+    # `share_fixed_of` survives in the island with no consumer on the face, and that is
+    # deliberate: it is the other end's own division, computed at every stop, and the next
+    # session to argue about that end should read it rather than take it by hand.
     # WHAT STOOD HERE UNTIL SESSION 83, and why it went. The last stop, and only the last,
     # appended *"Only the lower end has moved, and the next list can only lower it again."*
     # `DRAMATURG-82.md` §2 ruled that sentence a turn's content staged as boilerplate: it
@@ -1004,36 +1002,25 @@ def build():
             # second. What the eye can now do for itself is not told to it again. What
             # survives is what no run can show — that these two hundred and thirty are
             # disappearances and not names, and whose count the numerator is.
-            # AND THE ATTRIBUTION IS NOT REPEATED HERE, because the numerator is the same
-            # eleven as the row above and that row says whose count it is. What no run can
-            # show is what the two hundred and thirty ARE, and this is the only sentence on
-            # the face that says it: they are disappearances the list says it examined, not
-            # names it printed — a misreading that would be wrong by an order of magnitude.
+            # THE ATTRIBUTION WENT OUT OF THIS STRING FOR ONE HOUR AND IS BACK — the third
+            # blocking finding of `VERIFIER-88.md`, and it is banked failure 25's shape
+            # again: the cardinal sin by subtraction. The shortened note printed the words
+            # *eleven ships named* under a bare `SOURCED`, and this work's own legend rules
+            # the count of names in a list DERIVED, in the sentence that records banked
+            # failure 41 — *upstream prints names, and this house counts them*. Only the
+            # 230 is the list's; the eleven is ours, and the string says so again.
+            # AND THE TWO ELEVENS ARE NOT ONE FIGURE, which the defence for cutting this
+            # clause assumed they were. This row's numerator is `day_cut["printed"]`, the
+            # names counted across the copies of the 4 August edition; the row above it is
+            # `knowable_on_the_day_OBSERVED`. They are equal in the record as it stands and
+            # by nothing else — no law joins them and no check asserts one — so each row
+            # carries the word for where its own numerator came from.
             "standing_note": (
                 f"— {word(day_cut['printed'])} ships named, of "
-                f"{day_cut['examined']:,} disappearances the list says it examined. SOURCED."
+                f"{day_cut['examined']:,} disappearances the list says it examined. "
+                "SOURCED — the count of names is this house's own."
             ),
         },
-        # THE ROW THAT GIVES THE RUN A TERM IN COMMON WITH THE FIGURE UNDER IT — session 88.
-        # Written once, never touched by a stop; only the numeral above it is rewritten.
-        # The denominator is the upper end of the day's own total, so the words name what
-        # that end is — ships that COULD have been dark on the day, because the instrument
-        # gives a return only as a week-wide band and the band is why the total has two ends
-        # at all. The numerator is this record's own count of what the day's list had
-        # already named. Tiers, in the same breath, because a figure whose tier word
-        # travelled in a paragraph that moved elsewhere is banked failure 25: the count of
-        # names is OBSERVED, the total it stands over is DERIVED, and the line under the
-        # whole frame says the share is worked out here.
-        # Cut to three short sentences before it was ever committed, on this head's own
-        # arithmetic: the first draft of this clause cost 142 px of a phone frame for one
-        # row of numerals, and a clause that outweighs the figure it labels is the thing
-        # `DRAMATURG-85.md` and `DRAMATURG-87.md` have now convicted twice on this face.
-        "fraction_note": (
-            "— the falling end as a division: the names the day's list had already given, "
-            "of the ships that could have been dark on it. "
-            + other_end
-            + " OBSERVED over DERIVED — the count of names is this record's own."
-        ),
         "stops": arrive_stops,
         # THE CONSTANT, MARKED — session 83. The staging voice's one banked change, and the
         # only one it named as the change that would most improve the head: *"one figure
@@ -1181,8 +1168,19 @@ def build():
             f"{word(n_stops)} answers, one day — the last of them "
             f"{'a day' if last_late == 1 else word(last_late) + ' days'} after the day "
             f"had ended. The {word(field[0]['count'])} names the day itself held cannot "
-            "grow; every list since has only made the day larger underneath them. That is "
-            "why the figure above falls, and why it can only go on falling."
+            "grow; every list since has only made the day larger underneath them."
+            # AND THE LAST CLAUSE WENT IN SESSION 88, ordered by `DRAMATURG-88.md`'s re-put
+            # after both voices had already reported. Moving *what the ends of the figure
+            # can do* below the controls landed it **5 px** under this caption — so a
+            # caption ending *"and why it can only go on falling"* was read as one block
+            # with a paragraph opening *"Neither end of this figure can rise"*: **one law
+            # printed twice at 5 px, by a house that struck a figure printed twice at 588.**
+            # The clause deleted here is also the one carrying *the figure above*, a spatial
+            # pointer whose reach had stretched from 128 px to 869 by the same move — the
+            # defect this house paid for in session 85 and would have re-published tonight.
+            # The survivor states the law and the condition together, in the paragraph that
+            # is only about the ends of the figure. The caption keeps the mechanism, which
+            # is its job, and ends on the sentence that says what the later lists did.
             # It said "Twenty is today's answer" until this line was looked at against a
             # frame of the running head at its FIRST stop, where the count reads eleven.
             # A caption that stands under a moving number may not name one of the

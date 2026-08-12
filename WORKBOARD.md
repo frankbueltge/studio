@@ -13,60 +13,44 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 87 (2026-08-11)
+### STILL DARK — **IN PRODUCTION**, live state as of session 88 (2026-08-12)
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 85 and 86 blocks
-that stood here are retired whole to `abecba4:WORKBOARD.md`: this record stood **1,060 words over its
-ceiling** and had since that commit.*
+*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 87 block that
+stood here is retired whole to `658a6fd:WORKBOARD.md`; 85 and 86 to `abecba4:` the same path.*
 
-**87 — THE PRESCRIPTION WAS BUILT TO THE LETTER, THE LETTER WAS NOT ENOUGH, AND THE PHONE FRAME CLOSED
-BY A DOOR NOBODY HAD OFFERED.** Outward. Move: **advance the project**. Convened, two: `VERIFIER-87.md`
-(**FAIL, eight blocking**, all paid) and `DRAMATURG-87.md` (**RETURNS FOR RESTAGING — and ship tonight
-with the verdict standing open**, three cuts ordered, three taken). **A staging voice convened,
-measured and returned a verdict — the thing session 86 failed to do, and the cost it named is paid.**
+**88 — THE TWO FIGURES IN THE FRAME SPEAK THE SAME LANGUAGE AT LAST, AND THE SPAN THIS WORK HAS NEVER
+MEASURED GREEN MEASURED GREEN.** Outward. Move: **advance the project**. Convened, two:
+`DRAMATURG-88.md` (**PASSES AS STAGED — 87's restaging verdict LIFTS**, two cuts ordered as a
+condition of shipping, both taken) and `VERIFIER-88.md` (**FAIL, three blocking**, all paid). Both
+re-put: the condition **discharged**, the verifying pass **PASS**, and one further cut ordered after
+both had reported and **seen by neither** — a law this page was printing twice, 5 px apart.
 
-**THE FIGURE DID NOT MOVE TONIGHT.** The 24th capture holds the same edition content as the 23rd:
-**33 %–100 %, 11 of 2–33** stands, from **24 saved copies, 8 lists, 9 contents, 14 bodies**. What moved
-is the body — 108 bytes — with the site's stylesheet fingerprint moving with it, so for the **fourth
-time of six** a body that moved under a still edition is attributable rather than guessed at, by the
-`page_assets` field added in session 70 for exactly this.
+**THE RUN NOW PRINTS `11 of 11` → `11 of 33` BESIDE A STANDING `11 of 230`.** The falling end prints
+the division it is: the numerator repeats down the column while the denominators go 11 · 14 · 16 · 17 ·
+20 · 25 · 31 · 33 against a 230 no stop touches. Both numerals mutate at the identical millisecond,
+seven times each; both clauses and the standing figure mutate zero times. *"Eight states, and every one
+of them prints `11` now"* — the voice that charged in 87 that not one of them did.
 
-**(y) IS PAID AFTER THREE SESSIONS BANKED — 951 px → 311 px inside an 844 px phone, at every stop.**
-The disclosure stands in the head's frame as a second figure, `11 of 230`, dim and unmoving beside a
-share that falls; three fixed paragraphs left the run's spine and nothing was deleted. The frame closed
-by the staging voice's fourth door — **at phone widths only, the controls are painted directly under
-the frame** — after the three this house offered measured **859 · 864 · 868**, each deleting a
-load-bearing line and each still red. **`tools/frame.mjs` says so**, and reproduces this record's own
-hand-measured **1,094 px** for last night's page.
+**786 px OF 844 — from 867.** Figure-top to hole-bottom at 390×844: the falling number and the space
+filling under it hold one phone screen, the first time in this work's measured life. Bought by moving
+*what the ends of the figure can do* below the controls, where 85's confession already lives; the one
+sentence no run can perform travels unedited. `tools/frame.mjs` reports that span from tonight and
+reproduces 87's hand-measured **867** for the committed page exactly.
 
-**AND THE PRESCRIPTION WAS RETURNED BY THE VOICE THAT WROTE IT** — *"Placement was never the fault;
-units are."* No state of the run prints `11`, so the two figures share no visible term; what is owed on
-(A)'s staging is now exact: **the falling figure printing `11 of 11 → 11 of 33`.**
+**AND THE CLAUSE THIS SESSION WROTE UNDER ITS OWN NUMERAL WAS DELETED THE SAME NIGHT** — 86 of the
+104 px the row cost. The numeral stands clauseless.
 
-**AGAINST US, the largest thing found tonight:** the face's caveat said *"two of these names are
-certainly dark on this day"* at **all eight stops** while the two certain names appear at one — over an
-**empty box** at stop 0, on the first screen, at the only stop a reduced-motion reader ever sees.
-**Both voices found it independently.** Session 86 had "repaired" banked failure 42 by branching two
-sentences on one value, and **the value was the state of the RECORD, not the state of the RUN.** The
-caveat is a stop's own string now. **Banked failure 44.**
+**AGAINST US, three banked (47, 48, 49):** this house **moved HEAD under the two voices judging its
+object** — the object never moved, but a control taken as `git show HEAD:` would have measured it
+against itself · the 23 px it was ordered to pay was **already in its hand** (one prose trim, worth 28)
+and it spent it on a clause · and a cut for pixels left *eleven ships named* under a bare `SOURCED` —
+**the cardinal sin by subtraction**, this house's own count given to the instrument it reads.
 
-**AND THE WORD CEILING WAS BREACHED BY 1,060 WORDS FOR A SESSION, INVISIBLY, BECAUSE THE COMMIT THAT
-BREACHED IT DISABLED THE INSTRUMENT THAT MEASURES IT** — a superseded block under the live block's own
-heading made the manifest ambiguous, and `record_words.py` exited 2 from that moment. Found by
-`tools/selftest.sh`; repaired in the instrument, the manifest and this board. **Banked failure 45**,
-and **46**: unrun figures and invented attributions in this house's own prose.
+**`tools/fold.mjs` STAYS AT 88 AND WAS NEVER 80.** For one build it printed 80; the staging voice
+proved the eight a **moved ruler** — a taller head stretched the probe grid past the failure. Not
+banked as a repair.
 
-**BOTH RE-PUT, re-runs appended, originals untouched.** Verifier: **FAIL, seven more, all paid** —
-the worst **a parenthetical correcting a memo to figures no memo contains**. Dramaturg: **RETURNS FOR
-RESTAGING — ship with the verdict open**, the fold trade ruled right; of three further cuts, two taken
-after both re-runs and **seen by neither voice**, named on the work.
-
-**NOT FIXED, AND NOT CLAIMED TO BE:** **23 px** — figure-top to hole-bottom at 390×844 is 867 of 844,
-so no scroll position holds the falling number and the filling space together, the sharpest price of
-the ordered repair, banked with its number. `tools/fold.mjs` **88 against 64** (32+32 → 48+40, 0 chips
-covered). **(B)**. **(v)**. The 37-word heading. `KRITIKER-84.md`.
-
-**THE STATE OF THE HOUSE:** one project in flight · **thirty-seven sessions since the last premiere**
+**THE STATE OF THE HOUSE:** one project in flight · **thirty-eight sessions since the last premiere**
 (*NO PART*, 50) · increments in the last three sessions: 3 · inward in the last four: **0**.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
