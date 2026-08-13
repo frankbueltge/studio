@@ -237,8 +237,19 @@ def share_line(a, status):
         # `obs / max(lo, obs)` — written as the divisions they are, and split HERE, so no
         # face of this work can print a fraction the record did not compute.
         "fraction_falling": f"{n} of {b[1]}",
-        "fraction_fixed": f"{n} of {max(b[0], n)}",
-        "of": f"{n} of {b[0]}–{b[1]}",
+        # `max(b[0], n)` until session 92, and it printed `11 of 11` at every stop of this
+        # work's life. That is the cardinal defect the premiere gate of 92 found: the eleven
+        # in the numerator and the eleven in the denominator are DISJOINT SETS OF SHIPS —
+        # no vessel named in an edition dated on or before the day is ever CERTAINLY dark on
+        # it — so the quotient asserted a world in which eleven ships that are certainly dark
+        # on 4 August are not dark on it. The ceiling divides by certain PLUS knowable.
+        # Proof and history: `capture/day.py`, the block above `share_knowable_OBSERVED`.
+        "fraction_fixed": f"{n} of {b[0] + n}",
+        # The two denominators the band actually runs between, low end first. It printed
+        # `{b[0]}–{b[1]}` until session 92 — the certain count as the ceiling's denominator,
+        # the same false premise as `fraction_fixed` above, and it stood directly under the
+        # percentages on the face. The ceiling divides by certain PLUS knowable.
+        "of": f"{n} of {b[0] + n}–{b[1]}",
         "editions": len(a["editions_read"]),
         "captures": a["captures_read"],
     }
@@ -271,8 +282,12 @@ def band_line(a, caps):
     return (
         f"{word(hi).capitalize()} ships could have been dark on {printed_date(DAY)} and "
         f"{certainly}, because the instrument publishes a return only as {window} — so the "
+        # `max(lo, n)` here too until session 92 — the same false denominator, in the one
+        # sentence written to explain the notation. The ceiling divides by the certain count
+        # PLUS the knowable count, because no vessel this record can name on the day itself
+        # is ever among the certain.
         f"total is written {lo}–{hi}, and the share runs from {n} of {hi} to "
-        f"{n} of {max(lo, n)}."
+        f"{n} of {lo + n}."
     )
 
 
@@ -591,7 +606,7 @@ def build():
             # `DRAMATURG-89.md` returned the premiere gate for. Its sentence: *"the head's
             # frame prints how much of the day was knowable and never prints how much of it
             # is known, and knowing is the only thing in this run that turns."* Across the
-            # nine stops the share falls 100 · 79 · 69 · 65 · 55 · 44 · 35 · 33 · 31 — eight
+            # nine stops it then had, the share falls 100 · 79 · 69 · 65 · 55 · 44 · 35 · 33 · 31 — eight
             # steps of degree — while exactly one quantity changes KIND: the count of names
             # this record can call certainly dark on the day, 0 at stops 0–6, 2 at stop 7,
             # 4 at stop 8. Until tonight it existed on the face only as an English word in a
@@ -720,7 +735,12 @@ def build():
                 if late == 0 else
                 f"NAMED ONLY BY LATER LISTS — {word(running - arrive_stops[0]['total'])} "
                 f"ship{'' if running - arrive_stops[0]['total'] == 1 else 's'} that could "
-                "have been dark on that same day and that nobody could have had on it. "
+                # "on that same day" until session 92, when the tenth list took this heading
+                # across a wrap on the phone — one more line above the hole, and the span
+                # the staging voice floored at 268 px went to 266. The words that went are
+                # the ones the section above already says: this page holds one day open and
+                # the heading four lines up prints its date. See the note in tools/frame.mjs.
+                "have been dark on the day and that nobody could have had on it. "
                 + (
                     f"The last of them, in darker ink, arrived with the list of "
                     f"{short_caps(g['edition'])}."
@@ -997,11 +1017,12 @@ def build():
             # a list cut by duration, and turn a shrug into the most interesting sentence on
             # the page."* The method is multiple systems estimation — the standard answer to
             # *overlapping incomplete lists, how many did none of them catch* — and this
-            # record holds nine overlapping incomplete lists and does not use it. Why not is
+            # record holds ten overlapping incomplete lists and does not use it — the count is
+            # read off the captures, never typed on the face. Why not is
             # a fact about these lists and not a modesty: MSE reads the overlaps as captures
             # and needs a capture probability behind them, and membership of a Ghost Fleet
             # edition is decided by a published rule — the seven-day window and the ranking
-            # that cuts the list — so the overlaps between these nine lists carry the rule
+            # that cuts the list — so the overlaps between these lists carry the rule
             # and not the sea.
             # BOTH QUOTATIONS ARE FETCHED, NOT REMEMBERED. The capture rule is quoted from
             # Amelia Hoover Green, "Multiple Systems Estimation: Stratification and
@@ -1054,7 +1075,13 @@ def build():
                 "instead. Modelling them still needs a capture probability to exist, and "
                 "these lists give some ships none: a ship enters an edition only once its "
                 "return has fallen inside that edition's seven-day window, so a ship that "
-                "is still dark stands in no list, at no probability, in all nine of them. "
+                # BUILT, NOT TYPED, FROM SESSION 92 — this read "in all nine of them" and
+                # the tenth list arrived tonight, so the sentence that argues this record
+                # cannot estimate was itself out of date with the record. Banked failure 17
+                # in its own costume: the count of lists is on disk, and a page that types
+                # it is a page that will be wrong on the next night nobody looks.
+                f"is still dark stands in no list, at no probability, in all "
+                f"{word(len(cut_rows))} of them. "
                 "That is why this page prints a band and no estimate."
             ),
             # The address of the quoted requirement, on the face beside it, and the scope
@@ -1114,8 +1141,11 @@ def build():
             # an invented quotation is invented in any tier, and the marks were the whole of
             # the offence. This is that figure. It stands in the head's
             # own frame beside the share, at every stop, in the dim ink and the body weight
-            # this face has meant since session 83 by *cannot move* — the same mark the
-            # fixed end of the share already carries. The run then has two figures in one
+            # this face has meant since session 83 by *cannot move*. It said "the same mark
+            # the fixed end of the share already carries" until session 92, when the gate
+            # proved that end was never fixed — only miscomputed. THIS figure is still one
+            # that cannot move, and it is now the only one in the frame that is. The run has
+            # two figures in one
             # frame and shows the difference between them by doing it: one falls sixty-seven
             # points in twenty-five seconds and the other is the same number at the last
             # stop as at the first, because it is what the list of the day printed and no
@@ -1243,11 +1273,19 @@ def build():
         # it was measured by it (`VERIFIER-87.md` §6). Banked failure 26's class: a
         # hand-checkable number published without running the check, in the one comment that
         # boasted of running it.
+        # REWRITTEN AT THE PREMIERE GATE OF SESSION 92, and this is the FOURTH false form of
+        # this sentence — the three before it are quoted in the block below, each better
+        # written than the last and each checked by being read rather than run. What was
+        # false this time was not the sentence but the arithmetic under it: the upper end
+        # was computed as `obs / max(certain, obs)`, so it printed 100 % while the certain
+        # count stood below eleven, and the sentence faithfully described that. Both are
+        # corrected together. The upper end falls on the FIRST vessel that becomes certain,
+        # it has already fallen three times, and neither end is fixed any longer.
         "constant": (
-            "Neither end of this figure can rise. The upper end holds at 100 % until more of "
-            "these ships are certainly dark on this day than the "
-            f"{word(field[0]['count'])} the day itself named; the next list can lower the "
-            "falling end again."
+            "Neither end of this figure can rise. Both fall: the lower when a later list adds "
+            "a ship that could have been dark on this day, the upper when a later list makes "
+            "one CERTAINLY dark on it — and no ship this record can name on the day itself is "
+            "ever among the certain."
         ),
         # *"only the lower end has moved so far, and the next list can lower IT again"* —
         # struck, `DRAMATURG-89.md` cut 5. The run performs that clause at eight mutations
@@ -1291,11 +1329,15 @@ def build():
                 "this record's live one."
             ),
             "done": (
-                "The run has finished. The figure now standing is this record's live one "
+                # `{figure}` is filled by the page with the stop's own published share —
+                # DRAMATURG-92 cut 7: three spoken sentences carrying no number is not the
+                # same account of the run that the screen gives.
+                "The run has finished. The figure now standing is this record's live one, "
+                "{figure} "
                 "— press any button to go back through it."
             ),
-            "stopped": "You stopped the run at {stop}. Press “{replay}” to see it whole.",
-            "held": "Holding {stop}. Nothing is playing; press “{replay}” to run it.",
+            "stopped": "You stopped the run at {stop}, {figure}. Press “{replay}” to see it whole.",
+            "held": "Holding {stop}, {figure}. Nothing is playing; press “{replay}” to run it.",
             # What a visitor whose machine asks for no motion is told, and it is the state
             # this house's own renderer is served — so the material a panel reads says
             # plainly that nothing was running for it either.
@@ -1314,7 +1356,7 @@ def build():
             # `DRAMATURG-89.md` cut 4, both for the same reason and both refuted by the
             # object standing over them. *"Nine lists, nine answers, one day — the last of
             # them eight days after the day had ended"* is printed verbatim 911 px higher,
-            # in live per-stop ink that rewrites itself at every one of the nine stops
+            # in live per-stop ink that rewrites itself at every one of the run's stops
             # (`when_tail`); a static copy of a running string is the defect this house
             # struck twice already. *"The eleven names the day itself held cannot grow"*
             # is the frame's own left-hand column: `11 of 11 → 11 of 35`, eight mutations

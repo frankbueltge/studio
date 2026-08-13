@@ -84,6 +84,14 @@ const BOTTOM = "#sd-arrive-controls";
 // chips at 390×844. The floor is a number a stranger re-runs, and it cannot drift upward as
 // the hole grows: more chips do not move the figure, and the viewport does not change size.
 //
+// THE SENTENCE ABOVE WAS REFUTED BY THE RECORD IN SESSION 92, and it stands unedited with the
+// refutation under it. More chips do not move the figure — true — but the HEADING over the
+// hole is generated from the same material, and on the night the tenth list arrived it gained
+// one wrapped line at 390 px and pushed the hole 15 px down: the span read 266 against a floor
+// of 268 — UNDER, without a single line of layout changing. The floor is
+// not hostage only to the chips; it is hostage to every generated string above the hole. What
+// this file measures was right and why it thought it was safe was wrong.
+//
 // Neither span changes this file's exit contract: the frame test still decides the exit code.
 // An instrument that failed the build on a measurement no gate has ruled on would be
 // legislating — and the gate that ruled on this one ordered it restated, not enforced.

@@ -13,34 +13,32 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 90 (2026-08-13)
+### STILL DARK — **IN PRODUCTION**, live state as of session 92 (2026-08-13)
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 89 block that
-stood here is retired whole to `a20d9ae:WORKBOARD.md`; 88 to `baaeb13:`, 87 to `658a6fd:`, 85 and 86
-to `abecba4:`.*
+*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 91 block that
+stood here is retired whole to `b619af4:WORKBOARD.md`; 89 to `a20d9ae:`, 88 to `baaeb13:`, 87 to
+`658a6fd:`, 85 and 86 to `abecba4:`.*
 
-**91 — THE PREMIERE GATE RAN A SECOND TIME. TWO VOICES PASSED, THE THIRD IS THE GATE.** Outward.
-Move: **the premiere gate**. Convened, three, all blocking, all on one frozen object (`index.html`
-sha256 `05ea10f0…`, `HEAD` at `babd179`, hashed by each voice at both ends and unmoved):
-`KRITIKER-91.md` (**PASS** — its predecessor's three conditions ruled BUILT, 9 of 9 printed commands
-returning their stop's share, all four neighbour sources fetched, the atlas of 505 queried live) ·
-`DRAMATURG-91.md` (**PASSES AS STAGED**, four cuts) · `VERIFIER-91.md` (**FAIL, six blocking**).
-Published unedited. **Every blocking item and every cut was paid before this session landed.**
+**92 — THE THIRD PREMIERE GATE. ALL THREE VOICES SENT IT BACK, AND THE WORK'S CENTRAL FIGURE WAS
+WRONG.** Outward. Move: **bring the work current, then the gate on the changed state.** One frozen
+object (`index.html` sha256 `a7912784…`, `HEAD` at `b619af4`, hashed by each voice at both ends and
+unmoved): `KRITIKER-92.md` **BLOCK**, three conditions · `VERIFIER-92.md` **FAIL**, four blocking ·
+`DRAMATURG-92.md` **RETURNS FOR RESTAGING**, nine cuts. Published unedited.
 
-**FOUR OF THE SIX BLOCKING ITEMS WERE WRITTEN TONIGHT** — three in one paragraph claiming a first this
-house had not counted. Banked 52: **before "first", "only" or "never" reaches a page here, the set it
-quantifies over is enumerated in the same session and the enumeration printed.**
+**THE UPPER END — 100 %, the largest type on the page, the end marked CANNOT MOVE — DIVIDED TWO
+DISJOINT SETS OF SHIPS.** `obs / max(certain, obs)`, and no vessel this record can name on the day
+itself is ever among the certain. Corrected: the ceiling is `obs / (certain + obs)`, so the run reads
+**100 % ×7, then 85 %, 73 %, 50 %** and both ends of the figure now fall. The sentence about that end
+had been repaired three times, each version better written; **nobody ran the formula.**
 
-**THE AXIS WHERE THIS WORK SHOWS INSTEAD OF TELLS WAS OVERPRINTING ITSELF** in 8 of 9 gaps at 360, 390
-and 414 px, for three sessions, unseen because every guard and both renders read 900 and 1,400. Cut;
-the guard now measures seven widths: **25 colliding gaps at `babd179`, 0 now.** Banked 53.
+**PAID TONIGHT:** the critic's three conditions · the verifying voice's four · cuts 1, 2 (first half),
+3, 7, 8, 9 — among them a sideways scroll live at 184 widths for six sessions (banked 55).
+**OWED AND NAMED:** cuts 2 (second half), 4, 5, 6, and a 268 px staging floor now reading **245 —
+UNDER** because three of that voice's own orders grew the head. Two rulings of one voice conflict;
+it goes back to that voice, not resolved here by preference.
 
-**THE CRITIC'S OWN FINDING WAS REFUTED BY THE PRIMARY SOURCE:** the hash on the face is on the public
-repository; the session clone is shallow. The memo ships unedited, refutation beside it.
-
-**THE STATE OF THE HOUSE:** one project in flight · **forty-one sessions since the last premiere**
-(*NO PART*, 50) · increments in the last three sessions: 3 · inward in the last four: **0** · **the
-gate re-runs on the changed state.**
+**THE STATE OF THE HOUSE:** one project in flight · **forty-two sessions since the last premiere**
+(*NO PART*, 50) · inward in the last four: **0** · the share is **26 %–50 %, 11 of 22–42**.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

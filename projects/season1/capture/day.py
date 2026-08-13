@@ -201,21 +201,60 @@ def analyse(target, caps):
         # The number the work publishes, and it is a band because its denominator is one.
         # Numerator: vessels standing in an edition on or before the target day — our own
         # captures, nothing derived. Denominator: the vessels our record places in the day,
-        # itself a band [certain, certain+possible]. A vessel knowable on the day was dark
-        # on it, so the denominator can never fall below the numerator: the low end of the
-        # band is obs / possible, the high end obs / max(certain, obs).
-        # It is a CEILING that can only fall: every further capture can add vessels to the
-        # day, never remove one, and can never make a past edition contain a name it did not.
+        # itself a band [certain, certain+possible].
+        #
+        # THE PREMISE THIS COMMENT CARRIED FOR NINE SESSIONS WAS FALSE, and it is the worst
+        # thing this house has published. It read: *"A vessel knowable on the day was dark on
+        # it, so the denominator can never fall below the numerator: the low end of the band
+        # is obs / possible, the high end obs / max(certain, obs)."* A vessel knowable on the
+        # day was only POSSIBLY dark on it, and the two sets the quotient divides are
+        # DISJOINT BY CONSTRUCTION — which this file proves twelve lines above without ever
+        # having been asked to. A vessel is `certain` only when EVERY end of its published
+        # return window leaves it dark on the day, and a window that ends on or before the
+        # day is what puts a vessel in an edition dated on or before the day. So a knowable
+        # vessel is never a certain one; run it and see:
+        #     certain ∩ (the names in the edition dated <= the day)  ==  empty, at every stop.
+        # `max(certain, obs)` therefore asserted a world in which the day's whole darkness is
+        # the eleven names the day itself printed — a world in which the eleven vessels that
+        # are CERTAINLY dark on that day are not dark on it. In the world where the
+        # denominator really is obs, the numerator is 0 and the share is 0 %, not 100 %.
+        # Found at the premiere gate of session 92 by the critic, proved on this file's own
+        # --json output, and this record does not patch it quietly: `KRITIKER-92.md`.
+        #
+        # WHAT IS TRUE. Write C for certain, K for the knowable, k for however many of the K
+        # were in fact dark on the day, and m for the rest of the possible ones that were.
+        # The share is k / (C + k + m). It is largest at k = K, m = 0 — the CEILING is
+        # obs / (certain + obs) — and smallest at k = 0, where it is 0, because every
+        # knowable vessel is possible and not one is certain. So the pair below is a band
+        # ONLY under the stated condition that every vessel the day itself named was in fact
+        # dark on it; unconditionally the floor is 0, and `share_floor_unconditional` says
+        # so rather than leaving a reader to find it out the way this house did.
+        # It is still a CEILING that can only fall: every further capture can add vessels to
+        # the day, never remove one, and can never make a past edition contain a name it did
+        # not — and now the ceiling falls on the FIRST vessel that becomes certain, not on
+        # the twelfth, which is what the three superseded sentences about this end were all
+        # groping at and none of them reached.
         "share_knowable_OBSERVED": (
             None
             if (not have_capture_on_or_before or n_hi == 0)
             else [
                 round(len(knowable_observed) / n_hi, 4),
-                round(len(knowable_observed) / max(n_lo, len(knowable_observed)), 4)
-                if max(n_lo, len(knowable_observed))
+                round(
+                    len(knowable_observed) / (n_lo + len(knowable_observed)), 4
+                )
+                if (n_lo + len(knowable_observed))
                 else None,
             ]
         ),
+        # Printed beside the band so the condition the band stands on cannot be dropped in
+        # transit: unconditionally this share has no positive floor at all.
+        "share_band_condition": (
+            None
+            if not have_capture_on_or_before
+            else "both ends assume every vessel the day itself named was in fact dark on "
+            "the day; not one of them is certain, so unconditionally the share's floor is 0"
+        ),
+        "share_floor_unconditional": 0.0 if have_capture_on_or_before else None,
         "share_is_a_falling_ceiling": have_capture_on_or_before and n_hi > 0,
         "observed_note": (
             None
@@ -265,14 +304,19 @@ def main():
     print(f"  knowable on the day, OBSERVED ..... {obs if obs is not None else 'not yet measurable'}")
     sh = res["share_knowable_OBSERVED"]
     if sh:
+        # The denominators are printed as the two divisions they actually are. Until session
+        # 92 this line printed `({obs} of {b[0]}–{b[1]})` — the certain count as the ceiling's
+        # denominator — which is the same false premise the band itself carried: the ceiling
+        # divides by certain PLUS the knowable, because no knowable vessel is a certain one.
         print(
             f"  SHARE knowable on the day ......... {sh[0]*100:.0f}%–{sh[1]*100:.0f}%  "
-            f"({obs} of {b[0]}–{b[1]})"
+            f"({obs} of {b[0] + obs}–{b[1]})"
         )
         print(
             f"    (a ceiling from {n_ed} edition(s), {res['captures_read']} capture(s): further "
             f"nights can only add vessels to this day, so this share can only fall)"
         )
+        print(f"    ({res['share_band_condition']}.)")
     if res["observed_note"]:
         print(f"    ({res['observed_note']})")
     for e in res["certain"] + res["possible"]:

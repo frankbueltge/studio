@@ -141,8 +141,11 @@
      line-height as the standing figure under it, so the two rows are visibly one kind of
      thing: a numerator over a denominator, in ships. Everything else about it is the
      opposite — the live ink and the display weight the falling percentage wears — because
-     what the run has to show is that one of these two divisions is rewritten eight times
-     while the other is written once. The mark this face has meant by CANNOT MOVE since
+     what the run has to show is that one of these two divisions is rewritten at every
+     later stop while the other is written once. (It read "eight times" until session 92,
+     when a tenth list made it nine and the sentence was rewritten to a rule instead of a
+     tally, because a tally in a comment is a number that goes stale on a night nobody
+     is reading comments.) The mark this face has meant by CANNOT MOVE since
      session 83 keeps its one meaning: it is on the row that does not move and off the row
      that does. */
   .sd-root .sd-arrive-frac {
@@ -159,11 +162,31 @@
      0 → 2 → 4 and a digit that moves sideways as it changes is a digit the eye loses.
      It is the third live numeral in the frame and the only one whose CHANGE is the
      subject rather than the measure. */
+  /* DRAMATURG-92 cut 2, PAID IN ITS FIRST HALF. The memo measured this numeral at 11.52 px
+     and weight 400 on a row carrying a 24 px/700 fraction: 2,989 px² of 37,428 that move at
+     the final beat — 8.0 % of everything that changes, for the one node in twenty-nine
+     seconds that changes KIND and not degree. The reason for the old size is at :158-163 and
+     it was sound while the sequence was 0 → 2 → 4; tonight it is 0 → 2 → 4 → 11 and the run
+     is named after the wrong numeral. It takes the fraction's size and weight here. The
+     memo's second half — that the 46.4 px share give way to it — is NOT paid: that reweighs
+     the whole head, and the arithmetic correction of the same night has already reshaped
+     what this frame prints. It is owed to the voice that ordered it, on the changed state. */
   .sd-root .sd-arrive-certain {
-    font-size: 0.72rem;
-    line-height: 1.45;
+    font-size: clamp(1.1rem, 2.3vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1;
     font-variant-numeric: tabular-nums;
     letter-spacing: 0.02em;
+  }
+  /* The ceiling's own division (cut 3). Same register as the falling end's fraction and the
+     dim ink the fixed end has worn since session 83 — it is a division, not a headline. */
+  .sd-root .sd-arrive-frac-fixed {
+    font-size: clamp(1.1rem, 2.3vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--sd-dim);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
   }
   /* The figure that runs. It carries both ends of its own band since session 81 — it is
      the page's published share, not a new number — so it is wider and smaller than the
@@ -175,13 +198,19 @@
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
-  /* MARK THE CONSTANT (session 83). Across the whole run one end of this figure falls by
-     tens of points and the other cannot move at all, and until tonight both ends were set
-     in the same weight, size and colour — the page's own subject rendered as a repetition.
-     The falling end keeps the display weight; the end that cannot move is held in the body
-     weight and the dim ink, so what moves and what cannot are told apart before a word is
-     read. The words are underneath and say the same thing, because a mark the eye can read
-     and the ear cannot is this house's banked failure 12. */
+  /* MARK THE CONSTANT (session 83). Written when one end of this figure fell by tens of points
+     and the other, it was believed, could not move at all: both ends had been set in the same
+     weight, size and colour — the page's own subject rendered as a repetition — so the falling
+     end kept the display weight and the other was held in the body weight and the dim ink,
+     with the words underneath saying the same thing, because a mark the eye can read and the
+     ear cannot is this house's banked failure 12.
+     THERE IS NO CONSTANT, AND THERE NEVER WAS — session 92. The gate proved the upper end was
+     `obs / max(certain, obs)`, a quotient of two disjoint sets of ships, and the corrected end
+     falls 100 → 85 → 73 → 50. The rule below is KEPT and its meaning changes: it distinguishes
+     the end this run is named after from the end that moves more slowly and answers a different
+     question, not moving from not-moving. What the dim ink still means literally on this page is
+     `11 of 230`, the day's own printed list, which genuinely cannot move — and that figure is
+     now the only one in the frame of which it is true. */
   .sd-root .sd-arrive-count-fixed {
     font-weight: 400;
     color: var(--sd-dim);
@@ -257,6 +286,10 @@
     gap: 0.4ch;
     margin: 0 0 0.5rem;
   }
+  /* DRAMATURG-92 cut 8. All eleven of these measured 21 px tall at every width from 320 to
+     1920, against the 24×24 CSS px minimum of WCAG 2.2 SC 2.5.8 — and on a phone these three
+     wrapped rows are the ONLY interaction this work has. The padding is raised until the
+     measured height clears 24; nothing else about them changes. */
   .sd-root .sd-arrive-ladder button {
     font: inherit;
     font-size: 0.64rem;
@@ -264,7 +297,7 @@
     background: transparent;
     color: var(--sd-dim);
     border: 1px solid var(--sd-rule);
-    padding: 0.14rem 0.75ch;
+    padding: 0.32rem 0.75ch;
     cursor: pointer;
   }
   .sd-root .sd-arrive-ladder button[aria-current="true"] {
@@ -550,8 +583,8 @@
     padding: 0.15em 0;
   }
   .sd-root .sd-share-when {
-    flex: 0 0 auto;
-    min-width: 46ch;
+    flex: 1 1 100%;
+    min-width: 0;
     font-size: 0.66rem;
     color: var(--sd-dim);
     letter-spacing: 0.02em;
@@ -564,10 +597,17 @@
      of its own, so the document's 665 px was this label's 665 px. The wide evidence table
      below is NOT the cause and is not touched: `.sd-ledger` has scrolled inside itself
      since it was built, which is what a table of hashes should do.
-     Scoped to phones, because the desktop line is the one the renders and every panel to
-     date have seen, and a repair is not a licence to restage what nobody complained of. */
+     THE REPAIR WAS SCOPED TO PHONES AND THE BUG WENT ON LIVING NEXT DOOR — banked failure
+     55, `DRAMATURG-92.md` cut 1. The reason written here for the scope was: *"the desktop
+     line is the one the renders and every panel to date have seen, and a repair is not a
+     licence to restage what nobody complained of."* That sentence chose the width nobody
+     had complained about over the widths nobody had looked at. The document stood 665 px
+     wide at EVERY viewport from 481 to 664 px inclusive — 184 continuous widths, overflowing
+     by up to 184 px at 481 px, 38 % of the window — found by sweeping 440→1100 px in 10 px
+     steps, which is the sweep banked failure 53 said this house owed its instruments and
+     had still not given this rule. `flex: 1 1 100%; min-width: 0` is unscoped now and the
+     document holds its own width from 280 to 1920 px. */
   @media (max-width: 480px) {
-    .sd-root .sd-share-when { flex: 1 1 100%; min-width: 0; }
     /* OWED ITEM (y), AND THE THIRD ATTEMPT AT IT. `DRAMATURG-87.md` §2 ruled the choice
        this session put to it unwinnable as posed and ordered a fourth thing: at phone
        widths the controls stand directly under the frame, so the instrument — the figure,
@@ -753,18 +793,18 @@
   },
   "arrive": {
     "subject_gloss": "dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, published at frankbueltge.de, which name a ship only once it has come back. They carry only offshore switch-offs a machine model classed as intentional, so they are never all of a day's darkness.",
-    "since_note": "This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of twenty-two of the twenty-four names added since 4 August still reaches back to it. Both counts are this record's own: the names are OBSERVED in the saved copies, and how far each window reaches is DERIVED from the duration the list published. The first list that could add a name ruled out of that list is the one dated 12 August 2026, and it has arrived: two of the twenty-four are ruled out of it.",
+    "since_note": "This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of twenty-two of the thirty-one names added since 4 August still reaches back to it. Both counts are this record's own: the names are OBSERVED in the saved copies, and how far each window reaches is DERIVED from the duration the list published. The first list that could add a name ruled out of that list is the one dated 12 August 2026, and it has arrived: nine of the thirty-one are ruled out of it.",
     "heading_then": "IN THE LIST DATED 4 AUG — the eleven names it printed",
     "cut": {
       "heading": "WHAT THE LIST OF 4 AUG WAS THE TOP OF",
       "figures": "Of the 230 examined, 82 were dark inside national waters · 5,641 events in the window",
       "said": "The instrument says so itself, in its method sheet: “The index counts all examined; the case and list show named vessels.” The share this page publishes is a share of what those lists print, not of what they count.",
-      "refused": "How the figure would move if the lists were longer is not estimated here — a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists add to the total, so both ends of it grow. The method that would try has a name: multiple systems estimation, which reads the overlaps between several incomplete lists to say how many none of them caught. Its two-list form asks that “each individual has an equal probability of being captured”, and the same page says that with three or more lists such differences can be modelled instead. Modelling them still needs a capture probability to exist, and these lists give some ships none: a ship enters an edition only once its return has fallen inside that edition's seven-day window, so a ship that is still dark stands in no list, at no probability, in all nine of them. That is why this page prints a band and no estimate.",
+      "refused": "How the figure would move if the lists were longer is not estimated here — a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists add to the total, so both ends of it grow. The method that would try has a name: multiple systems estimation, which reads the overlaps between several incomplete lists to say how many none of them caught. Its two-list form asks that “each individual has an equal probability of being captured”, and the same page says that with three or more lists such differences can be modelled instead. Modelling them still needs a capture probability to exist, and these lists give some ships none: a ship enters an edition only once its return has fallen inside that edition's seven-day window, so a ship that is still dark stands in no list, at no probability, in all ten of them. That is why this page prints a band and no estimate.",
       "refused_source": {
         "text": "SOURCED — the quoted requirement, and the sentence that scopes it to two lists, are both Amelia Hoover Green, “Multiple Systems Estimation: Stratification and Estimation”, Human Rights Data Analysis Group, 20 March 2013, fetched first-hand: ",
         "url": "https://hrdag.org/2013/03/20/mse-stratification-estimation/"
       },
-      "kept": "Each of the nine lists this record holds prints six to eleven names of the 189 to 257 disappearances it says it examined. This record has saved that block every night since the first.",
+      "kept": "Each of the ten lists this record holds prints six to eleven names of the 189 to 265 disappearances it says it examined. This record has saved that block every night since the first.",
       "tier": "SOURCED — the three figures the list published, read off the saved copies in the words the parser matched in them. The count of names, and the count of lists below, are this house's own.",
       "standing": "11 of 230",
       "standing_note": "— eleven ships named, of 230 disappearances the list says it examined. SOURCED — the count of names is this house's own."
@@ -866,7 +906,7 @@
         "when_tail": "counting the lists up to 5 AUG, a day after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 5 AUG, a day after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — three ships that could have been dark on that same day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 5 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — three ships that could have been dark on the day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 5 AUG."
       },
       {
         "as_of": "2026-08-06T08:16:42Z",
@@ -895,7 +935,7 @@
         "when_tail": "counting the lists up to 6 AUG, two days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 6 AUG, two days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — five ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 6 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — five ships that could have been dark on the day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 6 AUG."
       },
       {
         "as_of": "2026-08-07T18:15:53Z",
@@ -920,7 +960,7 @@
         "when_tail": "counting the lists up to 7 AUG, three days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 7 AUG, three days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — six ships that could have been dark on that same day and that nobody could have had on it. The last of them, in darker ink, arrived with the list of 7 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — six ships that could have been dark on the day and that nobody could have had on it. The last of them, in darker ink, arrived with the list of 7 AUG."
       },
       {
         "as_of": "2026-08-08T21:37:19Z",
@@ -953,7 +993,7 @@
         "when_tail": "counting the lists up to 8 AUG, four days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 8 AUG, four days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — nine ships that could have been dark on that same day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 8 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — nine ships that could have been dark on the day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 8 AUG."
       },
       {
         "as_of": "2026-08-09T20:36:58Z",
@@ -994,7 +1034,7 @@
         "when_tail": "counting the lists up to 9 AUG, five days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 9 AUG, five days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — fourteen ships that could have been dark on that same day and that nobody could have had on it. The last five, in darker ink, arrived with the list of 9 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — fourteen ships that could have been dark on the day and that nobody could have had on it. The last five, in darker ink, arrived with the list of 9 AUG."
       },
       {
         "as_of": "2026-08-10T22:41:12Z",
@@ -1039,7 +1079,7 @@
         "when_tail": "counting the lists up to 10 AUG, six days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 10 AUG, six days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — twenty ships that could have been dark on that same day and that nobody could have had on it. The last six, in darker ink, arrived with the list of 10 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — twenty ships that could have been dark on the day and that nobody could have had on it. The last six, in darker ink, arrived with the list of 10 AUG."
       },
       {
         "as_of": "2026-08-11T11:19:15Z",
@@ -1048,11 +1088,11 @@
         "printed": "+7 DAYS",
         "days_after": 7,
         "total": 33,
-        "share": "33 %–100 %",
+        "share": "33 %–85 %",
         "share_falling": "33 %",
-        "share_fixed": "–100 %",
+        "share_fixed": "–85 %",
         "share_falling_of": "11 of 33",
-        "share_fixed_of": "11 of 11",
+        "share_fixed_of": "11 of 13",
         "certain_of": "2 of them certainly dark",
         "added": [
           {
@@ -1068,7 +1108,7 @@
         "when_tail": "counting the lists up to 11 AUG, seven days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 11 AUG, seven days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — twenty-two ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 11 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — twenty-two ships that could have been dark on the day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 11 AUG."
       },
       {
         "as_of": "2026-08-12T18:23:12Z",
@@ -1077,11 +1117,11 @@
         "printed": "+8 DAYS",
         "days_after": 8,
         "total": 35,
-        "share": "31 %–100 %",
+        "share": "31 %–73 %",
         "share_falling": "31 %",
-        "share_fixed": "–100 %",
+        "share_fixed": "–73 %",
         "share_falling_of": "11 of 35",
-        "share_fixed_of": "11 of 11",
+        "share_fixed_of": "11 of 15",
         "certain_of": "4 of them certainly dark",
         "added": [
           {
@@ -1097,16 +1137,65 @@
         "when_tail": "counting the lists up to 12 AUG, eight days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 12 AUG, eight days after the day had ended.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
-        "heading_since": "NAMED ONLY BY LATER LISTS — twenty-four ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 12 AUG."
+        "heading_since": "NAMED ONLY BY LATER LISTS — twenty-four ships that could have been dark on the day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 12 AUG."
+      },
+      {
+        "as_of": "2026-08-13T17:02:56Z",
+        "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-13T17:02:56Z",
+        "edition": "2026-08-13",
+        "printed": "+9 DAYS",
+        "days_after": 9,
+        "total": 42,
+        "share": "26 %–50 %",
+        "share_falling": "26 %",
+        "share_fixed": "–50 %",
+        "share_falling_of": "11 of 42",
+        "share_fixed_of": "11 of 22",
+        "certain_of": "11 of them certainly dark",
+        "added": [
+          {
+            "name": "SHILLA EXPLORER",
+            "flag": "KOR"
+          },
+          {
+            "name": "KOO'S 102",
+            "flag": "MHL"
+          },
+          {
+            "name": "KOYOMARU NO.88",
+            "flag": "JPN"
+          },
+          {
+            "name": "FUKUICHIMARU NO,83",
+            "flag": "JPN"
+          },
+          {
+            "name": "CAP.DANNY B",
+            "flag": "ECU"
+          },
+          {
+            "name": "COTSWOLD",
+            "flag": "GBR"
+          },
+          {
+            "name": "GOLDEN SAPPHIRE 88",
+            "flag": "PNG"
+          }
+        ],
+        "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
+        "when_tail": "counting the lists up to 13 AUG, nine days after the day had ended.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 13 AUG, nine days after the day had ended.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
+        "heading_since": "NAMED ONLY BY LATER LISTS — thirty-one ships that could have been dark on the day and that nobody could have had on it. The last seven, in darker ink, arrived with the list of 13 AUG."
       }
     ],
-    "constant": "Neither end of this figure can rise. The upper end holds at 100 % until more of these ships are certainly dark on this day than the eleven the day itself named; the next list can lower the falling end again.",
+    "constant": "Neither end of this figure can rise. Both fall: the lower when a later list adds a ship that could have been dark on this day, the upper when a later list makes one CERTAINLY dark on it — and no ship this record can name on the day itself is ever among the certain.",
     "run_states": {
-      "waiting": "This figure runs by itself: nine states over about twenty-seven seconds. Any button above holds a state and stops the run.",
+      "waiting": "This figure runs by itself: ten states over about twenty-nine seconds. Any button above holds a state and stops the run.",
       "started": "The run has started: the figure is falling from the day's own answer to this record's live one.",
-      "done": "The run has finished. The figure now standing is this record's live one — press any button to go back through it.",
-      "stopped": "You stopped the run at {stop}. Press “{replay}” to see it whole.",
-      "held": "Holding {stop}. Nothing is playing; press “{replay}” to run it.",
+      "done": "The run has finished. The figure now standing is this record's live one, {figure} — press any button to go back through it.",
+      "stopped": "You stopped the run at {stop}, {figure}. Press “{replay}” to see it whole.",
+      "held": "Holding {stop}, {figure}. Nothing is playing; press “{replay}” to run it.",
       "rest": "Your machine asks for no motion, so nothing runs: this is the day's own answer, and each button above holds a later state."
     },
     "caption": "A ship reaches the list only after it comes back, so a day that is over keeps being answered.",
@@ -1117,7 +1206,7 @@
     "first_dwell_ms": 14118,
     "first_dwell_note": "56 words at 238 wpm (Brysbaert 2019, mean adult silent reading of non-fiction English)"
   },
-  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Twenty-four arrived later — nineteen of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.",
+  "lede": "Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Thirty-one arrived later — twenty-six of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.",
   "field": [
     {
       "edition": "2026-08-04",
@@ -1803,6 +1892,135 @@
           "seen": ""
         }
       ]
+    },
+    {
+      "edition": "2026-08-13",
+      "edition_printed": "13 August 2026",
+      "days_after": 9,
+      "label": "ADDED BY THE LIST OF 13 AUG — nine days after the day",
+      "count": 7,
+      "seen_all": "this page first saw all seven on 13 AUG",
+      "rows": [
+        {
+          "name": "SHILLA EXPLORER",
+          "flag": "KOR",
+          "days_dark": 53,
+          "waters": "Kiribati EEZ (Gilbert Islands)",
+          "went_dark_between": [
+            "2026-06-14",
+            "2026-06-21"
+          ],
+          "resurfaced_between": [
+            "2026-08-06",
+            "2026-08-13"
+          ],
+          "band_text": "dark 14–21 Jun → back 6–13 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/02f164fce-e769-80f9-7686-cf0c8ce164a9",
+          "seen": ""
+        },
+        {
+          "name": "KOO'S 102",
+          "flag": "MHL",
+          "days_dark": 37,
+          "waters": "United States EEZ (Jarvis Islands)",
+          "went_dark_between": [
+            "2026-06-30",
+            "2026-07-07"
+          ],
+          "resurfaced_between": [
+            "2026-08-06",
+            "2026-08-13"
+          ],
+          "band_text": "dark 30 Jun–7 Jul → back 6–13 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/a4dec7178-8b0e-cd07-ee00-f71426dd9d6f",
+          "seen": ""
+        },
+        {
+          "name": "KOYOMARU NO.88",
+          "flag": "JPN",
+          "days_dark": 34,
+          "waters": "Micronesian EEZ",
+          "went_dark_between": [
+            "2026-07-03",
+            "2026-07-10"
+          ],
+          "resurfaced_between": [
+            "2026-08-06",
+            "2026-08-13"
+          ],
+          "band_text": "dark 3–10 Jul → back 6–13 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/fc9fe39ce-e742-0195-9af2-c41408fcc742",
+          "seen": ""
+        },
+        {
+          "name": "FUKUICHIMARU NO,83",
+          "flag": "JPN",
+          "days_dark": 28,
+          "waters": "Micronesian EEZ",
+          "went_dark_between": [
+            "2026-07-09",
+            "2026-07-16"
+          ],
+          "resurfaced_between": [
+            "2026-08-06",
+            "2026-08-13"
+          ],
+          "band_text": "dark 9–16 Jul → back 6–13 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/f40900f52-2e21-a727-f6d8-27fc24d1bcb2",
+          "seen": ""
+        },
+        {
+          "name": "CAP.DANNY B",
+          "flag": "ECU",
+          "days_dark": 16,
+          "waters": "Ecuadorian EEZ (Galapagos)",
+          "went_dark_between": [
+            "2026-07-21",
+            "2026-07-28"
+          ],
+          "resurfaced_between": [
+            "2026-08-06",
+            "2026-08-13"
+          ],
+          "band_text": "dark 21–28 Jul → back 6–13 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/bf2cb12da-adec-c006-fa10-0aa9c1070242",
+          "seen": ""
+        },
+        {
+          "name": "COTSWOLD",
+          "flag": "GBR",
+          "days_dark": 16,
+          "waters": "South African EEZ",
+          "went_dark_between": [
+            "2026-07-21",
+            "2026-07-28"
+          ],
+          "resurfaced_between": [
+            "2026-08-06",
+            "2026-08-13"
+          ],
+          "band_text": "dark 21–28 Jul → back 6–13 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/96347344c-c145-bc32-13de-8438d7c3ccf8",
+          "seen": ""
+        },
+        {
+          "name": "GOLDEN SAPPHIRE 88",
+          "flag": "PNG",
+          "days_dark": 16,
+          "waters": "Papua New Guinean EEZ",
+          "went_dark_between": [
+            "2026-07-21",
+            "2026-07-28"
+          ],
+          "resurfaced_between": [
+            "2026-08-06",
+            "2026-08-13"
+          ],
+          "band_text": "dark 21–28 Jul → back 6–13 Aug",
+          "gfw_url": "https://globalfishingwatch.org/map/vessel/1292f6c01-1806-a6b7-ef4c-88e2b8bcc4c0",
+          "seen": ""
+        }
+      ]
     }
   ],
   "fall": {
@@ -1813,25 +2031,25 @@
       "figure_fixed": "–100 %",
       "fraction_falling": "11 of 16",
       "fraction_fixed": "11 of 11",
-      "of": "11 of 0–16",
+      "of": "11 of 11–16",
       "editions": 3,
       "captures": 5
     },
     "now": {
       "status": "LIVE",
-      "figure": "31 %–100 %",
-      "figure_falling": "31 %",
-      "figure_fixed": "–100 %",
-      "fraction_falling": "11 of 35",
-      "fraction_fixed": "11 of 11",
-      "of": "11 of 4–35",
-      "editions": 9,
-      "captures": 28
+      "figure": "26 %–50 %",
+      "figure_falling": "26 %",
+      "figure_fixed": "–50 %",
+      "fraction_falling": "11 of 42",
+      "fraction_fixed": "11 of 22",
+      "of": "11 of 22–42",
+      "editions": 10,
+      "captures": 29
     },
     "as_of": "2026-08-06T08:36:39Z",
-    "band": "Thirty-five ships could have been dark on 4 August 2026 and four of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 4–35, and the share runs from 11 of 35 to 11 of 11.",
+    "band": "Forty-two ships could have been dark on 4 August 2026 and eleven of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 11–42, and the share runs from 11 of 42 to 11 of 22.",
     "held": "The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.",
-    "moved": "It fell thirty-eight points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day; and ISABELLA and LUCKY TJ with the list of 12 AUG, eight days after the day — nineteen ships this record did not hold when the law below was printed.",
+    "moved": "It fell forty-three points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day; ISABELLA and LUCKY TJ with the list of 12 AUG, eight days after the day; and SHILLA EXPLORER, KOO'S 102, KOYOMARU NO.88, FUKUICHIMARU NO,83, CAP.DANNY B, COTSWOLD and GOLDEN SAPPHIRE 88 with the list of 13 AUG, nine days after the day — twenty-six ships this record did not hold when the law below was printed.",
     "published": "A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.",
     "published_when": "printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall",
     "then_published": "at 08:36 UTC on 6 August"
@@ -2117,6 +2335,16 @@
         "edition_date_printed": "12 August 2026",
         "vessels": 10,
         "examined": 257
+      },
+      {
+        "fetched_at_utc": "2026-08-13T17:02:56Z",
+        "http_status": 200,
+        "bytes": 31661,
+        "sha256": "f226ab8c",
+        "content_sha256": "96fc683e",
+        "edition_date_printed": "13 August 2026",
+        "vessels": 11,
+        "examined": 265
       }
     ],
     "caption": "Seven lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first."
@@ -2135,8 +2363,8 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  28 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 17 distinct bod(y/ies)\n  vessels dark on that day .......... 4–35 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 31%–100%  (11 of 4–35)\n    (a ceiling from 9 edition(s), 28 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
-  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-five is what this record can place in 4 August 2026, not what was on the sea that day."
+  "output": "day 2026-08-04  ·  29 capture(s) read, 10 distinct edition(s), 11 distinct content(s), 18 distinct bod(y/ies)\n  vessels dark on that day .......... 11–42 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 26%–50%  (11 of 22–42)\n    (a ceiling from 10 edition(s), 29 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Forty-two is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
 
@@ -2226,21 +2454,31 @@
       <!-- THE RESTAGING OF SESSION 90, and it is one span on an existing row.
            `DRAMATURG-89.md` returned the premiere gate in one sentence: *"the head's frame
            prints how much of the day was knowable and never prints how much of it is known,
-           and knowing is the only thing in this run that turns."* Across nine stops the
-           share falls by degrees eight times; exactly one node changes kind — *not one of
-           these names is certainly dark* → *two* → *four* — and it was body prose 861 px
+           and knowing is the only thing in this run that turns."* Across the nine stops the
+           run then had, the share falls by degrees eight times; exactly one node changes kind — *not one of
+           these names is certainly dark* → *two* → *four* (the run's shape on the night that
+           memo was written; a tenth list has since taken it to *eleven*) — and it was body prose 861 px
            under the figure, off a phone screen at every stop and at every scroll position
            that also holds the figure. The count now stands on the fraction's own row, in
            the run's live ink, rewritten at every stop like the two numerals above it: at
            stop 0 it reads `0 of them certainly dark` beside `11 of 11`, and at the last
-           stop `4 of them certainly dark` beside `11 of 35`.
+           stop `4 of them certainly dark` beside `11 of 35` — the last stop as the run stood
+           that night; on tonight's it reads `11 of them certainly dark` beside `11 of 42`.
            WHY ON THIS ROW AND NOT ON ITS OWN. A fourth row pushes the reserved space down
            by its own height, and the span measuring how much of that space shares a frame
            with the whole figure is floored at 268 px by that same memo's Cut 1 — the item
            it restated precisely so that the work's subject would stop paying for staging.
            A row bought with the hole would be that mistake one night after it was named. -->
+      <!-- DRAMATURG-92 cut 3, AND THE CORRECTION OF SESSION 92 MADE IT COMPULSORY. The memo
+           found `share_fixed_of` computed at all ten stops and rendered nowhere: the figure
+           printed two ends and gave a denominator to only one. That was a staging fault while
+           the upper end was a constant 100 %. The same night the gate proved the upper end was
+           never a constant — it was `obs / max(certain, obs)`, a quotient of two disjoint sets
+           of ships — and the corrected end falls 100 → 85 → 73 → 50. An end that moves and
+           prints no division is the exact defect this frame was built in session 88 to end. -->
       <div class="sd-arrive-row">
         <span class="sd-arrive-frac" id="sd-arrive-frac"></span>
+        <span class="sd-arrive-frac-fixed" id="sd-arrive-frac-fixed"></span>
         <span class="sd-arrive-certain" id="sd-arrive-certain"></span>
       </div>
       <div class="sd-arrive-row">
@@ -2287,7 +2525,7 @@
          stop. -->
     <!-- ONE LINE, NOT TWO. The instant stood on a line of its own above the command until
          `DRAMATURG-90.md` cut 1 measured what that cost: the instant is a byte-exact
-         substring of the command at all nine stops, so the face printed the same twenty
+         substring of the command at all nine stops the run then had, so the face printed the same twenty
          characters twice, fifteen pixels apart, for a third of this block's payload. The
          instant is still on the face — inside the line that uses it. -->
     <p class="sd-arrive-proof" id="sd-arrive-proof">
@@ -2297,8 +2535,15 @@
     <!-- OWED ITEM (y), paid in session 84. The wrapper is the whole repair and it adds no
          word, no element the reader hears, and nothing at all above 480 px: it exists so
          that the two things a phone was losing — the buttons that drive the run and the
-         line that says what the run is doing — can be held to the bottom of the viewport
-         while the block above them fills. `DRAMATURG-83.md` §4 measured the loss at
+         line that says what the run is doing — are painted directly under the frame at
+         phone widths while the block above them fills. IT SAID "held to the bottom of the
+         viewport" UNTIL SESSION 92 AND THAT WAS FALSE — `DRAMATURG-92.md` cut 9. The
+         mechanism is a flex `order` swap at ≤480 px; it reorders paint and pins nothing, and
+         `tools/fold.mjs` exits 1 on this page because the ladder and the state line leave a
+         390×844 viewport as soon as a reader scrolls to the thing they scrolled for. The
+         instrument was red and the comment beside it claimed the defect solved. The red
+         stays published, in the work's own guard table, at the number the instrument
+         returns. `DRAMATURG-83.md` §4 measured the loss at
          390×844: figure at y=248 and visible, ladder at y=938, state line at y=991, both
          below an 844 px fold. A reader on a phone therefore watched the number fall with
          the controls and the announcement off-screen — the piece staging its own argument
@@ -2308,11 +2553,16 @@
     <div class="sd-arrive-controls" id="sd-arrive-controls">
       <div class="sd-arrive-ladder" id="sd-arrive-ladder"></div>
       <!-- The run, said. One line, under the buttons it is about, in a region that announces
-           its own changes — so the visitor who can see the figure move and the visitor who
-           cannot are told the same thing in the same words at the same moment. Session 83,
-           owed items (s) and (t). It is deliberately NOT the mutating head: the figure, the
-           headings and the name list stay silent, and this line speaks for them twice in a
-           run. -->
+           its own changes. Session 83, owed items (s) and (t). It is deliberately NOT the
+           mutating head: the figure, the headings and the name list stay silent, and this
+           line speaks for them twice in a run.
+           IT CLAIMED THE TWO VISITORS ARE "told the same thing in the same words at the same
+           moment" UNTIL SESSION 92, and that was false — `DRAMATURG-92.md` cut 7 measured
+           three spoken sentences carrying zero numbers against nine figure rewrites on the
+           screen. The spoken lines now carry the stop's own published share, so a visitor who
+           cannot see the figure is told what it says at the end of the run and at every stop
+           they hold. They are still not told the eight states in between: the screen shows
+           ten and the region speaks three, and this comment no longer claims otherwise. -->
       <p class="sd-arrive-state" id="sd-arrive-state" role="status" aria-live="polite"></p>
     </div>
     <p class="sd-arrive-cap" id="sd-arrive-cap"></p>
@@ -2483,6 +2733,7 @@
   var hedgeEl = document.getElementById("sd-arrive-hedge");
   // Session 90: the count that turns, and the two strings that prove the stop it turns at.
   var certainEl = document.getElementById("sd-arrive-certain");
+  var fracFixedEl = document.getElementById("sd-arrive-frac-fixed");
   var proofCmdEl = document.getElementById("sd-arrive-proof-cmd");
   document.getElementById("sd-arrive-proof-lead").textContent = arrive.proof;
   thenHeadEl.textContent = arrive.heading_then;
@@ -2548,8 +2799,17 @@
     if (stateEl.textContent === text) return;
     stateEl.textContent = text;
   }
-  function fill(tpl, stop) {
-    return tpl.split("{stop}").join(stop).split("{replay}").join(arrive.replay);
+  // DRAMATURG-92 cut 7. Over a full run this region wrote four sentences, spoke three, and
+  // spoke NOT ONE NUMBER: a visitor who cannot see the screen was told a run had started and
+  // that it had finished, and never told 100 %, never 26 %, never the turn. `announce.mjs`
+  // called that green because it counts announcements and not their content. `{figure}` is
+  // the repair, and it is the stop's own published share — the same string the frame prints,
+  // never a second one.
+  function fill(tpl, stop, figure) {
+    return tpl
+      .split("{stop}").join(stop)
+      .split("{replay}").join(arrive.replay)
+      .split("{figure}").join(figure == null ? "" : figure);
   }
   // The first sentence this region ever holds is written AFTER the load event, from a
   // timer, so that it lands as a change to an empty region and is spoken. Everything the
@@ -2603,6 +2863,7 @@
     // The count that turns (session 90). Third live numeral in the frame, and the only one
     // that changes KIND rather than degree: 0 at stops 0–6, 2 at stop 7, 4 at stop 8. It
     // is written from the stop's own band, like every other figure a stop owns.
+    fracFixedEl.textContent = s.share_fixed_of;
     certainEl.textContent = s.certain_of;
     // And the instant this stop IS, with the line that returns it (`KRITIKER-89.md`
     // condition 1). Both were computed for every stop since session 84 and thrown away at
@@ -2675,7 +2936,12 @@
       say(arrive.run_states.started);
       timer = setInterval(function () {
         i += 1;
-        if (i >= stops.length) { halt(); say(arrive.run_states.done); return; }
+        if (i >= stops.length) {
+          halt();
+          say(fill(arrive.run_states.done, stops[stops.length - 1].printed,
+                   stops[stops.length - 1].share));
+          return;
+        }
         showStop(i);
       }, 1600);
       i = 1;
@@ -2698,7 +2964,8 @@
       showStop(i);
       say(fill(
         wasRunning ? arrive.run_states.stopped : arrive.run_states.held,
-        s.printed
+        s.printed,
+        s.share
       ));
     });
     ladderEl.appendChild(b);
@@ -2751,7 +3018,8 @@
     var tallest = 0;
     stateEl.style.minHeight = "";
     Object.keys(arrive.run_states).forEach(function (k) {
-      stateEl.textContent = fill(arrive.run_states[k], stops[stops.length - 1].printed);
+      stateEl.textContent = fill(arrive.run_states[k], stops[stops.length - 1].printed,
+                                 stops[stops.length - 1].share);
       if (stateEl.offsetHeight > tallest) tallest = stateEl.offsetHeight;
     });
     stateEl.textContent = was;
