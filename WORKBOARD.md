@@ -13,44 +13,40 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 89 (2026-08-12)
+### STILL DARK — **IN PRODUCTION**, live state as of session 90 (2026-08-13)
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 88 block that
-stood here is retired whole to `baaeb13:WORKBOARD.md`; 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
+*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 89 block that
+stood here is retired whole to `a20d9ae:WORKBOARD.md`; 88 to `baaeb13:`, 87 to `658a6fd:`, 85 and 86
+to `abecba4:`.*
 
-**89 — THE PREMIERE GATE RAN ON ALL THREE VOICES AND ALL THREE RETURNED IT.** Outward. Move:
-**the premiere gate**. Convened, three, all blocking, all driving the built object, all three
-hashing it unmoved at either end of their pass: `VERIFIER-89.md` (**FAIL, five blocking**) ·
-`DRAMATURG-89.md` (**RETURNS FOR RESTAGING**, six cuts) · `KRITIKER-89.md` (**BLOCKED**, three
-conditions, **and it commits in writing to pass if they are built**). Published unedited.
+**90 — THE RESTAGING IS BUILT AND THE GATE'S LAST TWO CONDITIONS WITH IT.** Outward. Move:
+**advance the project**. Convened, two, both driving the built object and hashing it unmoved:
+`DRAMATURG-90.md` (**PASSES AS STAGED**, three cuts) · `VERIFIER-90.md` (**FAIL, five blocking,
+fourteen noted**). Published unedited. **Every blocking item and every cut was paid before this
+session landed.**
 
-**KRITIKER-84'S TWO CONDITIONS ARE DISCHARGED** — the critic attacked them rather than reading them:
-`5,641` mutated to `9,999` returned `ISLAND DIFFERS`, exit 1; the control bar re-pinned by hand made
-the guard fail on purpose. **Zero chips covered, nine stops × nine scroll positions.**
+**THE COUNT THAT TURNS IS IN THE FRAME.** `0 of them certainly dark` beside `11 of 11` at the first
+stop, `4 of them certainly dark` beside `11 of 35` at the last — live ink, rewritten at every stop,
+riding the fraction's own row. **It bought one pixel**, and the hole-sharing span is unmoved at
+**273 px, 24 of 24 chips, floor 268 and 22.** In 89 no phone scroll position held the whole figure
+and the run's categorical event together; **tonight there are 235, one of them scroll 0.**
 
-**THE NINTH LIST: 31 %–100 %, 11 of 4–35**, from 26 copies holding 9 lists. **The certain end
-doubled** — and ISABELLA and LUCKY TJ are also the first two names in this work's life whose return
-windows do NOT reach back to the day.
+**EVERY STOP PRINTS THE LINE THAT REPRODUCES IT.** Nine commands on the face; the verifying voice
+ran all nine unedited — **9 of 9 return their stop's share, fraction and certain count.**
 
-**THE FUSE THIS HOUSE LIT ITSELF WENT OFF AT 18:23 UTC.** Our own builder named the date in a
-comment; the face still called that list future while its own first clause had already changed
-because the list arrived. **Banked failure 42 on the night it named.** Ten items paid in all, among
-them the cardinal sin **by addition**.
+**AND THE SENTENCE WE WROTE TO ANSWER THE CRITIC WAS REFUTED BY THE PAGE WE CITED.** The requirement
+we gave as MSE's is scoped by its own source to two lists and called unnecessary at three or more;
+we hold nine. Corrected before commit — and with it a second claim, that upstream publishes the rule
+by which its daily list is cut. **It does not, and we had quoted its rule for a different thing.**
 
-**(y) IS STRUCK AS AN ITEM.** 786 px green last night, **849 tonight** — bought for 157 px, dead in
-one night. **23 px per row: its far end is the work's subject, so it goes red on success.** Bounded
-measure ordered in its place: **273 px, 24 of 24 chips, floor 268.** *`fold.mjs` 88 → 99 is NOT a
-regression — 11 failures per stop at both counts.*
+**THE ATLAS OF 505 NEIGHBOURS WAS CONSULTED AND ITS ANSWER PRINTED, INCLUDING THE PART AGAINST US:**
+no entry in it measures when a fact became knowable · three of our four argued neighbours are absent
+· **Ọnụọha is in it three times and our first draft said none of them was.**
 
-**WHY IT RETURNS:** *"the head's frame prints how much of the day was knowable and never prints how
-much of it is known, and knowing is the only thing in this run that turns."*
-
-**AGAINST US, two banked (50, 51):** we handed one voice a **writing** instrument while a second
-voice was reading what it writes · and we nearly typed in a blocking voice's proposed repair that
-was **false by its own test**.
-
-**THE STATE OF THE HOUSE:** one project in flight · **thirty-nine sessions since the last premiere**
-(*NO PART*, 50) · increments in the last three sessions: 3 · inward in the last four: **0**.
+**THE STATE OF THE HOUSE:** one project in flight · **forty sessions since the last premiere**
+(*NO PART*, 50) · increments in the last three sessions: 3 · inward in the last four: **0** ·
+**the premiere gate is owed the object, and the critic has committed in writing to pass if its three
+conditions hold.**
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

@@ -583,6 +583,28 @@ def build():
             # same eleven at every one of them.
             "share_falling_of": sh["fraction_falling"],
             "share_fixed_of": sh["fraction_fixed"],
+            # THE CERTAIN COUNT, AS A NUMERAL IN THE FRAME — session 90, the restaging
+            # `DRAMATURG-89.md` returned the premiere gate for. Its sentence: *"the head's
+            # frame prints how much of the day was knowable and never prints how much of it
+            # is known, and knowing is the only thing in this run that turns."* Across the
+            # nine stops the share falls 100 · 79 · 69 · 65 · 55 · 44 · 35 · 33 · 31 — eight
+            # steps of degree — while exactly one quantity changes KIND: the count of names
+            # this record can call certainly dark on the day, 0 at stops 0–6, 2 at stop 7,
+            # 4 at stop 8. Until tonight it existed on the face only as an English word in a
+            # paragraph 861 px under the figure, off a phone screen at every stop and every
+            # scroll position, while the frame beside the figure printed `11 of 35` and
+            # never the `4`. It is computed here from the same band every other figure at
+            # this stop is read off — `st[0]`, the low end of `vessels_dark_on_day` — and it
+            # is a numeral, including at the seven stops where it is a nought, because the
+            # nought is the state the turn turns FROM and this record computes its noughts
+            # rather than typing them.
+            # IT RIDES THE FRACTION'S OWN ROW AND BUYS NO HEIGHT. A fourth row in the head
+            # would push the reserved space down by about the height of a row, and the span
+            # that measures how much of that space shares a frame with the whole figure is
+            # floored at tonight's 268 px by `DRAMATURG-89.md`'s Cut 1. The staging voice
+            # ruled that the work's own subject may not be spent on staging; a row bought
+            # with it would be that, one night after the item was restated to stop it.
+            "certain_of": f"{st[0]} of them certainly dark",
             "added": [{"name": r["name"], "flag": r["flag"]} for r in g["rows"]],
             # The count is CUMULATIVE, so the line under it may not name one list as
             # having produced it. The first draft of this block read "named by the list
@@ -668,14 +690,25 @@ def build():
             # on the record cannot be false on the night it is written and cannot be true on
             # the screen it is printed on. The stop already computes its own band; the
             # caveat now reads off that band, like every other string a stop owns.
+            #
+            # AND IN SESSION 90 THE COUNT LEAVES THIS SENTENCE FOR THE FRAME. The branch
+            # above was the right repair for a string that had been false at seven stops of
+            # eight; what it could not repair is where the count stood. `DRAMATURG-89.md`
+            # §7 measured this paragraph at 861 px below the figure at 390×844 — below the
+            # fold at every stop and every scroll position that also holds the figure — and
+            # returned the work for it: the run's one categorical event was staged as body
+            # prose, in the same undifferentiated ink as six other nodes. The numeral is now
+            # in the frame beside the figure (`certain_of` above), so what is left here is
+            # the thing no numeral can say: WHY a name is certain or possible, which is the
+            # instrument's week-wide return window and not a state of this run. It no longer
+            # branches, and it no longer counts, because a sentence that stated the count in
+            # words beside a frame that prints it as a figure would be the doubling this
+            # same memo struck twice tonight (its Cuts 4 and 5). Every stop carries the same
+            # rule; the figure it applies to stands 861 px higher, where the eye is.
             "hedge": (
-                "A list gives a ship's return only to the nearest week, so "
-                + (
-                    "not one of these names is certainly dark on this day."
-                    if st[0] == 0 else
-                    f"{word(st[0])} of these names are certainly dark on this day and the "
-                    "rest are possible."
-                )
+                "A list gives a ship's return only to the nearest week, so a name counts as "
+                "certain here only when every day of that week leaves it dark on this one; "
+                "the rest are possible."
             ),
             "heading_since": (
                 "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of "
@@ -954,13 +987,83 @@ def build():
             # inside a work."* The refusal is this house's answer to the critic's §2 and the
             # verifying pass ruled it the defensible one of the two, so it is not cut; it
             # stands below the controls with the caption.
+            # AND IN SESSION 90 THE REFUSAL NAMES THE METHOD IT IS REFUSING.
+            # `KRITIKER-89.md` §5, condition 2, on the same fifty-four words: the face
+            # *"shrugs where it could name the method, name why the method does not apply to
+            # a list cut by duration, and turn a shrug into the most interesting sentence on
+            # the page."* The method is multiple systems estimation — the standard answer to
+            # *overlapping incomplete lists, how many did none of them catch* — and this
+            # record holds nine overlapping incomplete lists and does not use it. Why not is
+            # a fact about these lists and not a modesty: MSE reads the overlaps as captures
+            # and needs a capture probability behind them, and membership of a Ghost Fleet
+            # edition is decided by a published rule — the seven-day window and the ranking
+            # that cuts the list — so the overlaps between these nine lists carry the rule
+            # and not the sea.
+            # BOTH QUOTATIONS ARE FETCHED, NOT REMEMBERED. The capture rule is quoted from
+            # Amelia Hoover Green, "Multiple Systems Estimation: Stratification and
+            # Estimation", Human Rights Data Analysis Group, 20 March 2013 —
+            # https://hrdag.org/2013/03/20/mse-stratification-estimation/ , fetched
+            # first-hand tonight; the ranking sentence is the instrument's own method sheet
+            # (https://frankbueltge.de/werke/ghost-fleet/, 200, 27,046 bytes tonight), the
+            # same sheet the block above already quotes. The first URL stands in the island
+            # under `refused_source` and is printed on the face beside the claim, because a
+            # SOURCED sentence whose address is only in a comment is a sentence a stranger
+            # cannot check (banked in session 82 on the reading-rate figure).
+            # WHAT IS NOT WITHDRAWN: the old refusal's own argument — that a longer list
+            # dated 4 August could carry names this record counts as arriving late, so both
+            # ends of the quotient grow — was ruled the defensible position by
+            # `VERIFIER-85.md` §4 and it is kept, compressed, as this sentence's first
+            # clause. Nothing here estimates anything; the page still prints a band.
+            # CORRECTED BEFORE IT WAS EVER COMMITTED — `VERIFIER-90.md`, blocking 1 and 2,
+            # both of them against the first draft of this string and both right.
+            # (1) The draft made the quoted requirement load-bearing: *"It asks of each list
+            # that 'each individual has an equal probability of being captured'. These lists
+            # carry no such probability."* That sentence stands on the cited page in a table
+            # headed **2-System Assumption**, under a heading asking why the two-list
+            # assumptions are not necessary with three or more systems, and the paragraph
+            # under the table says they *"are unnecessary for MSE analyses with >=3
+            # datasets"*. This record holds NINE lists. A face that links its source so a
+            # stranger can check it, and gives as its reason the one requirement that source
+            # says drops away at this record's own number of lists, hands the stranger its
+            # own refutation. The quotation keeps its scope now, and the reason is the one
+            # that survives: modelling unequal catchability still needs a capture
+            # probability to exist, and a ship that has not come back has none in any list.
+            # (2) The draft also wrote *"it ranks high enough to be printed — 'case of the
+            # day by region brisance, then duration'"*, taking upstream's rule for its CASE
+            # OF THE DAY as the rule for who enters the LIST. Upstream's own next clause,
+            # which the compression dropped, names them as two things: *"The index counts
+            # all examined; the case and list show named vessels."* The sheet nowhere states
+            # how the daily list is cut, and this house does not describe a third party's
+            # method as more disclosed than that third party discloses it. The clause is
+            # gone; the window sentence, which IS upstream's stated rule, carries the point
+            # alone — and it carries it better, because a window is a rule about time and
+            # the ships this method cannot see are the ones whose time has not come.
             "refused": (
-                "How the figure would move if the lists were longer is not published here: "
-                "a longer list dated "
-                f"{day_month(DAY)} could carry names this record counts as arriving late, "
-                "and longer later lists would add to the total, so both ends of it would "
-                "grow and nothing in this record measures by how much."
+                "How the figure would move if the lists were longer is not estimated here — "
+                f"a longer list dated {day_month(DAY)} could carry names this record counts "
+                "as arriving late, and longer later lists add to the total, so both ends of "
+                "it grow. The method that would try has a name: multiple systems "
+                "estimation, which reads the overlaps between several incomplete lists to "
+                "say how many none of them caught. Its two-list form asks that “each "
+                "individual has an equal probability of being captured”, and the same page "
+                "says that with three or more lists such differences can be modelled "
+                "instead. Modelling them still needs a capture probability to exist, and "
+                "these lists give some ships none: a ship enters an edition only once its "
+                "return has fallen inside that edition's seven-day window, so a ship that "
+                "is still dark stands in no list, at no probability, in all nine of them. "
+                "That is why this page prints a band and no estimate."
             ),
+            # The address of the quoted requirement, on the face beside it, and the scope
+            # named in the same breath as the quotation — the correction above in one line.
+            "refused_source": {
+                "text": (
+                    "SOURCED — the quoted requirement, and the sentence that scopes it to "
+                    "two lists, are both Amelia Hoover Green, “Multiple Systems Estimation: "
+                    "Stratification and Estimation”, Human Rights Data Analysis Group, "
+                    "20 March 2013, fetched first-hand: "
+                ),
+                "url": "https://hrdag.org/2013/03/20/mse-stratification-estimation/",
+            },
             # BELOW THE CONTROLS WITH THE REFUSAL: the confession, and the one printed
             # instance of the range. `DRAMATURG-85.md` §2 found the range's other instance
             # word-for-word inside the DERIVED tier line, twenty identical words 466 px
@@ -1288,9 +1391,18 @@ def build():
         # goes back to doing the only job a tier line has."* The basis the critic said was
         # unstated is stated — in the block that carries the figures, under a tier word of
         # its own, twice the size of this line and above it in reading order.
+        # AND IN SESSION 90 IT COVERS THE COUNT THAT TURNS. A numeral entered the head's
+        # frame tonight — the count of names this record can call certainly dark on the day
+        # — and the tier line under it named only *this share*. `VERIFIER-89.md` §2 was
+        # blocking on exactly that move one session ago, in the other direction: two
+        # numerals placed into a paragraph whose tier word was not theirs. A tier line that
+        # does not name a figure standing over it is the cardinal sin by addition, and this
+        # house has now committed it three times. The certain count is the same kind of
+        # quantity as the share and is worked out the same way — from the week-wide return
+        # bands in the saved copies — so it goes in the same line, named.
         "tier": (
-            "DERIVED — this share is worked out here, from saved copies of those lists. "
-            "Nobody publishes it."
+            "DERIVED — this share, and the count of names certainly dark beside it, are "
+            "worked out here, from saved copies of those lists. Nobody publishes either."
         ),
         # The upstream restraint, and it travels with the NAMES. This block names twenty
         # vessels and their flags and stands above the foot that has always carried this
@@ -1299,6 +1411,32 @@ def build():
         # note b). One string, used here and in the foot, so the two cannot drift.
         "restraint": RESTRAINT,
         "replay": "run it again",
+        # THE PROOF, PER STOP — `KRITIKER-89.md`'s condition 1, and the critic's own
+        # account of why it is the one that matters: *"The strongest thing this work owns
+        # is that its claim is re-derivable at arbitrary past states from committed bytes;
+        # I proved it five times tonight, and every proof cost me a terminal. The work
+        # computes the proof for each stop and throws it away."* Every stop has carried its
+        # own `as_of` and `check` since session 84 and the face printed neither: it printed
+        # `+3 DAYS`, a story about days, and one fixed command for one chosen instant down
+        # in the evidence. This lead stands over both, and the two strings under it are the
+        # stop's own — press a button, copy the line, run it, get the share on the screen.
+        # It stands BELOW the reserved space and not beside the figure, for the same reason
+        # the certain count rides an existing row: the span that measures how much of the
+        # hole shares a frame with the whole figure is floored at 268 px, and a proof placed
+        # above the hole would be paid for in the work's own subject.
+        # CUT AND SHORTENED THE SAME NIGHT IT WAS BUILT — `DRAMATURG-90.md`, cuts 1 and 2.
+        # The block first printed the stop's instant on its own line AND the command that
+        # contains that same instant, 15 px apart: *"the same 20 characters on consecutive
+        # lines, a third of the block's payload."* The standalone line is gone; the instant
+        # is in the command, where it is doing work. And the lead opened with a sentence
+        # describing the block to somebody looking at it — struck, for the same reason four
+        # sentences of this head's prose were struck at the last gate. What is left is the
+        # tier word, what the instant IS, and the instruction.
+        "proof": (
+            "OBSERVED — the instant in the line below is when this record first held every "
+            "name this stop adds, read off the captures and not chosen. Run the line and "
+            "this stop's share comes back:"
+        ),
     }
     # OWED ITEM (p), first limb. `DRAMATURG-81.md` §5: *"use the freed first beat to hold
     # state 0 long enough that the definition paragraph is legible before the number first

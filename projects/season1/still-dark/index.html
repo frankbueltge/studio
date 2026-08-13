@@ -152,6 +152,19 @@
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
+  /* THE COUNT THAT TURNS (session 90). It rides the fraction's row and it is set to be
+     read as the same kind of live thing and not as a second headline: the run's ink,
+     because a stop rewrites it; the body weight and the standing note's size, because it
+     must not compete with the numeral the run is named after; tabular, because it steps
+     0 → 2 → 4 and a digit that moves sideways as it changes is a digit the eye loses.
+     It is the third live numeral in the frame and the only one whose CHANGE is the
+     subject rather than the measure. */
+  .sd-root .sd-arrive-certain {
+    font-size: 0.72rem;
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
   /* The figure that runs. It carries both ends of its own band since session 81 — it is
      the page's published share, not a new number — so it is wider and smaller than the
      bare count it replaces, and tabular so the digits do not dance as it falls. */
@@ -294,6 +307,26 @@
     font-size: 0.78rem;
     line-height: 1.5;
     max-width: 84ch;
+  }
+  /* THE PROOF (session 90, `KRITIKER-89.md` condition 1). Set at the evidence's size and
+     in its dim ink, because that is what it is — the two strings are for a hand and a
+     terminal, not for the eye the run is staged for. The lines are `<code>` in the page's
+     ink so that what is meant to be COPIED is told apart from what is meant to be read,
+     and they break inside a token rather than pushing the page sideways: a command that
+     wraps is still a command, and a document that scrolls horizontally on a phone is a
+     document with a defect. Both strings are a fixed 20 and 78 characters at every stop,
+     so this block cannot change height under a reader while the run is going. */
+  .sd-root .sd-arrive-proof {
+    margin: 0 0 0.6rem;
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--sd-dim);
+    max-width: 84ch;
+  }
+  .sd-root .sd-arrive-proof-line {
+    display: block;
+    color: var(--sd-ink);
+    overflow-wrap: anywhere;
   }
   /* OWED ITEM (A), session 85. The figures the list itself printed, at the weight of the
      figure they qualify and not at the weight of a footnote: this line is the material
@@ -718,7 +751,11 @@
       "heading": "WHAT THE LIST OF 4 AUG WAS THE TOP OF",
       "figures": "Of the 230 examined, 82 were dark inside national waters · 5,641 events in the window",
       "said": "The instrument says so itself, in its method sheet: “The index counts all examined; the case and list show named vessels.” The share this page publishes is a share of what those lists print, not of what they count.",
-      "refused": "How the figure would move if the lists were longer is not published here: a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists would add to the total, so both ends of it would grow and nothing in this record measures by how much.",
+      "refused": "How the figure would move if the lists were longer is not estimated here — a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists add to the total, so both ends of it grow. The method that would try has a name: multiple systems estimation, which reads the overlaps between several incomplete lists to say how many none of them caught. Its two-list form asks that “each individual has an equal probability of being captured”, and the same page says that with three or more lists such differences can be modelled instead. Modelling them still needs a capture probability to exist, and these lists give some ships none: a ship enters an edition only once its return has fallen inside that edition's seven-day window, so a ship that is still dark stands in no list, at no probability, in all nine of them. That is why this page prints a band and no estimate.",
+      "refused_source": {
+        "text": "SOURCED — the quoted requirement, and the sentence that scopes it to two lists, are both Amelia Hoover Green, “Multiple Systems Estimation: Stratification and Estimation”, Human Rights Data Analysis Group, 20 March 2013, fetched first-hand: ",
+        "url": "https://hrdag.org/2013/03/20/mse-stratification-estimation/"
+      },
       "kept": "Each of the nine lists this record holds prints six to eleven names of the 189 to 257 disappearances it says it examined. This record has saved that block every night since the first.",
       "tier": "SOURCED — the three figures the list published, read off the saved copies in the words the parser matched in them. The count of names, and the count of lists below, are this house's own.",
       "standing": "11 of 230",
@@ -737,6 +774,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 11",
         "share_fixed_of": "11 of 11",
+        "certain_of": "0 of them certainly dark",
         "added": [
           {
             "name": "TUNAMAR",
@@ -786,7 +824,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 4 AUG.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 4 AUG.",
-        "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of this day that nobody could have had on it."
       },
       {
@@ -801,6 +839,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 14",
         "share_fixed_of": "11 of 11",
+        "certain_of": "0 of them certainly dark",
         "added": [
           {
             "name": "SOUTHERN SEAS NO.302",
@@ -818,7 +857,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 5 AUG, a day after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 5 AUG, a day after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — three ships that could have been dark on that same day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 5 AUG."
       },
       {
@@ -833,6 +872,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 16",
         "share_fixed_of": "11 of 11",
+        "certain_of": "0 of them certainly dark",
         "added": [
           {
             "name": "ALBACORA CUATRO",
@@ -846,7 +886,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 6 AUG, two days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 6 AUG, two days after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — five ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 6 AUG."
       },
       {
@@ -861,6 +901,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 17",
         "share_fixed_of": "11 of 11",
+        "certain_of": "0 of them certainly dark",
         "added": [
           {
             "name": "WANGBIAO-8730",
@@ -870,7 +911,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 7 AUG, three days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 7 AUG, three days after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — six ships that could have been dark on that same day and that nobody could have had on it. The last of them, in darker ink, arrived with the list of 7 AUG."
       },
       {
@@ -885,6 +926,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 20",
         "share_fixed_of": "11 of 11",
+        "certain_of": "0 of them certainly dark",
         "added": [
           {
             "name": "TUNA PESCA",
@@ -902,7 +944,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 8 AUG, four days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 8 AUG, four days after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — nine ships that could have been dark on that same day and that nobody could have had on it. The last three, in darker ink, arrived with the list of 8 AUG."
       },
       {
@@ -917,6 +959,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 25",
         "share_fixed_of": "11 of 11",
+        "certain_of": "0 of them certainly dark",
         "added": [
           {
             "name": "HAIZEA BOST",
@@ -942,7 +985,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 9 AUG, five days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 9 AUG, five days after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — fourteen ships that could have been dark on that same day and that nobody could have had on it. The last five, in darker ink, arrived with the list of 9 AUG."
       },
       {
@@ -957,6 +1000,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 31",
         "share_fixed_of": "11 of 11",
+        "certain_of": "0 of them certainly dark",
         "added": [
           {
             "name": "HY928-21%-81%",
@@ -986,7 +1030,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 10 AUG, six days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 10 AUG, six days after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — twenty ships that could have been dark on that same day and that nobody could have had on it. The last six, in darker ink, arrived with the list of 10 AUG."
       },
       {
@@ -1001,6 +1045,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 33",
         "share_fixed_of": "11 of 11",
+        "certain_of": "2 of them certainly dark",
         "added": [
           {
             "name": "PANOFI FORE RUNNER",
@@ -1014,7 +1059,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 11 AUG, seven days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 11 AUG, seven days after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so two of these names are certainly dark on this day and the rest are possible.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — twenty-two ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 11 AUG."
       },
       {
@@ -1029,6 +1074,7 @@
         "share_fixed": "–100 %",
         "share_falling_of": "11 of 35",
         "share_fixed_of": "11 of 11",
+        "certain_of": "4 of them certainly dark",
         "added": [
           {
             "name": "ISABELLA",
@@ -1042,7 +1088,7 @@
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
         "when_tail": "counting the lists up to 12 AUG, eight days after the day had ended.",
         "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 12 AUG, eight days after the day had ended.",
-        "hedge": "A list gives a ship's return only to the nearest week, so four of these names are certainly dark on this day and the rest are possible.",
+        "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.",
         "heading_since": "NAMED ONLY BY LATER LISTS — twenty-four ships that could have been dark on that same day and that nobody could have had on it. The last two, in darker ink, arrived with the list of 12 AUG."
       }
     ],
@@ -1056,9 +1102,10 @@
       "rest": "Your machine asks for no motion, so nothing runs: this is the day's own answer, and each button above holds a later state."
     },
     "caption": "A ship reaches the list only after it comes back, so a day that is over keeps being answered.",
-    "tier": "DERIVED — this share is worked out here, from saved copies of those lists. Nobody publishes it.",
+    "tier": "DERIVED — this share, and the count of names certainly dark beside it, are worked out here, from saved copies of those lists. Nobody publishes either.",
     "restraint": "“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.",
     "replay": "run it again",
+    "proof": "OBSERVED — the instant in the line below is when this record first held every name this stop adds, read off the captures and not chosen. Run the line and this stop's share comes back:",
     "first_dwell_ms": 14118,
     "first_dwell_note": "56 words at 238 wpm (Brysbaert 2019, mean adult silent reading of non-fiction English)"
   },
@@ -1771,7 +1818,7 @@
       "fraction_fixed": "11 of 11",
       "of": "11 of 4–35",
       "editions": 9,
-      "captures": 26
+      "captures": 27
     },
     "as_of": "2026-08-06T08:36:39Z",
     "band": "Thirty-five ships could have been dark on 4 August 2026 and four of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 4–35, and the share runs from 11 of 35 to 11 of 11.",
@@ -2042,6 +2089,16 @@
         "edition_date_printed": "12 August 2026",
         "vessels": 10,
         "examined": 257
+      },
+      {
+        "fetched_at_utc": "2026-08-12T23:21:00Z",
+        "http_status": 200,
+        "bytes": 31635,
+        "sha256": "14ddeb5c",
+        "content_sha256": "005c4e9f",
+        "edition_date_printed": "12 August 2026",
+        "vessels": 10,
+        "examined": 257
       }
     ],
     "caption": "Six lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first."
@@ -2060,7 +2117,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  26 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 16 distinct bod(y/ies)\n  vessels dark on that day .......... 4–35 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 31%–100%  (11 of 4–35)\n    (a ceiling from 9 edition(s), 26 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  27 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 16 distinct bod(y/ies)\n  vessels dark on that day .......... 4–35 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 31%–100%  (11 of 4–35)\n    (a ceiling from 9 edition(s), 27 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-five is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -2148,8 +2205,25 @@
            printing `11 of 11` twice at stop 0 for two different ends, and standing as 92 px
            of grey between the two fractions it was written to join. What says what this
            division is, is the division under it and the run rewriting one of them. -->
+      <!-- THE RESTAGING OF SESSION 90, and it is one span on an existing row.
+           `DRAMATURG-89.md` returned the premiere gate in one sentence: *"the head's frame
+           prints how much of the day was knowable and never prints how much of it is known,
+           and knowing is the only thing in this run that turns."* Across nine stops the
+           share falls by degrees eight times; exactly one node changes kind — *not one of
+           these names is certainly dark* → *two* → *four* — and it was body prose 861 px
+           under the figure, off a phone screen at every stop and at every scroll position
+           that also holds the figure. The count now stands on the fraction's own row, in
+           the run's live ink, rewritten at every stop like the two numerals above it: at
+           stop 0 it reads `0 of them certainly dark` beside `11 of 11`, and at the last
+           stop `4 of them certainly dark` beside `11 of 35`.
+           WHY ON THIS ROW AND NOT ON ITS OWN. A fourth row pushes the reserved space down
+           by its own height, and the span measuring how much of that space shares a frame
+           with the whole figure is floored at 268 px by that same memo's Cut 1 — the item
+           it restated precisely so that the work's subject would stop paying for staging.
+           A row bought with the hole would be that mistake one night after it was named. -->
       <div class="sd-arrive-row">
         <span class="sd-arrive-frac" id="sd-arrive-frac"></span>
+        <span class="sd-arrive-certain" id="sd-arrive-certain"></span>
       </div>
       <div class="sd-arrive-row">
         <span class="sd-arrive-standing-fig" id="sd-arrive-standing-fig"></span>
@@ -2180,6 +2254,28 @@
     <p class="sd-arrive-group" id="sd-arrive-head-since"></p>
     <ul class="sd-arrive-names" id="sd-arrive-names-since"></ul>
     <p class="sd-arrive-hedge" id="sd-arrive-hedge"></p>
+    <!-- CONDITION 1 OF THE PREMIERE GATE (`KRITIKER-89.md`), built here. The critic drove
+         every stop, re-derived the published share from the captures in code of its own,
+         and then wrote that the one thing only this machinery gives — a state re-derivable
+         from committed bytes at an arbitrary past moment — cost it a terminal every time,
+         because the page computed the proof for each stop and threw it away at render.
+         Both strings have been in the data island since session 84. They are on the face
+         now, rewritten by every stop: the instant the stop IS, and the line that returns
+         that stop's share. A stranger presses a button, copies the line, runs it, and
+         meets the number they are looking at.
+         IT STANDS BELOW THE RESERVED SPACE. Above it, it would push the hole down and be
+         paid for out of the 268 px `DRAMATURG-89.md` floored — the work's subject buying
+         the work's evidence, which is the trade that memo restated the instrument to
+         stop. -->
+    <!-- ONE LINE, NOT TWO. The instant stood on a line of its own above the command until
+         `DRAMATURG-90.md` cut 1 measured what that cost: the instant is a byte-exact
+         substring of the command at all nine stops, so the face printed the same twenty
+         characters twice, fifteen pixels apart, for a third of this block's payload. The
+         instant is still on the face — inside the line that uses it. -->
+    <p class="sd-arrive-proof" id="sd-arrive-proof">
+      <span id="sd-arrive-proof-lead"></span>
+      <code class="sd-arrive-proof-line" id="sd-arrive-proof-cmd"></code>
+    </p>
     <!-- OWED ITEM (y), paid in session 84. The wrapper is the whole repair and it adds no
          word, no element the reader hears, and nothing at all above 480 px: it exists so
          that the two things a phone was losing — the buttons that drive the run and the
@@ -2223,6 +2319,11 @@
     <p class="sd-arrive-cap" id="sd-arrive-since-note"></p>
     <p class="sd-arrive-cap" id="sd-arrive-cut-kept"></p>
     <p class="sd-arrive-tier" id="sd-arrive-cut-refused"></p>
+    <!-- The address of the requirement quoted one line up. A SOURCED sentence about a named
+         third party's method carries its retrievable URL on the face that prints it, in the
+         self-contained file that travels — this house has already shipped one claim whose
+         only address was a code comment and banked it. -->
+    <p class="sd-arrive-tier" id="sd-arrive-cut-refused-src"></p>
     <p class="sd-arrive-tier" id="sd-arrive-tier"></p>
     <p class="sd-arrive-tier" id="sd-arrive-restraint"></p>
   </section>
@@ -2361,6 +2462,10 @@
   // blocks below so that a caveat which grows by four words cannot walk the controls down
   // the page under a resting finger.
   var hedgeEl = document.getElementById("sd-arrive-hedge");
+  // Session 90: the count that turns, and the two strings that prove the stop it turns at.
+  var certainEl = document.getElementById("sd-arrive-certain");
+  var proofCmdEl = document.getElementById("sd-arrive-proof-cmd");
+  document.getElementById("sd-arrive-proof-lead").textContent = arrive.proof;
   thenHeadEl.textContent = arrive.heading_then;
   document.getElementById("sd-arrive-gloss").textContent = arrive.subject_gloss;
   document.getElementById("sd-arrive-cap").textContent = arrive.caption;
@@ -2382,6 +2487,13 @@
   // run's spine tonight. Same strings, same island, different place on the page.
   document.getElementById("sd-arrive-cut-kept").textContent = arrive.cut.kept;
   document.getElementById("sd-arrive-cut-refused").textContent = arrive.cut.refused;
+  // The quoted requirement's own address, as a link, beside the claim it licenses.
+  var refSrc = document.getElementById("sd-arrive-cut-refused-src");
+  refSrc.textContent = arrive.cut.refused_source.text;
+  var refLink = document.createElement("a");
+  refLink.href = arrive.cut.refused_source.url;
+  refLink.textContent = arrive.cut.refused_source.url;
+  refSrc.appendChild(refLink);
   document.getElementById("sd-arrive-since-note").textContent = arrive.since_note;
   // One sentence, not the paragraph that was cut: it carries the tier word for the figure
   // above it and says what the figure is worked out FROM, and it does not move between
@@ -2470,6 +2582,14 @@
     // beat and they are the same quotient in two notations — one the page has printed since
     // it had a head, one the eye can hold against the figure standing under it.
     fracEl.textContent = s.share_falling_of;
+    // The count that turns (session 90). Third live numeral in the frame, and the only one
+    // that changes KIND rather than degree: 0 at stops 0–6, 2 at stop 7, 4 at stop 8. It
+    // is written from the stop's own band, like every other figure a stop owns.
+    certainEl.textContent = s.certain_of;
+    // And the instant this stop IS, with the line that returns it (`KRITIKER-89.md`
+    // condition 1). Both were computed for every stop since session 84 and thrown away at
+    // render; nothing here is new arithmetic, only arithmetic that stops being discarded.
+    proofCmdEl.textContent = s.check;
     // Only the tail is rewritten: the clause that says what the figure means is the same
     // at every stop and it stood still on the page while being replaced six times in
     // eighteen seconds (session 83, `DRAMATURG-82.md` §3). It is written once, on load.

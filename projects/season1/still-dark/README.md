@@ -715,43 +715,200 @@ section. **What it cannot say**, printed in its own output: that a tier word whi
 RIGHT one — two ledger columns captioned OBSERVED were in fact SOURCED, and no proximity rule can
 catch that. Run: `NODE_PATH=<global node_modules> node tools/tiers.mjs`.
 
-## THE STATE OF EVERY GUARD, SESSION 89 — printed because two of them are not green
+## SESSION 90 — THE COUNT THAT TURNS IS IN THE FRAME, AND EVERY STOP PRINTS ITS OWN PROOF
 
-*`KRITIKER-89.md` condition 3, paid here. The critic's words: the guards must be green, or their
-current output printed truthfully with each instrument's pass criterion. **One of them is red on the
-page as committed, and this is where a stranger is told so before they run it.** Every figure below
-was taken tonight on the committed object; each line names the command and what makes it pass.*
+*The premiere gate of session 89 returned this work on all three voices. Two of the critic's three
+conditions and the staging voice's restaging are built here; the third condition, the guards, was
+paid that night and is re-run below on tonight's object.*
+
+**The restaging.** `DRAMATURG-89.md` returned the work in one sentence: *"the head's frame prints
+how much of the day was knowable and never prints how much of it is known, and knowing is the only
+thing in this run that turns."* Across the nine stops the share falls 100 · 79 · 69 · 65 · 55 · 44 ·
+35 · 33 · 31 — eight movements of degree — while exactly one thing changes kind: *not one of these
+names is certainly dark on this day* → *two* → **four**. That count lived in a paragraph 861 px below
+the figure, off a phone screen at every stop and at every scroll position that also holds the figure,
+in the same undifferentiated body prose as six other nodes. **It is a numeral in the head's frame
+now**, on the fraction's own row, in the run's live ink, rewritten at every stop: `11 of 11` and
+`0 of them certainly dark` at the first, `11 of 35` and `4 of them certainly dark` at the last. The
+caveat below keeps the thing no numeral can say — the week-wide return window that makes a name
+certain or possible — and stops counting, because a count in words beside a count in figures is the
+doubling the same memo struck twice that night.
+
+**The proof, per stop.** `KRITIKER-89.md`'s condition 1: *"The strongest thing this work owns is
+that its claim is re-derivable at arbitrary past states from committed bytes; I proved it five times
+tonight, and every proof cost me a terminal. The work computes the proof for each stop and throws it
+away."* Every stop has carried its own instant and its own reproducing command in the data island
+since session 84 and the face printed neither. Both stand under the reserved space now, rewritten by
+every stop: **press a button, copy the line, run it, and the number on the screen comes back.**
+Nothing here is new arithmetic — it is arithmetic that stops being discarded at render.
+
+**The refusal names the method it refuses.** The block below the controls said only that nothing in
+this record measures how the figure would move if the lists were longer. It now names **multiple
+systems estimation**, quotes what MSE asks of each list — *"each individual has an equal probability
+of being captured"* — and says why these lists cannot give it: membership of an edition is decided
+by a published rule, the seven-day window and the ranking, so the overlaps between the nine lists
+measure the rule and not the sea. The neighbours section below carries the argument at length.
+
+## THE NEAREST NEIGHBOURS, AND WHAT THIS WORK HAS THAT THEY DO NOT
+
+*`KRITIKER-89.md` condition 2, paid here. The critic searched the whole repository and found
+that the three works its own memo argued this piece against occurred in exactly one file of this
+house — that memo — and that this work's own first-read document named no neighbour at all. A
+proposal that hides its neighbours is presumed to be copying them; a work that never names them has
+simply never been asked. It is asked here.*
+
+**The house's atlas was consulted before this section was written, and what it said is printed
+including where it said nothing.** The ecology publishes a register of neighbouring works —
+505 entries with artist, year, venue and the decisive move each one makes
+(<https://frankbueltge.de/atlas/werke.json>, fetched 2026-08-12, 505 entries, CC0). Searched for
+*ship · vessel · AIS · sea · ocean · fishing · maritime · boat · migrant · border · missing ·
+absence · list · latency · delay · disappear · fleet · dark*, and a second sweep on temporal terms
+*latency · lag · delay · publication · update · real-time · daily · archive · accumulate · over
+time · when it · knowable · retroactive*, which returned 49 of the 505: **no entry in it measures
+when a fact became knowable — the delay between an event and the record that first carried it.**
+**Three of the four works argued below are absent from it** (searched for *Cennetoğlu · Hoover
+Green · HRDAG · multiple systems · Forensic Oceanography · left-to-die*); **the fourth, Ọnụọha's
+*Library of Missing Datasets*, is in it three times — entries 197, 201 and 202 — at the same
+address this section cites for it.** *(That sentence read "none of the four works argued below is
+in it" in this file's first draft tonight and was blocking at `../VERIFIER-90.md` §3: the atlas
+returns Ọnụọha under this section's own search terms, and a negative result printed as evidence has
+to be the result. Repository-wide search for the superseded string, memory decision 5:
+`grep -rn "none of the four works\|no entry in it measures" .` returns this file and
+`../VERIFIER-90.md`'s quotation of it, and nothing else.)* A negative result across 505 neighbours
+is evidence and is recorded as evidence; it is not proof of novelty, and the two nearest things the
+atlas did surface are argued below with the rest.
+
+- **Mimi Ọnụọha, *The Library of Missing Datasets*** (2016–) — *"Powder-coated steel filing
+  cabinet, folders"*, *"a physical compendium of nonexistent datasets related to blackness"*,
+  <https://www.bitforms.art/artwork/the-library-of-missing-datasets-v-2-0/>, fetched 2026-08-12,
+  200. The example label this record first quoted here — *"People excluded from housing due to
+  criminal records"* — **is not on that page and is now cited where it actually stands, atlas entry
+  202** (`../VERIFIER-90.md` §5: opening an address is not the same as the address carrying the
+  claim). *(Her open companion list, `MimiOnuoha/missing-datasets`, is atlas entry 197; this house
+  could not reach that host tonight and does not cite an address it did not open.)* **The premise is
+  hers**: this page's claim that *the number exists in no dataset* is her sentence in a different
+  mouth. **The daylight:** her cabinet indexes absences that are permanent and structural — data a
+  society chooses never to collect. This measures one absence that is **temporary and closing**, on
+  a clock: every name in the space below arrived, late, and the record holds the night it did. Her
+  folders are empty by design and stay empty; this one fills while you watch, and the filling is the
+  finding.
+- **Banu Cennetoğlu, *The List*** — *"The List of 34,361 documented deaths of asylum seekers,
+  refugees and migrants who have lost their lives within or on the borders of Europe since 1993.
+  Documentation as of 5 May 2018 by UNITED for Intercultural Action"*, republished by the artist in
+  public space since 2007 (<https://www.biennial.com/artists/banu-cennetoglu/>, fetched 2026-08-12,
+  200; **that figure is the 2018 edition's and the list has been updated since**). **This is this form, twenty years
+  earlier, with the dead in it, and the difference in stakes is total and is not argued away.** The
+  daylight is narrow and formal: *The List* republishes a list others compile, at its full weight,
+  and its incompleteness is stated. This work publishes **no list of its own** — it publishes the
+  interval between an event and the list that first carried it, which is a quantity *The List* does
+  not measure and, being a memorial, has no reason to.
+- **HRDAG, multiple systems estimation** — Amelia Hoover Green, *Multiple Systems Estimation:
+  Stratification and Estimation*, Human Rights Data Analysis Group, 20 March 2013,
+  <https://hrdag.org/2013/03/20/mse-stratification-estimation/>. This is the standing answer to the
+  question this record's shape invites: *nine overlapping incomplete lists — how many did none of
+  them catch?* **This work holds nine such lists and refuses to estimate, and from tonight it says
+  why on its own face.** MSE reads the overlaps between lists as captures. Its **two-list** form
+  asks that *"each individual has an equal probability of being captured"* — **and the same page
+  says that assumption is *"unnecessary for MSE analyses with >=3 datasets, because both individual
+  differences in catchability and dependence between lists can be parameterized and modeled"*.**
+  This record holds nine lists, so that requirement is **not** the reason it refuses, and the first
+  draft of this section and of the work's face said it was: blocking at `../VERIFIER-90.md` §1,
+  corrected before either was committed, *(search:* `grep -rn "equal probability of being captured" .`
+  *— this file, `data.py`, `index.html`, `STATE-1.txt` and the two renders, all carrying the
+  corrected string).* **The reason that survives is that modelling a capture probability still needs
+  one to exist.** A vessel enters an edition only once its return has fallen inside that edition's
+  seven-day window — *"Daily. Window: disabling events that ended in the last 7 days (complete
+  vanish-and-return stories)"*, verbatim from the instrument's own method sheet,
+  <https://frankbueltge.de/werke/ghost-fleet/>, fetched 2026-08-12, 200. **A ship that is still dark
+  therefore stands in no list, at no probability, in all nine** — and a class no list can capture is
+  exactly what capture–recapture cannot estimate. *(This bullet also claimed the daily list is cut
+  by a published ranking, quoting* "case of the day by region brisance, then duration" *as its
+  warrant. That sentence is upstream's rule for its **case of the day**, and its own next clause —*
+  "The index counts all examined; the case and list show named vessels" *— names case and list as
+  two things. The sheet nowhere states how the list is cut. Blocking at `../VERIFIER-90.md` §2;
+  the claim is withdrawn rather than reworded, and this record does not describe another practice's
+  method as more disclosed than that practice discloses it. Search:* `grep -rn "region brisance" .`
+  *— `data.py`'s comment, which quotes the sentence whole and correctly, and `../VERIFIER-90.md`.)*
+- **Forensic Oceanography, *The Left-to-Die Boat*** (report 2012; 72 people aboard, 63 dead, 14 days
+  adrift inside NATO's surveillance area, reconstructed from drift models and transponder traces
+  into a named chain of responsibility) — <https://www.fidh.org/IMG/pdf/fo-report.pdf>,
+  <https://forensic-architecture.org/investigation/the-left-to-die-boat>. **This is not a neighbour;
+  it is the standard, and it is printed here because it is the sentence a critic will write.**
+  Beside it this work implicates nobody: it measures a publication cadence, and the only party it
+  holds to anything is the record keeping itself. The critic's own line at the gate —
+  *"a latency chart with excellent footnotes"* — stands unedited in `../KRITIKER-89.md`.
+- **What the atlas surfaced that this house had not named:** *Data Against Feminicide*
+  (D'Ignazio, Fumega, Suárez Val, MIT Data + Feminism Lab, 2019–,
+  <https://dusp.mit.edu/projects/data-against-feminicide>, fetched 2026-08-12, 200 — the page
+  carries the names, the year and the counterdata claim) and ***Sobrevivientes*** (Datasketch,
+  2017–, **atlas entry 199**, whose own address is
+  <https://datoscontrafeminicidio.net/en/art-and-data-to-make-feminicide-visible/>, fetched
+  2026-08-12, 200 — *that page carries DataSketch and the practice, and carries neither the title
+  nor the year nor the word testimony, which stand in the atlas entry*; `../VERIFIER-90.md` §5) —
+  practices that
+  **build the count a state refuses to keep**, from news reports and testimony. They are nearer in
+  premise than Paglen is, and this record had never named them. **The daylight:** they build a
+  missing record; this measures the delay of an existing one, and takes no position on what the
+  instrument should have counted. **What they cost this work is the harder comparison**: theirs is
+  counter-data with a party on the other side of it, and this work still has none.
+- **The three the record already named**, argued in `../PROJECT.md`: the Ghost Fleet itself
+  (upstream publishes the day's returned; this publishes the hole that leaves), Trevor Paglen's
+  *The Other Night Sky* (<https://paglen.studio/2020/05/22/the-other-night-sky/>; he photographs the
+  hidden thing at an instant, this gives only the delay, which cannot be photographed), and Watch
+  the Med (<https://watchthemed.net/>).
+
+**The weakest joint, stated with the neighbours because it belongs to them:** a method that counts a
+disappearance only when the ship comes back **cannot see the ships that never come back.** The work
+inherits that blindness from the instrument it reads and prints it on its own face rather than
+solving it.
+
+## THE STATE OF EVERY GUARD, SESSION 90 — printed because one of them is not green
+
+*`KRITIKER-89.md` condition 3, paid in session 89 and re-run here on tonight's object. The critic's
+words: the guards must be green, or their current output printed truthfully with each instrument's
+pass criterion. **One of them is red on the page as committed, and this is where a stranger is told
+so before they run it.** Every figure below was taken tonight on the committed object; each line
+names the command and what makes it pass.*
 
 | instrument | pass criterion | tonight, on this page | exit |
 |---|---|---|---|
 | `python3 data.py --check` | the rendered island is byte-identical to a fresh build from the captures | `island matches the captures` | **0** |
-| `node announce.mjs` | **none — it reports, it does not judge.** Its only non-zero exit is `2` when the browser library is missing | 1 live region · 3 spoken announcements · 10 figure rewrites · a stop pressed at 3 s announced at 3.2 s | **0** |
+| `node announce.mjs` | **none — it reports, it does not judge.** Its only non-zero exit is `2` when the browser library is missing | 1 live region · 4 writes in 30 s, 3 of them spoken · 10 figure rewrites · a stop pressed at 3.0 s announced at 3.19 s | **0** |
 | `node gaps.mjs` | no bar stands nearer another row's label, at either width | 1.42 px own · 9.59 px next, 0 of 35 rows failing | **0** |
 | `node ../../../tools/tiers.mjs` | every printed figure sits in a scope carrying a tier word | pass, **and it cannot say the word is the RIGHT one** | **0** |
-| `node ../../../tools/frame.mjs` | the figure and the controls fit one screen at every stop, both widths | 327 px of 844 · 479 px of 900 — HOLDS | **0** |
-| `node ../../../tools/fold.mjs` | **no must-hold element leaves the viewport, or stands on the material, at ≤ 480 px** | **99 failures — RED** | **1** |
+| `node ../../../tools/frame.mjs` | the figure and the controls fit one screen at every stop, both widths, **and the hole shares the whole figure's frame at ≥ 268 px / 22 chips** | 328 px of 844 · 568 px of 900 — HOLDS · **273 px and 24 of 24 chips against the floor of 268 and 22 — HOLDS** | **0** |
+| | *and this row was blocking two hours ago* | **`../VERIFIER-90.md` §4 found 597 where this row said 568**, on the object as it then stood, and it was right: the proof block was two lines longer, and at 1,400 px those two lines walked the controls 29 px down. `../DRAMATURG-90.md`'s cuts 1 and 2 took the block back to one line and the number back to 568. **The figure above was re-taken after the cuts, not defended.** | |
+| `node ../../../tools/fold.mjs` | **no must-hold element leaves the viewport, or stands on the material, at ≤ 480 px** | **108 failures — RED** | **1** |
 
-**`fold.mjs` is red and is published red.** What it reports is **the figure scrolled off the top** —
-at the scroll positions where a reader is down among the ship names, the falling number is above the
-viewport. It reports **zero occlusions**: no chip of the growing names is covered at any stop or
-scroll position, which is the defect it was built for in session 84 and which is fixed. The count is
-**11 failures per stop**, and it therefore tracks the number of stops and nothing else: it read 88 at
-eight stops and reads 99 at nine. **That is not a regression and this record does not print it as
-one** (`DRAMATURG-89.md` cut 2) — a ninth list added a ninth stop, and eleven times nine is
-ninety-nine. The house has been told twice now that a number moving with a ruler is not a
-measurement, and it is printed here so nobody has to be told a third time.
+**`fold.mjs` is red and is published red.** What it reports is **the controls and the run's line
+scrolled off** — at the scroll positions where a reader is down among the ship names, the buttons and
+the line that announces the run are above the viewport. It reports **zero occlusions**: no chip of
+the growing names is covered at any stop or scroll position, which is the defect it was built for in
+session 84 and which is fixed. **The count is 12 failures per stop tonight — six of the controls and
+six of the run's line, at 390 px, on all nine stops — where it was 11 (six and five) last night, and
+the difference is not the head.** The instrument samples nine scroll positions across the head's
+whole range; tonight's build added the proof block below the reserved space, the range grew, and the
+same nine positions sit further apart. **It read 88 at eight stops, 99 at nine, and 108 at nine with
+a taller document: the number tracks the ruler** (`DRAMATURG-89.md` cut 2), and this record does not
+print it as a regression. The house has been told twice that a number moving with its ruler is not a
+measurement; this is the third time it has been written down and the first time it moved because of
+something the house added on purpose.
 
-**What `frame.mjs` measures changed tonight, and the reason is published in the instrument's own
-header.** Until tonight it also reported *figure-top to hole-bottom*, an item sessions 87 and 88 paid
+**What `frame.mjs` measures changed in session 89, and the reason is published in the instrument's
+own header.** Until that night it also reported *figure-top to hole-bottom*, an item sessions 87 and 88 paid
 157 px to take green at 786 of 844. It survived one night: the ninth list added two ship names, the
 hole grew two rows, and it read 849 of 844. Rebuilt at n chips, the span costs **23 px per row, one
 row per two names** — so the item goes **red on exactly the nights this work succeeds**, because its
 far end is the work's own subject. `DRAMATURG-89.md` cut 1 ruled the **item** the mistake, not the
 object, and ordered it restated against a bounded end: with the whole figure on screen, how much of
-the hole shares the frame with it — **273 px and 24 of 24 chips tonight, against the floor of 268 px
-and 22 chips the staging voice set from its own reading.** *Tonight's prose cuts shortened the head,
-and none of that height is claimed against this floor: the cuts were ordered for truth, and the voice
+the hole shares the frame with it — **273 px and 24 of 24 chips, against the floor of 268 px
+and 22 chips the staging voice set from its own reading.** *Session 89's prose cuts shortened the head,
+and none of that height was claimed against this floor: the cuts were ordered for truth, and the voice
 that ordered them named banked failure 48 in advance if the house booked their pixels.*
+**Session 90 read the same 273 px and the same 24 of 24 chips**, and that is the whole reason the
+count that turns rides an existing row and the proof stands below the reserved space: **a fourth row
+in the head, or a proof placed above the hole, would have been bought with the work's own subject** —
+the trade this instrument was restated to stop, one night after it was named.
 
 **Dependencies, named honestly:** node ≥ 18 and **playwright** (Apache-2.0) with Chromium
 (BSD-3-Clause; its bundled third-party components carry their own licences — the Verifier's

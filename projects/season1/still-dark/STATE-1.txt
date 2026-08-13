@@ -7,6 +7,7 @@ dark — the ship's AIS transponder switched off, so it stops being tracked. The
 100 %–100 %
 of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 4 AUG.
 11 of 11
+0 of them certainly dark
 11 of 230
 — eleven ships named, of 230 disappearances the list says it examined. SOURCED — the count of names is this house's own.
 
@@ -26,7 +27,10 @@ EXCELLENCE · USA
 
 NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of this day that nobody could have had on it.
 
-A list gives a ship's return only to the nearest week, so not one of these names is certainly dark on this day.
+A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible.
+
+OBSERVED — the instant in the line below is when this record first held every name this stop adds, read off the captures and not chosen. Run the line and this stop's share comes back:
+python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T04:39:32Z
 
 ON THE DAY
 +1 DAY
@@ -55,9 +59,11 @@ This record cannot tell a ship that came back later from a ship the list did not
 
 Each of the nine lists this record holds prints six to eleven names of the 189 to 257 disappearances it says it examined. This record has saved that block every night since the first.
 
-How the figure would move if the lists were longer is not published here: a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists would add to the total, so both ends of it would grow and nothing in this record measures by how much.
+How the figure would move if the lists were longer is not estimated here — a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists add to the total, so both ends of it grow. The method that would try has a name: multiple systems estimation, which reads the overlaps between several incomplete lists to say how many none of them caught. Its two-list form asks that “each individual has an equal probability of being captured”, and the same page says that with three or more lists such differences can be modelled instead. Modelling them still needs a capture probability to exist, and these lists give some ships none: a ship enters an edition only once its return has fallen inside that edition's seven-day window, so a ship that is still dark stands in no list, at no probability, in all nine of them. That is why this page prints a band and no estimate.
 
-DERIVED — this share is worked out here, from saved copies of those lists. Nobody publishes it.
+SOURCED — the quoted requirement, and the sentence that scopes it to two lists, are both Amelia Hoover Green, “Multiple Systems Estimation: Stratification and Estimation”, Human Rights Data Analysis Group, 20 March 2013, fetched first-hand: https://hrdag.org/2013/03/20/mse-stratification-estimation/
+
+DERIVED — this share, and the count of names certainly dark beside it, are worked out here, from saved copies of those lists. Nobody publishes either.
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
 
@@ -311,7 +317,7 @@ SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved c
 
 It fell thirty-eight points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day; and ISABELLA and LUCKY TJ with the list of 12 AUG, eight days after the day — nineteen ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 26 saved copies of 9 lists —
+LIVE · as this record measures it now, from 27 saved copies of 9 lists —
 31 %–100 %
 11 of 4–35
 
@@ -352,17 +358,18 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list	disapp
 2026-08-11T21:58:00Z	200	32,441	e506a522…	a7ab0eb1…	11 August 2026	11	189
 2026-08-12T04:36:39Z	200	31,631	e21f57d8…	a7ab0eb1…	11 August 2026	11	189
 2026-08-12T18:23:12Z	200	31,635	14ddeb5c…	005c4e9f…	12 August 2026	10	257
+2026-08-12T23:21:00Z	200	31,635	14ddeb5c…	005c4e9f…	12 August 2026	10	257
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -6
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  26 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 16 distinct bod(y/ies)
+day 2026-08-04  ·  27 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 16 distinct bod(y/ies)
   vessels dark on that day .......... 4–35 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 31%–100%  (11 of 4–35)
-    (a ceiling from 9 edition(s), 26 capture(s): further nights can only add vessels to this day, so this share can only fall)
+    (a ceiling from 9 edition(s), 27 capture(s): further nights can only add vessels to this day, so this share can only fall)
 
 verbatim, unedited
 

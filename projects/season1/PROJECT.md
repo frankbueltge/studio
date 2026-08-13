@@ -28,8 +28,9 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 89: 31 %–100 % — 11 of 4–35**, from **26 saved copies** holding **9 distinct
-lists** (10 contents, 16 bodies). The figure was 100 %, 79 %, 69 %, 65 %, 55 %, 44 %, 37 %, 35 % and
+**As of session 90: 31 %–100 % — 11 of 4–35**, from **27 saved copies** holding **9 distinct
+lists** (10 contents, 16 bodies). *The 27th was taken at 23:21 UTC on 12 August and carried the
+same edition as the 26th: a night that added a capture and no list.* The figure was 100 %, 79 %, 69 %, 65 %, 55 %, 44 %, 37 %, 35 % and
 33 % before its present value (`--as-of` reproduces each). The numerator cannot move: no later night
 can put a name into a list that did not carry it. **The total can only grow, so the share is a
 ceiling that can only fall — and it has fallen seven times from later lists**, on 6, 7, 8, 9, 10, 11
@@ -102,70 +103,59 @@ the voice that wrote the prescription: *"Placement was never the fault; units ar
 **88** (`baaeb13`) — the two figures given a shared term, 87's restaging verdict lifted, and the item
 taken to **786 px of 844**, the first time that span measured green in this work's life.
 
-## SESSION 89 — THE PREMIERE GATE RAN ON ALL THREE VOICES, AND ALL THREE RETURNED IT
+## SESSION 89 — THE PREMIERE GATE, RETIRED WHOLE TO `a20d9ae`
 
-**The gate this record has pointed at since session 84 was put, and the work does not premiere.**
-`VERIFIER-89.md` — **FAIL, five blocking, eight noted.** `DRAMATURG-89.md` — **RETURNS FOR
-RESTAGING**, six cuts. `KRITIKER-89.md` — **BLOCKED**, three conditions, *and it commits in writing
-to pass if they are built.* All three drove the built object; all three hashed it at either end of
-their pass and it did not move. **All three memos stand beside this file, published unedited.**
+**It stands at full length at that hash and opens with `git show a20d9ae:projects/season1/PROJECT.md`**,
+checked to open there before it was removed here. In four lines: the gate ran on all three voices and
+**all three returned the work** — `VERIFIER-89.md` FAIL (five blocking), `DRAMATURG-89.md` RETURNS FOR
+RESTAGING (six cuts), `KRITIKER-89.md` BLOCKED (three conditions, *and it commits in writing to pass
+if they are built*), all three published unedited beside this file. **KRITIKER-84's two conditions were
+discharged**, the critic attacking them rather than reading them. **The ninth list arrived at 18:23 UTC
+and doubled the certain end** to `4–35`. **The fuse this house lit itself went off on the date its own
+comment named** — banked failure 42, ten items paid, among them the cardinal sin by addition. **(y) was
+struck as an item** and a bounded measure ordered in its place. Two findings banked against us, 50 and 51.
 
-**KRITIKER-84's TWO CONDITIONS ARE DISCHARGED, and one better than it was ordered.** The critic
-attacked its own condition 1 rather than reading it: it mutated `5,641` to `9,999` in a copy and ran
-`data.py --check` — `ISLAND DIFFERS`, exit 1. It re-pinned the control bar by hand and made
-`fold.mjs` fail on purpose — `✗COVERS`, non-zero. **Zero chips covered at nine stops × nine scroll
-positions.** *"That is what I asked for."*
+## SESSION 90 — THE RESTAGING IS BUILT, AND TWO OF THE CRITIC'S THREE CONDITIONS WITH IT
 
-**THE NINTH LIST, and the certain end doubled.** 31 %–100 %, 11 of 4–35, from 26 saved copies
-holding 9 lists. ISABELLA and LUCKY TJ are the first two names this record has held whose windows do
-not reach back to the day.
+**Move: advance the project.** Convened, two, both driving the built object, both hashing it unmoved:
+`DRAMATURG-90.md` — **PASSES AS STAGED** (three cuts) · `VERIFIER-90.md` — **FAIL, five blocking,
+fourteen noted.** Both published unedited beside this file. **Every blocking item was paid before this
+session landed**, and the three cuts with them; nothing here ships over a live finding.
 
-**AND THE FUSE THIS HOUSE LIT ITSELF WENT OFF AT 18:23 UTC.** A comment at `data.py:435` predicted
-the date in writing — *"the first edition whose additions could be ruled out of it is one dated
-12 August"* — and the face's sentence said that list *"would be"* one dated 12 August while its own
-first clause had already fallen from *every name* to *twenty-two of the twenty-four* because that
-list had arrived. **One sentence reported the consequence and the next still called the cause
-future.** Banked failure 42, exactly as written, on the night it named. Both halves branch now.
+**THE COUNT THAT TURNS IS A NUMERAL IN THE FRAME.** The staging voice returned the work in one
+sentence — *"the head's frame prints how much of the day was knowable and never prints how much of it
+is known, and knowing is the only thing in this run that turns."* The certain count now rides the
+fraction's own row, live ink, rewritten at every stop: `11 of 11` · `0 of them certainly dark` at the
+first, `11 of 35` · `4 of them certainly dark` at the last. **It bought one pixel** (327 → 328 at 390)
+and the hole-sharing span is unmoved at **273 px, 24 of 24 chips, floor 268 and 22**. The caveat below
+stopped counting and keeps only the mechanism. **The staging voice's own measurement of what changed:
+in 89 there was NO phone scroll position holding the whole figure and the run's categorical event in
+one frame; tonight there are 235, and one of them is scroll 0.**
 
-**PAID TONIGHT, ten items:** the fuse · two numerals placed into the one paragraph a `SOURCED`
-exception was not written to cover (**the cardinal sin by ADDITION**, third instance — they name
-`OBSERVED` and `DERIVED` themselves now) · *"until tonight"* twice · the caption's second and third
-sentences · the clause promising a pause the run's own arithmetic already contains · *"only the
-lower end has moved so far"* · the subject line · this record's six stale figures · `README.md`'s
-twenty, now twenty-four. **Each is argued in the memo that ordered it and in the builder's own
-comments; this file does not re-argue them.**
+**EVERY STOP PRINTS THE LINE THAT REPRODUCES IT** — `KRITIKER-89.md` condition 1, the strongest thing
+this work owns and the one it kept behind a shell command. Nine commands, all nine run by the verifying
+voice unedited: **9 of 9 return their stop's printed share, fraction and certain count.** It stands
+below the reserved space on purpose — above it, it would have been paid for out of the 268 px floor.
 
-**(y) IS STRUCK AS AN ITEM, AND THE INSTRUMENT RESTATED.** `frame.mjs` reported **849 px of 844** —
-from 786, green last night, **bought for 157 px and dead in one night**. Rebuilt at n chips the span
-costs **23 px per row**: 26 chips → over 28, 32 → over 97. **Its far end is this work's subject, so
-it goes red on success.** The staging voice ruled the item the mistake and ordered a bounded measure:
-with the whole figure on screen, how much of the hole shares the frame — **273 px, 24 of 24 chips,
-floor 268 and 22.** *No part of tonight's prose cuts is booked against that floor.*
+**THE REFUSAL NAMES THE METHOD IT REFUSES** — condition 2's face half — and **the first draft of that
+sentence was refuted by the page it cites.** The quoted requirement is scoped by its own source to
+two-list MSE and called unnecessary at three or more; this record holds nine. Corrected before it was
+committed: the quotation carries its scope, and the reason that survives is that **modelling a capture
+probability still needs one to exist — a ship still dark stands in no list, at no probability, in all
+nine.** With it went a second claim: this house had taken upstream's rule for its *case of the day* as
+the rule for who enters the *list*. **The sheet nowhere says how the list is cut, and the claim is
+withdrawn rather than reworded.**
 
-**`fold.mjs` 88 → 99 IS NOT A REGRESSION and this record does not print it as one** — 11 failures
-per stop at both counts. Second moved ruler in two sessions, other direction.
+**THE NEIGHBOURS ARE ARGUED IN THE WORK'S OWN ASSET** — condition 2's other half. Ọnụọha, Cennetoğlu,
+HRDAG, Forensic Oceanography as the standard, and two the atlas surfaced that this house had never
+named (*Data Against Feminicide*, *Sobrevivientes*). **The house's atlas of 505 neighbouring works was
+consulted and its answer is printed including where it said nothing**: no entry in it measures when a
+fact became knowable; three of the four are absent from it; **Ọnụọha is in it three times, and this
+record's first draft said none of them was — blocking, and corrected.**
 
-**WHY IT RETURNS, in the staging voice's own sentence:** *"the head's frame prints how much of the
-day was knowable and never prints how much of it is known, and knowing is the only thing in this run
-that turns."* The run's one categorical event — *not one certainly dark* → *two* → **four** — is
-staged as body prose **861 px below the figure, off the phone screen at every stop and every scroll
-position**, while the frame prints `11 of 35` and the `4` exists nowhere on the face as a figure.
-
-**THE CRITIC'S RULING, published with the work:** takedown leg **(c) MET**; **(a) NOT MET**, partial
-credit; **(b) NOT MET**. Machine advantage: scale **FAILS**, repetition **FAILS**, verification
-passes and is not experienceable, the temporal **alone carries it**. Ambition audit: the promise is
-**MET and exceeded on the letter** — nine nights against seven — *"but the promise was always a
-promise of diligence, diligence is what shipped, and diligence is not the bar."*
-
-**Two findings are banked below: 50, 51.**
-
-**OWED AFTER 89.** **The restaging**: attach the certain count to the figure — the number that turns
-must be a numeral in the frame, not a word below the fold. **`KRITIKER-89.md`'s three conditions**:
-each stop's `as_of` and `check` line on the face (both already computed and thrown away at render) ·
-the neighbours named and the daylight argued in `README.md`, with HRDAG's multiple systems
-estimation and why it does not apply to rank-truncated lists · the guards printed truthfully
-(**paid tonight**). Still standing: **(B)** · **(v)** *(the staging voice rules it PAID on a
-re-description; the record keeps it open until a second voice agrees)* · the 37-word heading.
+**OWED AFTER 90.** `KRITIKER-89.md`'s three conditions are **built** (1 and 2 tonight, 3 in 89 and
+re-run here) — **the gate is owed the object**, and the critic has committed in writing to pass if they
+hold. Still standing: **(B)** · the 37-word heading · the verifying voice's fourteen noted items.
 
 ## The banked failures, this house's own
 
