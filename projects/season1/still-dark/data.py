@@ -90,9 +90,13 @@ DEFINITION_QUOTE = (
 # sentence stands exactly as it stood, one string, not one character rewritten. The
 # refuted arm is not deleted: `../staging-77/restaged/` holds the built page a stranger
 # can open, beside the control it lost to.
+# DRAMATURG-91 cut 4: the opening sentence — "Going dark is a ship switching off its AIS
+# transponder … so that it stops being tracked" — rendered at y 2748 on the phone, 2,650 px
+# after the first screen had already said "dark — the ship's AIS transponder switched off, so
+# it stops being tracked" in the frame every visitor sees. 154 characters, the same clause in
+# nearly the same words. Struck. What survives is the only part the face has not already said.
 DEFINITION = (
-    "Going dark is a ship switching off its AIS transponder — the radio signal that puts it "
-    "on the public picture of the sea — so that it stops being tracked. The instrument this "
+    "The instrument this "
     "page reads counts only disabling its own source classifies as high-confidence and "
     "intentional: at least 12 hours dark, at least 50 nautical miles offshore."
 )
@@ -1677,7 +1681,12 @@ def build():
             "window_quote": caps_now[-1]["method"]["window_quote"],
             "definition_quote": DEFINITION_QUOTE,
             "definition": DEFINITION,
-            "restraint": RESTRAINT,
+            # DRAMATURG-91 cut 2: `method.restraint` fed a second, byte-identical printing of
+            # upstream's restraint in the page's foot, 5,313 px after `arrive.restraint` had
+            # already printed the same 179 characters inside the block that uses the word
+            # "intentional" — the only pure duplicate on this face. The house had solved the
+            # DRIFT (one string, two keys) and kept the double PRINTING. The printing goes; the
+            # restraint still travels, in the one place where something has been claimed.
         },
         "arrive": arrive,
         "lede": lede,

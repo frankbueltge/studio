@@ -408,6 +408,15 @@
     white-space: nowrap;
   }
   .sd-root .sd-tick:first-child { transform: translateX(0); }
+  /* DRAMATURG-91 cut 1. Ten weekly tick labels need ~377 px of inked width; the scale is
+     337 px at 390 and 307 px at 360, so the axis overprinted itself in 8 of its 9 gaps at
+     360, 390 and 414 px — invisible in both committed renders, which are taken at 900 and
+     1400 where it comes out clean. Below 700 px only four labels are kept, spread evenly
+     across the span. The bars, the hatching and the 4 AUG rule are untouched: this cut
+     repairs the one place where this work shows instead of tells. */
+  @media (max-width: 699px) {
+    .sd-root .sd-tick-minor { display: none; }
+  }
 
   .sd-root .sd-rowsarea { position: relative; }
   .sd-root .sd-rules {
@@ -740,8 +749,7 @@
     "edition_source": "https://frankbueltge.de/ghost-fleet/",
     "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
     "definition_quote": "The AIS picture of the seas looks complete. It is not — ships switch off their transponder on purpose to vanish.",
-    "definition": "Going dark is a ship switching off its AIS transponder — the radio signal that puts it on the public picture of the sea — so that it stops being tracked. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore.",
-    "restraint": "“Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we."
+    "definition": "The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore."
   },
   "arrive": {
     "subject_gloss": "dark — the ship's AIS transponder switched off, so it stops being tracked. The lists below are the daily editions of The Ghost Fleet, published at frankbueltge.de, which name a ship only once it has come back. They carry only offshore switch-offs a machine model classed as intentional, so they are never all of a day's darkness.",
@@ -1818,7 +1826,7 @@
       "fraction_fixed": "11 of 11",
       "of": "11 of 4–35",
       "editions": 9,
-      "captures": 27
+      "captures": 28
     },
     "as_of": "2026-08-06T08:36:39Z",
     "band": "Thirty-five ships could have been dark on 4 August 2026 and four of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 4–35, and the share runs from 11 of 35 to 11 of 11.",
@@ -2099,9 +2107,19 @@
         "edition_date_printed": "12 August 2026",
         "vessels": 10,
         "examined": 257
+      },
+      {
+        "fetched_at_utc": "2026-08-13T04:36:40Z",
+        "http_status": 200,
+        "bytes": 31635,
+        "sha256": "1a3e76fe",
+        "content_sha256": "005c4e9f",
+        "edition_date_printed": "12 August 2026",
+        "vessels": 10,
+        "examined": 257
       }
     ],
-    "caption": "Six lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first."
+    "caption": "Seven lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first."
   },
   "commands": [
     {
@@ -2117,7 +2135,7 @@
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z"
     }
   ],
-  "output": "day 2026-08-04  ·  27 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 16 distinct bod(y/ies)\n  vessels dark on that day .......... 4–35 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 31%–100%  (11 of 4–35)\n    (a ceiling from 9 edition(s), 27 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
+  "output": "day 2026-08-04  ·  28 capture(s) read, 9 distinct edition(s), 10 distinct content(s), 17 distinct bod(y/ies)\n  vessels dark on that day .......... 4–35 (certain–possible)\n  knowable on the day, DERIVED ...... 11\n  knowable on the day, OBSERVED ..... 11\n  SHARE knowable on the day ......... 31%–100%  (11 of 4–35)\n    (a ceiling from 9 edition(s), 28 capture(s): further nights can only add vessels to this day, so this share can only fall)\n",
   "floor": "No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Thirty-five is what this record can place in 4 August 2026, not what was on the sea that day."
 }
   </script>
@@ -2383,16 +2401,17 @@
     </div>
   </section>
 
-  <p class="sd-floor" id="sd-floor"></p>
-
+  <!-- DRAMATURG-91 cuts 2 and 3. The source line stands ABOVE the floor now: it is owed and
+       keeps its place on the face, but nothing may stand between the floor and the bottom of
+       the page. A work whose last sentence is "not what was on the sea that day" does not end
+       on a URL. The restraint's second printing (`#sd-restraint`, fed from data.method.restraint)
+       is struck entirely — it was byte-identical to `#sd-arrive-restraint` 5,313 px earlier. -->
   <div class="sd-foot">
     <p>Vessel names, flags, waters, durations and edition dates as printed by
     <a href="https://frankbueltge.de/ghost-fleet/">https://frankbueltge.de/ghost-fleet/</a>, linked name by name.</p>
-    <!-- Filled from data.method.restraint since session 80. It was typed here and typed
-         nowhere else until the running head began naming twenty vessels above it; one
-         string now feeds the head and the foot, so the two cannot drift apart. -->
-    <p id="sd-restraint"></p>
   </div>
+
+  <p class="sd-floor" id="sd-floor"></p>
 
 </div>
 </div>
@@ -2503,7 +2522,6 @@
   document.getElementById("sd-arrive-constant").textContent = arrive.constant;
   document.getElementById("sd-arrive-tier").textContent = arrive.tier;
   document.getElementById("sd-arrive-restraint").textContent = arrive.restraint;
-  document.getElementById("sd-restraint").textContent = data.method.restraint;
 
   var stopButtons = [];
   var timer = null;
@@ -2813,6 +2831,7 @@
   // weekly ticks across the field's real (labelled) span only — the margin
   // past dataEnd carries no tick, because nothing is known to mark there
   var scaleEl = document.getElementById("sd-scale");
+  var scaleTicks = [];
   var rulePct = pct(heldDay);
   var d = fieldStart;
   while (d <= dataEnd) {
@@ -2824,8 +2843,22 @@
       tick.style.left = pct(d) + "%";
       tick.textContent = tickLabel(d);
       scaleEl.appendChild(tick);
+      scaleTicks.push(tick);
     }
     d = addDays(d, 7);
+  }
+  // DRAMATURG-91 cut 1: keep four labels below 700 px, evenly spread across however many
+  // the span produced, and mark the rest minor for the media query above to drop. The kept
+  // set is computed from the rendered ticks, not typed, so it survives a span that grows.
+  var KEPT = 4;
+  var keep = {};
+  if (scaleTicks.length > KEPT) {
+    for (var k = 0; k < KEPT; k++) {
+      keep[Math.round(k * (scaleTicks.length - 1) / (KEPT - 1))] = true;
+    }
+    for (var t = 0; t < scaleTicks.length; t++) {
+      if (!keep[t]) { scaleTicks[t].className = "sd-tick sd-tick-minor"; }
+    }
   }
 
   // labelled vertical rule at the held day. The held day sits near the right end of

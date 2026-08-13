@@ -36,6 +36,36 @@ const page_url = "file://" + join(target, "index.html");
 
 const WIDTHS = [1400, 900];
 
+// Session 91, DRAMATURG-91 cut 1. The bar/label rule above is measured at 1400 and 900 —
+// and that is exactly why nothing in this house saw the second defect in the same chart for
+// three sessions: the time field's DATE AXIS overprinted itself in 8 of its 9 gaps at 360,
+// 390 and 414 px, and both committed renders are taken at widths where it comes out clean.
+// An instrument that only looks where the pictures are taken is an instrument that agrees
+// with the pictures. So the axis is measured on its own, at phone widths first.
+//
+// The rule, and the only one: no tick label may overlap the next one along. A negative gap
+// is ink on ink, and a date axis that prints two dates on top of each other is worse than
+// one that prints fewer dates.
+const AXIS_WIDTHS = [360, 390, 414, 480, 700, 900, 1400];
+
+// Only labels the browser actually paints are measured: below 700 px the page keeps four of
+// the ten and drops the rest, so a display:none label is not ink and does not make a gap.
+const measureAxis = () => {
+  const vis = Array.from(document.querySelectorAll(".sd-tick"))
+    .filter((el) => getComputedStyle(el).display !== "none")
+    .map((el) => ({ text: el.textContent.trim(), rect: el.getBoundingClientRect() }))
+    .sort((a, b) => a.rect.left - b.rect.left);
+  const gaps = [];
+  for (let i = 1; i < vis.length; i++) {
+    gaps.push({
+      left: vis[i - 1].text,
+      right: vis[i].text,
+      gap: vis[i].rect.left - vis[i - 1].rect.right,
+    });
+  }
+  return { labels: vis.map((v) => v.text), gaps };
+};
+
 // Read in the page: for every row, the bottom of its own text line, the top and bottom
 // of its bar, and the top of the next row's text line. Group heads count as a next
 // label: a bar sitting under the last row of a group is read against whatever text
@@ -117,6 +147,34 @@ for (const width of WIDTHS) {
   };
 }
 
+report.axis = {};
+let axisFailures = 0;
+
+for (const width of AXIS_WIDTHS) {
+  const ctx = await browser.newContext({
+    viewport: { width, height: 900 },
+    colorScheme: "light",
+    reducedMotion: "reduce",
+  });
+  const page = await ctx.newPage();
+  await page.goto(page_url);
+  await page.waitForLoadState("load");
+  const a = await page.evaluate(measureAxis);
+  await ctx.close();
+
+  const gaps = a.gaps.map((g) => ({ ...g, gap: round(g.gap) }));
+  const bad = gaps.filter((g) => g.gap < 0);
+  axisFailures += bad.length;
+  report.axis[width] = {
+    labels: a.labels,
+    shown: a.labels.length,
+    gaps: gaps.length,
+    colliding: bad.length,
+    tightest: gaps.length ? Math.min(...gaps.map((g) => g.gap)) : null,
+    detail: gaps,
+  };
+}
+
 await browser.close();
 
 function round(n) {
@@ -146,11 +204,30 @@ if (asJson) {
       );
     }
   }
+  console.log("\nTHE DATE AXIS — no tick label may overlap the next one along");
+  for (const [width, a] of Object.entries(report.axis)) {
+    const flag = a.colliding ? "!!" : "  ";
+    console.log(
+      `${flag} ${String(width).padStart(4)} px — ${String(a.shown).padStart(2)} labels shown, ` +
+        `${a.colliding} of ${a.gaps} gaps colliding · tightest ${a.tightest} px`
+    );
+    if (a.colliding) {
+      for (const g of a.detail.filter((x) => x.gap < 0)) {
+        console.log(`       ${g.left} over ${g.right} — ${g.gap} px`);
+      }
+    }
+  }
+
   console.log(
     failures === 0
       ? "\nPASS — every bar stands nearer its own label at both widths."
       : `\nFAIL — ${failures} row(s) whose bar stands nearer the label below it.`
   );
+  console.log(
+    axisFailures === 0
+      ? `PASS — no tick label overlaps its neighbour at any of ${AXIS_WIDTHS.length} widths.`
+      : `FAIL — ${axisFailures} colliding tick-label gap(s).`
+  );
 }
 
-process.exit(failures === 0 ? 0 : 1);
+process.exit(failures === 0 && axisFailures === 0 ? 0 : 1);

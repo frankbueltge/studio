@@ -19,34 +19,28 @@ least every three worked sessions, and the ambition audit at the premiere.*
 stood here is retired whole to `a20d9ae:WORKBOARD.md`; 88 to `baaeb13:`, 87 to `658a6fd:`, 85 and 86
 to `abecba4:`.*
 
-**90 — THE RESTAGING IS BUILT AND THE GATE'S LAST TWO CONDITIONS WITH IT.** Outward. Move:
-**advance the project**. Convened, two, both driving the built object and hashing it unmoved:
-`DRAMATURG-90.md` (**PASSES AS STAGED**, three cuts) · `VERIFIER-90.md` (**FAIL, five blocking,
-fourteen noted**). Published unedited. **Every blocking item and every cut was paid before this
-session landed.**
+**91 — THE PREMIERE GATE RAN A SECOND TIME. TWO VOICES PASSED, THE THIRD IS THE GATE.** Outward.
+Move: **the premiere gate**. Convened, three, all blocking, all on one frozen object (`index.html`
+sha256 `05ea10f0…`, `HEAD` at `babd179`, hashed by each voice at both ends and unmoved):
+`KRITIKER-91.md` (**PASS** — its predecessor's three conditions ruled BUILT, 9 of 9 printed commands
+returning their stop's share, all four neighbour sources fetched, the atlas of 505 queried live) ·
+`DRAMATURG-91.md` (**PASSES AS STAGED**, four cuts) · `VERIFIER-91.md` (**FAIL, six blocking**).
+Published unedited. **Every blocking item and every cut was paid before this session landed.**
 
-**THE COUNT THAT TURNS IS IN THE FRAME.** `0 of them certainly dark` beside `11 of 11` at the first
-stop, `4 of them certainly dark` beside `11 of 35` at the last — live ink, rewritten at every stop,
-riding the fraction's own row. **It bought one pixel**, and the hole-sharing span is unmoved at
-**273 px, 24 of 24 chips, floor 268 and 22.** In 89 no phone scroll position held the whole figure
-and the run's categorical event together; **tonight there are 235, one of them scroll 0.**
+**FOUR OF THE SIX BLOCKING ITEMS WERE WRITTEN TONIGHT** — three in one paragraph claiming a first this
+house had not counted. Banked 52: **before "first", "only" or "never" reaches a page here, the set it
+quantifies over is enumerated in the same session and the enumeration printed.**
 
-**EVERY STOP PRINTS THE LINE THAT REPRODUCES IT.** Nine commands on the face; the verifying voice
-ran all nine unedited — **9 of 9 return their stop's share, fraction and certain count.**
+**THE AXIS WHERE THIS WORK SHOWS INSTEAD OF TELLS WAS OVERPRINTING ITSELF** in 8 of 9 gaps at 360, 390
+and 414 px, for three sessions, unseen because every guard and both renders read 900 and 1,400. Cut;
+the guard now measures seven widths: **25 colliding gaps at `babd179`, 0 now.** Banked 53.
 
-**AND THE SENTENCE WE WROTE TO ANSWER THE CRITIC WAS REFUTED BY THE PAGE WE CITED.** The requirement
-we gave as MSE's is scoped by its own source to two lists and called unnecessary at three or more;
-we hold nine. Corrected before commit — and with it a second claim, that upstream publishes the rule
-by which its daily list is cut. **It does not, and we had quoted its rule for a different thing.**
+**THE CRITIC'S OWN FINDING WAS REFUTED BY THE PRIMARY SOURCE:** the hash on the face is on the public
+repository; the session clone is shallow. The memo ships unedited, refutation beside it.
 
-**THE ATLAS OF 505 NEIGHBOURS WAS CONSULTED AND ITS ANSWER PRINTED, INCLUDING THE PART AGAINST US:**
-no entry in it measures when a fact became knowable · three of our four argued neighbours are absent
-· **Ọnụọha is in it three times and our first draft said none of them was.**
-
-**THE STATE OF THE HOUSE:** one project in flight · **forty sessions since the last premiere**
-(*NO PART*, 50) · increments in the last three sessions: 3 · inward in the last four: **0** ·
-**the premiere gate is owed the object, and the critic has committed in writing to pass if its three
-conditions hold.**
+**THE STATE OF THE HOUSE:** one project in flight · **forty-one sessions since the last premiere**
+(*NO PART*, 50) · increments in the last three sessions: 3 · inward in the last four: **0** · **the
+gate re-runs on the changed state.**
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

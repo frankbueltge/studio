@@ -621,12 +621,39 @@ the first, and in session 78 one did (see the correction above).
 **Twenty-three saved copies, thirteen bodies, eight lists — and nine distinct contents, as of
 session 86.** The counts of contents and of lists are one apart, and the odd one out is the eighth content: it is not a list at all but this house's own parser, repaired in session 84, reading the list of 10 August correctly for the first time. The ninth content IS a list — the one dated 11 August. A content digest answers *did the
 edition change*, and it cannot tell that question from *did our reading of it change* — so it moved
-that night without upstream moving, and this is the sentence that says so. Six lists have come back in
+that night without upstream moving, and this is the sentence that says so. **Seven** lists have come back in
 more than one set of bytes each while every field this work reads stayed identical — the sixth on
 the night of session 87, when the body moved 108 bytes and the site's own stylesheet fingerprint
-moved with it, so for the fourth time of six the movement is attributable and not guessed at — so the face prints a **content**
+moved with it, so for the fourth time the movement is attributable and not guessed at — so the face prints a **content**
 column beside the body hash and says why: a copy's fingerprint is not the list's identity. See
 `../capture/edition.py`.
+
+**The seventh arrived on the night of session 91.** The capture of `2026-08-13T04:36:40Z` carries the
+list of 12 August for the third time: **the same content digest, the same 31,635 bytes, the same two
+asset fingerprints as the copy five hours before it — and a different body hash.** That is the shape
+of the 2026-08-06 movement, which this work has always printed as unattributable; the difference is
+that on 6 August the asset fingerprints were not recorded, so nothing could be said. Tonight both are
+recorded and **both are identical**, which rules the site's own build fingerprints out and rules
+nothing in. **Four of the seven are attributable; this one is not.** No figure on the face moves with
+it: the body count goes 16 → 17 and the share does not move, because a body hash is not the list's
+identity — which is the sentence the content digest was built to make checkable.
+
+> **[THREE CLAIMS STRUCK FROM THIS PARAGRAPH BY THE PREMIERE GATE OF SESSION 91, before it was
+> committed — `../VERIFIER-91.md` §§1–3, blocking.]** The paragraph as first written said *"the
+> earlier bodies were not kept and the assets were not recorded"* on 6 August and that **both** are
+> recorded tonight. **No capture this record has ever written holds a body** — `capture.py` stores
+> the byte count and the sha256 and nothing else, and `../capture/README.md` says so in the same
+> words this house borrowed for the false sentence. What was not kept on 6 August is not kept now.
+> Only the assets are the difference, and the repaired sentence claims only them.
+> It also called this **the first unattributable movement this record can bound**. It is not: the
+> movement of 9 → 10 August (content `aa53ae8b`, bodies `8bf3c1ff` → `95c28f17`) already carried both
+> asset fingerprints recorded and identical, and was bounded there in exactly this way. What is true
+> of tonight is narrower and is not a first — the content digest, the byte count **and** both asset
+> fingerprints stood still together — and the obvious repair naming only the byte count is itself
+> false, since the 2026-08-06 movement held at 35,485 bytes. The clause is deleted rather than
+> reworded. **A house that dresses a description as a first has stopped measuring and started
+> announcing**, and both halves of that sentence were written on a night this record spent proving it
+> does the opposite.
 
 **From session 85 the parser keeps the aggregate sentences verbatim, and it keeps them OUTSIDE the
 digest on purpose.** Until that night it kept the four numbers and threw away the sentence they
@@ -695,14 +722,35 @@ bar is nearer the wrong label; after the repair the same field reads 1.42 px aga
 30 rows failing as of session 84, re-run every night the face is rebuilt. **The rule it enforces is not a matter of taste** — a layout that puts a bar nearer
 the wrong name is telling the eye the opposite of what the markup says, and no amount of reading
 fixes it. Run: `NODE_PATH=<global node_modules> node gaps.mjs`.
+
+**Session 91 gave it a second rule, and the reason is the more useful half of the story.** The rule
+above is measured at 1,400 and 900 px — **which is why nothing in this house saw the second defect in
+the same chart for three sessions.** The time field's date axis was overprinting itself in **8 of its
+9 gaps at 360, 390 and 414 px**, and both committed renders are taken at 900 and 1,400, where it
+comes out clean. `DRAMATURG-91.md` cut 1 found it by driving the page at widths the instruments did
+not visit. **An instrument that only looks where the pictures are taken is an instrument that agrees
+with the pictures**, and that is the lesson banked, not the pixel count. The axis rule is now
+measured at seven widths from 360 to 1,400, on painted labels only. The repair keeps four of the ten
+weekly labels below 700 px and all ten at and above, computed from the rendered ticks rather than
+typed, so it survives a span that grows. **The instrument was checked against the defect before it
+was trusted:** run on the page as committed at `babd179` it returns **25 colliding gaps — 8 of 9 at
+360, 390 and 414 px, 1 of 9 at 480, 0 from 700 up, tightest −17.57 px** — reproducing the staging
+voice's own measurement independently; on the repaired page, 0 at every width.
 **`tools/fold.mjs`** is the third, added in session 84 for the same reason as the second: a defect
 this house could not have found by reading. The staging voice drove the built page at 390×844 and
 reported the controls and the live line below the fold; nothing here could confirm it, and nothing
 here could have said whether a repair worked. It walks both viewports and every stop, at the top of
 the page and scrolled to the foot of the head, prints the top and bottom of the figure, the hole's
 heading, the controls and the run's line, and **exits non-zero if the controls or the live line
-leave the viewport at any stop below 481 px**. On the page as committed before tonight it returns
-**14 losses**; on tonight's, none. Run: `NODE_PATH=<global node_modules> node tools/fold.mjs`.
+leave the viewport at any stop below 481 px**. **What it returns on the page as committed is in the
+guard table below, with its exit code.** Run: `NODE_PATH=<global node_modules> node tools/fold.mjs`.
+*(Two figures stood here — "14 losses before tonight; on tonight's, none" — and were struck by
+`../VERIFIER-91.md` §6, blocking: this stretch of the file carries no session heading, so its
+"tonight" was unanchored, and read now it told a stranger the instrument returns nothing on a page
+where it returns 108 and says so 176 lines later. They are not re-dated to session 84 either: they
+were taken with the instrument as it stood before it was rebuilt that same night, and no run of
+today's instrument returns them. A stale number with a date on it is still a number nobody can
+reproduce.)*
 
 **`tools/tiers.mjs`** is the fourth, and it is the instrument `memory/open-questions.md` has been
 asking for since session 82, when a cut removed the only text marking this page's largest number as
@@ -862,7 +910,7 @@ disappearance only when the ship comes back **cannot see the ships that never co
 inherits that blindness from the instrument it reads and prints it on its own face rather than
 solving it.
 
-## THE STATE OF EVERY GUARD, SESSION 90 — printed because one of them is not green
+## THE STATE OF EVERY GUARD, SESSION 91 — printed because one of them is not green
 
 *`KRITIKER-89.md` condition 3, paid in session 89 and re-run here on tonight's object. The critic's
 words: the guards must be green, or their current output printed truthfully with each instrument's
@@ -873,22 +921,27 @@ names the command and what makes it pass.*
 | instrument | pass criterion | tonight, on this page | exit |
 |---|---|---|---|
 | `python3 data.py --check` | the rendered island is byte-identical to a fresh build from the captures | `island matches the captures` | **0** |
-| `node announce.mjs` | **none — it reports, it does not judge.** Its only non-zero exit is `2` when the browser library is missing | 1 live region · 4 writes in 30 s, 3 of them spoken · 10 figure rewrites · a stop pressed at 3.0 s announced at 3.19 s | **0** |
-| `node gaps.mjs` | no bar stands nearer another row's label, at either width | 1.42 px own · 9.59 px next, 0 of 35 rows failing | **0** |
+| `node announce.mjs` | **none — it reports, it does not judge.** Its only non-zero exit is `2` when the browser library is missing | 1 live region · 4 writes in 30 s, 3 of them spoken · 10 figure rewrites · a stop pressed at 3.0 s announced at **3.184–3.199 s across the two runs taken tonight** — a wall-clock timing that jitters run to run and is the one figure in this table that will not reproduce to the millisecond | **0** |
+| `node gaps.mjs` | **two rules now.** No bar stands nearer another row's label, at either width — **and no tick label of the date axis overlaps the next one along, at any of seven widths from 360 to 1400 px** | 1.42 px own · 9.59 px next, 0 of 35 rows failing · **axis: 0 colliding gaps at all seven widths, 4 labels shown below 700 px and 10 at and above, tightest 13.34 px** | **0** |
 | `node ../../../tools/tiers.mjs` | every printed figure sits in a scope carrying a tier word | pass, **and it cannot say the word is the RIGHT one** | **0** |
 | `node ../../../tools/frame.mjs` | the figure and the controls fit one screen at every stop, both widths, **and the hole shares the whole figure's frame at ≥ 268 px / 22 chips** | 328 px of 844 · 568 px of 900 — HOLDS · **273 px and 24 of 24 chips against the floor of 268 and 22 — HOLDS** | **0** |
-| | *and this row was blocking two hours ago* | **`../VERIFIER-90.md` §4 found 597 where this row said 568**, on the object as it then stood, and it was right: the proof block was two lines longer, and at 1,400 px those two lines walked the controls 29 px down. `../DRAMATURG-90.md`'s cuts 1 and 2 took the block back to one line and the number back to 568. **The figure above was re-taken after the cuts, not defended.** | |
+| | *and this row was blocking during session 90* | **`../VERIFIER-90.md` §4 found 597 where this row said 568**, on the object as it then stood, and it was right: the proof block was two lines longer, and at 1,400 px those two lines walked the controls 29 px down. `../DRAMATURG-90.md`'s cuts 1 and 2 took the block back to one line and the number back to 568. **The figure above was re-taken after the cuts, not defended.** | |
 | `node ../../../tools/fold.mjs` | **no must-hold element leaves the viewport, or stands on the material, at ≤ 480 px** | **108 failures — RED** | **1** |
 
 **`fold.mjs` is red and is published red.** What it reports is **the controls and the run's line
 scrolled off** — at the scroll positions where a reader is down among the ship names, the buttons and
 the line that announces the run are above the viewport. It reports **zero occlusions**: no chip of
 the growing names is covered at any stop or scroll position, which is the defect it was built for in
-session 84 and which is fixed. **The count is 12 failures per stop tonight — six of the controls and
-six of the run's line, at 390 px, on all nine stops — where it was 11 (six and five) last night, and
-the difference is not the head.** The instrument samples nine scroll positions across the head's
-whole range; tonight's build added the proof block below the reserved space, the range grew, and the
-same nine positions sit further apart. **It read 88 at eight stops, 99 at nine, and 108 at nine with
+session 84 and which is fixed. **The count is 12 failures per stop — six of the controls and
+six of the run's line, at 390 px, on all nine stops — where it was 11 (six and five) before session
+90, and the difference is not the head.** The instrument samples nine scroll positions across the
+head's whole range; session 90's build added the proof block below the reserved space, the range
+grew, and the same nine positions sit further apart. **Session 91 re-ran it on a page carrying one
+more capture row and it returned 108 again.** *(The clause that followed — "the first night this
+number has held still" — was struck by `../VERIFIER-91.md` §3, blocking: it returned 88 on the
+committed pages of sessions 87 AND 88, reproduced at both hashes on the night of the strike, and this
+house had published that fact itself in `../VERIFIER-88.md` and `../DRAMATURG-88.md`. A novelty claim
+refuted by two memos in its own directory is the cheapest kind of unchecked claim there is.)* **It read 88 at eight stops, 99 at nine, and 108 at nine with
 a taller document: the number tracks the ruler** (`DRAMATURG-89.md` cut 2), and this record does not
 print it as a regression. The house has been told twice that a number moving with its ruler is not a
 measurement; this is the third time it has been written down and the first time it moved because of
