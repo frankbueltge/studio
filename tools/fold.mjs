@@ -54,7 +54,11 @@ const WATCHED = [
 ];
 
 const browser = await chromium.launch();
-let failures = 0;
+// One entry per PLACE a must-hold element leaves the viewport — width x height, element,
+// scroll position — with the number of stops it fails at as its value. See cut 7's note
+// below: the old count multiplied this set by the number of stops, so it grew on the nights
+// this record grew and could never go green or red for a reason of staging.
+const places = new Map();
 
 for (const vp of VIEWPORTS) {
   const ctx = await browser.newContext({
@@ -120,18 +124,40 @@ for (const vp of VIEWPORTS) {
         .join(" · ");
       const occ = seen.covered ? `  ✗COVERS ${seen.covered} chip(s)` : "";
       console.log(`  y=${String(y).padStart(4)} stop ${i}: ${line}${occ}`);
+      // THE READING IS A SET, NOT A PRODUCT — `DRAMATURG-94` cut 7. This counted one failure
+      // per stop, so the number was 13 x stops: 120 at ten lists, 143 at eleven, 156 at
+      // twelve, rising by thirteen every night this work succeeds at what it does and
+      // without one line of layout moving. An instrument whose author has written down that
+      // its ruler is wrong, and publishes the reading anyway, has stopped being a guard. The
+      // finding is a PLACE — this element, at this scroll position, at this width — and a
+      // place found at eleven stops is one place. The stops it fails at are printed beside
+      // it, so nothing is hidden by the deduplication.
       for (const s of seen.out) {
-        if (s.must && !s.inside && vp.w <= 480) failures++;
+        if (s.must && !s.inside && vp.w <= 480) {
+          const key = `${vp.w}×${vp.h} · ${s.label} · y=${y}`;
+          places.set(key, (places.get(key) || 0) + 1);
+        }
       }
-      if (seen.covered && vp.w <= 480) failures += seen.covered;
+      if (seen.covered && vp.w <= 480) {
+        const key = `${vp.w}×${vp.h} · covers material · y=${y}`;
+        places.set(key, (places.get(key) || 0) + seen.covered);
+      }
     }
   }
   await ctx.close();
 }
 
 await browser.close();
-if (failures) {
-  console.log(`\nFOLD: ${failures} failure(s) — a must-hold element off the viewport, or standing on the material, at ≤ 480 px`);
+if (places.size) {
+  console.log("\nWHERE IT FAILS — one line per place, with the stops it fails at:");
+  for (const [k, n] of [...places.entries()].sort()) {
+    console.log(`  ${k}  —  at ${n} stop(s)`);
+  }
+  const sightings = [...places.values()].reduce((a, b) => a + b, 0);
+  console.log(
+    `\nFOLD: ${places.size} place(s) — a must-hold element off the viewport, or standing on ` +
+    `the material, at ≤ 480 px. ${sightings} sighting(s) across the stops, which is the ` +
+    `number that used to be printed here and moved with the length of the record.`);
   process.exit(1);
 }
 console.log("\nFOLD: the controls and the run's line are inside the viewport at every stop");

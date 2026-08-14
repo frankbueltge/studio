@@ -48,13 +48,23 @@ const FILE = pathToFileURL(path.resolve("index.html")).href;
 const CLICK_AT_MS = 3000;
 // HOW LONG TO WATCH IS NOT TYPED HERE — SESSION 94. It was `30000`, set when the run was
 // shorter, and every list this work saves makes the run one beat longer. On the night the
-// eleventh list arrived the run ended at 30,175 ms: the closing sentence, the one that
-// speaks the live figure, landed 175 ms after this instrument had stopped listening, and
-// this file reported it as not spoken. That is the same defect as the `head -6` that cut
-// the band's condition off the face two sessions earlier (banked 56) — a constant a hand
-// has to advance, wearing a variable's name. The window is read from the page's own run
-// (`window.__sdRun`) and a margin is added to it; MARGIN_MS is the only figure left, and it
-// is a margin and not a duration.
+// eleventh list arrived the run's closing sentence — the one that speaks the live figure —
+// was scheduled at 30,118 ms, 118 ms past that constant, and this file reported it as not
+// spoken. (The observed instant is jitter around the schedule: four runs on the frozen
+// object gave 30,166 to 30,201 ms. This comment printed "175 ms" for one session, a figure
+// no run returns; struck by `VERIFIER-94` blocking 2, which is this file's own subject
+// committed by hand in three places.) That is the same defect as the `head -6` that cut the
+// band's condition off the face two sessions earlier (banked 56) — a constant a hand has to
+// advance, wearing a variable's name. The window is read from the page's own run
+// (`window.__sdRun`) and a margin is added to it.
+//
+// AND THE INSTRUMENT CAN GO RED ABOUT THE RUN AGAIN — `DRAMATURG-94` cut 2, which is the
+// cut that returned this work. That stale `30000` was, by accident, the only assertion
+// anywhere in this house that the run must fit inside thirty seconds; deriving the window
+// from the run turned the alarm into a gauge, and a gauge exits 0 in 2027 while patiently
+// watching a four-minute run. So the page publishes the CEILING it is budgeted against and
+// this file exits 5 when the run exceeds it. MARGIN_MS is the one duration left here, and
+// it is a margin on a measurement, not a length this work promises anyone.
 const MARGIN_MS = 2000;
 const watchMs = (run) => run.done_ms + MARGIN_MS;
 
@@ -133,6 +143,39 @@ const browser = await chromium.launch();
   console.log(
     `RUN, AS THE PAGE PUBLISHES IT  ${RUN.stops} stops · first dwell ${RUN.first_dwell_ms} ms · ` +
     `beat ${RUN.beat_ms} ms · last state ${RUN.ends_ms} ms · closing sentence ${RUN.done_ms} ms`);
+  console.log(
+    `THE CEILING ............ ${RUN.ceiling_ms} ms · the run is ${RUN.done_ms} ms · ` +
+    `${RUN.ceiling_ms - RUN.done_ms} ms of room · beats ${RUN.beats_ms.join(", ")} ` +
+    `(protected: ${RUN.protected_beats.join(", ")})`);
+  // The one thing in this work that may fail on a night when nothing was edited: the run
+  // outgrowing the length the house published as the one it would defend.
+  if (RUN.done_ms > RUN.ceiling_ms) {
+    console.error(
+      `THE RUN IS LONGER THAN THIS WORK SAYS IT MAY BE: ${RUN.done_ms} ms against a ` +
+      `published ceiling of ${RUN.ceiling_ms} ms. The beats cannot be shortened further ` +
+      `without cutting the protected ones, which is a staging decision and not a repair.`);
+    process.exit(5);
+  }
+  // THE SENTENCE AGAINST THE RUN — `DRAMATURG-94` cut 3's test. The page promises a visitor
+  // a length in words, in `run_states.waiting`, built by the builder; the run is the beats.
+  // Nothing before tonight compared them, which is how one beat could have been changed in
+  // one file and left the face promising the other number, silently, with every guard green.
+  const TENS = ["", "", "twenty", "thirty", "forty", "fifty"];
+  const ONES = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+  const TEENS = { 10: "ten", 11: "eleven", 12: "twelve", 13: "thirteen", 14: "fourteen",
+    15: "fifteen", 16: "sixteen", 17: "seventeen", 18: "eighteen", 19: "nineteen" };
+  const spellOut = (n) => n < 10 ? ONES[n] : n < 20 ? TEENS[n]
+    : TENS[Math.floor(n / 10)] + (n % 10 ? "-" + ONES[n % 10] : "");
+  const promised = spellOut(Math.round(RUN.done_ms / 1000));
+  const waiting = await page.evaluate(() =>
+    JSON.parse(document.getElementById("sd-data").textContent).arrive.run_states.waiting);
+  if (!waiting.includes(`about ${promised} seconds`)) {
+    console.error(
+      `THE SENTENCE AND THE RUN DISAGREE: the run is ${RUN.done_ms} ms, so the page owes a ` +
+      `visitor "about ${promised} seconds", and it says:\n  ${waiting}`);
+    process.exit(6);
+  }
+  console.log(`THE PROMISE ............ "about ${promised} seconds", and the run is ${RUN.done_ms} ms — they agree`);
   console.log(`WATCHED ................ ${WATCH_MS} ms (the run + ${MARGIN_MS} ms, derived, never typed)`);
   await page.waitForTimeout(WATCH_MS);
   const log = await page.evaluate(() => window.__log);

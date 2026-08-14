@@ -203,7 +203,15 @@ for (const vp of VIEWPORTS) {
             const r = c.getBoundingClientRect();
             return r.top >= 0 && r.bottom <= vh;
           }).length;
-          if (px > best.px) best = { px, chips: seen, scrollY: window.scrollY };
+          // TIES GO TO CHIPS — `DRAMATURG-94` cut 6. This read `px > best.px` and kept the
+          // FIRST position of a tie, against the comment eight lines above promising the
+          // chip-maximising one. At 1400x600 the tie band is 132 positions wide and the two
+          // rules disagree by four chips (31 of 35 against 35 of 35); at 390x844 they agreed
+          // tonight only because the tie band there happens to be one pixel wide. A floor
+          // decided by which position a loop reached first is not a floor.
+          if (px > best.px || (px === best.px && seen > best.chips)) {
+            best = { px, chips: seen, scrollY: window.scrollY };
+          }
         }
         window.scrollTo(0, y0);
         return best.px < 0 ? null : { ...best, of: chips.length };

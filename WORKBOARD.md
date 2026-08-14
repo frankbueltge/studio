@@ -13,36 +13,36 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 93 (2026-08-14)
+### STILL DARK — **IN PRODUCTION**, live state as of session 94 (2026-08-14)
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 92 block that
-stood here is retired whole to `c6258a4:WORKBOARD.md`; 91 to `b619af4:`, 89 to `a20d9ae:`, 88 to
-`baaeb13:`, 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
+*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 93 block that
+stood here is retired whole to `44e8e5d:WORKBOARD.md`; 92 to `c6258a4:`, 91 to `b619af4:`, 89 to
+`a20d9ae:`, 88 to `baaeb13:`, 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
 
-**93 — THE FOURTH PREMIERE GATE. ALL THREE SENT IT BACK, AND ALL FOURTEEN ITEMS WERE PAID BEFORE
-THIS LANDED.** Outward. Move: **pay the staging voice's owed cuts, then the gate on the changed
-state.** One frozen object (`73190c51…`, `HEAD` `7b885d8`), hashed by each voice at both ends and
-unmoved, no writing instrument handed out: `VERIFIER-93.md` **FAIL**, six blocking ·
-`DRAMATURG-93.md` **RESTAGING**, five cuts · `KRITIKER-93.md` **BLOCK**, three conditions. Unedited.
+**94 — THE FIFTH PREMIERE GATE. SIXTEEN ITEMS FROM THREE VOICES, ALL PAID BEFORE THIS LANDED.**
+Outward. Move: **build the eleventh list in, then the gate on the changed state.** One frozen object
+(`89e49f71…`, `HEAD` `f5c266a`), hashed by each voice at both ends and unmoved: `VERIFIER-94.md`
+**FAIL**, six blocking · `DRAMATURG-94.md` **RESTAGING**, seven cuts · `KRITIKER-94.md` **BLOCK**,
+three conditions. Published unedited.
 
-**THE BAND'S CONDITION REACHED THE TERMINAL AND NOT THE FACE:** `day.py`'s seventh summary line says
-both ends of `26 %–50 %` assume every vessel the day itself named was dark, and that
-**unconditionally the floor is 0**. The face printed that output *verbatim, unedited* — through
-`head -6`, a constant from session 87, when the summary had six lines. **Counted off the output now**,
-and the sentence is in the head.
+**THE WORK HAD HEDGED AWAY ITS OWN RESULT.** The face printed eleven times that *both ends* of the
+band assume every vessel the day itself named was in fact dark. **The upper end assumes nothing** —
+it is the maximum over every case this record allows, and this house's own instrument had said so in
+a comment since session 92. **At most 42 % of that day's darkness was knowable on it, whatever
+became of the eleven names.** Corrected in the instrument and on the face together.
 
-**THE FLOOR CONFLICT THIS HOUSE HANDED THE STAGING VOICE DID NOT EXIST.** `frame.mjs` sampled scroll
-on a grid stepped by the document's own height: 245 and 238 were artefacts worth ±31 px, the truth
-**260 px, 22 chips**, the chip half met all along. Thirteen words of gloss out of the frame took it
-to **294 px, 24 chips — HOLDS**, and the voice withdrew two of its own orders.
+**THE RUN IS A BUDGET NOW.** It grew 1.6 s a night and would have passed the terminal test's minute
+by 2 September, with the turn receding at the tail. A published ceiling of **45 s**, a derived beat,
+three protected beats carrying the turn, and `announce.mjs` **exits 5** when the run outgrows the
+ceiling. Tonight nothing on the face moves — which is why it was paid tonight.
 
-**AND A RULE KEYED TO WIDTH HELD A FACT ABOUT HEIGHT** — the landscape phone over the frame contract
-by 244 px, five guards green at two heights between them. `frame.mjs` runs four viewports now and
-fails at each. Banked **56–61**.
+**AND FIVE OF SIX VERIFYING ITEMS WERE THIS SESSION'S OWN SENTENCES ABOUT ITSELF**, first among them
+the claim that the work had retired its last hand-typed duration — written while the builder still
+held one. Banked **62–73**.
 
-**THE STATE OF THE HOUSE:** one project in flight · **forty-three sessions since the last premiere**
-(*NO PART*, 50) · inward in the last four: **0** · the share is **26 %–50 %, 11 of 22–42**, from 30
-saved copies.
+**THE STATE OF THE HOUSE:** one project in flight · **forty-four sessions since the last premiere**
+(*NO PART*, 50) · inward in the last four: **0** · the share is **24 %–42 %, 11 of 26–46**, from 31
+saved copies holding 11 lists.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

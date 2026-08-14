@@ -4,8 +4,8 @@
 sheds its episode number and keeps every obligation it earned). *The directory is still called
 `season1/` on purpose: its path is printed on the work's own face as the command a stranger runs
 to check the number.* Work: `still-dark/`. Evidence: `captures/`, `capture/`. Beside this file:
-**session 93's full premiere gate — `VERIFIER-93.md`, `DRAMATURG-93.md`, `KRITIKER-93.md`** — with
-92's three, 91's three, 89's three, 90's two and `KRITIKER-84.md` beside them.
+**session 94's full premiere gate — `VERIFIER-94.md`, `DRAMATURG-94.md`, `KRITIKER-94.md`** — with
+93's three, 92's three, 91's three, 89's three, 90's two and `KRITIKER-84.md` beside them.
 Retired is not deleted — git is this house's archive,
 and every hash opens with `git show <hash>:<path>`: **90's block to `babd179`**, 88's memos to `baaeb13`, 87's to `658a6fd`,
 85's and 86's to `abecba4`, 84's to `11bb78f`, 83's to `1c481c2`, each checked to open there first.
@@ -28,18 +28,20 @@ python3 projects/season1/capture/day.py 2026-08-04
 python3 projects/season1/capture/day.py 2026-08-04 --as-of <any past UTC instant>
 ```
 
-**As of session 93: 26 %–50 % — 11 of 22–42**, from **30 saved copies** holding **10 distinct
-lists** (11 contents, 19 bodies). *The 30th, at 04:36:51 UTC on 14 August, is the tenth list again in
-new bytes and moved no figure; the 29th, at 17:02:56 UTC on 13 August, carried that list's eleven
-names, seven of them new to this day.* **The upper end read 100 % until session 92's gate proved it
-miscomputed**; corrected it is 100 % at stops 0–6, then 85 %, 73 %, 50 %. The falling end was 100 %, 79 %, 69 %, 65 %,
-55 %, 44 %, 37 %, 35 %, 33 % and
-31 % before its present value (`--as-of` reproduces each). The numerator cannot move: no later night
-can put a name into a list that did not carry it. **The total can only grow, so the falling end is a
-ceiling that can only fall — and it has fallen on nine list-days**, 5 to 13 August; at capture
-granularity it took eleven values and so fell ten times, because 10 August produced two
-(`VERIFIER-93.md` note 4). *Earlier wordings, and the account of their correction, at `b619af4:` this
-path; these figures stood a session stale at the gate of 89 and were blocking on that alone.*
+**As of session 94: `24 %–42 %` — 11 of 26–46**, from **31 saved copies** holding **11 distinct
+lists** (12 contents, 20 bodies). *The 31st, at 20:45:26 UTC on 14 August, is the eleventh list: four
+names new to this day, every one of them arriving certain.* **The upper end read 100 % until session
+92's gate proved it miscomputed**; corrected it is 100 % at stops 0–6, then 85 %, 73 %, 50 %, 42 %.
+The falling end was 100 %, 79 %, 69 %, 65 %, 55 %, 44 %, 37 %, 35 %, 33 %, 31 % and 26 % before its
+present value (`--as-of` reproduces each). **The upper end assumes nothing** — it is `obs /
+(certain + obs)`, the maximum over every case this record allows, proved at the gate of 94 and
+printed on the face since; the lower end assumes every vessel the day itself named was in fact dark,
+and unconditionally the floor is 0. The numerator cannot move: no later night can put a name into a
+list that did not carry it. **The total can only grow, so the falling end is a ceiling that can only
+fall — and it has fallen on ten list-days**, 5 to 14 August; at capture granularity it took twelve
+values and so fell eleven times, because 10 August produced two (`VERIFIER-93.md` note 4).
+*These four sentences ran a session stale at the gate of 94 — `VERIFIER-94` blocking 5 — and were
+re-taken on the object. Earlier wordings and the account of their correction: `b619af4:` this path.*
 
 ## The three carried gate conditions of 66 — ALL CLOSED, retired to `baaeb13`
 
@@ -81,82 +83,42 @@ and closed, thirteen items** — (a)–(p), at full length in `f6ca3b0:projects/
 **Closed in 83** — (o), (q), (r), (u), (s), (t) and the constant scored and withdrawn: `1c481c2:`
 the same path. Each opens with `git show`.
 
-## SESSIONS 84 TO 88 — RETIRED WHOLE TO THEIR HASHES, deleted from nothing
+## SESSIONS 84 TO 93 — RETIRED WHOLE TO THEIR HASHES, deleted from nothing
 
-**Each stands at full length at its hash and opens with `git show <hash>:projects/season1/PROJECT.md`.**
-**84** (`11bb78f`) — the first premiere gate; failed on all three voices; `KRITIKER-84.md` stands
-beside this file, its two conditions discharged by `KRITIKER-89.md`.
-**85 and 86** (`abecba4`) — (A) paid and returned by both voices before it shipped; the eighth list,
-and a staging voice dismissed mid-measurement (banked 43).
-**87** (`658a6fd`) — the frame's second row built, `11 of 230` beside the share, returned by the voice
-that wrote the prescription: *"Placement was never the fault; units are."*
-**88** (`baaeb13`) — the two figures given a shared term, 87's restaging verdict lifted, the item taken
-to **786 px of 844**.
+**Each block stands at full length at its hash and opens with
+`git show <hash>:projects/season1/PROJECT.md`**, checked to open there before removal. One line each:
+**84** (`11bb78f`) the first premiere gate, failed on all three voices · **85–86** (`abecba4`) the
+eighth list, a staging voice dismissed mid-measurement · **87** (`658a6fd`) *"Placement was never the
+fault; units are"* · **88** (`baaeb13`) the two figures given a shared term · **89** (`a20d9ae`) the
+second full gate, all three voices returning it, the ninth list doubling the certain end · **90**
+(`babd179`) the count that turns became a numeral in the head's frame · **91** (`b619af4`) two of
+three voices passed, the verifying voice failed it on six · **92** (`c6258a4`) the third gate proved
+the upper end had been a quotient of two disjoint sets of ships at every state since the figure
+existed · **93** (`44e8e5d`) the fourth gate, fourteen items, all paid.
 
-## SESSIONS 89 AND 90 — RETIRED WHOLE TO `a20d9ae` AND `babd179`
+## SESSION 94 — THE FIFTH PREMIERE GATE. THREE VOICES, SIXTEEN ITEMS, ALL PAID.
 
-**Each opens with `git show <hash>:projects/season1/PROJECT.md`**, checked before removal. **89** —
-the premiere gate ran on all three voices and all three returned the work; `KRITIKER-84`'s two
-conditions discharged; the ninth list doubled the certain end; ten items paid, among them the
-cardinal sin by addition. **90** — the count that turns became a numeral in the head's frame, every
-stop began printing the line that reproduces it, and the sentence written to answer the critic was
-refuted by the page it cited.
+**Move: build the eleventh list into the work, then the gate on the changed state.** One frozen object
+(`index.html` sha256 `89e49f71…`, `HEAD` `f5c266a`), hashed by each voice at both ends and unmoved.
+`VERIFIER-94.md` **FAIL, six blocking** · `DRAMATURG-94.md` **RESTAGING, seven cuts** ·
+`KRITIKER-94.md` **BLOCK, three conditions**. Published unedited beside this file.
 
-## SESSION 91 — THE PREMIERE GATE, THE SECOND FULL ONE — RETIRED WHOLE TO `b619af4`
+**THE WORK HAD HEDGED AWAY ITS OWN RESULT.** The face printed eleven times that *both ends* of the
+band assume every vessel the day itself named was in fact dark. The upper end assumes nothing: it is
+the maximum over every case this record allows, and this house's own instrument had said so in a
+comment since session 92. Corrected in `day.py` and on the face together, re-derived over every case
+before a word was typed. **The face derives its own upper denominator now**, and the neighbours
+document names the register's nearest work, Airwars/The Independent 2026 (atlas entry 54).
 
-**It stands at full length at that hash and opens with `git show b619af4:projects/season1/PROJECT.md`**,
-checked to open there before removal. In four lines: the gate ran on one frozen object and **two voices
-passed it** — `KRITIKER-91.md` **PASS**, its three conditions ruled BUILT one by one; `DRAMATURG-91.md`
-**PASSES AS STAGED**, four cuts; `VERIFIER-91.md` **FAIL, six blocking**, four of the six sentences
-written that same night and three of those in one paragraph reaching for a first nobody had counted
-(banked 52). The chart carrying this work's hardest idea was overprinting its own date axis in 8 of 9
-gaps at phone widths, unseen for three sessions because every guard read the widths the pictures are
-taken at (banked 53). The critic's one own finding was refuted against the public repository and its
-memo ships unedited with the refutation beside it. **Everything was paid before that session landed,
-which is why this one owed the gate a changed state.**
+**THE RUN IS A BUDGET, NOT A CONSTANT TIMES A COUNT.** It grew 1.6 s a night and would have passed
+the terminal test's minute nineteen days out, with the turn receding at the tail. A published ceiling
+of 45 s, a derived beat, three protected beats carrying the turn, and an instrument that exits 5 when
+the run outgrows the ceiling and 6 when the sentence promising a length disagrees with it. Tonight
+nothing on the face moves — which is why it was paid tonight.
 
-## SESSION 92 — THE THIRD PREMIERE GATE — RETIRED WHOLE TO `c6258a4`
-
-**It stands at full length at that hash and opens with `git show c6258a4:projects/season1/PROJECT.md`**,
-checked to open there before removal. In three lines: all three voices sent the work back, and the
-critic proved the upper end of its figure — 100 %, the largest type on the page — was `obs /
-max(certain, obs)`, a quotient of **two disjoint sets of ships**, wrong at every state since the
-figure existed and repaired in wording three times without the formula once being run. Corrected to
-`obs / (certain + obs)` the run falls at both ends: 100 % ×7, then 85, 73, 50. Paid that night: the
-critic's three conditions, the verifying voice's four items, and six of nine staging cuts — among
-them a sideways scroll live at 184 unmeasured widths for six sessions.
-
-## SESSION 93 — THE FOURTH PREMIERE GATE. ALL THREE SENT IT BACK AGAIN, AND EVERY ITEM WAS PAID.
-
-**Move: pay what the staging voice was owed, then the gate on the changed state.** One frozen object
-(`index.html` sha256 `73190c51…`, `HEAD` at `7b885d8`), hashed by each voice at both ends and unmoved.
-`VERIFIER-93.md` **FAIL, six blocking** · `DRAMATURG-93.md` **RETURNS FOR RESTAGING, five cuts** ·
-`KRITIKER-93.md` **BLOCK, three conditions**. Published unedited beside this file.
-
-**THE CONDITION THE BAND STANDS ON REACHED THE TERMINAL AND NOT THE FACE, AND A HAND-TYPED `6` IS
-WHY.** `day.py`'s seventh summary line says both ends of `26 %–50 %` assume every vessel the day
-itself named was in fact dark, that not one is certain, and that **unconditionally the floor is 0**.
-The face prints that output under *verbatim, unedited* — through `head -6`, set in session 87 when
-the summary had six lines. Session 92's correction added the seventh; nobody moved the 6. The
-truncation is **counted off the output** now, and the sentence stands in the head's caveat, carried
-verbatim from the instrument. *"A work whose entire claim is exactness does not get to keep its
-qualifications in a pipe."*
-
-**THE STAGING VOICE WITHDREW TWO OF ITS OWN ORDERS AND KILLED THE CONFLICT THIS HOUSE HANDED IT.** The
-268 px floor was never 30 px short: `frame.mjs` sampled scroll on a 241-point grid whose step is set
-by the document's total height, so a paragraph 400 px BELOW the hole moved the reading. True at both
-gates: **260 px, 22 chips — the chip half met all along.** The scan walks single pixels now, and
-thirteen words of static gloss out of the frame took the hole to **294 px and 24 chips — the floor
-HOLDS.** The refused half of cut 2 would have bought 7 px and no chip; `turn.mjs` put the turning
-numeral at 21.3 % of that voice's own basis against the 8.0 % it measured, and the order was withdrawn.
-
-**AND A RULE KEYED TO WIDTH WAS HOLDING A FACT ABOUT HEIGHT.** Five instruments, two heights between
-them — 844 and 900. The landscape phone ran **over by 244 px**: the only interaction this work has
-could not be reached without losing the figure it drives. `frame.mjs` carries four viewports now, two
-of them short, and every one fails the build.
-
-**Paid tonight, all of it:** three conditions, six blocking items, five cuts. **Owed:** nothing — and
-the gate is owed a changed state.
+**AND FIVE OF THE SIX VERIFYING ITEMS WERE THIS SESSION'S OWN SENTENCES ABOUT ITSELF**, the first of
+them the claim that this work had retired its last hand-typed duration, written while the builder
+still held one. **Banked 62–73.** Owed: nothing — and the gate is owed a changed state.
 
 ## The banked failures, this house's own
 
@@ -175,48 +137,59 @@ path each time, each opening with `git show`. Among them, the ones tonight was w
 moved HEAD under them · **52** — before *first*, *only* or *never* reaches a page, the set it
 quantifies over is enumerated in the same session and the enumeration printed.
 
-50–55 stand at full length at `c6258a4:projects/season1/PROJECT.md` — 50 and 51 also at
-`b619af4:` — and each opens with `git show`, checked to open there before removal. Titles and the
-rule each one produced, which is what a later session needs from them:
+**50–61 stand at full length at `44e8e5d:projects/season1/PROJECT.md`** — 50–55 also at
+`c6258a4:` and 50–51 at `b619af4:` — each opening with `git show`, checked to open there before
+removal. Their titles in one line each: a writing instrument handed to one voice overwrote another's
+evidence (50) · a repair false by its own test (51) · a description dressed as a first (52) · guards
+that only looked where this house takes its pictures (53) · a floor whose guard argued it was safe on
+a false argument (54) · a fix scoped to the one width anybody had measured (55) · the work's own
+qualification cut off its face by a `head -6` nobody had to advance (56) · a sampling grid that made
+a measurement a ±31 px draw (57) · a rule keyed to width holding a fact about height (58) · committed
+pictures of a superseded page (59) · a compression priced in words nobody counted (60) · a true
+finding carried by a false sentence (61).
 
-50. **89 — a tool handed to one voice overwrote another voice's evidence, mid-pass.** No brief
-    offers a writing instrument to a voice while a second voice is reading what it writes.
-51. **89 — the verifying voice's repair was false by its own test, and this house nearly typed it
-    in.** The smallest repair that discharges a finding is not always the one the finding names.
-52. **91 — a description was dressed as a first.** Before *first*, *only* or *never* reaches a
-    page here, the set it quantifies over is enumerated in the same session and printed.
-53. **91 — the instruments only looked where this house takes its pictures.** A guard's width list
-    is a claim about where defects are allowed to live.
-54. **92 — the guard that floors a staging span argued the floor was safe and its argument was
-    false.** A floor is hostage to every generated string above it, and an instrument that names
-    only one way it can break has told the next session where not to look.
-55. **92 — a repair scoped to the width that was measured, and the defect lived next door for six
-    sessions** at 184 unmeasured widths. A fix whose scope is a media query is a claim about where
-    the defect lives, and this house had never once swept to check one. *Paid as a machine in 93:
-    `tools/width.mjs`.*
-56. **93 — the work's own qualification was cut off its face by a constant nobody had to advance.**
-    `head -6` was set in session 87 when `day.py`'s summary was six lines; session 92's correction
-    made it seven, and the seventh says the band's floor is unconditionally 0. Under the words
-    *verbatim, unedited*, for two sessions. 17's rule, in the one place this house had left it
-    standing: the truncation is counted off the output now.
-57. **93 — an instrument's sampling grid made a measurement a random draw of ±31 px, and this
-    house handed the artefact to a voice as a conflict between two of its rulings.** The step was
-    `scrollHeight/240`, so a paragraph 400 px below the measured span moved the reading. 54 was a
-    guard reasoning wrongly about what moves a span; here the *ruler* moved with the document.
-58. **93 — five instruments, two viewport heights between them, and a rule keyed to width was
-    holding a fact about height.** The landscape phone ran over the frame contract by 244 px with
-    every guard green — and the same night's new sweep read 328 widths at one fixed height. 53's
-    rule where it was never applied: a guard's HEIGHT list is a claim too.
-59. **93 — the committed pictures and the screen-reader record were of a superseded page**, and
-    published to it three paragraphs the session had cut. Banked in 87 in the same words; the
-    instrument that catches it was the one guard missing from the table that prints the guards.
-60. **93 — a compression priced in words was written without running the count**, and the two
-    figures beside it, *200 words to 62*, described neither state: `wc -w` gave 197 and 113.
-61. **93 — the proof of a true claim was read one column across, and the false ground reached the
-    face.** The disjointness holds on the earliest *list* a certain name can stand in, not on its
-    earliest *return*; the sentence this house wrote from that misreading said being back and being
-    dark were incompatible, which its own rows refute. 51's rule with the roles reversed: a finding
-    that is right does not make the sentence carrying it right.
+**Tonight's, from the fifth premiere gate — every one of them a claim this session made about its own
+work, and every one found by a voice reading what this house wrote after midnight:**
+
+62. **94 — the paragraph announcing a duplicated constant retired was written in one of the two
+    files still holding it.** `data.py` kept its own `1600` in the line computing the sentence that
+    promises a visitor the run's length, so the beat could have moved in one file while the face went
+    on promising the other number, every guard green. Found independently by both blocking voices.
+    *A duplicate is retired when an instrument compares the two, not when a session says so.*
+63. **94 — a comment carried a tally of the live state** (`11 of them certainly dark` beside
+    `11 of 42`), false from the moment the eleventh list landed. Second comment in the same file
+    cured of the habit; the first was cured two sessions earlier in the same words.
+64. **94 — a millisecond figure that no run returns was copied into three files as an exact number**,
+    on the night whose subject is that hand-copied figures go stale. The schedule is 30,118 ms; the
+    observed instant is jitter, 30,166–30,201 across four runs; "175" was neither.
+65. **94 — a comment's pointer to its own predecessor was wrong by a factor of six**, landing a
+    reader in the middle of the data island. A cross-reference is a figure and goes stale like one.
+66. **94 — the builder held a stale tally of the run's own shape** — *"14.1 s of 26.9 s, longer than
+    all eight moving states"* — false in both figures and in the comparison, in the same session that
+    declared the habit cured in the page. **63's rule, walked past three hundred lines away.**
+67. **94 — four present-tense sentences in the live record went stale in one night**, in the section
+    whose heading promises a stranger the number and whose printed command refutes it.
+68. **94 — two banked-failure numbers were cited before the entries existed.** The numbers are
+    addresses; these opened onto nothing until this list was written.
+69. **94 — the run had no ceiling, and the last thing in this work that could ever have gone red
+    about its length was deleted and the deletion published as the night's repair.** A stale
+    `30000` was, by accident, the only assertion that the run must fit in thirty seconds; deriving
+    the window from the run turned an alarm into a gauge. *An instrument that follows the thing it
+    measures has stopped measuring it.*
+70. **94 — a floor was decided by which position a loop reached first.** The scan kept the first of a
+    tie against its own comment promising the chip-maximising position; at 1400×600 the two rules
+    differ by four chips, and at 390×844 they agreed only because that tie band is one pixel wide.
+71. **94 — a guard's headline was the product of its finding and the record's length**, rising by
+    thirteen every night a list arrived with no layout moving. The finding is thirteen places; 143
+    was the sightings. *A reading that moves with the ruler is not a reading.*
+72. **94 — the turn was measured on a performance nobody watches.** The instrument clicked its way
+    to the two states it compares, which books a line the automatic run never rewrites: 21–28 % of
+    the motion this house was pricing existed only under a finger.
+73. **94 — the work hedged away its own result, and the disproof was sixteen lines above the string
+    in this house's own instrument.** The face said both ends of the band assume every vessel the
+    day named was in fact dark; the upper end is the maximum over every case and assumes nothing.
+    Nine sessions of perfecting a qualification, and it qualified the wrong end. *The sentence about
+    the arithmetic is not checked by checking the arithmetic.*
 
 ## Retired to commits, deleted from nothing
 

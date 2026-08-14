@@ -63,7 +63,14 @@ for (const w of WIDTHS) {
   const ctx = await browser.newContext({
     viewport: { width: w, height: w <= 480 ? 844 : 900 },
     colorScheme: "light",
-    reducedMotion: "reduce",
+    // THE RUN PLAYS — `DRAMATURG-94` cut 5. This context asked for reduced motion and the
+    // instrument then CLICKED its way to the two states it compares, which books a node the
+    // automatic run never rewrites: the state line says "Holding +10 DAYS…" under a finger
+    // and says nothing at a beat. That voice put a mutation observer on it across a whole
+    // unattended run — three writes, at the start, at the run's beginning and at its end,
+    // none at the ten beats — and this instrument was reporting it as 21–28 % of the turn's
+    // motion. The performance every unattended visitor sees is the one measured here now.
+    reducedMotion: "no-preference",
   });
   const page = await ctx.newPage();
   await page.goto(url);
@@ -72,13 +79,7 @@ for (const w of WIDTHS) {
     "#sd-arrive-ladder button:not(.sd-arrive-replay)",
     (b) => b.length,
   );
-  const read = async (i) => {
-    await page.$$eval(
-      "#sd-arrive-ladder button:not(.sd-arrive-replay)",
-      (bs, k) => bs[k].click(),
-      i,
-    );
-    await page.waitForTimeout(60);
+  const read = async () => {
     return await page.evaluate((sel) => {
       const out = {};
       for (const [s, label] of sel) {
@@ -104,8 +105,18 @@ for (const w of WIDTHS) {
     }, sel);
   };
   const sel = NODES;
-  const before = await read(stops - 2);
-  const after = await read(stops - 1);
+  // The two readings are taken from the running page, on either side of the beat that lands
+  // the last state — the page publishes when that is, so neither instant is guessed.
+  const run = await page.evaluate(() => window.__sdRun);
+  const elapsed = () => page.evaluate(() => performance.now());
+  const waitUntil = async (ms) => {
+    const now = await elapsed();
+    if (ms > now) await page.waitForTimeout(ms - now);
+  };
+  await waitUntil(run.ends_ms - 250);
+  const before = await read();
+  await waitUntil(run.ends_ms + 250);
+  const after = await read();
 
   const seen = new Set(before.__chips.map((c) => c.t));
   const fresh = after.__chips.filter((c) => !seen.has(c.t));

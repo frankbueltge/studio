@@ -315,7 +315,21 @@ def band_line(a, caps):
         # PLUS the knowable count, because no vessel this record can name on the day itself
         # is ever among the certain.
         f"total is written {lo}–{hi}, and the share runs from {n} of {hi} to "
-        f"{n} of {lo + n}."
+        f"{n} of {lo + n}"
+        # WHERE THE UPPER DENOMINATOR COMES FROM, printed since session 94. `KRITIKER-94`
+        # condition 2: the *so* carried two clauses and only one followed — `n of hi` comes
+        # off the total's own ceiling, and `n of (lo + n)` came off nothing a reader could
+        # see. The addition is the whole reason the upper end falls at all, and the last
+        # four beats of the run are that fall. It is derived here from the same two counts
+        # the sentence already prints, never typed.
+        + (
+            f" — the {lo + n} being the {word(lo)} ships this record can call certainly "
+            f"dark and the {word(n)} the day itself named, which are the only ships the "
+            f"day could have known about."
+            if lo else
+            f" — the {lo + n} being the {word(n)} the day itself named, with no ship yet "
+            f"certain to add to them."
+        )
         # THE CONDITION IS NOT PRINTED HERE, AND THIS IS WHERE A SESSION WILL LOOK FOR IT.
         # `KRITIKER-93.md` blocked the work because the sentence that says both ends of this
         # band assume every vessel the day itself named was in fact dark — and that the
@@ -813,14 +827,16 @@ def build():
                 # the staging voice floored at 268 px went to 266. The words that went are
                 # the ones the section above already says: this page holds one day open and
                 # the heading four lines up prints its date. See the note in tools/frame.mjs.
-                "have been dark on the day and that nobody could have had on it. "
-                + (
-                    f"The last of them, in darker ink, arrived with the list of "
-                    f"{short_caps(g['edition'])}."
-                    if g["count"] == 1 else
-                    f"The last {word(g['count'])}, in darker ink, arrived with the list "
-                    f"of {short_caps(g['edition'])}."
-                )
+                # THE SECOND SENTENCE IS CUT — `DRAMATURG-94` cut 4. It named which list the
+                # newest names arrived with, in darker ink, and it was the fourth printing of
+                # one fact: the chips are already in darker ink, the button the run stands on
+                # reads the same interval, and a held stop's own line reads it again. That
+                # voice measured what it cost: this heading is the largest moving object at
+                # the beat where the run turns — 47 % of the motion at 390 px, four times the
+                # share — and two of its five line-boxes were the cut sentence. It buys no
+                # pixels back (the heading's height is reserved either way); it buys the
+                # turn's motion back for the figure.
+                "have been dark on the day and that nobody could have had on it."
             ),
         })
     n_stops = len(arrive_stops)
@@ -1668,20 +1684,71 @@ def build():
         f"{gloss_words} words at 238 wpm (Brysbaert 2019, mean adult silent reading of "
         "non-fiction English)"
     )
-    # The run's whole length, computed from the two clocks that produce it and rounded to
-    # the second the visitor is being promised. Nothing here is typed: change the gloss and
-    # this sentence changes with it.
-    run_seconds = round((arrive["first_dwell_ms"] + (n_stops - 1) * 1600) / 1000)
+    # ── THE RUN IS A BUDGET NOW, NOT A CONSTANT TIMES A COUNT ─────────────────────────
+    # `DRAMATURG-94` cut 1, and it is the cut that gate turned on. The run was
+    # `first_dwell + (stops - 1) x 1600`, so it grew by one beat every night a list
+    # arrived: 30.1 s at eleven lists, 44.5 s at twenty, and past the terminal test's
+    # minute at thirty — on this record's own rate, nineteen days away. The subject is
+    # accumulation and a lengthening run is not a betrayal of it; what breaks is WHERE the
+    # length lands. New beats arrive at the tail, and the tail is where the upper end
+    # unfreezes: the turn recedes from the visitor at 1.6 s a night while the opening
+    # stillness shrinks from half the run to a quarter of it.
+    #
+    # So the house picks a length it will defend, publishes it, and derives the beat from
+    # it. RUN_CEILING_MS is that choice and it is the only duration typed in this work:
+    # forty-five seconds, so the whole fall and the sentence that closes it land inside the
+    # minute the terminal test allows, with room for a visitor who arrives mid-paragraph.
+    # The turn is protected — the beat that reveals the first certainly-dark ship, the beat
+    # that reveals the last state, and the beat that ends the run stay at BEAT_MS whatever
+    # the ceiling costs the others — because the turn is the only event in this piece and
+    # compressing it to buy room for its own prelude would be the trade this house has
+    # already been cut for twice.
+    #
+    # Tonight the derivation returns 1,600 ms for every beat, so nothing on the face moves:
+    # this is paid on the night it is free, which is the whole reason it is paid tonight.
+    BEAT_MS = 1600
+    RUN_CEILING_MS = 45_000
+    MIN_BEAT_MS = 400
+    n_beats = n_stops - 1
+    # the stop where the count that turns first moves — the run's one change of kind
+    turn_stop = next(
+        (i for i, s in enumerate(arrive_stops) if s["certain_of"] and not
+         s["certain_of"].startswith("0 ")),
+        n_stops - 1,
+    )
+    # `beats[k]` is the interval that FOLLOWS stop k+1: `beats[0]` follows stop 1 and reveals
+    # stop 2, and `beats[n_beats-1]` follows the last stop and ends the run with the sentence
+    # that speaks the live figure. So the interval revealing stop s is `beats[s-2]`.
+    protected = {k for k in (turn_stop - 2, n_stops - 3, n_beats - 1) if 0 <= k < n_beats}
+    free = [k for k in range(n_beats) if k not in protected]
+    budget = RUN_CEILING_MS - arrive["first_dwell_ms"] - len(protected) * BEAT_MS
+    free_beat = min(BEAT_MS, budget // len(free)) if free else BEAT_MS
+    beats = [BEAT_MS if k in protected else max(MIN_BEAT_MS, free_beat)
+             for k in range(n_beats)]
+    arrive["beat_ms"] = BEAT_MS
+    arrive["run_ceiling_ms"] = RUN_CEILING_MS
+    arrive["beats_ms"] = beats
+    arrive["protected_beats"] = sorted(protected)
+    arrive["ends_ms"] = arrive["first_dwell_ms"] + sum(beats[:-1])
+    arrive["done_ms"] = arrive["first_dwell_ms"] + sum(beats)
+    run_seconds = round(arrive["done_ms"] / 1000)
+    arrive["run_seconds"] = run_seconds
     arrive["run_states"]["waiting"] = (
         f"This figure runs by itself: {word(n_stops)} states over about "
         f"{word(run_seconds)} seconds. Any button above holds a state and stops the run."
     )
     # *", starting after a pause as long as the paragraph under the title takes to read"* —
     # struck, `DRAMATURG-89.md` cut 3, and it was false as read. `run_seconds` is computed
-    # one line above from `first_dwell_ms + (n_stops - 1) * 1600`, so the pause is INSIDE
-    # the number the sentence promises, not before it — and it is the largest part of it:
-    # 14.1 s of 26.9 s, longer than all eight moving states together. A sentence promising
-    # twenty-seven seconds AND a pause before them promised a run this object does not have.
+    # from `first_dwell_ms` plus the beats themselves, so the pause is INSIDE the number the
+    # sentence promises, not before it. WHETHER THE PAUSE IS THE LARGEST PART OF THE RUN
+    # DEPENDS ON HOW MANY LISTS THIS RECORD HOLDS, and this comment said "14.1 s of 26.9 s,
+    # longer than all eight moving states together" until session 94, by which time it was
+    # 14.1 s of 30.1 s against ten moving states worth 16.0 s — false in both figures and in
+    # the comparison, and made false by the very lists this run exists to show. Struck by
+    # `VERIFIER-94` blocking 4, which is banked failure 63 living in the builder while the
+    # session that banked it was curing the same habit in the page. The rule instead of the
+    # tally: the dwell is `first_dwell_ms`, the moving states are the sum of `beats_ms`, and
+    # which is larger is a fact about tonight's record, not about this work.
 
     # what moved since the struck figure was true: the vessels this day gained from
     # captures later than the law's publication, named, with the list that carried them

@@ -27,7 +27,7 @@ EXCELLENCE · USA
 
 NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of this day that nobody could have had on it.
 
-A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And both ends assume every vessel the day itself named was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.
+A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 11 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.
 
 OBSERVED — the instant in the line below is when this record first held every name this stop adds, read off the captures and not chosen. Run the line and this stop's share comes back:
 python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-05T04:39:32Z
@@ -384,7 +384,7 @@ LIVE · as this record measures it now, from 31 saved copies of 11 lists —
 24 %–42 %
 11 of 26–46
 
-Forty-six ships could have been dark on 4 August 2026 and fifteen of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 15–46, and the share runs from 11 of 46 to 11 of 26.
+Forty-six ships could have been dark on 4 August 2026 and fifteen of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 15–46, and the share runs from 11 of 46 to 11 of 26 — the 26 being the fifteen ships this record can call certainly dark and the eleven the day itself named, which are the only ships the day could have known about.
 
 The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.
 
@@ -437,7 +437,7 @@ day 2026-08-04  ·  31 capture(s) read, 11 distinct edition(s), 12 distinct cont
   knowable on the day, OBSERVED ..... 11
   SHARE knowable on the day ......... 24%–42%  (11 of 26–46)
     (a ceiling from 11 edition(s), 31 capture(s): further nights can only add vessels to this day, so this share can only fall)
-    (both ends assume every vessel the day itself named was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.)
+    (the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 26 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.)
 
 verbatim, unedited
 

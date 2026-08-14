@@ -247,12 +247,25 @@ def analyse(target, caps):
             ]
         ),
         # Printed beside the band so the condition the band stands on cannot be dropped in
-        # transit: unconditionally this share has no positive floor at all.
+        # transit. WHICH END THE CONDITION BINDS, corrected in session 94 by KRITIKER-94
+        # and re-derived here before it was typed: the comment above says the share is
+        # largest at k = K, m = 0, so obs / (certain + obs) is the maximum over EVERY value
+        # of k this record allows — a ceiling that holds unconditionally, not a figure that
+        # assumes anything. Only the lower end needs the assumption. For one session this
+        # string said "both ends assume", the face printed it eleven times in its largest
+        # paragraph, and it hedged away the one unconditional result this work has.
         "share_band_condition": (
             None
             if not have_capture_on_or_before
-            else "both ends assume every vessel the day itself named was in fact dark on "
-            "the day; not one of them is certain, so unconditionally the share's floor is 0"
+            else (
+                f"the upper end assumes nothing: whatever became of the "
+                f"{len(knowable_observed)} names the day itself printed, no case this "
+                f"record allows puts the share above {len(knowable_observed)} of "
+                f"{n_lo + len(knowable_observed)} — that end is a ceiling over all of "
+                f"them. The lower end does assume every one of those "
+                f"{len(knowable_observed)} was in fact dark on the day; not one of them "
+                f"is certain, so unconditionally the share's floor is 0"
+            )
         ),
         "share_floor_unconditional": 0.0 if have_capture_on_or_before else None,
         "share_is_a_falling_ceiling": have_capture_on_or_before and n_hi > 0,
@@ -279,6 +292,36 @@ def main():
     )
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
+
+    # THE INSTANT IS CHECKED BEFORE IT IS USED — session 94, paying a note three verifying
+    # passes old (`VERIFIER-92` note 3, `VERIFIER-93` note 5, `VERIFIER-94` note 1). The
+    # comparison below is a STRING comparison against `fetched_at_utc`, so an instant this
+    # instrument cannot read did not fail: it sorted, and the answer came back with a
+    # straight face. `--as-of 2026-08-14T204526Z` — the exact shape of this record's own
+    # capture FILENAMES, which is the form a stranger is likeliest to paste — silently
+    # dropped the newest capture and returned the previous night's band as tonight's answer.
+    # A record that invites a stranger to check it does not get to answer a question it did
+    # not understand.
+    if a.as_of is not None:
+        probe = a.as_of[:-1] + "+00:00" if a.as_of.endswith("Z") else a.as_of
+        try:
+            when = datetime.datetime.fromisoformat(probe)
+            # AND IT IS NORMALISED, WHICH IS THE HALF THAT ACTUALLY PAYS THE NOTE. Validating
+            # alone was not enough and this house checked: `2026-08-14T204526Z` PARSES — the
+            # basic ISO form is legal — and then loses to `2026-08-14T20:45:26Z` in the string
+            # comparison, dropping the newest capture and answering with last night's band.
+            # Every instant this instrument accepts is rewritten into the one shape the
+            # captures are stamped in before anything is compared.
+            if when.tzinfo is not None:
+                when = when.astimezone(datetime.timezone.utc).replace(tzinfo=None)
+            a.as_of = when.strftime("%Y-%m-%dT%H:%M:%SZ")
+        except ValueError:
+            raise SystemExit(
+                f"--as-of {a.as_of!r} is not a UTC instant this instrument can read. "
+                "Write it as 2026-08-14T20:45:26Z — the form printed beside every stop on "
+                "the work's own face. (Capture filenames drop the colons; that form is not "
+                "an instant and is refused here rather than silently answered.)"
+            )
 
     caps = load(a.captures, a.as_of)
     if not caps:
