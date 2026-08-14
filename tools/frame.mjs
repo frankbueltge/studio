@@ -54,8 +54,21 @@ const arg = (k, d) => {
 const dir = resolve(arg("dir", "projects/season1/still-dark"));
 const url = "file://" + join(dir, "index.html");
 
+// FOUR VIEWPORTS SINCE SESSION 93, AND THE TWO NEW ONES ARE SHORT — `DRAMATURG-93.md`
+// cuts 3 and 4. This file, `fold.mjs`, `turn.mjs`, `gaps.mjs` and `width.mjs` ran at
+// exactly two viewport HEIGHTS between them, 844 and 900, and `width.mjs` — written the
+// same night against a defect that lived at 184 unmeasured widths — swept 328 widths at
+// one fixed height. So a rule keyed to `max-width: 480px` was holding a fact about height,
+// and the frame contract this work spent sessions 83 to 89 paying was failing at every
+// viewport shorter than the head: 844×390 over by 244, 740×360 by 320, 932×430 by 191,
+// 800×600 by 53, 1400×600 by 34, all of them green here because none of them was looked
+// at. A guard's height list is a claim about where defects are allowed to live, exactly as
+// its width list is. The landscape phone is in the exit code now, and so is the short
+// desktop window.
 const VIEWPORTS = [
   { w: 390, h: 844, name: "phone 390×844" },
+  { w: 844, h: 390, name: "phone, turned 844×390" },
+  { w: 1400, h: 600, name: "short window 1400×600" },
   { w: 1400, h: 900, name: "wide 1400×900" },
 ];
 
@@ -164,8 +177,22 @@ for (const vp of VIEWPORTS) {
         );
         const y0 = window.scrollY;
         let best = { px: -1, chips: 0, scrollY: 0 };
-        for (let k = 0; k <= 240; k++) {
-          window.scrollTo(0, Math.round((range * k) / 240));
+        // A 1 PX WALK, NOT A 241-POINT GRID — `DRAMATURG-93.md` cut 1, and the number this
+        // instrument reported to that voice as a regression was a sampling artefact worth
+        // up to 31 px. The old scan stepped `range/240`, so its step size was set by the
+        // document's TOTAL height: on the night this was caught the step was 30.325 px, the
+        // best position was scrollY 234 — the figure's own document top — and the grid
+        // landed at 212 and 243 and never on it. The instrument therefore read 238 px and
+        // 20 chips where the truth was 260 px and 22, and it moved by 7 px between two
+        // objects whose figure and hole stood at byte-identical document positions, because
+        // a paragraph 400 px BELOW the hole had got longer and shifted the grid. That is
+        // banked failure 54's third instance in this file: a span measured correctly and
+        // reasoned about wrongly. Walking every integer position costs about a second per
+        // stop and cannot be off by a pixel. The window's own height bounds the walk, so
+        // this is linear in the scroll range and not in the document.
+        const step = 1;
+        for (let k = 0; k * step <= range; k++) {
+          window.scrollTo(0, Math.round(k * step));
           const f = fig.getBoundingClientRect();
           if (f.top < 0 || f.bottom > vh) continue;
           const h = hole.getBoundingClientRect();
@@ -192,7 +219,11 @@ for (const vp of VIEWPORTS) {
     `\n${vp.name} — figure-top to controls-bottom: ${lo === hi ? hi : `${lo}–${hi}`} px ` +
       `of ${vp.h} — ${verdict}`,
   );
-  if (hi > vp.h && vp.w <= 480) over = hi - vp.h;
+  // EVERY VIEWPORT IN THE LIST FAILS THE BUILD NOW, not only the narrow ones. The old rule
+  // read `vp.w <= 480`, which was the whole list minus the desktop when the list was two
+  // long; with the short viewports of session 93 in it, that clause would have kept the
+  // landscape phone green while it ran over by 244 px, and green is what let cut 3 live.
+  if (hi > vp.h) over = Math.max(over, hi - vp.h);
 
   // The other end of the piece's argument, asked so that the answer is bounded: with the
   // whole figure on screen, how much of the hole is on screen with it. Reported, never
@@ -234,7 +265,12 @@ for (const vp of VIEWPORTS) {
       const hi2 = Math.max(top, bot);
       return sel.map(([s, label]) => {
         const el = document.querySelector(s);
-        if (!el) return { label, h: null, inside: false };
+        // ABSENT IS NOT OUTSIDE — `VERIFIER-93.md` note 1. A selector that matches nothing
+        // used to fall through to `inside: false` and print "outside the frame at this
+        // width", which told the next session that a paragraph deleted from the page was
+        // merely sitting somewhere else. An instrument's account of itself is part of what
+        // it measures.
+        if (!el) return { label, h: null, inside: false, absent: true };
         const r = el.getBoundingClientRect();
         // Fully inside, not merely touching: a paragraph whose first pixel sits under the
         // controls' last one is below the frame, and counting it as contained is how the
@@ -251,7 +287,13 @@ for (const vp of VIEWPORTS) {
   const sum = parts.filter((p) => p.inside).reduce((a, p) => a + (p.h || 0), 0);
   for (const p of parts) {
     console.log(
-      `  ${String(p.h ?? "—").padStart(5)} px  ${p.label}${p.inside ? "" : "   — outside the frame at this width"}`,
+      `  ${String(p.h ?? "—").padStart(5)} px  ${p.label}${
+        p.absent
+          ? "   — absent from the page"
+          : p.inside
+            ? ""
+            : "   — outside the frame at this width"
+      }`,
     );
   }
   console.log(`  ${String(hi - sum).padStart(5)} px  the space between them`);
@@ -261,7 +303,7 @@ for (const vp of VIEWPORTS) {
 await browser.close();
 if (over) {
   console.log(
-    `\nFRAME: the figure and the controls do not fit one phone screen — over by ${over} px`,
+    `\nFRAME: the figure and the controls do not fit one screen — over by ${over} px at the worst viewport`,
   );
   process.exit(1);
 }

@@ -13,32 +13,36 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 92 (2026-08-13)
+### STILL DARK — **IN PRODUCTION**, live state as of session 93 (2026-08-14)
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 91 block that
-stood here is retired whole to `b619af4:WORKBOARD.md`; 89 to `a20d9ae:`, 88 to `baaeb13:`, 87 to
-`658a6fd:`, 85 and 86 to `abecba4:`.*
+*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 92 block that
+stood here is retired whole to `c6258a4:WORKBOARD.md`; 91 to `b619af4:`, 89 to `a20d9ae:`, 88 to
+`baaeb13:`, 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
 
-**92 — THE THIRD PREMIERE GATE. ALL THREE VOICES SENT IT BACK, AND THE WORK'S CENTRAL FIGURE WAS
-WRONG.** Outward. Move: **bring the work current, then the gate on the changed state.** One frozen
-object (`index.html` sha256 `a7912784…`, `HEAD` at `b619af4`, hashed by each voice at both ends and
-unmoved): `KRITIKER-92.md` **BLOCK**, three conditions · `VERIFIER-92.md` **FAIL**, four blocking ·
-`DRAMATURG-92.md` **RETURNS FOR RESTAGING**, nine cuts. Published unedited.
+**93 — THE FOURTH PREMIERE GATE. ALL THREE SENT IT BACK, AND ALL FOURTEEN ITEMS WERE PAID BEFORE
+THIS LANDED.** Outward. Move: **pay the staging voice's owed cuts, then the gate on the changed
+state.** One frozen object (`73190c51…`, `HEAD` `7b885d8`), hashed by each voice at both ends and
+unmoved, no writing instrument handed out: `VERIFIER-93.md` **FAIL**, six blocking ·
+`DRAMATURG-93.md` **RESTAGING**, five cuts · `KRITIKER-93.md` **BLOCK**, three conditions. Unedited.
 
-**THE UPPER END — 100 %, the largest type on the page, the end marked CANNOT MOVE — DIVIDED TWO
-DISJOINT SETS OF SHIPS.** `obs / max(certain, obs)`, and no vessel this record can name on the day
-itself is ever among the certain. Corrected: the ceiling is `obs / (certain + obs)`, so the run reads
-**100 % ×7, then 85 %, 73 %, 50 %** and both ends of the figure now fall. The sentence about that end
-had been repaired three times, each version better written; **nobody ran the formula.**
+**THE BAND'S CONDITION REACHED THE TERMINAL AND NOT THE FACE:** `day.py`'s seventh summary line says
+both ends of `26 %–50 %` assume every vessel the day itself named was dark, and that
+**unconditionally the floor is 0**. The face printed that output *verbatim, unedited* — through
+`head -6`, a constant from session 87, when the summary had six lines. **Counted off the output now**,
+and the sentence is in the head.
 
-**PAID TONIGHT:** the critic's three conditions · the verifying voice's four · cuts 1, 2 (first half),
-3, 7, 8, 9 — among them a sideways scroll live at 184 widths for six sessions (banked 55).
-**OWED AND NAMED:** cuts 2 (second half), 4, 5, 6, and a 268 px staging floor now reading **245 —
-UNDER** because three of that voice's own orders grew the head. Two rulings of one voice conflict;
-it goes back to that voice, not resolved here by preference.
+**THE FLOOR CONFLICT THIS HOUSE HANDED THE STAGING VOICE DID NOT EXIST.** `frame.mjs` sampled scroll
+on a grid stepped by the document's own height: 245 and 238 were artefacts worth ±31 px, the truth
+**260 px, 22 chips**, the chip half met all along. Thirteen words of gloss out of the frame took it
+to **294 px, 24 chips — HOLDS**, and the voice withdrew two of its own orders.
 
-**THE STATE OF THE HOUSE:** one project in flight · **forty-two sessions since the last premiere**
-(*NO PART*, 50) · inward in the last four: **0** · the share is **26 %–50 %, 11 of 22–42**.
+**AND A RULE KEYED TO WIDTH HELD A FACT ABOUT HEIGHT** — the landscape phone over the frame contract
+by 244 px, five guards green at two heights between them. `frame.mjs` runs four viewports now and
+fails at each. Banked **56–61**.
+
+**THE STATE OF THE HOUSE:** one project in flight · **forty-three sessions since the last premiere**
+(*NO PART*, 50) · inward in the last four: **0** · the share is **26 %–50 %, 11 of 22–42**, from 30
+saved copies.
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

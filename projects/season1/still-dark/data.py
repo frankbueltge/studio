@@ -198,6 +198,34 @@ def run_day(*args):
     return out.stdout
 
 
+def summary_lines(out):
+    """How many lines of `day.py`'s output are its SUMMARY, counted off the output itself.
+
+    WHY THIS FUNCTION EXISTS, and it is the block of session 93's gate. The page prints
+    `day.py … | head -6` under the words *verbatim, unedited*, and the 6 was typed by a hand
+    in session 87, when the summary was six lines and the pipe cut sixteen per-ship rows that
+    restated the table above. Session 92's correction added a SEVENTH summary line — the one
+    saying that both ends of the printed band assume every vessel the day itself named was in
+    fact dark on the day, that not one of them is certain, and that unconditionally the floor
+    is 0 — and nobody moved the 6. So the work's own qualification reached the terminal and
+    was cut off the face by a constant, under a caption promising the output whole:
+    `KRITIKER-93.md`, the block. *"A work whose entire claim is exactness does not get to keep
+    its qualifications in a pipe."*
+
+    The constant is now a measurement. A summary line is any line before the first per-ship
+    row, and a per-ship row is what `day.py` prints with a leading indent and a status word.
+    If the instrument grows an eighth summary line at 04:00 on some later night, the face
+    prints eight and the command it prints says eight. Banked failure 17, paid in the one
+    place this house had left it standing.
+    """
+    n = 0
+    for line in out.splitlines():
+        if re.match(r"\s+(certain|possible)\s", line):
+            break
+        n += 1
+    return n
+
+
 def share_line(a, status):
     """(figure, numerator, denominator band) for one analysis, from the script's own fields.
 
@@ -288,6 +316,17 @@ def band_line(a, caps):
         # is ever among the certain.
         f"total is written {lo}–{hi}, and the share runs from {n} of {hi} to "
         f"{n} of {lo + n}."
+        # THE CONDITION IS NOT PRINTED HERE, AND THIS IS WHERE A SESSION WILL LOOK FOR IT.
+        # `KRITIKER-93.md` blocked the work because the sentence that says both ends of this
+        # band assume every vessel the day itself named was in fact dark — and that the
+        # unconditional floor is 0 — reached the terminal and not the face. It is on the face
+        # now, ONCE, in `hedge`, the head's own caveat, which is where that memo's condition
+        # says a stranger must meet it: *"reads the head at the last stop, and learns."*
+        # It was briefly printed here as well and taken out before this state was committed:
+        # this sentence and the caveat both stand in the run's own head, and one law printed
+        # twice is the fault this house was cut for at 5 px in session 88 and again at
+        # 1,241 px in session 92. If a later gate wants it in both places, the string is one
+        # field away — `a["share_band_condition"]`, written by `day.py`, never typed here.
     )
 
 
@@ -733,12 +772,35 @@ def build():
             # are disjoint sets of ships, which is the whole finding of session 92's gate.
             # It belongs in the sentence that defines the word *certain*, where a reader
             # meets the term, and not 1,072 px below the figure where the paragraph stood.
+            # THE GROUND WAS FALSE AND THE CONCLUSION WAS TRUE — `VERIFIER-93.md` blocking 2,
+            # the same night the clause arrived. It read *"to stand in a list dated that day
+            # it had to be back, and to be certain it had to be dark"*, which asserts that
+            # being back and being dark on the day are incompatible. This record's own
+            # instrument says otherwise: `day.py` takes the dark interval under an end `e` to
+            # be `(e−d, e]`, INCLUSIVE, and TUNAMAR — whose only feasible end is 4 August —
+            # is both back on the day and counted dark on it. The true ground is the one the
+            # verifying voice printed: a certain name's earliest window end falls seven days
+            # before the list that first carried it, so its first list is dated at least a
+            # week after the day. Checked at all thirty capture instants: the earliest
+            # `first_edition_date` among the certain is 2026-08-11, which is the day plus
+            # seven, at every one of them.
+            # AND THE CONDITION THE BAND STANDS ON JOINS IT — `KRITIKER-93.md`'s block. It is
+            # not written here: it is `day.py`'s own `share_band_condition`, carried onto the
+            # face verbatim from the analysis this stop was computed with, so the sentence
+            # that qualifies this page's largest number cannot go stale against the
+            # instrument that produces it.
             "hedge": (
                 "A list gives a ship's return only to the nearest week, so a name counts as "
                 "certain here only when every day of that week leaves it dark on this one; "
-                "the rest are possible. And no ship this record could name on the day itself "
-                "is ever among the certain: to stand in a list dated that day it had to be "
-                "back, and to be certain it had to be dark."
+                "the rest are possible. No name this record could already have on the day "
+                "itself can be certain: the earliest end of a certain name's week falls "
+                "seven days before the list that first printed it, so its first list is "
+                "dated at least a week after the day. "
+                + (
+                    f"And {a_st['share_band_condition']}."
+                    if a_st.get("share_band_condition")
+                    else ""
+                )
             ),
             "heading_since": (
                 "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of "
@@ -997,8 +1059,15 @@ def build():
             # AND THE HEADING'S CLAIM IS NOW UPSTREAM'S OWN, NOT AN INFERENCE. §2 of the
             # same memo objected that *"the top of"* asserts a selection rule the block then
             # disclaims. The objection is answered with evidence rather than by yielding:
-            # the method sheet says it in words, fetched first-hand tonight (200, 27,748
-            # bytes) — *"case of the day by region brisance, then duration. The index counts
+            # the method sheet says it in words, fetched first-hand on 2026-08-14 (200,
+            # 27,100 bytes, twice, stable; the 27,748 it read before is carried unchanged
+            # from at least session 85's commit `994f214` — the oldest of the thirty commits
+            # of this file I checked that still holds the figure — so the word *tonight*
+            # outlived every session of edits to this file since — `VERIFIER-93.md` blocking
+            # 6c, banked failures 24 and 28's shape: a
+            # session-relative adverb frozen into a string that outlives the session. Every
+            # fetch note in this file now carries the date it was taken on)
+            # — *"case of the day by region brisance, then duration. The index counts
             # all examined; the case and list show named vessels."* Found by
             # `VERIFIER-85.md` §5, which recorded that the strongest support for this whole
             # block was cited nowhere on the face. It is a genuine short quotation with its
@@ -1035,12 +1104,21 @@ def build():
             # edition is decided by a published rule — the seven-day window and the ranking
             # that cuts the list — so the overlaps between these lists carry the rule
             # and not the sea.
+            # [SESSION 93: THERE IS NO QUOTATION IN THIS BLOCK ANY MORE. The paragraph below
+            # was written when the face quoted the cited page directly; that quotation and
+            # its scope clause were cut in session 93 and the reason was rebuilt on the
+            # instrument's published window rule instead. The paragraph stands unedited as
+            # the record of how the quotation was checked when it was on the face —
+            # `VERIFIER-93.md` blocking 6b caught it describing two quotations where none is
+            # left. The byte count below is session 90's and says so now.]
             # BOTH QUOTATIONS ARE FETCHED, NOT REMEMBERED. The capture rule is quoted from
             # Amelia Hoover Green, "Multiple Systems Estimation: Stratification and
             # Estimation", Human Rights Data Analysis Group, 20 March 2013 —
             # https://hrdag.org/2013/03/20/mse-stratification-estimation/ , fetched
-            # first-hand tonight; the ranking sentence is the instrument's own method sheet
-            # (https://frankbueltge.de/werke/ghost-fleet/, 200, 27,046 bytes tonight), the
+            # first-hand on 2026-08-13; the ranking sentence is the instrument's own method
+            # sheet (https://frankbueltge.de/werke/ghost-fleet/, 200, 27,046 bytes when this
+            # figure entered the file at `babd179`, session 90, 2026-08-13; 27,100 bytes read
+            # twice on 2026-08-14), the
             # same sheet the block above already quotes. The first URL stands in the island
             # under `refused_source` and is printed on the face beside the claim, because a
             # SOURCED sentence whose address is only in a comment is a sentence a stranger
@@ -1083,25 +1161,48 @@ def build():
             # at the gate of 91. A house that deletes what one blocking voice ordered because
             # another priced it in pixels has not resolved a conflict, it has picked a
             # favourite. So the cut is paid where the two orders do not collide: the
-            # quotation, its scope clause and the second element's 36-word citation line go —
-            # 200 words to 62, 394 px to what the guard now measures — and the method keeps
-            # its name, its reason and its address. Both voices see the result at tonight's
-            # gate and either may say it is not enough.
+            # quotation and its scope clause go, the citation line is cut to a label — and
+            # the method keeps its name, its reason and its address. Both voices saw the
+            # result at that gate and both ruled: the staging voice withdrew the cut as paid,
+            # *"less than I asked for and it is enough"*, and the critic ruled its own
+            # condition NOT GUTTED.
+            # THE NUMBER THAT SAID SO WAS WRONG AND IS COUNTED NOW — `VERIFIER-93.md`
+            # blocking 5. This comment claimed "200 words to 62", which measured neither
+            # state: by `wc -w`, this house's standing instrument, the two elements were
+            # **197 words** at `c6258a4` and **113** at the state that went to the gate — a
+            # 43 % cut, not the 69 % claimed. Tonight's repairs then put back the deterministic
+            # rule the verifying voice required and the author's name the critic asked for,
+            # and the two elements now stand at **144 words** (126 + 18), which is the figure
+            # a stranger reproduces by extracting both strings from the island and running
+            # `wc -w`. A comment about a compression, priced in words, written without once
+            # running the count — in the file that generates the face.
             "refused": (
                 "How the figure would move if the lists were longer is not estimated here — "
                 f"a longer list dated {day_month(DAY)} could carry names this record counts "
                 "as arriving late, and longer later lists add to the total, so both ends of "
                 "it grow. The method that would try has a name: multiple systems "
                 "estimation, which reads the overlaps between several incomplete lists to "
+                # THE REASON WAS REFUTED BY THE ADDRESS PRINTED BESIDE IT — `VERIFIER-93.md`
+                # blocking 1, the night the compression was made. It read *"a ship that is
+                # still dark stands in none of the ten lists this record holds"*, and
+                # standing in none of the lists is not what stops the method: it is the
+                # method's estimand, `m000`, which the cited page's own Q14 sets out. Four
+                # words had been cut with the quotation — *at no probability* — and the
+                # argument went with them. What survives contradiction is that entry to
+                # these lists is decided by a PUBLISHED RULE and not by sampling: the window
+                # sentence this page already quotes elsewhere. A class whose probability is
+                # structurally zero in every list is the one class MSE cannot reach, and the
+                # cited page does not say otherwise.
                 "say how many none of them caught. It needs a capture probability behind "
-                "each ship, and "
+                "each ship, and this instrument's published rule — a list holds only "
+                "returns from the last seven days — leaves "
                 # BUILT, NOT TYPED, FROM SESSION 92 — this read "in all nine of them" and
                 # the tenth list arrived tonight, so the sentence that argues this record
                 # cannot estimate was itself out of date with the record. Banked failure 17
                 # in its own costume: the count of lists is on disk, and a page that types
                 # it is a page that will be wrong on the next night nobody looks.
-                f"a ship that is still dark stands in none of the {word(len(cut_rows))} "
-                "lists this record holds. "
+                f"a ship that is still dark at a probability of zero in every one of the "
+                f"{word(len(cut_rows))} lists this record holds. "
                 "That is why this page prints a band and no estimate."
             ),
             # The method's address, on the face beside the claim about it. IT IS ONE CLAUSE
@@ -1111,8 +1212,16 @@ def build():
             # the reason hands a stranger its own refutation). Nothing on the face quotes
             # that page any more; what stands is this house's own one-line characterisation
             # of the method, and it carries the address a stranger checks it against.
+            # AND THE PERSON CITED IS NAMED AGAIN — `KRITIKER-93.md`, published beside its
+            # block and not as a condition: *"A page that names Global Fishing Watch, The
+            # Ghost Fleet and frankbueltge.de in full has stopped naming the one human being
+            # it cites."* Right, and cheap to put back: the citation is fifteen words instead
+            # of the thirty-six the staging voice priced, and the author has her name on it.
             "refused_source": {
-                "text": "SOURCED — the method, and its capture probabilities: ",
+                "text": (
+                    "SOURCED — the method and its capture probabilities: Amelia Hoover "
+                    "Green, Human Rights Data Analysis Group, 20 March 2013, "
+                ),
                 "url": "https://hrdag.org/2013/03/20/mse-stratification-estimation/",
             },
             # BELOW THE CONTROLS WITH THE REFUSAL: the confession, and the one printed
@@ -1204,11 +1313,20 @@ def build():
             # `knowable_on_the_day_OBSERVED`. They are equal in the record as it stands and
             # by nothing else — no law joins them and no check asserts one — so each row
             # carries the word for where its own numerator came from.
-            "standing_note": (
-                f"— {word(day_cut['printed'])} ships named, of "
-                f"{day_cut['examined']:,} disappearances the list says it examined. "
-                "SOURCED — the count of names is this house's own."
-            ),
+            # THE GLOSS GOES AND THE TIER STAYS — `DRAMATURG-93.md` cut 2, and it is the
+            # thing that pays a floor two of that voice's rulings had been pulling against.
+            # Thirteen words: *"— eleven ships named, of 230 disappearances the list says it
+            # examined."* It was the ONLY element inside the reserved frame byte-identical at
+            # all ten stops — 50 px of static grey between the run's live numerals and the
+            # buttons that drive them — and that voice measured what dropping this sentence
+            # buys: the hole's share of the phone frame goes 260 → 294 px and 22 → 24 chips,
+            # clearing its own 268 px floor by 26 where shrinking the share, the prescription
+            # this house refused, bought 7 px and no chip. Both facts survive on the face:
+            # *"the eleven names it printed"* stands in the heading 209 px below at 390, and
+            # *"Of the 230 examined"* opens the figures below the controls. What may not go
+            # is the tier word, which is the only thing in the frame that says whose count
+            # the numeral above is.
+            "standing_note": "SOURCED — the count of names is this house's own.",
         },
         "stops": arrive_stops,
         # THE CONSTANT, MARKED — session 83. The staging voice's one banked change, and the
@@ -1799,14 +1917,20 @@ def build():
         # unedited" is the whole output of the command as printed. Sixteen per-ship lines
         # restated the rows above in worse type (DRAMATURG-72 §B.6); the pipe cuts them
         # where a reader would, and day.py handles the closed pipe without a traceback.
+        # THE NUMBER IN THAT PIPE IS COUNTED NOW, NOT TYPED — session 93, and see
+        # `summary_lines()` for the whole of why. It was 6 from session 87 until tonight, and
+        # from session 92 it cut the summary's own seventh line: the sentence that says both
+        # ends of this page's band assume every vessel the day itself named was in fact dark,
+        # that not one of them is certain, and that the unconditional floor is 0.
         "commands": [
-            {"label": "the day", "cmd": f"python3 projects/season1/capture/day.py {DAY} | head -6"},
+            {"label": "the day",
+             "cmd": f"python3 projects/season1/capture/day.py {DAY} | head -{summary_lines(run_day())}"},
             {"label": "every ship, and when it arrived",
              "cmd": f"python3 projects/season1/capture/day.py {DAY}"},
             {"label": "the night before",
              "cmd": f"python3 projects/season1/capture/day.py {DAY} --as-of {published_as_of}"},
         ],
-        "output": "".join(run_day().splitlines(keepends=True)[:6]),
+        "output": "".join(run_day().splitlines(keepends=True)[: summary_lines(run_day())]),
         "floor": (
             f"No number closes this. A method that counts a disappearance only when the ship comes "
             f"back cannot see the ships that never come back. "

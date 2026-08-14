@@ -758,7 +758,9 @@ guard table below, with its exit code.** Run: `NODE_PATH=<global node_modules> n
 *(Two figures stood here — "14 losses before tonight; on tonight's, none" — and were struck by
 `../VERIFIER-91.md` §6, blocking: this stretch of the file carries no session heading, so its
 "tonight" was unanchored, and read now it told a stranger the instrument returns nothing on a page
-where it returns 130 — 108 on the night of that strike — and says so in the guard table below, which
+where it returns a large red count — 108 on the night of that strike, 130 tonight, 120 at the state
+this work was frozen at earlier the same night, and the number the guard table prints is whatever the
+instrument last returned — and says so in the guard table below, which
 is named here rather than counted off in lines, because a line offset in a file that grows every
 session is one more number that goes stale unread. They are not re-dated to session 84 either: they
 were taken with the instrument as it stood before it was rebuilt that same night, and no run of
@@ -879,8 +881,9 @@ do not, none before session 83 (`../VERIFIER-92.md` §3). Banked failure 52 was 
 before this section broke it.
 
 **THE TENTH LIST ITSELF.** It arrived at 17:02:56 UTC on 13 August — the 29th saved copy, edition
-dated 13 August, eleven names. The record now holds 29 saved copies, 10 distinct lists, 11 distinct
-contents, 18 distinct bodies. The falling end moved 31 % → 26 %, the **ninth** movement of degree,
+dated 13 August, eleven names. As of session 93 the record holds **30 saved copies, 10 distinct
+lists, 11 distinct contents, 19 distinct bodies** — the 30th, taken at 04:36:51 UTC on 14 August, is
+the tenth list again in different bytes, and it moved no figure on this page. The falling end moved 31 % → 26 %, the **ninth** movement of degree,
 and the certain count went **4 → 11**: seven names at once. The certain end has moved three times in
 this work's life, by **2**, **2** and **7**, which is the whole set.
 
@@ -1051,7 +1054,7 @@ disappearance only when the ship comes back **cannot see the ships that never co
 inherits that blindness from the instrument it reads and prints it on its own face rather than
 solving it.
 
-## THE STATE OF EVERY GUARD, SESSION 92 — printed because one of them is not green
+## THE STATE OF EVERY GUARD, SESSION 93 — printed because one of them is not green
 
 *`KRITIKER-89.md` condition 3, paid in session 89 and re-run here on tonight's object. The critic's
 words: the guards must be green, or their current output printed truthfully with each instrument's
@@ -1059,15 +1062,30 @@ pass criterion. **One of them is red on the page as committed, and this is where
 so before they run it.** Every figure below was taken tonight on the committed object; each line
 names the command and what makes it pass.*
 
+> **UNBUILT IN ONE SESSION AND REBUILT IN THE SAME ONE — session 93.** At the gate of 93 this table
+> was quoting five figures no instrument returned: `fold.mjs` at 130 where it printed 120, its
+> decomposition at 13 per stop where the output gave 12, its uncounted sightings at 70 and 50 where
+> the object gave 130 and 70, and `frame.mjs` at 596 px and 245 px where it printed 634 and 238.
+> Every one had moved because that session's own cuts changed the head, and the paragraph explaining
+> them was not re-run — `KRITIKER-93.md` condition 3 and `VERIFIER-93.md` blocking 4, found
+> independently. *"A condition that comes apart the moment nobody is re-checking it was never
+> load-bearing; it was a snapshot the house kept re-taking for its critics."* Two lines are added
+> below to make the snapshot harder to fake: **`renders.py`, the instrument that asks whether the
+> committed pictures are of the committed page** — red at that gate, the only guard this table had
+> never carried, and the reason both voices found the screen-reader record publishing three deleted
+> paragraphs — and **`turn.mjs`**. Every figure in the table was taken again after the repairs.
+
 | instrument | pass criterion | tonight, on this page | exit |
 |---|---|---|---|
 | `python3 data.py --check` | the rendered island is byte-identical to a fresh build from the captures | `island matches the captures` | **0** |
 | `node announce.mjs` | **none — it reports, it does not judge.** Its only non-zero exit is `2` when the browser library is missing | 1 live region · 4 writes in 30 s, 3 of them spoken · **11 figure rewrites** (the empty first paint and the run's ten states) · **and from tonight the spoken lines carry a number**: *"The run has finished. The figure now standing is this record's live one, 26 %–50 %"* (`DRAMATURG-92` cut 7). Three sentences still speak for ten states, and the comment that claimed otherwise is struck | **0** |
 | `node gaps.mjs` | **two rules.** No bar stands nearer another row's label, at either width — **and no tick label of the date axis overlaps the next one along, at any of seven widths from 360 to 1400 px** | 1.42 px own · 9.59 px next, **0 of 42 rows failing** · **axis: 0 colliding gaps at all seven widths, 4 labels shown below 700 px and 10 at and above, tightest 12.57 px** | **0** |
 | `node ../../../tools/tiers.mjs` | every printed figure sits in a scope carrying a tier word | pass, **and it cannot say the word is the RIGHT one — nor whether the figure is right at all: it passed the 100 % end at every gate this work has stood in** | **0** |
-| a browser sweep, 280→1920 px | the document never scrolls sideways | **no horizontal overflow at any width**, swept at every integer width below 700 px (`DRAMATURG-92` cut 1; it was 665 px wide at 481–664 px before) | **0** |
-| `node ../../../tools/frame.mjs` | the figure and the controls fit one screen at every stop, both widths, **and the hole shares the whole figure's frame at ≥ 268 px / 22 chips** | 365 px of 844 · **596 px of 900** — HOLDS · **245 px and 20 of 31 chips against the floor of 268 and 22 — UNDER** | **0** |
-| | *and the floor is UNDER because this session paid the orders that broke it* | It read 273 px at session 91, **266 — UNDER —** when the tenth list took the heading above the hole across a wrap, and **281** after four words were cut from that heading. It reads **245** now, and every pixel of the difference is itemised: the frame grew 186 → 206 px (`DRAMATURG-92` cuts 2 and 3 — the count that turns takes the fraction's weight, and the ceiling's own division reaches the face), the controls grew 134 → 151 px (cut 8 — 21 px targets to 27 against WCAG 2.2's 24), and the law under the figure grew 94 → 112 px because the arithmetic correction rewrote it. **Three orders of the voice that set this floor, plus the correction that blocked the work, put its own floor 23 px under.** The instrument reports and does not enforce, and this house does not get to resolve a conflict between two rulings of the same voice by choosing the one it prefers: it goes back to that voice, on this state, with the arithmetic beside it. | |
+| `node ../../../tools/width.mjs` | the document is never wider than its window, 280→1920 px in 5 px steps with the ends of any overflowing band walked at 1 px | **no width holds a document wider than its window — CLEAN.** The hand sweep of `DRAMATURG-92` cut 1 is a committed instrument since session 93, and it reproduces the defect it was written for: pointed at `b619af4` it returns `OVERFLOW 481→664 px (184 widths), worst +184 px` | **0** |
+| `node ../../../tools/turn.mjs` | **none — it reports.** What each rewritten node contributes to the beat where the run turns | at 1400 px: the hole's heading 26,333 px² · the seven new chips 18,703 · the run's line 17,068 · the share 11,665 · **the count that turns 8,958 — 21.3 % of the four nodes `DRAMATURG-92` counted, where that memo measured 8.0 %** | **0** |
+| `python3 ../../../tools/renders.py` | the committed `STATE-1.txt` and both PNGs were made from the committed `index.html` | **RENDERS MATCH THE PAGE.** It was **RED at the gate of session 93** — the pictures and the screen-reader record were of session 92's page and still published three paragraphs this session had cut, which is the failure `README` line 246 already banked in session 87 | **0** |
+| `node ../../../tools/frame.mjs` | the figure and the controls fit one screen at every stop, **at four viewports including two short ones**, **and the hole shares the whole figure's frame at ≥ 268 px / 22 chips** | 390×844: **331 px of 844** · 844×390: **205 of 390** · 1400×600: **228 of 600** · 1400×900: **654 of 900** — all HOLD · **the hole: 294 px and 24 of 31 chips against the floor of 268 and 22 — HOLDS** | **0** |
+| | *and the floor holds for the first time since session 91 — but the number it was failing on was never real* | It read 273 px at session 91, **266 — UNDER —** when the tenth list took the heading above the hole across a wrap, **281** after four words were cut from that heading, and **245**, then **238**, at the two gates since. `DRAMATURG-93.md` cut 1 proved those last two are **sampling artefacts worth up to 31 px**: the scan stepped `scrollHeight/240`, so its step size was set by the document's total height and it never landed on the one position that matters — the truth at both gates was **260 px and 22 chips**, and the chip half of the floor had been met all along. The scan walks every integer position since session 93. What actually pays the pixel half is that voice's cut 2: **thirteen words of static gloss** left the reserved frame, and the hole went 260 → **294 px**, 22 → **24 chips**. Shrinking the share — the prescription this house refused with `turn.mjs` — would have bought 7 px and no chip. | |
 | `node ../../../tools/fold.mjs` | **no must-hold element leaves the viewport, or stands on the material, at ≤ 480 px** | **130 failures — RED** | **1** |
 
 **`fold.mjs` is red and is published red.** What it reports is **the controls and the run's line
@@ -1077,12 +1095,19 @@ the growing names is covered at any stop or scroll position, which is the defect
 session 84 and which is fixed. **The count is 13 failures per stop — seven of the controls and six of
 the run's line, at 390 px, on all ten stops: 70 and 60, which is the 130.** It was 12 per stop
 (six and six) on nine stops in sessions 90 and 91, and 11 (six and five) before session 90, **and the
-difference is not the head.** The instrument samples nine scroll positions across the head's whole
+difference is not the head.** *(It fell to **120** — 12 per stop, six and six — at the state this
+work was frozen at for the gate of session 93, where this paragraph went on saying 13 and 130 and was
+caught by both blocking voices; then the same session's cuts shortened the head again and it returned
+to 130. A number that leaves and comes back inside one night is the clearest possible demonstration
+of what the rest of this paragraph says about it.)* The instrument samples nine scroll positions across the head's whole
 range; session 90's build added the proof block below the reserved space and tonight's list added
 seven names, so the range grew twice and the same nine positions sit further apart each time. **The
-figure and the hole's heading go off screen at those positions too — 70 and 50 more sightings — and
-the instrument does not count them: they are not on its must-hold list, and this row would read 250
-if they were.** *(The clause that followed — "the first night this
+figure and the hole's heading go off screen at those positions too — 130 and 80 more sightings on
+tonight's object — and the instrument does not count them: they are not on its must-hold list, and
+this row would read 340 if they were.** *(It read 70 and 50 when this sentence was written; both
+voices of session 93 recounted it on the frozen state and got 130 and 70, and the repairs of the same
+night took it to 130 and 80. The two counts move with the head, exactly like the 130 above, and this
+line is now taken from the instrument's own output every time it is quoted.)* *(The clause that followed — "the first night this
 number has held still" — was struck by `../VERIFIER-91.md` §3, blocking: it returned 88 on the
 committed pages of sessions 87 AND 88, reproduced at both hashes on the night of the strike, and this
 house had published that fact itself in `../VERIFIER-88.md` and `../DRAMATURG-88.md`. A novelty claim
