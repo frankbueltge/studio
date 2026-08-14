@@ -724,10 +724,21 @@ def build():
             # words beside a frame that prints it as a figure would be the doubling this
             # same memo struck twice tonight (its Cuts 4 and 5). Every stop carries the same
             # rule; the figure it applies to stands 861 px higher, where the eye is.
+            # AND IN SESSION 93 IT INHERITS THE ONE CLAUSE OF THE CUT PARAGRAPH THAT NO RUN
+            # PERFORMS. `DRAMATURG-92.md` cut 4 gave *what the ends of the figure can do*
+            # two ends — into the frame or off the page — and it comes off (see the block
+            # where `constant` stood). Three of its four clauses are performed by the
+            # corrected run, which now moves BOTH ends. The fourth is not performable and is
+            # not printed anywhere else on this face: the two counts the upper end divides
+            # are disjoint sets of ships, which is the whole finding of session 92's gate.
+            # It belongs in the sentence that defines the word *certain*, where a reader
+            # meets the term, and not 1,072 px below the figure where the paragraph stood.
             "hedge": (
                 "A list gives a ship's return only to the nearest week, so a name counts as "
                 "certain here only when every day of that week leaves it dark on this one; "
-                "the rest are possible."
+                "the rest are possible. And no ship this record could name on the day itself "
+                "is ever among the certain: to stand in a list dated that day it had to be "
+                "back, and to be certain it had to be dark."
             ),
             "heading_since": (
                 "NAMED ONLY BY LATER LISTS — nothing yet. The space below is the part of "
@@ -1063,36 +1074,45 @@ def build():
             # gone; the window sentence, which IS upstream's stated rule, carries the point
             # alone — and it carries it better, because a window is a rule about time and
             # the ships this method cannot see are the ones whose time has not come.
+            # CUT TO ITS BONES IN SESSION 93 — `DRAMATURG-92.md` cut 5: *"Two hundred words
+            # and 394 px explaining why the page does not use multiple systems estimation —
+            # a method the visitor has never heard of and has not asked about... Cut both;
+            # keep the final clause if anything."* **The two elements it names are held by a
+            # second blocking voice**: `KRITIKER-89.md` condition 2 ordered this face to name
+            # the method and name why it does not apply, and that condition was ruled BUILT
+            # at the gate of 91. A house that deletes what one blocking voice ordered because
+            # another priced it in pixels has not resolved a conflict, it has picked a
+            # favourite. So the cut is paid where the two orders do not collide: the
+            # quotation, its scope clause and the second element's 36-word citation line go —
+            # 200 words to 62, 394 px to what the guard now measures — and the method keeps
+            # its name, its reason and its address. Both voices see the result at tonight's
+            # gate and either may say it is not enough.
             "refused": (
                 "How the figure would move if the lists were longer is not estimated here — "
                 f"a longer list dated {day_month(DAY)} could carry names this record counts "
                 "as arriving late, and longer later lists add to the total, so both ends of "
                 "it grow. The method that would try has a name: multiple systems "
                 "estimation, which reads the overlaps between several incomplete lists to "
-                "say how many none of them caught. Its two-list form asks that “each "
-                "individual has an equal probability of being captured”, and the same page "
-                "says that with three or more lists such differences can be modelled "
-                "instead. Modelling them still needs a capture probability to exist, and "
-                "these lists give some ships none: a ship enters an edition only once its "
-                "return has fallen inside that edition's seven-day window, so a ship that "
+                "say how many none of them caught. It needs a capture probability behind "
+                "each ship, and "
                 # BUILT, NOT TYPED, FROM SESSION 92 — this read "in all nine of them" and
                 # the tenth list arrived tonight, so the sentence that argues this record
                 # cannot estimate was itself out of date with the record. Banked failure 17
                 # in its own costume: the count of lists is on disk, and a page that types
                 # it is a page that will be wrong on the next night nobody looks.
-                f"is still dark stands in no list, at no probability, in all "
-                f"{word(len(cut_rows))} of them. "
+                f"a ship that is still dark stands in none of the {word(len(cut_rows))} "
+                "lists this record holds. "
                 "That is why this page prints a band and no estimate."
             ),
-            # The address of the quoted requirement, on the face beside it, and the scope
-            # named in the same breath as the quotation — the correction above in one line.
+            # The method's address, on the face beside the claim about it. IT IS ONE CLAUSE
+            # NOW, NOT A SENTENCE — cut 5. What went with the quotation is the scope clause
+            # the quotation needed (`VERIFIER-90.md` blocking 1: the requirement quoted is a
+            # two-list assumption and this record holds ten lists, so a face quoting it as
+            # the reason hands a stranger its own refutation). Nothing on the face quotes
+            # that page any more; what stands is this house's own one-line characterisation
+            # of the method, and it carries the address a stranger checks it against.
             "refused_source": {
-                "text": (
-                    "SOURCED — the quoted requirement, and the sentence that scopes it to "
-                    "two lists, are both Amelia Hoover Green, “Multiple Systems Estimation: "
-                    "Stratification and Estimation”, Human Rights Data Analysis Group, "
-                    "20 March 2013, fetched first-hand: "
-                ),
+                "text": "SOURCED — the method, and its capture probabilities: ",
                 "url": "https://hrdag.org/2013/03/20/mse-stratification-estimation/",
             },
             # BELOW THE CONTROLS WITH THE REFUSAL: the confession, and the one printed
@@ -1281,12 +1301,18 @@ def build():
         # count stood below eleven, and the sentence faithfully described that. Both are
         # corrected together. The upper end falls on the FIRST vessel that becomes certain,
         # it has already fallen three times, and neither end is fixed any longer.
-        "constant": (
-            "Neither end of this figure can rise. Both fall: the lower when a later list adds "
-            "a ship that could have been dark on this day, the upper when a later list makes "
-            "one CERTAINLY dark on it — and no ship this record can name on the day itself is "
-            "ever among the certain."
-        ),
+        # AND IN SESSION 93 THE PARAGRAPH COMES OFF THE PAGE — `DRAMATURG-92.md` cut 4, which
+        # gave it two ends: *"Either it moves inside the reserved frame or it comes out."*
+        # Inside the frame it would push the hole further down, and the same memo's floor on
+        # the hole is already UNDER; so it comes out. What made the choice easy is the
+        # correction of the same night: three of its four clauses — neither end can rise, and
+        # the cause of each fall — are now PERFORMED by a run in which both ends fall, and a
+        # sentence describing a run to the reader watching it is what this memo has struck
+        # four times. The fourth clause is the finding of that gate and no run can perform it;
+        # it moves into `hedge`, the sentence that defines *certain*, 243 px higher and beside
+        # the term it is about. Measured on this object before the cut: 112 px of a 390 px
+        # phone frame, standing 1,072 px below the numeral it governed.
+        # The key is gone from the island for the reason the caption's is.
         # *"only the lower end has moved so far, and the next list can lower IT again"* —
         # struck, `DRAMATURG-89.md` cut 5. The run performs that clause at eight mutations
         # to zero: the falling end rewrites itself eight times while the standing one never
@@ -1349,9 +1375,18 @@ def build():
         # The mechanism, said once, under the thing that has just enacted it. The word
         # order matters: the reason comes first, so a reader who arrives after the run
         # has finished still gets why the number moved.
-        "caption": (
-            "A ship reaches the list only after it comes back, so a day that is over "
-            "keeps being answered."
+        # CUT IN SESSION 93 — `DRAMATURG-92.md` cut 6, the last of the four this house owed
+        # that memo. What stood here was the mechanism said a THIRD time: the gloss says it
+        # at y=98 (*"which name a ship only once it has come back"*), `.sd-because` says it
+        # at y=2,998 (*"reaches the instrument's daily list only when the ship comes back"*),
+        # and this said it at y=1,339 — 1,241 px from the first printing, where nobody is
+        # still looking for it. Of the three it is the one that is neither the definition nor
+        # the lede's argument, which is the memo's own reason and it is right. The key stays
+        # so that a session looking for where the caption went finds this block and not a
+        # gap: the KEY IS GONE FROM THE ISLAND and the element is gone from the face, because
+        # a key holding an empty string is a paragraph with margins pretending to be a cut.
+        # **The mechanism is not withdrawn** — it is printed twice, above and below.
+        # Its own history of cuts, kept because retired is not deleted:
             # AND ITS SECOND AND THIRD SENTENCES WENT IN SESSION 89, ordered by
             # `DRAMATURG-89.md` cut 4, both for the same reason and both refuted by the
             # object standing over them. *"Nine lists, nine answers, one day — the last of
@@ -1384,7 +1419,6 @@ def build():
             # A caption that stands under a moving number may not name one of the
             # number's values, or the page contradicts itself for four seconds of every
             # visit — and the frame is how that was caught, not the reading of the string.
-        ),
         # OWED ITEM (m), CUT TONIGHT after four sessions of standing. What stood here was
         # the head's own tier line and, after it, the command reproducing the stop being
         # looked at. Four voices asked for it: session 79's reader called it a developer

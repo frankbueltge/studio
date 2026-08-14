@@ -106,6 +106,69 @@ longer contained, printing a space of **−601 px**. The flag was removed rather
 than added; a control is taken with `git show HEAD:<path> > /tmp/x/index.html`
 and `--dir=/tmp/x`.
 
+## `width.mjs` — does the page ever stand wider than the window it is in?
+
+**Repairs:** banked failure 55, and it is the only one of this house's failures
+that was found by a voice sweeping by hand where no instrument of ours has ever
+looked. Session 86 stopped the work scrolling sideways inside a 390 px phone,
+scoped the repair to a 480 px media query, and wrote the reason into the file.
+The page went on standing 665 px wide at **every width from 481 to 664 px** —
+184 of them, overflowing by up to 38 % of the window — for six sessions, unseen
+because every guard and both committed renders read only the widths the
+pictures are taken at.
+
+```
+NODE_PATH=<global node_modules> node tools/width.mjs
+NODE_PATH=... node tools/width.mjs --dir=<a directory> --lo=280 --hi=1920 --step=5
+```
+
+Resizes one page across the band, asks at every width whether the document is
+wider than the window, walks the ends of any overflowing band at 1 px, and names
+the widest element crossing the window's right edge with its computed
+`min-width`. Exits 1 if any width overflows. A 280→1920 sweep in 5 px steps
+takes about 15 seconds.
+
+**Checked against the defect it was written for.** Pointed at the object session
+92 was frozen on (`git show b619af4:projects/season1/still-dark/index.html`), it
+returns `OVERFLOW 481→664 px (184 widths), worst +184 px` — the staging voice's
+hand sweep, reproduced by a machine. **The element it names is the widest
+symptom, not the proven cause**: there it names the `table`, where the voice,
+hit-testing every unclipped element, named a `span` with `min-width: 292.089px`
+inside that table. Both true; one of them is the thing to edit.
+
+**What it does not reach:** it reads the page at rest, at its first stop. A
+sideways scroll only a later stop can produce is outside it.
+
+## `turn.mjs` — at the beat where the run turns, what actually moves?
+
+**Repairs:** an order written in arithmetic that this house could otherwise
+only answer with a preference. `DRAMATURG-92.md` cut 2 measured the turning
+numeral at **8.0 % of everything that changes at the final beat** and ordered
+the frame reweighted around it; half was paid in session 92, and the owed half
+is a proportion judgement on a state that the same night's arithmetic
+correction had already changed.
+
+```
+NODE_PATH=<global node_modules> node tools/turn.mjs
+NODE_PATH=... node tools/turn.mjs --dir=<a directory> --width=390,1400
+```
+
+Reads every live node of the head and the hole at the second-to-last stop and
+again at the last, reports each rewritten node's area as a share of the total in
+motion, and prints the same figure over the four nodes that memo counted, so the
+two numbers are comparable without hand arithmetic.
+
+**Checked against the memo, and the limit of the check is printed in the file.**
+On the last committed object before session 92 it returns the share at
+**12,961 px²** and the fraction at **2,774 px²** — that memo's figures to the
+pixel — and it does **not** reproduce the other two, because the object the memo
+drove had the tenth list's island built into it and was never committed in that
+state. Two of four, on the two nodes that did not change between the states.
+
+**Area is a proxy for emphasis and this instrument says so:** a big pale word
+and a small black one can carry the same weight on a page. It answers the memo's
+question in the memo's units.
+
 ## `selftest.sh` — proof the instruments work
 
 ```
