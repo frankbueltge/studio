@@ -46,7 +46,17 @@ try {
 
 const FILE = pathToFileURL(path.resolve("index.html")).href;
 const CLICK_AT_MS = 3000;
-const WATCH_MS = 30000;
+// HOW LONG TO WATCH IS NOT TYPED HERE — SESSION 94. It was `30000`, set when the run was
+// shorter, and every list this work saves makes the run one beat longer. On the night the
+// eleventh list arrived the run ended at 30,175 ms: the closing sentence, the one that
+// speaks the live figure, landed 175 ms after this instrument had stopped listening, and
+// this file reported it as not spoken. That is the same defect as the `head -6` that cut
+// the band's condition off the face two sessions earlier (banked 56) — a constant a hand
+// has to advance, wearing a variable's name. The window is read from the page's own run
+// (`window.__sdRun`) and a margin is added to it; MARGIN_MS is the only figure left, and it
+// is a margin and not a duration.
+const MARGIN_MS = 2000;
+const watchMs = (run) => run.done_ms + MARGIN_MS;
 
 // The observer is installed before the page's own script runs, so nothing it records is
 // reconstructed after the fact: every entry below is a mutation this browser saw happen.
@@ -102,6 +112,11 @@ async function openPage(browser, reduced) {
   return { ctx, page };
 }
 
+// Filled from the page in block 1 and used by block 4, so both blocks watch the same
+// derived window and neither one holds a duration of its own.
+let RUN = null;
+let WATCH_MS = null;
+
 const browser = await chromium.launch();
 
 // ── 1 + 2 + 3 ── the untouched run ────────────────────────────────────────────────────
@@ -109,6 +124,16 @@ const browser = await chromium.launch();
   const { ctx, page } = await openPage(browser, false);
   const regions = await page.evaluate(() =>
     document.querySelectorAll("[aria-live],[role=status],[role=alert]").length);
+  RUN = await page.evaluate(() => window.__sdRun);
+  if (!RUN) {
+    console.error("the page does not publish its run (window.__sdRun) — nothing to derive a window from");
+    process.exit(3);
+  }
+  WATCH_MS = watchMs(RUN);
+  console.log(
+    `RUN, AS THE PAGE PUBLISHES IT  ${RUN.stops} stops · first dwell ${RUN.first_dwell_ms} ms · ` +
+    `beat ${RUN.beat_ms} ms · last state ${RUN.ends_ms} ms · closing sentence ${RUN.done_ms} ms`);
+  console.log(`WATCHED ................ ${WATCH_MS} ms (the run + ${MARGIN_MS} ms, derived, never typed)`);
   await page.waitForTimeout(WATCH_MS);
   const log = await page.evaluate(() => window.__log);
   console.log(`LIVE REGIONS ......... ${regions}`);

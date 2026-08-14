@@ -42,6 +42,7 @@ ON THE DAY
 +7 DAYS
 +8 DAYS
 +9 DAYS
++10 DAYS
 run it again
 
 WHAT THE LIST OF 4 AUG WAS THE TOP OF
@@ -52,11 +53,11 @@ The instrument says so itself, in its method sheet: “The index counts all exam
 
 SOURCED — the three figures the list published, read off the saved copies in the words the parser matched in them. The count of names, and the count of lists below, are this house's own.
 
-This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of twenty-two of the thirty-one names added since 4 August still reaches back to it. Both counts are this record's own: the names are OBSERVED in the saved copies, and how far each window reaches is DERIVED from the duration the list published. The first list that could add a name ruled out of that list is the one dated 12 August 2026, and it has arrived: nine of the thirty-one are ruled out of it.
+This record cannot tell a ship that came back later from a ship the list did not print: a list gives a return only to the nearest seven days, so the return window of twenty-two of the thirty-five names added since 4 August still reaches back to it. Both counts are this record's own: the names are OBSERVED in the saved copies, and how far each window reaches is DERIVED from the duration the list published. The first list that could add a name ruled out of that list is the one dated 12 August 2026, and it has arrived: thirteen of the thirty-five are ruled out of it.
 
-Each of the ten lists this record holds prints six to eleven names of the 189 to 265 disappearances it says it examined. This record has saved that block every night since the first.
+Each of the eleven lists this record holds prints six to eleven names of the 189 to 265 disappearances it says it examined. This record has saved that block every night since the first.
 
-How the figure would move if the lists were longer is not estimated here — a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists add to the total, so both ends of it grow. The method that would try has a name: multiple systems estimation, which reads the overlaps between several incomplete lists to say how many none of them caught. It needs a capture probability behind each ship, and this instrument's published rule — a list holds only returns from the last seven days — leaves a ship that is still dark at a probability of zero in every one of the ten lists this record holds. That is why this page prints a band and no estimate.
+How the figure would move if the lists were longer is not estimated here — a longer list dated 4 August could carry names this record counts as arriving late, and longer later lists add to the total, so both ends of it grow. The method that would try has a name: multiple systems estimation, which reads the overlaps between several incomplete lists to say how many none of them caught. It needs a capture probability behind each ship, and this instrument's published rule — a list holds only returns from the last seven days — leaves a ship that is still dark at a probability of zero in every one of the eleven lists this record holds. That is why this page prints a band and no estimate.
 
 SOURCED — the method and its capture probabilities: Amelia Hoover Green, Human Rights Data Analysis Group, 20 March 2013, https://hrdag.org/2013/03/20/mse-stratification-estimation/
 
@@ -64,7 +65,7 @@ DERIVED — this share, and the count of names certainly dark beside it, are wor
 
 “Intentional” is a machine estimate by Global Fishing Watch — a probability, not proof; the instrument makes no claim of illegality against any vessel or state, and neither do we.
 
-Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Thirty-one arrived later — twenty-six of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.
+Eleven of the ships this record can place in 4 August 2026 stood in the list dated 4 August itself. Thirty-five arrived later — thirty of them after this page had printed its figure. All three counts are DERIVED: worked out here, from saved copies of those lists.
 
 “The AIS picture of the seas looks complete. It is not — ships switch off their transponder on purpose to vanish.” — method sheet, The Ghost Fleet, frankbueltge.de. The instrument this page reads counts only disabling its own source classifies as high-confidence and intentional: at least 12 hours dark, at least 50 nautical miles offshore.
 
@@ -346,19 +347,44 @@ PNG
 Papua New Guinean EEZ
 dark 21–28 Jul → back 6–13 Aug
 
+ADDED BY THE LIST OF 14 AUG — ten days after the day (4 ships)
+
+this page first saw all four on 14 AUG
+
+SOUTHERN SEAS 301
+SLB
+26 d dark
+Kiribati EEZ (Gilbert Islands)
+dark 12–19 Jul → back 7–14 Aug
+CAPT SILVER
+USA
+23 d dark
+United States EEZ (Hawaii)
+dark 15–22 Jul → back 7–14 Aug
+TXORIARGI
+ESP
+22 d dark
+Seychellois EEZ
+dark 16–23 Jul → back 7–14 Aug
+JIN HUI NO.6
+CHN
+20 d dark
+Kiribati EEZ (Gilbert Islands)
+dark 18–25 Jul → back 7–14 Aug
+
 The share of this day's darkness that was knowable on the day itself — DERIVED, worked out here from the saved copies below, by the command beneath them:
 
 SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved copies of 3 lists —
 69 %–100 %
 11 of 11–16
 
-It fell forty-three points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day; ISABELLA and LUCKY TJ with the list of 12 AUG, eight days after the day; and SHILLA EXPLORER, KOO'S 102, KOYOMARU NO.88, FUKUICHIMARU NO,83, CAP.DANNY B, COTSWOLD and GOLDEN SAPPHIRE 88 with the list of 13 AUG, nine days after the day — twenty-six ships this record did not hold when the law below was printed.
+It fell forty-five points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day; ISABELLA and LUCKY TJ with the list of 12 AUG, eight days after the day; SHILLA EXPLORER, KOO'S 102, KOYOMARU NO.88, FUKUICHIMARU NO,83, CAP.DANNY B, COTSWOLD and GOLDEN SAPPHIRE 88 with the list of 13 AUG, nine days after the day; and SOUTHERN SEAS 301, CAPT SILVER, TXORIARGI and JIN HUI NO.6 with the list of 14 AUG, ten days after the day — thirty ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 30 saved copies of 10 lists —
-26 %–50 %
-11 of 22–42
+LIVE · as this record measures it now, from 31 saved copies of 11 lists —
+24 %–42 %
+11 of 26–46
 
-Forty-two ships could have been dark on 4 August 2026 and eleven of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 11–42, and the share runs from 11 of 42 to 11 of 22.
+Forty-six ships could have been dark on 4 August 2026 and fifteen of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 15–46, and the share runs from 11 of 46 to 11 of 26.
 
 The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.
 
@@ -399,21 +425,22 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list	disapp
 2026-08-13T04:36:40Z	200	31,635	1a3e76fe…	005c4e9f…	12 August 2026	10	257
 2026-08-13T17:02:56Z	200	31,661	f226ab8c…	96fc683e…	13 August 2026	11	265
 2026-08-14T04:36:51Z	200	31,715	ac75fe92…	96fc683e…	13 August 2026	11	265
+2026-08-14T20:45:26Z	200	31,891	c5727d4c…	53015a07…	14 August 2026	11	249
 
 the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -7
 every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
-day 2026-08-04  ·  30 capture(s) read, 10 distinct edition(s), 11 distinct content(s), 19 distinct bod(y/ies)
-  vessels dark on that day .......... 11–42 (certain–possible)
+day 2026-08-04  ·  31 capture(s) read, 11 distinct edition(s), 12 distinct content(s), 20 distinct bod(y/ies)
+  vessels dark on that day .......... 15–46 (certain–possible)
   knowable on the day, DERIVED ...... 11
   knowable on the day, OBSERVED ..... 11
-  SHARE knowable on the day ......... 26%–50%  (11 of 22–42)
-    (a ceiling from 10 edition(s), 30 capture(s): further nights can only add vessels to this day, so this share can only fall)
+  SHARE knowable on the day ......... 24%–42%  (11 of 26–46)
+    (a ceiling from 11 edition(s), 31 capture(s): further nights can only add vessels to this day, so this share can only fall)
     (both ends assume every vessel the day itself named was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.)
 
 verbatim, unedited
 
 Vessel names, flags, waters, durations and edition dates as printed by https://frankbueltge.de/ghost-fleet/, linked name by name.
 
-No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Forty-two is what this record can place in 4 August 2026, not what was on the sea that day.
+No number closes this. A method that counts a disappearance only when the ship comes back cannot see the ships that never come back. Forty-six is what this record can place in 4 August 2026, not what was on the sea that day.
