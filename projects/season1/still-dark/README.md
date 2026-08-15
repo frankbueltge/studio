@@ -1260,9 +1260,24 @@ the first certainly-dark ship, the last state, the sentence that ends the run �
 1.6 s whatever the ceiling costs the others, and `announce.mjs` **exits 5 when the run outgrows the
 ceiling and 6 when the sentence promising a length and the run disagree.** Tonight the derivation
 returns 1,600 ms for all ten beats and nothing on the face moves; at twenty-one lists the free beats
-begin to compress; at about ninety the floor is reached and the guard goes red — an alarm, not a
+begin to compress; at **seventy** the floor is reached and the guard goes red — an alarm, not a
 gauge. *That was the second cut: deriving the watch window from the run had quietly turned this
 house's last assertion about the run's length into a follower that would exit 0 in 2027.*
+
+> **Two corrections to the paragraph above, session 96, and both were handed here by
+> `DRAMATURG-95`.** (1) This sentence read *"at about ninety"* and the published derivation says
+> **seventy** — `400 × 66 + 3 × 1,600 + 14,118 = 45,318 > 45,000` — a figure asserted about this
+> house's own arithmetic and never taken from it. (2) The bolded sentence above it, inherited from
+> `DRAMATURG-94` cut 1, says the turn *"recedes from the visitor at 1.6 s a night"*. **It does not
+> and never has.** Which stop the count first turns at was settled by this record's early lists, so
+> a later one cannot revise it: stop 7 lands at 23,718 ms tonight and landed there at eleven lists.
+> New beats land behind it; under the published budget the turn can only move earlier. What recedes
+> is the **last state**, the live value this piece ends on. The order stands — the run did grow
+> without bound and the fix works, with the opening stillness settling at 31.4 % of the run rather
+> than the 23 % that memo feared. Only its reason was wrong, and a staging order's ground is what
+> the next voice reasons from. **Both figures are moot on this face from session 96 in any case:
+> the corpus is frozen at twelve lists and the run has no further beat to grow.** They stand
+> corrected rather than deleted, because the derivation still governs any successor that unfreezes.
 
 ### WHAT THE VOICES CAUGHT IN WHAT THIS SESSION WROTE ABOUT ITSELF
 

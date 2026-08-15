@@ -2,11 +2,11 @@
   "rendered_from": "index.html",
   "stopped_after": null,
   "at_step": null,
-  "index_sha256": "00e3faa2ba1b5350f7b57a559b419f31b74856e52fec9068377e413581536e1b",
+  "index_sha256": "e0f41e9105658901b03f1653df45e9f9a6963c780a1374a7582fe29cc44bad0b",
   "outputs": {
-    "STATE-1.txt": "d1a5a5e9179bd40c7a69de004fd2479cfa98238ec8a7c840f9762096b98b7624",
-    "render-1400.png": "ca1e8dc0a4f745379d27c600aa7d1e4e1f18adc61124d63b413dab865267632c",
-    "render-900.png": "76aca1c9690f3bb1365f1f28b6c9e27ef2501475b6788f0db5a5a2db0a8296ab"
+    "STATE-1.txt": "f1dae91249435796dd8c53d0608d301abcb5ed8c3eeac677412173fe8d1f6274",
+    "render-1400.png": "1f7a4468daa85043b342dfc2429ce38e9b3d146cd1a9251a0ccce2f2accecc75",
+    "render-900.png": "f0b99ba3b33d37bc4aaa872caabc64bf12ce97e51cf0e664c7eb1e1372b98b57"
   },
   "note": "Written by render.mjs. Checked by tools/renders.py, which recomputes every hash here from the committed files and exits non-zero if any render was made from a different index.html than the one committed beside it."
 }

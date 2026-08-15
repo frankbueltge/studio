@@ -65,7 +65,15 @@ const url = "file://" + join(dir, "index.html");
 // at. A guard's height list is a claim about where defects are allowed to live, exactly as
 // its width list is. The landscape phone is in the exit code now, and so is the short
 // desktop window.
+// FIVE SINCE SESSION 96, and the fifth is `DRAMATURG-95` cut 3's second half: 320×568 is a
+// phone this house's own predecessors drove at their first-encounter passes and it was on no
+// instrument's list at all. That memo measured it by hand at 428 of 568 and gave it nineteen
+// nights before it broke. The fuse itself is out — the work's corpus is frozen at session 96,
+// so no further list adds a button or a chip to this face and the span cannot grow by growth
+// again — but a viewport nobody measures is a viewport nobody measures, and the freeze is a
+// decision this house made, not a property of the file.
 const VIEWPORTS = [
+  { w: 320, h: 568, name: "small phone 320×568" },
   { w: 390, h: 844, name: "phone 390×844" },
   { w: 844, h: 390, name: "phone, turned 844×390" },
   { w: 1400, h: 600, name: "short window 1400×600" },
@@ -111,7 +119,10 @@ const BOTTOM = "#sd-arrive-controls";
 const HOLE_BOTTOM = "#sd-arrive-names-since";
 const PARTS = [
   [".sd-arrive-headline", "the frame: both figures and their clauses"],
-  ["#sd-arrive-constant", "what the ends of the figure can do"],
+  // `#sd-arrive-constant` stood here and printed `— px … — absent from the page` at every
+  // viewport, every night, in the report this house reads its floor off — `DRAMATURG-95`
+  // cut 6, and a dead selector in a guard's output is inert by the plainest definition.
+  // The element was withdrawn in session 83; the row outlived it by thirteen sessions.
   ["#sd-arrive-head-then", "the day's own heading"],
   ["#sd-arrive-names-then", "the names the day itself printed"],
   ["#sd-arrive-head-since", "the hole's heading"],
