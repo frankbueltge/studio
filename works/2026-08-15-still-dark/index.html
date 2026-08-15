@@ -337,11 +337,26 @@
      owed item (o)). It sits at the caption's size and not the foot's: a load-bearing
      caveat reads at the prominence of the material it qualifies, which is this house's
      own publishing condition applied to itself. */
+  /* DRAMATURG-95 CUT 1, taken. That memo measured every text block in the head and found
+     this page's own register: FULL ink is what this work gives its MATERIAL — the figure,
+     the ship names, the buttons, the proof command — and 55 % is what it gives everything
+     that TALKS ABOUT the material: the premise, both group headings, the standing note,
+     the proof lead, the run's own line. The caveat was the only commentary on this page set
+     in the material's ink, one type step ABOVE the premise it qualifies, 148 words and
+     168 px at 1400×900 — the tallest single element on the first screen, standing on the
+     lower edge of the 135 px of reserved emptiness that is this work's one image. *"The
+     emptiness is not open; it is a gap between two blocks, and the lower block is heavier
+     than the upper one."* Its trajectory: 75 px at 390 in session 92, 150 in 93, 318 at the
+     sixth gate — tripled in three sessions while three gates cut a sentence at a time.
+     It comes into the register. Not one clause is touched: the last one is the fact
+     voice's own `share_band_condition`, carried onto the face verbatim from the analysis
+     the stop was computed with, and rank is not content. */
   .sd-root .sd-arrive-hedge {
     margin: 0.2rem 0 0.5rem;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     line-height: 1.5;
     max-width: 84ch;
+    color: var(--sd-dim);
   }
   /* THE PROOF (session 90, `KRITIKER-89.md` condition 1). Set at the evidence's size and
      in its dim ink, because that is what it is — the two strings are for a hand and a
@@ -707,6 +722,98 @@
     letter-spacing: 0.02em;
   }
 
+  /* THE FREEZE AND THE FOUR DAYS (session 96). Two blocks, one rule between them: the
+     freeze line is commentary about this record and is set in the commentary register;
+     the four rows are MATERIAL — figures this instrument computed — and are set in the
+     page's ink, like the field rows and the ledger. Nothing new is introduced: the table
+     borrows the ledger's rules and the proof block's type, because a fifth visual idea on
+     a page this austere would be the decoration its own README forbids. */
+  .sd-root .sd-frozen {
+    margin: 1rem 0 0.2rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--sd-frame);
+    font-size: 0.72rem;
+    line-height: 1.55;
+    color: var(--sd-dim);
+    max-width: 82ch;
+  }
+  .sd-root .sd-compare { margin-top: 0.9rem; }
+  .sd-root .sd-compare-head {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    color: var(--sd-ink);
+    font-weight: 700;
+    margin: 0 0 0.35em;
+  }
+  .sd-root .sd-compare-lead {
+    font-size: 0.72rem;
+    line-height: 1.55;
+    color: var(--sd-dim);
+    max-width: 82ch;
+    margin: 0 0 0.6rem;
+  }
+  .sd-root .sd-compare-rows { display: grid; gap: 0.45rem; }
+  .sd-root .sd-compare-row {
+    display: grid;
+    grid-template-columns: minmax(11ch, max-content) minmax(9ch, max-content) 1fr;
+    gap: 0.2rem 1.6ch;
+    align-items: baseline;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--sd-rule);
+  }
+  .sd-root .sd-compare-day { font-size: 0.72rem; color: var(--sd-ink); }
+  .sd-root .sd-compare-share {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--sd-ink);
+  }
+  .sd-root .sd-compare-frac { font-size: 0.72rem; color: var(--sd-dim); }
+  /* The published day is marked in words and not by colour or weight alone: a mark the
+     ear cannot hear is a mark half this page's readers do not get (banked failure 12). */
+  .sd-root .sd-compare-mark {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    color: var(--sd-ink);
+    font-weight: 700;
+  }
+  /* What the row's numerator counts, and where this record starts relative to its day.
+     Commentary register — it talks about the material rather than being it. */
+  .sd-root .sd-compare-prov {
+    grid-column: 1 / -1;
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--sd-dim);
+    max-width: 82ch;
+  }
+  .sd-root .sd-compare-check {
+    grid-column: 1 / -1;
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--sd-dim);
+    overflow-wrap: anywhere;
+  }
+  .sd-root .sd-compare-check code { color: var(--sd-ink); }
+  .sd-root .sd-compare-finding {
+    margin: 0.75rem 0 0;
+    padding-left: 1.4ch;
+    border-left: 2px solid var(--sd-frame);
+    font-size: 0.78rem;
+    line-height: 1.55;
+    max-width: 82ch;
+  }
+  .sd-root .sd-compare-tier {
+    margin: 0.3rem 0 0;
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--sd-dim);
+    max-width: 82ch;
+  }
+  @media (max-width: 30rem) {
+    .sd-root .sd-compare-row { grid-template-columns: 1fr auto; }
+    .sd-root .sd-compare-frac { grid-column: 1 / -1; }
+  }
+
   /* the evidence: the command, its verbatim output, and the capture ledger */
   .sd-root .sd-evidence { margin-top: 1rem; }
   .sd-root .sd-cmd-line {
@@ -798,6 +905,77 @@
   "day": {
     "iso": "2026-08-04",
     "printed": "4 AUGUST 2026"
+  },
+  "frozen": {
+    "as_of": "2026-08-15T04:36:57Z",
+    "captures": 32,
+    "editions": 12,
+    "window": [
+      "2026-08-04",
+      "2026-08-15"
+    ],
+    "line": "This page is frozen. Its corpus is the thirty-two saved copies this record held at 2026-08-15T04:36:57Z, carrying twelve lists dated 4 August 2026 to 15 August 2026. The instrument goes on publishing daily whatever this page does; any list saved here after that instant is published as a dated addendum beside this work, in ADDENDA.md, and none of them moves a number on this face. The command that returns the live reading is printed with the others below. A figure that changes while it is being read cannot be checked against anything."
+  },
+  "compare": {
+    "heading": "THE SAME MEASUREMENT ON FOUR DAYS OF THE SAME SEA, EACH READ WHEN THIS RECORD FIRST HELD THE LIST DATED EIGHT DAYS AFTER IT",
+    "maturity_days": 8,
+    "lead": "The day above has been open for eleven days. These four are the same instrument on four consecutive days, each stopped at the same point in its own life — the instant this record first held the list dated eight days after it. Every row is a committed script and the instant printed under it, and every row says how many of its day's names this record was seeing for the first time.",
+    "rows": [
+      {
+        "day": "2026-08-04",
+        "day_printed": "4 August 2026",
+        "as_of": "2026-08-12T18:23:12Z",
+        "share": "31 %–73 %",
+        "fraction": "11 of 15–35",
+        "numerator": 11,
+        "names_in_list": 11,
+        "new_to_record": 11,
+        "provenance": "eleven names in that day's own list, all eleven new to this record — this record begins here",
+        "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-12T18:23:12Z",
+        "published": true
+      },
+      {
+        "day": "2026-08-05",
+        "day_printed": "5 August 2026",
+        "as_of": "2026-08-13T17:02:56Z",
+        "share": "10 %–25 %",
+        "fraction": "3 of 12–31",
+        "numerator": 3,
+        "names_in_list": 8,
+        "new_to_record": 3,
+        "provenance": "eight names in that day's own list, three of them new to this record",
+        "check": "python3 projects/season1/capture/day.py 2026-08-05 --as-of 2026-08-13T17:02:56Z",
+        "published": false
+      },
+      {
+        "day": "2026-08-06",
+        "day_printed": "6 August 2026",
+        "as_of": "2026-08-14T20:45:26Z",
+        "share": "6 %–15 %",
+        "fraction": "2 of 13–32",
+        "numerator": 2,
+        "names_in_list": 7,
+        "new_to_record": 2,
+        "provenance": "seven names in that day's own list, two of them new to this record",
+        "check": "python3 projects/season1/capture/day.py 2026-08-06 --as-of 2026-08-14T20:45:26Z",
+        "published": false
+      },
+      {
+        "day": "2026-08-07",
+        "day_printed": "7 August 2026",
+        "as_of": "2026-08-15T04:36:57Z",
+        "share": "3 %–12 %",
+        "fraction": "1 of 8–33",
+        "numerator": 1,
+        "names_in_list": 6,
+        "new_to_record": 1,
+        "provenance": "six names in that day's own list, one of them new to this record",
+        "check": "python3 projects/season1/capture/day.py 2026-08-07 --as-of 2026-08-15T04:36:57Z",
+        "published": false
+      }
+    ],
+    "finding": "These are four readings of this record, not four readings of the sea. A day's numerator counts only the names this record met for the first time in that day's own list, and 4 August 2026 is the one day here whose record begins on itself — so every name it printed counts for it, while the days after it are left with what the earlier lists had not already spent. Read that way the comparison says one thing, and says it against the page above: the day this page publishes is the most favourable day in its own archive. How much of the fall between these rows is the sea and how much is where this record opens, these captures cannot separate.",
+    "tier": "DERIVED from the OBSERVED captures by the same instrument as the figure above, at the instants printed. No new night of waiting and no new code: four runs of a committed script. The rows are exact and the comparison between them is not clean — the line above says why, and nothing here claims a factor."
   },
   "method": {
     "source": "https://frankbueltge.de/werke/ghost-fleet/",
@@ -947,8 +1125,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 6 AUG, two days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 6 AUG, two days after the day had ended.",
+        "when_tail": "counting the lists up to 6 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 6 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 11 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — five ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -972,8 +1150,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 7 AUG, three days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 7 AUG, three days after the day had ended.",
+        "when_tail": "counting the lists up to 7 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 7 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 11 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — six ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1005,8 +1183,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 8 AUG, four days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 8 AUG, four days after the day had ended.",
+        "when_tail": "counting the lists up to 8 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 8 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 11 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — nine ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1046,8 +1224,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 9 AUG, five days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 9 AUG, five days after the day had ended.",
+        "when_tail": "counting the lists up to 9 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 9 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 11 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — fourteen ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1091,8 +1269,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 10 AUG, six days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 10 AUG, six days after the day had ended.",
+        "when_tail": "counting the lists up to 10 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 10 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 11 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — twenty ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1120,8 +1298,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 11 AUG, seven days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 11 AUG, seven days after the day had ended.",
+        "when_tail": "counting the lists up to 11 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 11 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 13 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — twenty-two ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1149,8 +1327,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 12 AUG, eight days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 12 AUG, eight days after the day had ended.",
+        "when_tail": "counting the lists up to 12 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 12 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 15 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — twenty-four ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1198,8 +1376,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 13 AUG, nine days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 13 AUG, nine days after the day had ended.",
+        "when_tail": "counting the lists up to 13 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 13 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 22 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — thirty-one ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1235,8 +1413,8 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 14 AUG, ten days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 14 AUG, ten days after the day had ended.",
+        "when_tail": "counting the lists up to 14 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 14 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 26 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — thirty-five ships that could have been dark on the day and that nobody could have had on it."
       },
@@ -1268,16 +1446,16 @@
           }
         ],
         "when_fixed": "of 4 AUGUST 2026’s darkness was knowable on the day itself,",
-        "when_tail": "counting the lists up to 15 AUG, eleven days after the day had ended.",
-        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 15 AUG, eleven days after the day had ended.",
+        "when_tail": "counting the lists up to 15 AUG.",
+        "when": "of 4 AUGUST 2026’s darkness was knowable on the day itself, counting the lists up to 15 AUG.",
         "hedge": "A list gives a ship's return only to the nearest week, so a name counts as certain here only when every day of that week leaves it dark on this one; the rest are possible. No name this record could already have on the day itself can be certain: the earliest end of a certain name's week falls seven days before the list that first printed it, so its first list is dated at least a week after the day. And the upper end assumes nothing: whatever became of the 11 names the day itself printed, no case this record allows puts the share above 11 of 29 — that end is a ceiling over all of them. The lower end does assume every one of those 11 was in fact dark on the day; not one of them is certain, so unconditionally the share's floor is 0.",
         "heading_since": "NAMED ONLY BY LATER LISTS — thirty-eight ships that could have been dark on the day and that nobody could have had on it."
       }
     ],
     "run_states": {
       "waiting": "This figure runs by itself: twelve states over about thirty-two seconds. Any button above holds a state and stops the run.",
-      "started": "The run has started: the figure is falling from the day's own answer to this record's live one.",
-      "done": "The run has finished. The figure now standing is this record's live one, {figure} — press any button to go back through it.",
+      "started": "The run has started: the figure is falling from the day's own answer to the last one this page publishes.",
+      "done": "The run has finished. The figure now standing is the last this page publishes, {figure} — press any button to go back through it.",
       "stopped": "You stopped the run at {stop}, {figure}. Press “{replay}” to see it whole.",
       "held": "Holding {stop}, {figure}. Nothing is playing; press “{replay}” to run it.",
       "rest": "Your machine asks for no motion, so nothing runs: this is the day's own answer, and each button above holds a later state."
@@ -2281,7 +2459,7 @@
       "captures": 5
     },
     "now": {
-      "status": "LIVE",
+      "status": "PUBLISHED",
       "figure": "22 %–38 %",
       "figure_falling": "22 %",
       "figure_fixed": "–38 %",
@@ -2627,10 +2805,14 @@
   "commands": [
     {
       "label": "the day",
-      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 | head -7"
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-15T04:36:57Z | head -7"
     },
     {
       "label": "every ship, and when it arrived",
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-15T04:36:57Z"
+    },
+    {
+      "label": "the same day live — this page does not publish this",
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04"
     },
     {
@@ -2929,6 +3111,26 @@
     <p class="sd-fall-line sd-bandnote" id="sd-bandnote"></p>
     <p class="sd-fall-line" id="sd-held"></p>
     <blockquote class="sd-quoted" id="sd-quoted"></blockquote>
+  </section>
+
+  <!-- KRITIKER-95 CONDITION 2, built here, and the corpus freeze that had to come with it.
+       The critic's block: this work publishes one day, and the one day it publishes is the
+       single day in its own record whose measurement argues its own thesis least well —
+       because the numerator is pinned from below by where the record BEGINS. Four days of
+       the same sea, each read at the same age, differ by a factor of ten, and every one of
+       them was already sitting in `../captures/` reachable by a script this house wrote
+       three weeks ago. This is the machine's REPETITION limb, ruled failing at two gates.
+       It costs four runs of a committed instrument and not one night of new waiting.
+       The freeze stands above it because the freeze is what makes the comparison readable:
+       a page whose corpus grows every night has no fixed age to compare anything at. -->
+  <p class="sd-frozen" id="sd-frozen"></p>
+
+  <section class="sd-compare">
+    <p class="sd-compare-head" id="sd-compare-head"></p>
+    <p class="sd-compare-lead" id="sd-compare-lead"></p>
+    <div class="sd-compare-rows" id="sd-compare-rows"></div>
+    <p class="sd-compare-finding" id="sd-compare-finding"></p>
+    <p class="sd-compare-tier" id="sd-compare-tier"></p>
   </section>
 
   <section class="sd-evidence">
@@ -3715,9 +3917,14 @@
   fellEl.className = "sd-fall-line sd-fell";
   fellEl.textContent = data.fall.moved;
   sharesEl.appendChild(fellEl);
+  // WAS "as this record measures it now" until the gate of session 96. `VERIFIER-96`
+  // finding 4: this page's corpus is frozen, so what stands here is what this record
+  // measured AT the freeze, and from the thirteenth list onward "now" is false — while
+  // eleven lines below, `#sd-frozen` says the page is frozen. The two sentences could not
+  // both be true for long, and the one with the fuse in it is this one.
   sharesEl.appendChild(shareRow(
     data.fall.now,
-    "as this record measures it now, " + from(data.fall.now) + " —",
+    "as this page publishes it, frozen, " + from(data.fall.now) + " —",
     "sd-share-now"
   ));
 
@@ -3730,6 +3937,56 @@
   when.className = "sd-quoted-when";
   when.textContent = data.fall.published_when + ".";
   q.appendChild(when);
+
+  // ---- the freeze, and the four days --------------------------------------
+  // Every string and every figure below comes out of the island; nothing is composed
+  // here. The mark on the published day is a WORD and not a colour, so a reader who
+  // hears this page is told which row is the one above (banked failure 12).
+  document.getElementById("sd-frozen").textContent = data.frozen.line;
+  document.getElementById("sd-compare-head").textContent = data.compare.heading;
+  document.getElementById("sd-compare-lead").textContent = data.compare.lead;
+  var cmpEl = document.getElementById("sd-compare-rows");
+  data.compare.rows.forEach(function (r) {
+    var row = document.createElement("div");
+    row.className = "sd-compare-row";
+    var day = document.createElement("span");
+    day.className = "sd-compare-day";
+    day.textContent = r.day_printed;
+    var share = document.createElement("span");
+    share.className = "sd-compare-share";
+    share.textContent = r.share;
+    var frac = document.createElement("span");
+    frac.className = "sd-compare-frac";
+    frac.textContent = r.fraction;
+    // DRAMATURG-96 BLOCKING CUT 1: the mark stood at the END of the fraction, so a reader
+    // met the day, the band and the fraction before learning which row was the page's own
+    // — and in the screen-reader record it arrived after all three. It marks the DAY now,
+    // where identity belongs, and it is a word rather than a weight so the ear gets it too.
+    if (r.published) {
+      var mark = document.createElement("span");
+      mark.className = "sd-compare-mark";
+      mark.textContent = " — THE DAY THIS PAGE PUBLISHES";
+      day.appendChild(mark);
+    }
+    // VERIFIER-96 finding 2, built into the row rather than answered in prose: what the
+    // numerator of this row actually counts, and whether this record began before its day.
+    var prov = document.createElement("span");
+    prov.className = "sd-compare-prov";
+    prov.textContent = r.provenance;
+    var chk = document.createElement("span");
+    chk.className = "sd-compare-check";
+    var code = document.createElement("code");
+    code.textContent = "$ " + r.check;
+    chk.appendChild(code);
+    row.appendChild(day);
+    row.appendChild(share);
+    row.appendChild(frac);
+    row.appendChild(prov);
+    row.appendChild(chk);
+    cmpEl.appendChild(row);
+  });
+  document.getElementById("sd-compare-finding").textContent = data.compare.finding;
+  document.getElementById("sd-compare-tier").textContent = data.compare.tier;
 
   // ---- the evidence -------------------------------------------------------
   var cmdsEl = document.getElementById("sd-cmds");

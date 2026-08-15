@@ -1,12 +1,12 @@
 {
-  "rendered_from": "index.html",
+  "rendered_from": "../../../works/2026-08-15-still-dark/index.html",
   "stopped_after": null,
   "at_step": null,
-  "index_sha256": "00e3faa2ba1b5350f7b57a559b419f31b74856e52fec9068377e413581536e1b",
+  "index_sha256": "1ec56b56b332ba5939f61df88e7144570d3a3fd9fb5b652e57fac8494dd31c87",
   "outputs": {
-    "STATE-1.txt": "d1a5a5e9179bd40c7a69de004fd2479cfa98238ec8a7c840f9762096b98b7624",
-    "render-1400.png": "ca1e8dc0a4f745379d27c600aa7d1e4e1f18adc61124d63b413dab865267632c",
-    "render-900.png": "76aca1c9690f3bb1365f1f28b6c9e27ef2501475b6788f0db5a5a2db0a8296ab"
+    "STATE-1.txt": "d0e0ecfe6f2ef35c77b17df4370db793cc042a6d973a5eaaee7b34bc8ee6b573",
+    "render-1400.png": "0c0d0f4e982672e33f2aaf6e90c1992b9d55237e5b22a1a2c9a659235f585cb6",
+    "render-900.png": "ecaab1ffe4c6381ce9274881026cea50a09568daa968b4e391744e124291b8c3"
   },
   "note": "Written by render.mjs. Checked by tools/renders.py, which recomputes every hash here from the committed files and exits non-zero if any render was made from a different index.html than the one committed beside it."
 }

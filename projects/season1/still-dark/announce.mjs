@@ -32,7 +32,7 @@
 // a dependency of the WORK — index.html is one self-contained file with no runtime
 // dependency at all. This is the house's own check on itself.
 import { createRequire } from "node:module";
-import { pathToFileURL } from "node:url";
+import { pathToFileURL, fileURLToPath } from "node:url";
 import path from "node:path";
 
 const require = createRequire(import.meta.url);
@@ -44,7 +44,13 @@ try {
   process.exit(2);
 }
 
-const FILE = pathToFileURL(path.resolve("index.html")).href;
+// The work graduated at its premiere (session 96) and this guard did not follow it: the page
+// is read from `works/2026-08-15-still-dark/`, resolved from THIS FILE rather than from the
+// working directory, so the instrument no longer depends on where a hand happens to stand.
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+const FILE = pathToFileURL(
+  path.join(HERE, "..", "..", "..", "works", "2026-08-15-still-dark", "index.html"),
+).href;
 const CLICK_AT_MS = 3000;
 // HOW LONG TO WATCH IS NOT TYPED HERE — SESSION 94. It was `30000`, set when the run was
 // shorter, and every list this work saves makes the run one beat longer. On the night the

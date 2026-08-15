@@ -51,7 +51,11 @@ const arg = (k, d) => {
   const hit = argv.find((a) => a.startsWith(`--${k}=`));
   return hit ? hit.slice(k.length + 3) : d;
 };
-const dir = resolve(arg("dir", "projects/season1/still-dark"));
+// The work graduated to `works/` at its premiere, session 96. The default follows it;
+// `--dir=` still points this instrument at any built copy, which is how the retired
+// states at earlier hashes are still measurable.
+const WORK_DIR = "works/2026-08-15-still-dark";
+const dir = resolve(arg("dir", WORK_DIR));
 const url = "file://" + join(dir, "index.html");
 
 // FOUR VIEWPORTS SINCE SESSION 93, AND THE TWO NEW ONES ARE SHORT — `DRAMATURG-93.md`
@@ -65,7 +69,15 @@ const url = "file://" + join(dir, "index.html");
 // at. A guard's height list is a claim about where defects are allowed to live, exactly as
 // its width list is. The landscape phone is in the exit code now, and so is the short
 // desktop window.
+// FIVE SINCE SESSION 96, and the fifth is `DRAMATURG-95` cut 3's second half: 320×568 is a
+// phone this house's own predecessors drove at their first-encounter passes and it was on no
+// instrument's list at all. That memo measured it by hand at 428 of 568 and gave it nineteen
+// nights before it broke. The fuse itself is out — the work's corpus is frozen at session 96,
+// so no further list adds a button or a chip to this face and the span cannot grow by growth
+// again — but a viewport nobody measures is a viewport nobody measures, and the freeze is a
+// decision this house made, not a property of the file.
 const VIEWPORTS = [
+  { w: 320, h: 568, name: "small phone 320×568" },
   { w: 390, h: 844, name: "phone 390×844" },
   { w: 844, h: 390, name: "phone, turned 844×390" },
   { w: 1400, h: 600, name: "short window 1400×600" },
@@ -111,7 +123,10 @@ const BOTTOM = "#sd-arrive-controls";
 const HOLE_BOTTOM = "#sd-arrive-names-since";
 const PARTS = [
   [".sd-arrive-headline", "the frame: both figures and their clauses"],
-  ["#sd-arrive-constant", "what the ends of the figure can do"],
+  // `#sd-arrive-constant` stood here and printed `— px … — absent from the page` at every
+  // viewport, every night, in the report this house reads its floor off — `DRAMATURG-95`
+  // cut 6, and a dead selector in a guard's output is inert by the plainest definition.
+  // The element was withdrawn in session 83; the row outlived it by thirteen sessions.
   ["#sd-arrive-head-then", "the day's own heading"],
   ["#sd-arrive-names-then", "the names the day itself printed"],
   ["#sd-arrive-head-since", "the hole's heading"],
@@ -245,8 +260,26 @@ for (const vp of VIEWPORTS) {
     const live = holes[holes.length - 1];
     const pxLo = Math.min(...holes.map((h) => h.px));
     const pxHi = Math.max(...holes.map((h) => h.px));
-    const floorPx = vp.w <= 480 ? 268 : null;
-    const floorChips = vp.w <= 480 ? 22 : null;
+    // THE FLOOR IS KEYED TO THE VIEWPORT IT WAS READ AT, AND NOT TO A WIDTH — corrected at
+    // the gate of session 96, on `VERIFIER-96` finding 5 and `DRAMATURG-96` blocking cut 2,
+    // and it is banked failure 58's shape a second time: a rule keyed to width holding a
+    // fact about height. The predicate was `vp.w <= 480`, and the moment a 320×568 phone
+    // joined this list the instrument printed `UNDER` against a floor that viewport cannot
+    // reach at any scroll position under any staging. From its own budget there: figure-top
+    // to controls-bottom is 411 px, then the day's own heading 30, the names the day itself
+    // printed 135, the hole's heading 59 — so the hole's first pixel stands at least 635 px
+    // below the figure's top, inside a 568 px screen, before a single margin. The measured
+    // 0 px is not a shortfall, it is the only value the geometry permits, and a guard that
+    // prints a failure a work cannot fix is a guard that will be ignored.
+    //
+    // 268 px / 22 chips is an empirical high-water mark taken at 390×844 in session 89, and
+    // it is a floor THERE. Everywhere else the span is a measurement, printed and unjudged.
+    // The instrument's own old warrant — *"it cannot drift upward … and the viewport does
+    // not change size"* — was falsified by adding a viewport, which is worth more than the
+    // floor it cost.
+    const floored = vp.w === 390 && vp.h === 844;
+    const floorPx = floored ? 268 : null;
+    const floorChips = floored ? 22 : null;
     const under =
       floorPx !== null && (live.px < floorPx || live.chips < floorChips);
     console.log(
@@ -254,9 +287,17 @@ for (const vp of VIEWPORTS) {
         `${pxLo === pxHi ? pxHi : `${pxLo}–${pxHi}`} px, ` +
         `${live.chips} of ${live.of} chips at the last stop` +
         (floorPx === null
-          ? ""
+          ? " — measured, not floored: the floor is session 89's reading at 390×844 and does not travel"
           : ` — floor ${floorPx} px / ${floorChips} chips — ${under ? "UNDER" : "HOLDS"}`),
     );
+    // The layout fact the new viewport surfaced, published rather than scored: at 320×568
+    // the figure and the hole never share a screen. `DRAMATURG-96` ruled it not blocking.
+    if (live.px === 0) {
+      console.log(
+        `    at ${vp.w}×${vp.h} the figure and the hole do not share a screen at all — ` +
+          `published as a fact about this staging at this viewport, not as a failure`,
+      );
+    }
   }
 
   // THE BUDGET, AND WHICH PARTS THE FRAME ACTUALLY CONTAINS. The first version of this

@@ -29,11 +29,13 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.normpath(os.path.join(HERE, "..", "..", ".."))
+WORK_DIR = os.path.join(REPO, "works", "2026-08-15-still-dark")
 CAPTURE_DIR = os.path.normpath(os.path.join(HERE, "..", "capture"))
 CAPTURES = os.path.normpath(os.path.join(HERE, "..", "captures"))
 sys.path.insert(0, CAPTURE_DIR)
 
-from day import analyse, bands, index, load  # noqa: E402
+from day import analyse, bands, index, load, vessel_key  # noqa: E402
 from edition import content_sha256  # noqa: E402
 
 # Which lede the build uses. The arms of session 78's panel differ in this string and in
@@ -53,6 +55,32 @@ CUTS = True
 
 DAY = "2026-08-04"
 DAY_PRINTED = "4 AUGUST 2026"
+
+# THE CORPUS FREEZE — the architect's amendment of 2026-08-15, first application in this
+# house: *"Where a work's figure rests on sources that keep arriving, the first gate fixes
+# the corpus: the work states its window and how many sources it holds, and everything
+# landing afterwards becomes a dated addendum beside the work — never a silent move of the
+# face. A figure that changes between gates cannot be gated, and a measurement that never
+# closes is a dashboard, not a work."*
+#
+# This is the fetch instant of the capture that carried the twelfth list, read off
+# `../captures/2026-08-15T043657Z.json` by `load()` and not typed from a head. It is the one
+# constant this freeze needs, and every count that reaches the face — 32 copies, 12 lists,
+# the window's two ends, the share — is DERIVED at it. So a thirteenth list changes nothing
+# on this face, `--check` keeps passing on the night one lands, and the work stops being a
+# thing that moves while it is being judged. Later lists are published as dated addenda in
+# `ADDENDA.md` beside this work, where they can be read against a face that stands still.
+FREEZE_AS_OF = "2026-08-15T04:36:57Z"
+
+# KRITIKER-95 CONDITION 2 — the machine's *repetition* limb, ruled failing at two gates and
+# paid here. Four days of the same sea, each read at the same age: for a day D, the instant
+# this record first held the list dated D+8. No instant is typed — each is looked up in the
+# captures below. The published day is the top row, and it is the one day in this record
+# whose measurement flatters this work's own thesis least badly; the other three say what a
+# day of this sea actually looks like. Nothing here needs a night of waiting or a line of
+# new code: the same committed instrument, run four times.
+COMPARE_DAYS = ["2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07"]
+COMPARE_MATURITY_DAYS = 8
 
 # The commit that first carried the struck figure and the law printed beside it. Its
 # timestamp is read from git, never typed: this house has already put one publication
@@ -190,9 +218,27 @@ def commit_time(ref):
 
 
 def run_day(*args):
-    """The verbatim output the page prints, produced by the script the page names."""
+    """The verbatim output the page prints, produced by the script the page names.
+
+    FROZEN AT THE GATE OF 96, AND THE LEAK IT CLOSES WAS REAL. `build()` froze every
+    `load(CAPTURES)` and this function was not one of them: it shelled out to `day.py` with
+    no instant at all, so the `output` field — the block printed under the words *verbatim,
+    unedited* — and the `head -N` beside it were LIVE while every other figure on the face
+    was frozen. A synthetic thirteenth list dropped into a copy of this repository took that
+    block to `21 %–34 % (11 of 32–52)` and took `data.py --check` to exit 1, while the rest
+    of the page stood at `22 %–38 % (11 of 29–49)`. One face, two bands for one day, one of
+    them captioned *verbatim*: the exact defect banked at session 85. Found independently by
+    the conductor's own freeze test and by `VERIFIER-96` finding 1, which is the one that
+    counts, because it found it in the committed source and not in a plan.
+
+    The instant goes in here AND into the commands the face prints, because a command a
+    stranger copies has to return the number they are looking at. The live command is not
+    withdrawn — it is printed beside them, labelled as the reading this page does not
+    publish, which is what `ADDENDA.md` is for.
+    """
     out = subprocess.run(
-        [sys.executable, os.path.join(CAPTURE_DIR, "day.py"), DAY, *args],
+        [sys.executable, os.path.join(CAPTURE_DIR, "day.py"), DAY,
+         "--as-of", FREEZE_AS_OF, *args],
         capture_output=True, text=True, check=True,
     )
     return out.stdout
@@ -361,12 +407,89 @@ def seen_all(rows):
     return f"this page first saw all {WORDS.get(len(rows), str(len(rows)))} on {when}"
 
 
+def matched_maturity():
+    """Four days of the same sea, each measured at the same age. KRITIKER-95 condition 2.
+
+    The age is fixed and the instants are looked up, never typed: for a day D, the instant
+    is the earliest fetch in this record of a capture whose EDITION DATE is D + 8 days —
+    the moment this record first held the list dated eight days after the day. Every row
+    is the same committed instrument (`day.py`) run at that instant, and every row prints
+    the command that reproduces it.
+
+    Why the ages must match. The published day has been open for eleven days and the
+    others for fewer, so their raw shares are not comparable at all; read at one age they
+    are. This is the sentence the face has always asserted and never shown — *"a day of
+    the sea is nearly empty on the day itself and keeps filling for weeks afterwards"* —
+    and it is the one thing this apparatus can do that a day-by-day reading cannot.
+
+    Nothing is claimed beyond four days of one record: this is the whole of what these
+    captures can carry at a matched age, and the row count is a fact about the corpus, not
+    a sample size chosen to make a point.
+    """
+    caps_all = load(CAPTURES, as_of=FREEZE_AS_OF)
+    rows_all = index(caps_all)
+    rows = []
+    for d in COMPARE_DAYS:
+        t = datetime.date.fromisoformat(d)
+        target = (t + datetime.timedelta(days=COMPARE_MATURITY_DAYS)).isoformat()
+        instants = sorted(
+            c["fetch"]["fetched_at_utc"] for c in caps_all if c["edition_date"] == target
+        )
+        if not instants:
+            # A day whose D+8 list this record never captured cannot be read at this age,
+            # and is dropped rather than read at another one. It has never happened; if it
+            # does, the row is missing from the face and this comment is why.
+            continue
+        as_of = instants[0]
+        a = analyse(d, load(CAPTURES, as_of=as_of))
+        lo, hi = a["share_knowable_OBSERVED"]
+        b = a["vessels_dark_on_day"]["band"]
+        # WHAT THE NUMERATOR ACTUALLY COUNTS, PRINTED IN THE ROW — `VERIFIER-96` finding 2,
+        # and this is the repair that makes the block honest rather than the sentence that
+        # was withdrawn from under it. Each row's numerator is exactly the count of names in
+        # that day's own list that are NEW TO THIS RECORD, because `index()` pins every
+        # vessel to its first sighting here and a name carried by an earlier list is pinned
+        # to a window ending before this day. 4 August is the only day of the four whose
+        # record begins on itself, so all eleven of its names are new by construction and
+        # the other three rows get only their increment. The spread between the rows is
+        # therefore not a clean property of the sea, and the page now shows why in the same
+        # table rather than asserting the opposite one line under it.
+        # Distinct vessels carried by any capture of the list dated d — the same identity
+        # rule `index()` uses (`vessel_key`), so the two counts are commensurable. One
+        # edition date in this record produced two different lists, which is why this is a
+        # union over the date's captures and not a reading of one of them.
+        in_list = len({vessel_key(v) for c in caps_all if c["edition_date"] == d
+                       for v in c.get("vessels", [])})
+        new_here = sum(1 for r in rows_all.values() if r.get("first_edition_date") == d)
+        rows.append({
+            "day": d,
+            "day_printed": printed_date(d),
+            "as_of": as_of,
+            "share": f"{round(lo * 100)} %–{round(hi * 100)} %",
+            "fraction": f"{a['knowable_on_the_day_OBSERVED']} of {b[0] + a['knowable_on_the_day_OBSERVED']}–{b[1]}",
+            "numerator": a["knowable_on_the_day_OBSERVED"],
+            "names_in_list": in_list,
+            "new_to_record": new_here,
+            "provenance": (
+                f"{word(in_list)} names in that day's own list, "
+                + (f"all {word(new_here)} new to this record — this record begins here"
+                   if new_here == in_list else
+                   f"{word(new_here)} of them new to this record")
+            ),
+            "check": f"python3 projects/season1/capture/day.py {d} --as-of {as_of}",
+            "published": d == DAY,
+        })
+    return rows
+
+
 def build():
     pub = commit_time(PUBLISHED_COMMIT).astimezone(datetime.timezone.utc)
     # the one anchor: the instant the law was published, in the format the captures
     # themselves carry, so `day.py --as-of` reproduces the struck row exactly
     published_as_of = pub.strftime("%Y-%m-%dT%H:%M:%SZ")
-    caps_now = load(CAPTURES)
+    # FROZEN, not live. Every `caps_now` below is the record as it stood at FREEZE_AS_OF,
+    # so the thirteenth list — and the twentieth — leave this face exactly where it is.
+    caps_now = load(CAPTURES, as_of=FREEZE_AS_OF)
     caps_then = load(CAPTURES, as_of=published_as_of)
     now = analyse(DAY, caps_now)
     then = analyse(DAY, caps_then)
@@ -593,9 +716,26 @@ def build():
     # a hole and not as a progress bar filling. At stop 0 the second block does not exist.
     arrive_stops = []
     running = 0
+    # DRAMATURG-95 CUT 2, taken in its second form: *"The apposition goes, or it stands
+    # once — at the first stop that has one, where it teaches — and not at all eleven."*
+    # That voice measured what it cost with an instrument this house did not own: it
+    # stripped the common prefix and suffix off each rewritten node and measured the
+    # DIFFERING CHARACTER RUN with a DOM Range, clipped to the viewport at scrollY 0 —
+    # where a visitor watching the run actually is. On that unit `, eleven days after the
+    # day had ended` was 4,380 px² against the falling numeral's 2,562, and 51–56 % of the
+    # clause at every stop that carried it: for five consecutive beats the largest moving
+    # thing on the first screen was a restatement, in words, of the lit button 94 px below
+    # it. Its replay with the apposition stripped put the falling numeral first at every
+    # beat of the first act — 52.0 %, 52.1 %, 41.9 %, 55.6 %, 52.1 %. The clause is not
+    # deleted: it teaches at the first stop that has a lag, which is the stop where a
+    # reader learns what the buttons mean, and then gets out of the numeral's way.
+    taught_the_lag = False
     for g in field:
         running += g["count"]
         late = g["days_after"]
+        teach = late > 0 and not taught_the_lag
+        if teach:
+            taught_the_lag = True
         # THE STOP IS THE INSTANT THIS RECORD HAD READ THE WHOLE OF THAT LIST, AND UNTIL
         # SESSION 85 IT WAS THE INSTANT IT HAD READ ANY OF IT — a one-word difference that
         # put two different numbers for one state on this face. `min` gave the last stop an
@@ -699,16 +839,14 @@ def build():
             "when_fixed": f"of {DAY_PRINTED}’s darkness was knowable on the day itself,",
             "when_tail": (
                 f"counting the lists up to {short_caps(g['edition'])}"
-                + ("." if late == 0 else
-                   f", {'a day' if late == 1 else word(late) + ' days'} after the day had "
-                   "ended.")
+                + (f", {'a day' if late == 1 else word(late) + ' days'} after the day had "
+                   "ended." if teach else ".")
             ),
             "when": (
                 f"of {DAY_PRINTED}’s darkness was knowable on the day itself, "
                 f"counting the lists up to {short_caps(g['edition'])}"
-                + ("." if late == 0 else
-                   f", {'a day' if late == 1 else word(late) + ' days'} after the day had "
-                   "ended.")
+                + (f", {'a day' if late == 1 else word(late) + ' days'} after the day had "
+                   "ended." if teach else ".")
                 # The fraction that produced the figure is NOT repeated here. Three severed
                 # readers of session 73 named the notation `11 of 0–16` the hardest thing
                 # on this page, and its gloss lives in the body — a head truncated above
@@ -1484,16 +1622,22 @@ def build():
             # piece with no words at all: the beat ended, the figure started falling, and
             # nothing said so to anyone who could not see it. Found by the staging voice on
             # the running object, in the same breath as the defect below.
+            # WAS "this record's live one" until the gate of 96. `VERIFIER-96` finding 4:
+            # the corpus is frozen, so from the thirteenth list onward the standing figure is
+            # NOT what this record measures now — it is what this record measured at the
+            # freeze, which is the whole point of freezing it. A sentence that is true only
+            # while the freeze happens to coincide with the newest capture is a false
+            # sentence with a delay fuse in it (banked 42, 67).
             "started": (
                 "The run has started: the figure is falling from the day's own answer to "
-                "this record's live one."
+                "the last one this page publishes."
             ),
             "done": (
                 # `{figure}` is filled by the page with the stop's own published share —
                 # DRAMATURG-92 cut 7: three spoken sentences carrying no number is not the
                 # same account of the run that the screen gives.
-                "The run has finished. The figure now standing is this record's live one, "
-                "{figure} "
+                "The run has finished. The figure now standing is the last this page "
+                "publishes, {figure} "
                 "— press any button to go back through it."
             ),
             "stopped": "You stopped the run at {stop}, {figure}. Press “{replay}” to see it whole.",
@@ -1690,9 +1834,22 @@ def build():
     # arrived: 30.1 s at eleven lists, 44.5 s at twenty, and past the terminal test's
     # minute at thirty — on this record's own rate, nineteen days away. The subject is
     # accumulation and a lengthening run is not a betrayal of it; what breaks is WHERE the
-    # length lands. New beats arrive at the tail, and the tail is where the upper end
-    # unfreezes: the turn recedes from the visitor at 1.6 s a night while the opening
-    # stillness shrinks from half the run to a quarter of it.
+    # length lands. New beats arrive at the tail, and the opening stillness shrinks from
+    # half the run to a quarter of it.
+    #
+    # THE GROUND OF THAT CUT WAS FALSE AND `DRAMATURG-95` §5 CORRECTED IT — banked failure
+    # 82, corrected here in the builder tonight. This comment read *"the turn recedes from
+    # the visitor at 1.6 s a night"*. It does not and never has. Which stop the count first
+    # turns at was settled by this record's early lists — each stop is the record as it
+    # stood on its own edition date, so a later list cannot revise it — and stop 7 lands at
+    # `14,118 + 6 × 1,600 = 23,718 ms` tonight, exactly where it landed at eleven lists.
+    # New beats land BEHIND it. Under the published budget the turn can only move EARLIER;
+    # what recedes is the LAST STATE, the live value this piece ends on. The order stands
+    # and that voice did not withdraw it — the run did grow without bound, forty-five
+    # seconds is a length this house can defend, and the two protected beats are the right
+    # two, one of them for a reason its author did not have. A staging order's ground is
+    # what the next voice reasons from, and this one reasoned from a false sentence for an
+    # hour before driving it.
     #
     # So the house picks a length it will defend, publishes it, and derives the beat from
     # it. RUN_CEILING_MS is that choice and it is the only duration typed in this work:
@@ -1934,8 +2091,84 @@ def build():
             "examined": (c.get("aggregates") or {}).get("disappearances_examined"),
         })
 
+    # THE FREEZE, STATED ON THE FACE — the amendment requires the work to say its window
+    # and how many sources it holds. Every figure here is counted off the frozen corpus.
+    frozen_editions = sorted({c["edition_date"] for c in caps_now})
+    frozen = {
+        "as_of": FREEZE_AS_OF,
+        "captures": len(caps_now),
+        "editions": len(frozen_editions),
+        "window": [frozen_editions[0], frozen_editions[-1]],
+        # `VERIFIER-96` finding 8: the sentence read *"the instrument keeps publishing
+        # daily and this record keeps saving it"*, and the second half is a claim about
+        # this house's future conduct with nothing in the repository performing it — there
+        # is no scheduled capture job; all thirty-two copies were saved by a session running
+        # the script by hand. True of the past, written as a standing condition, and the
+        # freeze's whole meaning leaned on it. It says what it can say now.
+        "line": (
+            f"This page is frozen. Its corpus is the {word(len(caps_now))} saved copies this "
+            f"record held at {FREEZE_AS_OF}, carrying {word(len(frozen_editions))} lists dated "
+            f"{printed_date(frozen_editions[0])} to {printed_date(frozen_editions[-1])}. The "
+            "instrument goes on publishing daily whatever this page does; any list saved here "
+            "after that instant is published as a dated addendum beside this work, in "
+            "ADDENDA.md, and none of them moves a number on this face. The command that "
+            "returns the live reading is printed with the others below. A figure that changes "
+            "while it is being read cannot be checked against anything."
+        ),
+    }
+
+    compare_rows = matched_maturity()
+
     return {
         "day": {"iso": DAY, "printed": DAY_PRINTED},
+        "frozen": frozen,
+        "compare": {
+            # REWRITTEN AT THE GATE OF 96, and what was withdrawn matters more than what
+            # stands. The block first published a finding — *"How badly a register
+            # under-reports the present is not a constant. It is a property of the day, and
+            # in this record four consecutive days of one sea, read at one age, differ by a
+            # factor of ten."* — and the verifying voice took it apart twice over
+            # (`VERIFIER-96` findings 2 and 3): the four numerators are exactly the
+            # new-to-this-record counts, so the spread is governed by where this record opens
+            # as much as by the sea; and the factor is 10.3 on the falling end but 5.9 on the
+            # ceiling, which is the end this work calls unconditional. The house had built,
+            # one section below its own paid correction, the same error that correction was
+            # for. The rows stand — every one reproduces to the digit — and the sentence they
+            # carry is now the one they can carry.
+            "heading": (
+                f"THE SAME MEASUREMENT ON {word(len(compare_rows)).upper()} DAYS OF THE SAME SEA, "
+                f"EACH READ WHEN THIS RECORD FIRST HELD THE LIST DATED "
+                f"{word(COMPARE_MATURITY_DAYS).upper()} DAYS AFTER IT"
+            ),
+            "maturity_days": COMPARE_MATURITY_DAYS,
+            "lead": (
+                f"The day above has been open for {word((datetime.date.fromisoformat(frozen_editions[-1]) - datetime.date.fromisoformat(DAY)).days)} days. "
+                f"These {word(len(compare_rows))} are the same instrument on {word(len(compare_rows))} "
+                "consecutive days, each stopped at the same point in its own life — the instant "
+                "this record first held the list dated eight days after it. Every row is a "
+                "committed script and the instant printed under it, and every row says how many "
+                "of its day's names this record was seeing for the first time."
+            ),
+            "rows": compare_rows,
+            "finding": (
+                "These are four readings of this record, not four readings of the sea. A day's "
+                "numerator counts only the names this record met for the first time in that "
+                f"day's own list, and {printed_date(DAY)} is the one day here whose record "
+                "begins on itself — so every name it printed counts for it, while the days "
+                "after it are left with what the earlier lists had not already spent. Read "
+                "that way the comparison says one thing, and says it against the page above: "
+                "the day this page publishes is the most favourable day in its own archive. "
+                "How much of the fall between these rows is the sea and how much is where "
+                "this record opens, these captures cannot separate."
+            ),
+            "tier": (
+                "DERIVED from the OBSERVED captures by the same instrument as the figure "
+                "above, at the instants printed. No new night of waiting and no new code: "
+                "four runs of a committed script. The rows are exact and the comparison "
+                "between them is not clean — the line above says why, and nothing here "
+                "claims a factor."
+            ),
+        },
         "method": {
             "source": "https://frankbueltge.de/werke/ghost-fleet/",
             "edition_source": "https://frankbueltge.de/ghost-fleet/",
@@ -1954,7 +2187,12 @@ def build():
         "field": field,
         "fall": {
             "then": share_line(then, "SUPERSEDED"),
-            "now": share_line(now, "LIVE"),
+            # "LIVE" until the gate of 96 — `VERIFIER-96` finding 4. The word is read by
+            # ear as well as by eye (banked failure 12 is why it is text at all), and with
+            # the corpus frozen it would have told a listener the opposite of what
+            # `#sd-frozen` tells a reader eleven lines lower. The pair is PUBLISHED against
+            # SUPERSEDED now, which is what the two rows actually are.
+            "now": share_line(now, "PUBLISHED"),
             "as_of": published_as_of,
             "band": band_line(now, caps_now),
             # KRITIKER-95 condition 1. This sentence said only that the numerator cannot
@@ -2003,8 +2241,15 @@ def build():
         # that not one of them is certain, and that the unconditional floor is 0.
         "commands": [
             {"label": "the day",
-             "cmd": f"python3 projects/season1/capture/day.py {DAY} | head -{summary_lines(run_day())}"},
+             "cmd": (f"python3 projects/season1/capture/day.py {DAY} --as-of {FREEZE_AS_OF}"
+                     f" | head -{summary_lines(run_day())}")},
             {"label": "every ship, and when it arrived",
+             "cmd": f"python3 projects/season1/capture/day.py {DAY} --as-of {FREEZE_AS_OF}"},
+            # The live reading, printed and named as what this page does NOT publish. Without
+            # it the freeze would be a page that quietly declines to show a stranger the
+            # number it is standing next to; with it the freeze is a choice a reader can
+            # audit in one command. `still-dark/ADDENDA.md` carries the same pair.
+            {"label": "the same day live — this page does not publish this",
              "cmd": f"python3 projects/season1/capture/day.py {DAY}"},
             {"label": "the night before",
              "cmd": f"python3 projects/season1/capture/day.py {DAY} --as-of {published_as_of}"},
@@ -2040,7 +2285,12 @@ def main():
     LEDE = a.lede
     CUTS = not a.no_cuts
     blob = json.dumps(build(), indent=2, ensure_ascii=False)
-    path = a.into or os.path.join(HERE, "index.html")
+    # THE WORK GRADUATED AT THE PREMIERE (session 96) and the builder did not follow it.
+    # `works/2026-08-15-still-dark/index.html` IS the work; this directory is what NO PART's
+    # campaign directory is — the evidentiary spine, holding the builder, the instruments
+    # the work is checked with, the renders and every memo of seven gates. One face, one
+    # builder, and no second copy to drift: the thing this house has banked four times.
+    path = a.into or os.path.join(WORK_DIR, "index.html")
     if a.check or a.write:
         with open(path, encoding="utf-8") as f:
             html = f.read()

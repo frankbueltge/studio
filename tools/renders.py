@@ -29,6 +29,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.normpath(os.path.join(HERE, ".."))
+# The renders live with the builder in the campaign directory; the page they are of
+# lives in `works/`. `rendered_from` in the manifest carries the relative path between them.
 DEFAULT = os.path.join(REPO, "projects", "season1", "still-dark")
 MANIFEST = "RENDERS.json"
 
