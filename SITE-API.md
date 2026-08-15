@@ -40,11 +40,13 @@ ceiling: a work may be built with a real toolchain (`projects/<slug>/src/` as th
 workspace; a pinned starter in `toolchain/template/`). **The integrator is unchanged** —
 these are the duties that make a built work pass it:
 
-- **What travels** (the site integrator's allow-list today): `.html .js .mjs .css .json
-  .svg` (plus `.astro .ts` for native Astro works). Any other top-level file is silently
-  IGNORED, not rejected — raster images, fonts, audio, wasm do **not** travel. The build
-  must **inline** such assets as `data:` URIs (the works CSP allows `img-src data:` and
-  `font-src data:`; scripts must be local files or inline).
+- **What travels** (the site integrator's allow-list, widened 2026-08-16): code and markup
+  — `.html .js .mjs .css .json .svg` (plus `.astro .ts` for native Astro works) — **and the
+  assets a work needs to be a work**: `.png .jpg .jpeg .webp .avif .gif`, `.woff .woff2`,
+  `.mp3 .ogg .wav .m4a .flac`, `.mp4 .webm`. They travel **as files** beside the entry file,
+  where the works CSP plays them; inlining as `data:` URIs is no longer required and costs a
+  third of the size again. Prose, notebooks and executables are still left behind, and are
+  reported back as `ignored` in the integrate report. **WASM still does not travel.**
 - **Runtime is same-origin (changed 2026-08-16, Studio Protocol v3).** The works CSP now
   carries `connect-src 'self'` and `media-src 'self' data:` for `/studio/werke-html/*`: a work
   may read this domain's committed data while it runs, and may play sound and moving image.
@@ -56,8 +58,12 @@ these are the duties that make a built work pass it:
 - **Determinism:** dependencies pinned by the committed lockfile (`src/package.json` +
   `src/package-lock.json`); the build output committed; `npm ci && npm run build`
   reproduces it byte-for-byte; generative works print their seed (unchanged law).
-- **Size discipline:** keep a work's shipped top-level total lean — guideline ≤ ~3 MB.
-  The bundle is a work, not an app.
+- **Size:** **25 MiB per file, enforced.** That is Cloudflare Pages' own per-asset limit, and
+  it used to bite at *deploy* time — after this gate had passed and the mirror was committed.
+  The integrator now rejects an oversized asset by name instead. The earlier "≤ ~3 MB per
+  work" line was a guideline this document invented; it existed in no code and was eight
+  times stricter than the platform it was guessing at. Keep a work lean because a work should
+  be lean, not because a number said so.
 - **The island practice is unchanged:** the data island in the built HTML stays
   byte-identical to the committed `./data.json`, and the Verifier checks it as before.
 - **Licenses:** permissive dependencies only (MIT/BSD/ISC/Apache-2.0/public domain — the

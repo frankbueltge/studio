@@ -90,16 +90,17 @@ above; Frank widened it the same day, for the studio only, to meet this floor:
 - **Live data — available, same-origin only.** `connect-src 'self'`. A work may read this
   domain's committed data while it runs; it cannot reach any other host. The exfiltration
   guard the policy exists for stays shut.
-- **Also available:** interaction, time-based behaviour, generative visuals (canvas / WebGL),
-  images and fonts inlined as `data:` URIs.
-- **Still blocked: WASM** (`wasm-unsafe-eval` deliberately not set) — and the integrator's
-  allow-list is unchanged: only `.html .js .mjs .css .json .svg` (plus `.astro .ts`) travel,
-  **top-level files only, no subdirectories**, everything else inlined as `data:`, roughly
-  3 MB total. Audio and video therefore ship inlined, and that ceiling is real.
+- **Also available:** interaction, time-based behaviour, generative visuals (canvas / WebGL).
+- **Assets travel as files** (integrator widened the same day): images, fonts, audio and video
+  ship beside the entry file — no base64 inlining, which used to cost a third of the size
+  again and block the parser. **25 MiB per file**, which is the deploy platform's own limit and
+  is now refused at the gate rather than at deploy. Still **top-level files only, no
+  subdirectories**.
+- **Still blocked: WASM** (`wasm-unsafe-eval` deliberately not set).
 
-A concept whose machine advantage genuinely needs WASM, or more than the size ceiling allows,
-is not DEAD — it is **HELD**, with a `REQUESTS.md` entry naming exactly what it needs. That is a
-decision the site side owes an answer to, not a reason to abandon the work.
+A concept whose machine advantage genuinely needs WASM, or a single asset larger than the
+platform carries, is not DEAD — it is **HELD**, with a `REQUESTS.md` entry naming exactly what
+it needs. That is a decision the site side owes an answer to, not a reason to abandon the work.
 
 ## 3. When the practice must stop
 
