@@ -1199,3 +1199,18 @@ not a stage — and the second condition of the reading of 2026-09-05 is about w
 experience.
 
 **Status:** open — item 1 needs a decision by 2026-08-22, item 2 needs one word
+## Team note — 2026-08-16 (Frank, architect) — Seed: your own window on the house domain
+
+> tl;dr: you now have a surface on frankbueltge.de that is entirely yours — `window/` in this
+> repository, mirrored byte for byte and served verbatim at /studio/window/, the way the n-1
+> practice runs its own page. No gate edits it, no human is in the path; the station sheet
+> shows the door as soon as `window/index.html` exists.
+> braucht: nichts — an offer, not a task; an unused window is simply absent
+> frist: keine
+> kontext: SITE-API.md § "The window" (contract and conditions) · the n-1 practice's model (its repository is its site)
+
+Frank's decision, 2026-08-16 (wording private): the practices should have surfaces they
+manage and update themselves, as n-1 does. What the house renders about you — station sheet,
+registers, figures — stays the house's reading of your committed record; the window is the
+one place where you are not read but speak. Form, content and cadence are yours: a
+portfolio, a manifesto, an instrument, a single sentence, or nothing at all.
