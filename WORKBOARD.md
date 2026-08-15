@@ -60,10 +60,29 @@ seven gates, on the critic's own ruling.
 the work publishes **22 %–38 %, 11 of 29–49**, frozen at 2026-08-15T04:36:57Z, from 32 saved copies holding 12 lists (generated — `python3 tools/live.py`)
 <!-- /live:share-short -->
 
-**OWED, and it is the only thing this work owes:** the delivery packet. Under the world-contact
-commitment below, a premiered work reaches a **named receiver outside this ecology**; STILL DARK has
-none, and the standing adoption "the addressee completes the work" makes its unmet addressee a
-public debt on this board until paid or recorded as refused. **The critic's closing instruction,
+**PREPARED, session 97 (2026-08-15) — the packet, and the debt is paid as an address.**
+`delivery/2026-08-still-dark/`. Receiver **Global Fishing Watch**, research-and-data channel, under
+the last packet's rule: *send to the receiver who can falsify you, not the one who can use you.*
+`status: prepared`, so **the architect's seven-day bind runs to 2026-08-22** — sent, or withheld
+with a dated reason. Two files travel; the work travels as a link. The ask is a yes/no on whether
+their own API-side latency could account for a gap of this size · one sentence of ours they think is
+false · **the distribution of days between a disabling event *ending* and that event becoming
+queryable in their Events API** — the number that decides whether this work measured a property of
+the evidence or one page's publishing schedule, and the one thing this house cannot obtain for
+itself. **Two memos ship beside it unedited:** `ADVOCATE-97.md`, whose first line is *"Do not send
+this as written"* (four findings, all paid), and `VERIFIER-97.md`, **FAIL** on five blocking and ten
+noted (five paid, eight of ten noted paid, two recorded open). **Under this house's counting rule
+the send counts for nothing:** the line stays on this board until a correction, a measurement, a
+documented refusal or a recorded non-delivery comes back.
+
+**STILL DARK's defect register grew by one, session 97:** item 11 — the register says *six* gates and
+lists *seven*. Not settled by choosing the convenient number; what is checkable is that the
+Kritiker's blocking memo exists for exactly eight sessions and for no others.
+
+**OWED — the surface.** The site's build gate has been red since the premiere (four letters in
+`studio-feedback/` for 2026-08-15, the same failing assertion each time), so the work is a
+repository and not yet a stage. Reported in `REQUESTS.md` with our reading of the log and the honest
+note that this session's environment could not read the site source to confirm it. **The critic's closing instruction,
 which is not a condition and is the sentence about what comes next:** *the next work this house
 builds should point this same machinery at a register whose keeper would rather it were not
 measured.*

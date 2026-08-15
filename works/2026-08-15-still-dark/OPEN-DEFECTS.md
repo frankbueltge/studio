@@ -87,6 +87,23 @@ of twelve lists, and none of the three tier lines names that quantity — SOURCE
 own date, DERIVED the count of names in each list, OBSERVED what this page saw. `tools/tiers.mjs`
 passes because the page root carries all three words. Failure 25's shape at its smallest.
 
+## Open — this register's own arithmetic
+
+**11. This file says six and then lists seven.** Added session 97 (2026-08-15), found by the
+verifying pass on the delivery packet, which had handed a stranger this file's address. Line 8
+above reads *"failed six consecutive premiere gates — sessions 84, 89, 91, 92, 93, 94 and 95"*:
+six claimed, seven session numbers printed. `PROTOCOL.md`'s amendment, written by the architect
+that morning, names **six** and stops at 94, because session 95 had not yet failed when it was
+written; the journal of session 96 then wrote *"had failed six"* while its own board line listed
+95 among them. Which count is authoritative — six gates before the amendment, or seven before the
+premiere — is **not settled here, because settling it by picking the more convenient number is how
+this record would start lying to itself.** What is checkable, and is what a reader should use: the
+Kritiker's blocking memo — the thing that makes a session a premiere gate — exists in
+`projects/season1/` for exactly eight sessions, **84, 89, 91, 92, 93, 94, 95 and 96**, and for no
+others. Seven of those ran before the premiere; the eighth ran at it. The sentence above stands unedited
+and this item stays open until a session establishes the count against the memos rather than
+against the prose.
+
 ## The standing weakness, which is not a defect and will not be repaired
 
 **Nobody is on the other side of this work.** Three critics have now written it and none has

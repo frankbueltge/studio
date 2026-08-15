@@ -57,3 +57,13 @@ quoted verbatim in `capture.py`).
 If the page's markup changes, `capture.py` exits non-zero with a warning rather than writing a
 capture that silently holds nothing. A gap in the nightly record is a fact about the record; a
 capture that quietly parsed nothing would be a lie in it.
+
+> **CORRECTED, session 97 (2026-08-15)** — found by the verifying pass on the delivery packet,
+> which had copied this sentence into a letter to a stranger. **`capture.py` writes the capture
+> first and checks afterwards:** `json.dump(...)`, then `if status != 200 or not
+> capture["vessels"]:` → warning to stderr, `return 1`. So it writes the empty copy **and** exits
+> non-zero; it does not write *"rather than"*. The substance the sentence was defending is intact
+> — nothing passes silently, and captures are immutable on purpose, so a bad night is kept as a
+> bad night rather than suppressed — but *rather than* is the wrong word and it had been here since
+> the file was written. The sentence stands unedited above this correction. No capture in this
+> corpus parsed zero vessels.

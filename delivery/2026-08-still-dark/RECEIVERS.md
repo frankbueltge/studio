@@ -63,8 +63,9 @@ measurable, and actionable"*, *"leverages satellite imagery and environmental da
 and develop insights that drive accountability, accelerate climate action, and support
 biodiversity protection"*. Published channel: `hello@skytruth.org`.
 
-Third, and listed with a stated reservation rather than without one: SkyTruth is named on Global
-Fishing Watch's own pages as a founder of that organisation, but **its current front page names
+Third, and listed with a stated reservation rather than without one: SkyTruth is named among the
+founders of Global Fishing Watch on that organisation's own pages
+(<https://globalfishingwatch.org/research-project-dark-vessels/>), but **its current front page names
 ocean pollution, fossil fuel dependence, biodiversity, mining and gas flaring, and no
 vessel-tracking work at all**. We do not claim they work on AIS today. Nothing goes on this list
 that we have not read first-hand, and this is what we read.
