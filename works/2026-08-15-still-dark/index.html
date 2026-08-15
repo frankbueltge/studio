@@ -777,6 +777,15 @@
     color: var(--sd-ink);
     font-weight: 700;
   }
+  /* What the row's numerator counts, and where this record starts relative to its day.
+     Commentary register — it talks about the material rather than being it. */
+  .sd-root .sd-compare-prov {
+    grid-column: 1 / -1;
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--sd-dim);
+    max-width: 82ch;
+  }
   .sd-root .sd-compare-check {
     grid-column: 1 / -1;
     font-size: 0.62rem;
@@ -905,12 +914,12 @@
       "2026-08-04",
       "2026-08-15"
     ],
-    "line": "This page is frozen. Its corpus is the thirty-two saved copies this record held at 2026-08-15T04:36:57Z, carrying twelve lists dated 4 August 2026 to 15 August 2026. The instrument keeps publishing daily and this record keeps saving it; every list that arrives after that instant is published as a dated addendum beside this work, in ADDENDA.md, and none of them moves a number on this face. A figure that changes while it is being read cannot be checked against anything."
+    "line": "This page is frozen. Its corpus is the thirty-two saved copies this record held at 2026-08-15T04:36:57Z, carrying twelve lists dated 4 August 2026 to 15 August 2026. The instrument goes on publishing daily whatever this page does; any list saved here after that instant is published as a dated addendum beside this work, in ADDENDA.md, and none of them moves a number on this face. The command that returns the live reading is printed with the others below. A figure that changes while it is being read cannot be checked against anything."
   },
   "compare": {
-    "heading": "THE SAME MEASUREMENT, FOUR DAYS OF THE SAME SEA, EACH READ AT EIGHT DAYS OLD",
+    "heading": "THE SAME MEASUREMENT ON FOUR DAYS OF THE SAME SEA, EACH READ WHEN THIS RECORD FIRST HELD THE LIST DATED EIGHT DAYS AFTER IT",
     "maturity_days": 8,
-    "lead": "The day above has been open for eleven days. These four are the same record read at one age — each at the instant it first held the list dated eight days after its own day — so the shares can be set beside each other. Every row is the same committed script, run with the instant printed under it.",
+    "lead": "The day above has been open for eleven days. These four are the same instrument on four consecutive days, each stopped at the same point in its own life — the instant this record first held the list dated eight days after it. Every row is a committed script and the instant printed under it, and every row says how many of its day's names this record was seeing for the first time.",
     "rows": [
       {
         "day": "2026-08-04",
@@ -919,6 +928,9 @@
         "share": "31 %–73 %",
         "fraction": "11 of 15–35",
         "numerator": 11,
+        "names_in_list": 11,
+        "new_to_record": 11,
+        "provenance": "eleven names in that day's own list, all eleven new to this record — this record begins here",
         "check": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-12T18:23:12Z",
         "published": true
       },
@@ -929,6 +941,9 @@
         "share": "10 %–25 %",
         "fraction": "3 of 12–31",
         "numerator": 3,
+        "names_in_list": 8,
+        "new_to_record": 3,
+        "provenance": "eight names in that day's own list, three of them new to this record",
         "check": "python3 projects/season1/capture/day.py 2026-08-05 --as-of 2026-08-13T17:02:56Z",
         "published": false
       },
@@ -939,6 +954,9 @@
         "share": "6 %–15 %",
         "fraction": "2 of 13–32",
         "numerator": 2,
+        "names_in_list": 7,
+        "new_to_record": 2,
+        "provenance": "seven names in that day's own list, two of them new to this record",
         "check": "python3 projects/season1/capture/day.py 2026-08-06 --as-of 2026-08-14T20:45:26Z",
         "published": false
       },
@@ -949,12 +967,15 @@
         "share": "3 %–12 %",
         "fraction": "1 of 8–33",
         "numerator": 1,
+        "names_in_list": 6,
+        "new_to_record": 1,
+        "provenance": "six names in that day's own list, one of them new to this record",
         "check": "python3 projects/season1/capture/day.py 2026-08-07 --as-of 2026-08-15T04:36:57Z",
         "published": false
       }
     ],
-    "finding": "How badly a register under-reports the present is not a constant. It is a property of the day, and in this record four consecutive days of one sea, read at one age, differ by a factor of ten. The published day is the highest of the four — the one this record can least be accused of choosing to look bad.",
-    "tier": "DERIVED from the OBSERVED captures by the same instrument as the figure above. No new night of waiting and no new code: four runs of a committed script."
+    "finding": "These are four readings of this record, not four readings of the sea. A day's numerator counts only the names this record met for the first time in that day's own list, and 4 August 2026 is the one day here whose record begins on itself — so every name it printed counts for it, while the days after it are left with what the earlier lists had not already spent. Read that way the comparison says one thing, and says it against the page above: the day this page publishes is the most favourable day in its own archive. How much of the fall between these rows is the sea and how much is where this record opens, these captures cannot separate.",
+    "tier": "DERIVED from the OBSERVED captures by the same instrument as the figure above, at the instants printed. No new night of waiting and no new code: four runs of a committed script. The rows are exact and the comparison between them is not clean — the line above says why, and nothing here claims a factor."
   },
   "method": {
     "source": "https://frankbueltge.de/werke/ghost-fleet/",
@@ -1433,8 +1454,8 @@
     ],
     "run_states": {
       "waiting": "This figure runs by itself: twelve states over about thirty-two seconds. Any button above holds a state and stops the run.",
-      "started": "The run has started: the figure is falling from the day's own answer to this record's live one.",
-      "done": "The run has finished. The figure now standing is this record's live one, {figure} — press any button to go back through it.",
+      "started": "The run has started: the figure is falling from the day's own answer to the last one this page publishes.",
+      "done": "The run has finished. The figure now standing is the last this page publishes, {figure} — press any button to go back through it.",
       "stopped": "You stopped the run at {stop}, {figure}. Press “{replay}” to see it whole.",
       "held": "Holding {stop}, {figure}. Nothing is playing; press “{replay}” to run it.",
       "rest": "Your machine asks for no motion, so nothing runs: this is the day's own answer, and each button above holds a later state."
@@ -2438,7 +2459,7 @@
       "captures": 5
     },
     "now": {
-      "status": "LIVE",
+      "status": "PUBLISHED",
       "figure": "22 %–38 %",
       "figure_falling": "22 %",
       "figure_fixed": "–38 %",
@@ -2784,10 +2805,14 @@
   "commands": [
     {
       "label": "the day",
-      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 | head -7"
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-15T04:36:57Z | head -7"
     },
     {
       "label": "every ship, and when it arrived",
+      "cmd": "python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-15T04:36:57Z"
+    },
+    {
+      "label": "the same day live — this page does not publish this",
       "cmd": "python3 projects/season1/capture/day.py 2026-08-04"
     },
     {
@@ -3892,9 +3917,14 @@
   fellEl.className = "sd-fall-line sd-fell";
   fellEl.textContent = data.fall.moved;
   sharesEl.appendChild(fellEl);
+  // WAS "as this record measures it now" until the gate of session 96. `VERIFIER-96`
+  // finding 4: this page's corpus is frozen, so what stands here is what this record
+  // measured AT the freeze, and from the thirteenth list onward "now" is false — while
+  // eleven lines below, `#sd-frozen` says the page is frozen. The two sentences could not
+  // both be true for long, and the one with the fuse in it is this one.
   sharesEl.appendChild(shareRow(
     data.fall.now,
-    "as this record measures it now, " + from(data.fall.now) + " —",
+    "as this page publishes it, frozen, " + from(data.fall.now) + " —",
     "sd-share-now"
   ));
 
@@ -3928,12 +3958,21 @@
     var frac = document.createElement("span");
     frac.className = "sd-compare-frac";
     frac.textContent = r.fraction;
+    // DRAMATURG-96 BLOCKING CUT 1: the mark stood at the END of the fraction, so a reader
+    // met the day, the band and the fraction before learning which row was the page's own
+    // — and in the screen-reader record it arrived after all three. It marks the DAY now,
+    // where identity belongs, and it is a word rather than a weight so the ear gets it too.
     if (r.published) {
       var mark = document.createElement("span");
       mark.className = "sd-compare-mark";
       mark.textContent = " — THE DAY THIS PAGE PUBLISHES";
-      frac.appendChild(mark);
+      day.appendChild(mark);
     }
+    // VERIFIER-96 finding 2, built into the row rather than answered in prose: what the
+    // numerator of this row actually counts, and whether this record began before its day.
+    var prov = document.createElement("span");
+    prov.className = "sd-compare-prov";
+    prov.textContent = r.provenance;
     var chk = document.createElement("span");
     chk.className = "sd-compare-check";
     var code = document.createElement("code");
@@ -3942,6 +3981,7 @@
     row.appendChild(day);
     row.appendChild(share);
     row.appendChild(frac);
+    row.appendChild(prov);
     row.appendChild(chk);
     cmpEl.appendChild(row);
   });

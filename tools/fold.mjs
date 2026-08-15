@@ -36,7 +36,11 @@ const { chromium } = require("playwright");
 
 const argv = process.argv.slice(2);
 const dirArg = argv.find((a) => a.startsWith("--dir="));
-const dir = resolve(dirArg ? dirArg.slice("--dir=".length) : "projects/season1/still-dark");
+// The work graduated to `works/` at its premiere, session 96. The default follows it;
+// `--dir=` still points this instrument at any built copy, which is how the retired
+// states at earlier hashes are still measurable.
+const WORK_DIR = "works/2026-08-15-still-dark";
+const dir = resolve(dirArg ? dirArg.slice("--dir=".length) : WORK_DIR);
 const url = "file://" + join(dir, "index.html");
 
 // The two the staging law names, plus the phone the defect was measured on.

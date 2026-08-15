@@ -401,7 +401,7 @@ SUPERSEDED · as this page published it at 08:36 UTC on 6 August, from 5 saved c
 
 It fell forty-seven points. What grew was the total: WANGBIAO-8730 with the list of 7 AUG, three days after the day; TUNA PESCA, SAPPHIRE III and MONTECELO with the list of 8 AUG, four days after the day; HAIZEA BOST, CONNIE JEAN TWO, CARMEN D, MARIA BEATRIZ and RUITAIFENG919 with the list of 9 AUG, five days after the day; HY928-21%-81%, ATLANTIC PRINCE, GENPUKUMARU NO.18, DIVA MARIA, OCEAN WARRIOR and ST. MARIANNE with the list of 10 AUG, six days after the day; PANOFI FORE RUNNER and HEATHER LYNN with the list of 11 AUG, seven days after the day; ISABELLA and LUCKY TJ with the list of 12 AUG, eight days after the day; SHILLA EXPLORER, KOO'S 102, KOYOMARU NO.88, FUKUICHIMARU NO,83, CAP.DANNY B, COTSWOLD and GOLDEN SAPPHIRE 88 with the list of 13 AUG, nine days after the day; SOUTHERN SEAS 301, CAPT SILVER, TXORIARGI and JIN HUI NO.6 with the list of 14 AUG, ten days after the day; and P. BEVERLY HILLS, KONGOU and FV KW with the list of 15 AUG, eleven days after the day — thirty-three ships this record did not hold when the law below was printed.
 
-LIVE · as this record measures it now, from 32 saved copies of 12 lists —
+PUBLISHED · as this page publishes it, frozen, from 32 saved copies of 12 lists —
 22 %–38 %
 11 of 29–49
 
@@ -412,32 +412,36 @@ The eleven did not move, and cannot: no later night can put a name into a list t
 “A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.”
 printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall.
 
-This page is frozen. Its corpus is the thirty-two saved copies this record held at 2026-08-15T04:36:57Z, carrying twelve lists dated 4 August 2026 to 15 August 2026. The instrument keeps publishing daily and this record keeps saving it; every list that arrives after that instant is published as a dated addendum beside this work, in ADDENDA.md, and none of them moves a number on this face. A figure that changes while it is being read cannot be checked against anything.
+This page is frozen. Its corpus is the thirty-two saved copies this record held at 2026-08-15T04:36:57Z, carrying twelve lists dated 4 August 2026 to 15 August 2026. The instrument goes on publishing daily whatever this page does; any list saved here after that instant is published as a dated addendum beside this work, in ADDENDA.md, and none of them moves a number on this face. The command that returns the live reading is printed with the others below. A figure that changes while it is being read cannot be checked against anything.
 
-THE SAME MEASUREMENT, FOUR DAYS OF THE SAME SEA, EACH READ AT EIGHT DAYS OLD
+THE SAME MEASUREMENT ON FOUR DAYS OF THE SAME SEA, EACH READ WHEN THIS RECORD FIRST HELD THE LIST DATED EIGHT DAYS AFTER IT
 
-The day above has been open for eleven days. These four are the same record read at one age — each at the instant it first held the list dated eight days after its own day — so the shares can be set beside each other. Every row is the same committed script, run with the instant printed under it.
+The day above has been open for eleven days. These four are the same instrument on four consecutive days, each stopped at the same point in its own life — the instant this record first held the list dated eight days after it. Every row is a committed script and the instant printed under it, and every row says how many of its day's names this record was seeing for the first time.
 
-4 August 2026
+4 August 2026 — THE DAY THIS PAGE PUBLISHES
 31 %–73 %
-11 of 15–35 — THE DAY THIS PAGE PUBLISHES
+11 of 15–35
+eleven names in that day's own list, all eleven new to this record — this record begins here
 $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-12T18:23:12Z
 5 August 2026
 10 %–25 %
 3 of 12–31
+eight names in that day's own list, three of them new to this record
 $ python3 projects/season1/capture/day.py 2026-08-05 --as-of 2026-08-13T17:02:56Z
 6 August 2026
 6 %–15 %
 2 of 13–32
+seven names in that day's own list, two of them new to this record
 $ python3 projects/season1/capture/day.py 2026-08-06 --as-of 2026-08-14T20:45:26Z
 7 August 2026
 3 %–12 %
 1 of 8–33
+six names in that day's own list, one of them new to this record
 $ python3 projects/season1/capture/day.py 2026-08-07 --as-of 2026-08-15T04:36:57Z
 
-How badly a register under-reports the present is not a constant. It is a property of the day, and in this record four consecutive days of one sea, read at one age, differ by a factor of ten. The published day is the highest of the four — the one this record can least be accused of choosing to look bad.
+These are four readings of this record, not four readings of the sea. A day's numerator counts only the names this record met for the first time in that day's own list, and 4 August 2026 is the one day here whose record begins on itself — so every name it printed counts for it, while the days after it are left with what the earlier lists had not already spent. Read that way the comparison says one thing, and says it against the page above: the day this page publishes is the most favourable day in its own archive. How much of the fall between these rows is the sea and how much is where this record opens, these captures cannot separate.
 
-DERIVED from the OBSERVED captures by the same instrument as the figure above. No new night of waiting and no new code: four runs of a committed script.
+DERIVED from the OBSERVED captures by the same instrument as the figure above, at the instants printed. No new night of waiting and no new code: four runs of a committed script. The rows are exact and the comparison between them is not clean — the line above says why, and nothing here claims a factor.
 
 Eight lists came back in more than one set of bytes each while every field this page reads stayed identical — a copy's fingerprint is not the list's identity, which is why the table carries both. The “ships in that list” column counts the ships in each saved list, not the ships this page can place in 4 August 2026: every list holds only the seven days before its own date, so a ship leaves the list as that window moves past it. It never leaves the day. “Disappearances examined” is what that same copy says the instrument examined to produce those ships — a figure this record has saved every night since the first.
 
@@ -476,8 +480,9 @@ fetched (UTC)	status	bytes	body sha256	content	edition	ships in that list	disapp
 2026-08-14T20:45:26Z	200	31,891	c5727d4c…	53015a07…	14 August 2026	11	249
 2026-08-15T04:36:57Z	200	31,882	4009e3b6…	04309879…	15 August 2026	11	233
 
-the day · $ python3 projects/season1/capture/day.py 2026-08-04 | head -7
-every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04
+the day · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-15T04:36:57Z | head -7
+every ship, and when it arrived · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-15T04:36:57Z
+the same day live — this page does not publish this · $ python3 projects/season1/capture/day.py 2026-08-04
 the night before · $ python3 projects/season1/capture/day.py 2026-08-04 --as-of 2026-08-06T08:36:39Z
 
 day 2026-08-04  ·  32 capture(s) read, 12 distinct edition(s), 13 distinct content(s), 21 distinct bod(y/ies)

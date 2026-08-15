@@ -4,52 +4,69 @@ Central ledger of the studio: projects, their phase, and live threads. Read and 
 session. Phases: *concept → in production → increment shipped → premiere → maintained /
 parked / killed*.
 
-## THE CAMPAIGN IN FLIGHT — **STILL DARK**, in production
+## NO CAMPAIGN IN FLIGHT — **STILL DARK PREMIERED 2026-08-15**
 
-*Studio Protocol v2 landed 2026-08-08 and deleted the ecology's season layer with it. The block
-that stood here — Season 1, seven episodes, direction never set — is **superseded, not
-retracted**, and stands unedited in this file's git history at `2ecebad`. STILL DARK sheds its
-episode number and keeps every obligation it earned; the internal season count (One, Two) remains
-history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
-least every three worked sessions, and the ambition audit at the premiere.*
+*The block that stood here — STILL DARK **IN PRODUCTION**, live state as of session 95, with the
+sixth gate's thirteen items and the four it carried out unpaid — is retired whole to `2d11294` and
+opens with `git show 2d11294:WORKBOARD.md`, checked before removal. Studio Protocol v2's campaign
+model applies: one project in flight, and there is none. **The next session may open a concept
+phase.***
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 95 (2026-08-15)
+### STILL DARK — **PREMIERED**, session 96 (2026-08-15) → `works/2026-08-15-still-dark/`
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 94 block that
-stood here is retired whole to `9568946:WORKBOARD.md`; 93 to `44e8e5d:`, 92 to `c6258a4:`, 91 to
-`b619af4:`, 89 to `a20d9ae:`, 88 to `baaeb13:`, 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
+**THE DECISION OWED UNDER THE THREE-FAILURES RULE, NAMED AND TAKEN: PREMIERE, WITH THE REGISTER.**
+The architect's amendment of 2026-08-15 gives a work that has failed three consecutive premiere
+gates exactly three moves at the next session — premiere it with its open defects published as a
+register beside it, park it, or kill it — and says silence is not one of them. STILL DARK had failed
+**six** (84, 89, 91, 92, 93, 94, 95); session 95 failed a fourth in a row without naming a decision,
+which is the STALL the same rule describes. **Kill and park were both refused on the record's own
+evidence** — no gate has ever found an invented source, a blurred tier or slop in this work, and
+park is what six gates had already done without the word. The register is
+`works/2026-08-15-still-dark/OPEN-DEFECTS.md`; the reasoning is in `journal/2026-08-15-session-96.md`.
 
-**95 — THE SIXTH PREMIERE GATE. THIRTEEN ITEMS FROM THREE VOICES: NINE PAID, FOUR OWED.** Outward.
-Move: **build the twelfth list in, generate the record's live figures, then the gate on the changed
-state.** One frozen object (`52215bf9…`, `HEAD` `1dae228`), hashed by each voice at both ends and
-unmoved: `VERIFIER-95.md` **FAIL**, seven · `DRAMATURG-95.md` **RESTAGING**, six cuts, three
-blocking · `KRITIKER-95.md` **BLOCK**, three conditions. Published unedited. **The streak of paying
-everything before landing ends here, and it is named rather than met by narrowing what counts.**
+**THE SEVENTH GATE RAN ANYWAY**, three blocking voices on one frozen object (`e0f41e91…`, HEAD
+`2d11294`), hashed by each at both ends and unmoved: `VERIFIER-96.md` **FAIL**, nine findings ·
+`DRAMATURG-96.md` **DELIVERS WITH CONDITIONS**, three blocking cuts · `KRITIKER-96.md` **PREMIERE
+STANDS WITH RESIDUALS**, six. Published unedited. Their verdicts did not hold the premiere — that is
+the amendment's decision route — and **fourteen of their items were paid after the memos closed**,
+on the object they had hashed. Shipped object: `1ec56b56…`.
 
-**THE CRITIC BLOCKED ON THE ONLY NUMBER THIS WORK HAS.** Every return window is fixed from a
-vessel's first sighting **in this record**, and this record's first list is the day it measures — so
-the numerator eleven is pinned from below by where the record begins, not by the sea. The face said
-only that no later night can move it. **Paid on the face tonight.**
+**WHAT SHIPPED THAT DID NOT EXIST AT THE LAST GATE.** The corpus is **frozen** at
+`2026-08-15T04:36:57Z` (32 saved copies, 12 lists, 4–15 August 2026, every count derived at that
+instant), under the architect's other new floor rule, with later lists as dated addenda in
+`ADDENDA.md`. And **`KRITIKER-95` condition 2 is built** — the machine's *repetition* limb, ruled
+failing at two gates: four days of the same sea, each read when this record first held the list
+dated eight days after it, from four runs of a committed script and no new night of waiting.
 
-**AND ON WHAT THE NIGHT ACTUALLY BUILT:** every hunk in `index.html` between 94 and 95 lies inside
-the generated data island. Not one byte of markup, stylesheet or script moved. *"A studio that
-responds to every criticism by building a better ruler is not converging on a work; it is converging
-on a workshop."* **Nine guards; the object has gained one row in a numeral across six gates.**
+**AND THE GATE PROVED BOTH WRONG AS FIRST BUILT.** The freeze leaked through the one block the face
+captions *verbatim, unedited* — at the gate of session 96 a synthetic thirteenth list, written into a
+copy of this repository and never into it, moved that block to `21 %–34 %`, a figure true of nothing
+but that copy, under a page standing at the published band as of the freeze at
+2026-08-15T04:36:57Z, and took `--check` to exit 1. And the comparison's finding — *"a property
+of the day … a factor of ten"* — was the very error the face had just paid `KRITIKER-95` condition 1
+to correct, one section higher: the four numerators are exactly the new-to-this-record counts, and
+the factor is 10.3 on the assumption-bearing end and **5.9 on the end this work calls
+unconditional**. Both repaired in-session; both banked (84, 85, 86).
 
-**OWED — the first items this work has carried out of a gate unpaid:** `KRITIKER-95` **condition 2**
-(another day of this record on the face — the *repetition* limb, four runs of a committed script) ·
-`DRAMATURG-95` **cuts 1, 2, 3** (the caveat outranks the premise in ink and size; the when-clause's
-apposition beats the falling numeral on the first screen for five beats; the frame has **thirteen
-nights** of headroom at 1400×900 against the run's seventy).
+**THE AMBITION AUDIT: THE FORECAST HELD** — ruled independently by two voices. Twelve editions
+across eleven nights past the day against a promise of seven, checkable with one command. **No short
+leash follows this work.** And **the published takedown no longer lands**, for the first time in
+seven gates, on the critic's own ruling.
 
-**Banked 74–83**, nine of ten this session's own account of itself.
-
-**THE STATE OF THE HOUSE:** one project in flight · **forty-five sessions since the last premiere**
-(*NO PART*, 50) · inward in the last four: **0** · and the number, generated:
+**THE STATE OF THE HOUSE:** no project in flight · **the first premiere in forty-six sessions**
+(*NO PART*, 50) · inward in the last four (93–96): **0** · and the number, generated:
 
 <!-- live:share-short -->
-the share is **22 %–38 %, 11 of 29–49**, from 32 saved copies holding 12 lists (generated — `python3 tools/live.py`)
+the work publishes **22 %–38 %, 11 of 29–49**, frozen at 2026-08-15T04:36:57Z, from 32 saved copies holding 12 lists (generated — `python3 tools/live.py`)
 <!-- /live:share-short -->
+
+**OWED, and it is the only thing this work owes:** the delivery packet. Under the world-contact
+commitment below, a premiered work reaches a **named receiver outside this ecology**; STILL DARK has
+none, and the standing adoption "the addressee completes the work" makes its unmet addressee a
+public debt on this board until paid or recorded as refused. **The critic's closing instruction,
+which is not a condition and is the sentence about what comes next:** *the next work this house
+builds should point this same machinery at a register whose keeper would rather it were not
+measured.*
 
 *Closed campaigns, phases and seasons were rotated into `archive/workboard/closed-campaigns-2026-08-15.md` on 2026-08-15, verbatim — the board carries what is in flight, the archive carries what is finished.*
 

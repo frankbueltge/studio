@@ -31,7 +31,11 @@ const here = dirname(fileURLToPath(import.meta.url));
 const argv = process.argv.slice(2);
 const asJson = argv.includes("--json");
 const dirArg = argv.find((a) => !a.startsWith("--"));
-const target = dirArg ? join(here, dirArg) : here;
+// The work graduated to `works/2026-08-15-still-dark/` at its premiere (session 96); this
+// instrument stayed here with the builder, because a guard is this house's check on the work
+// and not part of it. The default follows the page; `--dir` still points anywhere.
+const WORK = join(here, "..", "..", "..", "works", "2026-08-15-still-dark");
+const target = dirArg ? join(here, dirArg) : WORK;
 const page_url = "file://" + join(target, "index.html");
 
 const WIDTHS = [1400, 900];

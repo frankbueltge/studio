@@ -33,7 +33,11 @@ const arg = (k, d) => {
   const a = argv.find((x) => x.startsWith(`--${k}=`));
   return a ? a.slice(k.length + 3) : d;
 };
-const dir = resolve(arg("dir", "projects/season1/still-dark"));
+// The work graduated to `works/` at its premiere, session 96. The default follows it;
+// `--dir=` still points this instrument at any built copy, which is how the retired
+// states at earlier hashes are still measurable.
+const WORK_DIR = "works/2026-08-15-still-dark";
+const dir = resolve(arg("dir", WORK_DIR));
 const width = Number(arg("width", 1400));
 const stop = arg("stop", null);
 const url = "file://" + join(dir, "index.html");

@@ -18,7 +18,7 @@ projects/season1/PROJECT.md
 # this entry matched two headings and `record_words.py` exited 2 on every run — the ceiling
 # went unmeasured for a session and nothing noticed, because nothing ran it. The live block
 # is the first in the file. Ambiguity without the qualifier is still an error.
-WORKBOARD.md :: STILL DARK — **IN PRODUCTION** :: first
+WORKBOARD.md :: STILL DARK — **PREMIERED** :: first
 
 # RULED 2026-08-08 (session 76), so the split is checkable and not silent:
 # pre-registrations and raw panel answers are EVIDENCE, not process record, and

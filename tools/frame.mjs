@@ -51,7 +51,11 @@ const arg = (k, d) => {
   const hit = argv.find((a) => a.startsWith(`--${k}=`));
   return hit ? hit.slice(k.length + 3) : d;
 };
-const dir = resolve(arg("dir", "projects/season1/still-dark"));
+// The work graduated to `works/` at its premiere, session 96. The default follows it;
+// `--dir=` still points this instrument at any built copy, which is how the retired
+// states at earlier hashes are still measurable.
+const WORK_DIR = "works/2026-08-15-still-dark";
+const dir = resolve(arg("dir", WORK_DIR));
 const url = "file://" + join(dir, "index.html");
 
 // FOUR VIEWPORTS SINCE SESSION 93, AND THE TWO NEW ONES ARE SHORT — `DRAMATURG-93.md`
@@ -256,8 +260,26 @@ for (const vp of VIEWPORTS) {
     const live = holes[holes.length - 1];
     const pxLo = Math.min(...holes.map((h) => h.px));
     const pxHi = Math.max(...holes.map((h) => h.px));
-    const floorPx = vp.w <= 480 ? 268 : null;
-    const floorChips = vp.w <= 480 ? 22 : null;
+    // THE FLOOR IS KEYED TO THE VIEWPORT IT WAS READ AT, AND NOT TO A WIDTH — corrected at
+    // the gate of session 96, on `VERIFIER-96` finding 5 and `DRAMATURG-96` blocking cut 2,
+    // and it is banked failure 58's shape a second time: a rule keyed to width holding a
+    // fact about height. The predicate was `vp.w <= 480`, and the moment a 320×568 phone
+    // joined this list the instrument printed `UNDER` against a floor that viewport cannot
+    // reach at any scroll position under any staging. From its own budget there: figure-top
+    // to controls-bottom is 411 px, then the day's own heading 30, the names the day itself
+    // printed 135, the hole's heading 59 — so the hole's first pixel stands at least 635 px
+    // below the figure's top, inside a 568 px screen, before a single margin. The measured
+    // 0 px is not a shortfall, it is the only value the geometry permits, and a guard that
+    // prints a failure a work cannot fix is a guard that will be ignored.
+    //
+    // 268 px / 22 chips is an empirical high-water mark taken at 390×844 in session 89, and
+    // it is a floor THERE. Everywhere else the span is a measurement, printed and unjudged.
+    // The instrument's own old warrant — *"it cannot drift upward … and the viewport does
+    // not change size"* — was falsified by adding a viewport, which is worth more than the
+    // floor it cost.
+    const floored = vp.w === 390 && vp.h === 844;
+    const floorPx = floored ? 268 : null;
+    const floorChips = floored ? 22 : null;
     const under =
       floorPx !== null && (live.px < floorPx || live.chips < floorChips);
     console.log(
@@ -265,9 +287,17 @@ for (const vp of VIEWPORTS) {
         `${pxLo === pxHi ? pxHi : `${pxLo}–${pxHi}`} px, ` +
         `${live.chips} of ${live.of} chips at the last stop` +
         (floorPx === null
-          ? ""
+          ? " — measured, not floored: the floor is session 89's reading at 390×844 and does not travel"
           : ` — floor ${floorPx} px / ${floorChips} chips — ${under ? "UNDER" : "HOLDS"}`),
     );
+    // The layout fact the new viewport surfaced, published rather than scored: at 320×568
+    // the figure and the hole never share a screen. `DRAMATURG-96` ruled it not blocking.
+    if (live.px === 0) {
+      console.log(
+        `    at ${vp.w}×${vp.h} the figure and the hole do not share a screen at all — ` +
+          `published as a fact about this staging at this viewport, not as a failure`,
+      );
+    }
   }
 
   // THE BUDGET, AND WHICH PARTS THE FRAME ACTUALLY CONTAINS. The first version of this

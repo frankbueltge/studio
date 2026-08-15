@@ -19,6 +19,17 @@ run against <https://frankbueltge.de/ghost-fleet/> and its output still lands, i
 (`FREEZE_AS_OF`), so a thirteenth list changes neither the published band nor a single stop on the
 run, and `python3 data.py --check` keeps passing on the night one arrives.
 
+> **This paragraph was false when it was first written, and it is worth saying where.** At the
+> seventh premiere gate the verifying voice built a synthetic thirteenth list in a copy of this
+> repository and ran the committed builder there: `data.py --check` **exited 1**, because
+> `run_day()` — which produces the block printed on the face under the words *verbatim, unedited*,
+> and the reproduction command beside it — shelled out to the instrument with no instant at all.
+> Two island fields were live inside a frozen page, and the block moved to `21 %–34 % (11 of
+> 32–52)` while the rest of the face stood at `22 %–38 % (11 of 29–49)`. `VERIFIER-96` finding 1.
+> Closed in the same session and tested in both directions; the claim above is true as it now
+> stands, and this note stays because a correction that erases its error is worth less than one
+> that keeps it.
+
 That is deliberate and it is the whole point. Everything this work says about a day of the sea is
 checkable against a fixed set of bytes, by anyone, at any time, with the same three commands — and
 the number a reader checks is the number the work published, not the number the sea happened to be
@@ -52,6 +63,13 @@ and no list has arrived since.*
 | edition | capture | the band it would give | the command |
 |---|---|---|---|
 | — | — | — | — |
+
+**A worked example of what an entry costs to check, run at the premiere and kept here:** a
+synthetic list dated 16 August, carrying three names new to this record and a duration reaching back
+to 4 August, gives `21 %–34 %` — `11 of 32–52` — against the published `22 %–38 %`, `11 of 29–49`.
+That capture was written into a copy of this repository and never into it; no synthetic capture has
+ever been committed here, and none ever will be. It is named because it is the measurement that
+proved the freeze holds.
 
 **A note for the session that writes the first entry.** An addendum is not a patch. Do not touch
 `FREEZE_AS_OF`, do not re-run `data.py --write` expecting the face to move, and do not describe the

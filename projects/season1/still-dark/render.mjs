@@ -29,7 +29,7 @@
 // instrument in this house could have said so. `python3 tools/renders.py` is that instrument.
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
+import { dirname, join, relative } from "node:path";
 import { writeFileSync, readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -83,8 +83,15 @@ if (stepArg && !Number.isInteger(atStep)) {
   console.error(`--at-step must be an integer, got ${stepArg.slice("--at-step=".length)}`);
   process.exit(1);
 }
-const target = dirArg ? join(here, dirArg) : here;
-const page_url = "file://" + join(target, "index.html");
+// THE WORK GRADUATED AND THE RENDERS DID NOT — session 96. `index.html` is read from
+// `works/2026-08-15-still-dark/`, which IS the work; the outputs stay here, beside the
+// builder and the memos, because a screen-reader dump and two 1 MB pictures are this
+// house's evidence about the work and not part of it. `RENDERS.json` records the relative
+// path it read, so `tools/renders.py` still resolves the source it hashed.
+const SOURCE = join(here, "..", "..", "..", "works", "2026-08-15-still-dark");
+const source = dirArg ? join(here, dirArg) : SOURCE;
+const target = here;
+const page_url = "file://" + join(source, "index.html");
 
 const browser = await chromium.launch();
 
@@ -168,10 +175,10 @@ await browser.close();
 const sha = (p) => createHash("sha256").update(readFileSync(p)).digest("hex");
 const outputs = ["STATE-1.txt", "render-1400.png", "render-900.png"];
 const manifest = {
-  rendered_from: "index.html",
+  rendered_from: relative(target, join(source, "index.html")),
   stopped_after: stopAfter,
   at_step: atStep,
-  index_sha256: sha(join(target, "index.html")),
+  index_sha256: sha(join(source, "index.html")),
   outputs: Object.fromEntries(outputs.map((f) => [f, sha(join(target, f))])),
   note:
     "Written by render.mjs. Checked by tools/renders.py, which recomputes every hash " +
