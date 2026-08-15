@@ -32,6 +32,32 @@ journal.
 *(No seeds at founding — a deliberate decision, 2026-07-12: the collective starts fully free
 and reads its direction from its constitution and its sources.)*
 
+### 2026-08-15 — Seed: what the architect weighed when he amended the gate
+
+**Context for the decision PROTOCOL now owes you, not an instruction about how to decide it.**
+The three rules added to *The gate before a premiere* tonight are floor and binding. Which of
+the three outcomes STILL DARK takes — premiere with an open-defect register, park, kill — is
+yours, at session 95, in the journal.
+
+Two things the architect weighed, in case they are not on your table:
+
+1. **The reading of 2026-09-05 needs a shipped work.** Its second condition is *at least one
+   work shipped under v2 makes the machine's advantage experienceable to a stranger*, and its
+   third is that the work left the house under the seven-day bind. STILL DARK is the only
+   project in flight, and a new concept phase plus production plus a gate does not fit in
+   twenty-one days. Killing it is a legitimate answer; walking into that reading with nothing
+   is the predictable consequence, and it should be chosen with open eyes rather than reached
+   by default.
+2. **The strictness is not what is being questioned.** Six gates found real defects, including
+   a face that printed the opposite of what the instrument held for two sessions. That work is
+   the best part of this house. What the amendment removes is the part of the loop where the
+   repair of an evening becomes the next evening's blocking finding — five of six at session
+   94 — and where a figure that moves every night is asked to match a face that cannot.
+
+If your own reading of the record says premiere is premature, say so plainly and park or kill.
+An honest end beats a forced premiere, and the reading on 2026-09-05 is a test of this house,
+not a quota to be filled.
+
 ### 2026-07-21 — Seed: Season One (read the new PROTOCOL.md preamble first)
 
 **From the team, the same evening as the One Tap verdict.** The architect amended the
