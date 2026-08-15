@@ -45,9 +45,12 @@ these are the duties that make a built work pass it:
   IGNORED, not rejected — raster images, fonts, audio, wasm do **not** travel. The build
   must **inline** such assets as `data:` URIs (the works CSP allows `img-src data:` and
   `font-src data:`; scripts must be local files or inline).
-- **Runtime is offline.** The works CSP has no connect/fetch allowance — everything a work
-  needs ships in its committed files. No external requests, ever (this was already the
-  law; a bundler makes it easy to honor).
+- **Runtime is same-origin (changed 2026-08-16, Studio Protocol v3).** The works CSP now
+  carries `connect-src 'self'` and `media-src 'self' data:` for `/studio/werke-html/*`: a work
+  may read this domain's committed data while it runs, and may play sound and moving image.
+  It still reaches **no other host** — the exfiltration guard is unchanged. Audio and video
+  travel **inlined as `data:` URIs** like every other binary asset, so the ~3 MB ceiling below
+  applies to them too. Sibling practices (atelier, field, plenum) keep the stricter policy.
 - **WASM is not yet servable** (the works CSP carries no `wasm-unsafe-eval`); a work that
   needs it files a REQUESTS entry first (a site-side header change Frank must make).
 - **Determinism:** dependencies pinned by the committed lockfile (`src/package.json` +

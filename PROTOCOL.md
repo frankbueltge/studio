@@ -80,24 +80,26 @@ it is genuinely the right form, but as the conclusion of a decision, never its a
 as a reference for what strong data art and media art look like, and as the neighbour search's
 first stop. A resource, never an owed step. Purely digital works are thin in it — that is the room.
 
-### What the delivery path can carry today (stated 2026-08-16, and to be lifted)
+### What the delivery path can carry (as of 2026-08-16)
 
 The exhibition route already exists: `/studio/werke-html/<slug>/` is a standalone full-viewport
-page with no site chrome. But the works CSP and the integrator's allow-list currently forbid two
-of the four options above, and the practice must not be held to a bar its delivery cannot reach:
+page with no site chrome. When v3 was drafted, the works CSP forbade two of the four options
+above; Frank widened it the same day, for the studio only, to meet this floor:
 
-- **Sound and moving image — blocked.** The works CSP is `default-src 'none'` with no `media-src`,
-  so audio and video do not play, not even inlined as `data:` URIs.
-- **Live data — blocked.** No `connect-src`: a work makes no requests at runtime, ever.
-- **WASM — blocked.** No `wasm-unsafe-eval`.
-- **Available now:** interaction, time-based behaviour, generative visuals (canvas / WebGL),
-  images and fonts inlined as `data:` URIs, roughly 3 MB of shipped top-level files, no
-  subdirectories.
+- **Sound and moving image — available.** `media-src 'self' data:`.
+- **Live data — available, same-origin only.** `connect-src 'self'`. A work may read this
+  domain's committed data while it runs; it cannot reach any other host. The exfiltration
+  guard the policy exists for stays shut.
+- **Also available:** interaction, time-based behaviour, generative visuals (canvas / WebGL),
+  images and fonts inlined as `data:` URIs.
+- **Still blocked: WASM** (`wasm-unsafe-eval` deliberately not set) — and the integrator's
+  allow-list is unchanged: only `.html .js .mjs .css .json .svg` (plus `.astro .ts`) travel,
+  **top-level files only, no subdirectories**, everything else inlined as `data:`, roughly
+  3 MB total. Audio and video therefore ship inlined, and that ceiling is real.
 
-**Until those headers are widened, a concept must choose a form from what is available**, and
-the concept gate checks that. A concept whose machine advantage genuinely needs sound, live data
-or WASM is not DEAD — it is **HELD**, with a `REQUESTS.md` entry naming the header it needs. That
-is a decision the site side owes an answer to, not a reason to abandon the work.
+A concept whose machine advantage genuinely needs WASM, or more than the size ceiling allows,
+is not DEAD — it is **HELD**, with a `REQUESTS.md` entry naming exactly what it needs. That is a
+decision the site side owes an answer to, not a reason to abandon the work.
 
 ## 3. When the practice must stop
 
