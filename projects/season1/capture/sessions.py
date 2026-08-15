@@ -113,10 +113,18 @@ def main():
               f"{r['content_sha256']:<9} {r['vessels']:>4}   {bought}")
 
     lists = sum(1 for r in rows if r["bought_a_list"])
+    dates = len({r["edition_date_printed"] for r in rows})
     sessions = sorted({r["session"] for r in rows if r["session"] is not None})
     print()
     print(f"{len(rows)} capture(s) over {len(sessions)} committed session(s) "
-          f"({sessions[0]}–{sessions[-1]}) · {lists} distinct list(s)")
+          f"({sessions[0]}–{sessions[-1]}) · {lists} distinct list(s) by CONTENT, "
+          f"{dates} by EDITION DATE")
+    # Two counts, because this file and the work's face had been using one word for two
+    # objects since the night one edition date carried two lists. This line printed the
+    # content count alone and called it "distinct list(s)"; the face's run, its record and
+    # its headline count lists by EDITION DATE, one per day, and so read one lower. Nobody
+    # had run the two instruments side by side. Found and repaired in session 95 — a row
+    # above marked "A LIST" is a new CONTENT, which is the finer of the two.
     # Counted per SESSION, not per capture. Until session 79 every session had bought
     # exactly one copy, so the distinction had never mattered and the line simply walked
     # the captures — which printed "79, 79" the first night a session bought two (it

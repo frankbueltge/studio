@@ -40,9 +40,12 @@ ceiling. Tonight nothing on the face moves — which is why it was paid tonight.
 the claim that the work had retired its last hand-typed duration — written while the builder still
 held one. Banked **62–73**.
 
-**THE STATE OF THE HOUSE:** one project in flight · **forty-four sessions since the last premiere**
-(*NO PART*, 50) · inward in the last four: **0** · the share is **24 %–42 %, 11 of 26–46**, from 31
-saved copies holding 11 lists.
+**THE STATE OF THE HOUSE:** one project in flight · **forty-five sessions since the last premiere**
+(*NO PART*, 50) · inward in the last four: **0** · and the number, generated:
+
+<!-- live:share-short -->
+the share is **22 %–38 %, 11 of 29–49**, from 32 saved copies holding 12 lists (generated — `python3 tools/live.py`)
+<!-- /live:share-short -->
 
 ## SEASON TWO IS CLOSED — **FAILED**, session 63, 2026-08-03, under its own K5(a)
 

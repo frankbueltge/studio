@@ -1,0 +1,300 @@
+{
+  "capture_version": 1,
+  "fetch": {
+    "url": "https://frankbueltge.de/ghost-fleet/",
+    "fetched_at_utc": "2026-08-15T04:36:57Z",
+    "http_status": 200,
+    "bytes": 31882,
+    "sha256": "4009e3b63861177111b1f73bcd1dc8f8e909874c395d9be94370c97e53589962"
+  },
+  "method": {
+    "source": "https://frankbueltge.de/werke/ghost-fleet/",
+    "window_quote": "Daily. Window: disabling events that ended in the last 7 days (complete vanish-and-return stories).",
+    "window_days": 7
+  },
+  "edition_date_printed": "15 August 2026",
+  "edition_date": "2026-08-15",
+  "case_of_the_day": {
+    "name": "SHILLA EXPLORER",
+    "flag": "KOR",
+    "days_dark": 53,
+    "prose": "A fishing vessel flagged KOR switched off its transponder for 53 days — vanished at 1.0°N, 171.3°E, resurfaced at 1.0°N, 157.1°W, in Kiribati EEZ (Gilbert Islands).",
+    "gfw_url": "https://globalfishingwatch.org/map/vessel/02f164fce-e769-80f9-7686-cf0c8ce164a9"
+  },
+  "aggregates": {
+    "dark_inside_national_waters": 81,
+    "disappearances_examined": 233,
+    "in_the_window": 5757,
+    "vessel_days_of_darkness_approx": 2922
+  },
+  "aggregates_text": "81 ships went dark inside national waters lately — of 233 disappearances examined (5,757 in the window).",
+  "vessel_days_text": "Together about 2,922 vessel-days of darkness",
+  "vessels": [
+    {
+      "name": "SHILLA EXPLORER",
+      "flag": "KOR",
+      "days_dark": 53,
+      "prose": "A fishing vessel flagged KOR switched off its transponder for 53 days — vanished at 1.0°N, 171.3°E, resurfaced at 1.0°N, 157.1°W, in Kiribati EEZ (Gilbert Islands).",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/02f164fce-e769-80f9-7686-cf0c8ce164a9",
+      "role": "case_of_the_day",
+      "waters": null
+    },
+    {
+      "name": "KOO'S 102",
+      "flag": "MHL",
+      "days_dark": 37,
+      "waters": "United States EEZ (Jarvis Islands)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/a4dec7178-8b0e-cd07-ee00-f71426dd9d6f",
+      "role": "other"
+    },
+    {
+      "name": "KOYOMARU NO.88",
+      "flag": "JPN",
+      "days_dark": 34,
+      "waters": "Micronesian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/fc9fe39ce-e742-0195-9af2-c41408fcc742",
+      "role": "other"
+    },
+    {
+      "name": "FUKUICHIMARU NO,83",
+      "flag": "JPN",
+      "days_dark": 28,
+      "waters": "Micronesian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/f40900f52-2e21-a727-f6d8-27fc24d1bcb2",
+      "role": "other"
+    },
+    {
+      "name": "SOUTHERN SEAS 301",
+      "flag": "SLB",
+      "days_dark": 26,
+      "waters": "Kiribati EEZ (Gilbert Islands)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/6bb65b849-9722-5238-4a08-0ff4df3afa24",
+      "role": "other"
+    },
+    {
+      "name": "CAPT SILVER",
+      "flag": "USA",
+      "days_dark": 23,
+      "waters": "United States EEZ (Hawaii)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/4be614f17-7da8-acd5-6493-6f701714c315",
+      "role": "other"
+    },
+    {
+      "name": "TXORIARGI",
+      "flag": "ESP",
+      "days_dark": 22,
+      "waters": "Seychellois EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/b6ffe9fc7-7bfe-5990-72eb-390901d2fda5",
+      "role": "other"
+    },
+    {
+      "name": "JIN HUI NO.6",
+      "flag": "CHN",
+      "days_dark": 20,
+      "waters": "Kiribati EEZ (Gilbert Islands)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/759843c06-619e-7e23-bb09-021116e0956a",
+      "role": "other"
+    },
+    {
+      "name": "P. BEVERLY HILLS",
+      "flag": "PRT",
+      "days_dark": 19,
+      "waters": "United States EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/a9f21973b-b996-ef5a-6a02-a765a669bd4d",
+      "role": "other"
+    },
+    {
+      "name": "KONGOU",
+      "flag": "JPN",
+      "days_dark": 18,
+      "waters": "United States EEZ (Hawaii)",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/d460e39ea-acdb-598f-c994-f3e351db17f9",
+      "role": "other"
+    },
+    {
+      "name": "FV KW",
+      "flag": "AUS",
+      "days_dark": 15,
+      "waters": "Australian EEZ",
+      "gfw_url": "https://globalfishingwatch.org/map/vessel/ac5ff7e93-33ff-8388-6349-f348c2e17104",
+      "role": "other"
+    }
+  ],
+  "derived_intervals": [
+    {
+      "name": "SHILLA EXPLORER",
+      "flag": "KOR",
+      "days_dark": 53,
+      "went_dark_between": [
+        "2026-06-16",
+        "2026-06-23"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "KOO'S 102",
+      "flag": "MHL",
+      "days_dark": 37,
+      "went_dark_between": [
+        "2026-07-02",
+        "2026-07-09"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "KOYOMARU NO.88",
+      "flag": "JPN",
+      "days_dark": 34,
+      "went_dark_between": [
+        "2026-07-05",
+        "2026-07-12"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "FUKUICHIMARU NO,83",
+      "flag": "JPN",
+      "days_dark": 28,
+      "went_dark_between": [
+        "2026-07-11",
+        "2026-07-18"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "SOUTHERN SEAS 301",
+      "flag": "SLB",
+      "days_dark": 26,
+      "went_dark_between": [
+        "2026-07-13",
+        "2026-07-20"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "CAPT SILVER",
+      "flag": "USA",
+      "days_dark": 23,
+      "went_dark_between": [
+        "2026-07-16",
+        "2026-07-23"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "TXORIARGI",
+      "flag": "ESP",
+      "days_dark": 22,
+      "went_dark_between": [
+        "2026-07-17",
+        "2026-07-24"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "JIN HUI NO.6",
+      "flag": "CHN",
+      "days_dark": 20,
+      "went_dark_between": [
+        "2026-07-19",
+        "2026-07-26"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "P. BEVERLY HILLS",
+      "flag": "PRT",
+      "days_dark": 19,
+      "went_dark_between": [
+        "2026-07-20",
+        "2026-07-27"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "KONGOU",
+      "flag": "JPN",
+      "days_dark": 18,
+      "went_dark_between": [
+        "2026-07-21",
+        "2026-07-28"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    },
+    {
+      "name": "FV KW",
+      "flag": "AUS",
+      "days_dark": 15,
+      "went_dark_between": [
+        "2026-07-24",
+        "2026-07-31"
+      ],
+      "resurfaced_between": [
+        "2026-08-08",
+        "2026-08-15"
+      ],
+      "tier": "DERIVED",
+      "basis": "published days_dark + published window; both bands printed"
+    }
+  ],
+  "page_assets": [
+    "/_astro/Base.DgfAHDYn.css",
+    "/_astro/Base.astro_astro_type_script_index_0_lang.CRoAemHu.js"
+  ],
+  "tiers": {
+    "SOURCED": "vessels, aggregates, edition date, gfw ids — printed on the page",
+    "DERIVED": "derived_intervals — arithmetic on published durations, bands printed",
+    "OBSERVED": "fetched_at_utc — this house's own record of when it could first know"
+  },
+  "content_sha256": "04309879292e70458d95ef08e3bfdbd4d6f835f1749125501a37f4f556c60e66"
+}
