@@ -22,6 +22,11 @@ the moment the record does — it cannot drift, because it is never stored.
 A capture present in the working tree but not yet committed is printed as `uncommitted`
 with no session number. That is the honest state of tonight's copy at the moment it is
 taken, and the map says so rather than guessing at the session it is about to belong to.
+A capture whose adding commit carries no `(session N)` — the eight oldest, added before
+the landing law fixed that subject line — is printed with that commit's short hash. Until
+session 95 those eight were printed as `uncommitted` too, which told a stranger that a
+quarter of this record, including the only copy carrying the list dated 4 August, was not
+in the repository at all.
 """
 
 import argparse
@@ -107,7 +112,18 @@ def main():
 
     print(f"{'session':>8}  {'capture':<24} {'list':<12} {'content':<9} ships  bought")
     for r in rows:
-        s = str(r["session"]) if r["session"] is not None else "uncommitted"
+        # Three states, not two. A capture whose adding commit carries no `(session N)`
+        # in its subject is COMMITTED — it is simply in a commit this house's landing law
+        # did not yet shape — and printing it as `uncommitted` told a stranger that the
+        # eight oldest captures were absent from the record, among them the only copy that
+        # carries the list dated 4 August, which every figure on this work's face divides
+        # by. Found by KRITIKER-95, which declined to spend a condition on it; banked 83.
+        if r["session"] is not None:
+            s = str(r["session"])
+        elif r["commit"] is not None:
+            s = r["commit"][:7]
+        else:
+            s = "uncommitted"
         bought = "A LIST" if r["bought_a_list"] else f"copy only (= {r['same_list_as'][:17]})"
         print(f"{s:>8}  {r['capture']:<24} {r['edition_date_printed']:<12} "
               f"{r['content_sha256']:<9} {r['vessels']:>4}   {bought}")

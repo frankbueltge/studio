@@ -1957,9 +1957,21 @@ def build():
             "now": share_line(now, "LIVE"),
             "as_of": published_as_of,
             "band": band_line(now, caps_now),
+            # KRITIKER-95 condition 1. This sentence said only that the numerator cannot
+            # move forwards, which is true and is half a clock: every vessel's return
+            # window is fixed from its FIRST SIGHTING IN THIS RECORD (see index() in
+            # ../capture/day.py), and this record's earliest list is the day itself. So
+            # the count is pinned from below by where the record begins, not by the sea —
+            # a name already carried by a list dated before 4 August would be pinned to an
+            # earlier window and could leave both this numerator and the day's own set.
+            # The face may not let a stranger leave believing the count is immovable in
+            # both directions of time.
             "held": (
-                f"The {word(now['knowable_on_the_day_OBSERVED'])} did not move, and cannot. No "
-                "later night can put a name into a list that did not carry it."
+                f"The {word(now['knowable_on_the_day_OBSERVED'])} did not move, and cannot: no "
+                "later night can put a name into a list that did not carry it. Earlier nights are "
+                "another matter. This record's first list is the day itself, so the "
+                f"{word(now['knowable_on_the_day_OBSERVED'])} is fixed from below by where this "
+                "record begins — not by the sea."
             ),
             "moved": moved,
             "published": (

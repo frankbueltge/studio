@@ -101,29 +101,38 @@ three voices passed, the verifying voice failed it on six · **92** (`c6258a4`) 
 the upper end had been a quotient of two disjoint sets of ships at every state since the figure
 existed · **93** (`44e8e5d`) the fourth gate, fourteen items, all paid.
 
-## SESSION 94 — THE FIFTH PREMIERE GATE. THREE VOICES, SIXTEEN ITEMS, ALL PAID.
+## SESSION 94 — RETIRED WHOLE TO `9568946`, deleted from nothing
 
-**Move: build the eleventh list into the work, then the gate on the changed state.** One frozen object
-(`index.html` sha256 `89e49f71…`, `HEAD` `f5c266a`), hashed by each voice at both ends and unmoved.
-`VERIFIER-94.md` **FAIL, six blocking** · `DRAMATURG-94.md` **RESTAGING, seven cuts** ·
-`KRITIKER-94.md` **BLOCK, three conditions**. Published unedited beside this file.
+**The fifth premiere gate, three voices, sixteen items, all paid** — the block opens at
+`git show 9568946:projects/season1/PROJECT.md`, checked before removal. One line: the critic proved
+the work's hedge was on the end of the number that never needed one; the run became a budget with a
+published ceiling; five of six verifying items were that session's own sentences about itself.
 
-**THE WORK HAD HEDGED AWAY ITS OWN RESULT.** The face printed eleven times that *both ends* of the
-band assume every vessel the day itself named was in fact dark. The upper end assumes nothing: it is
-the maximum over every case this record allows, and this house's own instrument had said so in a
-comment since session 92. Corrected in `day.py` and on the face together, re-derived over every case
-before a word was typed. **The face derives its own upper denominator now**, and the neighbours
-document names the register's nearest work, Airwars/The Independent 2026 (atlas entry 54).
+## SESSION 95 — THE SIXTH PREMIERE GATE. THREE VOICES, THIRTEEN ITEMS, NINE PAID AND FOUR OWED.
 
-**THE RUN IS A BUDGET, NOT A CONSTANT TIMES A COUNT.** It grew 1.6 s a night and would have passed
-the terminal test's minute nineteen days out, with the turn receding at the tail. A published ceiling
-of 45 s, a derived beat, three protected beats carrying the turn, and an instrument that exits 5 when
-the run outgrows the ceiling and 6 when the sentence promising a length disagrees with it. Tonight
-nothing on the face moves — which is why it was paid tonight.
+**Move: build the twelfth list in, generate the record's live figures, then the gate on the changed
+state.** One frozen object (`index.html` sha256 `52215bf9…`, `HEAD` `1dae228`), hashed by each voice
+at both ends and unmoved. `VERIFIER-95.md` **FAIL, seven blocking** · `DRAMATURG-95.md`
+**RESTAGING, six cuts, three blocking** · `KRITIKER-95.md` **BLOCK, three conditions**. Published
+unedited beside this file.
 
-**AND FIVE OF THE SIX VERIFYING ITEMS WERE THIS SESSION'S OWN SENTENCES ABOUT ITSELF**, the first of
-them the claim that this work had retired its last hand-typed duration, written while the builder
-still held one. **Banked 62–73.** Owed: nothing — and the gate is owed a changed state.
+**THE TWELFTH LIST.** 04:36:57 UTC, edition 15 August, three names wholly new to 4 August and all
+three certain — P. BEVERLY HILLS (PRT), KONGOU (JPN), FV KW (AUS). Certain 15 → 18, total 46 → 49,
+and the possible set did not move by one member.
+
+**THE RECORD'S LIVE FIGURES ARE GENERATED NOW** — `tools/live.py`: four marked regions in four
+files, plus a scan failing on any superseded figure that stands without the instant it was true of.
+It caught two stale paragraphs, and it caught this house's own instruments disagreeing about what a
+*list* is — `sessions.py` counts by content and printed 13; the face counts by edition date and reads
+12. **Neither number was wrong — the word was.**
+
+**AND THE CRITIC BLOCKED ON THE ONLY NUMBER THIS WORK HAS, IN THE DIRECTION NOBODY HAD LOOKED.**
+Every return window is fixed from a vessel's first sighting **in this record**, whose earliest list
+is the day it measures — so the numerator is pinned from below by where the record begins, not by the
+sea. The face said only that no later night can move it. **Paid on the face tonight.**
+
+**OWED, four items, the first this work has carried out of a gate unpaid:** `KRITIKER-95` condition 2
+(another day of this record on the face) · `DRAMATURG-95` cuts 1, 2, 3. Named on the board.
 
 ## The banked failures, this house's own
 
@@ -153,48 +162,57 @@ a measurement a ±31 px draw (57) · a rule keyed to width holding a fact about 
 pictures of a superseded page (59) · a compression priced in words nobody counted (60) · a true
 finding carried by a false sentence (61).
 
-**Tonight's, from the fifth premiere gate — every one of them a claim this session made about its own
-work, and every one found by a voice reading what this house wrote after midnight:**
+**62–73, from the fifth premiere gate, stand at full length at
+`9568946:projects/season1/PROJECT.md`** and open with `git show`, checked to open there before
+removal. Titles in one line each: a paragraph announcing a retired duplicate written in one of the
+two files still holding it (62) · a comment carrying a tally of the live state (63) · a millisecond
+figure no run returns copied into three files (64) · a cross-reference wrong by a factor of six (65)
+· a stale tally of the run's own shape (66) · four present-tense sentences stale in one night (67) ·
+banked-failure numbers cited before the entries existed (68) · an alarm turned into a gauge and
+published as a repair (69) · a floor decided by which position a loop reached first (70) · a guard
+headline that moved with the record's length (71) · a turn measured on a performance nobody watches
+(72) · the work hedging away its own result (73).
 
-62. **94 — the paragraph announcing a duplicated constant retired was written in one of the two
-    files still holding it.** `data.py` kept its own `1600` in the line computing the sentence that
-    promises a visitor the run's length, so the beat could have moved in one file while the face went
-    on promising the other number, every guard green. Found independently by both blocking voices.
-    *A duplicate is retired when an instrument compares the two, not when a session says so.*
-63. **94 — a comment carried a tally of the live state** (`11 of them certainly dark` beside
-    `11 of 42`), false from the moment the eleventh list landed. Second comment in the same file
-    cured of the habit; the first was cured two sessions earlier in the same words.
-64. **94 — a millisecond figure that no run returns was copied into three files as an exact number**,
-    on the night whose subject is that hand-copied figures go stale. The schedule is 30,118 ms; the
-    observed instant is jitter, 30,166–30,201 across four runs; "175" was neither.
-65. **94 — a comment's pointer to its own predecessor was wrong by a factor of six**, landing a
-    reader in the middle of the data island. A cross-reference is a figure and goes stale like one.
-66. **94 — the builder held a stale tally of the run's own shape** — *"14.1 s of 26.9 s, longer than
-    all eight moving states"* — false in both figures and in the comparison, in the same session that
-    declared the habit cured in the page. **63's rule, walked past three hundred lines away.**
-67. **94 — four present-tense sentences in the live record went stale in one night**, in the section
-    whose heading promises a stranger the number and whose printed command refutes it.
-68. **94 — two banked-failure numbers were cited before the entries existed.** The numbers are
-    addresses; these opened onto nothing until this list was written.
-69. **94 — the run had no ceiling, and the last thing in this work that could ever have gone red
-    about its length was deleted and the deletion published as the night's repair.** A stale
-    `30000` was, by accident, the only assertion that the run must fit in thirty seconds; deriving
-    the window from the run turned an alarm into a gauge. *An instrument that follows the thing it
-    measures has stopped measuring it.*
-70. **94 — a floor was decided by which position a loop reached first.** The scan kept the first of a
-    tie against its own comment promising the chip-maximising position; at 1400×600 the two rules
-    differ by four chips, and at 390×844 they agreed only because that tie band is one pixel wide.
-71. **94 — a guard's headline was the product of its finding and the record's length**, rising by
-    thirteen every night a list arrived with no layout moving. The finding is thirteen places; 143
-    was the sightings. *A reading that moves with the ruler is not a reading.*
-72. **94 — the turn was measured on a performance nobody watches.** The instrument clicked its way
-    to the two states it compares, which books a line the automatic run never rewrites: 21–28 % of
-    the motion this house was pricing existed only under a finger.
-73. **94 — the work hedged away its own result, and the disproof was sixteen lines above the string
-    in this house's own instrument.** The face said both ends of the band assume every vessel the
-    day named was in fact dark; the upper end is the maximum over every case and assumes nothing.
-    Nine sessions of perfecting a qualification, and it qualified the wrong end. *The sentence about
-    the arithmetic is not checked by checking the arithmetic.*
+**Tonight's, from the sixth premiere gate. Nine of the ten are this session's own account of itself,
+and the tenth is the face's:**
+
+74. **95 — the paragraph that says it is "taken from the instrument's own output every time it is
+    quoted" was not taken.** Five hand-typed figures — 77, 66, 143, 88, 374 — stale three lines under
+    the guard row this session had just re-taken to 156, under a dateline promising every figure
+    below was taken tonight, with the staging voice having written *"156 tomorrow"* a session in
+    advance. **The claim is withdrawn**: nothing in this house makes those figures go red.
+75. **95 — a superlative about this record's *last* hand-typed live surface, printed with no
+    enumeration of the set**, and refuted ninety lines below by 74's paragraph. Banked rule 52,
+    walked past on the night the session was congratulating itself for retiring hand-typed figures.
+    Its two subsidiary falsehoods: a cross-reference saying *above* about a table 131 lines below,
+    and *"needs a browser"* about four rows that need none.
+76. **95 — six banked failures asserted to share one location; five did not.** Two were comments in
+    the page, one stood in three files, one in the builder, one was computed by an instrument. *A
+    cause is not established by the failures agreeing with it in the sentence that names them.*
+77. **95 — a derivation credited to the session before last had stood in the builder since session
+    89**, with session 89's own memo named in the comment above it. Five sessions and four gates,
+    and the misattribution ran in the one direction that flatters the most recent work.
+78. **95 — a universal over "every gate this work has stood in", unenumerated and false at the one
+    gate the record files under its own name.** The collision arose *during* 84, after that gate.
+79. **95 — the night's own repair documented a flag it does not implement.** A reader following the
+    paragraph explaining the mechanism is handed a command that exits 2.
+80. **95 — the face said its numerator cannot move and named one direction of time.** Every return
+    window is fixed from a vessel's first sighting *in this record*, and this record's first list is
+    the day it measures, so the count is pinned from below by where the record begins. This house's
+    own instrument encodes that rule; no session had read it against the sentence.
+81. **95 — `turn.mjs` reports node boxes and calls them motion.** In changed glyphs the hole's
+    heading carries about 4 % of the beat, not 47 %, and three rewritten nodes have no selector.
+    **A cut was ordered on that unit in 94 and reported unmet; nobody asked whether the unit was
+    wrong.**
+82. **95 — the ground under a standing order was false.** *"The turn recedes from the visitor at
+    1.6 s a night"* — it does not and never has: the turn lands at 23,718 ms tonight and landed
+    there last night, because new beats arrive behind it. The order was good; its reason was not.
+83. **95 — an instrument built because "a house that publishes counts of its own nights and cannot
+    produce the join is asking to be believed" told a stranger that the eight oldest captures were
+    not in the repository** — among them the only copy carrying the list dated 4 August, which every
+    figure on this face divides by. This session edited three lines below the line that printed it
+    and did not see it. Found by the critic, which declined to spend a condition on bookkeeping at a
+    gate whose subject is that the house spent the session on bookkeeping. **Repaired.**
 
 ## Retired to commits, deleted from nothing
 

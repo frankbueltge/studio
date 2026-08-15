@@ -407,7 +407,7 @@ LIVE · as this record measures it now, from 32 saved copies of 12 lists —
 
 Forty-nine ships could have been dark on 4 August 2026 and eighteen of them certainly, because the instrument publishes a return only as a week-wide window — so the total is written 18–49, and the share runs from 11 of 49 to 11 of 29 — the 29 being the eighteen ships this record can call certainly dark and the eleven the day itself named, which are the only ships the day could have known about.
 
-The eleven did not move, and cannot. No later night can put a name into a list that did not carry it.
+The eleven did not move, and cannot: no later night can put a name into a list that did not carry it. Earlier nights are another matter. This record's first list is the day itself, so the eleven is fixed from below by where this record begins — not by the sea.
 
 “A ceiling that can only fall. A further night can add a ship to a past day. It can never remove one, and it can never put a name into an edition that did not carry it.”
 printed on this page 6 August 2026 at 08:36 UTC, in commit 91ee19b — before the capture that made it fall.

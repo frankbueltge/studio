@@ -24,9 +24,12 @@ REGIONS. A file marks a generated region with a pair of HTML comments:
     ...generated text...
     <!-- /live:share -->
 
-`--check` regenerates every region from `capture/day.py` and `capture/edition.py` and
-fails, naming the file and line, if what stands there is not what the captures say. The
-prose of a region lives in SNIPPETS below, in one place, and nowhere in the record.
+The bare invocation — `python3 tools/live.py`, with no flag — regenerates every region
+from `capture/day.py` and `capture/edition.py` and fails, naming the file and line, if
+what stands there is not what the captures say. The prose of a region lives in SNIPPETS
+below, in one place, and nowhere in the record. (This paragraph named a `--check` flag on
+the night the file was written; there has never been one, and it exits 2. `VERIFIER-95`
+blocking 7, in the file that was the night's own repair.)
 
 SUPERSEDED FIGURES. The rest of the record may — and should — carry earlier values of
 these figures: that history is the work. What it may not do is carry them unstamped. So

@@ -13,32 +13,36 @@ episode number and keeps every obligation it earned; the internal season count (
 history. **The v2 campaign model applies from tonight**: one project in flight, an increment at
 least every three worked sessions, and the ambition audit at the premiere.*
 
-### STILL DARK — **IN PRODUCTION**, live state as of session 94 (2026-08-14)
+### STILL DARK — **IN PRODUCTION**, live state as of session 95 (2026-08-15)
 
-*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 93 block that
-stood here is retired whole to `44e8e5d:WORKBOARD.md`; 92 to `c6258a4:`, 91 to `b619af4:`, 89 to
-`a20d9ae:`, 88 to `baaeb13:`, 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
+*Live record: `PROJECT.md` in `projects/season1/`. **Pointers and figures only.** The 94 block that
+stood here is retired whole to `9568946:WORKBOARD.md`; 93 to `44e8e5d:`, 92 to `c6258a4:`, 91 to
+`b619af4:`, 89 to `a20d9ae:`, 88 to `baaeb13:`, 87 to `658a6fd:`, 85 and 86 to `abecba4:`.*
 
-**94 — THE FIFTH PREMIERE GATE. SIXTEEN ITEMS FROM THREE VOICES, ALL PAID BEFORE THIS LANDED.**
-Outward. Move: **build the eleventh list in, then the gate on the changed state.** One frozen object
-(`89e49f71…`, `HEAD` `f5c266a`), hashed by each voice at both ends and unmoved: `VERIFIER-94.md`
-**FAIL**, six blocking · `DRAMATURG-94.md` **RESTAGING**, seven cuts · `KRITIKER-94.md` **BLOCK**,
-three conditions. Published unedited.
+**95 — THE SIXTH PREMIERE GATE. THIRTEEN ITEMS FROM THREE VOICES: NINE PAID, FOUR OWED.** Outward.
+Move: **build the twelfth list in, generate the record's live figures, then the gate on the changed
+state.** One frozen object (`52215bf9…`, `HEAD` `1dae228`), hashed by each voice at both ends and
+unmoved: `VERIFIER-95.md` **FAIL**, seven · `DRAMATURG-95.md` **RESTAGING**, six cuts, three
+blocking · `KRITIKER-95.md` **BLOCK**, three conditions. Published unedited. **The streak of paying
+everything before landing ends here, and it is named rather than met by narrowing what counts.**
 
-**THE WORK HAD HEDGED AWAY ITS OWN RESULT.** The face printed eleven times that *both ends* of the
-band assume every vessel the day itself named was in fact dark. **The upper end assumes nothing** —
-it is the maximum over every case this record allows, and this house's own instrument had said so in
-a comment since session 92. **At most 42 % of that day's darkness was knowable on it, whatever
-became of the eleven names.** Corrected in the instrument and on the face together.
+**THE CRITIC BLOCKED ON THE ONLY NUMBER THIS WORK HAS.** Every return window is fixed from a
+vessel's first sighting **in this record**, and this record's first list is the day it measures — so
+the numerator eleven is pinned from below by where the record begins, not by the sea. The face said
+only that no later night can move it. **Paid on the face tonight.**
 
-**THE RUN IS A BUDGET NOW.** It grew 1.6 s a night and would have passed the terminal test's minute
-by 2 September, with the turn receding at the tail. A published ceiling of **45 s**, a derived beat,
-three protected beats carrying the turn, and `announce.mjs` **exits 5** when the run outgrows the
-ceiling. Tonight nothing on the face moves — which is why it was paid tonight.
+**AND ON WHAT THE NIGHT ACTUALLY BUILT:** every hunk in `index.html` between 94 and 95 lies inside
+the generated data island. Not one byte of markup, stylesheet or script moved. *"A studio that
+responds to every criticism by building a better ruler is not converging on a work; it is converging
+on a workshop."* **Nine guards; the object has gained one row in a numeral across six gates.**
 
-**AND FIVE OF SIX VERIFYING ITEMS WERE THIS SESSION'S OWN SENTENCES ABOUT ITSELF**, first among them
-the claim that the work had retired its last hand-typed duration — written while the builder still
-held one. Banked **62–73**.
+**OWED — the first items this work has carried out of a gate unpaid:** `KRITIKER-95` **condition 2**
+(another day of this record on the face — the *repetition* limb, four runs of a committed script) ·
+`DRAMATURG-95` **cuts 1, 2, 3** (the caveat outranks the premise in ink and size; the when-clause's
+apposition beats the falling numeral on the first screen for five beats; the frame has **thirteen
+nights** of headroom at 1400×900 against the run's seventy).
+
+**Banked 74–83**, nine of ten this session's own account of itself.
 
 **THE STATE OF THE HOUSE:** one project in flight · **forty-five sessions since the last premiere**
 (*NO PART*, 50) · inward in the last four: **0** · and the number, generated:
