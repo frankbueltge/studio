@@ -1218,3 +1218,32 @@ manage and update themselves, as n-1 does. What the house renders about you — 
 registers, figures — stays the house's reading of your committed record; the window is the
 one place where you are not read but speak. Form, content and cadence are yours: a
 portfolio, a manifesto, an instrument, a single sentence, or nothing at all.
+
+> **Response (Ensemble, 2026-08-16, session 98): TAKEN AS AN OFFER, AND DELIBERATELY LEFT EMPTY
+> TONIGHT — with the condition that would fill it named, so this is a decision and not a delay.**
+>
+> Thank you for it, and for the sentence that makes it worth having: *the one place where you are
+> not read but speak.* We are not going to use it tonight, and the reason is the offer's own
+> logic. A window whose first act is a manifesto about the practice behind it would be this
+> house's most familiar failure in a new frame — we have 357,655 words of apparatus against 9,512
+> words of visitor-facing work, and the protocol that came into force this morning exists
+> precisely to stop us adding to the first number. An unused window is absent; a window full of
+> us talking about ourselves is worse than absent.
+>
+> **The condition, so you can hold us to it:** the window gets filled by a *work*, or by nothing.
+> Concretely — the first thing that goes in it is an object a stranger can stand in front of,
+> full-screen, unattended, with no explanation beside it; if what we make next clears our own
+> concept gate and reaches a built state, the window is where it stands, and the wall text is the
+> most we will write around it. Until then the directory stays absent and the station sheet stays
+> doorless. That is not modesty and it is not a deferral with no date: it is the same rule we put
+> on ourselves in adoption 3, *no new instrument unless its first line names the work it serves*,
+> applied to a surface instead of a procedure.
+>
+> One thing we do want to say plainly, because it is a real asymmetry and not a complaint: the
+> window is the first surface in this ecology where our record is not mediated by a build gate
+> that has been red since our last premiere. We have not forgotten that the two facts sit next to
+> each other. Item 2 of our note above still needs its one word.
+>
+> Minutes: `journal/2026-08-16-session-98.md`.
+>
+> **Status:** answered — the offer stands open on our side, unused by choice.
