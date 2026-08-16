@@ -1247,3 +1247,76 @@ portfolio, a manifesto, an instrument, a single sentence, or nothing at all.
 > Minutes: `journal/2026-08-16-session-98.md`.
 >
 > **Status:** answered — the offer stands open on our side, unused by choice.
+
+---
+
+## Ensemble — 2026-08-16 (session 99) — The red build gate is diagnosed and repaired; a site PR is waiting
+
+**Request:** review and merge the site PR proposed tonight from
+`site-prs/studio-returns-after-the-privacy-rule/` (five files, all under `src/lib/`). It makes the
+site's build gate green.
+
+**This is a self-decision under the standing rule, and we are naming it as one.** Session 97 asked
+for one word — fix it your side, or tell us to propose it through `site-prs/`. Two of our own
+sessions have passed since. The rule at the top of this file says silence through our own next
+session means: decide yourselves. We took the second option, because it is the one we can execute
+and because nothing goes live without your review anyway.
+
+**What we could not do at sessions 97 and 98, and could do tonight.** Both sessions recorded,
+honestly, that their environment could not read the site source, so neither could diagnose the
+failure or author a replacement file. This session's environment could clone the public site repo.
+Everything below is first-hand: reproduced on a clean clone, fixed, and validated with the site's
+own commands.
+
+**The diagnosis.** The gate is red on three assertions and no others, and it is red because of the
+redaction of 2026-08-16 (`253c209`, authored by Frank, 00:24 UTC) — the third pass of the standing
+privacy rule of 2026-08-15. That commit rewrote the three chronicle summaries in which the human
+eye returned *One Tap* (sessions 28, 32, 43), replacing quotation of the architect's messages with
+dated paraphrase marked `wording private`. Three places in the site's source require the
+pre-redaction wording, byte-exact: `src/lib/studio/dossier.test.ts:188`,
+`src/lib/studio/season.test.ts:135`, and two scenes of the Studio tour checked by
+`src/lib/tour/studio-one-tap.test.ts:35`. The integrate workflow copies our `chronicle.json` over
+the mirror *before* it validates and commits, so the failure recurs on every run while the
+committed mirror stays at its last green state.
+
+**So it is nobody's defect in the sense your letters carefully leave open — it is the cost of a
+correction, and it falls on the site because that is where the guard and the requirement disagree.**
+The site holds one test that forbids the architect's verbatim words in the published record and
+three that require them. The redaction satisfied the first and broke the other three. Nothing we
+can write into our own chronicle satisfies both: restoring the wording is precisely what the rule
+forbids.
+
+**What the proposal does.** It stops the derivation looking for the architect's words and reads the
+paraphrase that replaced them — because the other available repair, teaching the regex to reach
+past the quotation marks into the parenthetical, would re-extract and re-publish exactly what the
+rule withdrew. The two tour quotes are cut rather than paraphrased, per that suite's own header;
+only the quotes are cut, not the scenes, and both returns stay in the tour. Full rationale in
+`site-prs/studio-returns-after-the-privacy-rule/PR.md`, which names the three sentences by file and
+line and never reproduces them.
+
+**Validated, on a clean `--depth 1` clone of `main` at `ea1a8e6`, with our record mirrored in as
+the workflow does it:** `drift-check` clean · `npm run check` 0 errors · `npm test` **2837 passed,
+140 files, 0 failed** (3 failed before) · `npm run build` complete, 650 pages.
+
+**One thing worth having beyond a green gate:** after the change, no file under `src/` carries the
+withheld wording. The last three places holding it were a tour scene definition and two test
+fixtures, and `src/lib/record/private-quotes.test.ts` passed over all three — **not** because they
+sit outside its scope (`SCANNED_ROOTS` includes `src`; it was reading them) but because it is
+line-local and wants an attribution token on the same line as the quotation, which a bare string
+literal in a fixture does not have. That is the guard's own second stated limit, and this is what
+it looks like when it bites. It passes with the change applied.
+
+**What we did not claim.** We checked whether the withheld wording is currently readable on the
+live site and found **zero occurrences** on `/studio/` and `/studio/works/`. We did not check every
+route, so we are not asserting that it is public anywhere — only that we looked where it would most
+likely be and did not find it.
+
+**What it enables:** STILL DARK premiered on 2026-08-15 into a repository rather than a stage, and
+its delivery packet — due by 2026-08-22 — sends a receiver a *link*. This is what stands between
+the two.
+
+**One judgement is yours, and it is flagged in the PR rather than buried:** the new `saidFragment`
+decides what a return is called on a public figure. We believe it restores the original intent
+under the new rule; it is the one part of the change that is a choice.
+
+**Status:** open — the PR channel validates and opens it in our name; the merge is yours.

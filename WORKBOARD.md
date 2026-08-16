@@ -17,6 +17,52 @@ season layer is deleted. Campaign vocabulary below is superseded wherever it con
 
 ### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **1**
 
+**Session 99 (2026-08-16) — the red build gate is diagnosed, repaired and in the channel.** For
+three sessions the board carried *the site build gate has been red since the premiere* as an item
+owed one word from Frank, with the honest note that this environment could not read the site source.
+**Tonight it could** — `git clone --depth 1` of the public site repository succeeded — and the
+standing rule on unanswered requests (silence through our own next session means decide yourselves)
+made the choice ours. Proposal in `site-prs/studio-returns-after-the-privacy-rule/`, five files, all
+under `src/lib/`; request at `REQUESTS.md`; minutes in `journal/2026-08-16-session-99.md`.
+
+**The diagnosis, first-hand:** the gate is red because of **this morning's redaction** (`253c209`,
+authored by Frank, 00:24 UTC — third pass of the privacy rule of 2026-08-15), which replaced verbatim
+quotation of the architect's messages with dated paraphrase in the three chronicle summaries where
+the human eye returned *One Tap* (S28, S32, S43). The site derives those returns by scraping
+quotation marks out of our prose, so three assertions fail — `dossier.test.ts:188`,
+`season.test.ts:135`, two Studio-tour scenes at `studio-one-tap.test.ts:35`. **The site holds one
+test that forbids the architect's verbatim words in the published record and three that require
+them;** the redaction satisfied the first and broke the other three, and nothing we can write into
+our own chronicle satisfies both. The integrate workflow copies our chronicle over the mirror
+*before* it validates and commits, so the failure recurs every run while the committed mirror stays
+at its last green state.
+
+**The repair, and the fix we refused:** teaching the regex to reach past the quotation marks into the
+parenthetical would have gone green and **re-published exactly what the rule withdrew.** Instead the
+derivation stops looking for the architect's words and reads the paraphrase that replaced them; the
+two unverifiable tour quotes are **cut** per that suite's own header (only the quotes — both scenes
+and both returns stay). Two defects the redaction had caused and nobody had seen were found by
+probing the derivation and repaired: the second return had **lost its substance** (the record stopped
+at the sentence that only announces it), and two of three mark labels had become **330-character
+sentences** in the floor figure's hover readout.
+
+**Validated on a clean clone of `main` at `ea1a8e6`, our record mirrored in as the workflow does it:**
+drift-check clean · `npm run check` 0 errors · `npm test` **2837 passed, 140 files, 0 failed** (3
+failed before) · `npm run build` complete, 650 pages. After the change **no file under `src/` carries
+the withheld wording**; the site's own privacy guard passes. **Not claimed:** we found zero
+occurrences on `/studio/` and `/studio/works/` and did not check every route.
+
+**The Verifier returned PASS on seventeen findings and killed one of our claims:** we had written
+twice that the site's privacy guard missed the three fixtures because it scans the record and not
+the source; it reads `src` and missed them because it is **line-local**. Corrected in both documents
+before they left the house. Its memo is at
+`site-prs/studio-returns-after-the-privacy-rule/VERIFIER-99.md`, published as returned **with one
+declared redaction on its face** — finding 1 named all three withheld sentences in order to search
+for them, so printing it whole would have made the memo the defect it cleared. Zero occurrences of
+those sentences across every file this session wrote, checked by script.
+
+**The counter does not move — no concept was brought tonight.**
+
 **Session 98 (2026-08-16) — the first concept gate under v3 ran, and killed its concept.**
 `projects/amendments/` — a projection built from a public medical register's own version history.
 Material was real and verified first-hand: **3,316 versions across 100 completed phase-3 drug
@@ -63,9 +109,11 @@ unattended, or nothing.** Answer in `REQUESTS.md`.
 
 - **The delivery packet** (`delivery/2026-08-still-dark/`, `status: prepared`) — the seven-day bind
   runs to **2026-08-22**: sent, or withheld with a dated reason.
-- **The site build gate has been red since the premiere**, so the work is a repository and not a
+- ~~**The site build gate has been red since the premiere**, so the work is a repository and not a
   stage. Reported session 97; needs one word — fix it that side, or tell us to propose it through
-  `site-prs/`. This session's environment again could not read the site source.
+  `site-prs/`.~~ **No longer one word owed, session 99:** diagnosed first-hand, repaired, and
+  proposed through `site-prs/studio-returns-after-the-privacy-rule/` under the standing rule on
+  unanswered requests. What is owed now is a review and a merge, not a decision about who fixes it.
 
 *The v2 block that stood here — STILL DARK **IN PRODUCTION**, live state as of session 95, with the
 sixth gate's thirteen items and the four it carried out unpaid — is retired whole to `2d11294` and
