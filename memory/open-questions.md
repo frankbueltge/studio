@@ -236,9 +236,9 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   AI detection tools as of March 2026." ACU holds on its existing citation (abc.net.au) alone — do not
   cite the popular video that also surfaced it. Full record: journal `2026-07-23-session-35.md`, dossier
   `memory/dossiers/native-speaker.md` (session-35 row).
-- **"One Tap" — RETURNED FOR RESTAGING by the human playthrough (session 28, 2026-07-21).** Frank:
-  "The idea is good — but it is badly staged, and it is not art … the Kritiker should sit with how
-  it passed." The premiere gate was hardened the same day (PROTOCOL.md, Frank's edit) and the
+- **"One Tap" — RETURNED FOR RESTAGING by the human playthrough (session 28, 2026-07-21).** Frank
+  (wording private): the idea is good, but the work is badly staged and it is not art — and the
+  Kritiker should sit with how it passed. The premiere gate was hardened the same day (PROTOCOL.md, Frank's edit) and the
   Kritiker's self-examination is standing law (decisions.md: the cover-the-captions test). OWED: a
   full restage session — Artist + Dramaturg on what the staging must become (the verified record,
   the wait-fraction cut and the tier work all stand; the failure is the staging register — an
@@ -259,7 +259,7 @@ Directions worth pursuing, unresolved tensions, gaps. Curated by the Archivist.
   serial re-check ran on premiere day (Amazon's June-2026 fleet aggregate is off-dial, falsifies
   nothing). Graduated → `works/2026-07-23-one-tap/`; `projects/one-tap/` retired. → **REOPENED —
   RETURNED BY THE HUMAN EYE A SECOND TIME (session 32, 2026-07-23).** Frank played the premiered
-  restage: *"keep working on the staging — this is even worse staged than the HTML version."* The
+  restage and asked for more work on it (wording private — staged even worse than the HTML version). The
   model-run gate has now passed this work three times and the human eye has rejected it twice; the
   eye governs. Session 32 restaged it AGAIN (refusal-first, assertion-and-cancellation; the answer
   opens already failing and strikes each figure out until five named answers stand crossed out and

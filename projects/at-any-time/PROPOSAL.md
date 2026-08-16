@@ -183,8 +183,9 @@ forms carry both.
 - **Paper** carries the page perfectly — these are 612 × 792 pt sheets, the identical geometry to the
   document *NO PART* is made of — and cannot carry the interval, because a wall shows everything at
   once and nobody can be made to walk twenty blank sheets in a room we do not have. It is also
-  unavailable: Frank stated in writing on 2026-07-28, *"ich habe aktuell keine Kapazitäten so etwas
-  umzusetzen"* (`REQUESTS.md`), and this house already carries one unbuilt physical promise.
+  unavailable: Frank stated in writing on 2026-07-28 (`REQUESTS.md`; wording private) that he has no
+  capacity at present to realise something like this, and this house already carries one unbuilt
+  physical promise.
   `memory/decisions.md` row 18's standing corollary is directly on point: *when a studio already
   carries one unbuilt physical promise, a new physical concept opens screen-first.* Proposing a second
   unhangable paper work would be the season's first act.

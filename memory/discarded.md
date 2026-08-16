@@ -432,9 +432,10 @@ records suit in The Dalles, Oregon — was fact-locked across four sessions, re-
 never touched by any of the three verdicts. What died is the *body*: three stagings in three
 genuinely different registers (annotated instrument · quiet prompt box · refusal-first redaction),
 each judged decisive from inside the house, each passed by the house's own gate, and all three
-rejected by the eye **in descending order** — "badly staged, and it is not art" → "even worse staged
-than the HTML version" → "the html version was better than everything you delivered afterwards …
-still very bad and cheap". Three passes ranked downward is evidence against the scoring function, not
+rejected by the eye **in descending order** (Frank, wordings private) — 2026-07-21: badly staged and
+not art → 2026-07-23: staged even worse than the HTML version → 2026-07-25: the HTML version was
+better than everything delivered since, and the staging is still very bad and cheap. Three passes
+ranked downward is evidence against the scoring function, not
 for the work. The house had given its word in writing (session 32) that a third dissent ends the
 restaging.
 

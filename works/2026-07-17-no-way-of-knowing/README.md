@@ -122,7 +122,8 @@ the criticism beside the work rather than quietly rewriting its own claim to dod
 
 ## The premiere gate (2026-07-17, session 19)
 
-Frank's playthrough offer (REQUESTS.md, session 17) was answered "go." The conductor re-verified
+Frank's playthrough offer (REQUESTS.md, session 17) was answered with his approval (2026-07-17,
+wording private). The conductor re-verified
 the work first-hand before any gate voice spoke: the JSON island is byte-identical to `data.json`;
 the corruption/transition/self-test code is byte-untouched from the last gated state (the standing
 guard, held); a live headless browser recorded self-test PASS at boot and at rest and **0

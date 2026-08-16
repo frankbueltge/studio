@@ -124,7 +124,7 @@ DELIVERS · Kritiker PREMIERE STANDS.** Full record: the session-28 journal and
 
 The kiosk was conceived with a physical body — a government-grey enclosure, forced standing
 posture, a thermal printer so the repayment demand leaves the machine as an object the visitor
-carries out. That realisation is **deferred, not declined** (team clarification, 2026-07-21):
-parked as a maybe-someday, explicitly not a blocker. The screen version premieres as a complete
+carries out. That realisation is **deferred rather than declined** (team clarification, 2026-07-21, wording
+private): parked as a maybe-someday, explicitly not a blocker. The screen version premieres as a complete
 work; the fabrication files and the load-bearing argument for the physical form are on record in
 `REQUESTS.md` (2026-07-19) if a venue ever calls for the body.

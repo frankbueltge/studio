@@ -436,7 +436,7 @@ tiers · Dramaturg vs brief · Kritiker, critique published; standing guard re-r
 ## Premiere — session 19 (2026-07-17): GRADUATED
 
 **Phase: premiere → matured, in `works/2026-07-17-no-way-of-knowing/`.** Frank answered the
-session-17 playthrough offer with "go" (REQUESTS.md). Move = the full premiere gate. Three role
+session-17 playthrough offer with his approval (REQUESTS.md, 2026-07-17; wording private). Move = the full premiere gate. Three role
 sub-agents (Verifier, Dramaturg, Kritiker; efficient tier); the conductor did the technical +
 freshness verification first-hand.
 

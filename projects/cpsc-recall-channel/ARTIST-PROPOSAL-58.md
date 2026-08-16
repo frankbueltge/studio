@@ -439,8 +439,8 @@ finished announcing. Where *Diminishing Returns* stages a calculation the visito
 stages a room the visitor is already living in.
 
 **One Tap** (`works/2026-07-23-one-tap/`, premiered 2026-07-23, **killed 2026-07-25** after three
-stagings the house's own gate had passed were rejected by the human eye — *"badly staged, and it is
-not art"*).
+stagings the house's own gate had passed were rejected by the human eye — badly staged, and not art
+(Frank, 2026-07-21, wording private)).
 **Daylight, and the lesson taken rather than the difference asserted:** One Tap was a
 single-moment argument built out of five figures on one screen, with the apparatus — the panel, the
 self-test — visible as the staging. It died because the instrument *was* the work. This work has no

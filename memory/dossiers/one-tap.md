@@ -1,6 +1,6 @@
 # Dossier — One Tap
 
-**Phase:** concept → OPENED (recast) session 23 → increment 1 (session 24) → increment 2 (session 26) → premiere prep (session 27) → RETURNED BY THE HUMAN EYE (session 28) → RESTAGED (session 29) → PREMIERED (session 31, 2026-07-23) → **RETURNED BY THE HUMAN EYE A SECOND TIME (session 32, 2026-07-23) — Frank played the premiered restage: "keep working on the staging — this is even worse staged than the HTML version." RESTAGED AGAIN in-session (refusal-first, assertion-and-cancellation). The work stands in `works/2026-07-23-one-tap/`, reworked in place, PENDING THE HUMAN EYE — not a settled premiere. The model-run gate has now passed this work three times; the human eye has rejected it twice; the eye governs.**
+**Phase:** concept → OPENED (recast) session 23 → increment 1 (session 24) → increment 2 (session 26) → premiere prep (session 27) → RETURNED BY THE HUMAN EYE (session 28) → RESTAGED (session 29) → PREMIERED (session 31, 2026-07-23) → **RETURNED BY THE HUMAN EYE A SECOND TIME (session 32, 2026-07-23) — Frank played the premiered restage and asked for more work on it (2026-07-23, wording private — staged even worse than the HTML version). RESTAGED AGAIN in-session (refusal-first, assertion-and-cancellation). The work stands in `works/2026-07-23-one-tap/`, reworked in place, PENDING THE HUMAN EYE — not a settled premiere. The model-run gate has now passed this work three times; the human eye has rejected it twice; the eye governs.**
 
 **One line:** A real public drinking fountain beside a terminal. You drink (one certain, known sip). You ask the machine a question and watch a needle try — and fail — to tell you how much water your question cost, because no disclosed number exists for it to rest on. Then you learn that a whole town could not find out either: it took a 13-month court fight to pry loose even the annual figure. The subject is **unknowability engineered by power**, not "AI is thirsty".
 
@@ -322,10 +322,11 @@ hear because the Artist wrote both halves?"*
 
 ## Session 28 (2026-07-21, fourth of this date) — the playthrough verdict: RETURNED BY THE HUMAN EYE
 
-**Frank played it (REQUESTS.md, 2026-07-21):** *"Played it. The idea is good — but it is
-badly staged, and it is not art. It does not premiere like this. And note the sharper
-problem: it cleared the full gate (Verifier · Dramaturg · Kritiker) and still lands as
-*not-art* to the human eye. Restage it — and the Kritiker should sit with how it passed."*
+**Frank played it (REQUESTS.md, 2026-07-21; wording private, paraphrased):** the idea is
+good, but the work is badly staged and it is not art; it does not premiere in this state.
+He named the sharper problem himself — it cleared the full gate (Verifier · Dramaturg ·
+Kritiker) and still landed as not-art to the human eye. His instruction: restage it, and
+the Kritiker should sit with how it passed.
 
 **Consequences, recorded:**
 1. **One Tap does NOT premiere in its current state.** Phase: in production — **returned
@@ -487,7 +488,7 @@ judgment sits where it is hard). Build edits conductor-first-hand.
   MEASURED, not predicted: a spinner does not change size by two orders of magnitude, so the
   "spinner with pretensions" half of the session-29 takedown is DEAD; the "Dalles does all the
   real work" half is KILLED NARROWLY on the hinge of the close's "Yours" (remove the box and that
-  word loses its referent, the volta collapses). The "badly staged / not-art" verdict was against
+  word loses its referent, the volta collapses). The badly-staged / not-art verdict was against
   the dead instrument panel and does not transfer. Named residual soft spot: the attract's quiet
   "lives partly outside the work" (the install dependency, now disclosed).
 
@@ -510,9 +511,9 @@ source is fixed.
 
 ## Session 32 (2026-07-23) — RETURNED BY THE HUMAN EYE A SECOND TIME → restaged again
 
-**The steer (Frank, on the premiered restage, REQUESTS.md 2026-07-23):** *"Bitte weiter an der
-Inszenierung arbeiten, das ist noch schlechter inszeniert als die HTML Version"* — "Please keep
-working on the staging — this is even worse staged than the HTML version." Session 31 had bound
+**The steer (Frank, on the premiered restage, REQUESTS.md 2026-07-23; wording private,
+paraphrased):** keep working on the staging — it is staged even worse than the HTML
+version. Session 31 had bound
 itself in writing: *if the human eye still dissents, that verdict governs — the record and the
 gate are not above your eye.* It dissented. So this session: **the eye's verdict is taken as
 governing; the premiere does not stand as settled; the work returns to production and is restaged
@@ -598,11 +599,12 @@ staged) so the next verdict is diagnostic.
 
 # Session 43 (2026-07-25) — KILLED. The third return of the eye, and a gesture that never rendered.
 
-**The verdict that ended it** (Frank, `REQUESTS.md`, seed *„Inszenierung des Werks »one tap«"*):
-*"die html version war besser, als alles was ihr danach abgeliefert habt. also die Inszenierung ist
-immer noch sehr schlecht und billig."* Third rejection, third staging, third internal gate pass — and
-the eye's ranking descends with the restage count: instrument panel > prompt box > refusal-first.
-(The house reads "die HTML version" as the first staging it was asked to play, the instrument panel
+**The verdict that ended it** (Frank, `REQUESTS.md`, seed *„Inszenierung des Werks »one tap«"*,
+2026-07-25; wording private, paraphrased): the HTML version was better than everything delivered
+since, and the staging is still very bad and cheap. Third rejection, third staging, third internal
+gate pass — and the eye's ranking descends with the restage count: instrument panel > prompt box >
+refusal-first.
+(The house reads his reference to the HTML version as the first staging it was asked to play, the instrument panel
 of sessions 24–27; the reading is an interpretation, stated as one, and nothing in the decision turns
 on it — every staging after the first is rejected either way.)
 
