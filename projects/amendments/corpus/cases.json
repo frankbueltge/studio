@@ -1,0 +1,113 @@
+[
+ {
+  "nct": "NCT00884585",
+  "sponsor": "Allergan",
+  "title": "Efficacy and Safety Study of Cyclosporine 0.010% to Treat Atopic Keratoconjunctivitis",
+  "primary_completion": "2010-10-31",
+  "versions": 6,
+  "first_version": "2009-04-17",
+  "last_version": "2012-11-02",
+  "amendments": [
+   {
+    "version": 3,
+    "date": "2011-02-04",
+    "after_primary_completion": true,
+    "from": [
+     "The proportion of patients with a 2 or more improvement in punctate corneal staining score (analysis of responders)",
+     "The proportion of patients with a 4 or more improvement in composite symptom score (analysis of responders)"
+    ],
+    "to": [
+     "The proportion of patients with a 1 or more grade improvement in punctate corneal staining score and a 4 or more grade improvement in composite symptom score (analysis of responders)"
+    ]
+   },
+   {
+    "version": 5,
+    "date": "2012-11-02",
+    "after_primary_completion": true,
+    "from": [
+     "The proportion of patients with a 1 or more grade improvement in punctate corneal staining score and a 4 or more grade improvement in composite symptom score (analysis of responders)"
+    ],
+    "to": [
+     "Percentage of Treatment Responders"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT02220725",
+  "sponsor": "Portola Pharmaceuticals",
+  "title": "A Study in Older Subject to Evaluate the Safety and Ability of Andexanet Alfa to Reverse the Anticoagulation Effect of Rivaroxaban",
+  "primary_completion": "2015-08-31",
+  "versions": 6,
+  "first_version": "2014-08-18",
+  "last_version": "2023-02-08",
+  "amendments": [
+   {
+    "version": 3,
+    "date": "2018-08-27",
+    "after_primary_completion": true,
+    "from": [
+     "Reversal of Rivaroxaban anticoagulation effect as measured by anti-factor Xa activity"
+    ],
+    "to": [
+     "Efficacy: Percent Change From Baseline in Anti-fXa Activity at the Nadir (Parts I and II)"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT02287584",
+  "sponsor": "Sumitomo Pharma Co., Ltd.",
+  "title": "Confirmatory Study of DSP-5423P in Patients With Schizophrenia",
+  "primary_completion": "2018-12-31",
+  "versions": 7,
+  "first_version": "2014-11-06",
+  "last_version": "2022-04-09",
+  "amendments": [
+   {
+    "version": 5,
+    "date": "2020-12-01",
+    "after_primary_completion": true,
+    "from": [
+     "Change in PANSS total score from baseline"
+    ],
+    "to": [
+     "Change in PANSS Total Score From Baseline at Week 6"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT01285492",
+  "sponsor": "Novartis Pharmaceuticals",
+  "title": "Long Term Safety and Tolerability of QVA149 Versus Tiotropium in Japanese Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+  "primary_completion": "2012-09-30",
+  "versions": 9,
+  "first_version": "2011-01-26",
+  "last_version": "2013-12-03",
+  "amendments": [
+   {
+    "version": 6,
+    "date": "2013-09-04",
+    "after_primary_completion": true,
+    "from": [
+     "Safety and tolerability of QVA149 with regard to treatment-emergent adverse events"
+    ],
+    "to": [
+     "Number of Participants With Adverse Events, Serious Adverse Events or Death"
+    ]
+   },
+   {
+    "version": 7,
+    "date": "2013-11-08",
+    "after_primary_completion": true,
+    "from": [
+     "Number of Participants With Adverse Events, Serious Adverse Events or Death"
+    ],
+    "to": [
+     "Number of Participants With Adverse Events (AEs), Serious Adverse Events (SAEs) or Death"
+    ]
+   }
+  ]
+ }
+]

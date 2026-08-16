@@ -4,13 +4,72 @@ Central ledger of the studio: projects, their phase, and live threads. Read and 
 session. Phases: *concept → in production → increment shipped → premiere → maintained /
 parked / killed*.
 
-## NO CAMPAIGN IN FLIGHT — **STILL DARK PREMIERED 2026-08-15**
+## PROTOCOL v3 IN FORCE 2026-08-16 — the bar is now at the concept, and it kills
 
-*The block that stood here — STILL DARK **IN PRODUCTION**, live state as of session 95, with the
+**Read this before the rest of the board.** Much of what follows was written under v2 and describes
+a house that no longer exists. v3 (`PROTOCOL.md`, in force this morning) moves the machine-advantage
+test from the premiere gate to the **concept** gate, where the verdict is **BUILD or DEAD in one
+session and a DEAD concept does not return**; adds a **form floor** (exhibitable, unattended,
+carrying interaction / time-based behaviour / sound-image-generative / live data — *text plus a few
+visualisations is not a work in this practice*); caps **standing still** rather than session count;
+**abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
+season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
+
+### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **1**
+
+**Session 98 (2026-08-16) — the first concept gate under v3 ran, and killed its concept.**
+`projects/amendments/` — a projection built from a public medical register's own version history.
+Material was real and verified first-hand: **3,316 versions across 100 completed phase-3 drug
+trials**, twelve read version by version (276 versions), captured by a committed script into a
+frozen corpus. Eleven of twelve had the promised primary outcome text change *after* the primary
+completion date — but **most such amendments are typographic**, and the four substantive ones
+(including Allergan NCT00884585, where the success threshold moved from 2 to 1 and a second endpoint
+vanished three months after completion) were **found by a person reading diffs by hand**.
+
+**Kritiker: DEAD**, on the machine advantage, and right. *"Repeating a diff operation 3,310 times is
+not verification — verification is the act of telling the substantive four from the typographic
+thousands, and that act was performed by a person, once, off-stage, before the machine touched
+anything."* The adversarial neighbour search had already found the finding published (Holst et al.
+2023: 41 % / 18 %), the method built (cthist, PLOS ONE 2022) and the form settled as genre (*Listen
+to Wikipedia*, 2013). And the previous critic's standing instruction — *a register whose keeper would
+rather it were not measured* — **fails outright**: this keeper publishes its whole history openly
+(`?tab=history`, HTTP 200, checked).
+
+**Nothing survives to be built.** What survives: the corpus, the capture script, three unedited
+memos, and the named shape of a concept that would not fail this way — a register **not** statutorily
+required to publish its edits · a **validation set larger than the training set** · a form where
+**the discriminating act itself is on screen**, not a texture needing a caption.
+
+**THE RECORD CAP WAS BREACHED ON ITS FIRST NIGHT AND IS REPORTED, NOT TRIMMED.** v3 §5 sets 3,000
+words per project including gate memos; this project's three documents total **4,269 words — 42 %
+over**. The artefacts are not being edited to comply: two of the three are memos commissioned
+adversarially and published unedited. The finding offered upward is about the law, not only about us:
+**a concept gate run properly under v3 — proposal, adversarial neighbour search, blocking verdict,
+each unedited — exceeds the cap by construction.** No amendment proposed (the moratorium holds). The
+project is closed tonight and cannot grow.
+
+**Two more dead concepts and v3 §5 requires a report to Frank before a fourth is conceived.**
+
+### THE WINDOW — offered 2026-08-16, ANSWERED, LEFT EMPTY BY CHOICE
+
+Frank's seed of this morning gives the practice `window/`, mirrored verbatim to `/studio/window/`,
+no gate and no human in the path — *the one place where you are not read but speak*. **Taken as an
+offer; not used.** A window whose first act is this house explaining itself is worse than an absent
+one, against 357,655 words of apparatus and 9,512 words of visitor-facing work. **The condition that
+fills it is named and binding on us: a work a stranger can stand in front of, full-screen and
+unattended, or nothing.** Answer in `REQUESTS.md`.
+
+### STILL DARK — open, and both items are Frank's
+
+- **The delivery packet** (`delivery/2026-08-still-dark/`, `status: prepared`) — the seven-day bind
+  runs to **2026-08-22**: sent, or withheld with a dated reason.
+- **The site build gate has been red since the premiere**, so the work is a repository and not a
+  stage. Reported session 97; needs one word — fix it that side, or tell us to propose it through
+  `site-prs/`. This session's environment again could not read the site source.
+
+*The v2 block that stood here — STILL DARK **IN PRODUCTION**, live state as of session 95, with the
 sixth gate's thirteen items and the four it carried out unpaid — is retired whole to `2d11294` and
-opens with `git show 2d11294:WORKBOARD.md`, checked before removal. Studio Protocol v2's campaign
-model applies: one project in flight, and there is none. **The next session may open a concept
-phase.***
+opens with `git show 2d11294:WORKBOARD.md`, checked before removal.*
 
 ### STILL DARK — **PREMIERED**, session 96 (2026-08-15) → `works/2026-08-15-still-dark/`
 

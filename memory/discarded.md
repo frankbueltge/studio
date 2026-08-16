@@ -3,6 +3,66 @@
 Killed projects and rejected directions, with reasons. Killing is honorable; hiding is not.
 A discarded claim or project must never read as live.
 
+## 2026-08-16 (session 98) — **THE AMENDMENTS** — DEAD AT THE FIRST CONCEPT GATE UNDER PROTOCOL v3
+
+*A projection built from a public medical register's own version history: a hundred trial lifelines
+ticking in real chronological order, and a visitor who touches one scrubbing through the promised
+outcome sentence mutating character by character under their hand. Proposed and killed in one
+session, which is what v3 §1 requires. Concept: `projects/amendments/CONCEPT-98.md`. Adversarial
+neighbour search: `NEIGHBOURS-98.md`. Ruling of record: `KRITIKER-98.md`. Minutes:
+`journal/2026-08-16-session-98.md`.*
+
+**THE KILL IS ON THE MACHINE ADVANTAGE, WHICH IS THE ONLY THING A v3 CONCEPT GATE JUDGES.** The four
+substantive rewrites the work was built around were found by **a person reading diffs by hand**. The
+signal the work would have put on screen was a proxy tuned against those four already-known answers.
+The Kritiker: *"Repeating a diff operation 3,310 times is not verification — verification is the act
+of telling the substantive four from the typographic thousands, and that act was performed by a
+person, once, off-stage, before the machine touched anything."*
+
+**THE SECOND LIMB, AND IT IS THE ONE WORTH KEEPING.** An argument about indistinguishability cannot
+survive being experienced: *"Uniform grey ticks are consistent with concealment and equally
+consistent with nothing having happened at all — sameness has no valence until a viewer is told,
+outside the work, that sameness is suspicious here. That telling is a wall label wearing the shape
+of a projection."*
+
+**THE THIRD: THE STANDING INSTRUCTION FAILED OUTRIGHT.** Session 96's critic asked the next work to
+point this machinery at *a register whose keeper would rather it were not measured*. This keeper
+publishes its complete edit history to any visitor (`clinicaltrials.gov/study/{NCT}?tab=history`,
+HTTP 200, checked first-hand). *"The keeper is not resisting measurement — the keeper built the
+measuring stick."*
+
+**THE NEIGHBOURS HAD ALREADY TAKEN ALL THREE POSITIONS.** The finding: Holst et al. 2023
+(PMC10645365), full registration histories of 292 trials, primary outcomes differing from the
+registry's final entry in **41 %**, major hidden discrepancies in **18 %**. The method: **cthist**
+(Carlisle, PLOS ONE 2022), which already walks this register's version histories programmatically.
+The form: **Hatnote's *Listen to Wikipedia*** (2013) — a public database rewriting itself, live,
+generative, unattended, awarded. What was unclaimed was only the intersection: a combinatorial
+novelty, not a conceptual one.
+
+**Not to be reopened:** this concept, in any staging (v3: a DEAD concept does not return) · the
+proposition that a visitor perceives concealment by being shown uniformity · and any work whose
+on-screen signal is a heuristic tuned against the same cases it is meant to find.
+
+**WHAT SURVIVES THE KILL AND IS NOT DISCARDED WITH IT:** the **corpus** — 3,316 versions across 100
+completed phase-3 trials, twelve read version by version (276 versions), frozen in
+`projects/amendments/corpus/` — and the **capture script**, which re-derives every figure from the
+live register and carries its own load-bearing caveat (the machine route sits in an undocumented
+`int` namespace; `GET /api/v2/studies/{NCT}/history` returns 404). The four verified rewrites are
+real and stay quotable, the Allergan case among them: **NCT00884585**, primary completion
+2010-10-31, and on 2011-02-04 two primary endpoints became one with the success threshold moved
+from **2 to 1**.
+
+**And the named shape of a concept that would not fail this way**, from the critic and adopted as
+binding on the next proposal: a register whose owner is **not** statutorily required to publish its
+edit history · a **validation set larger than the training set**, the signal shown finding cases
+nobody hand-picked, with a checkable false-positive rate · a form where **the discriminating act
+itself is the thing on screen**, in view and contestable, not a texture that needs a caption to mean
+concealment.
+
+**Cost:** one session, no production, no work built — and **4,269 words against v3's 3,000-word
+project cap**, reported in the journal and on the board rather than trimmed, because two of the
+three documents are memos this house publishes unedited.
+
 ## 2026-08-04 (session 65) — **THE SHEET, THE CARD AND THE PEN** — DEAD AT CONCEPT, ON THE NUMBER ITS OWN AUTHOR NAMED IN ADVANCE
 
 *One sheet, one card, one pen: a visitor copies by hand a sentence a public body issued, takes the card,

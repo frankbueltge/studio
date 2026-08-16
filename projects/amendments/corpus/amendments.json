@@ -1,0 +1,386 @@
+[
+ {
+  "nct": "NCT03309007",
+  "sponsor": "University of New Mexico",
+  "title": "A Double-Blind, Placebo-Controlled Trial of Anti-Aging, Pro-Autophagy Effects of Metformin in Adults With Prediabetes",
+  "primary_completion": "2020-08-20",
+  "versions": 9,
+  "first_version": "2017-10-11",
+  "last_version": "2023-12-07",
+  "amendments": []
+ },
+ {
+  "nct": "NCT04976192",
+  "sponsor": "Teva Pharmaceuticals USA",
+  "title": "Study to Compare Efficacy and Safety of TEV-45779 With XOLAIR (Omalizumab) in Adults With Chronic Idiopathic Urticaria",
+  "primary_completion": "2024-04-05",
+  "versions": 13,
+  "first_version": "2021-07-14",
+  "last_version": "2025-09-18",
+  "amendments": [
+   {
+    "version": 9,
+    "date": "2025-03-27",
+    "after_primary_completion": true,
+    "from": [
+     "Change from baseline in the ISS7 at Week 12 between TEV 45779 300 mg and XOLAIR 300 mg",
+     "Relative potency of TEV 45779 and XOLAIR"
+    ],
+    "to": [
+     "Change From Baseline in the ISS7 at Week 12, TEV-45779 High Dose Compared to XOLAIR High Dose (For European Medicines Agency [EMA] Submission)",
+     "Change From Baseline in the ISS7 at Week 12, TEV-45779 High Dose Compared to XOLAIR High Dose (For Food and Drug Administration [FDA] Submission)",
+     "Relative Potency of TEV-45779 and XOLAIR"
+    ]
+   },
+   {
+    "version": 12,
+    "date": "2025-09-18",
+    "after_primary_completion": true,
+    "from": [
+     "Change From Baseline in the ISS7 at Week 12, TEV-45779 High Dose Compared to XOLAIR High Dose (For European Medicines Agency [EMA] Submission)",
+     "Change From Baseline in the ISS7 at Week 12, TEV-45779 High Dose Compared to XOLAIR High Dose (For Food and Drug Administration [FDA] Submission)",
+     "Relative Potency of TEV-45779 and XOLAIR"
+    ],
+    "to": [
+     "Change From Baseline in the ISS7 at Week 12, TEV-45779 High Dose Compared to XOLAIR High Dose (For European Medicines Agency [EMA] Submission)",
+     "Change From Baseline in the ISS7 at Week 12, TEV-45779 High Dose Compared to XOLAIR High Dose (For Food and Drug Administration [FDA] Submission)"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT02367911",
+  "sponsor": "Therapeutics, Inc.",
+  "title": "A Comparison of 122-0551 Foam Versus Vehicle Foam in Subjects With Plaque Psoriasis",
+  "primary_completion": "2015-08-31",
+  "versions": 9,
+  "first_version": "2015-02-13",
+  "last_version": "2018-10-11",
+  "amendments": [
+   {
+    "version": 7,
+    "date": "2018-08-30",
+    "after_primary_completion": true,
+    "from": [
+     "Proportion of subjects rated a &quot;treatment success&quot; based on the Investigator&#x27;s Global Assessment (IGA)"
+    ],
+    "to": [
+     "Proportion of Subjects Rated a &quot;Treatment Success&quot; Based on the Investigator&#x27;s Global Assessment (IGA)"
+    ]
+   },
+   {
+    "version": 8,
+    "date": "2018-10-11",
+    "after_primary_completion": true,
+    "from": [
+     "Proportion of Subjects Rated a &quot;Treatment Success&quot; Based on the Investigator&#x27;s Global Assessment (IGA)"
+    ],
+    "to": [
+     "Percentage of Subjects Rated a &quot;Treatment Success&quot; Based on the Investigator&#x27;s Global Assessment (IGA)"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT00029536",
+  "sponsor": "Beth Israel Deaconess Medical Center",
+  "title": "Progesterone vs Placebo Therapy for Women With Epilepsy",
+  "primary_completion": "2010-06-30",
+  "versions": 11,
+  "first_version": "2005-06-23",
+  "last_version": "2017-06-02",
+  "amendments": [
+   {
+    "version": 1,
+    "date": "2005-09-13",
+    "after_primary_completion": false,
+    "from": [],
+    "to": [
+     "Number of women who show a greater than 50% decline in average daily seizure frequency"
+    ]
+   },
+   {
+    "version": 10,
+    "date": "2017-06-02",
+    "after_primary_completion": true,
+    "from": [
+     "Number of women who show a greater than 50% decline in average daily seizure frequency"
+    ],
+    "to": [
+     "Percent of Women Who Show a Greater Than 50% Decline in Average Daily Seizure Frequency"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT01061736",
+  "sponsor": "Sanofi",
+  "title": "Evaluation of Sarilumab (SAR153191/REGN88) on Top of Methotrexate in Rheumatoid Arthritis Patients",
+  "primary_completion": "2013-10-31",
+  "versions": 72,
+  "first_version": "2010-02-02",
+  "last_version": "2017-06-27",
+  "amendments": [
+   {
+    "version": 67,
+    "date": "2012-11-14",
+    "after_primary_completion": false,
+    "from": [
+     "Part A: Percentage of patients who achieved the American College of Rheumatology criteria for improvement ACR20",
+     "Part B: Percentage of patients who achieved ACR20"
+    ],
+    "to": [
+     "Part A: Percentage of patients who achieved the American College of Rheumatology criteria for improvement ACR20",
+     "Part B: ACR20 response",
+     "Part B: Change in modified Van der Heijde Sharp score (composite index on X-ray assessed through central reading)",
+     "Part B: Change in physical function as measured by the average change from baseline in HAQ-DI from Week 8 to Week 52"
+    ]
+   },
+   {
+    "version": 68,
+    "date": "2013-11-07",
+    "after_primary_completion": true,
+    "from": [
+     "Part A: Percentage of patients who achieved the American College of Rheumatology criteria for improvement ACR20",
+     "Part B: ACR20 response",
+     "Part B: Change in modified Van der Heijde Sharp score (composite index on X-ray assessed through central reading)",
+     "Part B: Change in physical function as measured by the average change from baseline in HAQ-DI from Week 8 to Week 52"
+    ],
+    "to": [
+     "Part A: Percentage of patients who achieved the American College of Rheumatology criteria for improvement ACR20",
+     "Part B: ACR20 response",
+     "Part B: Change in modified Van der Heijde Sharp score (composite index on X-ray assessed through central reading)",
+     "Part B: Change in physical function as measured by the change from baseline in HAQ-DI"
+    ]
+   },
+   {
+    "version": 70,
+    "date": "2014-11-19",
+    "after_primary_completion": true,
+    "from": [
+     "Part A: Percentage of patients who achieved the American College of Rheumatology criteria for improvement ACR20",
+     "Part B: ACR20 response",
+     "Part B: Change in modified Van der Heijde Sharp score (composite index on X-ray assessed through central reading)",
+     "Part B: Change in physical function as measured by the change from baseline in HAQ-DI"
+    ],
+    "to": [
+     "Part A: Percentage of patients who achieved the American College of Rheumatology score of 20% improvement (ACR20) at Week 12",
+     "Part B: Percentage of patients who achieved ACR20 response at Week 24",
+     "Part B: Change from baseline in modified Van der Heijde Sharp score (mTSS) at Week 52",
+     "Part B: Change from baseline in Health Assessment Question-Disability Index (HAQ-DI) at Week 16"
+    ]
+   },
+   {
+    "version": 71,
+    "date": "2017-06-27",
+    "after_primary_completion": true,
+    "from": [
+     "Part A: Percentage of patients who achieved the American College of Rheumatology score of 20% improvement (ACR20) at Week 12",
+     "Part B: Percentage of patients who achieved ACR20 response at Week 24",
+     "Part B: Change from baseline in modified Van der Heijde Sharp score (mTSS) at Week 52",
+     "Part B: Change from baseline in Health Assessment Question-Disability Index (HAQ-DI) at Week 16"
+    ],
+    "to": [
+     "Part A: Percentage of Participants Achieving American College of Rheumatology 20% (ACR20) Response at Week 12",
+     "Part B: Percentage of Participants Achieving ACR20 Response at Week 24",
+     "Part B: Change From Baseline in Health Assessment Question Disability Index (HAQ-DI) at Week 16",
+     "Part B: Change From Baseline in Van Der Heijde Modified Total Sharp Score (mTSS) at Week 52"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT01285492",
+  "sponsor": "Novartis Pharmaceuticals",
+  "title": "Long Term Safety and Tolerability of QVA149 Versus Tiotropium in Japanese Patients With Chronic Obstructive Pulmonary Disease (COPD)",
+  "primary_completion": "2012-09-30",
+  "versions": 9,
+  "first_version": "2011-01-26",
+  "last_version": "2013-12-03",
+  "amendments": [
+   {
+    "version": 6,
+    "date": "2013-09-04",
+    "after_primary_completion": true,
+    "from": [
+     "Safety and tolerability of QVA149 with regard to treatment-emergent adverse events"
+    ],
+    "to": [
+     "Number of Participants With Adverse Events, Serious Adverse Events or Death"
+    ]
+   },
+   {
+    "version": 7,
+    "date": "2013-11-08",
+    "after_primary_completion": true,
+    "from": [
+     "Number of Participants With Adverse Events, Serious Adverse Events or Death"
+    ],
+    "to": [
+     "Number of Participants With Adverse Events (AEs), Serious Adverse Events (SAEs) or Death"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT00626392",
+  "sponsor": "Abbott",
+  "title": "Study to Evaluate the EFFECTS of Acetylsalicylic Acid (ASA) on Niaspan\u00ae-Induced Flushing in Subjects With Dyslipidemia",
+  "primary_completion": "2008-04-30",
+  "versions": 4,
+  "first_version": "2008-02-21",
+  "last_version": "2009-08-26",
+  "amendments": [
+   {
+    "version": 2,
+    "date": "2009-07-15",
+    "after_primary_completion": true,
+    "from": [
+     "The maximum severity of flushing events subjects experience"
+    ],
+    "to": [
+     "Maximum Severity of Flushing Events During Week 1 of Niacin Extended-release (NER) Treatment"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT01254019",
+  "sponsor": "GlaxoSmithKline",
+  "title": "A Clinical Study to Assess the Efficacy and Safety of GSK2402968 in Subjects With Duchenne Muscular Dystrophy",
+  "primary_completion": "2013-06-28",
+  "versions": 103,
+  "first_version": "2010-12-02",
+  "last_version": "2018-08-13",
+  "amendments": [
+   {
+    "version": 100,
+    "date": "2017-03-21",
+    "after_primary_completion": true,
+    "from": [
+     "To assess the efficacy of subcutaneous 6 mg&#x2F;kg GSK2402968 versus placebo; specifically to have 90% power to detect a difference in 6MWD between GSK2402968 and placebo of 30 meters, assuming a common standard deviation of 55meters"
+    ],
+    "to": [
+     "Change from Baseline in muscle function using the 6 Minute Walking Distance (6MWD) test assessed at Week 48"
+    ]
+   },
+   {
+    "version": 102,
+    "date": "2018-08-13",
+    "after_primary_completion": true,
+    "from": [
+     "Change from Baseline in muscle function using the 6 Minute Walking Distance (6MWD) test assessed at Week 48"
+    ],
+    "to": [
+     "Change From Baseline in Muscle Function Using the 6 Minute Walking Distance (6MWD) Test Assessed at Week 48"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT04490499",
+  "sponsor": "Merck Sharp & Dohme LLC",
+  "title": "A Hepatitis B Vaccine Challenge Study After Previous Vaxelis\u00ae Vaccination (V419-013)",
+  "primary_completion": "2020-12-29",
+  "versions": 12,
+  "first_version": "2020-07-28",
+  "last_version": "2022-07-20",
+  "amendments": [
+   {
+    "version": 9,
+    "date": "2021-08-10",
+    "after_primary_completion": true,
+    "from": [
+     "Percentage of Participants with a Protective Hepatitis B Surface Antibody Level of \u226510 milli International Units&#x2F;mL (mIU&#x2F;mL)"
+    ],
+    "to": [
+     "Percentage of Participants With a Protective Hepatitis B Surface Antibody Level of \u226510 Milli International Units&#x2F;mL (mIU&#x2F;mL)"
+    ]
+   },
+   {
+    "version": 10,
+    "date": "2021-09-09",
+    "after_primary_completion": true,
+    "from": [
+     "Percentage of Participants With a Protective Hepatitis B Surface Antibody Level of \u226510 Milli International Units&#x2F;mL (mIU&#x2F;mL)"
+    ],
+    "to": [
+     "Percentage of Participants With a Protective Hepatitis B Surface Antibody Level of \u226510 Milli International Units&#x2F;mL (mIU&#x2F;mL) at 30 Days Post-Challenge With HBVAXPRO\u2122"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT00644787",
+  "sponsor": "Janssen Pharmaceutical K.K.",
+  "title": "A Dose-Finding Study of Fentanyl (JNS020 QD) 1-Day Transdermal Patch in Participants With Cancer Pain",
+  "primary_completion": "2008-10-31",
+  "versions": 14,
+  "first_version": "2008-03-24",
+  "last_version": "2013-06-06",
+  "amendments": [
+   {
+    "version": 12,
+    "date": "2013-04-01",
+    "after_primary_completion": true,
+    "from": [
+     "Period 1: Dose titration success rate Period 2: The mean VAS score for the last 3 days before the completion (or discontinuation) of Period 2"
+    ],
+    "to": [
+     "Percentage of Participants Achieving Dose Titration Success",
+     "Change From Dose Titration Phase in the Mean Visual Analog Scale (VAS) Score at Double Blind Phase"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT01194414",
+  "sponsor": "Hoffmann-La Roche",
+  "title": "A Study to Compare Subcutaneous Versus Intravenous Administration of RoActemra/Actemra (Tocilizumab) in Participants With Moderate to Severe Active Rheumatoid Arthritis",
+  "primary_completion": "2012-01-31",
+  "versions": 17,
+  "first_version": "2010-09-01",
+  "last_version": "2016-05-11",
+  "amendments": [
+   {
+    "version": 13,
+    "date": "2013-01-07",
+    "after_primary_completion": true,
+    "from": [
+     "Proportion of patients achieving clinical improvement of 20% according to American College of Rheumatology criteria (ACR20)",
+     "Safety comparison of sc versus iv administration: Adverse events and laboratory assessments"
+    ],
+    "to": [
+     "Percentage of Participants Achieving an American College of Rheumatology Criteria (ACR20) Response at Week 24",
+     "Percentage of Participants With Adverse Events, Serious Adverse Events and Clinically Significant Laboratory Assessments"
+    ]
+   }
+  ]
+ },
+ {
+  "nct": "NCT01998906",
+  "sponsor": "Hoffmann-La Roche",
+  "title": "A Study of Herceptin (Trastuzumab) in Combination Chemotherapy in Women With Locally Advanced Breast Cancer",
+  "primary_completion": "2012-07-31",
+  "versions": 3,
+  "first_version": "2013-11-25",
+  "last_version": "2014-10-24",
+  "amendments": [
+   {
+    "version": 2,
+    "date": "2014-10-24",
+    "after_primary_completion": true,
+    "from": [
+     "Event-free survival"
+    ],
+    "to": [
+     "Event-Free Survival (EFS) - Percentage of Participants With an Event",
+     "Event-Free Survival",
+     "Percentage of Participants Event Free at 1 Year",
+     "Percentage of Participants Event Free at 2 Years",
+     "Percentage of Participants Event Free at 3 Years"
+    ]
+   }
+  ]
+ }
+]
