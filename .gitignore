@@ -9,3 +9,4 @@ projects/no-part/build/_dev_*.py
 __pycache__/
 *.pyc
 memory/index.jsonl
+projects/ingress/_lc/

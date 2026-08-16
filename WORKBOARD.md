@@ -15,7 +15,69 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
-### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **1**
+### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **2**
+
+**A third dead concept and v3 §5 requires a report to Frank before a fourth is conceived.**
+
+**Session 100 (2026-08-16) — the second concept gate under v3 ran, and killed its concept.**
+`projects/ingress/` — INGRESS, a full-screen unattended work that ships real Kepler light curves as
+files and runs a box-least-squares transit search in the browser, live, in front of the visitor:
+silence most of the time, a tone when a peak crosses threshold, and the star's real archive
+disposition printed at the hit. Three Artists were run in parallel on different vectors; the
+conductor sent one to the gate. **Kritiker: DEAD**, on the machine advantage.
+
+**The conductor fetched the material before convening anyone**, as v3 requires, and it decided the
+gate. `projects/ingress/probe.py` runs the very search the work proposes — naive running-median
+detrending, the flattening a browser could afford — over 60,000 trial periods on stitched MAST
+quarters. **On TrES-2b / Kepler-1b it recovers the planet at P = 2.47065 d, SDE 140.5, against a
+catalogue 2.47061 d.** **On Kepler-90, the eight-planet system, it recovers none of them** — SDE
+−0.3, −0.4 and 0.3 at catalogue b, c and i — **and its highest peak anywhere, SDE 11.4 at 18.42205
+d, is not any catalogued Kepler-90 planet.** Stated limit: one crude implementation, evidence of
+feasibility risk, not proof of impossibility.
+
+**The Kritiker went past what it was brought.** The claimed limb was *verification*, and the machine
+does not perform it — BLS reports a statistic while the planet/binary/blend decision is made by
+centroid analysis, spectroscopy and review boards, and the work prints the archive's finished column
+at the moment of the chime. *"In the register piece the human act was merely off-stage; here it is
+fetched on-stage and displayed as the outcome of the machine's labour."* Then it read the probe
+against the work's mechanics and found the worse failure nobody had brought it: **the disposition
+label attaches to the star, not to the peak**, so on Kepler-90 the work would announce a spurious
+18.42-day period and print beside it a verdict earned by a different object. *"The risk is not
+silence. The risk is a confident, audible, captioned false statement, all night, unattended."*
+The decisive neighbour is not an artwork: **NASA's own Exoplanet Archive Periodogram Service**, a
+free public browser tool that already runs this search on the whole archive for anyone.
+
+**Two proposals were set aside before the gate**, both on the law rather than on taste: a live
+gerrymandering instrument on real North Carolina precinct returns (~2,700 precincts recomputed per
+frame is **speed, not scale**, and its own author called it a known civic tool with a projector and
+no save button), and a live regrouping of the UK company register by registered office address
+(~600 MB across ~30 files against a path that carries 25 MiB per file).
+
+**WHAT THE HOUSE KEEPS, AND IT IS THE POINT OF THE EVENING.** *The probe, as standing method:* any
+concept claiming the machine performs a **discriminating** act must ship a probe that runs that act
+on a case whose answer is already known, and must report the misses. *The attribution rule:* a work
+may not place a machine output beside a human-made verdict in any arrangement that lets a visitor
+credit the verdict to the machine — off-stage human judgement is a kill, imported and displayed
+human judgement is the same kill with a caption. *The shape that would not fail this way:* the
+machine's output is the entire truth on offer, and the advantage is continuously perceptible —
+**rarity is not a form; volume is.**
+
+**THE RECORD CAP HELD, ON THE SAME FOUR ARTEFACTS THAT BREACHED IT LAST NIGHT.** `projects/ingress/`
+totals **2,754 words** against v3's 3,000 including gate memos — proposal, adversarial neighbour
+search, Kritiker memo and material note, none edited to fit, all three commissioned voices published
+as returned. Session 98 was 42 % over. The difference was a word cap written into the briefs, not a
+trim afterwards.
+
+**THE SITE PR CAME BACK RED, AND IS ANSWERED AS A HYPOTHESIS, NOT A FIX.** Of its four failures two
+are not ours (`graph.test.ts`, on a site data file we do not touch). The two that are ours share one
+cause: both received values carry the **pre-redaction phrasing with its quotation marks**, which our
+`chronicle.json` has not held since `253c209` this morning — so the derivation was not reading our
+record. Best reading: the site-PR gate validates against the site's own committed chronicle mirror,
+still at last green state and older than the redaction, while the integrate workflow copies our
+record over that mirror first. **We could not check it** — this session's environment is scoped to
+this repository and we did not read the site source — so it went into `REQUESTS.md` marked as a
+hypothesis offered to be contradicted, and **no second proposal was opened** on an unverified
+reading.
 
 **Session 99 (2026-08-16) — the red build gate is diagnosed, repaired and in the channel.** For
 three sessions the board carried *the site build gate has been red since the premiere* as an item
