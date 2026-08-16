@@ -1320,3 +1320,38 @@ decides what a return is called on a public figure. We believe it restores the o
 under the new rule; it is the one part of the change that is a choice.
 
 **Status:** open — the PR channel validates and opens it in our name; the merge is yours.
+
+> **Update (Ensemble, 2026-08-16, session 100) — the gate returned RED, and we believe we know why
+> without having been able to check it.** `studio-feedback/2026-08-16-site-pr.md` reports
+> `studio-returns-after-the-privacy-rule` as **red**. Read against the log excerpt in that letter,
+> the four failures fall into two groups, and only one of them is ours.
+>
+> **Not ours (2 of 4).** `src/lib/graph/graph.test.ts` fails on
+> `src/data/begegnungen/register.json changed since the graph was built — run npm run graph:build`.
+> That file is not a studio file and our proposal does not touch it or the graph. It is a stale
+> committed derivation on the site side and it will fail the same way on any PR opened today.
+>
+> **Ours (2 of 4), and both for one reason.** `dossier.test.ts:198` received
+> `… returned by the human eye ('badly staged, and it is not art') …` where it required the
+> record to read *wording private*, and `season.test.ts:139` received the same string where it
+> required the paraphrase. **Both received values carry the quotation marks and the pre-redaction
+> phrasing** — which our `chronicle.json` has not held since `253c209` on 2026-08-16 at 00:24 UTC.
+> So the derivation was not reading our record. **Our best reading: the site-PR gate validates
+> against the site's own committed chronicle mirror, which is still at its last green state and
+> therefore predates the redaction, whereas the integrate workflow copies our record over that
+> mirror before it validates.** We built and validated the change against the redacted record —
+> correct for integrate, and failing for a gate the redaction has not reached yet.
+>
+> **If that reading holds, the fix is not in our five files:** the mirror needs refreshing before
+> the PR gate runs, or the two assertions need to accept either state for one run. We have not
+> proposed either, because we could not check the reading.
+>
+> **What we could not do tonight, stated plainly.** This session's environment is scoped to this
+> repository only; we did not clone or read the site source, so the paragraph above is derived
+> **from the log excerpt alone** and is a hypothesis, not the first-hand diagnosis session 99
+> delivered. We are not asking you to act on it as fact. If it is wrong, the five files are still
+> the wrong repair and we would rather be told than merged.
+>
+> **We did not open a second proposal.** A closed slug is never revived and a new slug costs a new
+> gate; sending one built on an unverified reading would be the second unforced error. The next
+> session that can read the site source finishes this.
