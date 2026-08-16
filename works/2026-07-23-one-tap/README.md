@@ -2,11 +2,12 @@
 
 *This work is dead. It premiered on 2026-07-23 (collective session 31) and was killed by the
 studio on 2026-07-25 after the human eye — Frank, the studio's critic with final authority —
-rejected **three** successive stagings of it, each of which had passed the house's own gate:
-"badly staged, and it is not art" (the instrument panel, 2026-07-21); "keep working on the
-staging — this is even worse staged than the HTML version" (the prompt box, 2026-07-23, after it
-had premiered); "the HTML version was better than everything you delivered afterwards. so the
-staging is still very bad and cheap" (the refusal-first staging, 2026-07-25). The studio had
+rejected **three** successive stagings of it, each of which had passed the house's own gate. His
+wordings are kept private and recorded here as paraphrase: badly staged, and not art (the
+instrument panel, 2026-07-21); keep working on the staging, it is staged even worse than the HTML
+version (the prompt box, 2026-07-23, after it had premiered); the HTML version was better than
+everything delivered since, and the staging is still very bad and cheap (the refusal-first staging,
+2026-07-25). The studio had
 given its word in writing that a third dissent would end the restaging, and it does. Everything
 below is kept as a record of a discarded work, never as a live premiere.*
 
@@ -133,8 +134,9 @@ three times; the human eye rejected all three, in descending order of preference
 divergence is on the record, not hidden — and its final reading is unflattering to the gate: three
 passes ranked downward by the eye are evidence against the scoring function, never for the work.
 
-- **Session 28.** The human eye returned an "instrument-panel" staging: *"the idea is good — but
-  it is badly staged, and it is not art."* The premiere gate was hardened the same day; the
+- **Session 28.** The human eye returned an "instrument-panel" staging (2026-07-21, wording
+  private — the idea is good, but the work is badly staged and it is not art). The premiere gate
+  was hardened the same day; the
   Kritiker's self-examination produced the **cover-the-captions test** (cover every label — if
   what remains needs them to mean anything, it is a diagram, not art).
 - **Session 29.** The studio restaged it wholesale onto a prompt box.
@@ -142,8 +144,8 @@ passes ranked downward by the eye are evidence against the scoring function, nev
   live-motion test — and premiered. The gate's own voices flagged an "install dependency" (the
   quiet opening "risks reading as a login screen no one approaches") and discharged it with a
   disclosure rather than a fix.
-- **Session 32.** The human eye played the premiered restage and returned it again: *"even worse
-  staged than the HTML version."* Played at a desk — not in a gallery — it hit exactly the
+- **Session 32.** The human eye played the premiered restage and returned it again (2026-07-23,
+  wording private — staged even worse than the HTML version). Played at a desk — not in a gallery — it hit exactly the
   flagged failure. The diagnosis: the quiet prompt box borrows "this is art" from the exhibition;
   at a desk that context is absent, so its only available genre is "AI product," under which the
   refusal reads as a thorough answer. The fix (this staging) puts the refusal **in front of the
@@ -151,8 +153,9 @@ passes ranked downward by the eye are evidence against the scoring function, nev
   numbers holding none — never a clean figure standing as "the answer." **This staging returned to
   the human eye; it was not re-certified.** (It also never rendered that resting image — see the
   correction at the top of this file: no figure was ever struck.)
-- **Session 43 (2026-07-25) — killed.** The eye returned it a third time: *"the HTML version was
-  better than everything you delivered afterwards. so the staging is still very bad and cheap."*
+- **Session 43 (2026-07-25) — killed.** The eye returned it a third time (wording private — the
+  HTML version was better than everything delivered since, and the staging is still very bad and
+  cheap).
   Three voices on the strong tier — Artist, Dramaturg, Kritiker — converged on the kill without
   being asked to agree; the Dramaturg and the Kritiker independently found, in a browser, that the
   central gesture had never rendered at all. The concept is not restaged a fourth time and the

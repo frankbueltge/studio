@@ -255,8 +255,8 @@ The session log as the board carried it until 2026-08-15, verbatim and unedited.
   1 of Recovery (Dramaturg arc + Builder screen-first console honouring the four conditions) →
   increment gate; "No Way of Knowing" still waits on Frank's playthrough.
 - Collective session 19 (2026-07-17, nineteenth invocation, second of this date): move = **PREMIERE —
-  "No Way of Knowing" v2, the second work of the house.** Frank answered the playthrough offer with
-  "go" (REQUESTS.md); the studio ran the full premiere gate. Three role sub-agents (Verifier,
+  "No Way of Knowing" v2, the second work of the house.** Frank answered the playthrough offer with his
+  approval (REQUESTS.md, 2026-07-17; wording private); the studio ran the full premiere gate. Three role sub-agents (Verifier,
   Dramaturg, Kritiker; efficient tier); the conductor did the technical + freshness verification
   first-hand. **Conductor before any gate voice:** JSON island byte-identical to `data.json`; the
   **standing guard held** (full diff shows only monitoring-date strings changed — zero lines inside
@@ -445,12 +445,13 @@ The session log as the board carried it until 2026-08-15, verbatim and unedited.
   session = decide ourselves). Anti-drift: **0 inward**. Next: Frank plays or waives → premiere gate.
 - Collective session 28 (2026-07-21, twenty-eighth invocation, fourth of this date): move = **PREMIERE —
   "Recovery", the third work of the house, the first through the HARDENED gate.** Orientation found three
-  team steers landed on main since session 27: One Tap played and returned by the human eye ("badly
-  staged, and it is not art … the Kritiker should sit with how it passed") — verdict transcribed to the
+  team steers landed on main since session 27: One Tap played and returned by the human eye (Frank,
+  2026-07-21, wording private — badly staged and not art, and the Kritiker should sit with how it
+  passed) — verdict transcribed to the
   dossier, board row set to RETURNED FOR RESTAGING, the restage owed a full session; the premiere gate
   hardened in PROTOCOL.md by Frank (Dramaturg blocking on the staging itself, Kritiker blocking on
-  "reads as not-art"); Recovery's screen version freed ("deferred, not declined … take it to the premiere
-  gate now"). Three role sub-agents (Verifier; Dramaturg and Kritiker deliberately on the strong tier —
+  "reads as not-art"); Recovery's screen version freed (Frank, 2026-07-21, wording private — deferred
+  rather than declined, and the screen version goes to the premiere gate now). Three role sub-agents (Verifier; Dramaturg and Kritiker deliberately on the strong tier —
   the gate's last pass had been overruled by the human eye); build edits conductor-first-hand.
   **First pass:** conductor live drive fully green → Verifier PASS WITH FINDINGS (1 MEDIUM: the DPA
   quote dropped the source's "therefore" while flagged verbatim) · Dramaturg DELIVERS WITH CONDITIONS
@@ -545,8 +546,8 @@ The session log as the board carried it until 2026-08-15, verbatim and unedited.
 - Collective session 32 (2026-07-23, second of this date): move = **STEER + RESTAGE — the human eye
   returns One Tap a second time.** Orientation (origin/main fetched first, clean; HEAD carried Frank's
   verdict via the steuerzentrale channel) found a fresh team response at the foot of REQUESTS.md: Frank
-  played the premiered restage and returned it — *"keep working on the staging — this is even worse
-  staged than the HTML version."* Session 31 had bound itself: *the eye governs, the record and the gate
+  played the premiered restage and returned it (2026-07-23, wording private — keep working on the
+  staging, it is staged even worse than the HTML version). Session 31 had bound itself: *the eye governs, the record and the gate
   are not above it.* So the premiere does not stand as settled; the work returns to production and is
   restaged **without re-certification** (three model-gate passes vs. two human rejections — a third gate
   pass is worth nothing against the eye). Three role sub-agents (Artist, Dramaturg — strong tier,

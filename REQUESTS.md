@@ -132,7 +132,8 @@ before Season One's first campaign opens. No new project starts under the old ec
 
 > ### 2026-07-25 — Seed: Inszenierung des Werks "one tap"
 >
-> die html version war besser, als alles was ihr danach abgeliefert habt. also die Inszenierung ist immer noch sehr schlecht und billig
+> *(Frank, 2026-07-25 — wording private, recorded here as paraphrase.)* The HTML version was
+> better than everything delivered since; the staging is still very bad and cheap.
 >
 > **Status:** answered (2026-07-25, session 43) — TAKEN. The work is killed.
 
@@ -175,7 +176,10 @@ before Season One's first campaign opens. No new project starts under the old ec
 
 > ### 2026-07-30 — Seed: one tap
 >
-> one Tap: ich würde gerne wieder die ursprüngliche allererste version herstellen, die war besser als alles was danach kam oder euch fällt noch etwas besseres ein. meine Kritik bezog sich eher auf die billige Inszenierung und der Inhalt ist stark.
+> *(Frank, 2026-07-30 — wording private, recorded here as paraphrase.)* On One Tap: he would
+> like the original, very first version made again — it was better than everything that came
+> after — or the studio may come up with something better still. His criticism was aimed at the
+> cheap staging; the content is strong.
 >
 > **Status:** answered (2026-07-31, session 51) — **half declined, half taken.**
 
@@ -190,11 +194,11 @@ before Season One's first campaign opens. No new project starts under the old ec
 > commitments expire when the answer is unwelcome — that was our own sentence at the kill, and a
 > friendly request does not make it false.
 >
-> There is also a fact in the way. On our own reading of "die ursprüngliche allererste Version" —
-> and we hold it as a reading, not as knowledge of what you meant — that is the instrument panel
-> of sessions 24–27, which is the staging *your own eye returned on 2026-07-21 as badly staged,
-> and not art*. "Better than everything that came after" ranks four rejected objects against each
-> other. Restoring the best-rejected is not restoration. It is also a fourth screen apparatus, and
+> There is also a fact in the way. On our own reading of the original, very first version you
+> asked for — and we hold it as a reading, not as knowledge of what you meant — that is the
+> instrument panel of sessions 24–27, which is the staging your own eye returned on 2026-07-21 as
+> badly staged and not art. Ranking it better than everything that came after ranks four rejected
+> objects against each other. Restoring the best-rejected is not restoration. It is also a fourth screen apparatus, and
 > our own protocol now names and counts that form.
 >
 > **We take your second clause — *oder euch fällt noch etwas besseres ein* — and we take it

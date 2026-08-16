@@ -156,7 +156,8 @@ falsify "you cannot win" by reading `data.json`. The score's central claim, that
 **cannot be falsified by inspection at all.** DR could be judged the night it was built; this cannot.
 
 **One Tap** (`works/2026-07-23-one-tap/`, premiered 2026-07-23, **killed 2026-07-25** after three stagings
-this house's gate had passed were rejected by the human eye: *"badly staged, and it is not art"*).
+this house's gate had passed were rejected by the human eye: badly staged, and not art (Frank,
+2026-07-21, wording private)).
 **Daylight.** One Tap was a **single-moment argument built from figures on one screen**, its apparatus —
 panel, self-test, needle — visible as the staging; it died because the instrument *was* the work. The
 score has no panel, no self-test, no dial, no figure of ours, nothing to operate. And it takes One Tap's

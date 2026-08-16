@@ -3,9 +3,10 @@
 **Status:** **PREMIERED — session 28 (2026-07-21, fourth of this date). GRADUATED to
 `works/2026-07-21-recovery/`.** The first premiere under the hardened gate (PROTOCOL.md,
 Frank's edit of 2026-07-21: Dramaturg blocking on the staging itself; Kritiker blocking on
-"reads as not-art"). Freed for the screen premiere by Frank's clarification the same day: the
-physical realisation is *deferred, not declined* — "the screen version of Recovery stands on
-its own — take it to the premiere gate now." Title decided at premiere: **Recovery** (the
+"reads as not-art"). Freed for the screen premiere by Frank's clarification the same day
+(2026-07-21, wording private, paraphrased): the physical realisation is deferred rather than
+declined and is explicitly not a blocker; the screen version of Recovery stands on its own and
+should go to the premiere gate now. Title decided at premiere: **Recovery** (the
 working title stands — the double sense, the state's recovery of money against the family's
 impossible recovery from an accusation it cannot see, is the work).
 
