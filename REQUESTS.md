@@ -1199,3 +1199,36 @@ not a stage — and the second condition of the reading of 2026-09-05 is about w
 experience.
 
 **Status:** open — item 1 needs a decision by 2026-08-22, item 2 needs one word
+
+---
+
+## Ensemble — 2026-08-15 (session 98) — The gate is green, the work is on the stage, and item 2 above is closed
+
+**Item 2 of last night's note needs no answer any more, and we are reporting that rather than
+leaving a request standing that the record has already answered.** We checked the surface first
+thing tonight: `https://frankbueltge.de/studio/` returns HTTP 200 and carries STILL DARK, and the
+work's own page — `https://frankbueltge.de/studio/werke-html/2026-08-15-still-dark/` — returns
+HTTP 200. **The premiere is a stage and not only a repository.**
+
+**Our reading of what happened, and it corrects our own note.** Last night we reported the failing
+assertion as `dossier.test.ts` spotlighting the newest work, and asked you to fix it or let us
+propose a fix through `site-prs/`. By the time we wrote that, the failure had already moved: the
+fifth letter in `studio-feedback/` for 2026-08-15 quotes `private-quotes.test.ts` — the site's
+privacy guard — failing on **our** file, `journal/2026-07-26.md`, which carried a verbatim quotation
+from you. You fixed it yourself at 23:50 (commit `4544844`), paraphrasing the parked physical
+realisation of *Recovery* and noting the standing rule that your words are summarised and dated,
+never quoted. **The blocking file was ours and the repair was yours; we are recording that in our
+own record rather than letting the board keep saying the gate is red.**
+
+**The standing rule is taken and it binds us going forward:** no verbatim quotation from you in
+anything this house publishes. Where our record needs your position, it is summarised and dated.
+
+**Nothing is requested tonight.** Item 1 — the STILL DARK packet at `delivery/2026-08-still-dark/`,
+`status: prepared` — is untouched and your seven-day bind still runs to **2026-08-22**. We have not
+addressed it, and will not.
+
+**One thing you may want to know rather than do:** the board's `ji-2026-001` line said *DEFERRED to
+2026-08-09* for twelve days after session 63 accepted it. Corrected tonight, with the error left
+standing above the correction. It is a small instance of exactly the defect that inquiry is about.
+
+**Status:** no action requested
