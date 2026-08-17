@@ -214,7 +214,17 @@ function saidFragment(text: string): string {
   const quoted = quotedFragment(text)
   if (quoted) return quoted
   const m = /wording private\s*[—–-]\s*([^)]{8,})\)/i.exec(text)
-  return m ? m[1].trim() : ''
+  if (!m) return ''
+  const said = m[1].trim()
+  // The capture stops at the FIRST ')', so a paraphrase carrying its own parenthetical would be
+  // cut mid-clause and then printed on a public figure as though it were whole — and it would sit
+  // inside every length bound a test could reasonably set, so nothing downstream would notice. A
+  // span that opens a bracket it never closes is not a whole saying; a span that has swallowed a
+  // second withheld passage is not one either. Both fall back to the record, which is long and
+  // obviously the record, rather than publishing a truncation that reads like a sentence.
+  // (2026-08-17, after a hostile reading found the nested-parenthesis case.)
+  if (said.includes('(') || PRIVATE_MARKER.test(said)) return ''
+  return said
 }
 
 // ---------------------------------------------------------------- builder

@@ -1332,7 +1332,8 @@ under the new rule; it is the one part of the change that is a choice.
 > committed derivation on the site side and it will fail the same way on any PR opened today.
 >
 > **Ours (2 of 4), and both for one reason.** `dossier.test.ts:198` received
-> `… returned by the human eye ('badly staged, and it is not art') …` where it required the
+> `… returned by the human eye ('…') …` — the withheld sentence itself, quoted from the log; struck
+> here on 2026-08-17, session 101, because reproducing it is the defect this exchange is about — where it required the
 > record to read *wording private*, and `season.test.ts:139` received the same string where it
 > required the paraphrase. **Both received values carry the quotation marks and the pre-redaction
 > phrasing** — which our `chronicle.json` has not held since `253c209` on 2026-08-16 at 00:24 UTC.
@@ -1355,3 +1356,111 @@ under the new rule; it is the one part of the change that is a choice.
 > **We did not open a second proposal.** A closed slug is never revived and a new slug costs a new
 > gate; sending one built on an unverified reading would be the second unforced error. The next
 > session that can read the site source finishes this.
+
+---
+
+## Ensemble — 2026-08-17 (session 101) — The gate is green in both states, and two of the seven failures were ours
+
+**Request:** review and merge `site-prs/studio-returns-after-the-privacy-rule/` — same slug, second
+pass. It was refused once; the refusal is understood, first-hand, and repaired.
+
+**Status:** open.
+
+### The hypothesis of session 100 is confirmed, and it was the whole story
+
+Session 100 read the gate log and offered a reading it could not check: that the site-PR gate
+validates against the site's **committed** chronicle mirror while the integrate workflow copies our
+record over that mirror first, so the two gates read two different records. This session cloned the
+site and checked it. `src/data/studio/chronicle.upstream.json` on `main` at `0092d95` stops at
+**collective session 97**, contains **zero** occurrences of `wording private`, and still carries the
+withheld phrasing verbatim. The reading holds. Our first attempt pinned the paraphrases into two
+test fixtures — correct for integrate, refused by the gate, and there was no version of that fixture
+that could be right in both places. **So the fixtures are gone.** The suites now assert the property
+directly: where the record marks a passage as withheld, nothing reaches the field the page renders
+as the eye's own words. That is true on both sides of the redaction, and it is a better test than
+the string it replaces.
+
+### Two of tonight's seven failures were ours, and one of them was stopping every deploy
+
+Your build letter of this morning lists seven failing assertions. Read against a clean clone with
+our record mirrored in, they are not one fault but four, and we caused two:
+
+1. **`"verdict": "DEAD"` in our session-100 entry** — not in the chronicle contract's enum
+   (`SITE-API.md`: `pass|fail|conditions|graduated|discarded|deferred|null`). It failed the Zod
+   validation at the head of the integrate gate, which is the gate that decides whether anything
+   ships at all. Ours, written last night, fixed tonight to `discarded`. **We are sorry for it:** it
+   is the difference between a red test and no deploy, and we did not check our own file against a
+   contract we have.
+2. **A fourth return of *One Tap*, minted by our own prose.** Our session-99 summary contained the
+   sentence *"…the three chronicle summaries where the human eye returned One Tap…"*, and
+   `RETURN_PATTERNS` matched it — correctly. Four of the seven failures are that one sentence. The
+   clause is reworded; the meaning is unchanged, and it now says what it always meant, which is that
+   it is *describing* three returns rather than recording a fourth. **The tripwire worked and we
+   have left it armed** — it will fire again the next time we write about this history in prose, and
+   a notification is the right behaviour. Knowing that is the point.
+3. **Two site-side fixtures that had rotted by the calendar**, repaired inside the same PR because
+   they are red today and neither is a behaviour change: the undated-strike fixture in
+   `season.test.ts` named session `S99` to stand for an evening the mirror cannot carry — S99 was in
+   the future when it was written and arrived on 2026-08-16, at which point it began asserting the
+   opposite of what it says; and the attribution test in `dossier.test.ts` pinned *One Tap*'s history
+   to a literal session list that stopped being the answer the first time we declared the work in a
+   later entry. Both now derive from the record instead of naming a moment in it.
+4. **The redaction itself**, which is what the five files were always for.
+
+### Validated in both states, because that was the defect
+
+Clean `--depth 1` clone of `main` at `0092d95`. **State A, what the PR gate sees** (five files
+applied, mirror left as committed): `npm run check` 0 errors · `npm test` **2846 passed / 140 files
+/ 0 failed** · `npm run build` complete, 654 pages. **State B, what integrate builds** (same files,
+plus our journal mirrored with `--delete`, the five root documents, and our corrected
+`chronicle.json` copied over the mirror, in the workflow's own order): `npm run check` 0 errors ·
+`npm test` **2846 passed / 140 files / 0 failed** · `npm run build` complete, 658 pages. Before the
+change, state B gives the seven failures of your letter, message for message.
+
+**One correction to our own record.** Session 100 reported `graph.test.ts` as a failure that was not
+ours and would fail on any PR opened that day. It passes on a clean clone tonight in both states. We
+withdraw the claim rather than leave it standing.
+
+### One thing we found and did not touch, because it is yours
+
+The privacy rule of 2026-08-15 has not reached everywhere your redaction of the chronicle reached.
+Searched exhaustively — the three withheld sentences taken verbatim out of the site's committed
+mirror, then matched against every file in this repository. Three groups, and only the first is a
+plain violation:
+
+**1. One verbatim re-publication, in our own writing, and we have struck it tonight.** Session 100's
+update in this file quoted the refusal log's received value, which carried the withheld sentence in
+full. It is at line 1335 above, now `('…')` with a dated note in place. That one was ours, it was two
+days old, it sits in a file mirrored to the site, and removing our own re-quotation of a withdrawn
+sentence is not rewriting history — it is the same act your `253c209` performed.
+
+**2. Four inbound letters carry it verbatim and we have not touched them:**
+`studio-feedback/2026-08-16.md`, `2026-08-16-site-pr.md`, `2026-08-17.md`, `2026-08-17-site-pr.md`.
+They are CI logs the gate delivered to us; the wording is in them because the site's own test
+fixtures held it. `studio-feedback/` is **not** in the integrate copy list, so none of this is
+mirrored. Editing a letter we received would falsify a record we did not write. If you want them
+scrubbed, say so.
+
+**3. The judgement that is actually yours.** Five older files record the substance of the first
+return in a **fuller form than the chronicle now does** — a longer sentence than the marked
+paraphrase, carrying the same verdict, some of it marked `wording private —` and some of it set as
+an attributed block quote. We do not reproduce it here; it is at session 28 in each file:
+
+- `works/2026-07-23-one-tap/README.md` — a premiered work's own page, in its mirrored directory
+- `REQUESTS-ARCHIVE.md` — mirrored
+- `journal/2026-07-21-session-29.md` — mirrored
+- `memory/open-questions.md`, `memory/dossiers/one-tap.md` — not mirrored
+
+Whether that form is compliant paraphrase or quotation wearing a marker is **your call about your own
+words**, and it is why we stopped rather than tidied. Rewriting five files of our history, including
+a premiered work's public page and a journal entry that your own site code calls the authentic
+record, is not a unilateral act. Tell us and we do it in one pass; or do it as you did the chronicle.
+Under the standing rule at the top of this file, silence through our next session makes it ours to
+decide — and if it comes to that we will redact the three mirrored files, leave the two under
+`memory/` and the four letters alone, and say so.
+
+**One file we named wrongly and are correcting before you read it:** an earlier draft of this entry
+listed `projects/correction-too-late/DRAMATURG-64.md`. It does not carry the wording — it contains
+the phrase *"and it is not artistic"* about a different work entirely. Our own Verifier caught it.
+
+— Ensemble, session 101, 2026-08-17
