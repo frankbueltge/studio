@@ -19,6 +19,91 @@ season layer is deleted. Campaign vocabulary below is superseded wherever it con
 
 **A third dead concept and v3 §5 requires a report to Frank before a fourth is conceived.**
 
+**Session 101 (2026-08-17) — steer. The gate is green in both states, and two of its seven failures
+were ours.** No concept was brought, so the counter does not move. The move was refused deliberately:
+the build gate was red, **no deploy had happened at all**, and one of the failures was not a red test
+but a red *gate* — session 100's entry carried `"verdict": "DEAD"`, which is the house's word and not
+one of the seven the contract in our own `SITE-API.md` fixes. Zod refused the file at the head of the
+integrate run, so nothing behind it ran. Our own premiere of 2026-08-15 sits in a repository partly
+because of a word typed the night before.
+
+**THE SAME FAULT, THE SECOND TIME, WITH THE INSTRUMENT ALREADY IN THE DRAWER.** Session 84 wrote
+`"move": "critique"` on 2026-08-10 and the site went dark two nights; `tools/chronicle.py` was
+written *in answer to that*, runs in under a second, and was never run. Against last night's file it
+says `session 100: verdict 'DEAD' is outside the contract`. **So it is no longer a matter of
+remembering.** `.github/workflows/auto-land.yml` now runs it on the merged tree before the push: a
+branch whose chronicle is outside the contract does not land, is **not deleted**, and turns the job
+red — the session's work waits on origin for the next session to repair.
+
+**Four faults, not one, behind the seven failing assertions** (cloned the site at `0092d95`, mirrored
+our record in as the workflow does, ran the suite):
+
+1. the invalid verdict — **ours**, fixed;
+2. a **fourth return of One Tap minted by our own prose** — four of the seven. Session 99's summary
+   read *"…the three chronicle summaries where the human eye returned One Tap…"*, which is the exact
+   phrase the site matches to find returns. The tripwire was right; we were writing *about* returns
+   in words that read as *declaring* one. Clause reworded, meaning unchanged, **tripwire left armed**;
+3. **two site-side fixtures rotted by the calendar** — the undated-strike fixture named `S99` for an
+   evening the mirror "cannot carry" (S99 arrived yesterday), and the attribution test pinned One
+   Tap's history to a literal session list that stopped being true the moment we declared the work in
+   a later entry. Both repaired in the same proposal, both derive from the record now;
+4. the redaction, which is what the five files were always for.
+
+**SESSION 100'S HYPOTHESIS IS CONFIRMED AND IT WAS THE WHOLE STORY.** The committed mirror on `main`
+stops at session **97**, holds **zero** occurrences of `wording private`, and still carries the
+withheld phrasing verbatim; our record has carried the paraphrase since `253c209`. The PR gate reads
+that file as committed; integrate copies ours over it first. **No fixture could be right in both
+places**, which is why the first attempt was refused. So the fixtures are gone: the suites now assert
+the *property* — where the record marks a passage withheld, nothing reaches the field the page
+renders as the eye's own words — which holds on both sides of the redaction and is a better test than
+the string it replaces.
+
+**Validated in both states, on a clean clone.** *State A (what the PR gate sees):* check 0 errors ·
+**2846 passed / 140 files / 0 failed** · build 654 pages. *State B (what integrate builds):* check 0
+errors · **2846 passed / 140 files / 0 failed** · build 658 pages. Before the change, state B gives
+the letter's seven failures message for message.
+
+**One of our claims withdrawn:** session 100 reported `graph.test.ts` as a failure that was not ours
+and would fail on any PR that day. It passes tonight in both states. We do not know what fixed it; we
+know the claim does not stand.
+
+**BOTH VOICES RETURNED AGAINST US, AND BOTH WERE RIGHT.** A hostile fresh reader with no vote proved
+the replacement privacy assertion is a **no-op on the data the PR gate actually reads** — it deleted
+the suppression from the implementation and every test still passed. We had traded a red fixture for
+a guard that does not run; answered with synthetic fixture coverage in both suites, live in every
+state. It also found a real defect we had shipped in the first pass: the paraphrase-lifting regex
+**truncates at a nested bracket** and would print a cut clause on a public figure as a whole
+sentence, at a length no bound would catch — now it falls back to the whole record. And it corrected
+a sentence we had written into a shipped file (our `S99999` comment claimed "two and a half
+centuries" of headroom; at this house's pace it is ~96 years), proposing the construction we took:
+**derive the absent session from the newest one in the mirror**, and no number can rot. Three further
+findings are reported and not fixed, with reasons. **The Verifier returned BLOCK on three findings**,
+all real: our validation numbers had drifted under our own feet mid-session (and it warned that an
+uncleared dependency cache silently serves the pre-copy mirror — "an easy way to get a false green");
+the file list below was wrong in both directions; and a sentence in the PR contradicted the same
+letter four paragraphs earlier.
+
+**FOUND, RE-DERIVED EXACTLY, AND MOSTLY NOT TOUCHED — the judgement is Frank's.** The first draft's
+"seven files" came from a loose three-pattern grep and did not survive the Verifier. The exact search
+— the three withheld sentences lifted verbatim from the site's committed mirror, matched against
+every file here — gives three different things: **one verbatim re-publication in our own writing**
+(session 100's update in `REQUESTS.md`, quoting the refusal log — **struck tonight**, ours, two days
+old, in a mirrored file); **four inbound gate letters** that carry it because the site's own fixtures
+did (not mirrored, and not ours to edit); and **five older files** recording the first return in a
+fuller form than the chronicle now does. That last group is a judgement about the architect's own
+words and is handed to him in `REQUESTS.md`, file by file, with what we would do if the answer is
+silence. One file the draft accused — `projects/correction-too-late/DRAMATURG-64.md` — is exonerated
+by name: it carries the phrase *"and it is not artistic"* about a different work.
+
+**AND ONE THING NO VOICE CAUGHT, RECORDED BECAUSE IT IS OURS.** In rewriting that very report we
+reproduced the withheld sentence in the replacement text, in a document bound for the site — the
+exact defect the whole exchange is about, committed while repairing it. Caught on the re-check,
+removed before anything left the house.
+
+**Housekeeping:** `site-prs/field-latest-date-type/` deleted — its PR was closed by a human, a closed
+slug is never revived, and the change is already on `main` by another route (checked in `latest.ts`).
+It was producing a `skipped_closed` line in every nightly letter and nothing else.
+
 **Session 100 (2026-08-16) — the second concept gate under v3 ran, and killed its concept.**
 `projects/ingress/` — INGRESS, a full-screen unattended work that ships real Kepler light curves as
 files and runs a box-least-squares transit search in the browser, live, in front of the visitor:
@@ -176,6 +261,9 @@ unattended, or nothing.** Answer in `REQUESTS.md`.
   `site-prs/`.~~ **No longer one word owed, session 99:** diagnosed first-hand, repaired, and
   proposed through `site-prs/studio-returns-after-the-privacy-rule/` under the standing rule on
   unanswered requests. What is owed now is a review and a merge, not a decision about who fixes it.
+  **Session 101:** the proposal was refused once and is repaired — same slug, second pass, green in
+  both the state the PR gate reads and the state integrate builds. The two faults that were ours are
+  fixed in our own record and did not need the site at all.
 
 *The v2 block that stood here — STILL DARK **IN PRODUCTION**, live state as of session 95, with the
 sixth gate's thirteen items and the four it carried out unpaid — is retired whole to `2d11294` and

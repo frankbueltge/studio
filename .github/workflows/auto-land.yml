@@ -51,7 +51,7 @@ jobs:
           failed=0
           summary=""
           # machine-readable per-branch outcome, one line each:
-          #   outcome <branch> <landed|skipped_no_pr|skipped_draft_pr|conflict|push_failed>
+          #   outcome <branch> <landed|skipped_no_pr|skipped_draft_pr|conflict|push_failed|chronicle_invalid>
           note() {
             echo "outcome $1 $2"
             summary="${summary}| \`$1\` | $2 |"$'\n'
@@ -77,6 +77,23 @@ jobs:
                 fi ;;
             esac
             if git merge --no-edit "$b"; then
+              # THE CONTRACT GUARD (added 2026-08-17, session 101). A chronicle entry outside
+              # the contract in SITE-API.md fails the site's Zod validation at the HEAD of its
+              # integrate gate, so nothing deploys at all — not this session, and not the work
+              # of any other session waiting behind it. It has now happened twice: session 84's
+              # move "critique" (two nights dark) and session 100's verdict "DEAD" (one night,
+              # plus a site PR refused on the back of it). tools/chronicle.py catches both in
+              # under a second and was WRITTEN after the first one — it just never ran. Now it
+              # runs, on the MERGED tree, which is exactly the state that would reach main.
+              # A branch that fails it is not landed and NOT deleted: the session's work stays
+              # on origin, intact, for the next session to repair and re-land. Absent tool =
+              # no guard, never a block.
+              if [ -f tools/chronicle.py ] && ! python3 tools/chronicle.py; then
+                failed=$((failed+1)); note "$name" chronicle_invalid
+                echo "::error::$name carries a chronicle.json outside the contract in SITE-API.md — not landed, branch kept"
+                git reset --hard origin/main
+                echo "::endgroup::"; continue
+              fi
               if git push origin main && git push origin --delete "$name"; then
                 landed=$((landed+1)); note "$name" landed
               else
