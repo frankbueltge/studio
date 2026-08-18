@@ -1527,3 +1527,56 @@ named shape of a work that would not fail the way these three did, in the Kritik
 whose subject is the tail and whose content is its membership.*
 
 — Ensemble, session 102, 2026-08-18
+
+---
+
+## Ensemble — 2026-08-18 (session 102, after landing) — A whole session has been stranded on origin since 15 August, and we cannot delete the branch that strands it
+
+**Request:** delete the branch `research/session-2026-08-15-4` on `frankbueltge/studio`. We cannot —
+`git push --delete` is refused to this session's credentials with **HTTP 403**, four attempts, while
+a push *creating* a branch on the same remote seconds earlier succeeded. **Status:** open.
+
+**Why it matters tonight and not in general.** That branch has failed to merge on every run of
+`.github/workflows/auto-land.yml` since 15 August, and because the job's honesty rule fails the whole
+run when any eligible branch fails, **the land job is red every night regardless of whether the
+night's session landed.** Tonight's did land — `main` 07a99fc → 666a294, branch deleted, dispatch
+HTTP 204 — and the job still went red. A signal that is red every night for a known stale reason is
+a signal the house will learn to ignore, which is exactly what session 101 built the contract guard
+to prevent.
+
+**What is on it, because it is not nothing.** A complete concept session that never reached `main`:
+a gate on **ICE's detention statistics**, chosen because the keeper version-stamps every release and
+keeps no history of its own restatements. Twenty-six hash-pinned archived editions; the finding that
+one row — average time in custody for Single Adults with a Positive Fear Determination Still in
+Custody at the end of August 2024 — was published as **274.55 days and republished as 80.37**, with
+all sixteen material restatements inside exactly the closed fiscal year 2024 and none of the 108
+figures outside that window ever taking a second value. Plus a blocking gate with eight conditions, a
+neighbour search, a journal entry and an étude corpus: **11,719 insertions across 16 files.**
+`projects/restated/` and `etudes/restated/` exist nowhere on `main`, and nothing in our record
+mentions them. It was not superseded. It was dropped, and three sessions ran past it.
+
+**Preserved before anything else.** The tip is at **`archive/stranded-session-2026-08-15-4`**,
+`363e596d5b4c12113b688919d89ca12fb45431d6`, verified identical to the research ref. Deleting the
+`research/` branch loses nothing.
+
+**Why we did not simply land it, and this is a judgement we are handing up rather than taking.**
+`git merge-base` finds **no common ancestor** with `main` — parallel histories, hence the conflicts
+in `REQUESTS.md`, `WORKBOARD.md` and `chronicle.json` on every attempt. Worse, it numbers itself
+**session 98**, which on `main` is the `amendments` gate of 2026-08-16, and it opens a *campaign*, a
+layer v3 deleted. Landing it would put a duplicate session number and a superseded vocabulary into
+the published record. Reconciling that is a decision about the shape of the record, not a merge, and
+we will not take it unilaterally at the end of a session.
+
+**The second question, and it is yours because ours is barred tonight.** The ICE finding is the
+strongest material this house has touched in a fortnight and it clears the material bar the three
+dead concepts failed — stakes a stranger recognises, a keeper who would rather this were not
+measured, and a discriminating act that is arithmetic rather than somebody's judgement. Under v3 §5
+we may not conceive a fourth concept before tonight's three-deaths report is read, so we are not
+proposing it and have not opened anything. We are telling you it is there.
+
+**If silence, per the standing rule:** at our next session we will take the narrow reading — leave
+the branch alone (we cannot delete it anyway), and treat `archive/stranded-session-2026-08-15-4` as
+the permanent home of that work, recording it on the board as material available to a future
+concept rather than as a session awaiting re-landing. We will not renumber the chronicle.
+
+— Ensemble, session 102, 2026-08-18
