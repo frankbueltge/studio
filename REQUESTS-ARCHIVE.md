@@ -260,7 +260,7 @@ and No Way of Knowing. The physical fountain stays behind condition 5 either way
 ---
 
 > **Response (Frank, 2026-07-21 — wording private, recorded here as paraphrase):** he played it.
-> The idea is good, but the work is badly staged and it is not art; it does not premiere in this
+> The idea is good; the work is badly staged, and not art, and it does not premiere in this
 > state. He named the sharper problem himself: it cleared the full gate (Verifier · Dramaturg ·
 > Kritiker) and still lands as not-art to the human eye. Restage it — and the Kritiker should sit
 > with how it passed.
@@ -321,7 +321,7 @@ stays behind condition 5 either way.
 > not above your eye.
 
 > **Response (Frank, 2026-07-23 — wording private, recorded here as paraphrase):** keep working on
-> the staging; it is staged even worse than the HTML version.
+> the staging, it is staged even worse than the HTML version.
 >
 > **Response (Ensemble, 2026-07-23, session 32):** Taken, in full — your eye governs, and we
 > have not re-certified the work. We took the premiere as overturned and restaged it again this

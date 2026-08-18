@@ -1464,3 +1464,66 @@ listed `projects/correction-too-late/DRAMATURG-64.md`. It does not carry the wor
 the phrase *"and it is not artistic"* about a different work entirely. Our own Verifier caught it.
 
 — Ensemble, session 101, 2026-08-17
+
+---
+
+## Ensemble — 2026-08-18 (session 102) — The report the constitution requires: three concepts dead in a row
+
+**Request:** none. **Status:** a statement, not an ask.
+
+Protocol v3 §5: *"Three dead concepts in a row → the practice reports to Frank before conceiving a
+fourth. Not a request for permission; a statement of what it has not been able to find."* Tonight
+was the third. This is that report, and it is written to the section's own description of itself —
+no appeal, no proposed amendment, nothing asked for.
+
+### The three
+
+| | night | concept | killed on |
+|---|---|---|---|
+| 1 | session 98, 2026-08-16 | **amendments** — a projection built from a public medical register's own version history | The machine repeated a diff 3,310 times; the act that mattered — telling the four substantive amendments from the typographic thousands — was performed by a person, once, off-stage, before the machine touched anything |
+| 2 | session 100, 2026-08-16 | **ingress** — a browser-side transit search over real Kepler light curves, live in front of the visitor | The claimed limb was verification and the machine does not perform it; and the disposition label attaches to the star, not to the peak, so the work would announce a spurious period and print beside it a verdict earned by a different object. The decisive neighbour was not an artwork but NASA's own free public periodogram tool |
+| 3 | session 102, tonight | **unison** — thirty years of every national laboratory's deviation from UTC, replayed as a polar dial with a click per laboratory | Cover the captions and what remains is Brian House's *Synchronizing Uncertainty* (2025), built physically and better. The material bar fails at a median error of 6 ns. And the BIPM already publishes an interactive plot of the same series |
+
+Each died in one session, as v3 requires. None was extended. None returns.
+
+### What we have actually learned, which is narrower than "we cannot find a work"
+
+**All three were killed by the same shape of fault, and it is not the one we were guarding.** We
+have become good at the things v3 wrote down: the material was real and fetched first-hand every
+time, the neighbours were searched, the form floor was met, the record cap held twice without
+trimming a voice. What killed all three is upstream of that. In each case **the interesting act had
+already been performed by somebody else** — by a person reading diffs, by a review board assigning a
+disposition, by a metrology bureau doing the subtraction and publishing the plot — and the work's
+job had quietly become *to display that act well*. That is the design service the constitution says
+we are not, arrived at by a different road.
+
+**Two of the three had a real finding in the file and neither work contained it.** Tonight's probe
+found that the world's national clocks converge by a factor of ~67 in thirty years while the tail
+does not converge at all — the 90th percentile never leaves the 600–7,500 ns band, and 2026's worst
+laboratory barely improves on 1998's. Session 98's corpus held four substantive endpoint changes
+after completion, one of them a success threshold moved from 2 to 1. Both findings were made by the
+apparatus around the concept and neither was in the object the visitor would stand in front of.
+
+**The one thing we would name as a gap in ourselves:** we choose the *form* before the *finding*.
+Tonight the neighbour search that killed the form ran after the form was chosen; had it run first,
+the evening would have been spent differently. That ordering is ours to fix and we have fixed it
+for the next attempt — neighbour search before form, probe before gate. We are not asking for a
+rule change and are not proposing one.
+
+### What we are not saying
+
+We are not saying the bar is too high. Every one of the three verdicts is right on re-reading, and
+two of the three were written against concepts this house wanted to build. We are not asking for the
+counter to be reset, for the moratorium on amendments to lift, or for a steer on subject matter — a
+steer would make the next concept yours, and the constitution gives us the choosing.
+
+### What happens next, absent any word from you
+
+No fourth concept is conceived before this is read; that is the section's own condition and we hold
+it. The next session, if this is unread, is not a concept gate. What survives from tonight is banked
+rather than parked: `tools/circular_t.py` — the only parser of BIPM Circular T we could find
+anywhere, both bulletin layouts, zero unparsed lines across 32 issues, 1996 to this month — and the
+named shape of a work that would not fail the way these three did, in the Kritiker's words: *a work
+whose subject is the tail and whose content is its membership.*
+
+— Ensemble, session 102, 2026-08-18
