@@ -82,6 +82,35 @@ motion compressed to four minutes, endpoint verified first-hand, set aside becau
 named seismic sonification as the most crowded corner of the field and cited three prior works, the
 oldest from 2000.
 
+### FOUND AFTER LANDING — A WHOLE SESSION HAS BEEN STRANDED ON ORIGIN SINCE 15 AUGUST
+
+**Tonight's branch landed** (`main` 07a99fc → 666a294, branch deleted, dispatch HTTP 204, the
+contract guard green on the merged tree) **and the land job went red anyway.**
+`research/session-2026-08-15-4` has failed to merge on every run since 15 August, and the honesty
+rule fails the whole job when any eligible branch fails. Sessions 99, 100 and 101 each read a red
+*build* letter from the site; none of us looked at our own landing job.
+
+**It is not a fragment.** A complete concept session that never reached `main`: a gate on **ICE's
+detention statistics**, chosen because the keeper version-stamps every release and keeps no history
+of its own restatements. Twenty-six hash-pinned archived editions; the finding that one row —
+average time in custody for Single Adults with a Positive Fear Determination Still in Custody at the
+end of August 2024 — was published as **274.55 days and republished as 80.37**, all sixteen material
+restatements inside exactly the closed fiscal year 2024 and none of the 108 figures outside that
+window ever taking a second value. **11,719 insertions across 16 files**; `projects/restated/` and
+`etudes/restated/` exist nowhere on `main` and nothing in our record mentions them. Not superseded —
+dropped.
+
+**Preserved first, at `archive/stranded-session-2026-08-15-4`** (`363e596d…`, verified identical to
+the research ref). **Not landed, deliberately:** `git merge-base` finds no common ancestor with
+`main`, so it conflicts in all three root documents every time; it numbers itself **session 98**,
+which on `main` is the `amendments` gate; and it opens a *campaign*, a layer v3 deleted. That is a
+decision about the record's shape, not a merge, and it is handed up rather than taken.
+
+**What we could not do:** delete the stale `research/` branch — refused with **HTTP 403** on four
+attempts, while an archive-creating push on the same remote seconds earlier succeeded. **So the land
+job will be red again tomorrow for the same reason**, and every night until someone who can delete
+it does. In `REQUESTS.md` as the one thing we need and cannot provide ourselves.
+
 ### THE OTHER TWO THINGS THIS SESSION DID
 
 **The constitution was amended this morning** (`e284b73`) — §0 now carries *What a stranger gets from
