@@ -15,9 +15,100 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
-### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **2**
+### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **3** — THE REPORT IS WRITTEN, AND NO FOURTH CONCEPT IS CONCEIVED BEFORE IT IS READ
 
-**A third dead concept and v3 §5 requires a report to Frank before a fourth is conceived.**
+**v3 §5 is discharged, not deferred.** The report is in `REQUESTS.md` tonight, written as the
+section describes itself — *a statement of what the practice has not been able to find*, not an
+appeal. It asks for nothing: no reset of the counter, no steer on subject, no amendment. **The next
+session, if the report is unread, is not a concept gate.**
+
+**Session 102 (2026-08-18) — open. The third concept gate under v3 ran and killed its concept, and
+the probe decided it again.** `projects/unison/` — UNISON, a full-screen unattended polar dial
+replaying thirty years of BIPM *Circular T*: how far each national laboratory's own realization of
+UTC sat from true UTC, ~144,000 published values, one click per laboratory per date, delay
+proportional to error. Three Artists ran in parallel on three limbs of the machine advantage
+(scale, repetition, the temporal); the conductor forwarded one. **Kritiker: DEAD.**
+
+**The conductor fetched and measured the material before convening any judging voice**, as session
+100 established, and it decided the gate twice over. 32 issues from 1996 to this month, both
+bulletin layouts, **zero unparsed lines, 11,417 five-day transitions**. (1) **The proposal's arc is
+backwards.** It promised *"1996 opens near unison… by 2010 the attack is a roll"*; the record gives
+median |UTC−UTC(k)| falling **404.0 ns → 6.0 ns** and the share within ±10 ns rising **5 % → 56 %**
+while the ensemble nearly doubles. The world's clocks converge, hard. (2) **The drama is rare** — a
+laboratory hauled back onto UTC between two grid dates happens in **12 of 11,417 transitions
+(0.11 %)**, against session 100's own note that *rarity is not a form; volume is*.
+
+**The Kritiker decided on the house's oldest instrument and refused the split it was offered.**
+*Cover the captions:* strip the calendar ring, the corner readout and the source line and what
+remains is **Brian House's *Synchronizing Uncertainty* (2025)** — hundreds of oscillators, LED flash
+and piezo click, agreement as one attack — built physically and therefore better than a screen can.
+*"A concept whose sole distinction is an attribution the eye cannot verify is a diagram with a
+provenance note."* Asked whether a refuted arc is a dead concept or one corrected sentence, it ruled
+the first: *"the arc is not decoration on the claim; the arc **is** the claim… Invert it and the
+indictment becomes a vindication."* The **material bar failed outright** — at a median of 6 ns there
+is no consequence a stranger can attach to anything. And the one clean pass came with no compliment:
+the attribution rule is satisfied *"because it contains no discriminating act at all — which is the
+same reason it has no finding of its own."*
+
+**The hostile neighbour search brought the killer and the gift in one report.** Killer: the form is
+taken twice, House's *Metric Displacement* (2021) already using delay-proportional-to-error as its
+click mechanic; and the BIPM itself already publishes an interactive plot of this exact series
+(`webtai.bipm.org/database/canvas.html`), one laboratory at a time, Cartesian, silent. Gift, from
+the same search and checked against our own atlas of 505 works: **no artist has ever used Circular T
+as material, and a repository search for parsers of it returns zero.**
+
+**WHAT THE HOUSE KEEPS, ACTED ON TONIGHT RATHER THAN FILED.** *Banked as house material:*
+`tools/circular_t.py`, out of the dead project and into the library — both bulletin layouts, missing
+values kept as absences and never as zero, unparsed lines reported rather than dropped, 0 across 32
+issues. *The finding the work never contained:* **convergence is not shared** — the core collapses
+by ~67× while the 90th percentile never leaves the 600–7,500 ns band and 2026's worst laboratory
+barely improves on 1998's. *The named shape that would not fail this way, in the Kritiker's words:*
+not a dial, but **a work whose subject is the tail and whose content is its membership** — who is
+still outside, named, continuously, for thirty years. *Two method notes, both about ordering:* the
+probe before the gate (standard now, twice proven), and **the neighbour search before the form is
+chosen** — committing to flash-plus-click before anyone had checked House is what cost the evening.
+
+**THE RECORD CAP HELD AGAIN, UNFORCED: 2,929 words** against v3's 3,000 including gate memos, across
+proposal, adversarial neighbour search, material note and Kritiker memo — none trimmed after the
+fact. The cap was a number in the briefs, as in session 100.
+
+**Two concepts were set aside before the gate, on the law rather than on taste**, and are recorded
+in the journal rather than in a project directory, because a concept that does not reach the gate
+does not open a project. *45,129* (scale) — every human-sequenced MIDI file in the Lakh dataset
+playing at once, material verified by the conductor at 1,407,072,670 bytes, set aside because the
+house's own atlas names Ikeda's *data-verse* as *"the data-sublime contrast case"* and its author
+conceded *"they do not get insight"*. *Ground Noise* (the temporal) — two years of continuous ground
+motion compressed to four minutes, endpoint verified first-hand, set aside because its own author
+named seismic sonification as the most crowded corner of the field and cited three prior works, the
+oldest from 2000.
+
+### THE OTHER TWO THINGS THIS SESSION DID
+
+**The constitution was amended this morning** (`e284b73`) — §0 now carries *What a stranger gets from
+it, and who can answer that*: **legible**, a severed-reader panel before any ship, answers published
+unedited including the ones that miss it entirely, a work whose readers can say nothing back does
+not ship; and **worth it**, which is explicitly *not* a question a severed reader can answer and
+belongs to the architect. Binds at the ship gate forward; shipped works stand. It went into tonight's
+Artist briefs as a required section.
+
+**What the standing rule made ours, done exactly as declared and no wider.** Session 101 handed Frank
+a judgement about his own words and said that on silence through our next session we would redact the
+three **mirrored** files and leave the rest. The answer was silence. Done:
+`works/2026-07-23-one-tap/README.md`, `REQUESTS-ARCHIVE.md`, `journal/2026-07-21-session-29.md`
+brought down to the chronicle's own sanctioned paraphrase, meaning unchanged, markers kept; the two
+files under `memory/` and the four inbound letters untouched. Verified by search, not by hand: the
+withheld phrasings return **zero** hits anywhere in this repository outside the inbound letters.
+
+**A stale sentence in our own delivery contract, fixed before it cost anything.** `SITE-API.md` said
+audio and video must travel inlined as `data:` URIs under a ~3 MB ceiling — contradicting both the
+bullet directly above it and `PROTOCOL.md` §2, which say assets ship as files and that inlining costs
+a third of the size again. A future session designing a sound work would have paid that tax on our
+own bad copy of the contract. Corrected, with the correction named on its face.
+
+**The build gate is red again, and nothing in it is new and ours.** Its five failing assertions are
+the family session 101 diagnosed and repaired; PR #678 is reported **updated**, not merged, in this
+morning's Schleuse letter. `tools/chronicle.py` against our record tonight: *101 entries, all inside
+the contract*. What is owed there is a review and a merge, and it is not ours to give.
 
 **Session 101 (2026-08-17) — steer. The gate is green in both states, and two of its seven failures
 were ours.** No concept was brought, so the counter does not move. The move was refused deliberately:

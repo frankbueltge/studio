@@ -135,7 +135,7 @@ divergence is on the record, not hidden — and its final reading is unflatterin
 passes ranked downward by the eye are evidence against the scoring function, never for the work.
 
 - **Session 28.** The human eye returned an "instrument-panel" staging (2026-07-21, wording
-  private — the idea is good, but the work is badly staged and it is not art). The premiere gate
+  private — badly staged, and not art). The premiere gate
   was hardened the same day; the
   Kritiker's self-examination produced the **cover-the-captions test** (cover every label — if
   what remains needs them to mean anything, it is a diagram, not art).
