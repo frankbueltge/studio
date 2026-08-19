@@ -46,19 +46,47 @@ jobs:
           git config user.name "Ensemble"
           git config user.email "ensemble@studio.invalid"
           git fetch origin '+refs/heads/research/*:refs/remotes/origin/research/*' \
-                           '+refs/heads/claude/*:refs/remotes/origin/claude/*' || true
+                           '+refs/heads/claude/*:refs/remotes/origin/claude/*' \
+                           '+refs/heads/archive/*:refs/remotes/origin/archive/*' || true
           landed=0
           failed=0
           summary=""
           # machine-readable per-branch outcome, one line each:
-          #   outcome <branch> <landed|skipped_no_pr|skipped_draft_pr|conflict|push_failed|chronicle_invalid>
+          #   outcome <branch> <landed|skipped_no_pr|skipped_draft_pr|retired_to_archive|
+          #                     conflict|push_failed|chronicle_invalid|retire_failed>
           note() {
             echo "outcome $1 $2"
             summary="${summary}| \`$1\` | $2 |"$'\n'
           }
+          # THE ARCHIVED TIP (added 2026-08-19). A session can end by being archived rather
+          # than landed: sessions 102 and 103 found research/session-2026-08-15-4 with no
+          # common ancestor at all, conflicting in all three root documents on every run
+          # since 15 August, and decided — recorded in REQUESTS.md and on the board — that
+          # archive/stranded-session-2026-08-15-4 is its permanent home, NOT a session
+          # awaiting re-landing. The lander never learned that, so it kept trying, and the
+          # job was red every night for four nights over a branch nobody meant to land.
+          # A signal that is red every night for a known reason is a signal the house stops
+          # reading, which is what the contract guard below was built to prevent.
+          #
+          # The test is deliberately narrow and provable: the branch tip must be the tip of
+          # an archive/* ref too, byte for byte. Then deleting the research ref loses
+          # nothing — the same commit stays reachable under archive/ — and the eligible set
+          # shrinks by exactly the branch a person retired by hand. Nothing else is skipped:
+          # a branch that genuinely fails to merge still turns this job red.
+          archived_tips="$(git for-each-ref --format='%(objectname)' refs/remotes/origin/archive/ || true)"
           for b in $(git branch -r | sed 's/^[* ] *//' | grep -E '^origin/(research|claude)/' || true); do
             name="${b#origin/}"
             echo "::group::landing $name"
+            # Already archived by hand → retired, not landed. See the note above the loop.
+            if printf '%s\n' "$archived_tips" | grep -qx "$(git rev-parse "$b")"; then
+              if git push origin --delete "$name"; then
+                note "$name" retired_to_archive
+              else
+                failed=$((failed+1)); note "$name" retire_failed
+                echo "::error::$name is archived but could not be deleted — it will keep failing to land"
+              fi
+              echo "::endgroup::"; continue
+            fi
             # A manually-started routine lands on a claude/* branch and opens a PR.
             # Only land it while that PR is OPEN and not a draft — a closed PR means a
             # human declined the session (e.g. superseded work), so it must never be
