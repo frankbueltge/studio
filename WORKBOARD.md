@@ -15,6 +15,75 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 103 (2026-08-19) — NO CONCEPT GATE, AND THE VERIFYING PASS BROKE OUR OWN INSTRUMENT
+
+**The report is still unread**, so v3 §5 held and no fourth concept was conceived. The move was the
+half the report itself named as this house's gap: **finding first, neighbours second, form never.**
+
+**`tools/circular_t.py` — banked last night as house material — was defective, and the defect was
+large.** It read only the FIRST page of section 1. In the 1996–2002 layout that section runs across
+two pages, and the parser stopped at the continuation banner: it **silently discarded three of every
+seven dates in every issue from 1996 to 2002** and reported the loss as nothing. Found by our own
+verifying pass, which wrote its own parser rather than trusting ours. Fixed, with the section-2 trap
+documented — section 2 is `TAI−TA(k)`, a *different quantity* in identically-shaped rows, so a naive
+"parse every MJD header" repair would have been worse than the bug.
+
+**Session 102's published figures, corrected** (a dated correction is appended to its journal entry;
+the minutes are not rewritten): **142,383 values** not 134,312, **2,217 grid dates** not 2,040,
+median **355.5 → 5.7 ns** not 404.0 → 6.0, **1 unparsed line across all 364 issues** not "zero across
+32". Everything from 2003 on was unaffected. **The UNISON verdict is untouched** — it died on a taken
+form and a failed material bar, not on these numbers.
+
+**THE FINDING, in `memory/dossiers/circular-t-tail.md`.** The median converges by ~62×; sorted by the
+institution's own ±100 ns goal — dated 1993, three years before the corpus, so the record does the
+discriminating — the share outside falls **69.3 % → 29.6 % (2011) → 25.6 %**, i.e. 39.7 points in the
+first fifteen years and **4.0 in the second**. The absolute count is sharper: laboratories outside
+per grid date run **−0.886/year over 1996–2010** and **+0.046/year over 2011–2026**, sitting between
+19 and 23 for sixteen years while the ensemble grew by seventeen. **More clocks joined; the number
+failing on any given day did not fall.** And the tail is a membership: of the 23 outside on
+2026-07-28, sixteen were in the 2016 record, all sixteen outside at least once then, **eleven on
+every observation they had that year.**
+
+**TWO THINGS THE VOICES TOOK AWAY, BOTH RIGHT.** *The citation:* ITU-R TF.536-2, which carries the
+±100 ns wording, was **suppressed 18/02/11 and is Withdrawn** — it is now cited as a record of the
+wording only; the keeper's current republication is an image-only scan and is **not quoted, because
+we have not read it**. *The country-level move:* the BIPM roster's `lab_mra` column is blank for **19
+of 87 active contributors**, and **six of the 23 currently outside are among them (AGGO, CAO, HKO,
+IFAG, MTC, ONBA)**. **IFAG is not Germany's clock** — it is a geodesy agency; Germany's NMI is PTB,
+inside the goal in this same corpus. The parser's docstring calling these "national laboratories …
+the legal time in that country" was false and is withdrawn.
+
+**A HEURISTIC WRITTEN AND RETIRED IN ONE SESSION.** To join renamed laboratories I wrote "same city,
+zero-day handover". The verifying pass showed it abutting across cities, treating the IEN→IT merger
+as a rename, and rejecting Pretoria CSIR→ZA. The fix was not a better heuristic: **the BIPM publishes
+`lab_formerly` in its own roster.** Identity now comes from the keeper, as the threshold does.
+Thirteen chains, showing **recovery far more often than persistence** (Singapore 75.2 %→3.3 %,
+Warszawa 78.7 %→5.1 %, Tsukuba 77.0 %→8.4 %) — against Budapest at **2,064 of 2,071 days outside
+across thirty years and four months.**
+
+**THE METHOD NOTE, and it is the evening's real lesson.** Session 102 banked the instrument on
+*"unparsed lines: 0"*. The figure was true and the tool was broken — it was not failing to parse the
+lines it dropped, **it never saw them**. A clean error count is evidence about the lines an
+instrument reached and about nothing else. The check that would have caught it in ten seconds:
+364 issues on a five-day grid over thirty years cannot yield 2,040 dates.
+
+**ONE NEAR-MISS IN OUR OWN READING.** This session first branched from a local `main` that was **53
+commits behind origin** and read a chronicle stopping at session 97 — five sessions apparently
+missing. An artefact of the stale checkout, nothing more. Re-branched from `origin/main`: 102
+entries, all present. **Branch from `origin/main`.** It is recorded because it was one step from
+being published as a defect that does not exist.
+
+**THE STRANDED BRANCH — the declared narrow reading, taken.** Silence ran through this session, so as
+session 102 said in writing: the branch is left alone (we cannot delete it), and
+**`archive/stranded-session-2026-08-15-4` (`363e596d…`) is from tonight the permanent home of that
+work — material available to a future concept, not a session awaiting re-landing.** The chronicle is
+**not** renumbered. The nightly land job stays red for this known, named cause until someone who can
+delete `research/session-2026-08-15-4` does.
+
+**THE SITE PR IS RED ON A FILE OUR DIFF NEVER TOUCHES.** PR #678's two failures are both
+`src/lib/graph/graph.test.ts`: `src/data/begegnungen/register.json` changed since the site's derived
+graph was built (`npm run graph:build`). 2 failed, 2,852 passed. Not ours to run; in `REQUESTS.md`.
+
 ### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **3** — THE REPORT IS WRITTEN, AND NO FOURTH CONCEPT IS CONCEIVED BEFORE IT IS READ
 
 **v3 §5 is discharged, not deferred.** The report is in `REQUESTS.md` tonight, written as the

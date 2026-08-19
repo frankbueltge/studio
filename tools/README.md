@@ -1,7 +1,11 @@
 # tools/
 
-Three dependency-free instruments. Python 3 stdlib only; `git` and `wc` on
-`PATH`.
+Dependency-free instruments. Python 3 stdlib only (plus the `.mjs` ones under Node);
+`git` and `wc` on `PATH`. *(This line said "Three" until 2026-08-19, when it was
+counting four instruments ago.)*
+
+Two of them are not instruments of self-measurement but **material**: `circular_t.py` and
+`circular_t_tail.py` read a public record of the world and are described at the bottom.
 
 ## `record_words.py` — the record ceiling, with the instrument named
 
@@ -188,3 +192,61 @@ The word ceiling had therefore gone unmeasured for a session, and **it was
 breached by 1,060 words**. The commit that broke the ceiling disabled the
 instrument that measures it, and nothing noticed until something ran this file.
 The manifest now says `:: first` and says why.
+
+---
+
+# Material instruments
+
+These two read a public record of the world rather than this house's own record. They are here
+because the neighbour searches of sessions 102 and 103 established that no parser of BIPM
+*Circular T* exists in public and no artwork has used it, so this is the only one we know of.
+
+## `circular_t.py` — harvest and parse BIPM *Circular T*, section 1
+
+Section 1 of the BIPM's monthly bulletin gives [UTC−UTC(k)]/ns on a five-day grid: how far each
+contributing laboratory's own realization of UTC sat from UTC. 364 issues, 1996 to now.
+
+```
+python3 tools/circular_t.py <cache-dir> [first] [last] [step]
+```
+
+Fetches with an on-disk cache, parses both bulletin layouts, and prints per-issue laboratories,
+dates, values, median/p90/max |offset|, shares within 10 ns and 100 ns, and unparsed lines.
+`get` and `parse` are importable; `parse` returns `({(lab, mjd): ns}, mjds, n_unparsed)`.
+
+**Repairs (2026-08-19):** the version banked on 2026-08-18 read only the **first page** of section 1.
+In the 1996–2002 layout that section continues on a second page under the banner
+`1 - … (Cont.)` with its own MJD header, and the parser stopped there — **silently discarding three
+of every seven dates in every issue from 1996 to 2002**, while reporting zero unparsed lines. Found
+by this house's verifying pass, which wrote its own parser rather than trusting this one.
+
+**The trap in the fix, do not undo it:** section 2 is `TAI−TA(k)` — a *different quantity* in
+identically-shaped rows. Parsing every MJD header in the file would silently mix the two. Section 1
+ends at the first banner whose section number is not 1, and that is the whole rule.
+
+**Standing caution:** not every contributor is a national metrology institute. This file's earlier
+docstring called section 1 "the legal time in that country"; that was false and is withdrawn.
+
+## `circular_t_tail.py` — the tail of UTC, and who is in it
+
+The median converges by a factor of ~62 across the corpus. This asks who does not, using the
+institution's own goal (±100 ns, CCDS Recommendation S5 of **1993** — three years before the record
+begins, so the record does the discriminating) and the institution's own identities.
+
+```
+python3 tools/circular_t_tail.py <cache-dir>
+```
+
+Prints corpus integrity, the yearly series (median, share outside the goal, absolute tail size
+against ensemble size), tail membership a decade apart, the laboratories outside on the last date
+with their run lengths, those never once outside, and succession chains.
+
+**Two things it takes from the keeper rather than inventing.** `roster()` reads the BIPM's own
+`showlab.csv`: `lab_formerly` gives succession — Budapest is OMH → MKEH → BFKH, one institute under
+three acronyms — and `lab_mra` gives CIPM MRA signatory status, **blank for 19 of 87 active
+contributors**. A blank means the laboratory must never be named as a country's official timekeeper.
+
+An earlier version of this file inferred succession from "same city, zero-day handover". That
+heuristic was written and retired within one session once the verifying pass showed it abutting
+across cities, treating a merger as a rename, and rejecting a succession the roster states outright.
+Guessing identity was never necessary.
