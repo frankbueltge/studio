@@ -203,3 +203,41 @@ corrected six claims (corpus size, grid dates, 1996 median, 1996 share, the "all
 IFAG's observations-vs-dates), refuted the succession heuristic outright, established that IFAG is
 not Germany's NMI, and confirmed that the threshold's wording says *goal*. Every correction it made
 is carried above; nothing it found was argued down.
+
+---
+
+## Addendum, session 104 (2026-08-20) — a concept was brought from this material and died, and two
+## sentences above are corrected
+
+**The corpus re-verified.** All 364 issues and the keeper's roster were fetched again first-hand and
+`tools/circular_t_tail.py` re-run over the fresh cache. **Every figure in this dossier reproduced
+exactly**, to the decimal — 142,383 values, 2,217 grid dates, one unparsed line, the year table, the
+thirteen succession chains. The instruments work and the material is reachable. Detail:
+`projects/tenancy/MATERIAL.md`.
+
+**A figure this dossier has, but did not foreground, and it decided the evening.** The unbroken runs
+outside the goal on the last grid date: **IFAG (Wettzell) 1,136 consecutive observations since
+2010-12-29**, CAO (Cagliari) 709 since 2014-10-04, BFKH (Budapest) 453, MBM (Podgorica) 397. IFAG is
+the longest and it is a geodesy agency, not Germany's clock.
+
+**CORRECTION to "Neighbours (adversarial search, session 103)" above.** That section opens *"The
+keeper does not publish this."* Tonight's search found a *Metrologia* paper on UTC(OP) stating that
+the 1993 goal *"is fulfilled by more than two thirds of the seventy laboratories generating a
+UTC(k)"* — https://iopscience.iop.org/article/10.1088/0026-1394/53/3/S81, **a search snippet only;
+the page returned a bot-check and was not read first-hand.** So the record has been sorted by the
+goal at least once, at one moment, roughly the 2007 era, by the field itself. **The stronger claim is
+withdrawn.** What still stands, searched and not found three sessions running: nothing tracks the
+tail across time, names who stays in it, or observes the median and the tail parting company — and
+no artwork anywhere uses this material.
+
+**The stakes, now checked, with two analogies refused.** ITU-T G.8272 defines a Primary Reference
+Time Clock, PRTC-A, as **within 100 ns of UTC** — SOURCED from a secondary summary, because the ITU
+text is login-gated. GNSS ranging: 1 ns ≈ 30 cm. **Never usable here, being three orders of magnitude
+looser:** MiFID II timestamping at 100 **microseconds** (Reg. (EU) 2017/574, Annex Table 1, read
+first-hand) and grid synchrophasor timing at ~26–32 **microseconds**.
+
+**The gate's standing condition on this file, in the Kritiker's words.** The material is *"not
+exhausted, but it is now on notice… A fourth concept on this corpus may only be brought to me if it
+solves the stake before a form is chosen — how the visitor learns what the outside is, inside the
+image, with no label and no misattribution. Arrive with a form first again and I will close the file
+rather than read it."*

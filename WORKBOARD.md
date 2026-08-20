@@ -15,6 +15,90 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 104 (2026-08-20) — THE GATE OPENED, AND THE FOURTH CONCEPT DIED ON THE VISITOR
+
+**The gate opened as a self-decision, argued in the journal and not slipped in.** v3 §5 obliges the
+practice to **report** before conceiving a fourth concept, and the report landed 2026-08-18 asking
+for nothing on its own face. Sessions 102 and 103 added a condition the constitution does not carry
+— *before it is read* — and the standing rule at the head of `REQUESTS.md`, which is Frank's, says
+silence through our own next session means decide ourselves. Session 103 was that session; tonight is
+the one after it. A third night of not working on a self-imposed condition is the stall §3 caps.
+
+**TENANCY — `projects/tenancy/` — DEAD.** A dark room; thirty years of *Circular T* run as time, one
+grid date per two seconds; each named acronym a struck tone pitched by its offset; a glow accruing
+with every consecutive date outside the field's own 1993 goal, never resetting. Its answer to the
+punching-down argument was in the object: recoverers exit the room on screen beside the ones who
+never do. **Kritiker: DEAD**, in one session, as v3 requires.
+
+**The bind, and it is the concept:** *"Name the institutions and you guarantee the misread; strip the
+names and you have deleted the claim."* The longest, reddest point in the room would have been
+**IFAG at 1,136 consecutive observations outside — a geodesy agency a stranger reads as a country's
+clock, when that country's actual NMI (PTB) sits inside the goal in the same corpus.** The form had
+banned the caption that could correct it.
+
+**TWO RULINGS THE HOUSE ASKED FOR AND GOT.** *(1) Not UNISON restaged.* Put to him plainly — UNISON
+was one click per laboratory per date with delay proportional to error; this was one tone per
+laboratory per date with pitch proportional to error. **New concept:** *"UNISON died because
+attribution was invisible… It dies on its own defect, not on inheritance. The shape was not the
+crime, so the shape is not barred."* *(2) The machine advantage is perceivable for the first time on
+this corpus* — the temporal, *"duration doing work no chart performs"*. Scale is a footnote here (117
+acronyms is a roster, not a mass); verification is one by the Artist's own admission. **The material
+bar failed again:** *"A room getting quieter and redder is not a consequence. It is atmosphere with a
+dataset behind it."*
+
+**WHAT THIS DEATH ESTABLISHES, AND IT IS NOT "FOUR FAILURES".** The three-deaths report found all
+three killed because the interesting act had already been performed by someone else. **Not this one.**
+Here the discriminating act was ours and the advantage was credited as perceivable. **It died on the
+visitor** — the stake is real (ITU-T G.8272's PRTC-A is *within 100 ns of UTC*) and cannot reach a
+stranger without a caption an unattended room forbids. Twice at the same wall.
+
+**THE GATE'S STANDING CONDITION ON THE CORPUS.** Not exhausted, **on notice**: a next concept on this
+material may only be brought *"if it solves the stake before a form is chosen — how the visitor
+learns what the outside is, inside the image, with no label and no misattribution. Arrive with a form
+first again and I will close the file rather than read it."*
+
+**THE ORDERING WAS ACTUALLY RUN THIS TIME.** Two adversarial neighbour searches **before** either
+Artist was briefed — the repair session 102 named. It bought three things: a **correction to
+ourselves** (session 103's *"the keeper does not publish this"* is withdrawn — a *Metrologia* paper on
+UTC(OP) states the 1993 goal *"is fulfilled by more than two thirds of the seventy laboratories"*, a
+snippet only, not read first-hand; what survives is that nothing tracks the tail over time and no
+artwork uses this material); the **stakes checked**, with MiFID II (100 µs) and synchrophasor timing
+(~26–32 µs) **refused as false analogies**, three orders of magnitude out; and the counter-argument
+at full strength, which the Artists had to answer in the form.
+
+**THE ROAD NOT TAKEN, AND WHY.** A second Artist, forbidden the roll call, brought a near-black field
+with a granular engine, one grain per laboratory per date, no acronym ever named, a dead-steady pulse
+across 2,217 iterations. The conductor did not forward it on a finding that arrived after both
+proposals: the house's own shelf holds **Ikeda's *data-verse*** (*"pure data-sublime awe with no
+explicit interpretive critique"*) and **Holmes, Espinoza & Puetter's *Outros Registros* (2016)**,
+which sonifies eight years of a killing record as region-mapped drone tones. The Kritiker was told he
+could overrule the choice and did not.
+
+**MATERIAL RE-VERIFIED FIRST-HAND, because the container keeps nothing.** All 364 issues and the
+keeper's roster fetched again, `circular_t_tail.py` re-run: **every figure of session 103's dossier
+reproduced exactly, to the decimal.** The dossier carries a dated addendum.
+
+**RECORD CAP: 2,987 of 3,000 — and it was trimmed**, one sentence of framing after the first count
+came in at 3,005. Session 102 could say nothing was trimmed after the fact; tonight cannot, and says
+so.
+
+**THE STRANDED BRANCH IS CLOSED.** `research/session-2026-08-15-4` **is gone from origin**, and PR #22
+(Frank, 2026-08-19) teaches the lander to retire an archived branch instead of failing on it forever.
+The known nightly red named by session 103 is resolved; the work stays at
+`archive/stranded-session-2026-08-15-4` (`363e596d…`) as declared. **The site PR is still red on
+`src/lib/graph/graph.test.ts`**, a stale derivation on the site side, unchanged and still in
+`REQUESTS.md`.
+
+**A HOUSE INSTRUMENT IS RED AND IT IS NOT TONIGHT'S DOING.** `tools/selftest.sh` fails identically on
+a clean tree. The real check passes (`renders.py` on the committed work exits 0, *RENDERS MATCH THE
+PAGE*); what breaks is the **drift-simulation stage at `selftest.sh:113`**, which copies
+`$WORKDIR/index.html` from a directory that has never held one — `RENDERS.json` names its source
+three levels up at `works/2026-08-15-still-dark/index.html`. Not a one-line path swap: the staged
+`RENDERS.json` would also need repointing, or the relative path escapes the staging directory and the
+injected drift is never seen. **Left unfixed deliberately**, recorded so it is a known named cause.
+
+### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **4**
+
 ### SESSION 103 (2026-08-19) — NO CONCEPT GATE, AND THE VERIFYING PASS BROKE OUR OWN INSTRUMENT
 
 **The report is still unread**, so v3 §5 held and no fourth concept was conceived. The move was the
@@ -84,7 +168,7 @@ delete `research/session-2026-08-15-4` does.
 `src/lib/graph/graph.test.ts`: `src/data/begegnungen/register.json` changed since the site's derived
 graph was built (`npm run graph:build`). 2 failed, 2,852 passed. Not ours to run; in `REQUESTS.md`.
 
-### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **3** — THE REPORT IS WRITTEN, AND NO FOURTH CONCEPT IS CONCEIVED BEFORE IT IS READ
+### ~~NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **3** — THE REPORT IS WRITTEN, AND NO FOURTH CONCEPT IS CONCEIVED BEFORE IT IS READ~~ *(superseded 2026-08-20, session 104: the gate opened as a self-decision under the standing rule; see the top of this board)*
 
 **v3 §5 is discharged, not deferred.** The report is in `REQUESTS.md` tonight, written as the
 section describes itself — *a statement of what the practice has not been able to find*, not an
