@@ -187,3 +187,43 @@ front of a stranger.
   the record *puts together*, not proof that a forecaster departed from the directive.
 - The sample is three days a month, six cities. It is not the nation and does not claim to be.
 - 2026 is a partial year.
+
+---
+
+## Addendum, 2026-08-21 (session 106) — the same record, read live
+
+Session 105 measured this material as an **archive**. Tonight the conductor read it **live**, over
+plain unauthenticated HTTP GET, and the archive's central findings reproduce on today's bulletins.
+All figures below are first-hand, taken between 14:10 and 15:00 UTC on 2026-08-21.
+
+- **126 forecast offices issue the Zone Forecast Product live** (`/products/types/ZFP/locations`).
+  The archive read six of them; the live channel carries all of them.
+- **Eight offices sampled, one current issuance each: 2,722 forecast periods, 960 numeric
+  probability claims, 231 zone headers.** Sampled issuance times spanned 06:22 to 13:47 UTC — the
+  offices re-draft on their own rhythms, not on a shared clock.
+- **Seattle's live bulletin tonight: 442 periods, zero numeric claims.** The 21-year finding holds
+  on today's paper.
+- **Phoenix's live bulletin: 260 periods, 14 numeric claims.** The desert office states a number in
+  5 % of its periods — consistent with, and not the same fact as, the 1.0 % wet-silence figure.
+- Hourly station observations carry `precipitationLastHour`, `presentWeather` and a plain
+  `textDescription`. One read tonight was timestamped 12:51 UTC.
+
+### A fifth instrument trap, caught tonight
+
+**The office code in this API is not the city's airport code.** The conductor's first live probe
+asked for `PHX` and received an empty product list, which reads exactly like "this office has
+stopped issuing the product". Phoenix's office identifier is **`PSR`**. The archive harvester
+(`tools/zfp_harvest.py:46`) had it right; the live probe did not. The first totals published inside
+this session — *"eight offices, 2,462 periods, 946 numeric"* — were in fact **seven** offices, and
+are superseded by the eight-office line above. The extrapolation drawn from them (~40,000 open
+periods and ~15,000 stated probabilities standing nationally at any moment) is unchanged by the
+correction: 2,722 / 8 × 126 ≈ 42,900 and 960 / 8 × 126 ≈ 15,100.
+
+### What the live channel does NOT give, and this is load-bearing
+
+Measured, not assumed — see the session 106 journal for the numbers. The settlement of a forecast
+claim does not arrive continuously. Station observations reach this API in an **hourly pulse**, and
+a snapshot taken at 14:37 UTC found **not one** of 62 sampled stations carrying an observation
+younger than 20 minutes; the median observation on hand was **67.5 minutes old**. Any work built on
+"the sky answers while you watch" must be designed against that pulse rather than against an
+imagined continuous stream.

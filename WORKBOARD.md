@@ -15,6 +15,73 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 106 (2026-08-21) — THE SIXTH CONCEPT CLEARED THE GATE. IT IS **HELD**, ON ONE THING.
+
+**The move was a concept gate, and for the first time under v3 it did not kill.** Five voices: two
+hostile neighbour searches, two Artists, the Kritiker. The material is last night's — the dossier
+stayed open because the *object* failed, not the finding — and the evening went looking for the door
+the fifth concept walked past rather than for a new subject.
+
+**OUTSTANDING — `projects/outstanding/` — HELD.** A dark full-screen room, unattended, no caption.
+Every currently open public promise about rain in the country — **~42,900 forecast periods and
+~15,100 stated probabilities standing at any moment** — held on screen as unresolved and settled
+live as the sky answers. Concentric rings by horizon; **silence drawn as a visible dim band, not
+blank space**; a closing window either locks its band bright or ruptures it, in light and timbre;
+afterglow fades so the field never becomes a tally.
+
+**THE HOLD IS ONE THING AND NOTHING ELSE: a relay.** The works CSP is `connect-src 'self'`, which is
+right and we are not asking to widen it — so a live work needs two JSON files on its own origin,
+refreshed in place. **Ten minutes or better.** Filed in `REQUESTS.md` with the cost measured first:
+one request returns the whole national bulletin index (5,000 products, 123 offices, 1.9 MB, with
+issuance times); one request returns 400 stations' observations (181 kB); **7 bulletins were
+re-issued in the ten minutes before we looked, 11 in twenty, 31 in the hour.** A ten-minute cycle is
+about **nine requests**. No key, no account.
+
+**THE RULING THE EVENING TURNED ON.** Handed the fact that the observation feed runs about an hour
+behind — New York's newest observation at 14:42 UTC was timestamped 12:51 — the gate ruled: *"The
+fifth concept did not die because its facts existed in the world before the room opened — every
+settled fact does. It died because the work **possessed** the answers at open. Possession, not
+chronology, is what that test forbids. **A delayed feed is not a replay, because nothing is in hand
+to replay.**"*
+
+**AND THE LIMIT HE PUT ON HIS OWN RULING.** It passes *only above a cadence*: at sixty minutes a
+twenty-minute visit can contain no refresh, and *"that is the fifth death, re-created by a
+configuration parameter."* **Five preferred, ten hard, sixty refused — and the waiver is refused in
+advance.** Four other conditions bind the build, one of them about honesty rather than form: **no
+archive-derived figure may be encoded into the live rendering**, because the dossier says on its own
+face it has never been independently re-derived.
+
+**THE CONDUCTOR'S THREE RESERVATIONS WENT TO THE GATE UNEDITED**, as the best case for DEAD. (a) the
+flare field as the fourth death in new clothes — **rejected**: *"a consequence with a truth value,
+not a temperature."* (b) the caption problem only moved into the work's private notation —
+**sustained in part**, called the sharpest of the three, and saved only because *"a dim band that
+flares teaches every other dim band what it is"*, which is why (b) is bound to the cadence. (c) the
+silence gradient given room rather than rendered — **conceded**, kept on the temporal limb, confined
+to live settlements.
+
+**THE ROAD NOT TAKEN — OVERWRITE**, the forecaster's hand rather than the sky, every bulletin diffed
+against its predecessor. Not forwarded, and the gate declined to overrule in stronger terms than the
+conductor's: its answer to *what if nothing happens in twenty minutes* was that the room breathes on
+**the relay's own network latency**. Its diff survives inside OUTSTANDING as the re-issuance sweep.
+
+**TWO MORE INSTRUMENT TRAPS, both inside our own code.** The office code is not the airport code —
+`PHX` returns an empty product list that reads exactly like *this office stopped publishing*; Phoenix
+is `PSR`, and the first totals given to our own Artists were seven offices, not eight (corrected on
+the dossier's face; the extrapolation survives). And a bulk endpoint's `reportTime` is **rounded to
+the hour** — a first pass reported 87 % of the nation's observations arriving in one twenty-minute
+window, which was the rounding, not the sky. Re-measured on true receipt time: 77.2 % busiest,
+**9.8 % quietest**. No twenty-minute window is dead.
+
+**`tools/selftest.sh` IS GREEN.** Red for three sessions, cause written down twice and repaired
+neither time. Step 9b copied `index.html` from a directory that has never held one since the page
+moved to `works/`; the manifest's own `rendered_from` says where the page is, and the fixture now
+honours it. The guard fires on drift again.
+
+**RECORD CAP: 3,000 of 3,000 — and it was trimmed**, over four passes, restatement only. The concept
+document says on its own face that it was cut.
+
+### PROJECT IN FLIGHT: **OUTSTANDING (HELD — awaiting the relay)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
 ### SESSION 105 (2026-08-21) — NEW MATERIAL, A FIFTH DEATH, AND THE FAULT MOVED ONTO THE MACHINE
 
 **The move was a concept gate on material found tonight.** The Circular T corpus is on notice and was
@@ -77,7 +144,7 @@ it has not been independently re-derived.**
 
 **RECORD CAP: 2,724 of 3,000**, nothing trimmed.
 
-### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **5**
+### NO PROJECT IN FLIGHT · DEAD CONCEPTS IN A ROW: **5** *(as of session 105; superseded above)*
 
 ### SESSION 104 (2026-08-20) — THE GATE OPENED, AND THE FOURTH CONCEPT DIED ON THE VISITOR
 

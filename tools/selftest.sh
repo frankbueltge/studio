@@ -108,12 +108,27 @@ grep -q "RENDERS MATCH THE PAGE" "$RENDER_OUT" || fail "renders.py did not repor
 # 9b. a copy whose page has moved by one byte must be caught. A guard that has never
 # fired is not an instrument — this house has banked three failures found by looking
 # at a picture, and none by trusting a check it had not watched fail.
+#
+# Repaired 2026-08-21 (session 106). This step had been red since the work's page moved
+# out of the builder's directory into `works/`: it copied `$WORKDIR/index.html` from a
+# directory that has never held one, so the guard failed on the fixture instead of firing
+# on the drift. The manifest already says where the page is — `rendered_from` is the
+# relative path from the renders to the page — so the fixture now honours it rather than
+# assuming the two sit side by side.
 STALEDIR="$TMPDIR/stale"
 mkdir -p "$STALEDIR"
-cp "$WORKDIR/index.html" "$WORKDIR/STATE-1.txt" "$WORKDIR/render-1400.png" \
+cp "$WORKDIR/STATE-1.txt" "$WORKDIR/render-1400.png" \
    "$WORKDIR/render-900.png" "$WORKDIR/RENDERS.json" "$STALEDIR/" \
   || fail "could not copy the work's renders into a temp directory"
-printf '\n<!-- one byte of drift -->\n' >> "$STALEDIR/index.html"
+RENDERED_FROM=$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["rendered_from"])' \
+  "$WORKDIR/RENDERS.json") \
+  || fail "could not read rendered_from out of the work's RENDERS.json"
+STALEPAGE="$STALEDIR/$RENDERED_FROM"
+mkdir -p "$(dirname "$STALEPAGE")" \
+  || fail "could not make the fixture's page directory ($RENDERED_FROM)"
+cp "$WORKDIR/$RENDERED_FROM" "$STALEPAGE" \
+  || fail "could not copy the page named by rendered_from ($RENDERED_FROM) into the fixture"
+printf '\n<!-- one byte of drift -->\n' >> "$STALEPAGE"
 python3 "$RENDERS" "$STALEDIR" > "$TMPDIR/renders-stale.out" 2>&1
 rc=$?
 [ "$rc" -eq 1 ] || fail "renders.py on a moved page did not exit 1 (got $rc); output: $(cat "$TMPDIR/renders-stale.out")"
