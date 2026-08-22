@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OUTSTANDING</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%; width: 100%;
+    background: #05070a; color: #cfe0ea; overflow: hidden;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    -webkit-tap-highlight-color: transparent;
+  }
+  canvas { display: block; position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
+  #panel {
+    position: absolute; z-index: 3; pointer-events: none; opacity: 0;
+    transition: opacity .28s ease; max-width: min(46ch, 80vw);
+    background: rgba(6, 9, 13, .92); border: 1px solid rgba(140, 180, 210, .25);
+    padding: .9rem 1rem; border-radius: 2px;
+  }
+  #panel.on { opacity: 1; }
+  #panel .who { font-size: .72rem; letter-spacing: .12em; color: rgba(200, 224, 238, .45); }
+  #panel .per { font-size: .78rem; letter-spacing: .08em; color: rgba(200, 224, 238, .62); margin-top: .35rem; }
+  #panel .say { font-size: 1.02rem; line-height: 1.45; color: rgba(226, 240, 248, .94); margin-top: .55rem; }
+  #panel .trace { margin-top: .7rem; height: 34px; width: 100%; display: block; }
+  #reader {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+  #gate {
+    position: absolute; inset: auto 0 6vh 0; z-index: 4; text-align: center;
+    font-size: .74rem; letter-spacing: .18em; color: rgba(190, 216, 232, .30);
+    transition: opacity 1.2s ease; pointer-events: none;
+  }
+  #gate.off { opacity: 0; }
+</style>
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+<div id="panel" role="dialog" aria-live="polite"></div>
+<div id="reader" role="status" aria-live="polite"></div>
+<div id="gate">&#8212;</div>
+<script>
+"use strict";
+/* OUTSTANDING — a room of open public promises about rain, settled live by the sky.
+ *
+ * Two files arrive on this origin and are replaced in place by the relay
+ * (tools/relay.py): data/claims.json — every currently open forecast period the
+ * United States National Weather Service is publishing, with its sentence verbatim;
+ * data/sky.json — every reporting station and what it says is falling now.
+ * data/atlas.json is geography and does not move.
+ *
+ * WHAT THIS ROOM WILL NOT DO. It will not settle a promise it did not watch.
+ * A window that closed while nobody was here leaves the field without a verdict:
+ * it fades, unsounded. Only a claim whose window this room held open from its
+ * beginning, or over which it saw water fall, is allowed to lock or to break.
+ * The room's authority is its own duration and nothing else, which is why it is
+ * worth leaving open.
+ */
+
+/* ------------------------------------------------------------------ constants */
+const RELAY = { claims: "data/claims.json", sky: "data/sky.json", atlas: "data/atlas.json" };
+const FIXTURE = { claims: "data/fixture-claims.json", sky: "data/fixture-sky.json", atlas: "data/atlas.json" };
+const REFRESH_MS = 150000;          // the page asks every 2.5 min; the relay writes every 10
+const STALE_MS = 25 * 60 * 1000;    // after this with no successful fetch the room stops changing
+const RINGS = [12, 36, 72, 120, 168];        // ring upper bounds, hours of lead time
+const RING_R = [10, 18, 26, 34, 43];         // outer radius per ring, in scale units
+const RING_W = [6, 6, 5.5, 5.5, 5.5];          // band thickness
+const PER_RING = 6;                          // arcs drawn per ring; the rest stay live, undrawn
+const AFTERGLOW = { lock: 26000, rupture: 34000, silence: 55000 };
+const REMOVE_AFTER = { lock: 95000, rupture: 125000, silence: 180000 };
+const CONUS = { lat0: 24.4, lat1: 49.4, lon0: -125.0, lon1: -66.9 };
+const LON_SQUEEZE = Math.cos(38.5 * Math.PI / 180);
+const CARTOUCHE = { AK: [0.055, 0.80], HI: [0.135, 0.895], PR: [0.905, 0.885], PAC: [0.945, 0.79] };
+
+const params = new URLSearchParams(location.search);
+const SRC = params.get("fixture") ? FIXTURE : RELAY;
+
+/* --------------------------------------------------------------------- canvas */
+const field = document.getElementById("field");
+const ctx = field.getContext("2d", { alpha: false });
+const still = document.createElement("canvas");     // the field, redrawn only on change
+const sctx = still.getContext("2d");
+let W = 0, H = 0, DPR = 1, U = 1, stillDirty = true;
+
+function resize() {
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  W = Math.max(320, window.innerWidth); H = Math.max(240, window.innerHeight);
+  field.width = still.width = Math.round(W * DPR);
+  field.height = still.height = Math.round(H * DPR);
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  sctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  U = Math.min(W / 1920, H / 1080);
+  if (U < 0.42) U = 0.42;
+  layout();
+  stillDirty = true;
+}
+window.addEventListener("resize", resize);
+
+/* ------------------------------------------------------------------ the record */
+let atlas = null, claims = null, sky = null;
+let offices = [];                 // drawable nodes
+let byId = new Map();
+let lastFetchOk = 0, lastIssued = new Map(), heartbeat = -1e9;
+let events = [];                  // live animations
+let recent = [];                  // settlements, for the held-node trace
+let openedAt = Date.now();
+let stationOwner = new Map();     // station -> office id
+let wetSpans = new Map();         // office id -> [[t0,t1], ...] observed by THIS room
+let officeWet = new Map();        // office id -> last epoch (ms) seen wet
+let settledKeys = new Set();
+
+async function grab(url) {
+  const r = await fetch(url + (url.indexOf("?") < 0 ? "?t=" : "&t=") + Date.now(), { cache: "no-store" });
+  if (!r.ok) throw new Error(url + " " + r.status);
+  return r.json();
+}
+
+async function pull(first) {
+  try {
+    if (!atlas) {
+      atlas = await grab(SRC.atlas);
+      for (const [id, o] of Object.entries(atlas.offices || {})) {
+        for (const s of o.stations || []) stationOwner.set(s, id);
+      }
+      layout();
+    }
+    const [c, s] = await Promise.all([grab(SRC.claims), grab(SRC.sky)]);
+    claims = c; sky = s;
+    lastFetchOk = Date.now();
+    heartbeat = performance.now();
+    absorbSky();
+    rebuild(first);
+  } catch (e) {
+    /* A room that cannot reach its relay says nothing and invents nothing.
+       The scan line simply stops crossing, which is the only staleness sign here. */
+  }
+}
+
+/* Every wet observation this room has read, kept with the instant the sky made it.
+ *
+ * Two instants matter and they are not the same. `t` is when the water was observed;
+ * it is what decides which promise the observation answers. `openedAt` is when this
+ * room began. An observation older than the room settles its claim — the promise is
+ * no longer owed — but it does not flare and it does not sound, because the room did
+ * not see it happen. Only what arrived after the door opened is allowed to be an
+ * event. This is what keeps minute zero from being a field of finished answers. */
+function absorbSky() {
+  if (!sky || !sky.stations) return;
+  const cutoff = Date.now() - 6 * 3600000;
+  for (const [id, st] of Object.entries(sky.stations)) {
+    if (!st.r || !st.t) continue;
+    const owner = stationOwner.get(id);
+    if (!owner) continue;                       // outside the record's jurisdiction
+    const at = st.t * 1000;
+    officeWet.set(owner, Math.max(officeWet.get(owner) || 0, at));
+    const seen = wetSpans.get(owner) || [];
+    if (!seen.some(x => x.st === id && Math.abs(x.t - at) < 60000)) seen.push({ st: id, t: at });
+    wetSpans.set(owner, seen.filter(x => x.t > cutoff));
+  }
+}
+
+/* Returns the observation that answers this window, or null. */
+function witnessedWet(officeId, from, to) {
+  const seen = wetSpans.get(officeId);
+  if (!seen) return null;
+  for (const obs of seen) if (obs.t >= from && obs.t <= to) return obs;
+  return null;
+}
+
+/* --------------------------------------------------------------------- layout */
+function project(lat, lon) {
+  const x = (lon - CONUS.lon0) * LON_SQUEEZE, xr = (CONUS.lon1 - CONUS.lon0) * LON_SQUEEZE;
+  const y = (CONUS.lat1 - lat), yr = (CONUS.lat1 - CONUS.lat0);
+  const boxW = W * 0.88, boxH = H * 0.82;
+  const scale = Math.min(boxW / xr, boxH / yr);
+  return [ (W - xr * scale) / 2 + x * scale, (H - yr * scale) / 2 + y * scale ];
+}
+
+function region(lat, lon) {
+  if (lat > 50 && lon < -125) return "AK";
+  if (lat < 24 && lon < -140) return "HI";
+  if (lon > -70 && lat < 22) return "PR";
+  if (lon > 100) return "PAC";
+  return null;
+}
+
+function layout() {
+  if (!atlas) return;
+  offices = []; byId = new Map();
+  const groups = { AK: [], HI: [], PR: [], PAC: [] };
+  for (const [id, o] of Object.entries(atlas.offices || {})) {
+    if (o.lat == null || o.lon == null) continue;   // 5 offices this channel cannot place
+    const reg = region(o.lat, o.lon);
+    const node = { id: id, lat: o.lat, lon: o.lon, arcs: [], live: [], x: 0, y: 0,
+                   n: (id.charCodeAt(0) + id.charCodeAt(2)) % 7 };
+    if (reg) groups[reg].push(node);
+    else { const p = project(o.lat, o.lon); node.x = p[0]; node.y = p[1]; }
+    offices.push(node); byId.set(id, node);
+  }
+  for (const key of Object.keys(groups)) {
+    const g = groups[key]; if (!g.length) continue;
+    const cx = CARTOUCHE[key][0] * W, cy = CARTOUCHE[key][1] * H;
+    const lats = g.map(n => n.lat), lons = g.map(n => n.lon);
+    const la0 = Math.min(...lats), la1 = Math.max(...lats);
+    const lo0 = Math.min(...lons), lo1 = Math.max(...lons);
+    const span = 70 * U;
+    g.forEach(n => {
+      n.x = cx + (la1 === la0 ? 0 : ((n.lon - lo0) / (lo1 - lo0) - 0.5) * span);
+      n.y = cy - (la1 === la0 ? 0 : ((n.lat - la0) / (la1 - la0) - 0.5) * span * 0.6);
+    });
+  }
+  // Relaxation: no two node centres letter over each other, and no node travels far
+  // enough from its true place to make the map a lie. Rings are allowed to overlap —
+  // the east really is that crowded, and pretending otherwise would be the lie.
+  const want = 1.25 * RING_R[RING_R.length - 1] * U;
+  const cap = 16 * U;
+  offices.forEach(n => { n.x0 = n.x; n.y0 = n.y; });
+  for (let pass = 0; pass < 8; pass++) {
+    for (let i = 0; i < offices.length; i++) {
+      for (let j = i + 1; j < offices.length; j++) {
+        const a = offices[i], b = offices[j];
+        let dx = b.x - a.x, dy = b.y - a.y;
+        let d = Math.hypot(dx, dy) || 0.01;
+        if (d >= want) continue;
+        const push = (want - d) * 0.12;
+        dx /= d; dy /= d;
+        a.x -= dx * push; a.y -= dy * push; b.x += dx * push; b.y += dy * push;
+      }
+    }
+    for (const n of offices) {
+      const dx = n.x - n.x0, dy = n.y - n.y0, d = Math.hypot(dx, dy);
+      if (d > cap) { n.x = n.x0 + dx / d * cap; n.y = n.y0 + dy / d * cap; }
+    }
+  }
+}
+
+/* -------------------------------------------------------------- the claim field */
+function ringOf(claim, now) {
+  if (!claim.e) return 4;
+  const mid = claim.s ? (Date.parse(claim.s) + Date.parse(claim.e)) / 2 : Date.parse(claim.e);
+  const lead = (mid - now) / 3600000;
+  for (let i = 0; i < RINGS.length; i++) if (lead < RINGS[i]) return i;
+  return RINGS.length - 1;
+}
+
+function rebuild(first) {
+  if (!claims || !atlas) return;
+  const now = Date.now();
+  const sweeps = [];
+  for (const [id, rec] of Object.entries(claims.offices || {})) {
+    const node = byId.get(id); if (!node) continue;
+    const before = lastIssued.get(id);
+    if (before && before !== rec.issued && !first) sweeps.push(node);
+    lastIssued.set(id, rec.issued);
+
+    const buckets = [[], [], [], [], []];
+    node.live = [];
+    for (let k = 0; k < rec.claims.length; k++) {
+      const c = rec.claims[k];
+      if (!c.e) continue;
+      const end = Date.parse(c.e), start = c.s ? Date.parse(c.s) : end - 43200000;
+      if (end <= now) continue;
+      const item = { c: c, office: id, start: start, end: end,
+                     key: id + "|" + rec.issued + "|" + k, ring: ringOf(c, now) };
+      node.live.push(item);
+      const b = buckets[item.ring];
+      if (b.length < PER_RING) b.push(item);
+    }
+    // The record's own order, not ours: arcs are taken as the bulletin wrote them.
+    const arcs = [];
+    for (let r = 0; r < buckets.length; r++) {
+      const b = buckets[r];
+      for (let i = 0; i < b.length; i++) {
+        b[i].a0 = (i / b.length) * Math.PI * 2 + 0.022;
+        b[i].a1 = ((i + 1) / b.length) * Math.PI * 2 - 0.022;
+        arcs.push(b[i]);
+      }
+    }
+    node.arcs = arcs;
+  }
+  for (const node of sweeps) events.push({ kind: "sweep", node: node, t0: performance.now() });
+  stillDirty = true;
+  speak();
+}
+
+/* --------------------------------------------------------------- the settlement */
+function settle() {
+  const now = Date.now();
+  for (const node of offices) {
+    for (const item of node.live) {
+      if (settledKeys.has(item.key)) continue;
+      const rain = !!item.c.w;
+      const obs = witnessedWet(node.id, item.start, Math.min(item.end, now));
+      if (obs) {
+        settledKeys.add(item.key);
+        // The water fell inside the promise. Whether the room may call it an event
+        // depends on whether the room was open when it fell.
+        fire(node, item, obs.t > openedAt ? (rain ? "lock" : "silence") : "unwitnessed");
+        continue;
+      }
+      if (now >= item.end) {
+        settledKeys.add(item.key);
+        // Held from its beginning, or not held at all. The room speaks only for what it held.
+        if (item.start >= openedAt) fire(node, item, rain ? "rupture" : "lock");
+        else fire(node, item, "unwitnessed");
+      }
+    }
+  }
+}
+
+function fire(node, item, kind) {
+  const ev = { kind: kind, node: node, item: item, t0: performance.now() };
+  events.push(ev);
+  if (kind !== "unwitnessed") {
+    recent.push({ office: node.id, kind: kind, t: Date.now(), text: item.c.t, period: item.c.p });
+    if (recent.length > 400) recent.splice(0, recent.length - 400);
+    sound(kind, node);
+    speak(item, kind);
+  }
+  const idx = node.arcs.indexOf(item);
+  if (idx >= 0) { node.arcs.splice(idx, 1); stillDirty = true; }
+}
+
+/* ---------------------------------------------------------------------- drawing */
+function drawStill() {
+  sctx.fillStyle = "#05070a";
+  sctx.fillRect(0, 0, W, H);
+  for (const node of offices) {
+    sctx.fillStyle = "rgba(180,210,230,0.38)";
+    sctx.beginPath(); sctx.arc(node.x, node.y, 2.5 * U, 0, 6.2832); sctx.fill();
+    for (const item of node.arcs) {
+      const r = RING_R[item.ring] * U, w = RING_W[item.ring] * U;
+      const c = item.c;
+      sctx.lineWidth = w;
+      if (c.n != null) {
+        // measured to a point: a dark rail with a bright segment and a hard cap
+        sctx.strokeStyle = "rgba(120,160,190,0.08)";
+        arc(sctx, node, r, item.a0, item.a1);
+        const p = Math.max(0, Math.min(100, c.n)) / 100;
+        const a1 = item.a0 + (item.a1 - item.a0) * p;
+        sctx.strokeStyle = "hsla(202,30%,72%," + (0.30 + 0.55 * p).toFixed(3) + ")";
+        arc(sctx, node, r, item.a0, a1);
+        sctx.lineWidth = 1.5 * U;
+        sctx.strokeStyle = "hsla(202,34%,84%," + (0.45 + 0.5 * p).toFixed(3) + ")";
+        arc(sctx, node, r + w * 0.5 - 0.75 * U, a1 - 0.012, a1 + 0.012);
+      } else if (c.w) {
+        // committed, unmeasured: stippled, no end
+        sctx.strokeStyle = "hsla(202,24%,66%,0.40)";
+        sctx.setLineDash([3 * U, 2.5 * U]);
+        sctx.lineDashOffset = (item.a0 * 30) % 12;
+        arc(sctx, node, r, item.a0, item.a1);
+        sctx.setLineDash([]);
+      } else {
+        // silence: a continuous band of a different substance. Never blank space.
+        sctx.strokeStyle = "hsla(210,13%,38%,0.50)";
+        arc(sctx, node, r, item.a0, item.a1);
+      }
+    }
+  }
+  stillDirty = false;
+}
+
+function arc(c, node, r, a0, a1) {
+  c.beginPath(); c.arc(node.x, node.y, r, a0, a1); c.stroke();
+}
+
+function frame(t) {
+  if (stillDirty) drawStill();
+  ctx.drawImage(still, 0, 0, W, H);
+
+  let dim = 1;
+  for (const ev of events) {
+    if (ev.kind === "silence") {
+      const age = t - ev.t0;
+      if (age < 2500) dim = Math.min(dim, 0.55 + 0.45 * Math.max(0, (age - 1600) / 900));
+    }
+  }
+  if (dim < 1) { ctx.fillStyle = "rgba(5,7,10," + (1 - dim).toFixed(3) + ")"; ctx.fillRect(0, 0, W, H); }
+
+  const keep = [];
+  for (const ev of events) {
+    const age = t - ev.t0;
+    if (drawEvent(ev, age)) keep.push(ev);
+  }
+  events = keep;
+
+  const hb = t - heartbeat;
+  if (hb < 900) {
+    const y = (hb / 900) * H;
+    ctx.strokeStyle = "rgba(170,205,225,0.08)"; ctx.lineWidth = 1 * U;
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+  }
+  if (held) drawHeld(t);
+  requestAnimationFrame(frame);
+}
+
+function drawEvent(ev, age) {
+  const node = ev.node;
+  if (ev.kind === "sweep") {
+    if (age > 1600) return false;
+    const a = -Math.PI / 2 + (age / 1600) * Math.PI * 2;
+    const r = RING_R[RING_R.length - 1] * U;
+    ctx.strokeStyle = "rgba(150,190,215,0.50)"; ctx.lineWidth = 2 * U;
+    ctx.beginPath(); ctx.moveTo(node.x, node.y);
+    ctx.lineTo(node.x + Math.cos(a) * r, node.y + Math.sin(a) * r); ctx.stroke();
+    return true;
+  }
+  const item = ev.item;
+  const r = RING_R[item.ring] * U, w = RING_W[item.ring] * U;
+  if (ev.kind === "unwitnessed") {
+    if (age > 900) return false;
+    ctx.lineWidth = w;
+    ctx.strokeStyle = "rgba(120,150,170," + (0.16 * (1 - age / 900)).toFixed(3) + ")";
+    arc(ctx, node, r, item.a0 || 0, item.a1 || 6.28);
+    return true;
+  }
+  if (ev.kind === "lock") {
+    if (age > REMOVE_AFTER.lock) return false;
+    const g = age < 420 ? age / 420 : 1;
+    const glow = Math.exp(-Math.max(0, age - 620) / AFTERGLOW.lock);
+    const rr = r - 4 * U * g;
+    ctx.lineWidth = w;
+    ctx.strokeStyle = "hsla(187,68%," + (52 + 12 * g) + "%," + (0.95 * glow).toFixed(3) + ")";
+    arc(ctx, node, rr, item.a0 || 0, item.a1 || 6.28);
+    if (age > 420 && age < 1320) {
+      const p = (age - 420) / 900;
+      const a = (item.a0 || 0) + ((item.a1 || 6.28) - (item.a0 || 0)) * p;
+      ctx.lineWidth = 1.5 * U; ctx.strokeStyle = "rgba(200,248,255,0.95)";
+      arc(ctx, node, rr, a - 0.03, a + 0.03);
+    }
+    return true;
+  }
+  if (ev.kind === "rupture") {
+    if (age > REMOVE_AFTER.rupture) return false;
+    const g = Math.min(1, age / 700);
+    const glow = Math.exp(-Math.max(0, age - 700) / AFTERGLOW.rupture);
+    const hue = 202 + (18 - 202) * g;
+    const spread = 0.12 * g, out = 7 * U * g;
+    ctx.lineWidth = w;
+    ctx.strokeStyle = "hsla(" + hue.toFixed(0) + ",65%,60%," + (0.9 * glow).toFixed(3) + ")";
+    const mid = ((item.a0 || 0) + (item.a1 || 6.28)) / 2;
+    arc(ctx, node, r + out, item.a0 || 0, mid - spread);
+    arc(ctx, node, r + out, mid + spread, item.a1 || 6.28);
+    if (age < 1100) {
+      const rr = (age / 1100) * 130 * U;
+      ctx.lineWidth = 1.2 * U;
+      ctx.strokeStyle = "hsla(18,65%,60%," + (0.18 * (1 - age / 1100)).toFixed(3) + ")";
+      ctx.beginPath(); ctx.arc(node.x, node.y, rr, 0, 6.2832); ctx.stroke();
+    }
+    return true;
+  }
+  if (ev.kind === "silence") {
+    if (age > REMOVE_AFTER.silence) return false;
+    const glow = Math.exp(-Math.max(0, age - 250) / AFTERGLOW.silence);
+    ctx.lineWidth = w * 1.15;
+    ctx.strokeStyle = "rgba(255,255,255," + Math.min(1, 1.0 * glow).toFixed(3) + ")";
+    arc(ctx, node, r, item.a0 || 0, item.a1 || 6.28);
+    if (age > 250 && age < 2400) {
+      const p = (age - 250) / 2150;
+      ctx.lineWidth = 2 * U;
+      ctx.strokeStyle = "rgba(255,255,255," + (0.55 * (1 - p)).toFixed(3) + ")";
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, p * 168 * U, 0, 6.2832); ctx.stroke();
+    }
+    return true;
+  }
+  return false;
+}
+
+/* ------------------------------------------------------------------------ sound */
+let ac = null, master = null;
+function unlock() {
+  if (ac) return;
+  try {
+    ac = new (window.AudioContext || window.webkitAudioContext)();
+    master = ac.createGain(); master.gain.value = 0.9; master.connect(ac.destination);
+  } catch (e) { ac = null; }
+  document.getElementById("gate").className = "off";
+}
+window.addEventListener("pointerdown", unlock, { once: true });
+window.addEventListener("keydown", unlock, { once: true });
+
+let voices = 0, lastSound = 0;
+function sound(kind, node) {
+  if (!ac || ac.state === "suspended") return;
+  const now = ac.currentTime;
+  if (kind !== "silence") {
+    if (voices > 12) return;
+    if (performance.now() - lastSound < 160) return;
+  }
+  lastSound = performance.now();
+  const f0 = 196 * Math.pow(2, [0, 3, 5, 7, 10, 12, 15][node.n] / 12);
+  const pan = ac.createStereoPanner ? ac.createStereoPanner() : null;
+  if (pan) pan.pan.value = Math.max(-0.85, Math.min(0.85, (node.x / W) * 2 - 1));
+  const out = pan || master; if (pan) pan.connect(master);
+  const g = ac.createGain(); g.connect(out);
+  voices++;
+  const done = () => { voices--; try { g.disconnect(); if (pan) pan.disconnect(); } catch (e) {} };
+
+  if (kind === "lock") {
+    const o = ac.createOscillator(), o2 = ac.createOscillator();
+    o.type = o2.type = "sine"; o.frequency.value = f0; o2.frequency.value = f0 * 3;
+    const g2 = ac.createGain(); g2.gain.value = 0.18; o2.connect(g2); g2.connect(g);
+    o.connect(g);
+    g.gain.setValueAtTime(0.0001, now);
+    g.gain.exponentialRampToValueAtTime(0.12, now + 0.006);
+    g.gain.exponentialRampToValueAtTime(0.0001, now + 0.9);
+    o.start(now); o2.start(now); o.stop(now + 0.92); o2.stop(now + 0.92);
+    o.onended = done;
+  } else if (kind === "rupture") {
+    const lp = ac.createBiquadFilter(); lp.type = "lowpass"; lp.Q.value = 1.2;
+    lp.frequency.setValueAtTime(1800, now);
+    lp.frequency.exponentialRampToValueAtTime(220, now + 0.5);
+    lp.connect(g);
+    const a = ac.createOscillator(), b = ac.createOscillator();
+    a.type = b.type = "sawtooth"; a.frequency.value = f0 / 2; b.frequency.value = f0 / 2 * 1.004;
+    a.connect(lp); b.connect(lp);
+    g.gain.setValueAtTime(0.0001, now);
+    g.gain.exponentialRampToValueAtTime(0.16, now + 0.002);
+    g.gain.exponentialRampToValueAtTime(0.0001, now + 0.6);
+    a.start(now); b.start(now); a.stop(now + 0.62); b.stop(now + 0.62);
+    a.onended = done;
+  } else {
+    const sub = ac.createOscillator(); sub.type = "sine"; sub.frequency.value = 55;
+    const gl = ac.createOscillator(); gl.type = "sine";
+    gl.frequency.setValueAtTime(180, now);
+    gl.frequency.exponentialRampToValueAtTime(720, now + 1.2);
+    const gg = ac.createGain(); gg.gain.value = 0.22; gl.connect(gg); gg.connect(g);
+    sub.connect(g);
+    g.gain.setValueAtTime(0.0001, now);
+    g.gain.exponentialRampToValueAtTime(0.5, now + 0.35);
+    g.gain.setValueAtTime(0.5, now + 1.4);
+    g.gain.exponentialRampToValueAtTime(0.0001, now + 2.6);
+    sub.start(now); gl.start(now); sub.stop(now + 2.62); gl.stop(now + 2.62);
+    sub.onended = done;
+  }
+}
+
+/* -------------------------------------------------------------------- held node */
+let held = null, heldItem = null, heldSince = 0;
+const panel = document.getElementById("panel");
+
+function nearest(x, y) {
+  let best = null, bd = 1e9;
+  for (const node of offices) {
+    const d = Math.hypot(node.x - x, node.y - y);
+    if (d < bd) { bd = d; best = node; }
+  }
+  return bd < RING_R[RING_R.length - 1] * U * 1.4 ? best : null;
+}
+
+function pick(node, x, y) {
+  let a = Math.atan2(y - node.y, x - node.x); if (a < 0) a += Math.PI * 2;
+  const d = Math.hypot(x - node.x, y - node.y) / U;
+  let ring = 0; for (let i = 0; i < RING_R.length; i++) if (d > RING_R[i] - RING_W[i]) ring = i;
+  let hit = null;
+  for (const item of node.arcs) {
+    if (item.ring !== ring) continue;
+    if (a >= item.a0 && a <= item.a1) { hit = item; break; }
+    if (!hit) hit = item;
+  }
+  return hit || node.arcs[0] || null;
+}
+
+function hold(x, y) {
+  const node = nearest(x, y); if (!node) { release(); return; }
+  held = node; heldSince = performance.now();
+  heldItem = pick(node, x, y);
+  if (!heldItem) { release(); return; }
+  panel.innerHTML = "";
+  const who = document.createElement("div"); who.className = "who"; who.textContent = node.id;
+  const per = document.createElement("div"); per.className = "per"; per.textContent = heldItem.c.p;
+  const say = document.createElement("div"); say.className = "say"; say.textContent = heldItem.c.t;
+  panel.append(who, per, say);
+  const cv = document.createElement("canvas");
+  cv.className = "trace"; cv.width = 320; cv.height = 34; panel.append(cv);
+  drawTrace(cv, node.id);
+  const left = node.x < W / 2 ? node.x + 70 * U : node.x - 70 * U - Math.min(W * 0.8, 420);
+  panel.style.left = Math.max(8, Math.min(W - 40, left)) + "px";
+  panel.style.top = Math.max(8, Math.min(H - 160, node.y - 40)) + "px";
+  panel.className = "on";
+  speak(heldItem, "held");
+}
+
+function drawTrace(cv, id) {
+  const c = cv.getContext("2d"); const now = Date.now(), span = 90 * 60000;
+  c.fillStyle = "rgba(255,255,255,0.03)"; c.fillRect(0, 0, cv.width, cv.height);
+  for (const r of recent) {
+    if (r.office !== id) continue;
+    const p = 1 - (now - r.t) / span; if (p < 0) continue;
+    const x = p * cv.width;
+    c.strokeStyle = r.kind === "lock" ? "rgba(150,220,235,0.9)"
+                  : r.kind === "rupture" ? "rgba(235,150,90,0.9)" : "rgba(255,255,255,0.95)";
+    c.lineWidth = 2; c.beginPath();
+    if (r.kind === "rupture") { c.moveTo(x, 17); c.lineTo(x, 32); }
+    else if (r.kind === "lock") { c.moveTo(x, 17); c.lineTo(x, 2); }
+    else { c.moveTo(x, 1); c.lineTo(x, 33); }
+    c.stroke();
+  }
+}
+
+function drawHeld(t) {
+  if (!held) return;
+  ctx.strokeStyle = "rgba(190,220,235,0.35)"; ctx.lineWidth = 1 * U;
+  ctx.beginPath(); ctx.arc(held.x, held.y, RING_R[RING_R.length - 1] * U + 6 * U, 0, 6.2832); ctx.stroke();
+  if (t - heldSince > 9000) release();
+}
+
+function release() { held = null; heldItem = null; panel.className = ""; }
+
+field.addEventListener("pointerdown", e => { unlock(); hold(e.clientX, e.clientY); });
+field.addEventListener("pointermove", e => { if (held) hold(e.clientX, e.clientY); });
+field.addEventListener("pointerup", release);
+field.addEventListener("pointercancel", release);
+
+/* ------------------------------------------------------------- the spoken record */
+const reader = document.getElementById("reader");
+function speak(item, kind) {
+  let open = 0, numeric = 0, silent = 0;
+  for (const node of offices) for (const it of node.live) {
+    open += it.c.z; if (it.c.n != null) numeric += it.c.z; if (!it.c.w) silent += it.c.z;
+  }
+  let text = open.toLocaleString() + " forecast periods are standing open across "
+    + offices.length + " offices; " + numeric.toLocaleString() + " of them state a number, "
+    + silent.toLocaleString() + " name no precipitation at all.";
+  if (item) {
+    const verb = kind === "lock" ? "kept" : kind === "rupture" ? "broken"
+               : kind === "silence" ? "a silence broken by rain" : "held";
+    text = item.office + ", " + item.c.p + ", " + verb + ": " + item.c.t + " " + text;
+  }
+  reader.textContent = text;
+}
+
+/* --------------------------------------------------------------------- the clock */
+resize();
+pull(true);
+setInterval(() => pull(false), REFRESH_MS);
+setInterval(settle, 1000);
+setInterval(() => { if (Date.now() - lastFetchOk > STALE_MS) stillDirty = false; }, 30000);
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

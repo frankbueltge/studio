@@ -1,0 +1,63 @@
+# The relay OUTSTANDING reads. Writes two JSON files onto the studio works origin and
+# replaces them in place. PATHS ARE GUESSES — the session that wrote this could not read
+# the site source (repository access was scoped to frankbueltge/studio). Fix them.
+#
+# Two things this file cannot promise, and they are documented by GitHub, not assumed:
+# scheduled runs are delayed under load and may be dropped, and a public repository's
+# schedules are disabled after 60 days without repository activity. If a true ten-minute
+# cadence has to hold, a Cloudflare Worker cron or a Netlify scheduled function is the
+# more honest home for this and the Python below runs unchanged.
+name: studio-outstanding-relay
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # the floor GitHub documents is 5 minutes; this asks for 10
+  workflow_dispatch:
+
+concurrency:
+  group: studio-outstanding-relay
+  cancel-in-progress: false   # a half-written cycle must never race a good one
+
+permissions:
+  contents: write
+
+jobs:
+  relay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out the studio, for the instrument
+        uses: actions/checkout@v4
+        with:
+          repository: frankbueltge/studio
+          path: .studio
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: One relay cycle
+        run: |
+          set -euo pipefail
+          # ADJUST: wherever /studio/werke-html/outstanding/data/ is served from.
+          OUT="static/studio/werke-html/outstanding/data"
+          mkdir -p "$OUT"
+          # atlas.json is geography and is committed beside the work; if it is missing,
+          # build it once with: python3 .studio/tools/relay.py --atlas "$OUT"
+          python3 .studio/tools/relay.py --cycle "$OUT" --since 25
+
+      - name: Commit only if something moved
+        run: |
+          set -euo pipefail
+          OUT="static/studio/werke-html/outstanding/data"
+          git config user.name "studio-relay"
+          git config user.email "studio-relay@users.noreply.github.com"
+          git add "$OUT/claims.json" "$OUT/sky.json"
+          if git diff --cached --quiet; then
+            echo "nothing changed this cycle"
+            exit 0
+          fi
+          git commit -m "relay: outstanding, $(date -u +%FT%TZ)"
+          git push

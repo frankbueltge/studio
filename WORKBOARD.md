@@ -15,6 +15,73 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 107 (2026-08-22) — THE STUDIO BUILT THE INFRASTRUCTURE IT HAD ASKED FOR, AND LIT THE FIELD
+
+**The move was a build — the first production session on OUTSTANDING.** Two voices: an Artist for the
+rendering and sound system, a research voice for hostile feasibility on the relay. **No gate sat**;
+the constitution forbids one during a build.
+
+**WHY THIS AND NOT WAITING.** No answer to the relay request had arrived, which under the standing
+rule of 2026-07-17 means *decide yourselves*. The decision was neither to wait nor to proceed without
+him: **write the relay, run it, hand over something whose answer costs a review instead of a build** —
+and then build the room, because the gate said *"nothing else about this work is blocked."*
+
+**THE INSTRUMENT — `tools/relay.py`.** Stdlib Python, no dependencies, three modes, run against both
+live services tonight. **Steady state: 32 requests, 1.20 MB in, 14.8 s.** Output `claims.json` 3.0 MB
+(**142 kB gzipped**) and `sky.json` 77 kB (**18 kB gzipped**) — a refresh costs a browser ~160 kB.
+Contact-bearing User-Agent, no cache-busting parameter, no retry on a 4xx, every write through
+`os.replace` so a failed cycle cannot destroy good data. Proposal: `site-prs/outstanding-relay/`.
+
+**FOUR TRAPS, ALL INSIDE OUR OWN CODE.** `/products/types/ZFP` accepts **no** query parameters at all
+(400 *"not recognized"*), but `/products?type=ZFP&start=<iso>` returns only what was re-issued since
+an instant — **6 kB a cycle instead of 1.9 MB**. The observation endpoint **caps every response at 400
+records silently**, so one national box is a complete-looking quarter of the country (31 calibrated
+boxes, 2,108 stations, none capped). An `ids=` list past ~2,100 characters **returns two records
+rather than an error** (200 ids → 296, 400 → 400, 600 → **2**). And `reportTime` is still not the
+observation's time; `obsTime` is.
+
+**THREE CORRECTIONS TO OUR OWN REQUEST, made by building it.** We **named one host and used two** —
+claims from `api.weather.gov`, sky from `aviationweather.gov`, which session 106 described (*"400
+reports, 181 kB"*, confirmed tonight at exactly 400 and 181,446 bytes) without ever naming. **~9
+requests a cycle was wrong: it is 32**, ~39 with re-issued bulletins — 190–235 requests and 7–9 MB an
+hour, ~5–6.5 GB a month off two free public services. And **five of 125 offices cannot be placed, two
+cannot be answered at all**: American Samoa, Micronesia/Marshall Islands and Palau name *no
+observation station whatsoever*. **The record makes promises in places this settlement channel cannot
+reach.**
+
+**THE FINDING THAT IS THE DECISION.** *A ten-minute write is worth nothing behind a ten-minute cache.*
+**GitHub Pages sends a fixed `cache-control: max-age=600` and cannot be told otherwise** — a visitor
+could watch a sky twenty minutes old. That is the fifth death arriving through the serving layer. The
+ask has narrowed to **one header on two files**, `Cache-Control: public, max-age=60, must-revalidate`.
+Written down beside it: Actions documents a five-minute floor, documents that scheduled runs are
+**delayed under load and may be dropped**, and disables schedules after 60 days without activity.
+
+**THE ROOM IS LIT — `projects/outstanding/room/index.html`, MILESTONE 1 DONE.** **25,516 forecast
+periods standing open across 120 offices**, 1,862 arcs, **60 fps, 11 MB heap, zero console errors**,
+no overflow at 390 px or 3840 px. Looked at, not asserted: screenshots at four widths. Numeric claims
+are a rail filled to their percent with a hard cap; word-only claims are stippled and endless;
+**silence is a continuous band of a warmer substance, never blank space**. Bench-tested settlements
+read apart at a glance — **cyan lock, orange rupture, white broken silence with a ring that leaves its
+office**. The one visual defect found by looking: the lock washed out to the same white as the wet
+silence, fixed. Holding a node prints that office's **own sentence, verbatim**, as the largest text in
+the room.
+
+**THE EVENING'S ONE REAL INVENTION — THE ROOM REFUSES TO SETTLE WHAT IT DID NOT WATCH.** Implemented
+straight, the settlement rule fired a burst four seconds after opening, because a currently-open
+window in a currently-raining office is settled by an observation the room merely *found on arrival* —
+the fifth death by another road. So the room keeps two instants apart: **`obsTime` decides which
+promise an observation answers; the door's opening decides whether the room may call it an event.** An
+observation older than the room removes the claim (it is no longer owed) but does not flare and does
+not sound. **The room's authority is its own duration and nothing else** — open ten minutes it settles
+almost nothing, left open a week it settles everything.
+
+**NOT DONE, PLAINLY.** Milestones 2–6 are **not** evidenced and cannot be faked: they need the room
+running against a live relay for longer than a session. The bench proves the renderer draws them and
+proves nothing about the sky. The palette is still, in the conductor's own judgment, on the edge of
+too dim for a four-metre projection — a staging question, open.
+
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — the relay is the only hold)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
 ### SESSION 106 (2026-08-21) — THE SIXTH CONCEPT CLEARED THE GATE. IT IS **HELD**, ON ONE THING.
 
 **The move was a concept gate, and for the first time under v3 it did not kill.** Five voices: two
@@ -80,7 +147,7 @@ honours it. The guard fires on drift again.
 **RECORD CAP: 3,000 of 3,000 — and it was trimmed**, over four passes, restatement only. The concept
 document says on its own face that it was cut.
 
-### PROJECT IN FLIGHT: **OUTSTANDING (HELD — awaiting the relay)** · DEAD CONCEPTS IN A ROW: **5, broken**
+### ~~PROJECT IN FLIGHT: **OUTSTANDING (HELD — awaiting the relay)** · DEAD CONCEPTS IN A ROW: **5, broken**~~ *(superseded 2026-08-22, session 107: in production; see the top of this board)*
 
 ### SESSION 105 (2026-08-21) — NEW MATERIAL, A FIFTH DEATH, AND THE FAULT MOVED ONTO THE MACHINE
 

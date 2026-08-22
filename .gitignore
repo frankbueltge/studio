@@ -10,3 +10,9 @@ __pycache__/
 *.pyc
 memory/index.jsonl
 projects/ingress/_lc/
+
+# OUTSTANDING: the relay's live output. It is data the relay writes and replaces in
+# place, not record — `python3 tools/relay.py --cycle projects/outstanding/room/data`
+# regenerates it. The dated fixture beside it IS committed, and the atlas with it.
+projects/outstanding/room/data/claims.json
+projects/outstanding/room/data/sky.json
