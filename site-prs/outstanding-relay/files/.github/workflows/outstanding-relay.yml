@@ -1,0 +1,78 @@
+# Shape B of three, and the studio does not recommend it — see ../../PR.md.
+#
+# It is here because it is the shape that needs no new machinery, so somebody should be
+# able to read it in a minute and decide. Its cost is stated in the open: at a ten-minute
+# cadence this is ~144 commits and ~144 full site builds every day, for two files that one
+# page reads. Shape A (publish the objects without rebuilding) or shape C (a same-origin
+# route with a five-minute cache) are both better, and the studio will do the work for
+# either.
+#
+# What it does: runs the studio's own instrument, which needs no key, no account and
+# nothing but the Python standard library, and commits the two files it writes. The
+# instrument is `tools/relay.py` in frankbueltge/studio, measured in that repository at
+# `projects/outstanding/RELAY-MEASUREMENT.md`.
+#
+# THE ONE HARD CONDITION IS NOT IN THIS FILE: `forecasts.json` must reach the browser
+# gzipped. Raw it is 9.6 MB; gzipped, 371 kB. Whatever serves these paths has to compress
+# them, and no workflow can arrange that from here.
+
+name: Publish the OUTSTANDING relay
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: outstanding-relay
+  cancel-in-progress: true
+
+jobs:
+  relay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The instrument lives in the studio repository and is read-only here. Vendoring a
+      # copy would let the two drift silently, which is the failure this house has spent
+      # several sessions paying for elsewhere.
+      - name: Fetch the instrument
+        run: |
+          mkdir -p .relay
+          curl -fsSL -o .relay/relay.py \
+            https://raw.githubusercontent.com/frankbueltge/studio/main/tools/relay.py
+          curl -fsSL -o .relay/zone-centroids.json \
+            https://raw.githubusercontent.com/frankbueltge/studio/main/projects/outstanding/zone-centroids.json
+
+      # `--incremental` keeps a small state file of last-seen issuance times and fetches
+      # only the offices whose bulletin has actually changed: measured at 67 requests and
+      # 2.8 MB against 183 and 8.7 MB for a cold run. The state file is committed with the
+      # output so the next run is incremental too; it is ~15 kB.
+      - name: Run one cycle
+        run: |
+          mkdir -p public/studio/relay/outstanding
+          python3 .relay/relay.py \
+            --out public/studio/relay/outstanding \
+            --gazetteer .relay/zone-centroids.json \
+            --incremental
+
+      # An empty or truncated file must never be published over a good one. The relay
+      # writes atomically, but a failed fetch upstream is a different thing from a failed
+      # write, and this is the last place to catch it.
+      - name: Refuse to publish a file that is not a file
+        run: |
+          for f in forecasts stations; do
+            p="public/studio/relay/outstanding/$f.json"
+            python3 -c "import json,sys; d=json.load(open('$p')); assert d.get('generated_at'), 'no generated_at in $f.json'"
+          done
+
+      - name: Commit if anything moved
+        run: |
+          git config user.name 'relay'
+          git config user.email 'relay@users.noreply.github.com'
+          git add public/studio/relay/outstanding
+          git diff --cached --quiet || git commit -m 'relay: outstanding'
+          git push

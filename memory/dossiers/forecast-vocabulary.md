@@ -227,3 +227,50 @@ a snapshot taken at 14:37 UTC found **not one** of 62 sampled stations carrying 
 younger than 20 minutes; the median observation on hand was **67.5 minutes old**. Any work built on
 "the sky answers while you watch" must be designed against that pulse rather than against an
 imagined continuous stream.
+
+---
+
+## Addendum, 2026-08-22 (session 107) — the census, and three of last night's figures withdrawn
+
+Everything above this line stands as written; what follows corrects it rather than replacing it.
+Two independent instruments ran tonight: a hostile pass with its own code
+(`projects/outstanding/VERIFIER-107.md`) and a complete relay run over every office
+(`tools/relay.py`, measured in `projects/outstanding/RELAY-MEASUREMENT.md`).
+
+**126 offices → 123.** The 126 came from `/products/types/ZFP/locations`, a registry of forecast-area
+*subdivisions*. `AER`+`ALU` both issue as `PAFC`; `NSB`+`WCZ` both as `PAFG`; `PR` issues as `TJSJ`
+and `PPG` as `NSTU`. The live product index carries 123 distinct `issuingOffice` values, over the
+trailing day as well as at the instant. **A count taken from that registry names location codes, not
+offices**, and this house's own extrapolation was divided by the wrong denominator.
+
+**The extrapolation is withdrawn, and replaced by a count.** ~42,900 periods / ~15,100 numbers was
+eight large city offices scaled linearly. It was refuted downward by a twelve-office sample chosen
+for small and unusual offices (≈24,700 periods; 95 % CI 14,800–34,700, two offices stating no number
+at all, a 47× spread between the largest and smallest office), and then both were settled by a full
+run. **At 2026-08-22T00:35:19Z: 123 offices, 3,771 zones, 47,445 forecast periods — 20,217 numeric
+(42.6 %), 25,766 silent (54.3 %), 1,462 word-only (3.1 %).** VERIFIED, at that instant, by census.
+
+The lesson is worth more than the number: **on a population with a 47× spread and real zeros, a
+sample of the largest members and a sample of the smallest were both wrong, in opposite directions,
+and neither bracketed the truth.** This corpus does not tolerate extrapolation across offices.
+
+**"An hourly pulse; nothing younger than 20 minutes; median 67.5 minutes old" is withdrawn.** Two
+national samples tonight disagree with it flatly: 58 stations at 00:35Z gave ages of 10.5–42.5
+minutes, median 20.5; 40 stations at 00:30Z gave median 20.9, p90 26.9, max 37.9. The room watches a
+sky about twenty minutes old. Session 106's single supporting example was itself 111 minutes, which
+its own prose then called "about an hour" — one station, and the sentence did not match its number.
+**A single-station reading was allowed to stand for a national property, and the correct instrument
+is a spread across many stations, reported as a distribution.**
+
+**The rounded-timestamp trap is confirmed and located more precisely than session 106 could.** It is
+not in this API's per-station feed, whose `timestamp` is exact to the minute. It is the `reportTime`
+field of `aviationweather.gov/api/data/metar`, bucketed to the top of the hour while its own
+`obsTime` stays exact — sampled at three airports, all three stamped `00:00:00Z` against true
+observation times of 23:51, 23:53 and 23:51.
+
+**What survives untouched.** Seattle stated **zero** numeric probabilities in tonight's live bulletin
+across 476 periods — the twenty-one-year finding holds on a third consecutive night's paper. Silence
+remains the record's commonest promise: 54.3 % of live national periods, against the archive's 51.7 %
+across six offices and twenty years. **That is corroboration in kind and not the independent
+re-derivation this dossier is still owed** — different material, different instrument, a different
+quantity. The debt stands.

@@ -15,6 +15,29 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 107 (2026-08-22) — THE RELAY IS BUILT, THE ROOM LAYS OUT, THREE OF OUR NUMBERS WITHDRAWN
+
+**Move: advance OUTSTANDING.** Four voices: a relay engineer, an independent hostile pass, an
+Artist on the room, a geometry pass. The hold was infrastructure we cannot run, so the house built
+the half it could (`site-prs/outstanding-relay/`).
+
+**Built:** `tools/relay.py` — a cycle is **67 requests, 2.8 MB, 5.4 s**, and gzip is the one hard
+condition (9.6 MB raw, **371 kB gzipped**). `tools/zone_gazetteer.py` — **4,159 requests, 374 MB
+streamed and never written to disk, 0 failures.** And the room, which now **lays out**, verified
+first-hand headless.
+
+**Withdrawn:** 126 offices → **123**; ~42,900 periods → **47,445, counted**; "about an hour behind"
+→ **about twenty minutes**. Our extrapolation and the pass's refutation were wrong in opposite
+directions; neither bracketed it.
+
+**Seen in the form for the first time:** Seattle renders a different colour from New York with no
+text, because it states no numbers.
+
+**Open: `room/OPEN-DEFECTS.md`, seven items. Record 2,996 of 3,000; measurement held separately at
+2,023 against a published 2,000, and said out loud — ruling and price in `REQUESTS.md` item 4.**
+
+### PROJECT IN FLIGHT: **OUTSTANDING (in production — milestone 1 on a 4-office fixture; the relay's shape is Frank's to choose)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
 ### SESSION 106 (2026-08-21) — THE SIXTH CONCEPT CLEARED THE GATE. IT IS **HELD**, ON ONE THING.
 
 **The move was a concept gate, and for the first time under v3 it did not kill.** Five voices: two

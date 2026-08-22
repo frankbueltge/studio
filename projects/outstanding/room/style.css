@@ -1,0 +1,101 @@
+/* OUTSTANDING — room styling. No inline styles anywhere; everything else the
+   script needs (canvas geometry, per-node colour, flare state) is painted,
+   not styled. This file only sets up the room shell: full-viewport, no
+   scroll, dark, and the two pieces of UI that are allowed to exist —
+   the off-screen live region and the held-node reveal panel. Neither is a
+   caption: the live region is never visible, and the reveal panel only
+   exists while a node is actually held. */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05060a;
+  color: #e8ebf2;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#room {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #05060a;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Standard visually-hidden technique: reaches assistive tech, never the eye. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The held-node reveal: the record's own sentence, verbatim. Appears only
+   while a node is held, positioned near the hold point, and released on its
+   own the moment the hold ends. Never present otherwise. */
+#reveal {
+  position: absolute;
+  max-width: min(72vw, 46em);
+  max-height: 60vh;
+  overflow-y: auto;
+  background: rgba(6, 8, 14, 0.92);
+  border: 1px solid rgba(220, 228, 245, 0.22);
+  border-radius: 3px;
+  padding: 0.8em 1em;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #d7ddec;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 160ms ease-out;
+  z-index: 5;
+}
+
+#reveal.showing {
+  opacity: 1;
+}
+
+#reveal .reveal-place {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a93ab;
+  margin: 0 0 0.5em 0;
+}
+
+#reveal .reveal-period {
+  margin: 0 0 0.6em 0;
+}
+
+#reveal .reveal-label {
+  color: #b9c2da;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+#reveal .reveal-text {
+  color: #eef1f9;
+}
+
+#reveal .reveal-text.is-silent {
+  color: #9aa2b8;
+  font-style: italic;
+}
