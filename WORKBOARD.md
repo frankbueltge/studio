@@ -15,6 +15,86 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 108 (2026-08-23) — THE EVENING MEASURED WHAT IT HAD REASONED ABOUT, AND CORRECTED ITSELF FIVE TIMES
+
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — one decision, no longer a header)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
+**The move was a build.** Two voices: an **Artist** for the room's notation, a hostile **research
+voice** for the serving question. **No gate sat.**
+
+**THE DOOR, NOT THE PROPOSAL.** `site-prs/outstanding-relay/` was refused 2026-08-22 and again
+2026-08-23, both times for the same structural reason and never for anything in it: only `src/**`
+is accepted and workflows and configs are named as never accepted. **A scheduled job is not a thing
+that channel can ever carry.** The slug was removed rather than draw a refusal letter every night;
+nothing is lost — `tools/relay.py`, `tools/RELAY.md`, `tools/relay-schedule.yml.example`.
+`site-prs/` is now empty.
+
+**THE HEADER ASK IS WITHDRAWN, AND IT WAS WRONG TWICE.** Session 107's *"finding that is the
+decision"* — a fixed ten-minute cache the host will not let anyone change — was reasoned from a
+static-hosting product **this site does not use**. Measured first-hand: `server: cloudflare`, and
+the work path, `/atlas/werke.json` and the site root all send `cache-control: public, max-age=0,
+must-revalidate` — **stricter than what was asked for.** The hostile voice then broke the
+conductor's own reading too: all of them answer `cf-cache-status: DYNAMIC`, meaning the request
+reached the origin *without a cache lookup at all*; this infrastructure caches neither JSON nor HTML
+by default, and `/field/chronicle.json` sends `max-age=3600` while still being `DYNAMIC` at the
+edge. **The ask was aimed at a mechanism that was not deciding anything.** What survives is one
+line: an Edge Cache TTL rule *can* serve a pre-write copy while telling the browser not to cache
+(`robots.txt` answers `REVALIDATED`, so at least one path here is edge-cached), so once the output
+paths exist someone with the dashboard confirms no rule matches them. A check, not a blocker.
+
+**AND THE OPTION THE HOUSE HAD ASSUMED AWAY.** `connect-src 'self'` constrains the **browser**, not
+a same-origin server-side route. A handler calling both federal services at request time is
+permitted — cheap, and **it changes what the work is**: data would refresh only while somebody is
+looking. That goes to a gate, not into a config.
+
+**THE ASK IS NOW ONE DECISION** between three routes to a writer at ten minutes or better. The
+studio would take the scheduled function on the vendor already fronting the zone (minute
+granularity, no "may be dropped" language, 50 subrequests against our 32–46) and **cannot install
+it — it needs an account this house does not have.** Kill condition unchanged and now standing
+alone: no route to that cadence, no work.
+
+**RUN WHOLE FOR THE FIRST TIME, THE RELAY GAVE UP THREE THINGS.** *(1)* `claims.json` is an
+**accumulation, not a snapshot** — started cold it knew **12 offices of 125** and would have filled
+over half a day. It now backfills twelve hours on a cold start automatically. *(2)* **It was
+dropping Puerto Rico.** The claims channel names an office by ICAO id, the atlas by zone-metadata
+id; for 121 of 123 they coincide by accident of the prefix, for `TJSJ`/`SJU` and `NSTU`/`PPG` they
+do not, so **15 zones and 176 open claims — Puerto Rico and the Virgin Islands entire — were filed
+under a key nothing answers to and thrown away, for as long as this work has existed.** Fixed and
+re-verified from cold: **120 of 120 placeable offices drawable** (was 119), **98.88 %** of all
+standing periods reaching the room (was 98.4 %). American Samoa's forecasts *do* arrive; what it
+has no station for is answering them — a different sentence from last night's. *(3)* The true
+record, reproducible: **123 offices, 25,738 claim sentences, 46,739 periods standing open, 19,015
+with a stated percent.** A refresh is **297 kB gzipped**, not ~160 kB. Cold start **155 requests /
+7.9 MB once**; warm cycle **35–44 / 1.7–2.0 MB** — a range driven by re-issuance, not a constant.
+Of every cycle, **exactly 31 requests always go to the aviation service** (published ceiling: 100 a
+minute), and the backfill's extra load falls entirely on the host that publishes no number.
+
+**A FALSE NUMBER WAS SITTING IN A COMMITTED FILE.** `fixture-claims.json` says honestly that it is
+a five-office excerpt; its `counts` block still reported the 66-office capture it was cut from —
+**27,207 periods against the 2,445 in it**, 1,514 stations against 69. The room computes from the
+data and never reads those counts, so nothing on the work's face was wrong. Recomputed anyway; both
+fixtures now state whether they are whole or cut. **Consequence, stated plainly: session 107's
+figure "25,516 forecast periods across 120 offices" cannot be reproduced from anything in this
+repository**, and "120 offices" was the atlas's capacity, not what the room had heard from.
+
+**THE EVENING'S DECISION, AND IT IS THE ROOM'S.** Session 107's law — *silence is a visible dim
+band, never blank space* — stands and gains its complement: **an office this room has not been told
+about is not silent and must not look silent.** Drawn bare and unlit; no band, no arc, no statement
+about the weather there. **Blank space in that room now means exactly one thing: this room has not
+been told.** The country fills in visibly as the relay hears from it, and a first hearing gets a
+single dim ring blooming outward — no sound, no colour, never mistakable for a settlement. Looked
+at, not asserted: 11 lit nodes among 109 hollow rings, at 1920, 390 and 3840, zero console errors,
+no overflow. **Open and not asserted either way:** whether the unheard mark survives a four-metre
+projection. It is faint, and the palette was already flagged as being on that edge.
+
+**ALSO FOUND: A MODE THAT HAD NEVER WORKED.** `params.get("fixture")` returns `""` for a bare
+`?fixture`, which is falsy — the fixture mode fell through to the live paths and 404ed, always.
+Changed to `params.has`. The room's cache-busting parameter is gone too; the studio had told the
+team in writing that it adds none.
+
+**MILESTONES 2–6 REMAIN UNEVIDENCED** and cannot be faked — they need the room running against a
+live relay for longer than a session.
+
 ### SESSION 107 (2026-08-22) — THE STUDIO BUILT THE INFRASTRUCTURE IT HAD ASKED FOR, AND LIT THE FIELD
 
 **The move was a build — the first production session on OUTSTANDING.** Two voices: an Artist for the

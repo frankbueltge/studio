@@ -62,6 +62,7 @@
 /* ------------------------------------------------------------------ constants */
 const RELAY = { claims: "data/claims.json", sky: "data/sky.json", atlas: "data/atlas.json" };
 const FIXTURE = { claims: "data/fixture-claims.json", sky: "data/fixture-sky.json", atlas: "data/atlas.json" };
+const COLD = { claims: "data/fixture-cold-claims.json", sky: "data/fixture-cold-sky.json", atlas: "data/atlas.json" };
 const REFRESH_MS = 150000;          // the page asks every 2.5 min; the relay writes every 10
 const STALE_MS = 25 * 60 * 1000;    // after this with no successful fetch the room stops changing
 const RINGS = [12, 36, 72, 120, 168];        // ring upper bounds, hours of lead time
@@ -75,7 +76,7 @@ const LON_SQUEEZE = Math.cos(38.5 * Math.PI / 180);
 const CARTOUCHE = { AK: [0.055, 0.80], HI: [0.135, 0.895], PR: [0.905, 0.885], PAC: [0.945, 0.79] };
 
 const params = new URLSearchParams(location.search);
-const SRC = params.get("fixture") ? FIXTURE : RELAY;
+const SRC = params.has("cold") ? COLD : params.has("fixture") ? FIXTURE : RELAY;
 
 /* --------------------------------------------------------------------- canvas */
 const field = document.getElementById("field");
@@ -112,7 +113,7 @@ let officeWet = new Map();        // office id -> last epoch (ms) seen wet
 let settledKeys = new Set();
 
 async function grab(url) {
-  const r = await fetch(url + (url.indexOf("?") < 0 ? "?t=" : "&t=") + Date.now(), { cache: "no-store" });
+  const r = await fetch(url, { cache: "no-store" });
   if (!r.ok) throw new Error(url + " " + r.status);
   return r.json();
 }
@@ -194,7 +195,7 @@ function layout() {
     if (o.lat == null || o.lon == null) continue;   // 5 offices this channel cannot place
     const reg = region(o.lat, o.lon);
     const node = { id: id, lat: o.lat, lon: o.lon, arcs: [], live: [], x: 0, y: 0,
-                   n: (id.charCodeAt(0) + id.charCodeAt(2)) % 7 };
+                   unheard: true, n: (id.charCodeAt(0) + id.charCodeAt(2)) % 7 };
     if (reg) groups[reg].push(node);
     else { const p = project(o.lat, o.lon); node.x = p[0]; node.y = p[1]; }
     offices.push(node); byId.set(id, node);
@@ -249,10 +250,16 @@ function rebuild(first) {
   if (!claims || !atlas) return;
   const now = Date.now();
   const sweeps = [];
+  const heard = [];
+  const told = new Set(Object.keys(claims.offices || {}));
+  for (const node of offices) node.unheard = !told.has(node.id);
   for (const [id, rec] of Object.entries(claims.offices || {})) {
     const node = byId.get(id); if (!node) continue;
     const before = lastIssued.get(id);
-    if (before && before !== rec.issued && !first) sweeps.push(node);
+    if (!first) {
+      if (before === undefined) heard.push(node);       // the room did not know this office until now
+      else if (before !== rec.issued) sweeps.push(node); // an office it already knew, re-issuing
+    }
     lastIssued.set(id, rec.issued);
 
     const buckets = [[], [], [], [], []];
@@ -281,6 +288,7 @@ function rebuild(first) {
     node.arcs = arcs;
   }
   for (const node of sweeps) events.push({ kind: "sweep", node: node, t0: performance.now() });
+  for (const node of heard) events.push({ kind: "heard", node: node, t0: performance.now() });
   stillDirty = true;
   speak();
 }
@@ -328,6 +336,15 @@ function drawStill() {
   sctx.fillStyle = "#05070a";
   sctx.fillRect(0, 0, W, H);
   for (const node of offices) {
+    if (node.unheard) {
+      // Not silent — unheard. This room has never been told what this office is
+      // promising, so it draws nothing that could be mistaken for a statement:
+      // no band, no arcs, just the bare mark that a place is on the record.
+      sctx.strokeStyle = "rgba(140,160,175,0.22)";
+      sctx.lineWidth = 1 * U;
+      sctx.beginPath(); sctx.arc(node.x, node.y, 2.5 * U, 0, 6.2832); sctx.stroke();
+      continue;
+    }
     sctx.fillStyle = "rgba(180,210,230,0.38)";
     sctx.beginPath(); sctx.arc(node.x, node.y, 2.5 * U, 0, 6.2832); sctx.fill();
     for (const item of node.arcs) {
@@ -405,6 +422,17 @@ function drawEvent(ev, age) {
     ctx.strokeStyle = "rgba(150,190,215,0.50)"; ctx.lineWidth = 2 * U;
     ctx.beginPath(); ctx.moveTo(node.x, node.y);
     ctx.lineTo(node.x + Math.cos(a) * r, node.y + Math.sin(a) * r); ctx.stroke();
+    return true;
+  }
+  if (ev.kind === "heard") {
+    // The room learning an office exists, not the sky answering a promise — no truth
+    // value, so it gets none of the settlements' color or sound. One soft ring,
+    // once, blooming outward from the bare mark and gone.
+    if (age > 2200) return false;
+    const p = age / 2200;
+    ctx.strokeStyle = "rgba(160,180,195," + (0.24 * (1 - p)).toFixed(3) + ")";
+    ctx.lineWidth = 1 * U;
+    ctx.beginPath(); ctx.arc(node.x, node.y, 2.5 * U + p * 34 * U, 0, 6.2832); ctx.stroke();
     return true;
   }
   const item = ev.item;

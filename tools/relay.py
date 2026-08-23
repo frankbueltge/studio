@@ -24,6 +24,22 @@ Three modes:
     python3 tools/relay.py --cycle   OUT_DIR   # one relay cycle: claims.json + sky.json
     python3 tools/relay.py --measure           # print the true per-cycle cost, fetch nothing else
 
+THE COLD START, which nobody wrote down until 2026-08-23 and which changes what the
+room is looking at. `claims.json` is NOT a snapshot of the country; it is an
+accumulation. Each cycle merges the bulletins re-issued since an instant into what the
+file already held, and drops periods whose window has closed. A relay switched on with
+no `claims.json` beside it therefore knows only the handful of offices that happened to
+re-draft in the last few minutes — twelve of 125 on the first cycle of 2026-08-23 — and
+fills toward the whole record over roughly half a day, as every office re-issues on its
+own clock. Left to itself that is a room drawing a country it has not been told about.
+
+So a cold start asks for twelve hours instead of twenty-five minutes: 155 requests and
+7.9 MB, once, measured 2026-08-23, and the file lands whole — 123 offices, 25,738 claim
+sentences, 46,739 forecast periods standing open, 5.5 MB raw and 275 kB gzipped. That is
+automatic: the absence of `claims.json` is the signal, `--prime N` overrides the width,
+and the printed report says which of the two happened. What a relay costs its services
+on the first minute is not what it costs them on the second.
+
 WHAT THIS FILE WILL NOT DO. It will not condense a claim. Periods are deduplicated
 inside a bulletin by exact string identity of (period name, sentence) and carry the
 count of zones that share them; nothing is averaged, ranked or summarised, and the
@@ -58,6 +74,24 @@ UA = "(frankbueltge.de/studio, ensemble@studio.invalid)"
 PRODUCTS = "https://api.weather.gov/products"
 ZONES = "https://api.weather.gov/zones?type=public"
 METAR = "https://aviationweather.gov/api/data/metar"
+
+# An office arrives on the claims channel as an ICAO station id and is looked up in the
+# atlas under the id its own zone metadata uses. For the continental offices the two
+# coincide by accident of the K prefix — KOAX, last three OAX, and the zones say OAX —
+# and for Alaska and Hawaii the P prefix does the same. For two offices it is not an
+# accident and the two names simply differ, so their promises were being filed under a
+# key no atlas entry answers to and dropped without a trace. Found 2026-08-23 by running
+# the relay whole for the first time and asking which offices the room could not draw.
+#
+#   TJSJ -> SJU   San Juan. 15 zones, 176 open claims, Puerto Rico and the Virgin
+#                 Islands entire, absent from the room since the room existed.
+#   NSTU -> PPG   Pago Pago. 1 zone, 8 open claims. American Samoa's forecasts do
+#                 arrive on this channel — session 107 recorded only that no station
+#                 there answers them, which is true and is a different sentence.
+#
+# Keyed by the full id rather than the three-letter tail, so a future office whose tail
+# happens to collide with one of these cannot inherit the alias by accident.
+OFFICE_ALIAS = {"TJSJ": "SJU", "NSTU": "PPG"}
 
 # Bounded boxes that between them cover the issuing area of every office that
 # publishes this product. Every box is small enough that the endpoint's silent
@@ -330,7 +364,8 @@ def cycle_claims(out_dir, since_minutes, atlas):
 
     newest = {}
     for prod in graph:
-        office = (prod.get("issuingOffice") or "")[-3:]
+        office = OFFICE_ALIAS.get(prod.get("issuingOffice") or "",
+                                  (prod.get("issuingOffice") or "")[-3:])
         if not office:
             continue
         cur = newest.get(office)
@@ -456,7 +491,12 @@ def main():
     ap.add_argument("--cycle", metavar="OUT_DIR")
     ap.add_argument("--measure", action="store_true")
     ap.add_argument("--since", type=int, default=25,
-                    help="minutes of re-issuance to ask for (default 25)")
+                    help="minutes of re-issuance to ask for on a warm run (default 25)")
+    ap.add_argument("--prime", type=int, default=720,
+                    help="minutes to ask for on a COLD start — no claims.json beside the "
+                         "output yet (default 720, twelve hours, one full re-issuance "
+                         "round). Pass --prime 25 to refuse the backfill and let the "
+                         "room fill in front of whoever is watching.")
     ap.add_argument("--atlas-file", default=None)
     args = ap.parse_args()
 
@@ -471,12 +511,19 @@ def main():
         os.makedirs(out, exist_ok=True)
         atlas_path = args.atlas_file or os.path.join(out, "atlas.json")
         atlas = json.load(open(atlas_path, encoding="utf-8")) if os.path.exists(atlas_path) else {}
-        claims = cycle_claims(out, args.since, atlas)
+        # A cold start is not a cycle. With no claims.json beside the output there is
+        # nothing to merge into, and twenty-five minutes of re-issuance would hand the
+        # room a dozen offices and call it the country. The absence of the file is the
+        # signal; the report below says which of the two this run was.
+        cold = not os.path.exists(os.path.join(out, "claims.json"))
+        since = args.prime if cold else args.since
+        claims = cycle_claims(out, since, atlas)
         sky = cycle_sky(out)
         elapsed = time.time() - started
         print(json.dumps({
             "claims": claims["counts"], "sky": sky["counts"],
-            "cost": {"requests": _STATS["requests"], "bytes_in": _STATS["bytes"],
+            "cost": {"cold_start": cold, "since_minutes": since,
+                     "requests": _STATS["requests"], "bytes_in": _STATS["bytes"],
                      "seconds": round(elapsed, 1),
                      "claims_bytes_out": os.path.getsize(os.path.join(out, "claims.json")),
                      "sky_bytes_out": os.path.getsize(os.path.join(out, "sky.json"))},
