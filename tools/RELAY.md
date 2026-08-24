@@ -74,6 +74,39 @@ placeable offices drawable → **120 of 120**, and 98.4 % → **98.88 %** of all
 periods reaching the room. The 1.12 % that remains is the five offices this channel cannot
 place (`LKN`, `TFX`) or cannot answer at all (`PPG`, `PQE`, `PQW`).
 
+## The seventh trap, found 2026-08-24 by driving the whole record into the room: Guam in the wrong ocean
+
+An office's place is `build_atlas`'s mean of its stations' positions. **Longitude cannot be
+averaged on the number line.** Guam's office (`GUM`) draws on three Marianas fields near
+**+145** and — because its public zones also name one — a Honolulu station near **−158**. The
+arithmetic mean of those longitudes is **69.4**: an empty stretch of the Indian Ocean south
+of India. Nothing warned; the atlas said `lon 69.434` and the office was placed there.
+
+It went unseen until the room was driven against the whole live national record for the first
+time (session 109), because every prior session used a small fixture that did not include
+Guam. In the room it landed in **Puerto Rico's cartouche** and stacked on top of San Juan —
+two offices 13,000 km apart drawn as one overlapping blob. Two independent defects, both
+now closed:
+
+1. **`build_atlas` now averages longitude as a circular mean** (the mean of the station unit
+   vectors, `atan2(Σsin, Σcos)`). For any office whose stations do not cross ±180 this equals
+   the arithmetic mean exactly, so **no CONUS office moves**; only antimeridian-straddling
+   sets change. Re-running `--atlas` confirmed exactly one office moved by more than 0.3°:
+   `GUM`, `69.4 → 155.8`. (The committed atlas was not wholesale-regenerated — a fresh
+   harvest jitters two dozen offices by <0.3° from which stations happen to report and caps
+   ten tiles at 400 records; instead `GUM`'s single value was corrected to the circular mean
+   of **its own committed stations**, `158.503`, leaving every other office byte-identical.)
+2. **The room's `region()` routed by an unbounded test.** The Caribbean cartouche was chosen
+   by `lon > -70 && lat < 22` — which *every* eastern-hemisphere longitude satisfies, Guam's
+   +158 included — and it was tested *before* the Pacific cartouche. So even with the corrected
+   longitude Guam still fell into Puerto Rico. Fixed: the western-Pacific test (`lon > 100`)
+   runs first, and the Caribbean test is bounded to the western hemisphere it lives in
+   (`lon > -70 && lon < 0 && lat < 22`). Verified: `PR` cartouche → `SJU` alone, `PAC`
+   cartouche → `GUM`.
+
+The lesson is the general one: a mean of angles is not a mean of numbers, and a region test
+written for one hemisphere must say so.
+
 ## What a cycle costs, measured rather than estimated
 
 All figures first-hand, 2026-08-23, against the live services.

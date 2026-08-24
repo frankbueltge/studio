@@ -15,9 +15,66 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
-### SESSION 108 (2026-08-23) — THE EVENING MEASURED WHAT IT HAD REASONED ABOUT, AND CORRECTED ITSELF FIVE TIMES
+### SESSION 109 (2026-08-24) — THE ROOM RAN AGAINST THE WHOLE LIVE COUNTRY AND SETTLED REAL PROMISES WHILE WATCHED
 
-### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — one decision, no longer a header)** · DEAD CONCEPTS IN A ROW: **5, broken**
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–3 evidenced live)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
+**The move was a build.** One voice: an **Artist** for a hostile read of the room's face at true
+scale. **No gate sat.** The hosting hold is Frank's to answer and was not forced on one day's
+silence; the session advanced everything the hold does not gate — which the session-108 letter
+said was everything else.
+
+**THE ROOM MET THE WHOLE RECORD FOR THE FIRST TIME.** Every prior session used a fixture (five
+offices, sixty-six). Tonight the relay was run cold to a complete national record — **123 offices,
+46,953 forecast periods standing open, 1,723 stations, 76 wet** — and the actual room was driven
+against it headless. **120 offices drawn, all heard, 3,403 arcs on screen with 23,066 periods held
+live behind the cap, heap 12–19 MB, zero console errors, no overflow at 390/1920/3840.** The
+country's silhouette reads from office positions alone. **Milestone 1, at true scale, done.** The
+Artist's hostile read held up against the code: the dense eastern corridor **serves** the
+breadth-perceived claim (cores stay legible, only week-out horizons interpenetrate, and the layout
+refuses to fake spacing on purpose) — keep it; numeric brightness does **not** read as a standing
+overview property (the alpha ramp is perceptually dead at distance; the number reads by arc-length,
+by cap-tick, up close, and on window-close) — honest at minute-zero, recorded as a limitation, not
+re-engineered; 390 px collapses but is not the medium.
+
+**IT SETTLED 80 REAL PROMISES LIVE — AND THE SILENCES BROKE MORE THAN THE FORECASTS KEPT.** The
+room was left open and re-pulled against a fresh live cycle every five minutes across ~20 minutes of
+real national weather, keeping two instants apart (an observation's own time decides which promise
+it answers; the door's opening decides whether the room may call it an event). **At open, 459
+promises settled silently** — obs older than the room, no flare, no tone: session 107's core
+discipline confirmed at national scale for the first time. **Over the watch, 80 settled live** —
+**36 locks** (rain promised, rain fell, kept) and **44 broken silences** (a period the record said
+nothing about, and rain fell anyway — the loudest event the piece has, and the commonest live one).
+Two flares captured mid-animation: a cyan lock in the northern plains, a white broken-silence with
+its ring leaving an upper-Midwest office, reading apart at a glance. **Milestones 2 and 3, evidenced
+live.** Honest nulls: **0 ruptures** (needs a held rain-claim to close dry) and **0 re-issuance
+sweeps** (no office posted a new bulletin in the window) — **milestone 4 stays unevidenced and needs
+a longer watch; the mechanism is correct and waiting.**
+
+**A DEFECT THE WHOLE RECORD GAVE UP: GUAM IN THE WRONG OCEAN.** The atlas placed office `GUM` at
+`lon 69.434` — an empty stretch of the Indian Ocean — because `build_atlas` took the **arithmetic
+mean of longitudes that straddle the antimeridian** (three Marianas stations near +145, plus a
+Honolulu station its zones name near −158). In the room Guam fell into **Puerto Rico's cartouche and
+stacked on San Juan**, two offices 13,000 km apart drawn as one blob, invisible until a fixture no
+longer hid Guam. Two independent fixes, both verified: (1) `build_atlas` now averages longitude as a
+**circular mean** — no CONUS office moves, only GUM (`69.4 → 155.8`); the committed atlas was not
+wholesale-regenerated (a fresh harvest jitters two dozen offices <0.3° and caps ten tiles), GUM's
+one value was corrected to `158.503`, everything else byte-identical; (2) the room's `region()`
+routed Guam to PR even after the coordinate fix, because the Caribbean test `lon > -70 && lat < 22`
+catches every eastern longitude and ran before the Pacific test — now the Pacific test runs first
+and the Caribbean test is bounded to its hemisphere. **PR cartouche → San Juan alone, PAC → Guam
+alone.** Written up as the seventh trap in `tools/RELAY.md`; self-test green.
+
+**LEFT STANDING FOR A FUTURE SESSION, DELIBERATELY:** the **Alaska cartouche** packs three offices
+into an illegible figure-eight, and one far-eastern CONUS office renders as a half-radius glyph at
+the frame edge. Both legibility, neither a lie; not touched tonight to keep the move to one
+root-caused change.
+
+**THE HOSTING HOLD IS UNCHANGED** — one decision between three routes to a writer at ten minutes or
+better, the one the studio would take needing an account this house does not have. Filed 2026-08-23;
+Frank's to answer. Not forced tonight.
+
+### SESSION 108 (2026-08-23) — THE EVENING MEASURED WHAT IT HAD REASONED ABOUT, AND CORRECTED ITSELF FIVE TIMES
 
 **The move was a build.** Two voices: an **Artist** for the room's notation, a hostile **research
 voice** for the serving question. **No gate sat.**

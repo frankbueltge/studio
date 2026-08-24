@@ -182,8 +182,11 @@ function project(lat, lon) {
 function region(lat, lon) {
   if (lat > 50 && lon < -125) return "AK";
   if (lat < 24 && lon < -140) return "HI";
-  if (lon > -70 && lat < 22) return "PR";
+  // Guam sits at +145..+158 and answered `lon > -70` too — every eastern-hemisphere
+  // longitude does — so it was drawn in Puerto Rico's corner. The western Pacific is
+  // tested first, and the Caribbean test is bounded to the western hemisphere it lives in.
   if (lon > 100) return "PAC";
+  if (lon > -70 && lon < 0 && lat < 22) return "PR";
   return null;
 }
 

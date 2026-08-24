@@ -62,6 +62,7 @@ TRAPS MET WHILE WRITING IT, each one recorded rather than quietly routed around:
 import argparse
 import datetime
 import json
+import math
 import os
 import re
 import sys
@@ -218,7 +219,17 @@ def build_atlas(out_dir):
         sids = sorted(rec["stations"])
         if sids:
             lat = sum(stations[s][0] for s in sids) / len(sids)
-            lon = sum(stations[s][1] for s in sids) / len(sids)
+            # Longitude must be averaged on the circle, not the number line. An
+            # office whose stations straddle the antimeridian — Guam's three
+            # Marianas fields sit near +145, and its zones also name a Honolulu
+            # station near -158 — averages arithmetically to a meaningless value
+            # (Guam came out at lon 69.4, an ocean south of India, and was drawn
+            # in Puerto Rico's corner). The circular mean puts it back in the
+            # Pacific. For any office whose stations do not cross ±180 the
+            # circular mean equals the arithmetic one, so no CONUS office moves.
+            sx = sum(math.cos(math.radians(stations[s][1])) for s in sids)
+            sy = sum(math.sin(math.radians(stations[s][1])) for s in sids)
+            lon = math.degrees(math.atan2(sy, sx)) if (sx or sy) else None
         else:
             lat = lon = None
         tz = max(rec["tz"], key=rec["tz"].get) if rec["tz"] else "UTC"
