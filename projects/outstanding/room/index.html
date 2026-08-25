@@ -174,9 +174,15 @@ function witnessedWet(officeId, from, to) {
 function project(lat, lon) {
   const x = (lon - CONUS.lon0) * LON_SQUEEZE, xr = (CONUS.lon1 - CONUS.lon0) * LON_SQUEEZE;
   const y = (CONUS.lat1 - lat), yr = (CONUS.lat1 - CONUS.lat0);
-  const boxW = W * 0.88, boxH = H * 0.82;
+  // The box only ever held centres, so an office sitting on the CONUS boundary — Caribou
+  // on the east edge, the border towns on the others — drew its outer ring half off the
+  // frame. Inset the box by that ring's own radius on every side so the ring, not the
+  // centre, is what the 0.88/0.82 padding is measured to.
+  const margin = RING_R[RING_R.length - 1] * U;
+  const boxW = W * 0.88 - 2 * margin, boxH = H * 0.82 - 2 * margin;
   const scale = Math.min(boxW / xr, boxH / yr);
-  return [ (W - xr * scale) / 2 + x * scale, (H - yr * scale) / 2 + y * scale ];
+  return [ margin + (W - 2 * margin - xr * scale) / 2 + x * scale,
+           margin + (H - 2 * margin - yr * scale) / 2 + y * scale ];
 }
 
 function region(lat, lon) {
@@ -193,6 +199,9 @@ function region(lat, lon) {
 function layout() {
   if (!atlas) return;
   offices = []; byId = new Map();
+  // The same clearance the mainland relaxation pass insists on below, used here too so
+  // an inset cluster is already spread to it before relaxation ever gets a turn.
+  const want = 1.25 * RING_R[RING_R.length - 1] * U;
   const groups = { AK: [], HI: [], PR: [], PAC: [] };
   for (const [id, o] of Object.entries(atlas.offices || {})) {
     if (o.lat == null || o.lon == null) continue;   // 5 offices this channel cannot place
@@ -209,16 +218,36 @@ function layout() {
     const lats = g.map(n => n.lat), lons = g.map(n => n.lon);
     const la0 = Math.min(...lats), la1 = Math.max(...lats);
     const lo0 = Math.min(...lons), lo1 = Math.max(...lons);
-    const span = 70 * U;
-    g.forEach(n => {
-      n.x = cx + (la1 === la0 ? 0 : ((n.lon - lo0) / (lo1 - lo0) - 0.5) * span);
-      n.y = cy - (la1 === la0 ? 0 : ((n.lat - la0) / (la1 - la0) - 0.5) * span * 0.6);
-    });
+    const place = span => g.map(n => [
+      cx + (la1 === la0 ? 0 : ((n.lon - lo0) / (lo1 - lo0) - 0.5) * span),
+      cy - (la1 === la0 ? 0 : ((n.lat - la0) / (la1 - la0) - 0.5) * span * 0.6)
+    ]);
+    // A single office needs no spread. A cluster — Alaska's three — is sized by what it
+    // actually holds: how tightly its real shape packs at unit span sets how far that
+    // span must stretch for its closest pair to already clear the relaxation pass's own
+    // threshold, so the cap below never has to fight a cluster this cramped. The inset's
+    // distance to the screen edge sets the most it is allowed to stretch. Neither number
+    // is Alaska's; both fall out of the group and the room it was given.
+    let span = 70 * U;
+    if (g.length > 1) {
+      const outer = RING_R[RING_R.length - 1] * U, margin = 0.25 * outer;
+      const unit = place(1);
+      let closest = Infinity;
+      for (let i = 0; i < unit.length; i++) for (let j = i + 1; j < unit.length; j++)
+        closest = Math.min(closest, Math.hypot(unit[i][0] - unit[j][0], unit[i][1] - unit[j][1]));
+      const legible = want / closest;
+      const room = Math.min(
+        (cx - outer - margin) / 0.5, (W - margin - outer - cx) / 0.5,
+        (cy - outer - margin) / 0.3, (H - margin - outer - cy) / 0.3
+      );
+      span = Math.max(20 * U, Math.min(legible, room));
+    }
+    const pos = place(span);
+    g.forEach((n, i) => { n.x = pos[i][0]; n.y = pos[i][1]; });
   }
   // Relaxation: no two node centres letter over each other, and no node travels far
   // enough from its true place to make the map a lie. Rings are allowed to overlap —
   // the east really is that crowded, and pretending otherwise would be the lie.
-  const want = 1.25 * RING_R[RING_R.length - 1] * U;
   const cap = 16 * U;
   offices.forEach(n => { n.x0 = n.x; n.y0 = n.y; });
   for (let pass = 0; pass < 8; pass++) {
@@ -649,12 +678,18 @@ field.addEventListener("pointercancel", release);
 /* ------------------------------------------------------------- the spoken record */
 const reader = document.getElementById("reader");
 function speak(item, kind) {
-  let open = 0, numeric = 0, silent = 0;
-  for (const node of offices) for (const it of node.live) {
-    open += it.c.z; if (it.c.n != null) numeric += it.c.z; if (!it.c.w) silent += it.c.z;
+  let open = 0, numeric = 0, silent = 0, told = 0;
+  for (const node of offices) {
+    if (!node.unheard) told++;
+    for (const it of node.live) {
+      open += it.c.z; if (it.c.n != null) numeric += it.c.z; if (!it.c.w) silent += it.c.z;
+    }
   }
+  // The offices this room has been told about, not the offices it can draw. Those are
+  // the same number tonight and are not the same number on a cold start, and the spoken
+  // record may not claim breadth the room has not been given.
   let text = open.toLocaleString() + " forecast periods are standing open across "
-    + offices.length + " offices; " + numeric.toLocaleString() + " of them state a number, "
+    + told + " offices; " + numeric.toLocaleString() + " of them state a number, "
     + silent.toLocaleString() + " name no precipitation at all.";
   if (item) {
     const verb = kind === "lock" ? "kept" : kind === "rupture" ? "broken"

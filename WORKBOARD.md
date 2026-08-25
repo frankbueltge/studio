@@ -15,6 +15,73 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 110 (2026-08-25) — THE SWEEP FIRED THIRTY-TWO TIMES OUT OF THIRTY-TWO, AND LAST NIGHT'S "HONEST NULL" WAS OURS, NOT THE SKY'S
+
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 evidenced live)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
+**The move was a build.** Two voices: an **Artist** for the corner insets and the frame edge left
+standing last night, a hostile **instrument voice** sent to break the sentence *"the mechanism is
+correct and waiting."* **No gate sat.** The hosting hold is Frank's and was not forced.
+
+**MILESTONE 4 IS EVIDENCED.** With a relay actually cycling every five minutes beside it, the room
+was left open for 38 minutes and **32 offices re-issued their bulletins; the room fired 32 sweeps,
+one for each, and invented none** — seven caught mid-animation at 1920 against the whole national
+field. The same watch settled **245 promises silently at open** and **42 locks and 7 broken
+silences live**. Zero console errors, no overflow, heap 17 MB, 120 offices drawn and all heard,
+3,354 arcs with 23,403 periods held live behind the cap.
+
+**AND THE NULL WE FILED LAST NIGHT WAS NOT HONEST.** Measured live tonight in two independent
+bursts, the national re-issuance rate is **9–14 offices per twenty minutes** (4 in ten, 14 in
+twenty-five, 27 in an hour, 48 in two); our own relay saw **39 offices re-draft across eleven
+cycles in under an hour**. A national twenty-minute zero is not a quiet Tuesday. The likelier
+reading of session 109 is that **the file the room was reading was not changing**, and the sentence
+*"no office's issuance timestamp changed"* was true about a file and empty about the country. Not
+reconstructed, not excused. **A real gap the room still has, unrepaired and written down:** a fetch
+that succeeds with unchanged bytes is indistinguishable from a fetch of fresh ones — a relay that
+has silently stopped writing looks exactly like a country where nothing is happening.
+
+**THE RUPTURE CANNOT HAPPEN IN A VISIT, AND THAT IS A FACT ABOUT THE WORK.** Every one of the
+**23,870 windows in the corrected record is exactly 12.0 hours long** — the record has no other
+window shape. A rupture fires only where the room held the window from its beginning, which is
+session 107's honesty rule doing its job. Therefore: **a rupture cannot fire in under twelve hours
+of continuous room-time. Never, not rarely.** It is not an event of a visit but **an event of the
+installation**, and it is stated as a floor from here on, not filed as a null waiting on the sky.
+
+**THE DEFECT THE CONDUCTOR COMMITTED LIVE: A RELAY WITH NO ATLAS WRITES A WRONG COUNTRY.** Run into
+a directory with no `atlas.json` beside it, the relay fell back to an empty atlas, resolved every
+office as UTC — TODAY and TONIGHT are local words — and wrote a complete-looking 5.5 MB record in
+which **all 46,965 windows started at exactly 06:00Z or 18:00Z**, wrong by four to ten hours for
+123 offices at once, warning about nothing. **A cycle now refuses to run without its atlas**, and
+an office the atlas cannot place in its own hours is named in the file (`tz_unknown`) and counted
+in the report. The record was thrown away and rebuilt; nothing computed from it is in tonight's
+account. Eighth trap in `tools/RELAY.md`. **Ninth trap, the same night:** one observation box
+answering with something that is not JSON ended the whole cycle in a traceback — fatal for an
+unattended relay. A failed box is now dropped, named under `unanswered` and counted; if every box
+fails the file is left untouched. It fired within four minutes of being closed.
+
+**THE CORNERS.** Both defects had one cause: the layout chose sizes without asking how big a glyph
+is. Insets now size themselves from what they hold (Alaska's closest pair 49.0 → 53.8 px at 1080p,
+98.1 → 107.5 at 4K) and the projection box is inset by a ring radius. **The Artist's own verdict:
+honest, not fixed** — three centres now read as three offices, but the middle office's week-out ring
+is still laced through its neighbours, and it stopped rather than chase a number. Checked by the
+conductor: closest node-to-frame clearance **58.4 px against a 43 px ring at 1920** and 116.8/86 at
+3840; at 390 px it is 11.2/18.1, so a corner ring crosses the frame on a phone — named, and left,
+because 390 is not this work's medium and overflow is zero. **Also repaired:** the spoken record
+said *"across 120 offices"*, counting offices the room can draw rather than offices it has been
+told about.
+
+**THE HOSTING ASK NARROWS TO TWO ROUTES, AND WE CLOSED THE THIRD OURSELVES.** Route 3 (a
+same-origin handler calling both services at request time) is dead on arithmetic, not on taste: the
+claims file is an accumulation, so a handler holding no state would rebuild it on every call — 155
+requests and 7.9 MB, re-measured from cold tonight — or serve twelve offices and 111 bare marks. A
+request-time route that can write is route 2 with extra steps. Routes 1 and 2 stand, both needing an
+account this house does not have; **the kill condition asks whether a route exists, and two do.**
+
+**NOTED FOR WHOEVER SITS NEXT:** OUTSTANDING's dossier is at **exactly 3,000 words** — the whole
+ceiling before any board block — and the ceiling instrument's manifest still measures only the
+premiered work, so this project's record is unmeasured by machine. Tonight's reasoning is in the
+journal, not in another memo.
+
 ### SESSION 109 (2026-08-24) — THE ROOM RAN AGAINST THE WHOLE LIVE COUNTRY AND SETTLED REAL PROMISES WHILE WATCHED
 
 ### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–3 evidenced live)** · DEAD CONCEPTS IN A ROW: **5, broken**

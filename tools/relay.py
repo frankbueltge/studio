@@ -385,12 +385,21 @@ def cycle_claims(out_dir, since_minutes, atlas):
 
     offices = dict(prev)
     fetched = 0
+    tz_unknown = []
     for office, prod in sorted(newest.items()):
         if prev.get(office, {}).get("issued") == prod["issuanceTime"]:
             continue
         text = get_json(f"{PRODUCTS}/{prod['id']}").get("productText") or ""
         fetched += 1
-        tz = (atlas.get("offices", {}).get(office) or {}).get("tz", "UTC")
+        entry = atlas.get("offices", {}).get(office) or {}
+        tz = entry.get("tz") or "UTC"
+        if not entry.get("tz"):
+            # An office the atlas cannot place in its own hours. TODAY and TONIGHT are
+            # local words; read against UTC they name the wrong twelve hours. The claim
+            # still travels verbatim and the window is still written, because a room that
+            # is told nothing about an office draws it bare — but the office is named in
+            # the file and in the report, so a wrong window is never a silent one.
+            tz_unknown.append(office)
         claims, zones = parse_bulletin(text, tz)
         issued = datetime.datetime.fromisoformat(prod["issuanceTime"])
         for claim in claims:
@@ -426,7 +435,9 @@ def cycle_claims(out_dir, since_minutes, atlas):
                                   for c in o["claims"] if c["n"] is not None),
                    "silent": sum(c["z"] for o in live.values()
                                  for c in o["claims"] if not c["w"]),
-                   "reissued": fetched},
+                   "reissued": fetched,
+                   "tz_unknown": len(tz_unknown)},
+        "tz_unknown": sorted(tz_unknown),
         "offices": live,
     }
     write_atomic(os.path.join(out_dir, "claims.json"), doc)
@@ -439,9 +450,19 @@ def cycle_sky(out_dir):
     """One sky cycle: every reporting station, and what it says is falling."""
     latest = {}
     capped = []
+    failed = []
     for tile in TILES:
         url = f"{METAR}?format=json&hours=1&bbox={tile[0]},{tile[1]},{tile[2]},{tile[3]}"
-        rows = json.loads(get(url))
+        try:
+            rows = json.loads(get(url))
+        except (ValueError, OSError) as err:
+            # This service answers a bad minute with something that is not JSON, and one
+            # such minute used to end the whole cycle in a traceback — in a relay meant to
+            # run unattended for months, a scheduled run that dies leaves the room reading
+            # a file nobody is updating. One box is one corner of the sky: it is dropped,
+            # named, and the rest of the country is still written.
+            failed.append({"bbox": list(tile), "error": err.__class__.__name__})
+            continue
         if len(rows) >= 400:
             capped.append(tile)
         for row in rows:
@@ -477,11 +498,18 @@ def cycle_sky(out_dir):
                    "w": "present weather, verbatim", "r": "1 where that names falling water",
                    "p": "precipitation reported by the provider, where present"},
         "counts": {"stations": len(stations), "reporting_weather":
-                   sum(1 for s in stations.values() if "w" in s), "wet": wet},
+                   sum(1 for s in stations.values() if "w" in s), "wet": wet,
+                   "boxes": len(TILES), "boxes_failed": len(failed)},
         "stations": stations,
     }
     if capped:
         doc["warning"] = f"{len(capped)} tiles hit the 400-record cap: {capped}"
+    if failed:
+        doc["unanswered"] = failed
+    if len(failed) == len(TILES):
+        # Not one corner of the sky answered. A file of no observations is not a sky
+        # with nothing falling in it, and the last good file is better than that lie.
+        raise RuntimeError("relay: every observation box failed; sky.json left untouched")
     write_atomic(os.path.join(out_dir, "sky.json"), doc)
     return doc
 
@@ -521,7 +549,18 @@ def main():
         out = os.path.normpath(out)
         os.makedirs(out, exist_ok=True)
         atlas_path = args.atlas_file or os.path.join(out, "atlas.json")
-        atlas = json.load(open(atlas_path, encoding="utf-8")) if os.path.exists(atlas_path) else {}
+        # The eighth trap, met on 2026-08-25 and it cost a whole night's record. A cycle
+        # run beside no atlas used to fall back to an empty one, and an empty atlas means
+        # every office is read in UTC: TODAY and TONIGHT are local words, so every window
+        # in the file lands on 06:00Z/18:00Z and is wrong by up to ten hours — for all 123
+        # offices at once, in a file that looks complete and warns about nothing. A relay
+        # that cannot place its offices in their own hours does not write; it says so.
+        if not os.path.exists(atlas_path):
+            raise SystemExit(
+                f"relay: no atlas at {atlas_path}. Without it every forecast window would "
+                f"be written in UTC and be wrong for every office. Run --atlas first, or "
+                f"pass --atlas-file.")
+        atlas = json.load(open(atlas_path, encoding="utf-8"))
         # A cold start is not a cycle. With no claims.json beside the output there is
         # nothing to merge into, and twenty-five minutes of re-issuance would hand the
         # room a dozen offices and call it the country. The absence of the file is the

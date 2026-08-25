@@ -107,6 +107,40 @@ now closed:
 The lesson is the general one: a mean of angles is not a mean of numbers, and a region test
 written for one hemisphere must say so.
 
+## The eighth trap, met 2026-08-25 by the conductor's own hand: a cycle with no atlas beside it
+
+**A relay run into a directory with no `atlas.json` in it used to write a complete-looking
+national record in which every forecast window was wrong.** The atlas is where an office's
+time zone lives. `TODAY` and `TONIGHT` are local words; the relay resolves them onto a
+06:00–18:00 / 18:00–06:00 block **in the office's own hours**. With no atlas the lookup fell
+back to `{}`, every office resolved as `UTC`, and every one of the 46,965 windows in that
+night's file started at exactly `06:00Z` or `18:00Z` — wrong by four to ten hours for all 123
+offices at once. Nothing warned. The file was 5.5 MB, had the right office count, the right
+period count, and was unusable, and it took a check of the start-time histogram to see it:
+
+```
+start clock times, no atlas : 06:00 ×11,514   18:00 ×12,356        ← every office, one clock
+start clock times, atlas    : 00Z 01Z 02Z 04Z 10Z 11Z 12Z 13Z 14Z 16Z 22Z 23Z
+```
+
+**A cycle now refuses to run without its atlas** and says which path it looked at. And where
+the atlas is present but an *individual* office has no zone in it, that office is named in
+the file (`tz_unknown`) and counted in the report, so a window read in the wrong hours can
+never again be a silent one. The general lesson, and it is the third time this house has
+written a version of it: a fallback that produces plausible output is worse than a crash.
+
+## The ninth trap, met the same night: one bad minute from the observation service ended the cycle
+
+The observation host answers an occasional request with something that is not JSON. The sky
+sweep called `json.loads` on all 31 boxes with no guard, so **one bad box ended the whole
+cycle in a traceback** — no `sky.json` written, and in a relay meant to run unattended for
+months, a scheduled run that dies leaves the room reading a file nobody is updating. It fired
+within minutes of being noticed: the box `24,-80 → 33,-66` answered with a decode error on the
+05:01 cycle. A failed box is now dropped, named in `sky.json` under `unanswered`, and counted
+in the report (`boxes_failed`); the rest of the country is written as usual. If **every** box
+fails the file is left untouched, because a sky with no observations in it is not a sky with
+nothing falling in it, and the last good file is better than that lie.
+
 ## What a cycle costs, measured rather than estimated
 
 All figures first-hand, 2026-08-23, against the live services.
