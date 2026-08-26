@@ -15,6 +15,97 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 111 (2026-08-26) — THE PULSE WAS A NETWORK STACK'S, NOT A RELAY'S, AND THE SIGNAL THAT FIXES IT HAD BEEN IN THE FILE ALL ALONG
+
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 and 6 evidenced, 5 half)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
+**The move was a build.** Two voices: a hostile **instrument voice** sent to break a sentence in
+the work's own source — *"the scan line simply stops crossing, which is the only staleness sign
+here"* — and an **Artist** on milestone 6 and nothing else. **No gate sat.** The hosting hold is
+Frank's and was not forced.
+
+**THE GAP FROM LAST NIGHT IS CLOSED, AND THE SIGNAL WAS NEVER MISSING.** `relay.py` writes
+`"generated"` at the top level of both files, every cycle. The room had never read it — grep
+returned nothing. So its whole sense of being alive was `Date.now()` stamped when an HTTP request
+resolved, and a relay that dies leaving its last file on disk answers every request with 200 and
+identical bytes. **The pulse is now the relay's own stamp advancing and nothing else may stand for
+it**; `stale()` measures from the last time the room *watched* it advance, and from the door
+opening before it ever has, so a frozen fixture and a dead relay are one object with no special
+case; **a stale room stops adjudicating** rather than closing windows for up to a week against an
+observation set nobody has refreshed; and `absorbSky()`'s six-hour cutoff now runs from the sky's
+own instant, because against a wall clock a frozen sky **evicts** real observations and then
+answers *"kept dry"* about water it had been shown.
+
+**AND THE GUARD THAT WAS SUPPOSED TO DO THIS DID NOTHING.** The bottom-of-file line set
+`stillDirty = false` every thirty seconds under a comment saying "the room stops changing";
+`drawStill()` clears that flag itself on the next frame, and it keyed off a successful fetch, so
+under the failure it was written for it could never reach its own trigger. Gone.
+
+**THE PAIRED EXPERIMENT IS THE EVIDENCE.** Same frozen national record (123 offices, 46,869
+periods, written 04:44Z, never touched again), same instrument, 30 minutes and 60 samples each,
+this morning's build against tonight's: **pulses drawn after the first minute, 23 → 0**; record
+declared stale at **— → 1,500 s** (the designed 25 minutes, reached identically by a separate
+35-minute frozen watch); hatched pixels in a held node's trace **0 → 1,516**. Zero errors, zero
+overflow on both. **Honest limit:** nothing settled in either room in those 30 minutes — every
+window in this record is 12 hours long and none closed — so the run cannot show the settlement
+gate *stopping* anything. The pulse difference is measured; the gate is verified as code, not
+under load.
+
+**AGAINST A LIVE RELAY IT NEVER FIRES.** Fifty minutes beside a relay cycling every five: **ten
+distinct stamps, never stale**, 97 locks and 80 broken silences settled live, 34 sweeps, 320
+settled silently at open, heap 15 MB, zero console errors, no overflow.
+
+**MILESTONE 5 — ONE LIMB EVIDENCED, ONE FAILED, AND THE FAILURE IS REPORTED AS ONE.** *The screen
+never becomes a finished tally:* evidenced — over fifty minutes the room settled 177 promises live
+and standing-open periods went **43,405 → 43,581**, refilled by re-issuance faster than the sky
+settles. *Afterglow always fading:* **failed, at 34 of 200 sampled instants, longest gap 17
+minutes.** Not re-read to pass. The measured reason sits beside it rather than being asserted
+around it: at 04:55Z the national record held 1,237 reporting stations, **44 wet, and only 3 with
+an observation under ten minutes old.**
+
+**MILESTONE 6 EVIDENCED — AND IT HAD BEEN HIDING A DEFECT SINCE IT WAS BUILT.** The trace canvas
+inherited `position: absolute; inset: 0` from the document's global `canvas` rule, written for the
+field when the field was the only canvas: the strip has been drawing **out of flow across the
+office id and the period name**, in a panel reserving no space for it (canvas rect 755.5, 552,
+475×34 landing on `.who`/`.per`; the sentence below at 597.5–644.8). One declaration; panel height
+120 → 165 px. Evidenced with a **populated** strip: **45 witnessed settlements at OUN**, 10 at RAH
+— an office that promised *"Clear. Lows in the lower 60s"* with the white bar of a broken silence
+under its own sentence.
+
+**THE ARTIST'S FINDING IS THE STALENESS LAW REACHED FROM THE OTHER END.** A blank strip made two
+facts identical: *nothing happened here* and *this room had not opened yet*. `openedAt` was sitting
+unused in the function. The span older than the room is now hatched in the bare-mark grey with the
+door's instant a rule across it — **2,230 hatched px at 24 s, 1,516 at 30 min, 999 at 50 min, 0 in
+this morning's build.** Also taken: the dwell clock no longer resets on every `pointermove` (nine
+seconds used to measure hand-shake, in a work about what a duration entitles you to say), and the
+release fades over 420 ms like every other event here. **One recommendation refused** — deleting
+the text panel and leaving the words to the screen reader: the diagnosis (a tooltip at
+installation scale) is right, the remedy deletes the work's own evidence. What it earns is scale,
+and the sentence now measures **16.3 px at 1920 and 32.6 px at 3840**, inside the frame at 390 too.
+
+**AN INSTRUMENT, BECAUSE THREE SESSIONS OF FIGURES CANNOT BE RE-RUN BY ANYONE.** `tools/watch.mjs`.
+Sessions 107, 109 and 110 each drove the room with a script written that evening and thrown away;
+session 110 told the team "twelve sweeps" and its own journal "thirty-two," and nothing in the
+repository can say which instrument produced which. Every figure above came out of `watch.mjs` and
+can be re-run. **It committed one defect tonight and closed it:** pointed at the older build it died
+with `ReferenceError: reissues is not defined` and took the whole "before" column with it; it now
+guards every field postdating the build it may be reading.
+
+**THE CEILING WAS MEASURING THE WRONG PROJECT.** `record_words.py` already accepts `--manifest`, so
+session 110's noted gap costs a file and no code: `tools/record-files-outstanding.txt`. By machine,
+OUTSTANDING is **3,000 against 3,000 — at the ceiling, not over it**, which is why tonight's
+reasoning is in the journal. The manifest writes down rather than quietly decides the one question
+it cannot answer: whether the board's dated minutes are the studio's record or the project's. The
+standing 3,048 breach on the premiered project is unchanged and is not tonight's.
+
+**STILL TRUE AND UNREPAIRED:** this detects a relay that stopped writing, **not one running and
+writing wrongly** — the eighth trap's own shape, where a confidently-stamped record was wrong by
+four to ten hours for 123 offices; twenty-five minutes is a number about how much slack is still
+life and it is **not measured**, against a relay that retries with back-off and a service that
+answers its rate limit with a bare 403; the room now reads its source's metadata about itself,
+a small step toward commenting on its own plumbing, named rather than smoothed over; and a corner
+ring still crosses the frame at 390 px, unchanged and left for session 110's reason.
+
 ### SESSION 110 (2026-08-25) — THE SWEEP FIRED THIRTY-TWO TIMES OUT OF THIRTY-TWO, AND LAST NIGHT'S "HONEST NULL" WAS OURS, NOT THE SKY'S
 
 ### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 evidenced live)** · DEAD CONCEPTS IN A ROW: **5, broken**

@@ -1,0 +1,34 @@
+# Manifest for tools/record_words.py — OUTSTANDING's live process record, measured
+# against the 3,000-word ceiling.
+#
+#   python3 tools/record_words.py --manifest tools/record-files-outstanding.txt
+#
+# WHY A SECOND MANIFEST. The ceiling is 3,000 words PER PROJECT, and the standing
+# manifest (tools/record-files.txt) lists only the premiered season-1 project. From
+# session 106, when OUTSTANDING went into production, the project actually in flight
+# was measured by nothing: session 110 noted its dossier stood at "exactly 3,000 words"
+# — a figure taken by hand, by a conductor, on a night whose whole subject was numbers
+# taken by hand being unreproducible. The instrument already accepts `--manifest`, so
+# this costs a file and no code.
+#
+# The four files below ARE the project's record: its concept, the Kritiker's verdict on
+# it, the neighbour search, and the second Artist's sheet.
+
+projects/outstanding/CONCEPT.md
+projects/outstanding/KRITIKER.md
+projects/outstanding/NEIGHBOURS.md
+projects/outstanding/ARTIST-B.md
+
+# WHAT IS DELIBERATELY NOT LISTED, AND THE QUESTION LEFT OPEN.
+#
+# The board. STILL DARK has a standing block on WORKBOARD.md under a stable heading, and
+# the other manifest counts it. OUTSTANDING has no such block: the board carries dated
+# session minutes, and the session-110 block runs to well over a thousand words that are
+# entirely about this project. Whether those minutes are the studio's record or the
+# project's is a real question and this manifest does not answer it by quietly picking
+# one — an entry added here without a ruling would make the ceiling measure a heading
+# that changes its own text every night, which is the exact failure the other manifest's
+# `:: first` qualifier exists to name. Left open, in writing, rather than silently.
+#
+# Journals are not listed, on the same standing as the other manifest's evidence rule:
+# minutes of a deliberation are the record OF a session, not the record of a project.

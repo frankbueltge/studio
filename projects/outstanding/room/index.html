@@ -13,17 +13,28 @@
     -webkit-tap-highlight-color: transparent;
   }
   canvas { display: block; position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
+  /* Sized in `em` from a base the script sets from the room's own scale unit, so the one
+     place this work puts words on screen grows with the medium instead of staying at a
+     desktop's 16 px on a four-metre projection. Below 1920 the base does not shrink: the
+     type is already at the floor there and a phone is not this work's medium. */
   #panel {
     position: absolute; z-index: 3; pointer-events: none; opacity: 0;
+    font-size: 16px;
     transition: opacity .28s ease; max-width: min(46ch, 80vw);
     background: rgba(6, 9, 13, .92); border: 1px solid rgba(140, 180, 210, .25);
-    padding: .9rem 1rem; border-radius: 2px;
+    padding: .9em 1em; border-radius: 2px;
   }
   #panel.on { opacity: 1; }
-  #panel .who { font-size: .72rem; letter-spacing: .12em; color: rgba(200, 224, 238, .45); }
-  #panel .per { font-size: .78rem; letter-spacing: .08em; color: rgba(200, 224, 238, .62); margin-top: .35rem; }
-  #panel .say { font-size: 1.02rem; line-height: 1.45; color: rgba(226, 240, 248, .94); margin-top: .55rem; }
-  #panel .trace { margin-top: .7rem; height: 34px; width: 100%; display: block; }
+  #panel .who { font-size: .72em; letter-spacing: .12em; color: rgba(200, 224, 238, .45); }
+  #panel .per { font-size: .78em; letter-spacing: .08em; color: rgba(200, 224, 238, .62); margin-top: .35em; }
+  #panel .say { font-size: 1.02em; line-height: 1.45; color: rgba(226, 240, 248, .94); margin-top: .55em; }
+  /* `position: static` is load-bearing and was missing. The rule above sets every canvas
+     in this document to `position: absolute; inset: 0` — written for the field, which is
+     the only canvas the work had when it was written — and the trace strip inherited it,
+     so it has been drawing out of flow across the office id and the period name since the
+     held node was built, in a panel whose height reserved no space for it at all. Found
+     2026-08-26 by measuring the panel's children instead of trusting the layout. */
+  #panel .trace { position: static; margin-top: .7em; height: 2.1em; width: 100%; display: block; }
   #reader {
     position: absolute; width: 1px; height: 1px; overflow: hidden;
     clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
@@ -64,7 +75,10 @@ const RELAY = { claims: "data/claims.json", sky: "data/sky.json", atlas: "data/a
 const FIXTURE = { claims: "data/fixture-claims.json", sky: "data/fixture-sky.json", atlas: "data/atlas.json" };
 const COLD = { claims: "data/fixture-cold-claims.json", sky: "data/fixture-cold-sky.json", atlas: "data/atlas.json" };
 const REFRESH_MS = 150000;          // the page asks every 2.5 min; the relay writes every 10
-const STALE_MS = 25 * 60 * 1000;    // after this with no successful fetch the room stops changing
+// After this long without the relay's own stamp advancing, the room stops adjudicating.
+// 25 minutes is 2.5 relay cycles: long enough that a slow or retrying cycle is not called
+// death, short enough that nobody watches a corpse settle promises for half an hour.
+const STALE_MS = 25 * 60 * 1000;
 const RINGS = [12, 36, 72, 120, 168];        // ring upper bounds, hours of lead time
 const RING_R = [10, 18, 26, 34, 43];         // outer radius per ring, in scale units
 const RING_W = [6, 6, 5.5, 5.5, 5.5];          // band thickness
@@ -103,9 +117,12 @@ window.addEventListener("resize", resize);
 let atlas = null, claims = null, sky = null;
 let offices = [];                 // drawable nodes
 let byId = new Map();
-let lastFetchOk = 0, lastIssued = new Map(), heartbeat = -1e9;
+let lastIssued = new Map(), heartbeat = -1e9;
+let relayAt = 0;                  // the instant the relay says it last wrote
+let relayMoved = 0;               // when THIS room last watched that instant advance
 let events = [];                  // live animations
-let recent = [];                  // settlements, for the held-node trace
+let recent = [];                  // settlements this room witnessed, for the held-node trace
+let reissues = [];                // re-issuances this room watched, for the same trace
 let openedAt = Date.now();
 let stationOwner = new Map();     // station -> office id
 let wetSpans = new Map();         // office id -> [[t0,t1], ...] observed by THIS room
@@ -118,6 +135,22 @@ async function grab(url) {
   return r.json();
 }
 
+/* The instant the relay itself says it wrote a file. Both files carry it, every cycle,
+   whether or not anything in the country moved. */
+function stamp(doc) {
+  const t = doc && doc.generated ? Date.parse(doc.generated) : NaN;
+  return isFinite(t) ? t : 0;
+}
+
+/* Has the record stopped advancing while this room has been standing here?
+ *
+ * Measured from the last time the room WATCHED the stamp move, and from the door
+ * opening before it has ever seen that happen — the same rule as everything else here:
+ * the room's authority is its own duration, so at minute zero it is not entitled to
+ * call anything stale either. A frozen fixture and a dead relay are the same object
+ * and are treated as one. */
+function stale() { return Date.now() - relayMoved > STALE_MS; }
+
 async function pull(first) {
   try {
     if (!atlas) {
@@ -129,13 +162,18 @@ async function pull(first) {
     }
     const [c, s] = await Promise.all([grab(SRC.claims), grab(SRC.sky)]);
     claims = c; sky = s;
-    lastFetchOk = Date.now();
-    heartbeat = performance.now();
+    // A fetch that succeeds is not a heartbeat. A relay that has stopped writing answers
+    // every request with the same bytes, and 200 OK is silent about that; for one night
+    // this room read a file that was not moving and reported a quiet country. The pulse
+    // is the relay's own stamp advancing, and nothing else is allowed to stand for it.
+    const wrote = Math.max(stamp(c), stamp(s));
+    if (wrote > relayAt) { relayAt = wrote; relayMoved = Date.now(); heartbeat = performance.now(); }
     absorbSky();
     rebuild(first);
   } catch (e) {
-    /* A room that cannot reach its relay says nothing and invents nothing.
-       The scan line simply stops crossing, which is the only staleness sign here. */
+    /* A room that cannot reach its relay says nothing and invents nothing. It is also
+       not told anything, so its clock above does not move and it will fall silent on the
+       same terms as a room whose relay answers and has nothing new to say. */
   }
 }
 
@@ -149,7 +187,11 @@ async function pull(first) {
  * event. This is what keeps minute zero from being a field of finished answers. */
 function absorbSky() {
   if (!sky || !sky.stations) return;
-  const cutoff = Date.now() - 6 * 3600000;
+  // Six hours back from the instant the SKY was read, not from the wall clock. Against
+  // wall time a frozen sky goes on evicting real observations as the hours pass, and the
+  // room then answers "no water was seen here" about water it had been shown — a false
+  // dry verdict manufactured out of its own source having died.
+  const cutoff = (stamp(sky) || Date.now()) - 6 * 3600000;
   for (const [id, st] of Object.entries(sky.stations)) {
     if (!st.r || !st.t) continue;
     const owner = stationOwner.get(id);
@@ -319,7 +361,15 @@ function rebuild(first) {
     }
     node.arcs = arcs;
   }
-  for (const node of sweeps) events.push({ kind: "sweep", node: node, t0: performance.now() });
+  // A re-issuance is as witnessed as a settlement is — the room only calls one when it
+  // held the office's previous bulletin itself — so it belongs in a place's history and
+  // not only in a 1.6-second hand. It carries no verdict, and is never given a verdict's
+  // colour: how often a place speaks is not whether what it said came true.
+  for (const node of sweeps) {
+    events.push({ kind: "sweep", node: node, t0: performance.now() });
+    reissues.push({ office: node.id, t: Date.now() });
+  }
+  if (reissues.length > 400) reissues.splice(0, reissues.length - 400);
   for (const node of heard) events.push({ kind: "heard", node: node, t0: performance.now() });
   stillDirty = true;
   speak();
@@ -327,6 +377,13 @@ function rebuild(first) {
 
 /* --------------------------------------------------------------- the settlement */
 function settle() {
+  // The room adjudicates only while it is being told things. With the record standing
+  // still it would go on closing windows against a clock and an observation set nobody
+  // has refreshed — locking dry verdicts it cannot witness, ruptures it cannot witness,
+  // for as long as a week, because the outermost ring reaches 168 hours out. It would
+  // look exactly like a room over a quiet country, which is the failure of one whole
+  // night of this house's record. So it stops, and the field simply holds.
+  if (stale()) return;
   const now = Date.now();
   for (const node of offices) {
     for (const item of node.live) {
@@ -441,7 +498,7 @@ function frame(t) {
     ctx.strokeStyle = "rgba(170,205,225,0.08)"; ctx.lineWidth = 1 * U;
     ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
   }
-  if (held) drawHeld(t);
+  if (held || releasing) drawHeld(t);
   requestAnimationFrame(frame);
 }
 
@@ -600,6 +657,8 @@ function sound(kind, node) {
 
 /* -------------------------------------------------------------------- held node */
 let held = null, heldItem = null, heldSince = 0;
+let lastHeld = null, releasing = 0;
+const RELEASE_MS = 420;
 const panel = document.getElementById("panel");
 
 function nearest(x, y) {
@@ -626,9 +685,19 @@ function pick(node, x, y) {
 
 function hold(x, y) {
   const node = nearest(x, y); if (!node) { release(); return; }
-  held = node; heldSince = performance.now();
-  heldItem = pick(node, x, y);
-  if (!heldItem) { release(); return; }
+  const item = pick(node, x, y);
+  if (!item) { release(); return; }
+  // The dwell clock starts once, when a place is first taken hold of. It used to be reset
+  // by every pointermove, so the nine seconds measured how much the visitor's hand was
+  // moving and not how long they had held the place — a duration owned by jitter, in a
+  // work whose entire subject is what a duration entitles you to say.
+  const fresh = node !== held;
+  if (fresh) { heldSince = performance.now(); releasing = 0; }
+  // And a hand crossing an arc boundary used to tear the panel down and rebuild it on
+  // every pixel, re-drawing the trace and re-speaking the sentence into the live region
+  // each time. Nothing new is being said, so nothing is said again.
+  if (!fresh && heldItem && item.key === heldItem.key) { held = lastHeld = node; return; }
+  held = lastHeld = node; heldItem = item;
   panel.innerHTML = "";
   const who = document.createElement("div"); who.className = "who"; who.textContent = node.id;
   const per = document.createElement("div"); per.className = "per"; per.textContent = heldItem.c.p;
@@ -637,20 +706,55 @@ function hold(x, y) {
   const cv = document.createElement("canvas");
   cv.className = "trace"; cv.width = 320; cv.height = 34; panel.append(cv);
   drawTrace(cv, node.id);
-  const left = node.x < W / 2 ? node.x + 70 * U : node.x - 70 * U - Math.min(W * 0.8, 420);
+  const em = 16 * Math.max(1, U);
+  panel.style.fontSize = em + "px";
+  const off = 70 * U, wide = Math.min(W * 0.8, 26 * em);
+  const left = node.x < W / 2 ? node.x + off : node.x - off - wide;
   panel.style.left = Math.max(8, Math.min(W - 40, left)) + "px";
-  panel.style.top = Math.max(8, Math.min(H - 160, node.y - 40)) + "px";
+  panel.style.top = Math.max(8, Math.min(H - 10 * em, node.y - 2.5 * em)) + "px";
   panel.className = "on";
   speak(heldItem, "held");
 }
 
+/* Ninety minutes of one place, and only what this room itself watched happen there.
+ *
+ * The strip used to be uniformly blank before the first mark, which made two different
+ * facts look identical: nothing happened at this office, and this room had not opened yet.
+ * They are not the same fact and the room already knows which is which — it knows when its
+ * own door opened. Everywhere else this work refuses that exact confusion: an office it has
+ * not been told about is drawn bare rather than empty, and a period naming no rain is drawn
+ * as a band of another substance and never as blank space. The trace now keeps the same law.
+ * The part of the strip older than the room is hatched in the bare-mark grey — the substance
+ * that means "not a statement" here — and the door's own instant is a rule across it. */
 function drawTrace(cv, id) {
   const c = cv.getContext("2d"); const now = Date.now(), span = 90 * 60000;
-  c.fillStyle = "rgba(255,255,255,0.03)"; c.fillRect(0, 0, cv.width, cv.height);
+  const W0 = cv.width, H0 = cv.height;
+  c.clearRect(0, 0, W0, H0);
+  c.fillStyle = "rgba(255,255,255,0.03)"; c.fillRect(0, 0, W0, H0);
+
+  const before = Math.max(0, (1 - Math.min(now - openedAt, span) / span)) * W0;
+  if (before > 0.5) {
+    c.save();
+    c.beginPath(); c.rect(0, 0, before, H0); c.clip();
+    c.strokeStyle = "rgba(140,160,175,0.22)"; c.lineWidth = 1;
+    for (let x = -H0; x < before; x += 5) {
+      c.beginPath(); c.moveTo(x, H0); c.lineTo(x + H0, 0); c.stroke();
+    }
+    c.restore();
+    c.strokeStyle = "rgba(180,210,230,0.34)"; c.lineWidth = 1;
+    c.beginPath(); c.moveTo(before + 0.5, 0); c.lineTo(before + 0.5, H0); c.stroke();
+  }
+
+  const at = t => (1 - (now - t) / span) * W0;
+  for (const r of reissues) {
+    if (r.office !== id || now - r.t > span) continue;
+    const x = at(r.t);
+    c.strokeStyle = "rgba(150,190,215,0.55)"; c.lineWidth = 1;
+    c.beginPath(); c.moveTo(x - 2.5, 1.5); c.lineTo(x + 2.5, 1.5); c.stroke();
+  }
   for (const r of recent) {
-    if (r.office !== id) continue;
-    const p = 1 - (now - r.t) / span; if (p < 0) continue;
-    const x = p * cv.width;
+    if (r.office !== id || now - r.t > span) continue;
+    const x = at(r.t);
     c.strokeStyle = r.kind === "lock" ? "rgba(150,220,235,0.9)"
                   : r.kind === "rupture" ? "rgba(235,150,90,0.9)" : "rgba(255,255,255,0.95)";
     c.lineWidth = 2; c.beginPath();
@@ -661,14 +765,26 @@ function drawTrace(cv, id) {
   }
 }
 
+/* Everything else in this room fades: a lock, a rupture, a broken silence all have a named
+   afterglow. The one gesture that belongs to the visitor was the only thing here that just
+   stopped. It lets go on its own clock now, like the rest. */
 function drawHeld(t) {
-  if (!held) return;
-  ctx.strokeStyle = "rgba(190,220,235,0.35)"; ctx.lineWidth = 1 * U;
-  ctx.beginPath(); ctx.arc(held.x, held.y, RING_R[RING_R.length - 1] * U + 6 * U, 0, 6.2832); ctx.stroke();
-  if (t - heldSince > 9000) release();
+  let node = held, a = 0.35;
+  if (!node) {
+    const age = t - releasing;
+    node = lastHeld;
+    if (!node || age > RELEASE_MS) { releasing = 0; return; }
+    a = 0.35 * (1 - age / RELEASE_MS);
+  }
+  ctx.strokeStyle = "rgba(190,220,235," + a.toFixed(3) + ")"; ctx.lineWidth = 1 * U;
+  ctx.beginPath(); ctx.arc(node.x, node.y, RING_R[RING_R.length - 1] * U + 6 * U, 0, 6.2832); ctx.stroke();
+  if (held && t - heldSince > 9000) release();
 }
 
-function release() { held = null; heldItem = null; panel.className = ""; }
+function release() {
+  if (held) releasing = performance.now();
+  held = null; heldItem = null; panel.className = "";
+}
 
 field.addEventListener("pointerdown", e => { unlock(); hold(e.clientX, e.clientY); });
 field.addEventListener("pointermove", e => { if (held) hold(e.clientX, e.clientY); });
@@ -701,10 +817,16 @@ function speak(item, kind) {
 
 /* --------------------------------------------------------------------- the clock */
 resize();
+openedAt = Date.now();
+relayMoved = openedAt;      // the room has not watched the record move yet, and says so by waiting
 pull(true);
 setInterval(() => pull(false), REFRESH_MS);
 setInterval(settle, 1000);
-setInterval(() => { if (Date.now() - lastFetchOk > STALE_MS) stillDirty = false; }, 30000);
+// The guard that used to stand here set `stillDirty = false` every thirty seconds and did
+// nothing whatsoever: `drawStill()` clears that flag itself on the very next frame it draws.
+// It also keyed off a successful fetch, so under the failure it was written for — a relay
+// that answers and has stopped writing — it could never reach its own trigger. The work it
+// claimed to do is now done where it belongs, in `settle()`, off the relay's own stamp.
 requestAnimationFrame(frame);
 </script>
 </body>
