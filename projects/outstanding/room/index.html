@@ -151,6 +151,101 @@ function stamp(doc) {
  * and are treated as one. */
 function stale() { return Date.now() - relayMoved > STALE_MS; }
 
+/* ------------------------------------------------- the room audits its own supply
+ *
+ * The pulse above catches a relay that has STOPPED writing. It cannot catch one that is
+ * running and writing wrongly, and this project has already been bitten by exactly that:
+ * on 2026-08-25 a relay resolved every office as UTC — TODAY and TONIGHT are local words
+ * — and wrote a complete, 5 MB, confidently-stamped national record in which every one of
+ * 46,965 windows was wrong by four to ten hours. Nothing in the file said so. It advanced
+ * its stamp every cycle and read as perfectly alive.
+ *
+ * So the room applies to its supply the one test it applies to everything else here: a
+ * claim, checked against what else can be seen. The record states, for every period, the
+ * twelve hours it covers. The atlas states, for every office, the zone it stands in. The
+ * service's day period runs 06:00–18:00 LOCAL and its night period 18:00–06:00 local, so
+ * a window start that is not local six o'clock, one way or the other, is a window resolved
+ * against hours that are not the office's own. Measured against tonight's live national
+ * record: 24,318 of 24,319 datable starts land exactly there. Under the fault: near none.
+ *
+ * This does not read the relay's opinion of itself. `counts` is computed by the relay from
+ * the same structure it writes, in one pass, so a record can never disagree with it — and
+ * the faulted record's counts were all correct. Checking them would be a check that cannot
+ * fail and cannot catch anything. Geography is a second witness; a self-description is not.
+ *
+ * It is a country-scale test and only a country-scale test. One office out of place — and
+ * there have been three, silently, since this relay was written — does not close the room;
+ * it takes a fifth of the country, which is a shape only a systematic resolution fault has.
+ */
+const BOUNDARY_MIN = [6 * 60, 18 * 60];   // local six, morning and evening
+const MISPLACED_FRACTION = 0.2;           // a fifth of the offices the record names
+const AUDIT_SAMPLE = 24;                  // datable claims sampled per office; a majority test
+let supplyFault = null;      // the audit's verdict on the record now in hand, when it fired
+let lastAudit = null;        // and what it saw, whether or not it fired
+const zoneFmt = new Map();
+
+function localMinutes(tz, ms) {
+  let f = zoneFmt.get(tz);
+  if (f === undefined) {
+    try {
+      f = new Intl.DateTimeFormat("en-GB", { timeZone: tz, hour: "2-digit",
+                                             minute: "2-digit", hourCycle: "h23" });
+    } catch (e) { f = null; }                  // a zone this runtime cannot resolve
+    zoneFmt.set(tz, f);
+  }
+  if (!f) return null;
+  const p = f.formatToParts(new Date(ms));
+  let h = null, m = null;
+  for (const q of p) { if (q.type === "hour") h = +q.value; else if (q.type === "minute") m = +q.value; }
+  return h == null || m == null ? null : h * 60 + m;
+}
+
+/* Does this record place its offices in their own hours?
+ *
+ * Always answers with what it saw. A check that returns "nothing to report" both when the
+ * record is sound and when the check could not run is the same blindness this room has now
+ * been caught by twice — a fetch of unchanged bytes reading as a fresh one, a blank strip
+ * reading as an uneventful place. `placed` is how many offices it was actually able to put
+ * a question to; if that is zero the audit did not happen and says so, and a check that did
+ * not happen never withholds. */
+function audit(doc) {
+  if (!doc || !doc.offices || !atlas) return { ran: false, placed: 0, misplaced: 0, share: 0,
+                                               offices: [], fault: false };
+  let placed = 0, misplaced = 0;
+  const wrong = [];
+  for (const [id, rec] of Object.entries(doc.offices)) {
+    const tz = (atlas.offices[id] || {}).tz;
+    if (!tz) continue;                          // the room was never told where this is
+    const dated = (rec.claims || []).filter(c => c.s);
+    if (!dated.length) continue;
+    const step = Math.max(1, Math.floor(dated.length / AUDIT_SAMPLE));
+    let seen = 0, off = 0;
+    for (let i = 0; i < dated.length && seen < AUDIT_SAMPLE; i += step) {
+      const mins = localMinutes(tz, Date.parse(dated[i].s));
+      if (mins == null) break;
+      seen++;
+      if (BOUNDARY_MIN.indexOf(mins) < 0) off++;
+    }
+    if (!seen) continue;
+    placed++;
+    if (off * 2 > seen) { misplaced++; wrong.push(id); }
+  }
+  const share = placed ? misplaced / placed : 0;
+  return { ran: placed > 0, placed: placed, misplaced: misplaced,
+           share: Math.round(share * 1000) / 1000, offices: wrong.slice(0, 12),
+           fault: placed > 0 && share > MISPLACED_FRACTION };
+}
+
+/* One posture, two reasons, and the face does not distinguish them — see the note in
+ * drawStill(). A room whose source has gone quiet and a room whose source is lying to it
+ * have the same standing: its authority over what it draws next is gone. The distinction
+ * is a fact about plumbing, and this work does not put plumbing on its face. It is kept
+ * here, off the face, so that an instrument in front of the room can say which gate
+ * closed it without the room having to say it out loud. */
+function withheld() { return supplyFault ? "false" : (stale() ? "quiet" : null); }
+function supply() { return { withheld: withheld(), fault: supplyFault, audit: lastAudit,
+                             relayAt: relayAt, relayMoved: relayMoved, openedAt: openedAt }; }
+
 async function pull(first) {
   try {
     if (!atlas) {
@@ -168,6 +263,10 @@ async function pull(first) {
     // is the relay's own stamp advancing, and nothing else is allowed to stand for it.
     const wrote = Math.max(stamp(c), stamp(s));
     if (wrote > relayAt) { relayAt = wrote; relayMoved = Date.now(); heartbeat = performance.now(); }
+    // A fresh stamp is not the same as a true record. The audit runs on what arrived,
+    // every time, and its verdict is about the record now in hand and nothing older.
+    lastAudit = audit(c);
+    supplyFault = lastAudit.fault ? lastAudit : null;
     absorbSky();
     rebuild(first);
   } catch (e) {
@@ -383,7 +482,14 @@ function settle() {
   // for as long as a week, because the outermost ring reaches 168 hours out. It would
   // look exactly like a room over a quiet country, which is the failure of one whole
   // night of this house's record. So it stops, and the field simply holds.
-  if (stale()) return;
+  //
+  // The same for a record that is arriving and is false: a verdict drawn from windows
+  // resolved against the wrong hours is not a weaker verdict, it is a manufactured one,
+  // and it would land on screen looking exactly as authoritative as a true one. What the
+  // room has already rung, it cannot un-ring; it stops ringing. Nothing is retracted and
+  // nothing is re-marked — a room whose authority is its own duration cannot spend
+  // duration backwards.
+  if (withheld()) return;
   const now = Date.now();
   for (const node of offices) {
     for (const item of node.live) {
@@ -421,26 +527,62 @@ function fire(node, item, kind) {
 }
 
 /* ---------------------------------------------------------------------- drawing */
+/* The room's own withdrawal, drawn.
+ *
+ * Until tonight a room that had stopped adjudicating was drawn as nothing: settle()
+ * returned and the field simply held, which from four metres away is indistinguishable
+ * from a quiet country where no window happens to be closing. That is the one confusion
+ * this work has spent three sessions killing everywhere else — an office it has not been
+ * told about is bare and never empty; a forecast naming no rain is a dim band and never
+ * blank space; a held node hatches the span older than the room so that "nothing happened
+ * here" cannot be read as "this room had not opened yet". The room was applying that law
+ * to every fact except one: its own standing.
+ *
+ * So while it is withholding, the whole field goes to the bare mark. Not a badge, not a
+ * word, not a light in a corner — the same cool grey stroke that already means "no
+ * statement is being made here", applied to every band at once. Nothing is added and
+ * nothing moves; the picture's temperature changes. A country cannot honestly look like
+ * this: every office bare at once is a thing only the room can be. And it says nothing
+ * about WHY, because a visitor cannot read two greys apart at that distance and because
+ * the difference between a source gone quiet and a source gone wrong is a fact about
+ * plumbing, which this work keeps off its face.
+ */
+const BARE = "rgba(140,160,175,0.22)";
+
 function drawStill() {
   sctx.fillStyle = "#05070a";
   sctx.fillRect(0, 0, W, H);
+  const mute = !!withheld();
   for (const node of offices) {
     if (node.unheard) {
       // Not silent — unheard. This room has never been told what this office is
       // promising, so it draws nothing that could be mistaken for a statement:
       // no band, no arcs, just the bare mark that a place is on the record.
-      sctx.strokeStyle = "rgba(140,160,175,0.22)";
+      sctx.strokeStyle = BARE;
       sctx.lineWidth = 1 * U;
       sctx.beginPath(); sctx.arc(node.x, node.y, 2.5 * U, 0, 6.2832); sctx.stroke();
       continue;
     }
-    sctx.fillStyle = "rgba(180,210,230,0.38)";
-    sctx.beginPath(); sctx.arc(node.x, node.y, 2.5 * U, 0, 6.2832); sctx.fill();
+    if (mute) {
+      sctx.strokeStyle = BARE;
+      sctx.lineWidth = 1 * U;
+      sctx.beginPath(); sctx.arc(node.x, node.y, 2.5 * U, 0, 6.2832); sctx.stroke();
+    } else {
+      sctx.fillStyle = "rgba(180,210,230,0.38)";
+      sctx.beginPath(); sctx.arc(node.x, node.y, 2.5 * U, 0, 6.2832); sctx.fill();
+    }
     for (const item of node.arcs) {
       const r = RING_R[item.ring] * U, w = RING_W[item.ring] * U;
       const c = item.c;
       sctx.lineWidth = w;
-      if (c.n != null) {
+      if (mute) {
+        // The band is still there, in its place, at its width. What is gone is the
+        // room's word for it: the number's brightness, the commitment's stipple, the
+        // silence's other substance. All of it is the same statement — that the room
+        // stands behind what it is showing — and the room does not, just now.
+        sctx.strokeStyle = BARE;
+        arc(sctx, node, r, item.a0, item.a1);
+      } else if (c.n != null) {
         // measured to a point: a dark rail with a bright segment and a hard cap
         sctx.strokeStyle = "rgba(120,160,190,0.08)";
         arc(sctx, node, r, item.a0, item.a1);
@@ -472,7 +614,16 @@ function arc(c, node, r, a0, a1) {
   c.beginPath(); c.arc(node.x, node.y, r, a0, a1); c.stroke();
 }
 
+let drawnWithheld = null;
+
 function frame(t) {
+  // The withdrawal is the one change to the field that no rebuild announces: staleness
+  // arrives by the clock and the audit's verdict by a pull that changed nothing else.
+  // Marked on the TRANSITION only. Session 111 deleted a line that set this flag on a
+  // timer, under a comment claiming the room had stopped changing, and it fought
+  // drawStill() for the same flag every frame; this asks the question and then waits.
+  const wh = withheld();
+  if (wh !== drawnWithheld) { drawnWithheld = wh; stillDirty = true; }
   if (stillDirty) drawStill();
   ctx.drawImage(still, 0, 0, W, H);
 

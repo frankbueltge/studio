@@ -69,6 +69,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+import zoneinfo
 
 UA = "(frankbueltge.de/studio, ensemble@studio.invalid)"
 
@@ -285,7 +286,33 @@ def zone_blocks(text):
     return blocks
 
 
-def window(label, issued, tz_offset_hours):
+def zone(tz_name):
+    """The office's own hours, from the runtime's copy of the IANA database.
+
+    TENTH TRAP, met 2026-08-28 and it had been live since this file was written. There
+    used to be a second table here — twenty-two hand-written offsets — consulted with
+    `.get(tz, 0)`. Two ways to be wrong, and the relay was wrong in both:
+
+      · An office whose atlas zone was a real IANA name absent from that table resolved
+        silently at offset 0, i.e. UTC, which is the eighth trap one office at a time.
+        The guard below only ever asked whether the atlas HAD a zone, so a string it had
+        never heard of was truthy and passed. GUM sat in the national record with
+        `Pacific/Saipan`, ten hours out, counted in `tz_unknown` as zero. PQE
+        (`Pacific/Majuro`) and PQW (`Pacific/Yap`) were the same, unobserved only
+        because they had not re-issued.
+      · The table's comment said "standard-time offsets" and its numbers were the
+        daylight ones. Correct in August, and wrong by an hour for every DST-observing
+        office in the country from 2026-11-01 — a whole-nation error, dormant, nine
+        weeks out, in an instrument meant to run unattended for months.
+
+    A second copy of a database the runtime already ships can only drift from it. There
+    is no table now. A zone this cannot resolve raises, and the caller names the office
+    in the file rather than guessing its hours.
+    """
+    return zoneinfo.ZoneInfo(tz_name)
+
+
+def window(label, issued, tz_name):
     """Resolve a period label onto a UTC window.
 
     The product names its periods in words, not timestamps. The service's own day
@@ -293,9 +320,15 @@ def window(label, issued, tz_offset_hours):
     convention is what is applied here, and it is an approximation of a boundary the
     product does not state. A label this cannot resolve returns None and the period
     travels with a null window rather than a guessed one.
+
+    The boundaries are local WALL-CLOCK times, resolved against the office's own zone at
+    the moment each boundary falls. On the two nights a year a zone changes offset the
+    resulting UTC window is therefore eleven or thirteen hours long, not twelve, because
+    that is what "six in the evening until six in the morning" is on those nights.
     """
+    tz = zone(tz_name)
     lab = label.strip().upper()
-    local = issued + datetime.timedelta(hours=tz_offset_hours)
+    local = issued.astimezone(tz)
     day = local.date()
     kind = None
     if lab in ("TODAY", "THIS AFTERNOON", "REST OF TODAY", "THIS MORNING"):
@@ -314,31 +347,18 @@ def window(label, issued, tz_offset_hours):
     if kind is None:
         return None, None
     if kind == "day":
-        start_local = datetime.datetime.combine(day, datetime.time(6, 0))
-        end_local = datetime.datetime.combine(day, datetime.time(18, 0))
+        start_local = datetime.datetime.combine(day, datetime.time(6, 0), tzinfo=tz)
+        end_local = datetime.datetime.combine(day, datetime.time(18, 0), tzinfo=tz)
     else:
-        start_local = datetime.datetime.combine(day, datetime.time(18, 0))
-        end_local = start_local + datetime.timedelta(hours=12)
-    off = datetime.timedelta(hours=tz_offset_hours)
-    return (start_local - off).replace(tzinfo=datetime.timezone.utc), \
-           (end_local - off).replace(tzinfo=datetime.timezone.utc)
+        start_local = datetime.datetime.combine(day, datetime.time(18, 0), tzinfo=tz)
+        end_local = datetime.datetime.combine(day + datetime.timedelta(days=1),
+                                              datetime.time(6, 0), tzinfo=tz)
+    return start_local.astimezone(datetime.timezone.utc), \
+           end_local.astimezone(datetime.timezone.utc)
 
 
-TZ_OFFSET = {  # standard-time offsets; the product's own periods are coarser than DST
-    "America/New_York": -4, "America/Detroit": -4, "America/Kentucky/Louisville": -4,
-    "America/Indiana/Indianapolis": -4, "America/Toronto": -4,
-    "America/Chicago": -5, "America/Menominee": -5, "America/North_Dakota/Center": -5,
-    "America/Indiana/Knox": -5, "America/Winnipeg": -5,
-    "America/Denver": -6, "America/Boise": -6, "America/Phoenix": -7,
-    "America/Los_Angeles": -7, "America/Anchorage": -8, "America/Juneau": -8,
-    "America/Nome": -8, "America/Adak": -9, "Pacific/Honolulu": -10,
-    "America/Puerto_Rico": -4, "Pacific/Guam": 10, "Pacific/Pago_Pago": -11,
-}
-
-
-def parse_bulletin(text, tz):
+def parse_bulletin(text):
     """One bulletin -> its distinct claims, deduplicated by exact string identity."""
-    off = TZ_OFFSET.get(tz, 0)
     seen = {}
     order = []
     zones = 0
@@ -392,19 +412,27 @@ def cycle_claims(out_dir, since_minutes, atlas):
         text = get_json(f"{PRODUCTS}/{prod['id']}").get("productText") or ""
         fetched += 1
         entry = atlas.get("offices", {}).get(office) or {}
-        tz = entry.get("tz") or "UTC"
-        if not entry.get("tz"):
-            # An office the atlas cannot place in its own hours. TODAY and TONIGHT are
-            # local words; read against UTC they name the wrong twelve hours. The claim
-            # still travels verbatim and the window is still written, because a room that
-            # is told nothing about an office draws it bare — but the office is named in
-            # the file and in the report, so a wrong window is never a silent one.
+        tz = entry.get("tz")
+        # An office this cannot place in its own hours. TODAY and TONIGHT are local
+        # words; read against UTC they name the wrong twelve hours. The test is whether
+        # the ZONE RESOLVES, not whether the atlas holds a string — a name the runtime
+        # has never heard of used to pass this guard and then silently become UTC (the
+        # tenth trap, above). The claim still travels verbatim, because a room that is
+        # told nothing about an office draws it bare; it travels with a NULL window
+        # rather than a guessed one, and the office is named in the file and in the
+        # report, so a wrong window is never a silent one.
+        try:
+            zone(tz) if tz else None
+            placed = bool(tz)
+        except Exception:
+            placed = False
+        if not placed:
             tz_unknown.append(office)
-        claims, zones = parse_bulletin(text, tz)
+        claims, zones = parse_bulletin(text)
         issued = datetime.datetime.fromisoformat(prod["issuanceTime"])
         for claim in claims:
             start, end = window(claim["p"], issued.astimezone(datetime.timezone.utc),
-                                TZ_OFFSET.get(tz, 0))
+                                tz) if placed else (None, None)
             claim["s"] = iso(start) if start else None
             claim["e"] = iso(end) if end else None
         offices[office] = {"issued": prod["issuanceTime"], "zones": zones,

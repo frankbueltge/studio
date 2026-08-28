@@ -15,6 +15,84 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 112 (2026-08-28) — "IT DOES NOT DETECT A RELAY WRITING WRONGLY" WAS NOT A HYPOTHETICAL: THE RELAY WAS WRITING WRONGLY, AND HAD BEEN SINCE IT WAS WRITTEN
+
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 and 6 evidenced, 5 half)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
+**The move was a build.** Two voices: a hostile **instrument voice**, sent to break a proposal
+*before* it was built, and an **Artist** on one question. **No gate sat.** The hosting hold is
+Frank's and was not forced.
+
+**THE HOSTILE VOICE KILLED HALF THE PROPOSAL AND THEN FOUND A LIVE FAULT.** The proposal was
+that the room audit its own supply. Its first candidate check — recompute the record's own
+`counts` block from the record's own contents — is dead on the code: `cycle_claims` computes
+that block from the same dict it serialises, in one pass, so a record can never disagree with
+it, and the faulted record's counts were all correct. Two of its seven fields are not derivable
+from content at all, so a naive implementation would have condemned **every cycle, forever**.
+Not built. **A self-description is not a second witness.**
+
+**THE TENTH TRAP: A SECOND COPY OF THE TIME-ZONE DATABASE, AND IT WAS LIVE TONIGHT.** The
+eighth trap's guard asked whether the atlas *held* a zone. Resolution went through a different
+door — a hand-written table of twenty-two IANA names, read as `TZ_OFFSET.get(tz, 0)` — so a
+zone name the atlas held and the table had never heard of was truthy, passed the guard, and
+resolved at **offset zero**. That is the eighth trap one office at a time, reported in
+`tz_unknown` as none. Live in tonight's record: **GUM** (`Pacific/Saipan`), **PQE**
+(`Pacific/Majuro`), **PQW** (`Pacific/Yap`). GUM's one datable period stood at **04:00 local**
+while the file said `"tz_unknown": []`. **And the same table held a whole-country error that
+had not gone off yet:** its comment said "standard-time offsets" and its numbers were the
+daylight ones, so from **2026-11-01** — nine weeks out — every DST-observing office in the
+country would have been written **one hour wrong**, in an instrument meant to run unattended
+for months. **There is no table now:** `zoneinfo`, resolved per boundary at the instant it
+falls. A zone that will not resolve raises and the office travels with a **null** window.
+**One consequence, named not smoothed:** on the two nights a year a zone changes offset its
+night window is 11 or 13 hours, so session 110's "every window is exactly 12.0 hours" is a fact
+about most of the year and not a law.
+
+**THE AUDIT, AND ITS THRESHOLD IS MEASURED.** The room now checks on every pull whether the
+record places its offices in their own hours — the service's periods run 06:00–18:00 **local**,
+so a start that is not local six o'clock is a window resolved against hours that are not the
+office's. Same night, same country, same bulletins, repaired relay against a relay deliberately
+run resolving every office as UTC: **22,541 of 22,541 (100.000 %) against 0 of 22,540
+(0.000 %)**; offices judged misplaced **0 of 122 against 122 of 122**; and `tz_unknown` was
+`[]` in *both* files. The gate is a fifth of the placeable offices — a hundred points from
+either measurement — and it is **deliberately country-scale: it would not have caught tonight's
+three-office fault**, only the systematic one that fault is a special case of. The audit
+**always reports what it saw**, not only when it fires, because a check that is silent both
+when sound and when it could not run is the blindness of the last two sessions.
+
+**THE ARTIST: THE ROOM'S OWN WITHDRAWAL WAS BEING DRAWN AS NOTHING.** Since last night a stale
+room stops adjudicating — and from four metres that is indistinguishable from a quiet country.
+*"A room that has stopped judging and a country where nothing is currently happening are
+different facts wearing the same face."* The mark is the **bare stroke applied to everything at
+once**: every band goes to the grey that already means *no statement is being made here*, lit
+node centres become unfilled rings, nothing added, nothing moving. Measured off the still
+canvas, same country, same minute, 1920×1080: **pixels over 100 — 0 while withholding, 47,821
+while vouching**; over 160, **0 against 481**; mean luminance 14.242 against 17.070; zero
+errors, zero overflow on both. **One posture for both reasons, decided not defaulted:** two
+greys cannot be read apart at that distance and grading its own failures is plumbing
+commentary. The reason lives off the face, in `supply()`, which is how tonight's experiments
+told the gates apart. **It does not latch** — tested: withheld 20–140 s on the faulted record,
+`null` from 160 s on the true one, arcs 3,074 → 3,336. **What it owes what it already rang:
+nothing.** It stops ringing; a room whose authority is its own duration cannot spend duration
+backwards.
+
+**FALSE CONDEMNATION IS THE WORST OUTCOME AND IT WAS GUARDED.** Four healthy records put to the
+gate tonight, none condemned: the committed five-office fixture, the live national record, the
+recovered record in the latch test, and **five minutes in front of the relay while it was
+actually cycling** — never withheld, never stale, 122 placed and 0 misplaced, two distinct relay
+stamps, **5 re-issuance sweeps caught live**, heap 14 MB, zero errors, zero overflow. Width
+sweep 280→1920 px clean; `selftest.sh` passes.
+
+**THE TWENTY-FIVE MINUTES, MEASURED FURTHER AND STILL NOT SETTLED.** Four warm cycles tonight
+ran **15.7 / 34.6 / 21.5 / 34.7 s** (cold start 99.1 s, 154 requests, 7.6 MB), so the threshold
+is ~43× the slowest observed. That is **not** the thing the number is about — how long a
+rate-limited cycle can take against back-off and a bare 403 — and finding that out means
+hammering a public service, which this house will not do. Better evidenced, still not measured.
+
+**STILL TRUE AND UNREPAIRED:** the audit is country-scale and passes a handful-of-offices fault;
+a record can be false in ways geography cannot see; the twenty-five minutes; **milestone 5's
+afterglow limb**, failed 2026-08-26 and not re-run tonight; and the corner ring at 390 px.
+
 ### SESSION 111 (2026-08-26) — THE PULSE WAS A NETWORK STACK'S, NOT A RELAY'S, AND THE SIGNAL THAT FIXES IT HAD BEEN IN THE FILE ALL ALONG
 
 ### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 and 6 evidenced, 5 half)** · DEAD CONCEPTS IN A ROW: **5, broken**

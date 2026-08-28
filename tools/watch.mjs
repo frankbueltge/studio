@@ -16,6 +16,7 @@
 //   --minutes  how long to keep the door open (default 20)
 //   --sample   seconds between samples of the field (default 10)
 //   --width --height   the window, in CSS pixels (default 1920×1080)
+//   --query    query string for the room (e.g. "fixture" or "cold"); it picks its own record from it
 //   --shots    directory to drop a frame into whenever an event is caught mid-animation
 //   --json     write the whole sample series here, not just the summary
 //
@@ -100,7 +101,11 @@ await page.addInitScript(() => {
   setTimeout(() => clearInterval(iv), 20000);
 });
 
-const URL0 = `http://127.0.0.1:${PORT}/index.html`;
+// The room chooses its record from its own query string (`?fixture`, `?cold`), so an
+// instrument that can only open the bare path can only ever watch one of the three
+// records this work can be pointed at. Session 112 wanted the committed fixture, which
+// is the cheapest way to ask whether a new gate falsely condemns a healthy record.
+const URL0 = `http://127.0.0.1:${PORT}/index.html` + (args.query ? "?" + args.query : "");
 await page.goto(URL0, { waitUntil: "load" });
 await page.waitForFunction(() => typeof offices !== "undefined" && offices.length > 0,
                            null, { timeout: 60000 });
@@ -137,6 +142,16 @@ const SAMPLE_FN = () => {
     relayAt: typeof relayAt === "undefined" ? null : relayAt,
     relayMoved: typeof relayMoved === "undefined" ? null : relayMoved,
     stale: typeof stale === "undefined" ? null : stale(),
+    // The room's own standing: null while it vouches for what it draws, "quiet" when the
+    // record has stopped advancing, "false" when the record it holds does not place its
+    // offices in their own hours. The face does not distinguish the last two, deliberately;
+    // this instrument may, which is the whole reason the reason is kept off the face and
+    // reachable here. `fault` carries the audit's count when it fired, else null.
+    withheld: typeof withheld === "undefined" ? null : withheld(),
+    // `audit` is what the check SAW — how many offices it could put a question to and how
+    // many were out of place — reported whether or not it fired. A gate that reports only
+    // when it trips cannot be told apart from a gate that never ran.
+    audit: typeof supply === "undefined" ? null : supply().audit,
     // How long ago the room last drew its pulse. On a record that has stopped advancing
     // this is the whole question: a pulse that keeps beating is the room claiming to have
     // been told something.
@@ -170,6 +185,32 @@ while (Date.now() < deadline) {
 }
 
 const log = await page.evaluate(() => window.__log);
+
+/* The field's own brightness, counted rather than described.
+ *
+ * Session 112 gave the room a posture for withholding its authority: while it is not
+ * vouching for what it draws, every band goes to the bare mark and the lit node centres
+ * go out, so the picture flattens to one cool grey. That is a claim about pixels and it
+ * is measured here as pixels. Read off the STILL canvas — the field's own drawing, before
+ * any afterglow is composited over it — so what is counted is the field's standing state
+ * and not an animation that happened to be running. No judgement: four counts and a mean. */
+let fieldReport = null;
+try {
+  fieldReport = await page.evaluate(() => {
+    const d = still.getContext("2d").getImageData(0, 0, still.width, still.height).data;
+    let sum = 0, n = 0, a60 = 0, a100 = 0, a160 = 0;
+    for (let i = 0; i < d.length; i += 4) {
+      const l = 0.2126 * d[i] + 0.7152 * d[i + 1] + 0.0722 * d[i + 2];
+      n++; sum += l;
+      if (l > 60) a60++;
+      if (l > 100) a100++;
+      if (l > 160) a160++;
+    }
+    return { pixels: n, meanLuma: Math.round(sum / n * 1000) / 1000,
+             over60: a60, over100: a100, over160: a160,
+             withheld: typeof withheld === "undefined" ? null : withheld() };
+  });
+} catch (e) { fieldReport = { error: String(e) }; }
 
 /* The held node, measured rather than asserted: press on the office that has had the most
    settlements in this watch, read back what the panel says and what its trace strip holds. */
@@ -270,8 +311,12 @@ const out = {
     openLast: samples.length ? samples[samples.length - 1].open : null
   },
   held: heldReport,
+  field: fieldReport,
   spoken,
   staleFrom: (samples.find(s => s.stale) || {}).elapsed ?? null,
+  withheldFrom: (samples.find(s => s.withheld) || {}).elapsed ?? null,
+  withheldReasons: [...new Set(samples.map(s => s.withheld).filter(Boolean))],
+  audit: samples.length ? samples[samples.length - 1].audit ?? null : null,
   pulsesAfterFirstMinute: samples.filter(s => s.elapsed > 60 && s.heartbeatAgo < 60000).length,
   relayStamps: samples.length ? new Set(samples.map(s => s.relayAt)).size : 0,
   heapMaxMB: samples.reduce((m, s) => Math.max(m, s.heap || 0), 0),

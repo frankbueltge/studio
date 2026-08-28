@@ -141,6 +141,52 @@ in the report (`boxes_failed`); the rest of the country is written as usual. If 
 fails the file is left untouched, because a sky with no observations in it is not a sky with
 nothing falling in it, and the last good file is better than that lie.
 
+## The tenth trap, met 2026-08-28: a second copy of the time-zone database, and it was live
+
+**The eighth trap's guard was asking the wrong question, and had been since this file was
+written.** It asked whether the atlas *held* a zone for an office. The resolution itself went
+through a different door: a hand-written table of twenty-two IANA names, consulted as
+`TZ_OFFSET.get(tz, 0)`. So a zone name the atlas *did* hold, and that table had never heard
+of, was truthy, passed the guard, and silently resolved at offset zero — which is the eighth
+trap exactly, one office at a time, and counted in `tz_unknown` as none. Live in tonight's
+national record:
+
+```
+GUM  atlas zone Pacific/Saipan  → absent from the table → windows written in UTC, ten hours out
+PQE  atlas zone Pacific/Majuro  → absent from the table → same; had not re-issued, so unobserved
+PQW  atlas zone Pacific/Yap     → absent from the table → same
+```
+
+**And the same table carried a whole-country error that had not gone off yet.** Its comment
+said "standard-time offsets"; its numbers were the daylight ones (`America/New_York: -4` is
+EDT, not EST). Correct through the summer, and wrong by one hour for every DST-observing
+office in the country from 2026-11-01 — 119 of 125 offices, in an instrument whose entire
+purpose is to run unattended for months, nine weeks out from the session that found it.
+
+**There is no table now.** `zone()` asks `zoneinfo` — the database the runtime already ships
+— and `window()` resolves each boundary as a local wall-clock time against the office's zone
+*at the instant that boundary falls*, so daylight saving is handled per date rather than per
+year. A zone that will not resolve raises; the office is named in `tz_unknown` and its periods
+travel with a **null** window rather than a guessed one. One consequence, stated rather than
+smoothed: on the two nights a year a zone changes offset, that zone's night window is eleven
+or thirteen hours long instead of twelve, because that is what "six in the evening until six
+in the morning" is on those nights. Session 110's "every window is exactly 12.0 hours" is
+therefore a fact about most of the year and not a law.
+
+Measured, live, the same night, same country, same bulletins — the repaired relay against a
+relay deliberately run with every office resolved as UTC:
+
+```
+window starts on local 06:00 / 18:00, repaired : 22,541 of 22,541   (100.000 %)
+window starts on local 06:00 / 18:00, faulted  :      0 of 22,540   (  0.000 %)
+tz_unknown reported by the file, either way    : []                 ← the file never knew
+```
+
+The lesson is the eighth trap's, one level down: a second copy of a database can only drift
+from the original, and the drift is silent by construction. The room now checks this from its
+own side as well (`audit()` in `index.html`), because a relay's account of itself is not
+evidence about a relay.
+
 ## What a cycle costs, measured rather than estimated
 
 All figures first-hand, 2026-08-23, against the live services.
