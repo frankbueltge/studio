@@ -15,6 +15,76 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 113 (2026-08-29) — A HUNDRED AND NINETY-TWO MARKS FROM NINE DECISIONS: THE WORK'S EVENTFULNESS IS NOT A RATE, IT IS THE OBSERVATION NETWORK'S HOURLY BREATH, AND AN ALPHABETICAL ACCIDENT HAD BEEN DECIDING WHETHER THE LOUDEST MARK FIRED
+
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 and 6 evidenced, 5 half, its failed limb now characterised)** · DEAD CONCEPTS IN A ROW: **5, broken**
+
+**The move was a build.** Two voices: a hostile **instrument voice**, sent to break tonight's
+measurement before a number from it was believed, and an **Artist** on one question. **No gate
+sat.** The hosting hold is Frank's and was not forced; five sessions have passed and it gates
+nothing else.
+
+**MILESTONE 5's FAILED LIMB WAS PUT TO THE QUESTION IT HAD NEVER BEEN PUT TO.** *Afterglow
+always fading* failed on 2026-08-26 and the reason given was one instant of one night. Read
+out of `settle()`: window-closing verdicts need twelve hours of continuous room-time, so
+**every settlement a visitor can see is a fresh wet observation arriving**, and the room's
+visit-scale eventfulness is exactly the national rain-report rate. `tools/eventfulness.py`
+measures it: a national sweep, adaptively subdivided until no box hit the silent 400-record
+cap — **28,953 observations, 2,498 stations, 1,371 wet, six hours**. **Sixty-seven
+office-periods in the entire country were decided by rain in those six hours.** A ten-minute
+visit is **empty 27.1 % of the time** (median 1 office-period, 21 bands); twenty minutes,
+4.2 %; sixty minutes, never. Wait for the first flare: median 7 min, p90 15, longest 26.
+**And the arrivals are not a rate:** 533 of 1,371 wet reports fell in minutes 50–59 of their
+hour. The network breathes once an hour and the room breathes with it. **Half the country's
+rain — 685 of 1,371 wet reports — is at stations no office's zones name, so the room never
+hears it.**
+
+**NINETY-FIVE MINUTES IN FRONT OF THE LIVE ROOM CONFIRMED IT IN THE HARDEST FORM.** 285
+samples, 21 relay stamps, never stale, never withholding, audit on 123 offices with 0
+misplaced, heap 26 MB, zero errors, zero overflow. **192 settlement flares (115 locks, 77
+silences) came from NINE office-periods at FIVE instants** — 17.5, 27.5, 20 and 22 minutes
+apart — each instant one to three offices firing every band they had (LIX 27, GJT 26, FGF
+25). 479 claims were removed in silence by water older than the room. Fading present at **41
+of 285 samples (14.4 %), longest gap 24.3 minutes** — session 111's figure, reproduced by a
+committed instrument. **No promise fired twice** across 47 re-issuance sweeps, which was
+reasoned as possible and looked for.
+
+**THE ARTIST DECIDED THE TROUGH OWES NOTHING.** *"The room knows exactly as much during a
+trough as during a flare."* The bare stroke, the dim band and the withholding posture all
+exist to stop "nothing visible" lying about what the room knows; a trough is none of them.
+There is no true mark to draw, because the room has no rate. **The cost is named:** nearly a
+quarter of ten-minute visitors leave having watched no settlement, and for them the work's
+most legible proof of itself is missing. **Milestone 5's limb stays failed and the work was
+not changed to make it pass** — what changed is that the failure is now characterised, and it
+is the shape of the observation network rather than one dry night.
+
+**A LIVE DEFECT IN THE WORK, FOUND BY THE ATTACK AND REPAIRED.** `witnessedWet()` returned the
+**first array match**, and `wetSpans` is in station-id order, not time order — so for an office
+with two wet stations in one period, one observation older than the room and one younger, **the
+alphabet decided whether the room flared or removed the claim in silence**. The claim in the
+demonstration is a *silence*, which this work's own concept calls its loudest event.
+`tools/witness-order.mjs`, same sky, only the station names swapped: **before — `unwitnessed`
+one way and a sounding flare the other; after — `unwitnessed` both ways.** The repair loses
+that flare rather than gaining one: the promise is answered by the first water inside its
+window, and a room that opened later did not witness it.
+
+**THE INSTRUMENT WAS WRONG THREE TIMES AND EACH CORRECTION IS EVIDENCE.** The hostile voice
+killed its reading of closed periods (tonight's record cannot describe a room opened six hours
+ago; 55 periods reconstructed), its station map (1,070 shared station entries — the room's map
+is single-valued), and its docstring's claim that every flare is a settlement. Then **the room
+contradicted it within the hour**: `settle()` walks every claim in the bulletin, so the sky
+decides office-periods and the visitor sees bands. And the validation against the watched room
+found the fourth: a two-hour sweep cannot judge a door twenty-three minutes into it — it named
+sixteen where the room drew nine, and all seven extras were offices whose rain began before the
+sweep's first record. With that guard the model names **eight and the room drew nine**, the
+eight exactly.
+
+**STILL TRUE AND UNREPAIRED:** the ninth office (DLH) — the model asks "was there wet water
+before the door", the room asks "is this station's latest report wet"; the timeline now stores
+every report instant so the next run answers it exactly. Plus everything standing from session
+112: the audit is country-scale; a record can be false in ways geography cannot see; the
+twenty-five minutes; and the corner ring at 390 px.
+
 ### SESSION 112 (2026-08-28) — "IT DOES NOT DETECT A RELAY WRITING WRONGLY" WAS NOT A HYPOTHETICAL: THE RELAY WAS WRITING WRONGLY, AND HAD BEEN SINCE IT WAS WRITTEN
 
 ### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 and 6 evidenced, 5 half)** · DEAD CONCEPTS IN A ROW: **5, broken**

@@ -303,12 +303,29 @@ function absorbSky() {
   }
 }
 
-/* Returns the observation that answers this window, or null. */
+/* Returns the observation that answers this window, or null.
+ *
+ * THE EARLIEST ONE, and that was a defect until 2026-08-29. `wetSpans` is appended in the
+ * order stations are first seen wet — station-id order within one pull, arrival order
+ * across pulls — so it is not in time order. This function used to return the first array
+ * match, which meant that for any office with two wet stations inside one period the
+ * room's verdict was decided by an alphabetical accident: an old observation sitting
+ * earlier in the array made the settlement `unwitnessed` and removed the claim in silence,
+ * while the same two observations under a different station-id ordering flared. Neither
+ * outcome was reasoned; the array's order was.
+ *
+ * The rule the work already states decides it: the promise is answered by the FIRST water
+ * that falls inside its window, and whether the room may call that an event depends on
+ * whether the room was open when it fell. So the earliest matching observation is the
+ * answer, always — which loses flares as often as it gains them (a room that opens after
+ * the first water now stays silent where the accident sometimes let it ring) and is the
+ * point: the room does not claim to have witnessed water that fell before its door. */
 function witnessedWet(officeId, from, to) {
   const seen = wetSpans.get(officeId);
   if (!seen) return null;
-  for (const obs of seen) if (obs.t >= from && obs.t <= to) return obs;
-  return null;
+  let best = null;
+  for (const obs of seen) if (obs.t >= from && obs.t <= to && (!best || obs.t < best.t)) best = obs;
+  return best;
 }
 
 /* --------------------------------------------------------------------- layout */
