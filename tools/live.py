@@ -74,7 +74,10 @@ SCANNED = [
     "projects/season1/PROJECT.md",
     "works/2026-08-15-still-dark/README.md",
     "projects/season1/capture/README.md",
-    "WORKBOARD.md",
+    # Retired to archive/ on 2026-08-30 (session 115, Protocol v4 §8). It still carries two
+    # live regions, so the path is repointed rather than dropped: a scanner that quietly stops
+    # checking a file is the false yes this house has been caught by before.
+    "archive/workboard/WORKBOARD-sessions-01-114-2026-08-30.md",
 ]
 
 BEGIN = re.compile(r"<!--\s*live:([a-z0-9-]+)\s*-->")
