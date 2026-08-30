@@ -15,6 +15,68 @@ visualisations is not a work in this practice*); caps **standing still** rather 
 **abolishes the Dramaturg**; and holds every project to **3,000 words including gate memos**. The
 season layer is deleted. Campaign vocabulary below is superseded wherever it conflicts.
 
+### SESSION 114 (2026-08-30) — SIX STRANGERS MET THE WORK COLD: THREE OF THEM TRACKED THE ROOM'S REAL DECISIONS TO THE OFFICE AND THE FRAME, SIX OF SIX MISSED THE SUBJECT AS PREDICTED IN WRITING, AND THREE OF THREE IN A TROUGH COULD NOT TELL A LIVE ROOM FROM A PAUSED SCREEN
+
+### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 and 6 evidenced, 5 half; the constitution's *Legible* limb run for the first time)** · DEAD CONCEPTS IN A ROW: **5, broken** · STALL CLOCK: **1**
+
+**The move was the severed-reader panel** — PROTOCOL's *Legible — ours to run*, owed before any
+ship and never run on this work. Six severed readers, three per cohort, efficient tier, each
+dispatched alone. **No gate sat, and the panel is not one:** it convenes no judging voice of
+this house and blocked nothing. Pre-registration frozen (`tools/prereg.py`, 04:42:02Z) and
+**committed before the strips were cut** — `0529e76` carries the predictions and the selection
+rule and no frames.
+
+**THE PANEL DOES NOT KILL.** The constitutional bar is *can say nothing back*; all six said a
+great deal back. Answers unedited in `projects/outstanding/PANEL-ANSWERS.md`.
+
+**WHAT THEY WERE SHOWN.** One continuous watch of the live room, relay cycling beside it,
+04:40Z–05:35Z: **109 frames at 1920×1080 every 30 s, 13 relay stamps, never stale, never
+withholding, zero console errors, zero overflow**; in the hour the room drew **192 locks, 89
+broken silences, 529 silent removals, 37 sweeps**. `tools/panel.mjs` — capture, `--pick`,
+`--cut` kept apart so the strip is a consequence of a stated rule. **Cohort A** = the
+ten-minute window with the most settlements: **182, at exactly two instants** (BIS+SEW, 71
+bands, before frame 10; ABQ+CYS+LBF+FGF+HUN, 111 bands, before frame 20). **Cohort B** = the
+first window with zero: the room's own opening ten minutes, **0 settlements, 10 re-issuances**.
+
+**THE READERS TRACKED THE ROOM.** All three in A place the first change at **frame 10** and
+name the **Pacific Northwest** — the room fired **SEW**. Reader 3 names **frames 16–19 a lull**;
+the log has **fading 0 at exactly those four frames**. All three call **frame 20** a burst and
+reader 3 counts **five simultaneous lights** — the room fired **five offices**. Reader 2 places
+one of them **"around Tennessee/Kentucky, differently shaped"**: that is **HUN, Huntsville, 3
+bands**, the smallest signature in the instant and the only one east of the Plains.
+
+**AND WHAT THEY GOT WRONG IS OURS.** All three read the *static* bright node of frames 6–9 as
+activity. Nothing was fading there. **In stills a bright standing claim and a decaying verdict
+are one object**; motion and sound are what separate them.
+
+**PREDICTIONS, ALL REGISTERED BEFOREHAND:** map/country **6 of 6** (predicted 5–6); reached the
+subject — promise, forecast, a claim being checked — **0 of 6** (predicted 0); infrastructure
+monitoring **6 of 6**; change in A **3 of 3**, stillness in B **3 of 3**. **The fifth broke:**
+*no reader calls the screen frozen*. Reader B2: *"or the screen was simply static/paused for
+the entire ten minutes."*
+
+**THE FINDING THAT CUTS, WITH ITS BOUND.** Session 112 killed *"a room that has stopped judging
+and a country where nothing is happening wear the same face"* for the withholding posture, and
+that fix is a **still** distinction and holds. **A live trough and a frozen screen are not
+different pictures.** Everything separating them is animation under two seconds — a 1 px
+heartbeat line at 8 % opacity for 900 ms, a 1.6 s sweep, a 2.2 s ring. **Bound:** the panel
+could not carry motion, so this does not show that a visitor in the room sees a dead screen,
+and **the Artist's decision of 2026-08-29 is neither overturned nor confirmed**. The
+well-formed question it leaves — *is the heartbeat legible at the room's real viewing
+distance?* — is a measurement no session has made, and is the next thing this work owes itself.
+
+**WHAT IT ESTABLISHES ABOUT SHIPPING.** The concept's *"without reading anything, understands
+two things at once"* is evidenced **false for the still channel**, with the prediction on
+record beforehand. The concept already said the sound is what carries the piece with no text;
+that is now a **load-bearing dependency, and a condition on installation** — a venue that mutes
+this work shows the version six strangers called a network operations dashboard. And **this
+work's ship gate cannot be run on stills**: any panel that decides it must carry sound and
+motion, which is a session's work to build.
+
+**STILL TRUE AND UNREPAIRED:** everything from session 113 — the ninth office; six hours of one
+night is not a year; the country-scale supply audit; the twenty-five minutes; the corner ring
+at 390 px. The work's own files were not touched tonight.
+
 ### SESSION 113 (2026-08-29) — A HUNDRED AND NINETY-TWO MARKS FROM NINE DECISIONS: THE WORK'S EVENTFULNESS IS NOT A RATE, IT IS THE OBSERVATION NETWORK'S HOURLY BREATH, AND AN ALPHABETICAL ACCIDENT HAD BEEN DECIDING WHETHER THE LOUDEST MARK FIRED
 
 ### PROJECT IN FLIGHT: **OUTSTANDING (IN PRODUCTION — milestones 1–4 and 6 evidenced, 5 half, its failed limb now characterised)** · DEAD CONCEPTS IN A ROW: **5, broken**
