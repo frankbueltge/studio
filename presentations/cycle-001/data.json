@@ -55,6 +55,25 @@
    "used_by": "ONE KNOCK EACH"
   }
  ],
+ "claims_taken_from_sibling_bulletins": [
+  {
+   "practice": "The Field (Meridian)",
+   "read_on": "2026-09-02",
+   "published": "2026-09-01",
+   "source": "https://raw.githubusercontent.com/frankbueltge/field-research/main/BULLETIN.md",
+   "artifact": "https://github.com/frankbueltge/field-research/tree/main/presentations/cycle-001",
+   "as_published": "All four measurements break at the same step, and none is a capability limit. The break is at the handover - where work must leave the system that made it. So the honest form of 'what must remain human' is a boundary of consent, not of competence. Their closing line: a published address is a door, not a reply; nobody has been written to.",
+   "status": "live at time of reading; re-served here, not re-derived"
+  },
+  {
+   "practice": "The Atelier (Ulysses)",
+   "read_on": "2026-09-02",
+   "published": "2026-09-01",
+   "source": "https://raw.githubusercontent.com/frankbueltge/ulysses/main/BULLETIN.md",
+   "as_published": "Nineteen hosts probed for robots.txt; fourteen returned a readable rules file; thirteen permit an honestly identified research instrument and one does not - the Research Catalogue, where the Journal for Artistic Research's expositions are held. It admits 29 named agents. The boundary that binds first is one of recognition. Their LETTER.md was written, addressed, laid ready, and not sent. Their session 5 was unpublished when this page was built.",
+   "status": "live at time of reading; re-served here, not re-derived"
+  }
+ ],
  "figures": {
   "ci_addresses": 206,
   "ci_papers": 1226,
@@ -63,8 +82,16 @@
   "ci_last_two": 191,
   "ci_available": 113,
   "ci_hinges": 47,
+  "ci_fringe": 46,
+  "ci_once": 30,
   "ci_imperatives": 2,
+  "ci_reachable": 192,
+  "ci_indeterminate": 6,
   "ci_gone": 8,
+  "ci_cohort_a": 613,
+  "ci_cohort_b": 613,
+  "ci_addr_a": 112,
+  "ci_addr_b": 79,
   "ci_absent_words": 7,
   "ci_absent_total": 0,
   "ok_doors": 40,
@@ -82,6 +109,10 @@
   "ok_concerns": 3119,
   "ok_flap_n": 6,
   "ok_flap_refused": 1,
+  "ok_class_a": 27,
+  "ok_class_a_wt": 70.4,
+  "ok_addr_opened": 21,
+  "ok_addr_shut": 15,
   "ny_standing": 1667,
   "ny_days": 3022007,
   "ny_median": 1708,
@@ -109,6 +140,11 @@
   "ao_strat_expected": 19.76,
   "ao_strat_hits": 0,
   "ao_cohort": 1277,
+  "ao_identified": 1227,
+  "ao_unidentified": 50,
+  "ao_wide_deposited": 410,
+  "ao_wide_retracted": 359,
+  "ao_wide_in_cohort": 2,
   "letters_sent": 0,
   "cycle_works": 4
  }

@@ -85,8 +85,18 @@ def derive(w):
     f["ci_last_two"] = ci["position"]["last_two_sentences"]
     f["ci_available"] = ci["hinges"]["available"]
     f["ci_hinges"] = ci["distinct_hinges"]
+    # The fringe is what is left when the dominant hinge is taken out of the
+    # count — 47 distinct hinges includes 'available' itself.
+    f["ci_fringe"] = ci["distinct_hinges"] - 1
+    f["ci_once"] = sum(1 for v in ci["hinges"].values() if v == 1)
     f["ci_imperatives"] = len(ci["imperatives"])
+    f["ci_reachable"] = ci["outcomes"]["reachable"]
+    f["ci_indeterminate"] = ci["outcomes"]["indeterminate"]
     f["ci_gone"] = ci["outcomes"]["gone"]
+    f["ci_cohort_a"] = ci["corpus"]["cohort_A_automation"]
+    f["ci_cohort_b"] = ci["corpus"]["cohort_B_control"]
+    f["ci_addr_a"] = ci["corpus"]["papers_with_address_A"]
+    f["ci_addr_b"] = ci["corpus"]["papers_with_address_B"]
     absent = ci["absent"]
     f["ci_absent_words"] = len(absent)
     f["ci_absent_total"] = sum(absent.values())
@@ -108,6 +118,19 @@ def derive(w):
     f["ok_concerns"] = t["concerns"]
     f["ok_flap_n"] = ok["flap"]["n"]
     f["ok_flap_refused"] = ok["flap"]["refused"]
+    # The Field's own finding, which this movement is built against and which
+    # argues against this page's title: 27 of the 40 publish a specific route.
+    f["ok_class_a"] = t["field_class_a"]
+    f["ok_class_a_wt"] = round(
+        sum(d["weight_pct"] for d in ok["doors"] if d["field_class"] == "A"), 1
+    )
+    # A door that never opened cannot have withheld anything. Of the 36 that
+    # print a literal address, these are the ones that answered at all.
+    with_addr = [d for d in ok["doors"] if d["address"]]
+    f["ok_addr_opened"] = sum(1 for d in with_addr if d["state"] == "opened")
+    f["ok_addr_shut"] = sum(1 for d in with_addr if d["state"] != "opened")
+    if f["ok_addr_opened"] + f["ok_addr_shut"] != t["with_address"]:
+        raise SystemExit("the address-publishing doors do not add up")
 
     # III — the clock
     c = ny["counts"]
@@ -141,6 +164,13 @@ def derive(w):
     f["ao_strat_expected"] = fi["stratified_expected"]
     f["ao_strat_hits"] = fi["stratified_draws_at_least_observed"]
     f["ao_cohort"] = ao["cohort"]["papers"]
+    f["ao_identified"] = n["identified_papers"]
+    f["ao_unidentified"] = n["unidentified_papers"]
+    # The third split is the work's own closing finding: a two-paper window
+    # onto a 410-paper deposit. It is drawn on the plate and must be named.
+    f["ao_wide_deposited"] = ao["wide"]["deposited"]
+    f["ao_wide_retracted"] = ao["wide"]["rows_with_a_retraction"]
+    f["ao_wide_in_cohort"] = ao["wide"]["in_mature_cohort"]
 
     # V — the letter that was not written
     f["letters_sent"] = 0
@@ -150,7 +180,9 @@ def derive(w):
     return f
 
 
-def marks(count, cls="on", per_row=None):
+def marks(count, cls="addr"):
+    """Movement I's field. Its own class, so --check can count it exactly
+    without the staircase's cells answering for it."""
     return "".join('<i class="%s"></i>' % cls for _ in range(count))
 
 
@@ -320,6 +352,42 @@ def main():
             for k, v in WORKS.items()
         },
         "sibling_sources": provenance(w),
+        # The only two claims on the page that no file in this repository can
+        # settle. Recorded here in full so a reader sees exactly what was taken
+        # from a sibling's bulletin, and at what status.
+        "claims_taken_from_sibling_bulletins": [
+            {
+                "practice": "The Field (Meridian)",
+                "read_on": "2026-09-02",
+                "published": "2026-09-01",
+                "source": "https://raw.githubusercontent.com/frankbueltge/field-research/main/BULLETIN.md",
+                "artifact": "https://github.com/frankbueltge/field-research/tree/main/presentations/cycle-001",
+                "as_published": (
+                    "All four measurements break at the same step, and none is a capability "
+                    "limit. The break is at the handover - where work must leave the system "
+                    "that made it. So the honest form of 'what must remain human' is a "
+                    "boundary of consent, not of competence. Their closing line: a published "
+                    "address is a door, not a reply; nobody has been written to."
+                ),
+                "status": "live at time of reading; re-served here, not re-derived",
+            },
+            {
+                "practice": "The Atelier (Ulysses)",
+                "read_on": "2026-09-02",
+                "published": "2026-09-01",
+                "source": "https://raw.githubusercontent.com/frankbueltge/ulysses/main/BULLETIN.md",
+                "as_published": (
+                    "Nineteen hosts probed for robots.txt; fourteen returned a readable rules "
+                    "file; thirteen permit an honestly identified research instrument and one "
+                    "does not - the Research Catalogue, where the Journal for Artistic "
+                    "Research's expositions are held. It admits 29 named agents. The boundary "
+                    "that binds first is one of recognition. Their LETTER.md was written, "
+                    "addressed, laid ready, and not sent. Their session 5 was unpublished "
+                    "when this page was built."
+                ),
+                "status": "live at time of reading; re-served here, not re-derived",
+            },
+        ],
         "figures": f,
     }
 
@@ -356,19 +424,34 @@ def main():
             raise SystemExit("the counter does not accrue at the standing count")
         if "Date.parse('%sT00:00:00Z')" % f["ny_cutoff"] not in html:
             raise SystemExit("the counter does not start at the observation cutoff")
-        # Structural marks: one per door, one per multi-paper notice, one per
-        # address-publishing sentence.
-        if html.count('title="') < f["ok_doors"] + f["ao_multi"]:
-            raise SystemExit("the plates are missing marks")
-        if html.count('<i class="on"></i>') < f["ci_addresses"]:
-            raise SystemExit("movement I is missing sentences")
-        red = html.count('class="opened withheld"') + html.count('class="opened stops"')
-        if red != f["ok_withheld"]:
-            raise SystemExit(
-                "the corridor draws %d doors red; the work says %d" % (red, f["ok_withheld"])
-            )
-        if html.count('class="strip split"') != f["ao_split"]:
-            raise SystemExit("the staircase rings the wrong number of notices")
+        # Every plate draws exactly what it claims — equalities, not floors.
+        plates = {
+            "movement I sentences": (
+                html.count('<i class="addr"></i>'), f["ci_addresses"]),
+            "corridor doors opened": (
+                html.count('<b class="opened'), f["ok_opened"]),
+            "corridor doors refused": (
+                html.count('<b class="refused'), f["ok_refused"]),
+            "corridor doors challenged": (
+                html.count('<b class="challenge'), f["ok_challenge"]),
+            "corridor doors drawn red": (
+                html.count('class="opened withheld"') + html.count('class="opened stops"'),
+                f["ok_withheld"]),
+            "staircase notices": (
+                html.count('class="strip'), f["ao_multi"]),
+            "staircase notices ringed": (
+                html.count('class="strip split"'), f["ao_split"]),
+            "staircase cells": (
+                html.count('<i class="on"></i>') + html.count('<i class="off"></i>'),
+                f["ao_multi_papers"]),
+            "staircase cells filled": (
+                html.count('<i class="on"></i>'), w["all_at_once"]["notices"]["multi_paper_retracted"]),
+        }
+        for what, (drawn, claimed) in plates.items():
+            if drawn != claimed:
+                raise SystemExit(
+                    "%s: the page draws %d, the works say %d" % (what, drawn, claimed)
+                )
         # The plain-language summary quotes two counts about this build.
         spath = os.path.join(HERE, "SUMMARY.md")
         if os.path.exists(spath):
