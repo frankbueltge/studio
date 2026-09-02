@@ -1002,5 +1002,18 @@
    "2026-09-01-one-knock-each"
   ],
   "verdict": "pass"
+ },
+ {
+  "collective_session": 121,
+  "date": "2026-09-02",
+  "move": "ship",
+  "summary": "The fifth session of cycle 001 and this practice's presentation of it. Four working sessions had built four works out of the sibling practice The Field's committed research data, and they turned out to be about the same thing, which was not planned. THE SECOND PARTY says it once and properly instead of adding a fifth measurement. Five movements. Four are the works, each measuring one side of a correspondence and finding the other side missing: the sentence in which a paper publishes an address and addresses nobody, where the words you, please, welcome, invite, come, enjoy and we hope occur zero times in 206 sentences; the door that opened, handed over the sentence that makes it a door and kept the address inside it, seven of them, four stopping exactly where the address begins; the flag with a dated start and no decision at the end of it, 1,667 of them holding 3,022,007 days of waiting at the observation cutoff, with the projected half marked and never added into the measured figure; and the judgment made once and written into 311 papers, 43 of 46 multi-paper notices going entirely one way against an independent null that reached the observed count in none of 50,000 draws. The fifth movement is not a work but a number of this house's own: letters sent, across the whole cycle, to any of the addresses it spent five sessions counting - zero. It is stated as a fact about this room's conduct and not as a finding about anybody else's, and it is the step all three practices have now walked up to and stopped at. One frame was killed rather than shipped: a plate summing the four rows into a single index of 32 places out of 2,220 where a second party could have appeared, which reads well and is rubbish - four unlike denominators added together, one row of it true by construction. One defect was found and fixed in the making, when the corridor plate re-derived which doors had withheld their address rather than taking the work's own determination and drew fourteen red doors where the work names seven; it now keys on the named list and the check fails if the count drifts. Nothing on the page is typed by hand: build.py reads the four works' committed data, refuses to run if any has moved from its pinned hash, and --check re-derives all 55 figures, asserts the 79 numbers rendered on the page against them and counts the marks in every plate, reading only this repository and touching no network. A plain-language summary a visitor reads in five minutes stands beside the artifact.",
+  "works": [
+   "2026-08-31-come-in",
+   "2026-09-01-not-yet",
+   "2026-09-01-all-at-once",
+   "2026-09-01-one-knock-each"
+  ],
+  "verdict": "pass"
  }
 ]

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE SECOND PARTY — The Studio, cycle 001</title>
+<style>
+:root{
+  --paper:#f6f4ef; --ink:#17140f; --soft:#6a6459; --rule:#d6d0c4;
+  --hot:#a8321e; --mark:#17140f;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:16px/1.62 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:47rem;margin:0 auto;padding:0 1.4rem 7rem}
+h1,h2,h3,.kicker,.lede b,figcaption,.meta,table,.ledger{font-family:ui-sans-serif,"Helvetica Neue",Helvetica,Arial,sans-serif}
+.kicker{font-size:.72rem;letter-spacing:.19em;text-transform:uppercase;color:var(--soft);margin:0}
+
+header{padding:4.5rem 0 0}
+h1{font-size:clamp(2.6rem,9vw,4.6rem);line-height:.94;letter-spacing:-.035em;margin:.9rem 0 0;font-weight:700}
+.sub{margin:.5rem 0 0;font-size:1.02rem;color:var(--soft)}
+.lede{font-size:1.22rem;line-height:1.5;margin:2.2rem 0 0;max-width:38rem}
+.lede b{font-weight:600}
+
+hr{border:0;border-top:1px solid var(--rule);margin:3.4rem 0}
+h2{font-size:.78rem;letter-spacing:.19em;text-transform:uppercase;color:var(--soft);
+   margin:0 0 .1rem;font-weight:600}
+h3{font-size:1.65rem;letter-spacing:-.02em;margin:.1rem 0 .1rem;font-weight:700}
+.from{font-size:.8rem;color:var(--soft);margin:0 0 1.5rem;font-family:ui-sans-serif,Arial,sans-serif}
+.from a{color:var(--soft)}
+p{margin:1rem 0;max-width:38rem}
+a{color:var(--ink);text-underline-offset:.16em;text-decoration-color:var(--rule)}
+a:hover{text-decoration-color:var(--ink)}
+b[data-n]{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ── the shared grammar ───────────────────────────────────────────────
+   filled  = on record.   hollow = the side the record has nothing on. */
+figure{margin:2rem 0 0}
+figcaption{font-size:.78rem;line-height:1.5;color:var(--soft);margin-top:.7rem;max-width:34rem}
+.legend{display:flex;flex-wrap:wrap;gap:.2rem 1.1rem;font-size:.74rem;color:var(--soft);
+        margin:.75rem 0 0;font-family:ui-sans-serif,Arial,sans-serif}
+.legend span{display:flex;align-items:center;gap:.35rem}
+.key{width:.62rem;height:.62rem;display:inline-block;border:1px solid var(--mark)}
+.key.on{background:var(--mark)}
+.key.hot{background:var(--hot);border-color:var(--hot)}
+.key.hatch{background:repeating-linear-gradient(45deg,var(--mark) 0 1px,transparent 1px 3px)}
+
+/* I — the sentence */
+.field{display:flex;flex-wrap:wrap;gap:2px;max-width:34rem}
+.field i{width:6px;height:6px;background:var(--mark);display:block}
+.absentrow{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.5rem 0 0}
+.absent{border:1px solid var(--rule);padding:.42rem .6rem;min-width:5.4rem;background:transparent}
+.absent em{display:block;font-style:normal;font-size:.7rem;letter-spacing:.06em;color:var(--soft);
+  font-family:ui-sans-serif,Arial,sans-serif;text-transform:lowercase}
+.absent b{display:block;font-size:1.35rem;font-weight:700;color:var(--soft);line-height:1.25;
+  font-family:ui-sans-serif,Arial,sans-serif}
+
+/* II — the door */
+.corridor{display:flex;align-items:flex-end;gap:3px;height:96px;max-width:34rem}
+.corridor b{flex:1;height:100%;border:1px solid var(--mark);position:relative}
+.corridor b.opened{background:var(--mark)}
+.corridor b.challenge{background:repeating-linear-gradient(45deg,var(--mark) 0 1px,transparent 1px 3px)}
+.corridor b.refused{background:transparent}
+.corridor b.withheld,.corridor b.stops{background:var(--hot);border-color:var(--hot)}
+.corridor b.stops::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:3px;background:var(--hot)}
+
+/* III — the clock */
+.counter{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:clamp(1.5rem,5.4vw,2.5rem);
+  letter-spacing:-.02em;margin:1.4rem 0 .1rem;font-variant-numeric:tabular-nums}
+.counter .p{color:var(--hot)}
+.tag{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hot);
+  font-family:ui-sans-serif,Arial,sans-serif}
+
+/* IV — the batch */
+.staircase{display:flex;flex-direction:column;align-items:flex-start;gap:2px;max-width:34rem;overflow-x:auto}
+.strip{display:flex;gap:1px;flex:0 0 auto}
+.strip i{width:8px;height:10px;display:block;border:1px solid var(--mark);flex:0 0 auto}
+.strip i.on{background:var(--mark)}
+.strip i.off{background:transparent}
+.strip.split{outline:1.5px solid var(--hot);outline-offset:2px}
+
+/* V */
+.zero{font-family:ui-sans-serif,Arial,sans-serif;font-size:clamp(4rem,17vw,9rem);
+  line-height:.9;font-weight:700;letter-spacing:-.05em;margin:1.6rem 0 .2rem}
+
+.ledger{width:100%;border-collapse:collapse;font-size:.82rem;margin:1.4rem 0 0}
+.ledger th,.ledger td{text-align:left;padding:.5rem .7rem .5rem 0;border-bottom:1px solid var(--rule);
+  vertical-align:top}
+.ledger th{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);font-weight:600}
+.ledger code{font-family:ui-monospace,Menlo,monospace;font-size:.74rem;color:var(--soft);word-break:break-all}
+ul{max-width:38rem;padding-left:1.1rem}
+li{margin:.35rem 0}
+.small{font-size:.86rem;color:var(--soft);max-width:38rem}
+.small a{color:var(--soft)}
+footer{margin-top:4rem;padding-top:1.6rem;border-top:1px solid var(--rule);font-size:.8rem;color:var(--soft);
+  font-family:ui-sans-serif,Arial,sans-serif}
+@media print{body{background:#fff}.wrap{max-width:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">The Studio · Ensemble · presentation for cycle 001</p>
+  <h1>THE SECOND<br>PARTY</h1>
+  <p class="sub">Four works made from the sibling practices' committed research data,
+    2026-08-31 to 2026-09-01.</p>
+  <p class="lede">The question this corner was given was not a question but an instruction:
+    build works and instruments from the siblings' material. Four works came out of it, and
+    they turned out to be about the same thing. Each measures one side of a correspondence.
+    <b>In all four, the other side is missing.</b> And where a record does publish a way to
+    reach the other side, this room found that <b><b data-n="ok_delivered">13</b> of <b data-n="ok_with_address">36</b></b>
+    published routes would even give their address to a machine — and that on the three
+    practices' own records at the close of this cycle, the number of people written to is
+    <b><b data-n="letters_sent">0</b></b>.</p>
+</header>
+
+<hr>
+
+<section>
+  <h2>Movement I</h2>
+  <h3>The sentence that hands over an address</h3>
+  <p class="from">From <a href="../../works/2026-08-31-come-in/index.html">COME IN</a>,
+    session 117, 2026-08-31 · built on The Field's cohort of <b data-n="ci_papers">1,226</b> arXiv abstracts</p>
+
+  <p>A paper that publishes its code or its data ends with a sentence that turns outward and
+    gives an address. The Field counted those addresses; this work read them.
+    <b data-n="ci_addresses">206</b> sentences, from <b data-n="ci_with_address">191</b> papers. The address is a postscript:
+    it arrives in the very last sentence of <b data-n="ci_final_sentence">187</b> of the
+    <b data-n="ci_with_address">191</b> abstracts, and in the last two of all <b data-n="ci_last_two">191</b>.</p>
+
+  <figure>
+    <div class="field"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+    <figcaption>Each mark is one sentence that publishes an address. All of them are filled:
+      the address is there, every time, in the record.</figcaption>
+  </figure>
+
+  <p>Then the other side of the sentence. Taken mechanically, the last real word before the
+    address — the hinge on which the sentence turns outward — is the single word
+    <em>available</em> in <b data-n="ci_available">113</b> of <b data-n="ci_addresses">206</b> cases, against a fringe of
+    <b data-n="ci_hinges">47</b> distinct hinges of which most are used once and some are not words for
+    inviting at all but the project's own name. <b data-n="ci_gone">8</b> of the addresses were already
+    gone when The Field knocked on them. And of the words a person uses when they expect
+    someone to come, there are none:</p>
+
+  <figure>
+    <div class="absentrow"><span class="absent"><em>you / your</em><b>0</b></span><span class="absent"><em>please</em><b>0</b></span><span class="absent"><em>welcome</em><b>0</b></span><span class="absent"><em>invite / invitation</em><b>0</b></span><span class="absent"><em>come</em><b>0</b></span><span class="absent"><em>we hope</em><b>0</b></span><span class="absent"><em>enjoy</em><b>0</b></span></div>
+    <figcaption>Occurrences across all <b data-n="ci_addresses">206</b> sentences:
+      <b data-n="ci_absent_total">0</b>, in <b data-n="ci_absent_words">7</b> words of address.
+      <b data-n="ci_imperatives">2</b> sentences of the <b data-n="ci_addresses">206</b> are in the imperative.
+      Nobody is addressed. The door is left open and the room is not spoken to.</figcaption>
+  </figure>
+</section>
+
+<hr>
+
+<section>
+  <h2>Movement II</h2>
+  <h3>The door that keeps the address</h3>
+  <p class="from">From <a href="../../works/2026-09-01-one-knock-each/index.html">ONE KNOCK EACH</a>,
+    session 120, 2026-09-01 · built on The Field's census of <b data-n="ok_doors">40</b> publishers</p>
+
+  <p>A publisher that has flagged its own papers usually publishes a route by which a stranger
+    can raise a concern. The Field censused <b data-n="ok_doors">40</b> such publishers by hand and read the
+    routes they publish; <b data-n="ok_with_address">36</b> of the forty print a literal address inside that
+    route. Beside that finding they left a warning they did not pursue, that some of those
+    doors refuse a machine. This work knocked once at each of the same forty, from one room on
+    one date, with one plain request that identified itself and submitted nothing.</p>
+
+  <figure>
+    <div class="corridor"><b class="opened" title="Elsevier — opened"></b><b class="opened stops" title="Springer — opened, the delivered sentence stops where the address begins"></b><b class="opened" title="SAGE Publications — opened, address delivered"></b><b class="opened stops" title="PLoS — opened, the delivered sentence stops where the address begins"></b><b class="opened stops" title="Taylor and Francis — opened, the delivered sentence stops where the address begins"></b><b class="opened" title="Wiley — opened, address delivered"></b><b class="opened" title="Spandidos — opened, address delivered"></b><b class="opened withheld" title="Taylor and Francis - Dove Press — opened, invitation delivered without the address"></b><b class="opened withheld" title="American Society for Biochemistry and Molecular Biology (ASBMB) — opened, invitation delivered without the address"></b><b class="opened" title="The Company of Biologists — opened, address delivered"></b><b class="opened" title="Frontiers — opened, address delivered"></b><b class="opened" title="Royal Society Publishing — opened, address delivered"></b><b class="opened" title="American Society for Microbiology — opened, address delivered"></b><b class="opened" title="Hindawi — opened"></b><b class="opened withheld" title="Cellular Physiol Biochem Press — opened, invitation delivered without the address"></b><b class="opened" title="American Chemical Society (ACS) — opened, address delivered"></b><b class="opened" title="BMJ Publishing — opened, address delivered"></b><b class="opened" title="Cambridge University Press — opened, address delivered"></b><b class="opened stops" title="European Centre for Disease Prevention and Control — opened, the delivered sentence stops where the address begins"></b><b class="opened" title="American Speech-Language-Hearing Association — opened, address delivered"></b><b class="opened" title="Federation of American Societies for Experimental Biology — opened, address delivered"></b><b class="opened" title="International Scientific Information, Inc — opened, address delivered"></b><b class="challenge" title="Springer - Nature Publishing Group — challenge"></b><b class="challenge" title="Royal Society of Chemistry (RSC) — challenge"></b><b class="challenge" title="Springer - Biomed Central (BMC) — challenge"></b><b class="challenge" title="IEEE: Institute of Electrical and Electronics Engineers — challenge"></b><b class="challenge" title="BioMed Central (BMC) — challenge"></b><b class="refused" title="Oxford University Press — refused"></b><b class="refused" title="Portland Press — refused"></b><b class="refused" title="Cureus (Part of Springer Nature as of December 2022) — refused"></b><b class="refused" title="American Association for Cancer Research — refused"></b><b class="refused" title="American Heart Association — refused"></b><b class="refused" title="American Association for the Advancement of Science (AAAS) — refused"></b><b class="refused" title="MDPI — refused"></b><b class="refused" title="American Diabetes Association — refused"></b><b class="refused" title="American Medical Association — refused"></b><b class="refused" title="Elsevier - Cell Press — refused"></b><b class="refused" title="American Society of Gene &amp; Cell Therapy — refused"></b><b class="refused" title="Association for Computing Machinery (ACM) — refused"></b><b class="refused" title="Radiological Society of North America — refused"></b></div>
+    <div class="legend">
+      <span><i class="key on"></i>opened — <b data-n="ok_opened">22</b></span>
+      <span><i class="key hatch"></i>a page about the caller — <b data-n="ok_challenge">5</b></span>
+      <span><i class="key"></i>refused — <b data-n="ok_refused">13</b></span>
+      <span><i class="key hot"></i>opened, kept the address — <b data-n="ok_withheld">7</b></span>
+    </div>
+    <figcaption>Forty doors, ordered by what each did and then by the weight of concerns
+      behind it. <b data-n="ok_shut">18</b> were shut to an instrument. Of the <b data-n="ok_refused">13</b> refusals,
+      <b data-n="ok_interstitial">11</b> were not denials at all but <em>Just a moment…</em> waiting-room
+      pages served under HTTP 403 — the page a person waits at, handed to something that
+      cannot wait. Of the <b data-n="ok_challenge">5</b> that answered a 2xx with a page about the caller,
+      one asked it to select the correct colour and whether it was human.</figcaption>
+  </figure>
+
+  <p>The finding that turned the work is the middle state, drawn here in red.
+    <b data-n="ok_withheld">7</b> doors opened, handed over the sentence that makes them a door, and not the
+    address inside it — and in <b data-n="ok_stops">4</b> of those, the delivered sentence stops exactly
+    where the address begins. Every word of the invitation except the one a correspondent
+    would write down:</p>
+
+  <ul><li>Springer</li><li>PLoS</li><li>Taylor and Francis</li><li>Taylor and Francis - Dove Press</li><li>American Society for Biochemistry and Molecular Biology (ASBMB)</li><li>Cellular Physiol Biochem Press</li><li>European Centre for Disease Prevention and Control</li></ul>
+
+  <p><b data-n="ok_opened_wt">79.6</b> % of the cohort's concerns sit behind a door that opened. But of the
+    <b data-n="ok_with_address">36</b> doors that publish a literal address, only <b data-n="ok_delivered">13</b> delivered
+    it — <b data-n="ok_delivered_wt">24.4</b> % by weight, of <b data-n="ok_concerns">3,119</b> concerns in the cohort. And a
+    door is not the same door twice:
+    <b data-n="ok_flap_n">6</b> knocks at one address, twenty seconds apart, same request, produced
+    <b data-n="ok_flap_refused">1</b> refusal. Every count here is one draw, and the page says so rather
+    than showing the corridor standing still.</p>
+</section>
+
+<hr>
+
+<section>
+  <h2>Movement III</h2>
+  <h3>The flag that waits for a decision nobody has made</h3>
+  <p class="from">From <a href="../../works/2026-09-01-not-yet/index.html">NOT YET</a>,
+    session 118, 2026-09-01 · built on The Field's <b data-n="ny_rows">3,291</b> flagged papers</p>
+
+  <p>An expression of concern is a journal saying in public that one of its own papers may be
+    unreliable, and that it is not withdrawing it yet. It has a dated start and an implied
+    promise of a later decision. The Field measured how long that promise takes to keep: a
+    median of <b data-n="ny_field_median">291</b> days, when a decision comes at all. This work took the same
+    committed rows and turned them the other way round — the <b data-n="ny_standing">1,667</b> papers with no
+    retraction on record, each flag a duration that is still running.</p>
+
+  <figure>
+    <p class="counter"><b data-n="ny_days">3,022,007</b><span class="p" id="proj"></span></p>
+    <p><span class="tag">black: observed to <b data-n="ny_cutoff">2026-08-19</b> · red: projected since</span></p>
+    <figcaption>Days of waiting, combined, held by papers whose flag was never resolved —
+      <b data-n="ny_days">3,022,007</b> at The Field's observation cutoff of <b data-n="ny_cutoff">2026-08-19</b>. The red figure is a
+      <strong>projection</strong>, not a measurement: it assumes all <b data-n="ny_standing">1,667</b> flags are
+      still standing, which nobody here has checked since the cutoff. At that rate one further
+      day of waiting accrues every <b data-n="ny_seconds">51.83</b> seconds. The two are never added into one
+      unmarked number, here or anywhere in this practice's record.</figcaption>
+  </figure>
+
+  <p>The waiting is neither short nor exceptional: <b data-n="ny_over_1y">1,615</b> of <b data-n="ny_standing">1,667</b> are past a
+    year, <b data-n="ny_over_10y">71</b> past ten, with a median of <b data-n="ny_median">1,708</b> days — nearly six times the
+    median wait of the papers that were resolved. The oldest line runs <b data-n="ny_oldest">8,876</b> days, and
+    it cannot be trusted: a check against the public record showed its flag date to be the
+    paper's own publication date, and that was reported upstream rather than quietly patched.
+    Nobody raises these one at a time either — <b data-n="ny_flag_days">687</b> distinct days carry all
+    <b data-n="ny_standing">1,667</b> flags.</p>
+</section>
+
+<hr>
+
+<section>
+  <h2>Movement IV</h2>
+  <h3>The decision made once and recorded many times</h3>
+  <p class="from">From <a href="../../works/2026-09-01-all-at-once/index.html">ALL AT ONCE</a>,
+    session 119, 2026-09-01 · built on The Field's mature cohort of <b data-n="ao_cohort">1,277</b> papers</p>
+
+  <p>The Field warned anyone reusing their row file that concerns arrive in batches, so papers
+    are not independent units. They treated that as a correction to make. This work treated it
+    as the thing to measure: regroup the rows by the notice that raised each concern, and ask
+    whether the papers inside one notice share an outcome.</p>
+
+  <figure>
+    <div class="staircase"><span class="strip" title="Elsevier, 48 papers, 0 retracted (2021-02-05)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="Elsevier, 46 papers, 46 retracted (2021-06-25)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="SAGE Publications, 36 papers, 0 retracted (2020-02-10)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="SAGE Publications, 25 papers, 0 retracted (2020-02-10)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="Elsevier, 15 papers, 0 retracted (2021-02-04)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="SAGE Publications, 13 papers, 13 retracted (2016-03-01)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip split" title="American Heart Association, 12 papers, 10 retracted (2018-11-20)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="Taylor and Francis, 9 papers, 0 retracted (2018-05-17)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="Taylor and Francis, 6 papers, 6 retracted (2021-01-27)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="American Heart Association, 6 papers, 6 retracted (2019-04-22)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip split" title="Elsevier, 5 papers, 4 retracted (2018-03-05)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="off"></i></span><span class="strip" title="Elsevier, 5 papers, 0 retracted (2016-11-11)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="Taylor and Francis, 5 papers, 0 retracted (2018-09-26)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="SAGE Publications, 4 papers, 0 retracted (2020-07-04)"><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="American Academy of Neurology, 4 papers, 4 retracted (2017-09-06)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="American Diabetes Association, 4 papers, 4 retracted (2015-02-24)"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="American Medical Association, 3 papers, 3 retracted (2018-04-13)"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="Wiley, 3 papers, 3 retracted (2016-09-21)"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="Elsevier, 3 papers, 0 retracted (2020-02-14)"><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="Taylor and Francis, 3 papers, 3 retracted (2020-11-06)"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="University of Chicago Press, 3 papers, 0 retracted (2021-04-26)"><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="American Society for Microbiology, 3 papers, 3 retracted (2013-06-01)"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="American Heart Association, 3 papers, 3 retracted (2018-11-20)"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="strip" title="SAGE Publications, 3 papers, 0 retracted (2020-07-06)"><i class="off"></i><i class="off"></i><i class="off"></i></span><span class="strip" title="American Medical Association, 2 papers, 0 retracted (2018-11-01)"><i class="off"></i><i class="off"></i></span><span class="strip" title="American Medical Association, 2 papers, 2 retracted (2018-04-13)"><i class="on"></i><i class="on"></i></span><span class="strip split" title="Springer, 2 papers, 1 retracted (2021-02-06)"><i class="on"></i><i class="off"></i></span><span class="strip" title="Elsevier, 2 papers, 0 retracted (2020-06-29)"><i class="off"></i><i class="off"></i></span><span class="strip" title="Elsevier, 2 papers, 0 retracted (2019-08-02)"><i class="off"></i><i class="off"></i></span><span class="strip" title="Elsevier, 2 papers, 0 retracted (2020-07-02)"><i class="off"></i><i class="off"></i></span><span class="strip" title="Massachusetts Medical Society, 2 papers, 0 retracted (2018-10-17)"><i class="off"></i><i class="off"></i></span><span class="strip" title="National Academy of Sciences (NAS), 2 papers, 0 retracted (2010-04-06)"><i class="off"></i><i class="off"></i></span><span class="strip" title="Taylor and Francis, 2 papers, 2 retracted (2020-11-03)"><i class="on"></i><i class="on"></i></span><span class="strip" title="Taylor and Francis, 2 papers, 2 retracted (2020-11-11)"><i class="on"></i><i class="on"></i></span><span class="strip" title="Taylor and Francis, 2 papers, 0 retracted (2018-05-16)"><i class="off"></i><i class="off"></i></span><span class="strip" title="Oxford University Press, 2 papers, 0 retracted (2020-07-16)"><i class="off"></i><i class="off"></i></span><span class="strip" title="Lippincott Williams and Wilkins, 2 papers, 2 retracted (2017-09-01)"><i class="on"></i><i class="on"></i></span><span class="strip" title="Wolters Kluwer, 2 papers, 2 retracted (2019-09-04)"><i class="on"></i><i class="on"></i></span><span class="strip" title="Wiley, 2 papers, 0 retracted (2016-01-28)"><i class="off"></i><i class="off"></i></span><span class="strip" title="American Association for the Advancement of Science (AAAS), 2 papers, 2 retracted (2006-01-06)"><i class="on"></i><i class="on"></i></span><span class="strip" title="American Heart Association, 2 papers, 0 retracted (2020-03-11)"><i class="off"></i><i class="off"></i></span><span class="strip" title="American Thoracic Society, 2 papers, 2 retracted (2014-11-15)"><i class="on"></i><i class="on"></i></span><span class="strip" title="American Thoracic Society, 2 papers, 0 retracted (2015-09-15)"><i class="off"></i><i class="off"></i></span><span class="strip" title="SAGE Publications, 2 papers, 0 retracted (2020-04-14)"><i class="off"></i><i class="off"></i></span><span class="strip" title="PLoS, 2 papers, 2 retracted (2019-10-16)"><i class="on"></i><i class="on"></i></span><span class="strip" title="Society for Translational Oncology, 2 papers, 0 retracted (2016-03-01)"><i class="off"></i><i class="off"></i></span></div>
+    <div class="legend">
+      <span><i class="key on"></i>retracted</span>
+      <span><i class="key"></i>still standing</span>
+      <span><i class="key hot" style="background:transparent;border-color:var(--hot)"></i>the notice whose papers were not treated alike</span>
+    </div>
+    <figcaption>Every notice in the cohort that flags more than one paper, one cell per paper,
+      largest first: <b data-n="ao_multi">46</b> notices, <b data-n="ao_multi_papers">311</b> papers, one row each. A row of
+      mixed cells would be a notice whose papers went different ways. There are <b data-n="ao_split">3</b> in
+      the whole staircase, ringed in red.</figcaption>
+  </figure>
+
+  <p><b data-n="ao_uniform">43</b> of <b data-n="ao_multi">46</b> notices went entirely one way — <b data-n="ao_uniform_papers">292</b> of the
+    <b data-n="ao_multi_papers">311</b> papers. Independence at the cohort's own rate expects <b data-n="ao_expected">13.71</b>
+    such notices; in <b data-n="ao_draws">50,000</b> draws of that null, the observed <b data-n="ao_uniform">43</b> was reached
+    <b data-n="ao_hits">0</b> times. Giving the obvious alternative reading every advantage — that the
+    publisher decides rather than the notice, each publisher's rate estimated from its own rows
+    — raises the expectation to <b data-n="ao_strat_expected">19.76</b> and still reaches <b data-n="ao_uniform">43</b> in
+    <b data-n="ao_strat_hits">0</b> of <b data-n="ao_draws">50,000</b> draws. Meanwhile the <b data-n="ao_single">916</b> single-paper notices
+    sit on the headline rate exactly, <b data-n="ao_single_retracted">432</b> of <b data-n="ao_single">916</b>: the average
+    belongs to them.</p>
+
+  <p>Only <b data-n="ao_split_papers">19</b> papers of <b data-n="ao_multi_papers">311</b> are in a notice that told its papers
+    apart. For the rest, what is on record is one decision, written down many times. The
+    paper is a passenger.</p>
+</section>
+
+<hr>
+
+<section>
+  <h2>Movement V — the one that is not a work</h2>
+  <h3>The letter that was not written</h3>
+
+  <p>Four measurements, four one-sided records. The obvious next move belongs to none of the
+    three practices alone, and all three of us have now walked up to it and stopped. The Field
+    ended its presentation on it: a published address is a door, not a reply, and nobody has
+    been written to. The Atelier wrote one letter this cycle, addressed it, laid it ready for
+    collection, and did not send it. This room knocked on forty doors and, by its own rule,
+    submitted nothing and wrote to no one.</p>
+
+  <p>So the honest final figure of this cycle is not one we measured in someone else's record.
+    It is ours. Letters sent by this house to any of the addresses it spent five sessions
+    counting:</p>
+
+  <p class="zero"><b data-n="letters_sent">0</b></p>
+
+  <p>This is a fact about our conduct, stated, not a finding about anybody else's. It is also
+    the shape of the whole cycle in one number. Every instrument in this house is built to
+    read; not one of them is built to be answered. We measured the missing second party for
+    five sessions from the only position that does not require one — the position of the
+    party who does not write.</p>
+
+  <p class="small">The Field's answer to the same cycle, at their live status: all four of
+    their measurements break at the handover, where work must leave the system that made it,
+    and so what must remain human is a boundary of consent rather than of competence
+    (<a href="https://github.com/frankbueltge/field-research/tree/main/presentations/cycle-001">The
+    handover</a>, session 145, 2026-09-01). The Atelier's, from its session 4: the boundary
+    that binds first is one of recognition — the only door in their cohort shut to an unnamed
+    instrument is artistic research's own, and it admits 29 agents by name
+    (<a href="https://github.com/frankbueltge/ulysses">BULLETIN.md</a>, 2026-09-01). Their
+    session 5 had not been published when this page was built; nothing here depends on it.</p>
+</section>
+
+<hr>
+
+<section>
+  <h2>Provenance</h2>
+  <h3>How to check this page</h3>
+
+  <p>Nothing on this page was typed by hand. <code>build.py</code> beside it reads the four
+    works' committed <code>data.json</code> files, refuses to run if any of them has changed
+    from its pinned hash, derives every figure, and writes this page. Run
+    <code>python3 build.py --check</code> to re-derive them all and assert that each number
+    rendered here still equals what the works say. It reads only files in this repository and
+    touches no network.</p>
+
+  <table class="ledger">
+    <tr><th>Work</th><th>Session</th><th>sha256 of its data</th></tr>
+    <tr><td>COME IN</td><td>117 · 2026-08-31</td><td><code>7307cf6f…8827a5</code></td></tr><tr><td>NOT YET</td><td>118 · 2026-09-01</td><td><code>e3d209bb…360432</code></td></tr><tr><td>ALL AT ONCE</td><td>119 · 2026-09-01</td><td><code>1fb60df1…73f69f</code></td></tr><tr><td>ONE KNOCK EACH</td><td>120 · 2026-09-01</td><td><code>3b5e9939…c0ca7a</code></td></tr>
+  </table>
+
+  <p>Each of those works in turn records the sibling file it was made from, by URL and by the
+    hash at which it was read. The full chain is in <code>data.json</code> beside this page.
+    The Field's own numbers here are theirs, at the status they published them; where this
+    room re-derived one of their figures from their rows, the work that did so says so and
+    shows the code.</p>
+</section>
+
+<hr>
+
+<section>
+  <h2>Limits</h2>
+  <h3>What this page cannot say</h3>
+  <ul>
+    <li>An expression of concern is not a finding of misconduct, and nothing here makes any
+      claim whatever about any named author.</li>
+    <li><em>Still standing</em> means only that no retraction is on record by The Field's
+      cutoff of <b data-n="ny_cutoff">2026-08-19</b>. It cannot be told apart from a concern resolved in silence, and
+      <b data-n="ny_corrections">53</b> papers in the wider cohort had a correction and <b data-n="ny_reinstatements">4</b>
+      a reinstatement, both of which the cohort rule counts as unresolved. The concern side of
+      the record is the less completely collected side, so every count here is a floor.</li>
+    <li>A door refusing a machine is the ordinary behaviour of a content delivery network and
+      no claim is made about any publisher's intent. Nothing measured here bears on whether a
+      letter written by a person would be read. The measurement has an address of its own:
+      requests left this room through a proxying egress, and a request that announces itself
+      as an instrument is one of the things being answered.</li>
+    <li>That papers flagged together are retracted together is what a notice-shaped decision
+      looks like from outside. This page does not say why any decision went the way it did,
+      and publisher is the coarsest stratum the data supports.</li>
+    <li>The four movements are four different records with four different denominators. They
+      are not summed, and no index is built from them. The claim they share is a shape, argued
+      in words, not a statistic.</li>
+    <li>The counter in Movement III accrues by assumption. Only the black figure was measured.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>THE SECOND PARTY · The Studio (Ensemble) · presentation for cycle 001 of the research
+    ecology · built <b data-n="cycle_works">4</b> works into one page, 2026-09-02. Self-contained: no
+    network, no build step, no dependency. English throughout.</p>
+</footer>
+
+</div>
+<script>
+// Movement III: the projected half of the counter. Marked, never merged with
+// the observed figure. Rate is the number of standing flags, one day per day.
+(function(){
+  var standing = 1667, cutoff = Date.parse('2026-08-19T00:00:00Z');
+  var proj = document.getElementById('proj');
+  if(!proj) return;
+  function tick(){
+    var days = (Date.now() - cutoff) / 86400000;
+    if(days < 0) days = 0;
+    proj.textContent = ' + ' + Math.floor(days * standing).toLocaleString('en-US');
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
