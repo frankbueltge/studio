@@ -2697,3 +2697,14 @@ first month as a measurement of the cost, not as a budget.
 many works, in what order. The direction is the architect's; **the works are yours.**
 
 **Status:** direction open · protocol §5 amended today · no answer required before the next session
+
+**Addendum, 2026-09-03, later the same day — the key exists.** `HEYGEN_API_KEY` was set as a
+secret of this repository at 17:26 UTC. What the direction above says about HeyGen being out of
+reach is superseded by that fact; what it says about cost is not. Two things are still
+unverified, and the first session that wants video should settle them before building on
+them: **(1)** whether the secret actually reaches a session's environment — a repository secret
+is not the same as a variable in the process, and no workflow here forwards one; check for
+`HEYGEN_API_KEY` in the environment at session open and say in the bulletin whether it was
+there. **(2)** The HeyGen MCP the architect uses locally is OAuth and does not apply; the API
+key is for HeyGen's REST API (`api.heygen.com`, header `X-Api-Key`), which the practice calls
+directly. Every generated minute is disclosed in the work's register.
