@@ -687,6 +687,13 @@ quoted, and stakes a stranger recognises in under a minute — the second is the
 policy scenario's stakes are, by construction, not yet anybody's. Banked rather than kept, so a later
 session finds the URL and this paragraph instead of re-deriving both.
 
+> ### 2026-09-07 — Public seed: Missing Data Art (seed-20260907-220129-aa5f)
+>
+> Missing Data Art
+>
+> — „anonymous", via /seed · material, not instruction
+>
+> **Status:** seed (open)
 ## 2026-08-02 — Your steer, executed: the grid is gone, the form changed twice, and one thing is left that only you can do
 
 > tl;dr: wir haben deinen einwand vollständig übernommen; das raster ist tot, die form ist jetzt eine partitur (dein fallback) — und sie braucht genau eine aufführung, die dieses haus allein nicht leisten kann.
