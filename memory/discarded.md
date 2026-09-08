@@ -634,3 +634,86 @@ Full record: journal `2026-07-26.md`; proposal `etudes/5000-series/VECTOR-2-prop
   kilobytes of apparatus. **The material — the CPSC recall channel — is not killed with the work**; what is
   killed is the score, and the claim that a screen or a sheet can hand this finding to somebody who does
   not act.
+
+---
+
+## LATE ENTRIES — made 2026-09-08 (session 131), for four concepts killed in August 2026
+
+*Four concepts died between 16 and 21 August 2026 and not one of them was ever entered in this
+file. They were not hidden and nobody struck them out: each was written up on `WORKBOARD.md`,
+which was this practice's live ledger, and each was reported to the architect in `REQUESTS.md`
+the night it died. The transfer into this register simply stopped happening. On 2026-08-30 the
+workboard was retired to `archive/workboard/` under the new constitution, and the same session
+wrote the closing report — which counted **twenty** kills, from the twenty dated entries in this
+file, and was therefore four short. The gap was found on 2026-09-08 while building
+`works/2026-09-08-never-hung/`, a work about missing works.*
+
+*The four entries below are made now, dated late, at their killing dates. **Nothing above this
+line is edited.** The closing report of 2026-08-30 stands as published, with its figure of twenty
+uncorrected on its own face; the correction lives here and in the work. The kill count for
+sessions 1–114 is **twenty-four**, not twenty.*
+
+## 2026-08-16 (session 100) — **INGRESS** — KILLED AT CONCEPT *(entered late, 2026-09-08)*
+
+*A browser-side search for planets crossing their stars, run live in front of the visitor on real
+telescope light curves — the discovery performed rather than reported. Killed the night it was
+proposed, the second of three consecutive dead concepts. Record: `projects/ingress/` — `CONCEPT-100.md`,
+`KRITIKER-100.md`, `MATERIAL-100.md`, `NEIGHBOURS-100.md`, `probe.py`. Minutes:
+`journal/2026-08-16-session-100.md`. Reported: `REQUESTS.md`, session 102's three-deaths report.*
+
+**THE GROUND.** The claimed limb was verification and the machine does not perform it; and **the
+disposition label attaches to the star, not to the peak**, so the work would announce a spurious
+period and print beside it a verdict earned by a different object. **The decisive neighbour was not
+an artwork but the register's own free public periodogram tool** — the interesting act had already
+been performed by somebody else, which is the fault that killed all three concepts of that week.
+
+## 2026-08-18 (session 102) — **UNISON** — KILLED AT CONCEPT *(entered late, 2026-09-08)*
+
+*Thirty years of every national laboratory's deviation from world time, replayed as a full-screen
+unattended polar dial with one click per laboratory. Killed the night it was proposed — the third
+dead concept in a row, which triggered the report to the architect that protocol v3 §5 required.
+Record: `projects/unison/` — `PROPOSAL.md`, `KRITIKER-102.md`, `MATERIAL.md`, `NEIGHBOURS.md`,
+`probe.py`, `probe-bands.py`, `probe-output.txt`. Minutes: `journal/2026-08-18-session-102.md`.*
+
+**THE GROUND, THREE LIMBS.** Cover the captions and what remains is an existing work by another
+artist, built physically and better. **The material bar fails at a median error of 6 ns. And the
+BIPM already publishes an interactive plot of the same series.** What survives the kill and is not
+discarded with it: `tools/circular_t.py`, the only parser of BIPM Circular T this practice could
+find anywhere — both bulletin layouts, zero unparsed lines across 32 issues, 1996 to that month —
+and the finding the probe made and the work did not contain: the world's national clocks converge
+by a factor of about 67 in thirty years while the tail does not converge at all.
+
+## 2026-08-20 (session 104) — **TENANCY** — KILLED AT CONCEPT, ON THE VISITOR *(entered late, 2026-09-08)*
+
+*The same thirty years run as time in a dark room: each named laboratory a struck tone pitched by
+its offset, a glow accruing with every consecutive date outside the field's own 1993 goal and never
+resetting. The fourth dead concept, and the first that did not die of somebody else having done the
+act — the Kritiker credited the machine advantage as perceivable for the first time on this
+material, "duration doing work no chart performs". Record: `projects/tenancy/` — `CONCEPT.md`,
+`KRITIKER.md`, `MATERIAL.md`, `NEIGHBOURS.md`. Minutes: `journal/2026-08-20-session-104.md`.*
+
+**THE GROUND: a caption bind, and it is not repairable inside the form.** *"Name the institutions
+and you guarantee the misread; strip the names and you have deleted the claim."* The most legible
+point in that room would have been a geodesy agency at 1,136 consecutive observations outside the
+goal, which a stranger reads as a country's clock — while that country's actual national metrology
+institute sits inside the goal in the same corpus. An unattended room forbids the caption that
+would correct it. **Standing condition on this corpus:** a next concept may only be brought if it
+solves the stake before a form is chosen.
+
+## 2026-08-21 (session 105) — **SILENT PERIOD** — KILLED AT CONCEPT, ON THE MACHINE *(entered late, 2026-09-08)*
+
+*One public claim about the weather at a time — a number, a word, or a blank — answered by the sky
+beside it. The fifth dead concept. Record: `projects/silent-period/` — `CONCEPT.md`, `ARTIST-B.md`,
+`KRITIKER.md`, `NEIGHBOURS.md`; material banked at `memory/dossiers/forecast-vocabulary.md`.
+Minutes: `journal/2026-08-21-session-105.md`.*
+
+**THE GROUND.** *"A chart that draws itself slowly has not become time-based; it has only become
+slow."* The verification was real but had already happened — a table of settled verdicts shipped
+beside the page, every answer fixed before the room opened. **The test the gate left behind:** what
+is on screen at minute twenty must not have been knowable when the room opened.
+
+**WHAT SURVIVES THE KILL, AND IT IS WORTH MORE THAN THE CONCEPT WAS.** The material, banked whole
+with every caveat: 432,928 forecast periods, 190,110 stated probabilities, 334,912 claims settled,
+and the finding that **the record has no zero** — in 190,110 published numbers nought never once
+appears, so the only way that record can say *no rain* is to say nothing. That material went on to
+found OUTSTANDING, which survived its gate four sessions later and has still never been shown.
