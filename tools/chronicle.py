@@ -12,6 +12,16 @@ this house's own file held 84. The build letters that came back
 first two lines of the error, which is all the site can honestly say — whose defect it is
 "cannot be derived from the log".
 
+And a third time on 2026-09-09, in a shape this instrument could not see. Session 132
+wrote `journal/2026-09-09-session-132.md` and never appended its entry, so the file was
+131 entries against 132 sessions in the journal. Every entry present was inside the
+contract, so this instrument said so and exited 0. The site's gate counts the two against
+each other (`src/lib/studio/chronicle.test.ts`, "every served anchor resolves against the
+real synced journals") and refused the night: `expected 131 to be 132`. Studio integrate
+was red three times that day and session 132 did not reach the site. A malformed entry and
+a missing one darken the site alike, so the completeness check below is part of the
+contract this instrument enforces, not a separate courtesy.
+
 So: a file this house writes every session, validated against a contract this house has
 committed, by a command a stranger can run.
 
@@ -20,22 +30,27 @@ committed, by a command a stranger can run.
 
 WHAT IT CAN AND CANNOT SAY. It can say that every entry carries the required keys, that
 `move` is one of the seven words the site accepts, that `verdict` is one of the accepted
-words or null, that dates parse and that session numbers do not go backwards. It CANNOT
-say that the site's own schema is still the one written down here: that file lives in
-another repository and this instrument does not read it. If the gate ever goes red on a
-chronicle this instrument passes, the contract in SITE-API.md is the thing to re-read
-first, and this file is what gets corrected.
+words or null, that dates parse and that session numbers do not go backwards. It can say
+that the number of entries matches the number of sessions the journal holds, and name the
+days where the two disagree. It CANNOT say that the site's own schema is still the one
+written down here: that file lives in another repository and this instrument does not read
+it. It also cannot say whether a missing entry is the night's or an older one — it reports
+the day, and the house reads the journal. If the gate ever goes red on a chronicle this
+instrument passes, the contract in SITE-API.md is the thing to re-read first, and this
+file is what gets corrected.
 """
 
 import argparse
 import datetime
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
 CHRONICLE = os.path.join(ROOT, "chronicle.json")
+JOURNAL = os.path.join(ROOT, "journal")
 
 # SITE-API.md, "The chronicle self-report". Both lists are copied from the contract, and
 # the contract is the authority — not this file, and not the house's own vocabulary.
@@ -83,15 +98,95 @@ def check(entries):
     return problems
 
 
+DAY = re.compile(r"^(\d{4}-\d{2}-\d{2})")
+FENCE = re.compile(r"^(```|~~~)")
+H1 = re.compile(r"^# ")
+
+
+def count_sessions(body):
+    """Sessions in one journal day, counted the way the site splits them.
+
+    Mirrors `splitSessions` in the site's src/lib/engines/journal.ts: a session starts at
+    every top-level H1, a `# ` line inside a code fence is not a heading (these journals
+    quote shell and yaml), text before the first H1 is its own chunk, and a file with no
+    H1 at all is one session. The site derives one anchor per session and requires one
+    chronicle entry per anchor, so this count is the number the site will expect.
+    """
+    chunks, current, in_fence = [], [], False
+    for line in body.split("\n"):
+        if FENCE.match(line):
+            in_fence = not in_fence
+        elif not in_fence and H1.match(line) and any(l.strip() for l in current):
+            chunks.append(current)
+            current = []
+        current.append(line)
+    if current:
+        chunks.append(current)
+    return len([c for c in ("\n".join(c) for c in chunks) if c.strip()]) or 1
+
+
+def journal_sessions(journal_dir):
+    """{day: session count} for every `YYYY-MM-DD*.md` in the journal directory."""
+    days = {}
+    for name in sorted(os.listdir(journal_dir)):
+        if not name.endswith(".md"):
+            continue
+        m = DAY.match(name)
+        if not m:
+            continue
+        with open(os.path.join(journal_dir, name), encoding="utf-8") as fh:
+            days[m.group(1)] = days.get(m.group(1), 0) + count_sessions(fh.read())
+    return days
+
+
+def check_completeness(entries, journal_dir):
+    """Does the self-report cover every session the journal holds, day by day?
+
+    Checked per day rather than only in total, because two errors that cancel in the total
+    (a missing entry on one night, a duplicate on another) leave the site's anchor set and
+    the chronicle the same length and still mismatched. Across the 131 entries and 122
+    journal days standing on 2026-09-09, the day is the key the two agree on everywhere.
+    """
+    problems = []
+    if not os.path.isdir(journal_dir):
+        return problems
+    in_journal = journal_sessions(journal_dir)
+    in_chronicle = {}
+    for e in entries:
+        if isinstance(e, dict) and isinstance(e.get("date"), str):
+            in_chronicle[e["date"]] = in_chronicle.get(e["date"], 0) + 1
+    for day in sorted(set(in_journal) | set(in_chronicle)):
+        j, c = in_journal.get(day, 0), in_chronicle.get(day, 0)
+        if j == c:
+            continue
+        if j > c:
+            problems.append(
+                f"{day}: {j} session(s) in the journal, {c} entry/entries in chronicle.json "
+                "— the site renders a session the self-report does not cover, and refuses "
+                "the night for it"
+            )
+        else:
+            problems.append(
+                f"{day}: {c} entry/entries in chronicle.json, {j} session(s) in the journal "
+                "— the self-report claims a session the journal does not hold"
+            )
+    return problems
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--file", default=CHRONICLE)
+    ap.add_argument(
+        "--journal",
+        default=JOURNAL,
+        help="journal directory to check the entries against; skipped if absent",
+    )
     args = ap.parse_args()
 
     with open(args.file, encoding="utf-8") as fh:
         entries = json.load(fh)
-    problems = check(entries)
+    problems = check(entries) + check_completeness(entries, args.journal)
 
     if args.json:
         print(json.dumps({"entries": len(entries), "problems": problems}, indent=2))
