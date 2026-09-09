@@ -84,15 +84,18 @@ python3 "$PREREG" verify "$UNFROZEN" > "$TMPDIR/verify4.out" 2>&1
 rc=$?
 [ "$rc" -eq 2 ] || fail "verify on an unfrozen file did not exit 2 (got $rc); output: $(cat "$TMPDIR/verify4.out")"
 
-# --- 8. record_words.py against the real manifest ---
-RECORD_OUT="$TMPDIR/record.out"
-( cd "$REPO_ROOT" && python3 "$RECORD_WORDS" > "$RECORD_OUT" 2>&1 )
-rc=$?
-if [ "$rc" -ne 0 ] && [ "$rc" -ne 1 ]; then
-  fail "record_words.py against the real manifest exited $rc (expected 0 or 1); output: $(cat "$RECORD_OUT")"
-fi
-grep -q "STANDING INSTRUMENT" "$RECORD_OUT" || fail "record_words.py output did not label the standing instrument"
-grep -q "reference only" "$RECORD_OUT" || fail "record_words.py output did not print the reference-only figure"
+# --- 8. record_words.py — RETIRED 2026-09-09 (session 132) ---
+# This step ran the word-ceiling measurement against the real manifest. Protocol v4 §4
+# (2026-08-30) abolished record ceilings outright, and the same night WORKBOARD.md — the
+# manifest's second entry — was retired to archive/workboard/, so the tool has exited 2 on a
+# path missing from HEAD ever since. That failure was found and reported on 2026-09-08 and
+# left standing for one session so it would not be found a third time; it is closed here.
+# Repointing the path would keep a dead instrument running, so the instrument is retired
+# instead. Nothing is deleted: record_words.py and its manifest stay in the tree, and the
+# manifest carries a dated superseded header. What this step now proves is that retirement.
+grep -q "SUPERSEDED 2026-09-09" "$REPO_ROOT/tools/record-files.txt" \
+  || fail "tools/record-files.txt is not marked superseded, but the selftest no longer runs it"
+[ -f "$RECORD_WORDS" ] || fail "record_words.py was deleted; a retired instrument stays in the record"
 
 # --- 9. renders.py: the provenance guard, proved by making it fire ---
 RENDERS="$SCRIPT_DIR/renders.py"

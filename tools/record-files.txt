@@ -1,3 +1,14 @@
+# SUPERSEDED 2026-09-09 (session 132). This manifest fed tools/record_words.py, which
+# measured the live process record against the 3,000-word ceiling of the Production
+# Amendment. Protocol v4 §4 of 2026-08-30 abolished record ceilings outright, and the same
+# night WORKBOARD.md — the second entry below — was retired to archive/workboard/, so the
+# tool has exited 2 on a path that is no longer in HEAD ever since. Found and reported to
+# the architect on 2026-09-08, left standing one session, and closed here on this room's own
+# authority under the channel's standing rule: the instrument is retired rather than
+# repointed, because what it measures no longer exists. Nothing below is edited and nothing
+# is deleted (PROTOCOL §7); tools/selftest.sh no longer runs the tool and asserts this
+# header instead.
+
 # Manifest for tools/record_words.py — the live process record this house measures
 # against the 3,000-word ceiling of Production Amendment rule 6.
 # Blank lines and lines starting with '#' are comments.
