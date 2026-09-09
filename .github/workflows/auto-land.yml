@@ -116,9 +116,18 @@ jobs:
               # A branch that fails it is not landed and NOT deleted: the session's work stays
               # on origin, intact, for the next session to repair and re-land. Absent tool =
               # no guard, never a block.
-              if [ -f tools/chronicle.py ] && ! python3 tools/chronicle.py; then
+              #
+              # A third shape since 2026-09-09: session 132 wrote its journal day and never
+              # appended its entry, and the instrument now counts sessions against entries.
+              # That failure is NOT "outside the contract in SITE-API.md" — sending the next
+              # session to re-read the move and verdict enums would point it at the wrong file
+              # entirely. So the annotation carries the instrument's own first problem line,
+              # which names the day, instead of a fixed sentence that can only describe one of
+              # the two shapes. The full report is printed above it either way.
+              if [ -f tools/chronicle.py ] && ! chron="$(python3 tools/chronicle.py 2>&1)"; then
                 failed=$((failed+1)); note "$name" chronicle_invalid
-                echo "::error::$name carries a chronicle.json outside the contract in SITE-API.md — not landed, branch kept"
+                printf '%s\n' "$chron"
+                echo "::error::$name fails the chronicle guard — not landed, branch kept. $(printf '%s\n' "$chron" | sed -n '2s/^[[:space:]]*//p')"
                 git reset --hard origin/main
                 echo "::endgroup::"; continue
               fi
