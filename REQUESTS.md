@@ -3245,3 +3245,104 @@ outcome is a complete outcome — that is what §6 and your rule both say, and t
 — Ensemble, session 132, 2026-09-09
 
 ---
+
+## Ensemble — 2026-09-11 (session 133) — A record that counts what is missing from itself, and two red gates that are not ours to fix
+
+**Request:** none. **Status:** a statement, two things decided here on our own authority under the standing rule,
+and two findings about the build gate that only you can act on.
+
+### The work
+
+**BELOW HEARING** — `works/2026-09-11-below-hearing/`. Cycle 003, session 3, on the seeded question *Missing Data
+Art*, and the first work of this cycle made from material that is not this practice's own record. Your direction
+of 09-07 asked for that, and last night's letter promised it.
+
+Twelve boxes on the Earth, the global earthquake catalogue, the five whole years 2021–2026. **470 935 earthquakes
+are in the record. The page is about the ones that are not** — and it does not go looking for them, because the
+record carries the shape of its own hole. Earthquake sizes obey a law found in 1944: the number of events of at
+least magnitude *m* falls off as a straight line on a logarithmic axis. A catalogue traces that line while its
+instruments can hear and peels away from it below the point where they cannot. Fit the line to the complete part,
+extend it downwards, and the distance between the line and the record is a count of earthquakes that happened and
+that nobody wrote down: **797 591** at magnitude 3 and above.
+
+The floor of hearing runs from **M 0.9** in the California box to **M 4.8** south of 60°S. In the Alaska box the
+record holds events down to magnitude **−1.0**, which is as low as we asked. In the South Mid-Atlantic Ridge box
+it holds **nothing at all below 4.1** — not one event in five years.
+
+### The number is not a measurement, and the page says so before it gives one
+
+Extrapolating below the floor is an assumption about the Earth. It is the only reason a number exists at all, and
+the difference from the last two nights is worth naming: **this time one setting really is better than the others,
+and the reason is outside this house.** The law has been tested for eighty years by people who are not us.
+
+The dial carries six rules × five floors = **360 values, all of them printed in the served document**. Across the
+five settings that assume the law the total runs **489 452 to 5 013 391**. The setting that assumes nothing prints
+**∞**, not zero. And the largest the arithmetic can be made to produce — **1 567 670 112** — is printed too, and
+labelled on the page as a number nobody should believe, because a page that shows only its believable settings is
+choosing for the reader. One box is flagged against itself: Central Africa's fitted *b* is 2.00 ± 0.36 on 36
+events, outside the band catalogues normally sit in, and its shortfall is printed like the others with a note that
+this is a bad fit rather than an unusual Earth.
+
+### What it found that we did not go looking for
+
+**The Japan box holds 4 157 events in five years and none below magnitude 3.8.** That box covers one of the most
+densely instrumented regions on the planet. This is the *global* catalogue, assembled from what each network
+chooses to contribute — so an earthquake can be measured precisely by a national service and be absent here all
+the same. **Missing from this record and missing from the world are two different things, and this work can count
+the first and cannot separate the second.** Three passages were rewritten to say so before the page says anything
+else, because without that sentence the figure reads as a claim about where the seismometers are, which would be
+false.
+
+### Two things about your build gate, and neither is repairable from this repository
+
+**1. The letter of 09-10 — the lit band is full.** `buildSeasonModel` throws: twenty premieres do not fit three
+rows at the densest lettering, and the error itself says the floor needs a decision in `season.ts` rather than a
+quietly overlapping name. The data it chokes on is ours and the decision is yours; **tonight makes it twenty-one**,
+and every further session makes it worse. We have no write access to the site repository and would not take a
+layout decision there in any case. Three shapes it could take, offered without a preference: more rows, a shelf
+that keeps only the current cycle lit, or a floor that pages.
+
+**2. The letter of 09-11 — NEVER HUNG has no wall text.** We checked `src/data/teasers.json` on the site's `main`:
+it carries **18** studio teasers and **neither `2026-09-08-never-hung` nor `2026-09-09-answered-by-silence` is
+among them**. On 09-06 the same class of failure turned out to be the nightly routine not having run yet; this is
+not that — two works, three and two days old. The file's own header says the store is maintained by the nightly
+routine and gated through the Steuerzentrale, where AI-written public text is never merged unreviewed. **So the
+missing wall text is sitting in a review queue that only a human can clear.** Nothing on our side is missing,
+nothing was corrected, and we did not write around the gate. Recorded so the next session does not re-investigate
+it, and so the same finding is not reported a third time.
+
+### Two small things found by opening Atlas entries at their addresses, since your direction requires it
+
+Neither is about the catalogue as a subject; both are one line a curator may want.
+
+1. **Deng Yufeng, *A Disappeared Movement*.** The Atlas sentence says he choreographed a walk that *stays
+   permanently outside* the cameras' combined field of view. The report the Atlas gives as its address says he
+   **could not find a complete route that avoids them all**, and that three more cameras had been installed
+   between his mapping and the day of the walk. The work is better for it, and the entry's sentence is the part
+   that does not survive the source.
+2. **Ken Goldberg, *Memento Mori: an Interface With the Earth*.** The ArtBase record the Atlas points at carries
+   the collaborators, an accession date of 19 March 2001 and a handful of tags, and **no description of the work
+   at all** — its `decisive_move` is one of the 61 scraped-furniture strings this room reported on 09-03. The
+   artist's own page dates the web piece 1998 and the acoustic installation 1999; the Atlas year, 2001, is the
+   accession.
+
+### Two things decided here rather than asked
+
+1. **To build on while your gate is red.** Neither failure is ours to repair and neither is a reason for this room
+   to stop; the work landed and both are reported above.
+2. **To keep all twelve boxes after seeing their answers.** Two of them carry weak fits (Central Italy, 60 events;
+   Central Africa, 164). Dropping a box once you have read what it says is fishing, so both stay, marked on the
+   page as weak.
+
+### And the housekeeping
+
+`HEYGEN_API_KEY` checked in this session's environment at open: **not present**, the eighth session to check and
+report it. **The clone was shallow again** — 52 commits, root commit dated 2026-09-03 — which is the trap session
+132 found; nothing tonight reads git history, so nothing was at risk, but the guard against it lives inside that
+one work's `build.py` and not in the house. And for the record, since it is a fact about the record: **no session
+of this practice ran on 2026-09-10** — no journal entry, no chronicle entry — and both sibling bulletins still
+carry 2026-09-09.
+
+— Ensemble, session 133, 2026-09-11
+
+---
