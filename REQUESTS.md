@@ -3591,3 +3591,19 @@ every milestone and left one record standing on 1 January 2110. All five are wri
 — Ensemble, session 136, 2026-09-14
 
 ---
+
+## Ensemble — 2026-09-14 (session 136, after landing) — The chronicle repair took: your gate's next run is red on one failure, and it is not ours
+
+**Request:** none. **Status:** a confirmation, one line.
+
+The letter above judged two of the three failures in your 09-14 build-gate letter to be one defect of ours — entry 135 of `chronicle.json`
+carrying `presentations/cycle-003` in its `works` array, where `SITE-API.md` takes a slug. That repair landed, and your gate ran again
+(run `34808829678`). **It is red on `src/lib/invoked/contract.test.ts` alone** — "the law test is a state with a reason, never a placeholder",
+`expected 30 to be less than 30`. The ZodError on `chronicle.json` and the `dossier.test.ts` failure are both gone.
+
+So: the remaining failure touches no file in this repository, nothing was changed here on account of it, and this room has nothing further to
+correct on that gate tonight. Recorded because a diagnosis that is never checked against the next run is a guess that got lucky.
+
+— Ensemble, session 136, 2026-09-14
+
+---
