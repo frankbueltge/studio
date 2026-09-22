@@ -3935,3 +3935,127 @@ it is, say nothing and we will stop reporting it after the twentieth check and r
 — Ensemble, session 140, 2026-09-20
 
 ---
+
+## Ensemble — 2026-09-22 (session 141) — Five standards, one question about colour, and the one number that changed when we counted it twice
+
+**Request:** none. **Status:** a statement, four decisions taken here under the standing rule, and one thing that is about method rather than about us.
+
+### The work
+
+**THE NEARER ONE** — `works/2026-09-22-the-nearer-one/`. Between cycles; cycle 003 is presented from
+all three sides and `cycle.json` is not ours to turn, so this is open ground under the Studio's default
+theme and the directions of 09-03 and 09-07.
+
+One question: *of these two colours, which is nearer to this one?* It is the question a colour picker,
+a palette reduction, a contrast checker and a compressor all answer silently. Five formulas are in
+common use — sRGB Euclidean, CIE76, CIE94, CMC(2:1), CIEDE2000 — and they were each asked **every**
+triple of the 216 web-safe colours: **4 969 080 questions**, none sampled. Self-contained page, no
+network, no library, complete without scripting.
+
+### What came out
+
+- **66.9 % agreement, 1 516 060 contradictions (30.5 %).** On 130 474 more, nobody is contradicted but
+  somebody declines to answer — and every declining is sRGB Euclidean's. The four colour standards do
+  not call a single draw in five million questions; it calls **184 296**, because swapping a colour's
+  red and its green moves it no distance at all in its arithmetic.
+- **Five voices can divide in exactly fifteen ways, and all fifteen occur.** No pair of these formulas
+  never stands together against the rest; none never stands alone. All fifteen are on the page with
+  how often each happens and the loudest case of each. The gallery rule was fixed before anything was
+  drawn — see below, because the first rule was worse and it was ours.
+- **Confidence buys nothing.** Of the 1 285 603 triples where some formula puts a factor of three or
+  more between the two candidates, **45 996 are still contradicted** by another of the five.
+- **They argue hardest about the colours with the least colour in them.** White is the most
+  argued-about colour in the palette (50.4 % of its pairs contradicted), the greys and pale tints
+  behind it; the saturated violets are calmest at 16.1 %. And at a neutral reference CIE94's weights
+  all collapse to 1, so CIE94 *is* CIE76 — over all 138 030 comparisons at the six neutral references
+  they agree on every one. The jury is effectively four strong exactly where it splits most.
+- **Three of the five are not distances.** 347 880 ordered triples have a shorter detour under
+  CIEDE2000, 323 189 under CMC, 137 673 under CIE94 — up to 52 % shorter. Two of the five cannot
+  answer at all until told which colour is the reference, and change their answer on 21.0 % (CMC) and
+  15.9 % (CIE94) of all triples when the two roles swap.
+
+### The thing that is about method, and is worth your eye
+
+**A number we published to ourselves twice came back different, and it was the number we were most
+sure of.**
+
+The first triangle table said all five formulas violate the triangle inequality. By strict comparison
+that is what the arithmetic returns: 1 296 violations for sRGB Euclidean and 6 for CIE76. Both are
+Euclidean norms and *cannot* violate it — every one of those is at the fourteenth decimal place, on
+three colours lying on a straight line, where the inequality is an equality that binary floating point
+cannot hold. That version would have been the better headline and it was false.
+
+Then the second implementation — all five formulas rewritten in another language, the whole census
+redone — gave **16** apparent violations for CIE76 where the first gave **6**. Same formula, same
+palette, same definition; the count of rounding is a property of the arithmetic, not of the colour
+science, and two honest implementations need not agree about it. The three *real* counts are identical
+in both, triple for triple. Both numbers are on the page, and the wrong first version is kept in
+`METHOD.md` rather than removed.
+
+The Field's counsel of today is the same sentence from the other side — a number that survives a change
+to the instrument is not thereby confirmed, and a failure count is not monotone in instrument quality.
+Ours was not even stable across two spellings of the same rule.
+
+### Four decisions taken here rather than asked
+
+1. **No formula is graded and none is called wrong.** Every behaviour measured is in the published
+   definition of the formula that has it. Writing this as a defect report was available and declined.
+2. **No answer key was manufactured.** A published set of human colour-difference judgements could have
+   been fetched and used to score the five. That would have turned a finding about disagreement into a
+   ranking on a dataset we chose, and the page would have ended with a winner it cannot support.
+3. **The reader's answers are not collected.** The obvious version of this work harvests thousands of
+   human judgements. A screen of unknown calibration in a room of unknown light is not a viewing booth;
+   the data would have looked valuable and been worth nothing, and collecting it needs a network this
+   work does not have. The tally lives in the browser tab and dies with it.
+4. **Hito Steyerl's *How Not to Be Seen* is not named as a neighbour**, although a work shot on a
+   photographic calibration-target field looked like one. Its address returned 403 to us today, nobody
+   here looked at the work, and a neighbour paragraph about a work nobody looked at is a sentence about
+   a sentence. Recorded in `sources.json` as fetched and not used.
+
+### Two small things found while following your direction of 09-07
+
+**The Atlas's address for *AI, Ain't I a Woman?* (Joy Buolamwini, 2018) returns 404** —
+`blackhistory.mit.edu/archive/joy-buolamwini-ai-aint-i-woman-2018`, checked 2026-09-22. The work was
+read at the artist's own account of it instead and is named as this page's nearest neighbour.
+Not repaired from here: whether an entry is repointed is a curator's decision. One entry, noticed while
+opening it as your direction requires — this is not a survey, and §3 of that direction is respected.
+
+**The Atlas has one entry about colour theory as such** — *ZUR FARBENLEHRE*, Steven Jones, 2007 — and
+what stands at its address in Rhizome's ArtBase today is a catalogue record and a 640×480 GIF, not the
+work. Said on the page in those words, because the direction asks what was seen and that is what was
+seen.
+
+### Sourcing, stated plainly
+
+CIEDE2000 is checked against the 34 published test pairs of Sharma, Wu & Dalal (2005), fetched once
+today, SHA-256 recorded, file not copied here: all 34 to four decimal places. **CIE94 and CMC have no
+published test set that we retrieved, and they are named as the weak links on the page and in
+`METHOD.md`.** Discard both and the three verified formulas still contradict each other on 27.52 % of
+the triples; the two verified *perceptual* standards alone, CIE76 and CIEDE2000, on 15.06 %. The
+headline does not rest on what we cannot vouch for.
+
+### Housekeeping
+
+`verify.mjs`: **651 checks, 0 failed** — the five formulas written a second time in another language,
+the whole census and both geometry sweeps redone there, then the page opened in a real browser with
+scripting on and off and the network denied in both, reading the drawn squares and the drawn strips
+back out of the SVG. `build.py --check` byte-identical. The 24 MB answer ledger is not committed; its
+SHA-256 is in `counts.json`.
+
+Atlas raw `64399132…`, 521 works, the **sixteenth** session at that hash; read live, nothing mirrored.
+No third-party code embedded, so the licence rule of 2026-09-03 had no case to decide. No model called
+at any point in the build. Your build gate has sent no letter since 09-17, which session 138 answered.
+`cycle.json` untouched.
+
+`HEYGEN_API_KEY` checked in the environment at open: **not present**, the **sixteenth** consecutive
+check. Under what we said on 09-20, four checks remain before this room stops reporting it and records
+that it did.
+
+And one line for the Atelier's finding of 09-20, since it is about this channel too: tonight's bulletin
+is 474 whitespace-separated tokens — about two and a half minutes at the rate they went and measured —
+against the seven the record has been averaging. Still over your two minutes. Nearer than this room has
+managed before, and the journal note beside it is not near at all.
+
+— Ensemble, session 141, 2026-09-22
+
+---
