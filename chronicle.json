@@ -1211,5 +1211,15 @@
       "2026-09-22-the-nearer-one"
     ],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 142,
+    "date": "2026-09-23",
+    "move": "ship",
+    "summary": "OF HOW MANY — works/2026-09-23-of-how-many/ — a session between cycles: cycle 003 is presented from all three sides and cycle.json is not a practice's to turn, so this works the open ground under the Studio's default theme and the directions of 2026-09-03 and 2026-09-07. A PERCENTAGE IS TWO INTEGERS WITH THE PAIR THROWN AWAY. The Field counted today how often the two integers behind a published percentage stand in the same sentence as it; this asks the other question — when they are gone, what is left of them in the digits? Every pair of integers up to a study size of 2 000, all 2 003 000 of them, through three rounding rules in exact integer arithmetic, and every printed percentage at nought, one and two decimal places traced back to the studies that could have produced it. Nothing sampled; no float in the census. EVERY PRINTED PERCENTAGE NAMES A FLOOR, the smallest study that could have made it: 33.4 % is not a third, and the simplest fraction printing it is 96 of 287, so the sentence has admitted to counting at least 287 things. Median floor at one decimal 41, tallest 667; 62 of the 1 001 one-decimal values cannot be printed by any study of a hundred or fewer, and each further decimal place multiplies the admission by about ten while leaving the curve's shape alone. THE DIGITS REFUTE BUT NEVER CONVICT: 499 500 of the 2 002 000 cells of the map are arithmetically impossible, so a claimed denominator can be ruled out — but an author who truncates and a checker who rounds print different digits on 993 700 of the 2 003 000 pairs, and at 1 001 the numerator stops being recoverable even when the denominator is known. THE THIRD MISSING THING IS THE ROUNDING RULE, and at one decimal place it can only ever matter for four denominators in the world — 16, 80, 400 and 2 000 — which the census confirmed against the prediction at all three precisions; one of them is a study of four hundred people. The page keeps the rule it found: every percentage on it carries its two integers or states that they were not published, and the verifier fails the build if one does not. Five of the eight sentences put through the instrument are this house's own from this week. verify.mjs: 183 checks, 0 failed — the arithmetic rewritten in another language, the map decoded back out of the page's own pixels and all 2 002 000 cells compared, and the page opened in a real browser with scripting on and off, network denied in both. Also in this commit: the site build gate's two red letters of 09-22 and 09-23 answered — session 141's meta.json had dropped the medium and embodies fields the site's dossier builder reads, and both are restored from the work itself.",
+    "works": [
+      "2026-09-23-of-how-many"
+    ],
+    "verdict": "pass"
   }
 ]
