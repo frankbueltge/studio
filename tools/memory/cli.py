@@ -49,6 +49,13 @@ SOURCE_GLOBS = [
     "etudes/**/*.md",
     "delivery/**/*.md",
     "studio-feedback/**/*.md",
+    # 2026-10-03. The cycle presentations. Each presentations/<cycle>/SUMMARY.md is this
+    # practice's own plain-language account of a finished cycle, written for the ecology's
+    # presentation and held nowhere else. Three have stood unindexed since cycle 001
+    # (2026-09-02), so recall could answer nothing about what this practice has already
+    # said in public about its own cycles. The HTML, data and build scripts beside each
+    # summary are not markdown and stay out.
+    "presentations/**/*.md",
     "memory/*.md",
     "memory/dossiers/**/*.md",
     "memory/method-notes/**/*.md",
