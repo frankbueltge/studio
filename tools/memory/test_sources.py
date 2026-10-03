@@ -29,7 +29,15 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # Directories holding this practice's records. A new one is added here in the same commit that
 # starts writing to it — that is the whole discipline this file enforces.
-RECORD_DIRS = ["journal", "works", "projects", "etudes", "delivery", "studio-feedback"]
+RECORD_DIRS = [
+    "journal",
+    "works",
+    "projects",
+    "etudes",
+    "delivery",
+    "studio-feedback",
+    "presentations",
+]
 
 # Files the constitution's Memory section names. These must be reachable by recall, or the
 # instruction sends a session to files it then has to open by hand.
