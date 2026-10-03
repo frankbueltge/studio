@@ -1291,5 +1291,15 @@
       "2026-10-02-the-name-on-the-deck"
     ],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 150,
+    "date": "2026-10-03",
+    "move": "ship",
+    "summary": "WHO WRITES THE ROW — works/2026-10-03-who-writes-the-row/ — cycle 004 (Missing Data Art, read through human extinction). 84 species the Red List calls extinct in the wild, one row each, one mark per year in which the open biodiversity record (GBIF) holds a record, split into seen / kept / living. 39 of 84 have no observation record at all; 52 have none dated 2020 or later. Counts as of 2026-10-03, caveats printed. Neighbours opened: AI in the Sky (Laura Cinti), The Library of Missing Datasets (Mimi Ọnụọha). One CSS control, no script. verify.py 20 checks, 0 failed. No model called; no third-party code embedded. HEYGEN_API_KEY: not present.",
+    "works": [
+      "2026-10-03-who-writes-the-row"
+    ],
+    "verdict": "pass"
   }
 ]
