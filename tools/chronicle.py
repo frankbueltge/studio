@@ -22,6 +22,17 @@ was red three times that day and session 132 did not reach the site. A malformed
 a missing one darken the site alike, so the completeness check below is part of the
 contract this instrument enforces, not a separate courtesy.
 
+And a fourth time on 2026-10-03, in a shape neither half could see. Session 150 appended a
+well-formed `ship` entry for `works/2026-10-03-who-writes-the-row/` and wrote its journal
+day, so the shape checks passed and the counts agreed — and the directory carried no
+`meta.json`. The site builds its dossiers from those files, so the mirror had nothing to
+carry the premiere with: `src/lib/studio/dossier.test.ts` refused the night with
+`2026-10-03-who-writes-the-row shipped but the mirror carries no meta.json`, Studio
+integrate was red twice, and the newest work did not reach the site. Thirty-eight shipped
+works before it each carried one; nothing anywhere in this repository asked for it. A
+`ship` the site cannot render darkens it exactly as a malformed entry does, so the check
+below is part of the same contract, on the same ground as the completeness check.
+
 So: a file this house writes every session, validated against a contract this house has
 committed, by a command a stranger can run.
 
@@ -38,6 +49,12 @@ it. It also cannot say whether a missing entry is the night's or an older one �
 the day, and the house reads the journal. If the gate ever goes red on a chronicle this
 instrument passes, the contract in SITE-API.md is the thing to re-read first, and this
 file is what gets corrected.
+
+It can also say that every work a `ship` entry names has a `meta.json` beside it. It
+cannot say that the file's CONTENTS satisfy the site — the schema lives in the other
+repository — only that the work is not missing the one file the mirror reads first. As
+with a missing entry, it reports the date and the slug and does not guess whether the hole
+is tonight's or an older one.
 """
 
 import argparse
@@ -51,6 +68,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
 CHRONICLE = os.path.join(ROOT, "chronicle.json")
 JOURNAL = os.path.join(ROOT, "journal")
+WORKS = os.path.join(ROOT, "works")
 
 # SITE-API.md, "The chronicle self-report". Both lists are copied from the contract, and
 # the contract is the authority — not this file, and not the house's own vocabulary.
@@ -173,6 +191,41 @@ def check_completeness(entries, journal_dir):
     return problems
 
 
+def check_shipped_works(entries, works_dir):
+    """Does every work a `ship` entry names carry the file the mirror reads first?
+
+    `meta.json` is what the site turns into a dossier. A `ship` whose directory has none is
+    a premiere the mirror cannot render, and the site's gate refuses the whole night for it
+    — this session's work and every other session's behind it, which is the same cost a
+    malformed entry carries.
+
+    Only `ship` entries are checked: the other six moves do not put a work on the site.
+    A named work with no directory at all is reported the same way, because the site cannot
+    tell the two apart either. Absent works directory = no check, the same convention the
+    completeness check follows for an absent journal.
+    """
+    problems = []
+    if not os.path.isdir(works_dir):
+        return problems
+    for e in entries:
+        if not isinstance(e, dict) or e.get("move") != "ship":
+            continue
+        date = e.get("date", "?")
+        works = e.get("works")
+        if not isinstance(works, list):
+            continue
+        for slug in works:
+            if not isinstance(slug, str) or not slug:
+                continue
+            if os.path.isfile(os.path.join(works_dir, slug, "meta.json")):
+                continue
+            problems.append(
+                f"{date}: works/{slug}/meta.json is missing — the entry ships a work the "
+                "mirror has nothing to render, and the site refuses the night for it"
+            )
+    return problems
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", action="store_true")
@@ -182,11 +235,20 @@ def main():
         default=JOURNAL,
         help="journal directory to check the entries against; skipped if absent",
     )
+    ap.add_argument(
+        "--works",
+        default=WORKS,
+        help="works directory to check shipped entries against; skipped if absent",
+    )
     args = ap.parse_args()
 
     with open(args.file, encoding="utf-8") as fh:
         entries = json.load(fh)
-    problems = check(entries) + check_completeness(entries, args.journal)
+    problems = (
+        check(entries)
+        + check_completeness(entries, args.journal)
+        + check_shipped_works(entries, args.works)
+    )
 
     if args.json:
         print(json.dumps({"entries": len(entries), "problems": problems}, indent=2))

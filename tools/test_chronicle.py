@@ -1,4 +1,5 @@
-"""Proof that chronicle.py sees a missing self-report, not only a malformed one.
+"""Proof that chronicle.py sees a missing self-report and a hollow premiere, not only a
+malformed entry.
 
 Run: python3 -m pytest tools/test_chronicle.py
 
@@ -8,6 +9,11 @@ session 132 wrote a journal day and no entry, this instrument exited 0, and the 
 refused the night with `expected 131 to be 132`. These tests pin both halves, and the last
 one reads the real repository so a drift between this counter and the journal on disk shows
 up here rather than in a build letter the next morning.
+
+The third half was added on 2026-10-03, after session 150 shipped
+`works/2026-10-03-who-writes-the-row/` without a `meta.json` and the site's dossier test
+refused the night. The shape checks passed and the counts agreed; nothing in this
+repository asked for the one file the mirror reads first.
 """
 
 import json
@@ -15,7 +21,13 @@ import os
 
 import pytest
 
-from chronicle import check, check_completeness, count_sessions, journal_sessions
+from chronicle import (
+    check,
+    check_completeness,
+    check_shipped_works,
+    count_sessions,
+    journal_sessions,
+)
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 
@@ -157,3 +169,71 @@ def test_the_committed_chronicle_covers_the_committed_journal():
     with open(path, encoding="utf-8") as fh:
         entries = json.load(fh)
     assert check_completeness(entries, journal) == []
+
+
+# --- a shipped work carries the file the mirror reads first ------------------------------
+
+
+def works_dir(tmp_path, works):
+    """works: {slug: [filenames]} — a slug with no meta.json is the failure under test."""
+    d = tmp_path / "works"
+    d.mkdir()
+    for slug, names in works.items():
+        (d / slug).mkdir()
+        for name in names:
+            (d / slug / name).write_text("{}", encoding="utf-8")
+    return str(d)
+
+
+def test_a_shipped_work_with_its_meta_is_silent(tmp_path):
+    w = works_dir(tmp_path, {"2026-10-03-a-work": ["meta.json", "index.html"]})
+    entries = [entry(150, "2026-10-03", works=["2026-10-03-a-work"])]
+    assert check_shipped_works(entries, w) == []
+
+
+def test_the_hollow_premiere_of_2026_10_03_is_caught(tmp_path):
+    w = works_dir(tmp_path, {"2026-10-03-a-work": ["index.html", "results.json"]})
+    entries = [entry(150, "2026-10-03", works=["2026-10-03-a-work"])]
+    problems = check_shipped_works(entries, w)
+    assert len(problems) == 1
+    assert "2026-10-03" in problems[0]
+    assert "works/2026-10-03-a-work/meta.json is missing" in problems[0]
+
+
+def test_a_named_work_with_no_directory_is_caught_the_same_way(tmp_path):
+    w = works_dir(tmp_path, {})
+    entries = [entry(150, "2026-10-03", works=["2026-10-03-never-written"])]
+    problems = check_shipped_works(entries, w)
+    assert len(problems) == 1
+    assert "2026-10-03-never-written" in problems[0]
+
+
+def test_a_move_that_is_not_a_ship_puts_nothing_on_the_site(tmp_path):
+    w = works_dir(tmp_path, {"2026-10-03-a-work": ["index.html"]})
+    for move in ("build", "gauntlet", "verify", "consolidation", "steer", "other"):
+        entries = [entry(150, "2026-10-03", move=move, works=["2026-10-03-a-work"])]
+        assert check_shipped_works(entries, w) == [], move
+
+
+def test_every_hollow_work_in_one_entry_is_named(tmp_path):
+    w = works_dir(tmp_path, {"a": ["meta.json"], "b": [], "c": []})
+    entries = [entry(150, "2026-10-03", works=["a", "b", "c"])]
+    problems = check_shipped_works(entries, w)
+    assert len(problems) == 2
+    assert all("works/a/" not in p for p in problems)
+
+
+def test_an_absent_works_directory_is_not_a_violation(tmp_path):
+    entries = [entry(150, "2026-10-03", works=["2026-10-03-a-work"])]
+    assert check_shipped_works(entries, str(tmp_path / "nope")) == []
+
+
+def test_the_new_check_is_independent_of_the_other_two(tmp_path):
+    """A hollow premiere is invisible to the shape and completeness checks — that is why
+    the site saw it and this instrument did not."""
+    w = works_dir(tmp_path, {"2026-10-03-a-work": ["index.html"]})
+    j = write_journal(tmp_path, {"2026-10-03-session-150.md": "# Session 150\n\nbody\n"})
+    e = entry(150, "2026-10-03", works=["2026-10-03-a-work"])
+    assert check([e]) == []
+    assert check_completeness([e], j) == []
+    assert len(check_shipped_works([e], w)) == 1
