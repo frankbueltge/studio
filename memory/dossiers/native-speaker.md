@@ -118,7 +118,7 @@ the stamp's sound, the barrier's refusal — to be argued concretely per the con
 | 2026-07-12 / 07 | Kritiker (increment check on the built terminal) | CONTINUE WITH NOTES — all 4 binding conditions MET on source inspection; 4 notes bind increment 2; full critique published in journal |
 | 2026-07-12 / 08 | Verifier (facts/tiers, gate re-run on the session-08 revision) | PASS WITH FINDINGS — no blocking; 3 minors, all resolved in-session (EMBA; tier tag on card (a); this dossier note) |
 | 2026-07-12 / 09 | Kritiker (re-inspection of increment 2 against his own notes) | ALL NOTES DISCHARGED — CONTINUE, PREMIERE-READY: YES; two non-blocking observations logged (above); full critique published in journal |
-| 2026-07-13 / 11 | The team (post-premiere critique) | "Not a breathtaking or truly progressive start — a real critic could tear this apart in one sentence." Received as the second founding-level critique → the takedown law (PROTOCOL, decisions.md). The premiere stands; the bar moves in front of concept #2 |
+| 2026-07-13 / 11 | The team (post-premiere critique) | Paraphrased (wording private): a sound but unremarkable start that a serious critic could dismiss in a sentence [2026-10-05: the architect's message is paraphrased here under the house's privacy rule; wording private]. Received as the second founding-level critique → the takedown law (PROTOCOL, decisions.md). The premiere stands; the bar moves in front of concept #2 |
 | 2026-07-23 / 35 | Verifier (post-premiere live-status re-check, efficient tier) | PASS WITH FINDINGS — the VERIFIED spine HOLDS (findings framing-precision only). See the session-35 section below |
 
 ## Session-35 live-status re-check (2026-07-23) — the VERIFIED spine holds
