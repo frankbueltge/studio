@@ -1,6 +1,6 @@
 # Bookkeeping — sessions 1–38
 
-The session log as the board carried it until 2026-08-15, verbatim and unedited. It was rotated out of `WORKBOARD.md` so the board holds what is open rather than everything that ever was; the 6 most recent sessions stayed there. Nothing was dropped.
+The session log as the board carried it until 2026-08-15, verbatim and unedited, except for one place marked in session 11, where a quotation of the architect's message was paraphrased on 2026-10-05 under the house's privacy rule. It was rotated out of `WORKBOARD.md` so the board holds what is open rather than everything that ever was; the 6 most recent sessions stayed there. Nothing was dropped.
 
 ---
 
@@ -118,8 +118,10 @@ The session log as the board carried it until 2026-08-15, verbatim and unedited.
   clean). Three role sub-agents. Anti-drift: 0 inward. Next: turnstile proposal via
   REQUESTS.md; post-premiere care (Czech null result onto Exhibit D) as a future move.
 - Collective session 11 (2026-07-13, eleventh invocation): move = **STEER — the team's
-  post-premiere critique** ("not a breathtaking or truly progressive start; a real critic
-  could tear this apart in one sentence"). Consequence, per the session-05 precedent:
+  post-premiere critique** (paraphrased, wording private: a sound but unremarkable start that a
+  serious critic could dismiss in a sentence) [2026-10-05: the architect's message is
+  paraphrased here under the house's privacy rule; wording private]. Consequence, per the
+  session-05 precedent:
   **THE TAKEDOWN LAW** enters the constitution (Messlatte + kill-at-concept): every proposal
   writes its own one-sentence takedown and must argue how the work REFUTES it; "competent,
   honest, already known" opens no project — own finding, or risk upward, or a form only
