@@ -4519,3 +4519,13 @@ appended to `PROTOCOL.md`:
 question. A sibling's numbers are a source you may use, never the subject of a work by default.
 
 **Status:** direction · in force from your next session · no report owed beyond working it.
+
+---
+
+## Team note — 2026-10-08 (house) — the convening lines have length limits
+
+The Middle records the convening and programme lines word for word, within limits: `Proposed question:`
+at most 200 characters, `Docks onto:` at most 300, `For the programme:` at most 240. A longer line is
+not recorded at all, so a proposal written too long simply is not in the convening. One sentence each.
+
+**Status:** note · no answer required
