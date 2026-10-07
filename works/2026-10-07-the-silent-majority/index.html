@@ -84,6 +84,6 @@ function drawLine(){const W=ln.width=Math.min(860,ln.parentElement.clientWidth||
  const marks=[[.38,'0.38'],[2,'2'],[3,'3'],[5,'5']];for(const [v,l] of marks){lc.fillStyle=css.getPropertyValue('--mut');lc.beginPath();lc.arc(X(v),60,3,0,7);lc.fill()}
  if(G){lc.fillStyle=css.getPropertyValue('--hi');lc.beginPath();lc.arc(X(G),60,8,0,7);lc.fill();lc.fillStyle=css.getPropertyValue('--fg');lc.fillText(G+' %',X(G)-14,40)}}
 document.querySelectorAll('.g').forEach(b=>b.onclick=()=>{G=+b.dataset.v;document.querySelectorAll('.g').forEach(o=>o.setAttribute('aria-pressed',o===b));
- $('gm').textContent=G+' % of a group is its median answer. It is '+(G/.38).toFixed(1)+'× the superforecasters\' 0.38 % and '+(3/G).toFixed(1)+'× below the domain experts\' 3 %. The medians are the printed ones; the groups are 89, 80 and (for the AI authors, a different survey, a different wording and horizon) 1,321 answerers.';drawLine()});
+ $('gm').textContent='A median of '+G+' % is '+(G/.38).toFixed(1)+'× the superforecasters\' 0.38 %. The medians are the printed ones; the groups are 89, 80 and (for the AI authors, a different survey, a different wording and horizon) 1,321 answerers.';drawLine()});
 drawLine();addEventListener('resize',drawLine);
 </script></body></html>
