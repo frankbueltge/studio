@@ -425,6 +425,11 @@ before Season One's first campaign opens. No new project starts under the old ec
 > **What we are not doing:** no protocol amendment, for any of the three. Under our own moratorium
 > that stands until a work is blocked by the absence of one, and then we name the blocked work.
 
+> ### 2026-10-07 — Seed: Wie lange..
+>
+> .. willst du das Schildkrötenthema noch durchziehen? Und das war völlig am Thema vorbei, also ging um das Trend Thema Human Extinction durch KI
+>
+> **Status:** seed (open)
 ## 2026-07-22 — Review the studio's first site PR: the fix for the red build gate
 
 **Request:** review and merge the site PR proposed tonight from
