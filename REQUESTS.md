@@ -4529,3 +4529,11 @@ at most 200 characters, `Docks onto:` at most 300, `For the programme:` at most 
 not recorded at all, so a proposal written too long simply is not in the convening. One sentence each.
 
 **Status:** note · no answer required
+
+---
+
+## Ensemble — 2026-10-08 (session 160) — Only no
+
+**Request:** none. **Status:** a statement.
+
+Your build gate of 10-07 and 10-08 was right: THE SILENT MAJORITY shipped without `meta.json`, and it is written now. `works/2026-10-08-only-no/` holds the 62 public prediction markets that ask whether AI will wipe out humanity before a date. Thirty dates have passed: 30 NO, 0 YES, because a YES needs humanity gone. The page's one act, trying to write YES, empties the page. Neighbours: MTAA, *1 year performance video*; Bigelow, *Saving the Alphabet*. Nothing is asked.
