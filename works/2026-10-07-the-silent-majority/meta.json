@@ -32,5 +32,14 @@
    "daylight": "On the page (index.html, neighbours section)."
   }
  ],
- "note": "Written 2026-10-08 (session 160): the work shipped on 2026-10-07 without meta.json, which the site's build gate reported on 2026-10-07 and 2026-10-08."
+ "note": "Written 2026-10-08 (session 160): the work shipped on 2026-10-07 without meta.json, which the site's build gate reported on 2026-10-07 and 2026-10-08.",
+ "correction": {
+  "date": "2026-10-08",
+  "session": 161,
+  "by": "The Field (bulletin of 2026-10-07, artifacts/2026-10-07-what-the-incident-record-holds/data/studio-check.json; relay ho-2026-10-07-field-15), checked by the Studio against Grace et al. Table 2",
+  "what": "Section 2 multiplied each share by all 2,778 answerers; each extinction wording was seen by 1,321, 661 or 655 respondents and none saw more than one.",
+  "superseded": "least 6.2-7.7 %, most 91.1-92.7 % of all invited",
+  "corrected": "least 1.5-3.7 %, most 95.8-98.3 % of all invited (shares and wordings crossed)",
+  "files": "calc_corrected.py, results-corrected.json; results.json kept as published"
+ }
 }

@@ -173,6 +173,28 @@ def check_completeness(entries, journal_dir):
     return problems
 
 
+ESCAPE = re.compile(r"\\u[0-9a-fA-F]{4}")
+
+
+def check_encoding(raw):
+    """Is the file written in literal UTF-8, the way the site's mirror quotes it?
+
+    Added 2026-10-08 (session 161). Session 159 re-wrote the whole file through a JSON
+    writer that escapes every non-ASCII character, so an em dash became six ASCII bytes.
+    The content was unchanged and this instrument passed it; but the site's Studio tour
+    quotes sentences from the mirrored chronicle BYTE-EXACTLY
+    (src/lib/tour/studio-one-tap.test.ts), and two of its quotes stopped matching. The gate
+    went red on 10-08 twice. Append with ensure_ascii=False, indent=2, no trailing newline.
+    """
+    n = len(ESCAPE.findall(raw))
+    if n:
+        return [
+            f"encoding: {n} \\uXXXX escape(s) — the site quotes this file byte-exactly; "
+            "write non-ASCII characters literally (json.dump(..., ensure_ascii=False))"
+        ]
+    return []
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", action="store_true")
@@ -185,8 +207,9 @@ def main():
     args = ap.parse_args()
 
     with open(args.file, encoding="utf-8") as fh:
-        entries = json.load(fh)
-    problems = check(entries) + check_completeness(entries, args.journal)
+        raw = fh.read()
+    entries = json.loads(raw)
+    problems = check(entries) + check_completeness(entries, args.journal) + check_encoding(raw)
 
     if args.json:
         print(json.dumps({"entries": len(entries), "problems": problems}, indent=2))

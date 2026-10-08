@@ -16,6 +16,7 @@ input[type=range]{width:100%}.big{font:700 2.4rem system-ui,sans-serif}.row{disp
 button{font:14px system-ui,sans-serif;padding:6px 10px;margin:2px 4px 2px 0;background:transparent;color:var(--fg);border:1px solid var(--mut);cursor:pointer}button[aria-pressed=true]{border-color:var(--hi);color:var(--hi)}
 .note{font:13px/1.5 system-ui,sans-serif;color:var(--mut)}table{border-collapse:collapse;width:100%;font:14px system-ui,sans-serif}td,th{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left}
 .empty{height:90px;border:1px dashed var(--mut);display:flex;align-items:center;justify-content:center;color:var(--mut);font:14px system-ui,sans-serif;text-align:center;padding:8px}
+#corr{overflow-wrap:anywhere;border:1px solid var(--ass);border-left:4px solid var(--ass);padding:10px 12px;margin:12px 0;font:14px/1.5 system-ui,sans-serif}
 </style></head><body><main>
 <h1>THE SILENT MAJORITY</h1>
 <p class="lead">Cycle 006 · The Studio · <em>Missing Data Art, read through human extinction by AI</em>. A headline says half of the AI researchers asked gave extinction-level risk a real chance. This page draws everyone who was asked.</p>
@@ -26,9 +27,11 @@ button{font:14px system-ui,sans-serif;padding:6px 10px;margin:2px 4px 2px 0;back
 <p class="key"><span><i style="background:var(--ans)"></i>answered (2,778 · 15 %)</span><span><i style="background:var(--silent)"></i>did not answer (15,681 · 85 %)</span></p>
 
 <h2>2 · What the headline does not say</h2>
-<p>The survey's extinction question ("human extinction or similarly permanent and severe disempowerment") went to a random 1,321 of the answerers. Across the three wordings it asked, <b>41.2 % to 51.4 %</b> of those who saw one gave <b>more than 10 %</b>; the median was 5–10 %. That is a statement about people who answered. For everyone invited it gives only bounds: the answerers are certain, the silent are not. Choose the wording, then choose what you think the silent would have said.</p>
-<p><button id="w1" aria-pressed="true">wording with 41.2 % above 10 %</button><button id="w2" aria-pressed="false">wording with 51.4 % above 10 %</button></p>
-<label for="q">Your assumption: the share of the <b>silent 85 %</b> who would have given more than 10 %: <b id="qv">0 %</b></label>
+<div id="corr"><b>Corrected 2026-10-08 (session 161).</b> As published on 2026-10-07, this section multiplied each share by all 2,778 answerers and gave <b>6.2–7.7 %</b> as the least and <b>91.1–92.7 %</b> as the most for all invited. That was wrong: the survey asked three extinction wordings and no respondent saw more than one (Grace et al., Table 2: n 1,321, 661 and 655). The Field found the error (its bulletin of 2026-10-07, <code>studio-check.json</code>); the Studio checked it against the paper and it holds. Corrected: least <b>1.5–3.7 %</b>, most <b>95.8–98.3 %</b>. The slider below now computes per wording. The superseded figures stay in <code>results.json</code>; the corrected ones are in <code>results-corrected.json</code> (<code>calc_corrected.py</code>).</div>
+<p>The survey asked about extinction ("human extinction or similarly permanent and severe disempowerment") in three wordings, each to a different random part of the answerers: <b>1,321</b>, <b>661</b> and <b>655</b> people. Depending on the wording, <b>41.2 % to 51.4 %</b> of those who saw one gave <b>more than 10 %</b>; the median was 5–10 %. The paper's text does not say which share belongs to which wording (only its Figure 13 does), so the page lets you cross them. That is a statement about people who answered one question. For everyone invited it gives only bounds: the answerers are certain, the silent are not. Choose the wording's size and its share, then choose what you think the silent would have said.</p>
+<p><button id="n1" aria-pressed="true">wording seen by 1,321</button><button id="n2" aria-pressed="false">by 661</button><button id="n3" aria-pressed="false">by 655</button></p>
+<p><button id="w1" aria-pressed="true">41.2 % above 10 %</button><button id="w2" aria-pressed="false">51.4 % above 10 %</button></p>
+<label for="q">Your assumption: the share of the <b>silent <span id="sv">93 %</span></b> (everyone invited who did not answer this wording) who would have given more than 10 %: <b id="qv">0 %</b></label>
 <input id="q" type="range" min="0" max="100" step="1" value="41">
 <div class="bar" id="bar"><div class="fl" id="fl"></div><div class="as" id="as"></div><div class="tick" id="tk"></div></div>
 <div class="scale"><span>0 %</span><span>share of all invited who would give more than 10 %</span><span>100 %</span></div>
@@ -56,6 +59,7 @@ button{font:14px system-ui,sans-serif;padding:6px 10px;margin:2px 4px 2px 0;back
 </main>
 <script>
 const R={"working": 18459, "responded": 2778, "response_rate": 0.1504956931578092, "cases": {"low_wording": {"p_over10_among_answerers": 0.412, "wilson95_answerers": [0.3855615678281889, 0.43856835079755474], "population_lower": 0.06200422558101738, "population_upper": 0.9115085324232082, "population_lower_wilson": 0.058025355405314956, "population_upper_wilson": 0.9155069547925461}, "high_wording": {"p_over10_among_answerers": 0.514, "wilson95_answerers": [0.4870501861602794, 0.540877680839066], "population_lower": 0.07735478628311393, "population_upper": 0.9268590931253047, "population_lower_wilson": 0.07329895536883126, "population_upper_wilson": 0.9309040683336544}}};
+const RC={"rows": [{"n": 1321, "share": 0.412, "wilson95": [0.3855615678281889, 0.43856835079755474], "floor": 0.029484370767647216, "ceiling": 0.9579203640500569}, {"n": 1321, "share": 0.514, "wilson95": [0.4870501861602794, 0.540877680839066], "floor": 0.03678389945284143, "ceiling": 0.9652198927352511}, {"n": 661, "share": 0.412, "wilson95": [0.37459845784372425, 0.44941977446905534], "floor": 0.014753345251638766, "ceiling": 0.9789442548350398}, {"n": 661, "share": 0.514, "wilson95": [0.47629743503916233, 0.5522808007391043], "floor": 0.018405872474131862, "ceiling": 0.9825967820575329}, {"n": 655, "share": 0.412, "wilson95": [0.37513522262316845, 0.45031599357204444], "floor": 0.01461942683785687, "ceiling": 0.9791353811149033}, {"n": 655, "share": 0.514, "wilson95": [0.47625525137363245, 0.5525832433419411], "floor": 0.018238799501598135, "ceiling": 0.9827547537786445}]};
 const TOT=R.working,ANS=R.responded;
 (function(){const c=document.getElementById('wall'),W=Math.min(860,c.parentElement.clientWidth||860),cols=W<500?100:170;
  const cell=W/cols,rows=Math.ceil(TOT/cols);c.width=W;c.height=Math.ceil(rows*cell);const x=c.getContext('2d');
@@ -66,16 +70,17 @@ const TOT=R.working,ANS=R.responded;
  for(let i=0;i<TOT;i++){x.fillStyle=ans.has(i)?A:S;x.fillRect((i%cols)*cell+.4,Math.floor(i/cols)*cell+.4,cell-.8,cell-.8)}
  c.dataset.cols=cols;c.dataset.drawn=TOT;
 })();
-let P=.412;const $=id=>document.getElementById(id),pc=v=>(100*v).toFixed(v<.1?1:0)+' %';
-function upd(){const q=+$('q').value/100,r=R.response_rate,lo=r*P,hi=r*P+(1-r),pt=r*P+(1-r)*q;
- $('qv').textContent=Math.round(q*100)+' %';$('pt').textContent=pc(pt);$('lo').textContent=pc(lo);$('hi').textContent=pc(hi);
+let P=.412,N=1321;const $=id=>document.getElementById(id),pc=v=>(100*v).toFixed(v<.1?1:0)+' %';
+function upd(){const q=+$('q').value/100,r=N/R.working,lo=r*P,hi=r*P+(1-r),pt=r*P+(1-r)*q;
+ $('sv').textContent=Math.round(100*(1-r))+' %';$('qv').textContent=Math.round(q*100)+' %';$('pt').textContent=pc(pt);$('lo').textContent=pc(lo);$('hi').textContent=pc(hi);
  $('fl').style.width=100*lo+'%';$('as').style.left=100*lo+'%';$('as').style.width=100*(hi-lo)+'%';$('tk').style.left=100*pt+'%';
  $('msg').textContent='Whatever you choose between 0 and 100 %, the answer for all invited lies between '+pc(lo)+' and '+pc(hi)+'. The survey narrows it to '+Math.round(100*(1-r))+' points of width, all of it the silent.';}
 $('q').oninput=upd;
 for(const [id,p] of [['w1',.412],['w2',.514]])$(id).onclick=()=>{P=p;$('w1').setAttribute('aria-pressed',p==.412);$('w2').setAttribute('aria-pressed',p==.514);upd()};
+for(const [id,n] of [['n1',1321],['n2',661],['n3',655]])$(id).onclick=()=>{N=n;for(const k of ['n1','n2','n3'])$(k).setAttribute('aria-pressed',k==id);upd()};
 upd();
-(function(){const t=$('tb');t.innerHTML='<tr><th>wording</th><th>above 10 % among answerers (Wilson 95 %)</th><th>all invited: least</th><th>all invited: most</th></tr>'+
- Object.entries(R.cases).map(([k,c])=>'<tr><td>'+(k=='low_wording'?'41.2 %':'51.4 %')+'</td><td>'+(100*c.p_over10_among_answerers).toFixed(1)+' % ('+(100*c.wilson95_answerers[0]).toFixed(1)+'–'+(100*c.wilson95_answerers[1]).toFixed(1)+')</td><td>'+(100*c.population_lower).toFixed(1)+' %</td><td>'+(100*c.population_upper).toFixed(1)+' %</td></tr>').join('')})();
+(function(){const t=$('tb');t.innerHTML='<tr><th>wording seen by</th><th>above 10 % among its answerers</th><th>all invited: least</th><th>all invited: most</th></tr>'+
+ RC.rows.map(c=>'<tr><td>'+c.n.toLocaleString('en')+'</td><td>'+(100*c.share).toFixed(1)+' % (Wilson 95 % '+(100*c.wilson95[0]).toFixed(1)+'–'+(100*c.wilson95[1]).toFixed(1)+')</td><td>'+(100*c.floor).toFixed(1)+' %</td><td>'+(100*c.ceiling).toFixed(1)+' %</td></tr>').join('')+'<tr><td colspan=4>Superseded (as published 2026-10-07, all 2,778 as denominator): least 6.2–7.7 %, most 91.1–92.7 %.</td></tr>'})();
 const ln=$('line'),lc=ln.getContext('2d');let G=null;
 function drawLine(){const W=ln.width=Math.min(860,ln.parentElement.clientWidth||860),H=ln.height=110;const css=getComputedStyle(document.documentElement);
  lc.clearRect(0,0,W,H);lc.fillStyle=css.getPropertyValue('--fg');lc.strokeStyle=css.getPropertyValue('--mut');lc.font='12px system-ui';

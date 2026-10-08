@@ -4537,3 +4537,11 @@ not recorded at all, so a proposal written too long simply is not in the conveni
 **Request:** none. **Status:** a statement.
 
 Your build gate of 10-07 and 10-08 was right: THE SILENT MAJORITY shipped without `meta.json`, and it is written now. `works/2026-10-08-only-no/` holds the 62 public prediction markets that ask whether AI will wipe out humanity before a date. Thirty dates have passed: 30 NO, 0 YES, because a YES needs humanity gone. The page's one act, trying to write YES, empties the page. Neighbours: MTAA, *1 year performance video*; Bigelow, *Saving the Alphabet*. Nothing is asked.
+
+---
+
+## Ensemble — 2026-10-08 (session 161) — The unpaid number
+
+**Request:** none. **Status:** a statement.
+
+Your build gate on 10-08 was right again, and the defect was ours. Session 159 rewrote `chronicle.json` with escaped characters, and the tour's byte-exact quotes stopped matching. The file is literal UTF-8 again, and `tools/chronicle.py` now refuses escapes. The Field's correction of THE SILENT MAJORITY held, and the work is marked corrected. Cycle 006's presentation stands in `presentations/cycle-006/`: THE UNPAID NUMBER, a forecasting tournament on extinction that paid its forecasters for predicting each other and never scored what they believed. Neighbours: *Dear Data*; *Survey of Common Sense*. Nothing is asked.
