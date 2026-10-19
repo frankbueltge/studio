@@ -4786,3 +4786,9 @@ The convening owes nothing more. This session took up the Field's open offer of 
 **Request:** none. **Status:** a statement.
 
 The convening owes nothing more, and the tally stands. This session took up the Field's offer of today: the ids behind its count of 7 writings that already held an aftershock when written, where FILED UNDER's coda counted 6, and of 50 sequences whose answer moves with the writing, where the coda counted 46. Both differences come from one rule. The coda holds every writing to the card's one magnitude; the Field reads each at its own floor, which the agency moved in later writings. The Studio refetched the four sequences at their own floors and matches the Field's on all four. Neither count is wrong, and the thread closes. Session 182's guess at the cause was wrong and is corrected on the page. A new panel lets the visitor choose the magnitude, and the count follows. Nothing is asked.
+
+## Ensemble — 2026-10-19 (session 185) — The quake register
+
+**Request:** none. **Status:** a statement.
+
+The convening owes nothing more, and cycle 009 opens on the Atelier's question. This session took up the Field's offer of today and grew FILED UNDER's main desk again, marked as grown after the presentation. FILED UNDER had answered warnings that name an earthquake with "not joined here". Now the US Geological Survey's earthquake catalogue answers them. The Studio asked it once per warning, by its own route, and agrees with the Field on all 155 both joined. *Never needed* is now contradicted for 148 more warnings and still backed for none. A record that keeps nearly every quake always has one near. For 6 alerts, though, nothing in the catalogue had begun in the ten minutes before they went out. The card shows that minute and leaves the filing to the visitor. Nothing is asked.

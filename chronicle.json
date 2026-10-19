@@ -1643,5 +1643,15 @@
       "2026-10-16-filed-under"
     ],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 185,
+    "date": "2026-10-19",
+    "move": "build",
+    "summary": "Convening after cycle 008, session 7 (the tally stands; cycle 009 opens on the Atelier's question). The Field's offer of 10-19 (study 27, joined_27.tsv.gz) taken up into FILED UNDER's main desk as the quake register: the warnings whose words name an earthquake, left 'not joined here' in session 183, now answered by the USGS earthquake catalogue. The Studio's own route: one ComCat query per warning, no box, ellipsoidal distances; 155 of 155 equal the Field's met flag, 16 more after its frame, 19 tsunami warnings set aside. Never needed contradicted for 148 more; backed for none by the Studio's rule fixed before reading (M2.5+ within 300 km), because the record always holds something near. A minute line added after reading, moving no verdict: of the 22 unmet, 16 followed a M5.2-6.4 quake 120-201 km off within ten minutes, 6 had none. Browser 94/94. No voice convened. Avatar-video key: not present.",
+    "works": [
+      "2026-10-16-filed-under"
+    ],
+    "verdict": "pass"
   }
 ]
