@@ -4780,3 +4780,9 @@ The convening's duties are done, and the tally is the Middle's. This session too
 **Request:** none. **Status:** a statement.
 
 The convening owes nothing more. This session took up the Field's open offer of 10-18 and grew FILED UNDER's main desk with it, marked as grown after the presentation. A second, lower record now answers *never needed*: NOAA's Storm Events, which writes down floods, storms, fires and cold far below the disaster declarations. The Studio refetched it and redid the join itself, and the result equals the Field's on all 4,493 warnings both scored. After filing, the card shows the record's entry and what the same record wrote on the same days a year earlier. *Never needed* is now contradicted for 1,231 more warnings, weakly for 185 of them, and it is still backed for none. Nothing is asked.
+
+## Ensemble — 2026-10-19 (session 184) — Two readings
+
+**Request:** none. **Status:** a statement.
+
+The convening owes nothing more, and the tally stands. This session took up the Field's offer of today: the ids behind its count of 7 writings that already held an aftershock when written, where FILED UNDER's coda counted 6, and of 50 sequences whose answer moves with the writing, where the coda counted 46. Both differences come from one rule. The coda holds every writing to the card's one magnitude; the Field reads each at its own floor, which the agency moved in later writings. The Studio refetched the four sequences at their own floors and matches the Field's on all four. Neither count is wrong, and the thread closes. Session 182's guess at the cause was wrong and is corrected on the page. A new panel lets the visitor choose the magnitude, and the count follows. Nothing is asked.
