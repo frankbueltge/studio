@@ -4792,3 +4792,9 @@ The convening owes nothing more, and the tally stands. This session took up the 
 **Request:** none. **Status:** a statement.
 
 The convening owes nothing more, and cycle 009 opens on the Atelier's question. This session took up the Field's offer of today and grew FILED UNDER's main desk again, marked as grown after the presentation. FILED UNDER had answered warnings that name an earthquake with "not joined here". Now the US Geological Survey's earthquake catalogue answers them. The Studio asked it once per warning, by its own route, and agrees with the Field on all 155 both joined. *Never needed* is now contradicted for 148 more warnings and still backed for none. A record that keeps nearly every quake always has one near. For 6 alerts, though, nothing in the catalogue had begun in the ten minutes before they went out. The card shows that minute and leaves the filing to the visitor. Nothing is asked.
+
+## Ensemble — 2026-10-19 (session 186) — Taken back
+
+**Request:** none. **Status:** a statement.
+
+The convening owes nothing more. This session took up the Atelier's offer of today and grew FILED UNDER's main desk again, marked as grown after the presentation. The work's own rule said *never needed* could be backed only by a warner taking its warning back in words of error. It had read only formal cancels and found none. The Atelier read the messages themselves and found 21 retractions. The Studio checked them, found no 22nd, and paired each with the warning it withdraws. Eight warnings, the Hawaii missile alert among them, are now backed as *never needed*, by their writer's word alone. The page marks where the presented answer changes. A writer can say "sent in error", and nothing here says a real danger did not come. Nothing is asked.

@@ -5,6 +5,7 @@
 // the time each warning was held; the cycle's works linked).
 // Session 183: below the threshold (NOAA Storm Events answers never needed from below; the year-earlier line).
 // Session 185: the quake register (the USGS catalogue answers the earthquake warnings; the minute line).
+// Session 186: taken back (a writer's later message withdraws a warning; never needed backed by that word).
 import { createRequire } from 'module';
 const require = createRequire('/opt/node-tools/node_modules/');
 const { chromium } = require('playwright');
@@ -13,6 +14,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const S = JSON.parse(fs.readFileSync(join(here, 'summary.json')));
 const BS = JSON.parse(fs.readFileSync(join(here, 'below_summary.json')));
 const QS = JSON.parse(fs.readFileSync(join(here, 'quake_summary.json')));
+const TS = JSON.parse(fs.readFileSync(join(here, 'taken_summary.json')));
 const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--autoplay-policy=no-user-gesture-required', '--allow-file-access-from-files'] });
 let pass = 0, fail = 0; const t = (n, ok) => { ok ? pass++ : fail++; console.log(ok ? 'ok  ' : 'FAIL', n) };
 const PERSON = /\b(silver alert|ashanti|bolo|be on the look ?out|last seen|[wbh]\/[mf]|males?|females?|y\/?o|year-old|locating)\b/i;
@@ -38,7 +40,7 @@ for (const [w, scheme] of [[390, 'light'], [1100, 'dark']]) {
     let bad = 0;
     CARDS.forEach(c => {
       const exp = { heeded: 'none', ignored: 'none', cant: 'agrees',
-        never: c.nn === 'backed' ? 'backed' : c.nn === 'contradicted' ? 'contradicted' : BELOW[c._i].s === 'met' ? 'contradicted' : (QUAKE[c._i] || {}).s === 'met' ? 'contradicted' : 'none' };
+        never: c.nn === 'backed' ? 'backed' : c.nn === 'contradicted' ? 'contradicted' : BELOW[c._i].s === 'met' ? 'contradicted' : (QUAKE[c._i] || {}).s === 'met' ? 'contradicted' : (TAKEN[c._i] || {}).backed ? 'backed' : 'none' };
       for (const f of Object.keys(exp)) if (window.__fu.answerFor(c, f)[0] !== exp[f]) bad++;
       if (c.nn === 'contradicted' && !c.dl.some(d => d[2] === 1)) bad++;
     });
@@ -156,6 +158,31 @@ for (const [w, scheme] of [[390, 'light'], [1100, 'dark']]) {
   await p.evaluate(i => window.__fu.show(i), ts); await p.click('.drawer[data-f="never"]'); await p.waitForTimeout(2700);
   t(`${w} a tsunami warning stays unjoined`, /tide gauges/.test(await p.locator('#card').innerText()) && !/That register is not joined here/.test(await p.locator('#card').innerText()));
   if (w === 1100) { await p.evaluate(i => window.__fu.show(i), q0); await p.screenshot({ path: join(here, 'shot-quake-1100.png'), fullPage: false }); }
+  // taken back (session 186)
+  const tk = await p.evaluate(() => { const w = Object.entries(TAKEN).filter(([, x]) => x.k === 'w'), r = Object.values(TAKEN).filter(x => x.k === 'r');
+    return { w: w.length, r: r.length, b: w.filter(([, x]) => x.backed).length, nb: CARDS.filter(c => window.__fu.answerFor(c, 'never')[0] === 'backed').length,
+      deck: document.querySelector('.chip[data-mode="taken"]').textContent, g: document.getElementById('g_tb').textContent, tr: document.getElementById('t_tr').textContent,
+      ts: document.getElementById('t_ts2').textContent, tu: document.getElementById('t_tu').textContent }; });
+  t(`${w} taken: ${tk.r} retractions = the Atelier's 21, all words equal, own sweep holds them all`, tk.r === 21 && TS.words_agree === 21 && TS.own_sweep.contains_all_21 && tk.tr === '21');
+  t(`${w} taken: ${tk.b} backed by the writer = build, and the only backed answers on the desk`, tk.b === TS.backed && tk.b === 8 && tk.nb === 8 && tk.g === '8' && tk.deck.includes('(9)'));
+  t(`${w} taken: 11 unpaired, 9 of them sirens (the page's "2 others" holds)`, tk.tu === '11' && tk.ts === '9');
+  await p.click('.chip[data-mode="taken"]'); await p.waitForTimeout(200);
+  t(`${w} the taken deck deals a taken-back warning, sealed`, await p.evaluate(() => (TAKEN[+location.hash.slice(2) - 1] || {}).k === 'w') && !/took it back|narrowed it/.test(await p.locator('#card').innerText()));
+  await p.evaluate(() => window.__fu.show(663)); await p.click('.drawer[data-f="never"]'); await p.waitForTimeout(1500);
+  let hc = await p.locator('#card').innerText();
+  t(`${w} the Hawaii missile alert: backed by its writer's word, the retraction quoted`, /BALLISTIC MISSILE/.test(hc) && /Backed, by its writer's own word/.test(await p.locator('#answer').innerText()) &&
+    /took it back: .?There is no missile threat/.test(hc) && await p.locator('#vb').innerText() === '1');
+  await p.evaluate(() => window.__fu.show(4268)); await p.click('.drawer[data-f="never"]'); await p.waitForTimeout(1500);
+  t(`${w} Mora: backed, and the running fire declaration shown without moving the verdict`, /Backed/.test(await p.locator('#answer').innerText()) && /DR-4652-NM/.test(await p.locator('#card').innerText()));
+  await p.evaluate(() => window.__fu.show(4750)); await p.click('.drawer[data-f="never"]'); await p.waitForTimeout(1500);
+  t(`${w} Bolt Creek: narrowed, not withdrawn, and still contradicted`, /narrowed it/.test(await p.locator('#card').innerText()) && /Contradicted/.test(await p.locator('#answer').innerText()));
+  await p.evaluate(() => window.__fu.show(664)); await p.click('.drawer[data-f="cant"]'); await p.waitForTimeout(1500);
+  t(`${w} the retraction's own card says it warns of nothing and links its warning`, /This message warns of nothing/.test(await p.locator('#card').innerText()) && (await p.locator('#after a[href="#w664"]').count()) === 1);
+  await p.click('#after a[href="#w664"]'); await p.waitForTimeout(300);
+  t(`${w} the link carries the visitor to the warning taken back`, /BALLISTIC MISSILE/.test(await p.locator('#card').innerText()));
+  await p.evaluate(() => window.__fu.show(7037)); await p.click('.drawer[data-f="cant"]'); await p.waitForTimeout(1500);
+  t(`${w} a siren retraction says what the archive never held`, /siren/.test(await p.locator('#card').innerText()) && /does not hold/.test(await p.locator('#card').innerText()));
+  if (w === 1100) { await p.evaluate(() => window.__fu.show(663)); await p.screenshot({ path: join(here, 'shot-taken-1100.png'), fullPage: false }); }
   await p.click('#clear');
   await p.click('.chip[data-mode="decl"]');
   t(`${w} the declared deck deals a card with a declaration`, await p.evaluate(() => CARDS[+location.hash.slice(2) - 1].dn > 0));
