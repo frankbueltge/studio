@@ -1,0 +1,616 @@
+{
+ "fetched": "2026-10-20T06:39Z",
+ "end": "2026-10-20",
+ "files": {
+  "cow_ABQ.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ABQ&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 399411,
+   "sha256": "73e78ec17145b3fdd98b9ce4f6bdeacffe97297836f8dbfa418f767b153013e5"
+  },
+  "cow_ABR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ABR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 530884,
+   "sha256": "9e4c058473d18a47ad6ae3bba485700d72b28a38142d2dfaba3ae52f3d3db7de"
+  },
+  "cow_AFC.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=AFC&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1326,
+   "sha256": "14bb0b4e3a722018073ef14b7795e43474fe8d9db35b64d0393d792a444175a9"
+  },
+  "cow_AFG.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=AFG&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 830,
+   "sha256": "ba28bb71d62ecbf66dd7afb4d3d3dc11547f702272cb313bcbabd1bbb45cc525"
+  },
+  "cow_AJK.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=AJK&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 830,
+   "sha256": "a8ecacc51e2f2be1d63d2524289ec4dc655268ba2bc31ae654da2b4363931f84"
+  },
+  "cow_AKQ.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=AKQ&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1220715,
+   "sha256": "eb38ba792e666a9df9a28ada3a94d24c0b34645cbd944ab67b03deac03f47c7a"
+  },
+  "cow_ALY.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ALY&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 187335,
+   "sha256": "4bfe9435046d7cb0a337ae09e3700d39f8d3bb4451c487f9cd9c1bb541d18832"
+  },
+  "cow_AMA.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=AMA&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 964686,
+   "sha256": "d4bd9c3faf442ab02f2d98cf411467c6c42f5684413cbe10d634e7a851801135"
+  },
+  "cow_APX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=APX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 104265,
+   "sha256": "ea239761b90e8ccf1ecac2de390776b2ccefd966dbf4ce4b9cdc26d3eb70715d"
+  },
+  "cow_ARX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ARX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 574389,
+   "sha256": "e207237b249925c0fb7ea0df52a19c31e0679030f35fe6b3bda679154e3a3b13"
+  },
+  "cow_BGM.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BGM&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 444717,
+   "sha256": "b33cd9ff881794d0e540416437d0e0b1c814e824355541ef00d3c1061a52fac6"
+  },
+  "cow_BIS.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BIS&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 871501,
+   "sha256": "48ddc576c78300704b01019d2d116338dad21fe0b83fc3aab1c70177123c6f47"
+  },
+  "cow_BMX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BMX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 2463852,
+   "sha256": "71605b163dde4d011d17d0fab0298a9bcc432f3d11af12a2c40ac959949202fe"
+  },
+  "cow_BOI.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BOI&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 16428,
+   "sha256": "28887456c073143c3e66156e0f2630ac01693601c1465afc50f6966630a25a7e"
+  },
+  "cow_BOU.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BOU&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1286562,
+   "sha256": "79258ac88c21c679b35a37b378aff9fb3120f49572f460cb75dd2b75e1d5a06a"
+  },
+  "cow_BOX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BOX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 254437,
+   "sha256": "b9fcd7de6fdc135181e0810eda91315e7894c59ca672751508d5c85fd094a34b"
+  },
+  "cow_BRO.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BRO&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 193660,
+   "sha256": "4d32a00c0db003d4d82d1f758cb2ce5958fb2c134446e82a4af442eff958737f"
+  },
+  "cow_BTV.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BTV&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 45644,
+   "sha256": "7af64790fbc0c75eb344a37425b0bdff89c79ec999a62ab1fcc627f6c7041b32"
+  },
+  "cow_BUF.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BUF&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 180946,
+   "sha256": "08148b62cf94a71b542b48df6a48984143f5ad32d8304c6f067e29115028967b"
+  },
+  "cow_BYZ.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=BYZ&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 128514,
+   "sha256": "b25626858290b599f022cb475f3dd4fdf6fc6005a231cb5b9c572ac1d9f652ef"
+  },
+  "cow_CAE.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=CAE&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 584641,
+   "sha256": "dc5662b4eef8e6a0ac463e3ef10f2bc2b1e7d76f1d93426d64b5506b99daae5d"
+  },
+  "cow_CAR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=CAR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 64872,
+   "sha256": "c869e06722aa74d10959a685dbe45e7edab530fecdf2625399d74fa993dcc384"
+  },
+  "cow_CHS.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=CHS&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 627030,
+   "sha256": "e49a82b680592cedd92d2ce03b6ec9213a90c8e57b973286c601e5d4b4d98a2a"
+  },
+  "cow_CLE.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=CLE&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 611890,
+   "sha256": "449e0bc5274711e8f19ea68f2fe071840790f786486e3c77bbd033104c15767f"
+  },
+  "cow_CRP.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=CRP&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 544011,
+   "sha256": "dc380662726f40e5dcc3fcfd1e34548ff0a4a5652060b8c3bc657ea08a0821db"
+  },
+  "cow_CTP.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=CTP&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 464190,
+   "sha256": "b1d88c553d620380cf22cefaa6a94a813e55aa08cbce96b0d4b3ed642311f370"
+  },
+  "cow_CYS.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=CYS&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 683696,
+   "sha256": "1ebe8b2bf99a475e1b5a82e03230761c49ecf5e254f6bc463c44b4bb2206765e"
+  },
+  "cow_DDC.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=DDC&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1032374,
+   "sha256": "201541d9af2bfc5af0f12a236ed2d01160e6bbfc3705ecaffd97945946533b0f"
+  },
+  "cow_DLH.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=DLH&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 327652,
+   "sha256": "d99ad82d2c1e59658dc7c54bc6711b9a46db32f52d2b7abb7259132ddb180674"
+  },
+  "cow_DMX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=DMX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1425772,
+   "sha256": "96c3dd4fa0654870d0742d74dd5e6099ef92b29315cd93dfaa31eedd387ccbf9"
+  },
+  "cow_DTX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=DTX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 321147,
+   "sha256": "9eea743609ae3226d6d3a188edfc4f62f28d8947c36294f2dd45ab6144e78536"
+  },
+  "cow_DVN.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=DVN&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1229919,
+   "sha256": "bd52de9a99539d3db3edc54207600639c446911b122f83b21673f0a30cabd0d4"
+  },
+  "cow_EAX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=EAX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 959868,
+   "sha256": "77702e860142efef2df21d84a601429c05c093ee1c03759020e203e6175ac536"
+  },
+  "cow_EKA.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=EKA&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 3390,
+   "sha256": "4f1e948c343730829a46417cb9b41bd12ee278dd0eef7998994c0db5078575a7"
+  },
+  "cow_EPZ.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=EPZ&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 23201,
+   "sha256": "75bdfea1a1e6b4c41d3b6efff06c955b5aede041f6512616f8a0434e2399475d"
+  },
+  "cow_EWX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=EWX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 593826,
+   "sha256": "3faebdab4438fbd3bb411bc53921b2b3eb6b859b5eb5318a408e2e8448ce08e3"
+  },
+  "cow_FFC.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=FFC&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1837512,
+   "sha256": "ffab145ea25cccb43203c886a7589d0f8b7525762f8ae09924743a3f63fe6071"
+  },
+  "cow_FGF.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=FGF&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1324701,
+   "sha256": "c1dbb1275361b85468693d921a91c2959808972407d2d78784e1f76cfe3686ee"
+  },
+  "cow_FGZ.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=FGZ&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 102412,
+   "sha256": "4f6c65edcad542f91db084fed13b121208391ebde5d17618862f27a04b3059dc"
+  },
+  "cow_FSD.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=FSD&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 912734,
+   "sha256": "fd79cae589176d2862a23d7fb2c7e44aac705b21fe1ad086ded5ace6b1bb6a45"
+  },
+  "cow_FWD.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=FWD&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1552745,
+   "sha256": "b0275dac6a8acf2f935b6eb8c9e114cb85f7f899b6d977d849b7d00ef84b8f92"
+  },
+  "cow_GGW.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GGW&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 150639,
+   "sha256": "176785a6b7df3f5fa4867a6676bd58caa4768266c98c7a47808f6e4ea2b26d7e"
+  },
+  "cow_GID.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GID&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 861235,
+   "sha256": "5f2d3bbd3c84dc36d56efe7e439b3f02e5868030d8da2ff7c718b7e4925c26bd"
+  },
+  "cow_GJT.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GJT&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 23383,
+   "sha256": "6e5788f837786169e31d980bef509986556a08c362c7d482f058cfc611cb09b8"
+  },
+  "cow_GLD.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GLD&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1365251,
+   "sha256": "a5fedf6d009621298dbd5530aef7079e28e017f2d24c203eaf51ef2e93c01edc"
+  },
+  "cow_GRB.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GRB&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 294712,
+   "sha256": "93e846f4459832132b98e92007af4c2aeb314c1b3b2d7b7d91707979c52eaddb"
+  },
+  "cow_GRR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GRR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 291459,
+   "sha256": "b67f87cdad6fd7fed254f177541321396b7869b8ada0cd7f2290f60cda3cfeb9"
+  },
+  "cow_GSP.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GSP&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 827583,
+   "sha256": "aa87a3a72548a660e4e332fdca13e5ac68af2da5027b4b95a31f50a4f46984cd"
+  },
+  "cow_GUM.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GUM&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 830,
+   "sha256": "57e82a71b9806b22afc75b0ef614e37b40d4880a5e604510ff97ef335588e499"
+  },
+  "cow_GYX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=GYX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 133089,
+   "sha256": "0ae209cfb4474e7a60e342fab3c9927bd5f2bf7ae645f193f686607c6871657f"
+  },
+  "cow_HFO.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=HFO&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 11780,
+   "sha256": "7fa06d01f7a654b5ba119c0d2527685a4a0b1aa9d33c9477b2792cd083187f02"
+  },
+  "cow_HGX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=HGX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1088520,
+   "sha256": "38cc8147d7c61e0306ebd281c5ff0350ca1d95b1e747ada60db017fff78a6ab8"
+  },
+  "cow_HNX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=HNX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 71523,
+   "sha256": "f627e4a9e6b0693f69bc864b7533623a142aa12d4c0f829675e10d741b654dea"
+  },
+  "cow_HUN.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=HUN&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1269952,
+   "sha256": "3fda1b0736212574abc8280f280bf2dc7089d1e07c50636f030219b9f808eba0"
+  },
+  "cow_ICT.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ICT&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 900441,
+   "sha256": "5fa63cf897a2902006f5612dab757ec58d4e8c57a2901dd21bac81860ca96c64"
+  },
+  "cow_ILM.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ILM&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 575236,
+   "sha256": "7d710e6474e457e490c12121c48c2fa58c4b8124cfb66a9b6892fad05365a13b"
+  },
+  "cow_ILN.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ILN&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1201186,
+   "sha256": "420eced442a052f3f42e00afa10c7f774c191d995a35143e82d2427eeeea1970"
+  },
+  "cow_ILX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=ILX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1461023,
+   "sha256": "d4418dcad1a7b975e0e46293523bf3876f9d738f0f8b8d0bf96f9c106ddd02ee"
+  },
+  "cow_IND.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=IND&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 995776,
+   "sha256": "851953d68afc0ff9bda66e91b51ca0b34d8883dae26cb96e450230f0469ae879"
+  },
+  "cow_IWX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=IWX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 728860,
+   "sha256": "fa4523d6c45664649931fc24fd6699e42afaafb29e492f80d65f8a9882a8f1ab"
+  },
+  "cow_JAN.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=JAN&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 4184103,
+   "sha256": "a874fdea4ff3bc56cef74c765a77345046825c9ef1458949e6c5d7657e5ff1c7"
+  },
+  "cow_JAX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=JAX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 951695,
+   "sha256": "e10c505cd15af2305b346b3d6948ee857267498ea5052834b051cbf5f19489f5"
+  },
+  "cow_JKL.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=JKL&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 508165,
+   "sha256": "f5b8074ca847149c3e00fea92ceb08fe2aa0bb2c1c72bf58066806e23e861a7d"
+  },
+  "cow_JSJ.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=JSJ&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 18918,
+   "sha256": "664d16583766ac5d4525293866e782596b402f4952081c2559c25e0baab9022a"
+  },
+  "cow_KEY.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=KEY&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 77270,
+   "sha256": "8013172752cbcc23b1db7fb82b3d6015a7cc2420735f1892d7f4e4447db6ee45"
+  },
+  "cow_LBF.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LBF&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 852262,
+   "sha256": "808b655dab9d5cfca2f914911e1aaf11d50b203db7de0108b26861896b1ee50c"
+  },
+  "cow_LCH.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LCH&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1731500,
+   "sha256": "bea390a94fca1cbd91f8e5b6e3ca00f07bd33292b6247347bc828f33dab8f8b2"
+  },
+  "cow_LIX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LIX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 2395706,
+   "sha256": "64b01675bc09dbe5a3cbb8bec6ca5b9dfae088a3514ee4cd104548c218cbdd3f"
+  },
+  "cow_LKN.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LKN&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 26004,
+   "sha256": "c313d1fd3b145fe8ceb5f90630375a1380b4cd0d94716f02d25e23191cac5d20"
+  },
+  "cow_LMK.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LMK&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1443974,
+   "sha256": "42cb953d40b3811930400f4d574d2c3fc1515b6bae7dca727f3f60718c638f5f"
+  },
+  "cow_LOT.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LOT&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 983641,
+   "sha256": "c680c9e6b4a01b2689bfcaaa1282c7441938ab65df33b5dd16ee707f28a2879c"
+  },
+  "cow_LOX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LOX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 50027,
+   "sha256": "8a5bdece49187589bbabfb412006c5f3d4265bdf1f7dd4557ee4308d8ee45ead"
+  },
+  "cow_LSX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LSX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1655441,
+   "sha256": "658fc1aac6021cf37d5d1cbbf01ebe9f81373cd66d8f2f83084847a0b21ca5f7"
+  },
+  "cow_LUB.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LUB&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 496741,
+   "sha256": "a683785b67ba00c46404a68d0e0107a4b4777e3d1ce057c2af6075292afab531"
+  },
+  "cow_LWX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LWX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 924014,
+   "sha256": "8c7c4c24aa1a5b77850751063e212870284eec77a4647705b7cc2aed6c1b0b7e"
+  },
+  "cow_LZK.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=LZK&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1839390,
+   "sha256": "934a0dba9ccc1f609f551a3a7ce0d7e62e4dbde306588be2a0a98b193d4af680"
+  },
+  "cow_MAF.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MAF&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 549681,
+   "sha256": "adb79bbbf574e0078d318491f017f2c983d20a8eb7fb86dbf07b59e077a3ff96"
+  },
+  "cow_MEG.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MEG&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 2169277,
+   "sha256": "e74755db25182f1bdbbd1ca778e4476a6ab15e46cb6499ffe3e14e0a5f738ece"
+  },
+  "cow_MFL.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MFL&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 710147,
+   "sha256": "b20963831ec46078bbe98d2a4ee2d20f0eebc87bfd50fed28ca6064c8f3caa2a"
+  },
+  "cow_MFR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MFR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 4455,
+   "sha256": "3d26bd4f4fd7bb3890094463fd591a653e11dadcf668857b291dcfbddccf0419"
+  },
+  "cow_MHX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MHX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 663908,
+   "sha256": "49ca0696ca945e680609d23043dcbc0990dbd1eedb8cf139ca1b0d3fc40b5af7"
+  },
+  "cow_MKX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MKX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 729326,
+   "sha256": "363cb88292ed5d4b57ce55ca42afa1b68b4cff6c5332779170217e11ec9d2388"
+  },
+  "cow_MLB.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MLB&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 677078,
+   "sha256": "1d354ee9a4be5dea6214d7a29470eb65637ec91e24dd52ce752f7f567c4e0c0d"
+  },
+  "cow_MOB.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MOB&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1915773,
+   "sha256": "225b5469c745de96e1e34df6d1d403205cb0217befca32c936556595dde922d5"
+  },
+  "cow_MPX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MPX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1307333,
+   "sha256": "fcd86724adb67caea3aa06fb7e0a76cbdefec7398fa525b58c6beb689e6ea9d5"
+  },
+  "cow_MQT.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MQT&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 60977,
+   "sha256": "2f0e256e9d8e9fbbcc341570fd7eb5d0cbbece66f5b449aae2582b0769fde1c0"
+  },
+  "cow_MRX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MRX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 661928,
+   "sha256": "ae03786a3ff458c341884be19765b85eeddf82609bfc2d148dfa162957e0d171"
+  },
+  "cow_MSO.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MSO&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 3009,
+   "sha256": "6342944479dd48156253687e14f19052b774faa60620e26d8947f13ac3d084a8"
+  },
+  "cow_MTR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=MTR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 19363,
+   "sha256": "9b924db0dec225549f01e27471e8261f5618f470696b0d3afcdb235027b78c3b"
+  },
+  "cow_OAX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=OAX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1199766,
+   "sha256": "85ae33799d65784b20ba90ebded2b65583d0a5b96a50b6474e2c163b40c2acdf"
+  },
+  "cow_OHX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=OHX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1508067,
+   "sha256": "13a295d17e5a134c62daf9e2a3ec1ced114c6e5977f71d6267d51db0ea9c4cea"
+  },
+  "cow_OKX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=OKX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 165619,
+   "sha256": "5adadb4a1c42a7ab81317992a3e3ba3f20f44d767a8ff335ff076308a43ce25b"
+  },
+  "cow_OTX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=OTX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 14107,
+   "sha256": "a5cf80950ad78a19ba531d5e6cf9b16a2ba34e0137a62c564bc5a476187d96e7"
+  },
+  "cow_OUN.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=OUN&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 2296738,
+   "sha256": "f6dbf571b207241707073ce9916d98a725cc6a1b036b620a3cbf5ca878a23929"
+  },
+  "cow_PAH.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PAH&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 2368628,
+   "sha256": "f4e5aa653746770791e6dc9d523f219ec56622923e2ca3a90438fef9fbbf394d"
+  },
+  "cow_PBZ.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PBZ&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 584709,
+   "sha256": "4a022109747783f4dcd315c448e0fe44be0267bbd4e3c090e10c587b193712a6"
+  },
+  "cow_PDT.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PDT&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 16938,
+   "sha256": "7d372902b3f128cf9fa3a4d8021fc197d1ebe2716f2867de731fcdba74755361"
+  },
+  "cow_PHI.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PHI&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 647796,
+   "sha256": "1f3d77b7e61f76191388c9e0f0402360e8655c279bdc470b0463731da102184a"
+  },
+  "cow_PIH.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PIH&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 110046,
+   "sha256": "5fa396d49d2a485de8816defd11b8593cd0f49b0bb1c722b75460e8f616db4e4"
+  },
+  "cow_PQR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PQR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 84176,
+   "sha256": "9d919800f5ec0a2dcd4dc4b9b7c13b1e0e1c9917511970c6752ea6199e5b8ff2"
+  },
+  "cow_PSR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PSR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 26184,
+   "sha256": "75776a98de346ea385aa545de97451f2eae2a810f5bda30ef84afb328e5bed43"
+  },
+  "cow_PUB.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=PUB&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 670536,
+   "sha256": "b9fa98ba80779577020a782e99a7dc63a7698f3e7fdfa57d8445c526f7f48efe"
+  },
+  "cow_RAH.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=RAH&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 917336,
+   "sha256": "0e95828c2e55a51e8dff8a226ed637a572d36f1d31dd1f6e48a599d081061f29"
+  },
+  "cow_REV.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=REV&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 21625,
+   "sha256": "e1670be8d6d538c93c2973f98ccf080b12543b7ecbf6bf3979dce14cb57c6373"
+  },
+  "cow_RIW.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=RIW&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 143923,
+   "sha256": "a58670ac85b8a375abb39a481f8dfc710f48260a49ccdcb48b7cc4f4fdc45a6d"
+  },
+  "cow_RLX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=RLX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 320841,
+   "sha256": "636f98adb69fe7d49286b98922b67690b4e1568514d286e9384325b90366d8fd"
+  },
+  "cow_RNK.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=RNK&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 640676,
+   "sha256": "979819d8eee9bfa0a6b13a1c71e5600be0a6e0420b06703d2ef0a55446d2b628"
+  },
+  "cow_SEW.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=SEW&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 30148,
+   "sha256": "02364368dcc4431a8c928dcad653fcaafcd69272ca4f79b7eec9aa650407691b"
+  },
+  "cow_SGF.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=SGF&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1931566,
+   "sha256": "3ab12ac45ad821fa38bdb5fec85a27b236b84bf050cdb3e9c13ffc52502ae8ba"
+  },
+  "cow_SGX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=SGX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 33714,
+   "sha256": "c595655a35681fb24cc2f6bfe626aa005029475b919ea78b193939d92ba0da69"
+  },
+  "cow_SHV.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=SHV&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 2711861,
+   "sha256": "32d2bb097cfa8bb6c48fff644309dd34622719c97a107e3db313433d3b982d14"
+  },
+  "cow_SJT.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=SJT&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 769140,
+   "sha256": "f648b27968e23c46810cd398b5b8fea88e16affc9eec1513188560688dc0d3a0"
+  },
+  "cow_SLC.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=SLC&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 25303,
+   "sha256": "280b8967a8cb18770e390f8911032b498f4308b85fa8f87e831e8fe9a83719ec"
+  },
+  "cow_STO.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=STO&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 148246,
+   "sha256": "6f2d9bc73bc9f5d6657161e08f8d972074d40a47a84a5e9d539a619ec1233100"
+  },
+  "cow_TAE.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=TAE&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1877848,
+   "sha256": "e8f1617c10cf497da0fc62d924969b8143297e7ed345559bbcc509d421b09324"
+  },
+  "cow_TBW.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=TBW&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 670342,
+   "sha256": "0638cd2ce737a00f7827b965183e9884259ad917f4b9352702afc5c4e5291aa7"
+  },
+  "cow_TFX.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=TFX&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 61609,
+   "sha256": "3b971553e1dd6201421c76cdaa627b2646d7d1a303afb46e26f4a34b03cd6881"
+  },
+  "cow_TOP.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=TOP&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 804092,
+   "sha256": "bf9d0eecebd6b8fd7e85992e371f20fe081dd6db611954bc0c1c90971d7c31d8"
+  },
+  "cow_TSA.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=TSA&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 1714323,
+   "sha256": "768b7ab3abd2de7307f827e8a8576a6dacfcd27ae23db076e1cd593a426ef064"
+  },
+  "cow_TWC.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=TWC&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 37800,
+   "sha256": "c9f8368f1dd8c91748070ecae5f1944a878980d1d40ae06e8b8f46b3065dfd0f"
+  },
+  "cow_UNR.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=UNR&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 384605,
+   "sha256": "212b6d48f30cae530e916330996f984de2c909683333f84651a147ed02f5f5f6"
+  },
+  "cow_VEF.json": {
+   "url": "https://mesonet.agron.iastate.edu/api/1/cow.json?wfo=VEF&begints=2008-01-01T00:00Z&endts=2026-10-20T00:00Z&phenomena=TO&lsrtype=TO",
+   "bytes": 14273,
+   "sha256": "0fc4f8e8b8502513458a28abc6fb4ef6a4a2e12916a76c6e35092c374ffb6c8d"
+  }
+ }
+}

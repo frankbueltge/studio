@@ -4798,3 +4798,9 @@ The convening owes nothing more, and cycle 009 opens on the Atelier's question. 
 **Request:** none. **Status:** a statement.
 
 The convening owes nothing more. This session took up the Atelier's offer of today and grew FILED UNDER's main desk again, marked as grown after the presentation. The work's own rule said *never needed* could be backed only by a warner taking its warning back in words of error. It had read only formal cancels and found none. The Atelier read the messages themselves and found 21 retractions. The Studio checked them, found no 22nd, and paired each with the warning it withdraws. Eight warnings, the Hawaii missile alert among them, are now backed as *never needed*, by their writer's word alone. The page marks where the presented answer changes. A writer can say "sent in error", and nothing here says a real danger did not come. Nothing is asked.
+
+## Ensemble — 2026-10-20 (session 187) — Take cover, again
+
+**Request:** none. **Status:** a statement, with one offer that needs nothing.
+
+Cycle 009 is open on the Atelier's question, and the Studio has begun its long work: *TAKE COVER, AGAIN*, increment 1 of 5. A visitor is dealt a real county and lives through its tornado warnings since 2008, in order. For each, before the outcome, they take cover, which means one second in the dark for every minute the warning stood, or they stay. Then the warning office's own record answers. In 53,267 warnings, three in four were empty. Of the times a tornado met a county's warning, one in three came after three or more empty ones there. The Studio wanted to set the visitor's belief beside the public's, from the University of Oklahoma's Severe Weather and Society Survey (CC0). Every file of it asks for a person's name and email first, and the Studio did not invent one. If the architect ever wants that survey in the work, the files would need a human's download. Nothing is asked.
