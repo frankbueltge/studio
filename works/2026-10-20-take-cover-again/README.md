@@ -35,7 +35,27 @@ empty warnings the county had just had. Score: `SCORE.md`.
 - A fresh fetch of all 122 offices rebuilt `data.js` byte for byte (the raw files' hashes moved;
   the new manifest is committed).
 
-Rebuild: `python3 -I fetch.py RAW && python3 -I build_data.py RAW && python3 -I build_toll.py RAW 1950-2024_actual_tornadoes.csv && node verify_browser.mjs`
+**Increment 3 (2026-10-20, session 189): the warner's word, and the belief beside the fable.**
+- For every county entry, when the office ended the warning there and the statement that ended it
+  (IEM VTEC events by office and year, 2,318 files; `fetch_word.py`, `build_word.py`). Every one of
+  the 113,772 county entries has its row. Taken back five or more minutes early: **14,003 of 83,679**
+  empty entries (17 %, 253,372 minutes given back) and **6,623 of 30,093** met ones (22 %).
+- **The dark now ends where the office took the warning back.** The countdown starts at the issued
+  minutes; if the office cancelled it for the visitor's county, the dark says so and lifts. After the
+  answer, the office's own statement is fetched live from the IEM text archive and quoted.
+- **What the warner says** (`sample_words.py`, a fixed sample of 400 of the 16,768 statements that
+  ended a warning early, seed 20261020, rules fixed before reading): 80 % say first that the storm
+  moved out of the area, 2 % that it weakened; **none** says the warning was in error, that no tornado
+  came, or uses "false alarm". A first reading of the whole segment was fixed beforehand and is kept
+  beside the first-sentence reading added after it (both in `words.json`).
+- **The belief columns.** Beside the visitor's take-cover rate by the run of empty warnings, the
+  Atelier's run-reading public (plate II of *The Wolf's Ledger*: trust kept 0.6 per empty warning, a
+  declared toy) and the record's own answer: after a met warning the next in a county was met 38 %
+  of the time, after one empty 27 %, after ten or more 16 % (1,504 times). Plate II's met strings were
+  asserted equal to this work's for all 2,110 counties it shows.
+- Fresh fetch of all 122 offices again; `data.js` rebuilt byte for byte.
+
+Rebuild: `python3 -I fetch.py RAW && python3 -I build_data.py RAW && python3 -I build_toll.py RAW 1950-2024_actual_tornadoes.csv && python3 -I fetch_word.py WRAW && python3 -I build_word.py RAW WRAW plate2.js && python3 -I sample_words.py TRAW && node verify_browser.mjs`
 
 - `fetch.py`: one request per forecast office to the Iowa Environmental Mesonet's warning
   verification service (Cow), 2008 to the day of the fetch. Raw files stay outside the repository;
@@ -48,8 +68,7 @@ Rebuild: `python3 -I fetch.py RAW && python3 -I build_data.py RAW && python3 -I 
   at 390 px (light) and 1100 px (dark), with the dark wait run fast (`?speed=60`, a test hook): 57/57.
 
 **Limits.** *Empty* is the record's answer: a tornado nobody reported leaves its warning empty, and a
-county counts a warning as met if the tornado touched any part of the polygon. Minutes are as issued;
-cancellations come in increment 3. The toll is the whole track's, not one county's; a tornado's
+county counts a warning as met if the tornado touched any part of the polygon. Minutes in the dark are the minutes the warning stood over the county; a county counts as met if a tornado met any part of the polygon, so a warning taken back for one county can still be met in another. The toll is the whole track's, not one county's; a tornado's
 counties are the database's own (at most four, first state only, 387 tracks list none), so a
 county's "under no warning" list misses tracks that list it nowhere. Local hours use each state's main time zone. The visitor's choices
 stay in their browser (localStorage) and the CSV they download; nothing is collected.
@@ -62,4 +81,4 @@ fill it under an invented identity.
 Sources: Storm Prediction Center, `1950-2024_actual_tornadoes.csv` (US government work; fetched
 2026-10-20, 8,012,185 bytes, SHA-256 cd6dc7b1…6cf2, not committed); Iowa Environmental Mesonet, NWS storm-based warning verification (public-domain NWS
 products); Aesop, tr. G. F. Townsend (1867), Project Gutenberg #21, for the three words quoted, as the
-Atelier's plate I verified them and checked again here. Third-party code: none.
+Atelier's plate I verified them and checked again here. The Atelier's *The Wolf's Ledger*, plate II (`plate2.js`, fetched from the ulysses repository 2026-10-20, not committed), for its declared habit and as a cross-check. Third-party code: none.
