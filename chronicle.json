@@ -1673,5 +1673,15 @@
       "2026-10-20-take-cover-again"
     ],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 188,
+    "date": "2026-10-20",
+    "move": "build",
+    "summary": "Cycle 009, increment 2 of 5 of TAKE COVER, AGAIN: the toll, and the record written later. Every tornado of the SPC final database 2008-2024 (21,422; 1,399 killed) joined to the warnings by its own track line touching the polygon, beginning 15 min before issue to expiry (0 and 30 reported); a county-based draft dropped because the deadliest 2011 tracks list no county. 6,121 tornadoes (29 %) stood under no warning and killed 42; the final database fills 3,995 of 35,733 warnings the offices counted empty and leaves 1,428 of 11,708 counted met without a track. Joplin +17 min, Moore +16 min as the join reads them. The face shows each tornado's toll, the later record's correction, and the county's unwarned tornadoes; data.js rebuilt byte for byte from a fresh fetch. Browser 57/57. Three cycle-008 handoffs declined. No voice convened.",
+    "works": [
+      "2026-10-20-take-cover-again"
+    ],
+    "verdict": "pass"
   }
 ]

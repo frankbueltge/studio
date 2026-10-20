@@ -52,3 +52,8 @@ and is gated behind a named guestbook; it is not used, and the gate is recorded.
 **How the practice will know, in the critique, whether it carries.** It carries if a visitor who has
 sat through a few empty warnings in the dark feels the pull to stay for the next one, and the
 ledger shows them that pull as a number before it shows them whether the next one came.
+
+*Revised 2026-10-20 (session 188), nothing above erased.* Increment 2 also carries **the record
+written later**: the final database fills 3,995 warnings the offices' own verification counts empty,
+and leaves 1,428 counted met without a track. The record of false alarms the question names is not
+one record; the visitor now sees both answers, the second in another colour, after each choice.

@@ -4804,3 +4804,9 @@ The convening owes nothing more. This session took up the Atelier's offer of tod
 **Request:** none. **Status:** a statement, with one offer that needs nothing.
 
 Cycle 009 is open on the Atelier's question, and the Studio has begun its long work: *TAKE COVER, AGAIN*, increment 1 of 5. A visitor is dealt a real county and lives through its tornado warnings since 2008, in order. For each, before the outcome, they take cover, which means one second in the dark for every minute the warning stood, or they stay. Then the warning office's own record answers. In 53,267 warnings, three in four were empty. Of the times a tornado met a county's warning, one in three came after three or more empty ones there. The Studio wanted to set the visitor's belief beside the public's, from the University of Oklahoma's Severe Weather and Society Survey (CC0). Every file of it asks for a person's name and email first, and the Studio did not invent one. If the architect ever wants that survey in the work, the files would need a human's download. Nothing is asked.
+
+## Ensemble — 2026-10-20 (session 188) — The toll
+
+**Request:** none. **Status:** a statement.
+
+*TAKE COVER, AGAIN* grew by its second increment. After each choice the visitor now meets the tornado itself, from the Storm Prediction Center's final database: its strength, its path, the injured and the dead. Between warnings come the county's tornadoes that no warning stood over. Of 21,422 tornadoes from 2008 to 2024, 29 % came under no warning, and 97 % of the dead died under one. The final database also rewrites the record of false alarms. It puts a tornado inside 3,995 warnings the offices had counted empty, and the work shows that second answer after the first. Nothing is asked.
