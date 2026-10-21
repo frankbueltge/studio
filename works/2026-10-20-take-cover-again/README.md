@@ -55,7 +55,40 @@ empty warnings the county had just had. Score: `SCORE.md`.
   asserted equal to this work's for all 2,110 counties it shows.
 - Fresh fetch of all 122 offices again; `data.js` rebuilt byte for byte.
 
-Rebuild: `python3 -I fetch.py RAW && python3 -I build_data.py RAW && python3 -I build_toll.py RAW 1950-2024_actual_tornadoes.csv && python3 -I fetch_word.py WRAW && python3 -I build_word.py RAW WRAW plate2.js && python3 -I sample_words.py TRAW && node verify_browser.mjs`
+**Increment 4 (2026-10-21, session 190): the record whole, and the critique.** The architect rejected the
+work as it stood (house note of 2026-10-20): the data had no form. Accepted. The page now opens on one map
+of every county (`whole.js`, `build_record.py`, `record.js`, `record.json`; d3, topojson-client and the
+us-atlas counties vendored under ISC in `vendor/`, see `vendor/LICENCES.md`).
+- **The form.** Each county is shaded by its *run*: the empty warnings in a row that have ended there by
+  the day shown, one step darker each, black past a dozen. A met warning flashes it red and sets it pale.
+  Warnings standing are outlined. It plays 2008 to the record's end on arrival, can be scrubbed, and can
+  show instead the longest run each county ever sat through. A tap deals the county to the card below,
+  and the card's county is marked on the map with the seconds the visitor has sat in its dark. *Listen*:
+  a drone for the share of counties three or more deep, and a bell for each tornado meeting a warning,
+  pitched lower the longer the run it ends.
+- **What it shows.** 83,679 times an empty warning ended over a county (2,763,269 county-minutes issued).
+  The longest run is 62, in Brevard FL. At the record's end, 1,423 of 2,980 counties stand three or more
+  deep and 309 ten or more.
+- **The dead.** These are the dead of the final database, 1,399 people in 340 tornadoes. Each is placed at
+  the first listed county whose sequence holds a warning that stood over the tornado. The run read there
+  is the one directly before that warning, in issue order. 37 deadly tracks (most list no county) are
+  read in the counties of their earliest covering warning, taking the smallest run. **550 of the 1,399
+  dead (39 %)** died under a warning that came after three or more empty ones in their county, and 204
+  after ten or more. As a baseline: of the 30,093 times a tornado met a county's warning, 9,426 (31 %)
+  came after three or more empty ones (9,427 in issue order, as increment 1 counts it).
+- **The Atelier's case** (plate IV, built from plate III's tags, `plate3.js` SHA-256 in `record.json`,
+  never committed here): the warnings whose words said OBSERVED and that no record fills. Plate III keeps
+  sequences only for offices with 100 or more warnings, which holds 744 of the Atelier's 792. Of those,
+  741 join to this work's warnings by office and issue minute. 3 keys are held by two warnings and are
+  left out. No joined warning is filled by either record here. They are drawn as violet rings.
+- **The critique** (`CRITIQUE.md`): a convened voice that did not build the work read it against the score
+  and the neighbours. Its verdict was *partly*. Its answers were applied in this session, and what was
+  refused is said there.
+- `verify_browser.mjs` 98/98. The second path reruns the counties' runs, the longest runs, the dead and
+  their runs, and the rings. In the browser: the counts at the end, seeking to 1 May 2011, both views,
+  play, a tap on Cleveland County, the baseline line, and the mark.
+
+Rebuild: `python3 -I fetch.py RAW && python3 -I build_data.py RAW && python3 -I build_toll.py RAW 1950-2024_actual_tornadoes.csv && python3 -I fetch_word.py WRAW && python3 -I build_word.py RAW WRAW plate2.js && python3 -I sample_words.py TRAW && python3 -I build_record.py plate3.js && node verify_browser.mjs`
 
 - `fetch.py`: one request per forecast office to the Iowa Environmental Mesonet's warning
   verification service (Cow), 2008 to the day of the fetch. Raw files stay outside the repository;
