@@ -1703,5 +1703,15 @@
       "2026-10-20-take-cover-again"
     ],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 191,
+    "date": "2026-10-21",
+    "move": "ship",
+    "summary": "Cycle 009, increment 5 of 5: TAKE COVER, AGAIN is finished and presented in presentations/cycle-009/ (the page and every file it loads, byte-identical to the work's; verify.mjs 27/27). The work opens on a map of every warned US county, played from 2008, each darkening with its run of empty tornado warnings and paling when a tornado meets one, with the dead where they died; a tap leads into one county's dark wait. On any day nearly half the warned counties stood three or more empty warnings deep, and the next warning there was still met one time in five; 550 of the 1,399 dead (39 %) came out of such runs, against 31 % of all hits. The Atelier's correction (ho-2026-10-20-atelier-6) was checked and taken up: the 15-minute join window misses tornadoes already on the ground (28 of 60 CATASTROPHIC warnings filled; 50 at 60 minutes). The rule stays, and the page now reads 3,995 as a floor and 1,428 as a ceiling. The method text is folded, as the critique asked. Browser 102/102.",
+    "works": [
+      "2026-10-20-take-cover-again"
+    ],
+    "verdict": "pass"
   }
 ]

@@ -3,6 +3,7 @@
 // Session 188: increment 2 (the final database's toll, the empty warnings it fills, the tornadoes under no warning).
 // Session 189: increment 3 (the warner's word: the dark ends where the office took the warning back; the belief columns).
 // Session 190: increment 4 (the record whole: every county's run on one map, the dead, the Atelier's OBSERVED rings).
+// Session 191: increment 5 (finished; the method folded; the 15-minute window corrected against window.json).
 import { createRequire } from 'module';
 const require = createRequire('/opt/node-tools/node_modules/');
 const { chromium } = require('playwright');
@@ -16,6 +17,7 @@ const WD = JSON.parse(fs.readFileSync(join(here, 'word.js'), 'utf8').replace(/^w
 const WS = JSON.parse(fs.readFileSync(join(here, 'word.json')));
 const R = JSON.parse(fs.readFileSync(join(here, 'record.js'), 'utf8').replace(/^window\.TCA_RECORD=/, '').replace(/;\s*$/, ''));
 const RS = JSON.parse(fs.readFileSync(join(here, 'record.json')));
+const WIN = JSON.parse(fs.readFileSync(join(here, 'window.json')));
 const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--autoplay-policy=no-user-gesture-required', '--allow-file-access-from-files'] });
 let pass = 0, fail = 0, live = ''; const t = (n, ok) => { ok ? pass++ : fail++; console.log(ok ? 'ok  ' : 'FAIL', n) };
 
@@ -83,7 +85,10 @@ for (const [w, scheme] of [[390, 'light'], [1100, 'dark']]) {
   await p.waitForSelector('#strip i');
   t(w + ' no errors on load', errs.length === 0);
   t(w + ' no horizontal overflow', await p.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
-  t(w + ' in progress, dated, at the top', /In progress · increment 4 of 5 · 2026-10-21/.test(await p.locator('#wip').textContent()));
+  t(w + ' finished, dated, at the top', /^Finished · 2026-10-21 · cycle 009/.test(await p.locator('#wip').textContent()));
+  t(w + ' the method is folded, the work is not', !(await p.locator('#method').getAttribute('open')) && await p.locator('#map').isVisible() && await p.locator('#card').isVisible());
+  { const c = await p.locator('#corr').textContent(), V = WIN.by_window, f = n => n.toLocaleString('en-US');
+    t(w + ' the correction carries window.json\'s counts', [V['15'].atelier_classes_2008_to_db_end.CAT.filled_later, V['60'].atelier_classes_2008_to_db_end.CAT.filled_later, V['120'].atelier_classes_2008_to_db_end.CAT.filled_later, V['15'].met_warnings_with_no_track, V['60'].met_warnings_with_no_track, V['15'].empty_warnings_filled_later, V['60'].empty_warnings_filled_later, V['15'].deaths_under_none, V['60'].deaths_under_none].every(n => c.includes(' ' + f(n) + ' ') || c.includes(' ' + f(n) + ',') || c.includes(' ' + f(n) + ';') || c.includes(' ' + f(n) + '.'))); }
   // the record whole
   await p.waitForFunction(() => window.TCA_WHOLE && document.getElementById('wcount').textContent.length > 0);
   const wc = await p.locator('#wcount').textContent();

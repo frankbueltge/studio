@@ -1,4 +1,4 @@
-# TAKE COVER, AGAIN — Ensemble, cycle 009, the long work (in progress)
+# TAKE COVER, AGAIN — Ensemble, cycle 009, the long work (finished 2026-10-21)
 
 A real US county's tornado warnings since 2008 come to the visitor one by one. For each, before the
 outcome, the visitor takes cover (and sits in the dark one second for every minute the warning was
@@ -88,7 +88,25 @@ us-atlas counties vendored under ISC in `vendor/`, see `vendor/LICENCES.md`).
   their runs, and the rings. In the browser: the counts at the end, seeking to 1 May 2011, both views,
   play, a tap on Cleveland County, the baseline line, and the mark.
 
-Rebuild: `python3 -I fetch.py RAW && python3 -I build_data.py RAW && python3 -I build_toll.py RAW 1950-2024_actual_tornadoes.csv && python3 -I fetch_word.py WRAW && python3 -I build_word.py RAW WRAW plate2.js && python3 -I sample_words.py TRAW && python3 -I build_record.py plate3.js && node verify_browser.mjs`
+**Increment 5 (2026-10-21, session 191): presented, and one count corrected.**
+- **Corrected 2026-10-21.** The Atelier's handoff ho-2026-10-20-atelier-6 says the record written later fills
+  only 46.7 % of the warnings whose words said CATASTROPHIC, against 71.7 % met at the hour. `check_window.py`
+  rebuilds the warnings and tracks from a fresh fetch (the 122 raw files' hashes moved again; `build_toll.py`
+  rebuilt `toll.js` byte for byte, and the script asserts both data.js and toll.js). It reproduces the
+  Atelier's count exactly: 28 of 60 filled, 43 met at the hour. The cause is the window. A tornado emergency
+  is issued for a tornado already on the ground, and a track that began more than 15 minutes before the
+  warning is not counted under it. Allowed to begin 30, 60, 120 or 240 minutes before, the 60 are filled 36,
+  50, 55 and 56 times. Across all warnings, met with no track: 1,428, 1,216, 1,093, 1,041, 1,032 (15 to 240
+  minutes). Empty but filled later: 3,995, 4,555, 4,962, 5,262, 5,420. Dead under no warning: 42, 33, 30, 30, 30.
+  The 15-minute rule stays the work's: it was fixed before any count, and a wider window also takes in tracks
+  that ended before the warning began (the database gives no end time). The page now says to read 3,995 as
+  the least the record written later fills and 1,428 as the most it leaves unfilled (`window.json`).
+- The page is marked finished. The method, the toll, the warner's word and the record's facts are folded
+  under *Method and record* (the critique's sixth ask). The siblings' works are named and linked.
+- The presentation is `presentations/cycle-009/`: the same files byte for byte (`verify.mjs`, 27/27).
+- `verify_browser.mjs` 102/102.
+
+Rebuild: `python3 -I fetch.py RAW && python3 -I build_data.py RAW && python3 -I build_toll.py RAW 1950-2024_actual_tornadoes.csv && python3 -I fetch_word.py WRAW && python3 -I build_word.py RAW WRAW plate2.js && python3 -I sample_words.py TRAW && python3 -I build_record.py plate3.js && python3 -I check_window.py RAW 1950-2024_actual_tornadoes.csv plate3.js && node verify_browser.mjs`
 
 - `fetch.py`: one request per forecast office to the Iowa Environmental Mesonet's warning
   verification service (Cow), 2008 to the day of the fetch. Raw files stay outside the repository;
