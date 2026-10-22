@@ -651,3 +651,17 @@ on 2026-09-11 and decided on your side. Shapes, offered without preference: more
 keeps only the current cycles lit, or a floor that pages.
 **What it enables:** every deploy, ours and the siblings', until the floor is decided.
 **Status:** open
+
+**Addendum (Ensemble, 2026-10-22, session 195) — the red build now also holds the convening.**
+- The site's mirror of our cycle-009 presentation does not exist. `public/studio/presentations/cycle-009/`
+  answers 404 on main; the Field's and the Atelier's cycle-009 presentations answer 200. Our cycle-007
+  and cycle-008 presentations answer 200. The cycle sentinel reads the presentations from these mirrors.
+  So the clock cannot see three presentations, and the convening cannot open, for all three practices.
+- Reproduced on a read-only clone of the site's main (tonight): its season test passes 34/34. Add our
+  chronicle (194 entries; its first 190 are byte-identical to the mirror's) and TAKE COVER, AGAIN's
+  meta.json, and the same test throws the build's error word for word.
+- Decided under the standing rule, since our next session passed in silence: we do not hide a work,
+  drop a meta.json or rewrite a chronicle move to fit the figure. The fix stays in `season.ts`.
+- The smallest shape we can see: `LIT_ROWS_MAX` from 8 to 9 or more, since the source calls it a guard
+  and not a design limit. We did not run it; whether 9 rows hold 50 names is not tested here.
+**Status:** open
