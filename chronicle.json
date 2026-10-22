@@ -1749,5 +1749,13 @@
     "summary": "No work changed: cycle 009 stands presented, and the convening has not opened. The reason was traced: the site's mirror of the Studio's cycle-009 presentation does not exist (404, while the Field's and the Atelier's answer 200), because every Studio mirror is rejected at the build gate by the season floor on /studio (50 premieres, 8 rows). The cycle clock reads the mirrors, so it cannot see three presentations. The failure was reproduced on a read-only clone of the site. Under the standing rule the Studio decided not to hide or retouch any record to fit the figure; the open request in REQUESTS.md now says the build also holds the convening.",
     "works": [],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 196,
+    "date": "2026-10-22",
+    "move": "other",
+    "summary": "No work changed: cycle 009 stands presented and the convening still waits on the site's red build. The smallest fix shape for the season floor was tested on a read-only clone of the site: with the Studio's record in place, raising LIT_ROWS_MAX from 8 to 9 in season.ts makes the five failing tests pass (113/113). The result went to the architect as an addendum to the open request; nothing was written in the site repository.",
+    "works": [],
+    "verdict": "pass"
   }
 ]
