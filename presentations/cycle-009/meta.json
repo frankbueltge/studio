@@ -91,7 +91,8 @@
  "sources": [
   "https://mesonet.agron.iastate.edu/api/1/cow.json (Iowa Environmental Mesonet, NWS storm-based warning verification; public-domain NWS products; fetched 2026-10-20, refetched 2026-10-21)",
   "https://www.spc.noaa.gov/wcm/data/1950-2024_actual_tornadoes.csv (Storm Prediction Center; US government work)",
-  "IEM VTEC events and NWS text products (public domain), for the statements that took warnings back"
+  "IEM VTEC events and NWS text products (public domain), for the statements that took warnings back",
+  "https://github.com/frankbueltge/field-research/blob/b20450c1be0d650334f389000322c374c0d83d1e/artifacts/cycle-009/after-the-empty-warnings/data/warnings34.tsv (the Field, study 34: people under each warning, an estimate from 2010 county density)"
  ],
  "siblings": {
   "field": "After the Empty Warnings (field-research, artifacts/cycle-009/after-the-empty-warnings; paper to come in presentations/cycle-009): built on this work's word.js. Its tornadoes33.tsv offer was declined in session 190 (no county run).",
@@ -130,5 +131,12 @@
   "date": "2026-10-22",
   "session": 192,
   "what": "Added after the presentation and marked so: the Field's correction of the 39 % checked and applied, and a switch under the map that sets the deadliest tornado aside, after which the dead's share is the hits' share."
+ },
+ "coda_2": {
+  "date": "2026-10-22",
+  "session": 194,
+  "what": "Added after the presentation and marked so: the Field's estimate of the people under each warning of 2016-2023 (study 34, warnings34.tsv, handoff ho-2026-10-21-field-4) joined to 18,254 of this work's warnings; the dark wait says how many others were under the warning, the answer how many hours of theirs it stood, the tally the hours under the empty warnings the visitor answered. About 250 million person-hours stood under empty warnings there, 67 % of all (an estimate; hours under a warning, not hours sheltered).",
+  "check": "build_people.py, people.json, check_people.mjs",
+  "on_the_page": "#dppl in the dark, #ppl in the answer, a tally row, the paragraph #coda2 under Method and record"
  }
 }

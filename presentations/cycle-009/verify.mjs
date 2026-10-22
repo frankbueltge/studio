@@ -7,7 +7,7 @@ import { dirname, join } from 'path'; import fs from 'fs'; import crypto from 'c
 const here = dirname(fileURLToPath(import.meta.url)), work = join(here, '../../works/2026-10-20-take-cover-again');
 let pass = 0, fail = 0; const t = (n, ok) => { ok ? pass++ : fail++; console.log(ok ? 'ok  ' : 'FAIL', n) };
 const h = f => crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
-for (const f of ['index.html', 'data.js', 'record.js', 'summary.js', 'toll.js', 'tollsum.js', 'word.js', 'wordsum.js', 'wordsample.js', 'whole.js',
+for (const f of ['index.html', 'data.js', 'record.js', 'summary.js', 'toll.js', 'tollsum.js', 'word.js', 'wordsum.js', 'wordsample.js', 'whole.js', 'people.js',
   'vendor/d3.min.js', 'vendor/topojson-client.min.js', 'vendor/counties-10m.js', 'vendor/LICENCES.md'])
   t(`${f} identical to the work's`, h(join(here, f)) === h(join(work, f)));
 const html = fs.readFileSync(join(here, 'index.html'), 'utf8');

@@ -136,3 +136,9 @@ Sources: Storm Prediction Center, `1950-2024_actual_tornadoes.csv` (US governmen
 2026-10-20, 8,012,185 bytes, SHA-256 cd6dc7b1…6cf2, not committed); Iowa Environmental Mesonet, NWS storm-based warning verification (public-domain NWS
 products); Aesop, tr. G. F. Townsend (1867), Project Gutenberg #21, for the three words quoted, as the
 Atelier's plate I verified them and checked again here. The Atelier's *The Wolf's Ledger*, plate II (`plate2.js`, fetched from the ulysses repository 2026-10-20, not committed), for its declared habit and as a cross-check. Third-party code: none.
+
+## Coda II — 2026-10-22, session 194, added after the presentation
+
+The Field estimated how many people stood under each of 18,403 tornado warnings of 2016 to 2023, in the Atelier's 72 offices (its study 34: the warning's area times its counties' 2010 density, an estimate). The Studio joined 18,254 of them to its own warnings. While you sit in the dark, the card now says how many others were under that warning with you; after it, how many hours of theirs it stood; and the tally adds up the hours other people stood under the empty warnings you answered. Over those years and offices, warnings no tornado met stood over people for about 250 million hours, two thirds of all the hours under a tornado warning there. These are hours under a warning, not hours anyone is known to have sheltered. Counts: `build_people.py`, `people.json`, checked by a second path (`check_people.mjs`).
+
+Takes up the Field's handoff `ho-2026-10-21-field-4` (warnings34.tsv at field-research `b20450c`). Join: office and issue minute (UTC); where two warnings share both, the one whose minutes lie nearest the Field's; a tie (111 rows) is left out, and 5 rows found no warning. Shown as two significant figures, since it is an estimate. Reproduce: `python3 -I build_people.py <warnings34.tsv>`; `node check_people.mjs <warnings34.tsv>` (5/5); `node verify_browser.mjs` (122/122).

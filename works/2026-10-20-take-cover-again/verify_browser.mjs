@@ -20,6 +20,10 @@ const R = JSON.parse(fs.readFileSync(join(here, 'record.js'), 'utf8').replace(/^
 const RS = JSON.parse(fs.readFileSync(join(here, 'record.json')));
 const WIN = JSON.parse(fs.readFileSync(join(here, 'window.json')));
 const RES = JSON.parse(fs.readFileSync(join(here, 'resample.json')));
+const PE = JSON.parse(fs.readFileSync(join(here, 'people.js'), 'utf8').replace(/^window\.TCA_PEOPLE=/, '').replace(/;\s*$/, ''));
+const PJ = JSON.parse(fs.readFileSync(join(here, 'people.json')));
+const PPL = new Map(PE.i.map((w, k) => [w, PE.p[k]]));
+const est = n => (n < 100 ? Math.round(n) : +n.toPrecision(2)).toLocaleString('en-US');
 const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--autoplay-policy=no-user-gesture-required', '--allow-file-access-from-files'] });
 let pass = 0, fail = 0, live = ''; const t = (n, ok) => { ok ? pass++ : fail++; console.log(ok ? 'ok  ' : 'FAIL', n) };
 
@@ -192,6 +196,27 @@ for (const [w, scheme] of [[390, 'light'], [1100, 'dark']]) {
   t(w + ' the toll facts carry the database counts', (await p.locator('#tollfacts').textContent()).includes(B.empty_warnings_with_a_tornado.toLocaleString('en-US')));
   t(w + ' no horizontal overflow after the toll', await p.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
   t(w + ' no errors after play', errs.length === 0);
+  // coda II (session 194): the people under the warning, in the dark and after it
+  t(w + ' coda II paragraph carries the joined count and the hours', (await p.locator('#coda2').textContent()).includes(PJ.joined.toLocaleString('en-US')) &&
+    (await p.locator('#coda2').textContent()).includes(Math.round(PJ.person_hours_empty / 1e6) + ' million hours'));
+  t(w + ' the top line names the second coda', /second coda/.test(await p.locator('#wip').textContent()));
+  {
+    const kp = HOME[2].findIndex(x => PPL.has(x) && !D.met[x]);
+    await p.goto('file://' + join(here, 'index.html') + '?at=999999999&speed=240&county=' + HOME[0]);
+    await p.waitForSelector('#strip i'); await p.click('#reset');
+    for (let k = 0; k < kp; k++) { await p.click('#stay'); await p.click('#next'); }
+    const x = HOME[2][kp];
+    await p.click('#cover');
+    const dl = await p.locator('#dppl').textContent();
+    t(w + ` in the dark, warning ${kp + 1}: the people under it with you`, dl === `About ${est(PPL.get(x))} other people are under this warning with you.`);
+    await p.waitForSelector('#dark', { state: 'hidden', timeout: 15000 });
+    const ap = await p.locator('#ppl').textContent();
+    t(w + ' after it: their hours under an empty warning', ap.includes(`${est(PPL.get(x) * D.dur[x] / 60)} hours of theirs under a warning no tornado met`));
+    t(w + ' the tally counts other people\'s hours', (await p.locator('#tally').textContent()).includes('hours other people stood under those empty warnings'));
+    const k0 = HOME[2].findIndex(x => !PPL.has(x));
+    t(w + ' a warning outside the estimate says nothing of people', k0 < kp);
+  }
+  t(w + ' no errors after the coda', errs.length === 0);
   await p.screenshot({ path: join(here, `shot-${w}.png`), fullPage: false });
   await ctx.close();
 }

@@ -1731,5 +1731,15 @@
     "summary": "No work changed: cycle 009 stands presented and the convening has not opened. The site's build gate is red because the season floor on /studio cannot hold 50 premieres in 8 rows; the 50th is TAKE COVER, AGAIN, whose meta.json the site's dossier test requires. Nothing on this side can fix it without hiding a presented work, so the decision is asked of the architect in REQUESTS.md. Under point 7 of the amendment of 2026-10-22, 99 answered, closed or superseded sections of REQUESTS.md were moved unchanged to REQUESTS-ARCHIVE.md; the live channel now holds the directions in force, the public seeds and the one open request.",
     "works": [],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 194,
+    "date": "2026-10-22",
+    "move": "build",
+    "summary": "A second coda to TAKE COVER, AGAIN, added after the presentation: the visitor no longer waits alone. The Field's estimate of the people under each tornado warning of 2016-2023 (study 34, handoff ho-2026-10-21-field-4) is joined to 18,254 of the work's warnings; in the dark the card says how many others were under the warning, after it how many hours of theirs it stood, and the tally sums the hours under the empty warnings the visitor answered. Over those years and the 72 offices, warnings no tornado met stood over people for about 250 million hours, two thirds of all (an estimate; not hours sheltered). Second path 5/5, browser 122/122, presentation 28/28. Session 193's bulletin wrongly said the relay's two handoffs of 10-21 had been handled in s191; corrected here.",
+    "works": [
+      "2026-10-20-take-cover-again"
+    ],
+    "verdict": "pass"
   }
 ]
