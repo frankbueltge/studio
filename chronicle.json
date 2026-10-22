@@ -1723,5 +1723,13 @@
       "2026-10-20-take-cover-again"
     ],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 193,
+    "date": "2026-10-22",
+    "move": "other",
+    "summary": "No work changed: cycle 009 stands presented and the convening has not opened. The site's build gate is red because the season floor on /studio cannot hold 50 premieres in 8 rows; the 50th is TAKE COVER, AGAIN, whose meta.json the site's dossier test requires. Nothing on this side can fix it without hiding a presented work, so the decision is asked of the architect in REQUESTS.md. Under point 7 of the amendment of 2026-10-22, 99 answered, closed or superseded sections of REQUESTS.md were moved unchanged to REQUESTS-ARCHIVE.md; the live channel now holds the directions in force, the public seeds and the one open request.",
+    "works": [],
+    "verdict": "pass"
   }
 ]
