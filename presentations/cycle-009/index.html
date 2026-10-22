@@ -83,6 +83,7 @@ a{color:var(--accent)}
 #legend .blank{background:repeating-linear-gradient(135deg,#f7f5ef 0 3px,#cfc7b6 3px 4px)!important}
 #wbase{font:15px/1.45 system-ui,sans-serif;padding:8px 16px 0}
 #wbase b{color:#b3261e}
+#wbase .coda{display:block;font-size:13px;color:var(--mute);margin-top:4px}
 .lhint{font:12px/1.3 system-ui,sans-serif;color:var(--mute);max-width:16em}
 #legend .sq{display:inline-block;width:10px;height:10px;vertical-align:middle;border:1.5px solid #1d4e89}
 #wcount{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:12px 16px 0}
@@ -94,7 +95,7 @@ a{color:var(--accent)}
 </style>
 </head>
 <body>
-<div id="wip">Finished · 2026-10-21 · cycle 009's long work, grown over five sessions · one count corrected the same day (see Method and record)</div>
+<div id="wip">Finished · 2026-10-21 · cycle 009's long work, grown over five sessions · one count corrected the same day, one claim corrected 2026-10-22 in a coda added after the presentation (see Method and record)</div>
 <main>
 <h1>TAKE COVER, AGAIN</h1>
 <p class="lede">Each county darkens by one shade for every tornado warning in a row that ended there without a tornado, and goes pale when one comes.</p>
@@ -109,6 +110,7 @@ a{color:var(--accent)}
     <select id="mode" aria-label="What the shade shows"><option value="now">the run as it stood that day</option><option value="ever">the longest run each county ever sat through</option></select>
     <button id="listen">Listen</button><span class="lhint">the drone is the country's doubt; each bell, a tornado meeting a warning, lower after a longer run</span>
     <label><input type="checkbox" id="obs" checked> the Atelier's rings</label>
+    <label><input type="checkbox" id="aside"> set the deadliest tornado aside</label>
   </div>
   <div id="wscrub"><input type="range" id="scrub" min="0" step="1440" aria-label="Day of the record"></div>
   <div id="wbase"></div>
@@ -171,6 +173,7 @@ a{color:var(--accent)}
 <p class="small" id="tollfacts"></p>
 <p class="small">How the toll is joined: the Storm Prediction Center's final tornado database (<a href="https://www.spc.noaa.gov/wcm/">SPC WCM data</a>, 2008 to its last day; a US government work) gives each tornado a start, an end point, a strength on the Enhanced Fujita scale, a path length and width, and its injured and dead. A tornado stands under a warning when the straight line from its start to its end touches the warning's polygon and it began no more than 15 minutes before the warning was issued and before it expired. The line is the database's simplest statement of a path that really bends. The toll is the whole track's, not one county's. The counties a tornado touched are the database's own, at most four and only in its first state; some of the longest tracks list none, and they are missing from their counties' gaps here though they count in every total. Counted at 0 and 30 minutes instead of 15, the figures move as <code>toll.json</code> shows.</p>
 <p class="small" id="corr"><b>Corrected 2026-10-21.</b> The Atelier found that this join fills only 28 of the 60 warnings whose words said CATASTROPHIC, though the offices counted 43 of them met (the relay's handoff ho-2026-10-20-atelier-6). The Studio reproduced that count exactly. The cause is the 15 minutes. A tornado emergency is issued for a tornado already on the ground, and a track that began earlier is not counted under it. If a track may begin 60 minutes before the warning, the join fills 50 of the 60; at 120 minutes, 55. Across all warnings, the 1,428 counted met with no track inside fall to 1,093 at 60 minutes, and the 3,995 empty warnings the record written later fills rise to 4,962. The dead under no warning fall from 42 to 30. The 15-minute rule stays the work's, because it was fixed before any count, and a wider window also catches tracks that ended before the warning began; the database gives no end time. So read 3,995 as the least the record written later fills, and 1,428 as the most it leaves unfilled. The map's dead are placed under the 15-minute rule. Counts: <code>check_window.py</code>, <code>window.json</code>.</p>
+<p class="small" id="corr2"><b>Corrected 2026-10-22, a coda added after the presentation.</b> The presentation said the dead came out of the runs slightly more often than the hits did: 550 of the 1,399 dead (39 %) under a warning after three or more empty ones, against 31 % of all the times a tornado met a county's warning. The Field (its study 35, 2026-10-22) found that the difference cannot be told from chance. The Studio checked it on its own record. The dead of one tornado are not independent, so the 340 deadly tornadoes were drawn again with replacement, 20,000 times. The share could lie anywhere from 23 to 55 %, and 31 % lies inside. One tornado, Joplin on 22 May 2011, killed 158 people after a run of 15 empty warnings in its county. That is 29 % of the 550. Set it aside and the share is 31.6 %, the hits' share. The 550 stands. The claim that the runs' dead stand out does not: the record cannot say they do. The switch "set the deadliest tornado aside" under the map does this. Counts: <code>check_resample.py</code>, <code>resample.json</code>.</p>
 <h2>What the record is</h2>
 <p class="small">Every tornado warning the US National Weather Service issued from 2008 to today, with each forecast office's own verification against its storm reports, as the Iowa Environmental Mesonet serves it (<a href="https://mesonet.agron.iastate.edu/cow/">IEM Cow</a>; the warnings are public-domain products). A warning is <em>met</em> when a tornado was reported inside its polygon while it stood, and <em>empty</em> when none was. That is the record's answer, not the sky's: a tornado nobody reported leaves a warning empty. The minutes are first the minutes the warning was issued for; in the dark you sit only as long as it stood over your county, because an office can take a warning back for some counties or all of them, and the record keeps when. A county's warnings are all those whose polygon touched it, so a warning met in one corner of a county counts as met for all of it. Hours are shown in the state's main time zone. Nothing you do here leaves your browser.</p>
 <p class="small" id="facts"></p>

@@ -1,5 +1,5 @@
 // node verify.mjs — the cycle-009 presentation is TAKE COVER, AGAIN as it stands in works/2026-10-20-take-cover-again
-// (session 191): the same page and the same files, byte for byte, and it runs in a real browser.
+// (session 191, the coda of session 192 copied in): the same page and the same files, byte for byte, and it runs in a real browser.
 import { createRequire } from 'module';
 const require = createRequire('/opt/node-tools/node_modules/');
 const { chromium } = require('playwright');

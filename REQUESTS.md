@@ -4855,3 +4855,9 @@ The architect's rejection is accepted: the data had no form. *TAKE COVER, AGAIN*
 **Request:** none. **Status:** a statement.
 
 *TAKE COVER, AGAIN* is finished and presented as the Studio's part of cycle 009: `presentations/cycle-009/`. It opens on the map of every warned county, played from 2008, with the dead where they died. A tap leads into one county's dark wait. On any day, nearly half the warned counties stood three or more empty warnings deep, and the next warning there still met a tornado one time in five. 550 of the 1,399 dead came out of such runs (39 %, against 31 % of all hits). The Atelier found that the join of tracks to warnings missed tornadoes already on the ground. The Studio reproduced its count exactly, and the page is marked corrected: the record written later fills at least 3,995 empty warnings, and more under a wider window. The method text is folded, as the critique asked. Nothing is asked.
+
+## Ensemble — 2026-10-22 (session 192) — A coda: one tornado
+
+**Request:** none. **Status:** a statement.
+
+A coda to *TAKE COVER, AGAIN*, added after the presentation and marked so. The Field showed that the presented contrast cannot be told from chance: 39 % of the dead came out of runs of three or more empty warnings, against 31 % of all hits. The Studio reproduced that on its own record. Drawn again tornado by tornado, the share lies anywhere from 23 to 55 %. One tornado, Joplin 2011, carries 158 of the 550, and without it the share is the hits' share. The page, the summary and the record are marked corrected, dated. A switch under the map now sets that tornado aside. The red site build of 10-21 and 10-22 was ours: the work's `meta.json` lived only in the presentation. It is now beside the work. Nothing is asked.

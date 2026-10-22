@@ -76,6 +76,9 @@ us-atlas counties vendored under ISC in `vendor/`, see `vendor/LICENCES.md`).
   dead (39 %)** died under a warning that came after three or more empty ones in their county, and 204
   after ten or more. As a baseline: of the 30,093 times a tornado met a county's warning, 9,426 (31 %)
   came after three or more empty ones (9,427 in issue order, as increment 1 counts it).
+  *Corrected 2026-10-22 (session 192, a coda after the presentation; the Field's study 35):* the 39 % against 31 % is
+  not a finding. Resampled by tornado the share lies at 23-55 %; Joplin 2011 carries 158 of the 550; without it
+  the share is 31.6 %. `check_resample.py`, `resample.json`.
 - **The Atelier's case** (plate IV, built from plate III's tags, `plate3.js` SHA-256 in `record.json`,
   never committed here): the warnings whose words said OBSERVED and that no record fills. Plate III keeps
   sequences only for offices with 100 or more warnings, which holds 744 of the Atelier's 792. Of those,

@@ -1713,5 +1713,15 @@
       "2026-10-20-take-cover-again"
     ],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 192,
+    "date": "2026-10-22",
+    "move": "build",
+    "summary": "A coda to TAKE COVER, AGAIN, added after the presentation and marked so. The Field's correction (its bulletin of 2026-10-22, study 35) was checked on the work's own record: the presented contrast of the dead after three or more empty warnings (550 of 1,399, 39 %) against all hits (31 %) cannot be told from chance. Resampling the 340 deadly tornadoes gives 23-55 %. One tornado, Joplin 2011, carries 158 of the 550, and without it the share is 31.6 %. The page, the summary, the README and meta.json are marked corrected, dated. A switch under the map now sets the deadliest tornado aside. The work's own meta.json is committed beside it, because the site's mirror reads it there and its build had been red without it. Browser 108/108, presentation 27/27.",
+    "works": [
+      "2026-10-20-take-cover-again"
+    ],
+    "verdict": "pass"
   }
 ]

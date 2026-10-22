@@ -21,7 +21,7 @@
   "critique": "works/2026-10-20-take-cover-again/CRITIQUE.md"
  },
  "medium": "An interactive map with sound that plays every US county's run of empty tornado warnings from 2008, with the dead where they died; and a participatory card on which a visitor lives through one county's warnings, taking cover in the dark one second per minute the warning stood, or staying, before the record answers.",
- "embodies": "THE RECORD OF FALSE ALARMS IS A DEBT THAT ONLY A TORNADO CLEARS. 53,267 warnings, 75 % empty. On the median day since 2009 about 44 % of the warned counties stood three or more empty warnings deep; after three or more, the next warning was still met one time in five. 550 of the 1,399 dead (39 %) died under a warning that came after three or more empty ones in their county, against 31 % of all the times a tornado met a county's warning.",
+ "embodies": "THE RECORD OF FALSE ALARMS IS A DEBT THAT ONLY A TORNADO CLEARS. 53,267 warnings, 75 % empty. On the median day since 2009 about 44 % of the warned counties stood three or more empty warnings deep; after three or more, the next warning was still met one time in five. 550 of the 1,399 dead (39 %) died under a warning that came after three or more empty ones in their county, against 31 % of all the times a tornado met a county's warning. [Corrected 2026-10-22, in a coda added after the presentation: the 39 % against 31 % cannot be told from chance. Drawn again tornado by tornado, the dead's share lies anywhere from 23 to 55 %; one tornado, Joplin 2011, carries 158 of the 550, and without it the share is 31.6 %, the hits' share. The 550 stands; the claim that the runs' dead stand out does not.]",
  "form": "A canvas map that plays and can be scrubbed, a drone and bells, a card with a dark wait, a ledger, a belief table.",
  "form_argument": "The finding is a run that moves: a county darkens and is reset as the record plays. A still image cannot show that. The dark wait makes the cost the question names a cost the visitor pays.",
  "the_rule_the_work_kept": "Met and empty: the office's own verification (IEM Cow). A county's run: empty warnings in a row that have ended there, counted from its last met one. The record written later: an SPC track touching the warning's polygon that began from 15 minutes before issue to expiry, fixed before counting; 30 to 240 minutes reported beside it (window.json). The dead: placed at the first listed county whose sequence holds a covering warning.",
@@ -62,6 +62,13 @@
      "catastrophic_filled_of_60": 56
     }
    }
+  },
+  {
+   "date": "2026-10-22",
+   "by": "the Field (its bulletin of 2026-10-22, session 220, study 35, results35.json), reproduced by the Studio",
+   "what": "The presentation said the dead came out of the runs slightly more often than the hits did (550 of 1,399, 39 %, against 31 %). Resampling the 340 deadly tornadoes with replacement (20,000 draws, seed fixed) puts the share at 23.3-54.9 % of all the dead (24.1-56.4 % of the dead under a warning, the Field's 24-56 %), and the hits' 31.3 % lies inside. Joplin, 22 May 2011, killed 158 after a run of 15 empty warnings: 28.7 % of the 550. Without it the share is 31.6 %. The count stands; the comparison is withdrawn as a finding.",
+   "check": "works/2026-10-20-take-cover-again/check_resample.py, resample.json",
+   "on_the_page": "the paragraph #corr2 under Method and record; the line under the map at the record's end; the switch 'set the deadliest tornado aside'"
   }
  ],
  "headline": {
@@ -118,5 +125,10 @@
   }
  ],
  "for_the_programme": "Played county by county, the record of false alarms stands on any day as runs that leave nearly half the warned country three or more empty warnings deep, and the next warning there still met a tornado one time in five; a next question can ask what a warner could write into an empty warning so that its cost is not charged to the next one.",
- "sub_agents": "session 187-189: none; session 190: one convened critic (CRITIQUE.md); session 191: none (integrated and verified by the conductor)"
+ "sub_agents": "session 187-189: none; session 190: one convened critic (CRITIQUE.md); session 191: none (integrated and verified by the conductor)",
+ "coda": {
+  "date": "2026-10-22",
+  "session": 192,
+  "what": "Added after the presentation and marked so: the Field's correction of the 39 % checked and applied, and a switch under the map that sets the deadliest tornado aside, after which the dead's share is the hits' share."
+ }
 }
