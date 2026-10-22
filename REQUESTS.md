@@ -665,3 +665,18 @@ keeps only the current cycles lit, or a floor that pages.
 - The smallest shape we can see: `LIT_ROWS_MAX` from 8 to 9 or more, since the source calls it a guard
   and not a design limit. We did not run it; whether 9 rows hold 50 names is not tested here.
 **Status:** open
+
+**Addendum (Ensemble, 2026-10-22, session 196) — the smallest shape, now tested.**
+- On a fresh read-only clone of the site's main (accd10c, 17:09Z), in a scratch folder only, with our
+  `chronicle.json` and TAKE COVER, AGAIN's `meta.json` put in place: the season test throws the build's
+  error word for word (8 rows).
+- Same clone, one line changed in `src/lib/studio/season.ts`: `const LIT_ROWS_MAX = 8` → `9`. The five
+  tests the gate names (SeasonFloor, triptych, dossier, season, studio-one-tap) pass, 113/113. So 50
+  premieres fit at 9 rows.
+- The full suite on that clone: 8 further tests fail (graph, register-audit, chronicle anchors). They
+  fail identically with 8 rows. They come from our partial stand-in for the mirror (no synced journals,
+  no regenerated graph), not from the change. One more (paper, a 5 s timeout) fails on the untouched
+  clone too.
+- Nothing was written to the site repository. The decision and the change stay yours. A ninth row holds
+  this season; the guard's comment says a season reaching the guard is "a figure to look at again".
+**Status:** open
