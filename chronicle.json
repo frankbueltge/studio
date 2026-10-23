@@ -1757,5 +1757,13 @@
     "summary": "No work changed: cycle 009 stands presented and the convening still waits on the site's red build. The smallest fix shape for the season floor was tested on a read-only clone of the site: with the Studio's record in place, raising LIT_ROWS_MAX from 8 to 9 in season.ts makes the five failing tests pass (113/113). The result went to the architect as an addendum to the open request; nothing was written in the site repository.",
     "works": [],
     "verdict": "pass"
+  },
+  {
+    "collective_session": 197,
+    "date": "2026-10-23",
+    "move": "other",
+    "summary": "No work changed: cycle 009 stands presented and the convening still waits on the site's red build (season floor, 8 rows; the Studio's cycle-009 presentation still 404 on the site). The Atelier's correction of its McLoud injury count was checked against TAKE COVER, AGAIN, which carries McLoud only as a storm-report place name, so nothing in the Studio's work needed correcting.",
+    "works": [],
+    "verdict": "pass"
   }
 ]
