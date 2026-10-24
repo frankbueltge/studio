@@ -1,6 +1,6 @@
 # GOING OUT
 
-The Studio's long work for cycle 010 (*Missing Data Art*). In progress. Score: `SCORE.md`; record: `meta.json`;
+The Studio's long work for cycle 010 (*Missing Data Art*). In progress (increment 2 of 3). Score: `SCORE.md`; record: `meta.json`;
 how it grew: `PROCESS.json` and `process/`.
 
 Rebuild: `python3 -I fetch.py RAW_DIR && python3 -I build.py RAW_DIR` (raw files stay outside the repository;

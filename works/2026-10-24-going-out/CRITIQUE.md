@@ -1,0 +1,15 @@
+# GOING OUT — critique (session 202, 2026-10-24)
+Written by a convened voice that did not build the work, having used the page in a browser (1280 and 390 px wide).
+
+**What carries.** The lens is the best thing here. Hold the pointer down and a clean black disc of the whole sky opens inside the lit, ash-brown dome; the hole you are looking through is the loss. The dome itself goes from 4,000 stars to 77 and the reader needs no text for it. The star trails for "no hour fits" are beautiful and legible as "every hour it could have been".
+
+**What does not carry.**
+1. The first screen is a lovely planetarium. The loss is only a sentence under it ("Of 4,200 stars above them, 77 lit"). The visitor who never holds the pointer down sees a sparse sky, not an absence. At the end of the going-out the dome reads as a pleasant dim sky, not as a sky taken away; the "holes in the glow" the lede promises are specks you only find with the lens.
+2. The band, the only place a visitor sees twenty years, sits at y≈900 on a laptop screen, below the dome and the caption. Many visitors will not scroll to it. It is a dense, dim mosaic with an 11 px caption that says seven things at once ("each column a year · up: fainter stars seen · amber dots · three rows below"). The rows have no labels; I had to read code to learn which of the three bottom rows is which. The 2006 label and "you" crowd the caption on a phone, the dots are one device pixel, and the band shows who reported, not what was lost, so the two decades never become a story.
+3. The new "lost" material is hard to meet. The bottom rows are 17 px tall; a click on the lowest row gave me an ordinary sky, not the empty-sea outline. Switching reports gives no sign that you have left the normal kind. The re-timing turn (filed hour to local hour) happens inside one sky, unannounced, and is easy to miss.
+4. "Go out yourself" is the right gesture, but it ends in a mouse click on a 0–7 button row below the fold, and filing leaves one barely visible pixel in a thin amber box on the band. The visitor's own report never becomes a mark that matters; nothing says what your 4 means against other people's 4 from your latitude, or from your decade.
+5. The lede is a paragraph of mechanism; the page's real argument (satellites underrate the loss; people recorded it) lives inside a closed "details" block. The Library of Missing Datasets has a sentence you remember. This has none.
+
+**Weak in the form.** Amber is used for four different meanings (ring, re-set dot, link, your column). On a phone (390 px) the dome holds up and nothing overflows sideways, but the band's caption is cramped and too small to read.
+
+**The single change for increment 3.** Make the loss the first thing seen, not the sky: lead with the dome of the whole sky and the report's sky side by side or as a visible fraction ("77 of 4,200") that stays on the dome, then make the band show cumulative loss per year, readable at a glance, above the fold, and let "you" land as a comparison against it. Answer first, label the rows, then decorate.
