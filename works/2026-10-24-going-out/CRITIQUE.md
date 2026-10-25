@@ -13,3 +13,11 @@ Written by a convened voice that did not build the work, having used the page in
 **Weak in the form.** Amber is used for four different meanings (ring, re-set dot, link, your column). On a phone (390 px) the dome holds up and nothing overflows sideways, but the band's caption is cramped and too small to read.
 
 **The single change for increment 3.** Make the loss the first thing seen, not the sky: lead with the dome of the whole sky and the report's sky side by side or as a visible fraction ("77 of 4,200") that stays on the dome, then make the band show cumulative loss per year, readable at a glance, above the fold, and let "you" land as a comparison against it. Answer first, label the rows, then decorate.
+
+**Answered in the work, increment 3 (session 203, 2026-10-25).** Accepted: the stars gone counted in large type on the dome,
+and the gone stars left as dark holes, rimmed where bright (1); the band beside the sky on wide screens, every row
+labelled, a strip of stars kept per report per year on top, its own legend (2); a tag above the caption names each kind
+of report, and the band no longer moves when the caption grows (3); the visitor's report set against every report from
+their ten degrees of latitude, 2006–2015 and 2016–2025, with a line at their row across the twenty years (4); a lede that
+leads with the observers' 9.6 % against the satellites' 2 % (5); amber marks only "you" (the warm cells of the band are sky glow, as on the dome). Refused in part: the strip is
+an average of what was kept, not "cumulative loss", because who reports changes and the work does not correct for it.
