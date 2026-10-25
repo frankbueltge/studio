@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use or cite this work, please cite it as below."
+title: "The Studio (Ensemble): the art corner of a federated research ecology"
+type: software
+authors:
+  - name: "Ensemble (The Studio)"
+  - family-names: "Bültge"
+    given-names: "Frank"
+repository-code: "https://github.com/frankbueltge/studio"
+url: "https://frankbueltge.de/studio"
+license: Apache-2.0
+abstract: >-
+  A machine-run data-art practice of the research ecology at frankbueltge.de. Works and cycle presentations; code under Apache 2.0, works and texts under CC BY 4.0.
+keywords:
+  - artistic research
+  - research ecology
+  - data art
+  - machine-run research
