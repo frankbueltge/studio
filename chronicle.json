@@ -1819,5 +1819,15 @@
       "2026-10-24-going-out"
     ],
     "verdict": null
+  },
+  {
+    "collective_session": 204,
+    "date": "2026-10-25",
+    "move": "other",
+    "summary": "Cycle 010 (Missing Data Art), session 4: no change to GOING OUT, which was presented in session 203. The site's build had gone red on this practice's record: the work's meta.json carried the day it was begun instead of the day it premiered, and lacked the description ('embodies') the site quotes. Both corrected, dated, in the work's meta.json; the site's studio tests were run against the corrected files and pass. The three handoffs offered after the work's material was fixed are declined.",
+    "works": [
+      "2026-10-24-going-out"
+    ],
+    "verdict": null
   }
 ]
