@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Remainder — étude</title>
+<style>
+  :root { --bg:#0d0c0b; --ink:#e9e4da; --dim:#8a8378; --rule:#3a3631; --lit:#d9a441; --lit2:#b8862f; --commit:#7f8f9c; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 Georgia, "Times New Roman", serif; }
+  main { max-width:1100px; margin:0 auto; padding:28px 16px 64px; }
+  .tag { font:12px/1.4 ui-monospace, Menlo, monospace; color:var(--dim); letter-spacing:.04em; }
+  h1 { font-weight:normal; font-size:34px; letter-spacing:.12em; margin:6px 0 4px; }
+  .lede { max-width:720px; color:var(--ink); }
+  .controls { display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; margin:22px 0 10px; font:13px ui-monospace, Menlo, monospace; }
+  button { font:inherit; background:none; color:var(--ink); border:1px solid var(--rule); padding:6px 14px; cursor:pointer; }
+  button:hover { border-color:var(--lit); }
+  select { font:inherit; background:var(--bg); color:var(--ink); border:1px solid var(--rule); padding:5px; }
+  #meter { color:var(--dim); min-height:1.5em; }
+  #meter b { color:var(--ink); font-weight:normal; }
+  #wrap { position:relative; }
+  canvas { display:block; width:100%; cursor:crosshair; }
+  #read { min-height:3.2em; margin-top:8px; font:13px/1.5 ui-monospace, Menlo, monospace; color:var(--ink); }
+  #read .q { color:var(--dim); }
+  section.notes { margin-top:40px; max-width:760px; color:#cfc8bb; font-size:14px; }
+  section.notes h2 { font-weight:normal; font-size:15px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim); margin:28px 0 6px; }
+  a { color:var(--lit); }
+</style>
+</head>
+<body>
+<main>
+  <div class="tag">ÉTUDE · THE STUDIO (ENSEMBLE) · 2026-10-26 · A FORM STUDY BEFORE THE CONVENING, NOT A WORK OF A CYCLE</div>
+  <h1>THE REMAINDER</h1>
+  <p class="lede">Sixteen humanitarian appeals for Sudan, 2011 to 2026. Each row is what was asked for. Every lit grain is one grant that came, in the order it was dated, as wide as its dollars. What is left of the row is what was asked for and never came. Press play: the grants sound as the line passes them, and the remainder is heard as silence, one second for every hundred million dollars.</p>
+
+  <div class="controls">
+    <button id="play" type="button">play all</button>
+    <label>pace <select id="pace">
+      <option value="50000000">1 s = $50 m</option>
+      <option value="100000000" selected>1 s = $100 m</option>
+      <option value="250000000">1 s = $250 m</option>
+    </select></label>
+    <span id="meter">tap a row's year to play only that year</span>
+  </div>
+
+  <div id="wrap"><canvas id="c" height="640" aria-label="Sixteen rows, one per appeal, each lit where funding came and dark where it did not"></canvas></div>
+  <div id="read"><span class="q">hover or tap a grain, or the dark part of a row</span></div>
+
+  <section class="notes">
+    <h2>What the dark is</h2>
+    <p>The Financial Tracking Service records every reported grant to an appeal. It records nothing for the part of an appeal that no one paid: no line, no donor, no date. The requirement is the only trace that the need existed. Across the sixteen appeals <span id="sumtext">…</span> The silence in the playback is that remainder, at the same scale as the sound of what came.</p>
+    <p>2026 is an open appeal: on the day of the fetch its year had two months left, so part of its dark is still only "not yet".</p>
+
+    <h2>Source and method</h2>
+    <p>OCHA Financial Tracking Service, public API (<code>api.hpc.tools/v1/public</code>), fetched 2026-10-26: the country's plan list (<code>plan/country/SDN</code>), and for each of the sixteen Sudan response plans every flow (<code>fts/flow?planId=</code>). A grant counts when FTS marks it incoming to the plan and paid or committed; pledges do not count. For every plan the counted flows add up exactly to FTS's own incoming funding total; the build script asserts it. Requirements are the plans' revised requirements as FTS states them. Nine flows of zero or negative value (corrections), skipped and counted in <code>data.json</code>. Grains in a paler grey are commitments not yet marked paid. Donor is the first organisation FTS names as source. Data: CC BY-IGO, OCHA FTS. Script: <code>build_data.py</code>; data: <code>data.json</code>.</p>
+    <p>Regional refugee plans and the COVID plans of 2020 are not Sudan's appeals and are left out. Funding outside any plan is left out too: this is the record of what was asked, not of everything that was given.</p>
+
+    <h2>Neighbours in the Atlas of Data Art</h2>
+    <p><em>Of All the People in All the World: Stats with Rice</em> (Stan's Cafe, 2004) gives a statistic its physical quantity, one grain a person. <em>The Library of Missing Datasets</em> (Mimi Ọnụọha, 2016–) shows as empty folders the datasets nobody collects. <em>The REDress Project</em> (Jaime Black, 2010–) makes an uncounted gap present as empty dresses. Daylight: here the absence is not an uncollected dataset but a sum that was counted, asked for and refused. It is measured to the dollar, and it is given a duration, a silence exactly as long as the sound of everything that came. Grains here are grants, not people.</p>
+
+    <h2>Beside the siblings</h2>
+    <p>The Atelier's study <a href="https://github.com/frankbueltge/ulysses/tree/main/artifacts/convening-after-010/the-unclassified">The Unclassified</a> (2026-10-26) shows the places in Sudan that the famine rule cannot classify for lack of data. The Field's probe of the briefing's open data (<a href="https://github.com/frankbueltge/field-research/tree/main/notes/convening-after-010">notes/convening-after-010</a>, 2026-10-26) found the OCHA FTS door open, and this étude came in through it.</p>
+  </section>
+</main>
+<script>
+(async function () {
+  const data = await (await fetch("data.json")).json();
+  const Y = data.years, D = data.donors;
+  const cv = document.getElementById("c"), ctx = cv.getContext("2d");
+  const read = document.getElementById("read"), meter = document.getElementById("meter");
+  const maxReq = Math.max(...Y.map(y => y.required));
+  const LABEL = 56, ROWH = 26, GAP = 13, TOP = 8;
+  let W = 0, dpr = 1, head = null, playing = null;   // head: {row, dollars}; playing: rows in this playback
+
+  const fmt = v => "US$ " + (v / 1e6).toLocaleString("en-US", { maximumFractionDigits: 1 }) + " m";
+  const sumReq = Y.reduce((a, y) => a + y.required, 0), sumFun = Y.reduce((a, y) => a + y.funded, 0);
+  document.getElementById("sumtext").textContent =
+    `${fmt(sumReq)} was asked for and ${fmt(sumFun)} came. The remainder, ${fmt(sumReq - sumFun)}, is ${(100 * (sumReq - sumFun) / sumReq).toFixed(1)} % of what was asked.`;
+
+  function layout() {
+    dpr = window.devicePixelRatio || 1;
+    W = cv.clientWidth;
+    const H = TOP + Y.length * (ROWH + GAP);
+    cv.style.height = H + "px";
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    draw();
+  }
+  const scale = () => (W - LABEL - 8) / maxReq;
+  const rowY = i => TOP + i * (ROWH + GAP);
+
+  function draw() {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, cv.height);
+    const s = scale();
+    Y.forEach((y, i) => {
+      const top = rowY(i);
+      ctx.fillStyle = "#8a8378"; ctx.font = "12px ui-monospace, Menlo, monospace"; ctx.textBaseline = "middle";
+      ctx.fillText(String(y.year), 4, top + ROWH / 2);
+      // the asked-for row, outline only
+      ctx.strokeStyle = "#3a3631"; ctx.lineWidth = 1;
+      ctx.strokeRect(LABEL + 0.5, top + 0.5, y.required * s, ROWH - 1);
+      let x = 0, k = 0;
+      const ord = playing ? playing.indexOf(i) : -1, hp = playing && head ? playing.indexOf(head.row) : -1;
+      const lim = !head || ord < 0 || ord < hp ? Infinity : ord === hp ? head.dollars : -1;
+      for (const f of y.flows) {
+        if (x >= lim) break;
+        const w = Math.max(f[0] * s, 0.35);
+        ctx.fillStyle = f[3] ? (k++ % 2 ? "#b8862f" : "#d9a441") : "#7f8f9c";
+        ctx.fillRect(LABEL + x * s, top + 3, w, ROWH - 6);
+        x += f[0];
+      }
+      const gapX = LABEL + y.funded * s, gapW = (y.required - y.funded) * s;
+      if (gapW > 100 && lim === Infinity) {
+        ctx.fillStyle = "#5c564e"; ctx.font = "11px ui-monospace, Menlo, monospace";
+        ctx.fillText(fmt(y.required - y.funded) + (y.year === 2026 ? " · open" : ""), gapX + 8, top + ROWH / 2);
+      }
+      if (head && head.row === i) {
+        const hx = LABEL + head.dollars * s;
+        ctx.fillStyle = "#e9e4da"; ctx.fillRect(hx, top - 4, 1.5, ROWH + 8);
+      }
+    });
+  }
+
+  function hit(px, py) {
+    const s = scale();
+    const i = Math.floor((py - TOP) / (ROWH + GAP));
+    if (i < 0 || i >= Y.length || py - rowY(i) > ROWH) return null;
+    const y = Y[i], d = (px - LABEL) / s;
+    if (px < LABEL) return { row: i, label: true };
+    if (d < 0 || d > y.required) return null;
+    if (d > y.funded) return { row: i, gap: true };
+    let x = 0;
+    for (const f of y.flows) { if (d <= x + f[0]) return { row: i, flow: f }; x += f[0]; }
+    return { row: i, gap: true };
+  }
+  function show(h) {
+    if (!h) { read.innerHTML = '<span class="q">hover or tap a grain, or the dark part of a row</span>'; return; }
+    const y = Y[h.row];
+    if (h.label) { read.textContent = `${y.name}: asked ${fmt(y.required)}, came ${fmt(y.funded)} in ${y.flows.length} grants (${(100 * y.funded / y.required).toFixed(1)} %). Tap to play this year.`; return; }
+    if (h.gap) { read.textContent = `${y.year}: ${fmt(y.required - y.funded)} asked for and not given. FTS holds no record here: no donor, no date, nothing it would have bought.` + (y.year === 2026 ? " The appeal is still open." : ""); return; }
+    const f = h.flow;
+    read.textContent = `${f[1]} · ${D[f[2]]} · ${fmt(f[0])} · ${f[3] ? "paid" : "committed, not yet marked paid"}`;
+  }
+  const pos = e => { const r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
+  cv.addEventListener("mousemove", e => show(hit(...pos(e))));
+  cv.addEventListener("mouseleave", () => show(null));
+  cv.addEventListener("click", e => { const h = hit(...pos(e)); show(h); if (h && h.label) play([h.row]); });
+
+  // ---- sound: one short tone per grant as the line passes it; silence across the remainder
+  let ac = null, raf = 0, stopAt = null;
+  function tone(t, amount, paid) {
+    const o = ac.createOscillator(), g = ac.createGain();
+    const lg = Math.log10(Math.max(amount, 1e3));          // 3 … 8.5
+    o.type = paid ? "sine" : "triangle";
+    o.frequency.value = 1760 / Math.pow(2, (lg - 3) * 0.9); // bigger grants sound lower
+    const a = 0.05 + 0.10 * Math.min(1, (lg - 3) / 5);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(a, t + 0.004);
+    g.gain.exponentialRampToValueAtTime(0.0005, t + 0.09 + 0.25 * (lg - 3) / 5);
+    o.connect(g).connect(ac.destination); o.start(t); o.stop(t + 0.4);
+  }
+  function stop() {
+    cancelAnimationFrame(raf); head = null; playing = null; draw();
+    if (ac) { ac.close(); ac = null; }
+    document.getElementById("play").textContent = "play all";
+    meter.textContent = "tap a row's year to play only that year";
+  }
+  function play(rows) {
+    if (ac) stop();
+    playing = rows;
+    ac = new (window.AudioContext || window.webkitAudioContext)();
+    const pace = +document.getElementById("pace").value;     // dollars per second
+    const t0 = ac.currentTime + 0.15, plan = [];
+    let t = t0;
+    for (const i of rows) {
+      const y = Y[i];
+      let x = 0;
+      for (const f of y.flows) { tone(t + x / pace, f[0], f[3]); x += f[0]; }
+      plan.push({ row: i, start: t, dur: y.required / pace, y });
+      t += y.required / pace + 0.8;
+    }
+    stopAt = t;
+    document.getElementById("play").textContent = "stop";
+    (function frame() {
+      if (!ac) return;
+      const now = ac.currentTime;
+      if (now >= stopAt) { stop(); return; }
+      const p = plan.find(p => now >= p.start && now < p.start + p.dur + 0.8) || plan[0];
+      const dollars = Math.min(p.y.required, Math.max(0, (now - p.start) * pace));
+      head = { row: p.row, dollars };
+      const silent = Math.max(0, dollars - p.y.funded) / pace;
+      meter.innerHTML = `<b>${p.y.year}</b> · asked ${fmt(p.y.required)} · came ${fmt(Math.min(dollars, p.y.funded))}` +
+        (silent > 0 ? ` · <b>silence ${silent.toFixed(1)} s of ${((p.y.required - p.y.funded) / pace).toFixed(1)} s</b>` : "");
+      draw();
+      raf = requestAnimationFrame(frame);
+    })();
+  }
+  document.getElementById("play").addEventListener("click", () => ac ? stop() : play(Y.map((_, i) => i)));
+  document.getElementById("pace").addEventListener("change", () => { if (ac) stop(); });
+  window.addEventListener("resize", layout);
+  layout();
+})();
+</script>
+</body>
+</html>
