@@ -30,13 +30,15 @@
 </head>
 <body>
 <main>
-  <div class="tag">ÉTUDE · THE STUDIO (ENSEMBLE) · 2026-10-26, SECOND MOVEMENT 2026-10-27 · A FORM STUDY BEFORE THE CONVENING, NOT A WORK OF A CYCLE</div>
+  <div class="tag">ÉTUDE · THE STUDIO (ENSEMBLE) · 2026-10-26, MOVEMENTS II–IV 2026-10-27 · A FORM STUDY BEFORE THE CONVENING, NOT A WORK OF A CYCLE</div>
   <h1>THE REMAINDER</h1>
-  <p class="lede">Two movements. <b>I</b>: sixteen humanitarian appeals for Sudan, 2011 to 2026. <b>II</b>: every one of the 46 appeals the record lists for 2025, the year of the cuts. Each row is what was asked for. Every lit grain is one grant that came, in the order it was dated, as wide as its dollars. What is left of the row is what was asked for and never came. Press play: the grants sound as the line passes them, and the remainder is heard as silence, one second for every hundred million dollars.</p>
+  <p class="lede">Four movements. <b>I</b>: sixteen humanitarian appeals for Sudan, 2011 to 2026. <b>II</b>: every one of the 46 appeals the record lists for 2025, the year of the cuts. <b>III</b>: every one of the 47 appeals of 2022, before them. <b>IV</b>: the two years, each as one row that holds every grant of its year. Each row is what was asked for. Every lit grain is one grant that came, in the order it was dated, as wide as its dollars. What is left of the row is what was asked for and never came. Press play: the grants sound as the line passes them, and the remainder is heard as silence, one second for every hundred million dollars.</p>
 
   <div class="controls" role="group" aria-label="movement">
     <button id="m1" type="button" aria-pressed="true">I · Sudan, 2011–2026</button>
     <button id="m2" type="button" aria-pressed="false">II · 2025, every appeal</button>
+    <button id="m3" type="button" aria-pressed="false">III · 2022, every appeal</button>
+    <button id="m4" type="button" aria-pressed="false">IV · 2022 against 2025</button>
   </div>
   <div class="controls">
     <button id="play" type="button">play all</button>
@@ -48,7 +50,7 @@
     <span id="meter"></span>
   </div>
 
-  <div id="wrap"><canvas id="c" height="640" aria-label="Sixteen rows, one per appeal, each lit where funding came and dark where it did not"></canvas></div>
+  <div id="wrap"><canvas id="c" height="640" aria-label="One row per appeal or year, each lit where funding came and dark where it did not"></canvas></div>
   <div id="read"><span class="q">hover or tap a grain, or the dark part of a row</span></div>
 
   <section class="notes">
@@ -56,10 +58,12 @@
     <p>The Financial Tracking Service records every reported grant to an appeal. It records nothing for the part of an appeal that no one paid: no line, no donor, no date. The requirement is the only trace that the need existed. Across the sixteen appeals <span id="sumtext">…</span> The silence in the playback is that remainder, at the same scale as the sound of what came.</p>
     <p>2026 is an open appeal: on the day of the fetch its year had two months left, so part of its dark is still only "not yet".</p>
     <p>The second movement widens the same row to every appeal of 2025: <span id="sumtext2">…</span> Played at the default pace it lasts about eight minutes, and most of them are silent. Two appeals were met or more than met (the Philippines' cyclone plan at 145 %, Cuba's hurricane plan at 99 %); their rows run past their outline, and their silence is nil.</p>
+    <p>The third movement plays 2022, the year before the cuts, by the same rule: <span id="sumtext3">…</span> No appeal of 2022 was fully met. The fourth movement lays the two years against each other, each as one row of every grant it received, in date order. <span id="sumtext4">…</span> The later year asked a little less and was given about half. Its grants are more and smaller (on average about half the size), so it sounds higher and busier, and then its silence is longer.</p>
 
     <h2>Source and method</h2>
     <p>OCHA Financial Tracking Service, public API (<code>api.hpc.tools/v1/public</code>), fetched 2026-10-26: the country's plan list (<code>plan/country/SDN</code>), and for each of the sixteen Sudan response plans every flow (<code>fts/flow?planId=</code>). A grant counts when FTS marks it incoming to the plan and paid or committed; pledges do not count. For every plan the counted flows add up exactly to FTS's own incoming funding total; the build script asserts it. Requirements are the plans' revised requirements as FTS states them. Nine flows of zero or negative value (corrections), skipped and counted in <code>data.json</code>. Grains in a paler grey are commitments not yet marked paid. Donor is the first organisation FTS names as source. Data: CC BY-IGO, OCHA FTS. Script: <code>build_data.py</code>; data: <code>data.json</code>.</p>
-    <p>Movement II: the plan list for the year (<code>plan/year/2025</code>), fetched 2026-10-27, and every flow of each of its 46 plans, by the same rule; for all 46 the counted flows equal FTS's own total (asserted in <code>build_2025.py</code>; data: <code>data-2025.json</code>). It includes regional refugee plans and flash appeals, sorted by what they asked. No flow is counted in two plans. A 2025 appeal can still receive funding after its year, so its dark can still shrink a little.</p>
+    <p>Movement II: the plan list for the year (<code>plan/year/2025</code>), fetched 2026-10-27, and every flow of each of its 46 plans, by the same rule; for all 46 the counted flows equal FTS's own total (asserted in <code>build_year.py</code>, run with the year 2025; data: <code>data-2025.json</code>). It includes regional refugee plans and flash appeals, sorted by what they asked. No flow is counted in two plans. A 2025 appeal can still receive funding after its year, so its dark can still shrink a little.</p>
+    <p>Movement III: the same for <code>plan/year/2022</code>, fetched 2026-10-27: 47 plans, every flow, the counted flows equal FTS's own total for all 47 (asserted; script <code>build_year.py</code>, data <code>data-2022.json</code>). Four years of late funding have reached 2022's record; 2025's has had less than one. Movement IV is built in the page from the two files and adds nothing to them: each year's requirement and funding are the sums of its appeals, and its grains are all of its grants in date order. Dollars are nominal, not adjusted for inflation.</p>
     <p>In movement I, regional refugee plans and the COVID plans of 2020 are not Sudan's appeals and are left out. Funding outside any plan is left out too: this is the record of what was asked, not of everything that was given.</p>
 
     <h2>Neighbours in the Atlas of Data Art</h2>
@@ -74,7 +78,21 @@
   const SETS = {
     m1: { data: await (await fetch("data.json")).json(), rowh: 26, gap: 13 },
     m2: { data: await (await fetch("data-2025.json")).json(), rowh: 15, gap: 7 },
+    m3: { data: await (await fetch("data-2022.json")).json(), rowh: 15, gap: 7 },
   };
+  // movement IV: each year as one row of all its appeals' grants, built from the two files above
+  {
+    const donors = [], yrs = [];
+    for (const [yr, id] of [[2022, "m3"], [2025, "m2"]]) {
+      const d = SETS[id].data, off = donors.length;
+      donors.push(...d.donors);
+      const flows = d.years.flatMap(r => r.flows.map(f => [f[0], f[1], f[2] + off, f[3]])).sort((a, b) => a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : 0);
+      yrs.push({ label: String(yr), name: `Every appeal of ${yr} (${d.years.length})`,
+        required: d.years.reduce((a, r) => a + r.required, 0), funded: d.years.reduce((a, r) => a + r.funded, 0),
+        gapsum: d.years.reduce((a, r) => a + Math.max(0, r.required - r.funded), 0), flows });
+    }
+    SETS.m4 = { data: { donors, years: yrs }, rowh: 54, gap: 26 };
+  }
   let Y, D, M, maxReq, LABEL, ROWH, GAP;
   const TOP = 8;
   const cv = document.getElementById("c"), ctx = cv.getContext("2d");
@@ -83,24 +101,29 @@
 
   const fmt = v => "US$ " + (v / 1e6).toLocaleString("en-US", { maximumFractionDigits: 1 }) + " m";
   const gapOf = y => Math.max(0, y.required - y.funded);
-  for (const [id, el] of [["m1", "sumtext"], ["m2", "sumtext2"]]) {
+  for (const [id, el] of [["m1", "sumtext"], ["m2", "sumtext2"], ["m3", "sumtext3"]]) {
     const R = SETS[id].data.years, sr = R.reduce((a, y) => a + y.required, 0), sf = R.reduce((a, y) => a + y.funded, 0), sg = R.reduce((a, y) => a + gapOf(y), 0);
     document.getElementById(el).textContent =
       `${fmt(sr)} was asked for and ${fmt(sf)} came. The remainder, ${fmt(sg)}, is ${(100 * sg / sr).toFixed(1)} % of what was asked.`;
   }
+  {
+    const [a, b] = SETS.m4.data.years;
+    document.getElementById("sumtext4").textContent =
+      `From 2022 to 2025 what was asked fell by ${(100 * (1 - b.required / a.required)).toFixed(1)} % (${fmt(a.required)} to ${fmt(b.required)}); what came fell by ${(100 * (1 - b.funded / a.funded)).toFixed(1)} % (${fmt(a.funded)} to ${fmt(b.funded)}), and ${(a.flows.length - b.flows.length) > 0 ? (a.flows.length - b.flows.length).toLocaleString("en-US") + " fewer" : (b.flows.length - a.flows.length).toLocaleString("en-US") + " more"} grants were counted (${a.flows.length.toLocaleString("en-US")} against ${b.flows.length.toLocaleString("en-US")}).`;
+  }
   const narrow = () => cv.clientWidth < 600;
-  const tip = () => M === "m1" ? "tap a row's year to play only that year" : "tap an appeal's name to play only that appeal";
+  const tip = () => M === "m1" || M === "m4" ? "tap a row's year to play only that year" : "tap an appeal's name to play only that appeal";
   function choose(id) {
     if (ac) stop();
     M = id; const S = SETS[id];
     Y = S.data.years; D = S.data.donors;
     maxReq = Math.max(...Y.map(y => Math.max(y.required, y.funded)));
     ROWH = S.rowh; GAP = S.gap;
-    for (const b of ["m1", "m2"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id));
+    for (const b of ["m1", "m2", "m3", "m4"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id));
     meter.textContent = tip();
     layout();
   }
-  const rowLabel = y => M === "m1" ? String(y.year) : y.label.replace(/\s*20\d\d(-\d\d)?\s*$/, "").replace(/ 2025$/, "");
+  const rowLabel = y => M === "m1" ? String(y.year) : M === "m4" ? y.label : y.label.replace(/\s*20\d\d(-\d\d)?\s*$/, "").replace(/ 2025$/, "");
   function fitText(t, w) {
     if (ctx.measureText(t).width <= w) return t;
     while (t.length > 1 && ctx.measureText(t + "…").width > w) t = t.slice(0, -1);
@@ -109,7 +132,7 @@
   function layout() {
     dpr = window.devicePixelRatio || 1;
     W = cv.clientWidth;
-    LABEL = M === "m1" ? 56 : (narrow() ? 96 : 220);
+    LABEL = M === "m1" || M === "m4" ? 56 : (narrow() ? 96 : 220);
     const H = TOP + Y.length * (ROWH + GAP);
     cv.style.height = H + "px";
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
@@ -124,7 +147,7 @@
     const s = scale();
     Y.forEach((y, i) => {
       const top = rowY(i);
-      ctx.fillStyle = "#8a8378"; ctx.font = (M === "m1" || !narrow() ? 12 : 10) + "px ui-monospace, Menlo, monospace"; ctx.textBaseline = "middle";
+      ctx.fillStyle = "#8a8378"; ctx.font = (M === "m1" || M === "m4" || !narrow() ? 12 : 10) + "px ui-monospace, Menlo, monospace"; ctx.textBaseline = "middle";
       ctx.fillText(fitText(rowLabel(y), LABEL - 10), 4, top + ROWH / 2);
       // the asked-for row, outline only
       ctx.strokeStyle = "#3a3631"; ctx.lineWidth = 1;
@@ -139,10 +162,10 @@
         ctx.fillRect(LABEL + x * s, top + (ROWH > 20 ? 3 : 2), w, ROWH - (ROWH > 20 ? 6 : 4));
         x += f[0];
       }
-      const gapX = LABEL + y.funded * s, gapW = gapOf(y) * s;
+      const gapX = LABEL + y.funded * s, gapW = gapOf(y) * s, gsum = y.gapsum !== undefined ? y.gapsum : gapOf(y);
       if (gapW > 100 && lim === Infinity) {
         ctx.fillStyle = "#5c564e"; ctx.font = (ROWH > 20 ? 11 : 10) + "px ui-monospace, Menlo, monospace";
-        ctx.fillText(fmt(gapOf(y)) + (y.year === 2026 ? " · open" : ""), gapX + 8, top + ROWH / 2);
+        ctx.fillText(fmt(gapOf(y)) + (y.year === 2026 ? " · open" : "") + (gsum !== gapOf(y) ? ` · unmet per appeal ${fmt(gsum)}` : ""), gapX + 8, top + ROWH / 2);
       }
       if (head && head.row === i) {
         const hx = LABEL + head.dollars * s;
@@ -166,8 +189,8 @@
   function show(h) {
     if (!h) { read.innerHTML = '<span class="q">hover or tap a grain, or the dark part of a row</span>'; return; }
     const y = Y[h.row];
-    if (h.label) { read.textContent = `${y.name}${M === "m2" && y.kind ? " (" + y.kind.toLowerCase() + ")" : ""}: asked ${fmt(y.required)}, came ${fmt(y.funded)} in ${y.flows.length} grants (${(100 * y.funded / y.required).toFixed(1)} %). Tap to play ${M === "m1" ? "this year" : "this appeal"}.`; return; }
-    if (h.gap) { read.textContent = `${M === "m1" ? y.year : y.label}: ${fmt(gapOf(y))} asked for and not given. FTS holds no record here: no donor, no date, nothing it would have bought.` + (y.year === 2026 ? " The appeal is still open." : ""); return; }
+    if (h.label) { read.textContent = `${y.name}${(M === "m2" || M === "m3") && y.kind ? " (" + y.kind.toLowerCase() + ")" : ""}: asked ${fmt(y.required)}, came ${fmt(y.funded)} in ${y.flows.length} grants (${(100 * y.funded / y.required).toFixed(1)} %). Tap to play ${M === "m1" || M === "m4" ? "this year" : "this appeal"}.`; return; }
+    if (h.gap) { read.textContent = `${M === "m1" ? y.year : y.label}: ${fmt(gapOf(y))} asked for and not given${y.gapsum !== undefined && y.gapsum !== gapOf(y) ? ` (${fmt(y.gapsum)} counted appeal by appeal, where a met appeal's surplus fills no other's dark)` : ""}. FTS holds no record here: no donor, no date, nothing it would have bought.` + (y.year === 2026 ? " The appeal is still open." : ""); return; }
     const f = h.flow;
     read.textContent = `${f[1]} · ${D[f[2]]} · ${fmt(f[0])} · ${f[3] ? "paid" : "committed, not yet marked paid"}`;
   }
@@ -207,7 +230,7 @@
       for (const f of y.flows) { tone(t + x / pace, f[0], f[3]); x += f[0]; }
       const len = Math.max(y.required, y.funded) / pace;
       plan.push({ row: i, start: t, dur: len, y });
-      t += len + (M === "m1" ? 0.8 : 0.4);
+      t += len + (M === "m1" || M === "m4" ? 0.8 : 0.4);
     }
     stopAt = t;
     document.getElementById("play").textContent = "stop";
@@ -229,8 +252,10 @@
   document.getElementById("pace").addEventListener("change", () => { if (ac) stop(); });
   document.getElementById("m1").addEventListener("click", () => choose("m1"));
   document.getElementById("m2").addEventListener("click", () => choose("m2"));
+  document.getElementById("m3").addEventListener("click", () => choose("m3"));
+  document.getElementById("m4").addEventListener("click", () => choose("m4"));
   window.addEventListener("resize", layout);
-  choose(location.hash === "#ii" ? "m2" : "m1");
+  choose({ "#ii": "m2", "#iii": "m3", "#iv": "m4" }[location.hash] || "m1");
 })();
 </script>
 </body>

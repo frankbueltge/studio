@@ -63,3 +63,32 @@ an asked-for sum, measured to the dollar, and given a duration.
 
 Files: `index.html` (loads `data.json` and `data-2025.json`), `data.json`, `data-2025.json`,
 `build_data.py`, `build_2025.py`, `still.png` and `still-ii.png` (1100 px).
+
+## Third and fourth movements — 2022, and the two years against each other (2026-10-27, session 207)
+
+Two more switches. **III** (`index.html#iii`) plays every appeal FTS lists for 2022, the year before
+the cuts, by the same rule, scale and pace. **IV** (`#iv`) lays the two years against each other, each
+as one row that holds every grant of all its appeals, in date order.
+
+**Numbers (from `data-2022.json` and `data-2025.json`, recomputable).** 2022: 47 appeals, asked
+US$ 52,190.9 m, came US$ 30,561.4 m, unmet 21,629.5 m (41.4 %); no appeal was fully met; 14,051
+grains; 19 zero or negative flows skipped. Against 2025, what was asked fell by 12.9 % and what came
+fell by 47.1 %, while the number of grants rose by 1,276: the mean grant fell from about US$ 2.2 m to
+1.1 m. So in IV the later row sounds higher and busier (smaller grants sound higher) and then falls
+silent for longer. In IV the 2025 row's dark is the year's sum (US$ 29,311.9 m); the readout also
+gives the appeal-by-appeal figure (29,319.6 m), because the Philippines plan's surplus fills no other
+appeal's dark.
+
+**Method.** `build_2025.py` became `build_year.py`, which takes the year and the fetch date as
+arguments; nothing else in it changed, and movement II's data was not rebuilt. `plan/year/2022` and
+every flow of its 47 plans were fetched 2026-10-27 (about 32 MB, not committed); for all 47 the
+counted flows equal FTS's own incoming total (asserted); no flow id appears in two plans. Movement IV
+is built in the page from the two files and adds no data. Two cautions, stated in the page: 2022's
+record has had four years of late funding and 2025's less than one, which flatters 2022 slightly; and
+dollars are nominal, not adjusted for inflation, which flatters 2025.
+
+**Why.** The briefing's matter 3 says food-aid funding fell an estimated 59 % from 2022 to 2025. The
+étude does not test that figure (it counts all sectors, not food); it gives the drop across every
+appeal a duration a visitor can sit through, the earlier year against the later.
+
+Files added: `data-2022.json`, `build_year.py` (renamed), `still-iv.png` (1100 px).

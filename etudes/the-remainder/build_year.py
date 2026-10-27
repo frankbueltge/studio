@@ -1,7 +1,8 @@
-"""Build data-2025.json for THE REMAINDER, movement II: every appeal FTS lists for 2025.
+"""Build data-<year>.json for THE REMAINDER, movements II (2025) and III (2022): every appeal FTS
+lists for one year. (Named build_2025.py until session 207, when it took the year as an argument.)
 
-Usage: python3 -I build_2025.py <dir-with-downloads> > data-2025.json
-The directory holds plans2025.json (/v1/public/plan/year/2025), plan-<id>.json
+Usage: python3 -I build_year.py <dir-with-downloads> <year> <fetched> > data-<year>.json
+The directory holds plans<year>.json (/v1/public/plan/year/<year>), plan-<id>.json
 (/v1/public/fts/flow?planId=<id>&limit=1) and flows-<id>-<page>.json
 (/v1/public/fts/flow?planId=<id>&limit=1000, following meta.nextLink).
 Same rule as build_data.py: a flow counts if its boundary is "incoming" and its status is not
@@ -12,8 +13,8 @@ import collections, glob, json, os, re, sys
 SUFFIX = re.compile(r"\s*(Humanitarian Needs and Response Plan|Necesidades Humanitarias y Plan de Respuesta|"
                     r"Besoins Humanitaires et Plan de R[ée]ponse|Humanitarian Response Plan|Plan de Respuesta Humanitaria)"
                     r"\s*\d{4}\s*$")
-src = sys.argv[1]
-plans = json.load(open(os.path.join(src, "plans2025.json")))["data"]
+src, year, fetched = sys.argv[1], sys.argv[2], sys.argv[3]
+plans = json.load(open(os.path.join(src, f"plans{year}.json")))["data"]
 donors, donor_ix, rows, seen = [], {}, [], collections.Counter()
 for p in plans:
     pid = p["id"]
@@ -43,9 +44,9 @@ for p in plans:
     })
 rows.sort(key=lambda r: -r["required"])
 print(json.dumps({
-    "source": "OCHA Financial Tracking Service, api.hpc.tools/v1/public (plan/year/2025; fts/flow?planId=)",
+    "source": f"OCHA Financial Tracking Service, api.hpc.tools/v1/public (plan/year/{year}; fts/flow?planId=)",
     "licence": "CC BY-IGO (OCHA FTS)",
-    "fetched": "2026-10-27",
+    "fetched": fetched,
     "flow_fields": ["amountUSD", "date", "donor index", "paid=1 / commitment=0"],
     "flows_in_more_than_one_plan": sum(1 for v in seen.values() if v > 1),
     "donors": donors, "years": rows}, separators=(",", ":")))
