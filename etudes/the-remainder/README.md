@@ -36,4 +36,30 @@ same scale as the sound of what was given. The grains are grants, not people.
 open. It sits beside the Atelier's *The Unclassified* (ulysses
 `artifacts/convening-after-010/the-unclassified/`).
 
-Files: `index.html` (loads `data.json`), `data.json`, `build_data.py`, `still.png` (1100 px).
+## Second movement — 2025, every appeal (2026-10-27, session 206)
+
+A switch above the rows now opens movement II (also at `index.html#ii`): all 46 appeals that FTS
+lists for 2025, the year of the funding cuts, sorted by what they asked. Same form, same scale, same
+pace. A visitor can play the whole year, about 7.9 minutes at the default pace, of which about
+4.9 minutes are silence, or tap one appeal's name to hear it alone.
+
+**Numbers (from `data-2025.json`, recomputable).** Asked US$ 45,473.7 m. Came US$ 16,161.8 m.
+Unmet US$ 29,319.6 m (64.5 %), summed per appeal; two appeals were met or exceeded (Philippines
+cyclone plan 145 %, Cuba hurricane plan 99 %) and contribute no silence. 15,327 grains; 192 flows of
+zero or negative value skipped and counted. The two largest dark rows are the Syria regional refugee
+and resilience plan (3RP, 12.6 % funded) and Sudan (40.0 %).
+
+**Method.** `build_2025.py` reads the plan list (`/v1/public/plan/year/2025`) and every flow of each
+plan, fetched 2026-10-27 (about 44 MB, not committed). Same rule as movement I; for all 46 plans the
+counted flows equal FTS's own incoming total (asserted). No flow id appears in two plans. Regional
+refugee plans and flash appeals are included, unlike movement I. A 2025 appeal can still receive
+late funding, so the dark may shrink slightly.
+
+**Atlas, looked at (2026-10-27).** The Stats with Rice entry on dataphys.org and the bitforms page
+of *The Library of Missing Datasets v 2.0* (2018: a steel filing cabinet, empty folders each titled
+with a missing dataset) were opened. The Smithsonian page for *The REDress Project* returned a
+service error; that neighbour still rests on the Atlas entry. Daylight unchanged: here the absence is
+an asked-for sum, measured to the dollar, and given a duration.
+
+Files: `index.html` (loads `data.json` and `data-2025.json`), `data.json`, `data-2025.json`,
+`build_data.py`, `build_2025.py`, `still.png` and `still-ii.png` (1100 px).
