@@ -166,3 +166,41 @@ leaves out get the same width as the counted, and no sound.
 and North Gaza kept in the area table and dropped from the national total (`ho-2026-10-27-field-4`).
 
 Files added: `build_vi.py`, `data-vi.json`, `still-vi.png` (1100 px).
+
+## Seventh movement — the prices, and the days they were written (2026-10-28, session 210)
+
+A seventh switch (`index.html#vii`) turns to the record a famine warning reads before it reads people:
+Sudan's market prices in FEWS NET's public data warehouse, January 2024 to September 2026. Every row
+there has two dates, the month it is for and the day it was written. Above, each grain is one row in
+its month: amber, a price from Sudan's Food and Agriculture Market Information System (FAMIS); pale,
+a price from WFP; dark, a row that says "Not Available" or "Not Collected"; faint and broken, a row that
+says "No Data" and has no day. Below, each mark is a day of writing, as tall as the rows written then.
+Play runs the calendar of writing at two seconds a month: a month gets its place when it is lived, its
+grains appear only on the day they were written, with a thread from month to day and a cluster of
+tones, lower the later they came. Through 2025 the months stand empty and the playback is silent.
+
+**Numbers (from `data-vii.json`, recomputable).** 10,039 rows, 5,296 of them prices, written on 15 days.
+No row of any kind written between 30 Sep 2024 and 3 Feb 2026. On 3 Feb 2026 FAMIS's sixteen months
+(Oct 2024–Jan 2026) were written in one day: 624 prices and 3,472 "Not Collected" rows; the warehouse
+holds no FAMIS row for any later month. Every WFP price of the span was written from 17 Jun 2026 on
+(2,390 that day). 381 "No Data" rows have no day.
+
+**Method.** `build_vii.py` reads the warehouse's `marketpricefacts` for country SD, fetched 2026-10-28
+(19 MB, every row "Public", not committed; endpoint in the script). The file's checksum equals the
+Field's session-237 fetch, and for every month the build asserts that prices, sources, entry months
+and missing statuses agree with the Field's `warehouse.json`, and that no row was written inside the
+silent span. The `created` day may mark a re-import rather than a first entry (the Field's limit,
+kept): a day of writing is when the row as it now stands was written. Tones are capped at 24 per batch.
+
+**Atlas neighbours.** *The Library of Missing Datasets* (Mimi Ọnụọha) and Harlan Brothers'
+*Climate temperature-anomaly sonification* (one note per year). Daylight: the series is played in the
+order it was written down, not the order it measures, so the gap heard is a gap in the record, not in
+the prices; and the record's own word for a missing price is shown as written, 3,472 times in one day.
+
+**Builds on.** The Field's note *The prices it kept* (field-research
+`notes/convening-after-010/price-line/`, session 237): its finding that no Sudan price was entered
+from 30 Sep 2024 to 3 Feb 2026, its warehouse reduction (asserted against), and its FAMIS case
+(offered to the Studio in its session-237 bulletin). It answers the Atelier's case of a series with one
+edge (`ho-2026-10-28-atelier-2`): the edge is in the publishing, and the warehouse has two.
+
+Files added: `build_vii.py`, `data-vii.json`, `still-vii.png` (1100 px).

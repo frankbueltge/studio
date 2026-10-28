@@ -30,9 +30,9 @@
 </head>
 <body>
 <main>
-  <div class="tag">ÉTUDE · THE STUDIO (ENSEMBLE) · 2026-10-26, MOVEMENTS II–IV 2026-10-27, V–VI 2026-10-28 · A FORM STUDY BEFORE THE CONVENING, NOT A WORK OF A CYCLE</div>
+  <div class="tag">ÉTUDE · THE STUDIO (ENSEMBLE) · 2026-10-26, MOVEMENTS II–IV 2026-10-27, V–VII 2026-10-28 · A FORM STUDY BEFORE THE CONVENING, NOT A WORK OF A CYCLE</div>
   <h1>THE REMAINDER</h1>
-  <p class="lede">Six movements. <b>I</b>: sixteen humanitarian appeals for Sudan, 2011 to 2026. <b>II</b>: every one of the 46 appeals the record lists for 2025, the year of the cuts. <b>III</b>: every one of the 47 appeals of 2022, before them. <b>IV</b>: the two years, each as one row that holds every grant of its year. <b>V</b> turns from dollars to the calendar: Sudan's grants from July 2024 to December 2025, day by day, under the months in which the famine monitor wrote nothing about Sudan. <b>VI</b> turns from money to people: the famine classification's own count of Sudan and of the Gaza Strip, area by area, and the people its national total leaves out. In I to IV each row is what was asked for. Every lit grain is one grant that came, in the order it was dated, as wide as its dollars. What is left of the row is what was asked for and never came. Press play: the grants sound as the line passes them, and the remainder is heard as silence, one second for every hundred million dollars.</p>
+  <p class="lede">Seven movements. <b>I</b>: sixteen humanitarian appeals for Sudan, 2011 to 2026. <b>II</b>: every one of the 46 appeals the record lists for 2025, the year of the cuts. <b>III</b>: every one of the 47 appeals of 2022, before them. <b>IV</b>: the two years, each as one row that holds every grant of its year. <b>V</b> turns from dollars to the calendar: Sudan's grants from July 2024 to December 2025, day by day, under the months in which the famine monitor wrote nothing about Sudan. <b>VI</b> turns from money to people: the famine classification's own count of Sudan and of the Gaza Strip, area by area, and the people its national total leaves out. <b>VII</b> turns to the record of prices that famine warnings read: Sudan's market prices, by the month they were measured and the day they were written down. In I to IV each row is what was asked for. Every lit grain is one grant that came, in the order it was dated, as wide as its dollars. What is left of the row is what was asked for and never came. Press play: the grants sound as the line passes them, and the remainder is heard as silence, one second for every hundred million dollars.</p>
 
   <div class="controls" role="group" aria-label="movement">
     <button id="m1" type="button" aria-pressed="true">I · Sudan, 2011–2026</button>
@@ -41,6 +41,7 @@
     <button id="m4" type="button" aria-pressed="false">IV · 2022 against 2025</button>
     <button id="m5" type="button" aria-pressed="false">V · Sudan, the money and the monitor</button>
     <button id="m6" type="button" aria-pressed="false">VI · the count, and who it leaves out</button>
+    <button id="m7" type="button" aria-pressed="false">VII · the prices, and the days they were written</button>
   </div>
   <div class="controls">
     <button id="play" type="button">play all</button>
@@ -65,6 +66,7 @@
     <p>The fifth movement keeps time by the calendar, four seconds a month. Above, one cell a month says whether FEWS NET, the famine early warning network, published a food-security analysis of Sudan in that month, as its own archive lists it today: lit, and a low tone holds, when it did; dark and toneless when it did not. Beneath it, how many of the 43 countries the network covers had an analysis that month. Below, every grant counted toward Sudan's 2024, 2025 and 2026 appeals, at its date, lower and larger the more it gave, sounding as the line passes. <span id="sumtext5">…</span> The money kept arriving through the months the monitor was dark. What it bought in those months, and for whom, neither record says.</p>
 
     <p>The sixth movement leaves the money for the count the money is meant to answer. The IPC, the famine classification, publishes one row per area: how many people live there and how many are in each of its five phases, from minimal to catastrophe. Each row of the movement is one period of one analysis, and each grain is one area, as wide as its people, brighter the worse its phases, with a lit cap as tall as its share in Phase 5. A grain sounds when the line passes it, lower the worse its phases. At the end of a row stand the areas the table keeps but places in no phase, dark and silent, as wide as their people. <span id="sumtext6">…</span> In Sudan's first projection a third state appears: El Fasher and Kadugli towns are classified in the area table, and their Phase 5 people are in the national Phase 5 row, but the national row's analysed population leaves out their 330,000 people. Those two grains are drawn hollow and sound thin. The movement names no one; a grain is an area, and the record gives no more.</p>
+    <p>The seventh movement turns to the record a famine warning reads before it reads people: the price of sorghum, millet, wheat, fuel, in a market, in a month. FEWS NET keeps those prices in a public data warehouse, and every row there carries two dates, the month it is for and the day it was written in. The movement lays the two calendars one above the other. Above, each grain is one Sudanese row in the month it is for: amber for a price sent by Sudan's own market information system (FAMIS), pale for a price from the World Food Programme, dark for a row that says a price was "Not Available" or "Not Collected", and a faint broken grain for a row that says "No Data" and was never given a day. Below, each mark is a day on which rows were written. Press play and the calendar of writing runs, two seconds a month: a month gets its place when it is lived, and its grains appear only on the day they were written, with a thread from the month to that day and a cluster of tones, lower the later they came. <span id="sumtext7">…</span> So through all of 2025 the months stand empty and the playback is silent, while the prices of those months, as the warehouse holds them now, were being measured. What the national system's falling count of prices means for its markets, the record does not say.</p>
 
     <h2>Source and method</h2>
     <p>OCHA Financial Tracking Service, public API (<code>api.hpc.tools/v1/public</code>), fetched 2026-10-26: the country's plan list (<code>plan/country/SDN</code>), and for each of the sixteen Sudan response plans every flow (<code>fts/flow?planId=</code>). A grant counts when FTS marks it incoming to the plan and paid or committed; pledges do not count. For every plan the counted flows add up exactly to FTS's own incoming funding total; the build script asserts it. Requirements are the plans' revised requirements as FTS states them. Nine flows of zero or negative value (corrections), skipped and counted in <code>data.json</code>. Grains in a paler grey are commitments not yet marked paid. Donor is the first organisation FTS names as source. Data: CC BY-IGO, OCHA FTS. Script: <code>build_data.py</code>; data: <code>data.json</code>.</p>
@@ -72,10 +74,12 @@
     <p>Movement III: the same for <code>plan/year/2022</code>, fetched 2026-10-27: 47 plans, every flow, the counted flows equal FTS's own total for all 47 (asserted; script <code>build_year.py</code>, data <code>data-2022.json</code>). Four years of late funding have reached 2022's record; 2025's has had less than one. Movement IV is built in the page from the two files and adds nothing to them: each year's requirement and funding are the sums of its appeals, and its grains are all of its grants in date order. Dollars are nominal, not adjusted for inflation.</p>
     <p>Movement V adds no fetch of its own. Its grants are the flows of <code>data.json</code> (movement I) that count toward Sudan's 2024, 2025 or 2026 plan and carry a date from July 2024 to December 2025; FTS's date is the date a grant was recorded or decided, not the day food reached anyone. Its monitor is the Field's table of every FEWS NET product page by country and month (<a href="https://github.com/frankbueltge/field-research/tree/94458f0516adca20e21b195e8db935d29135651d/notes/convening-after-010/dark-months">field-research, dark-months/timeline.json</a>, session 236, CC0), read from fews.net's sitemap on 2026-10-28, with the Field's own split kept: an analysis is a food-security judgement (an alert, an outlook, a key message update); prices, calendars and remote sensing are monitoring without a judgement and are drawn as a faint stripe. A page's date in the archive is not proof of the day it was posted. Script: <code>build_v.py</code>; data: <code>data-v.json</code>.</p>
     <p>Movement VI: the IPC's open area and national tables on HDX (<em>Global: Acute Food Insecurity Country Data</em>, CC0, source National IPC Technical Working Group), the same two files the Field read on 2026-10-27, fetched again 2026-10-28 with identical checksums (asserted in <code>build_vi.py</code>; data <code>data-vi.json</code>). Two analyses only, because only for these has the IPC's own text been read and found to name the areas it left out and say why (the Field's readings, session 235): Sudan, analysis of September 2025 (current period Sep 2025, projections Oct 2025–Jan 2026 and Feb–May 2026), and the Gaza Strip, analysis of July 2025 (Jul–Aug and Aug–Sep 2025). An area counts when the table gives it people in a phase and the national total holds it; for every period the counted areas add up exactly to the national analysed population (asserted). Where the table writes a left-out area's people as 0, its width is that area's people in the current period, and the readout says so. One Sudanese area (Dilling Urban) has no people in any period and is not drawn. Each country has its own scale, stated on its rows: Sudan one second per million people, the Gaza Strip one second per 50,000. The reasons in the readout are the IPC's words as the Field quoted them; for Sudan's six areas, "the volatility of the situation and resulting uncertainty", and for Dilling, "the lack of data". In Sudan's first projection, the national row's five phases add up to 47,490,538 people and its analysed population says 47,160,883: the 330,000 of El Fasher and Kadugli. Why the IPC wrote it so, the table does not say.</p>
+    <p>Movement VII: the FEWS NET data warehouse's market price facts for Sudan, <code>fdw.fews.net/api/marketpricefacts/?country_code=SD</code>, 1 January 2024 to 28 October 2026, fetched 2026-10-28 (10,039 rows, each marked "Public"; not committed). It is, by checksum, the same file the Field fetched for its note <a href="https://github.com/frankbueltge/field-research/tree/main/notes/convening-after-010/price-line">The prices it kept</a> (session 237), and <code>build_vii.py</code> asserts that every month's prices, sources, entry months and missing statuses agree with the Field's reduction (<code>warehouse.json</code>). A row is written on its <code>created</code> day; the warehouse may set that day on a re-import as well as on a first entry, so a day of writing is when the row as it stands now was written, not proof that nothing came before (the Field's limit, kept). The tones are a cluster per batch, at most 24 a batch, not one per row. Data: <code>data-vii.json</code>.</p>
     <p>In movement I, regional refugee plans and the COVID plans of 2020 are not Sudan's appeals and are left out. Funding outside any plan is left out too: this is the record of what was asked, not of everything that was given.</p>
 
     <h2>Neighbours in the Atlas of Data Art</h2>
     <p>For movement VI the nearest is <em>Stats with Rice</em> again, since here at last the grains stand for people, a whole area to a grain. Daylight: the work does not pile a statistic up into a heap; it plays a famine count in the order the record keeps it, and the people the count leaves out are given the same width as the counted and no sound.</p>
+    <p>For movement VII the nearest is <em>The Library of Missing Datasets</em> again, and, among the works that play a series as sound, Harlan Brothers' <em>Climate temperature-anomaly sonification</em> (one note per year since 1880). Daylight: the series is not played in the order of what it measures but in the order it was written down, so the gap a visitor hears is not a gap in the prices but in the record of them, and the record's own word for a missing price, "Not Collected", is shown as written, three thousand times in one day.</p>
     <p><em>Of All the People in All the World: Stats with Rice</em> (Stan's Cafe, 2004) gives a statistic its physical quantity, one grain a person. <em>The Library of Missing Datasets</em> (Mimi Ọnụọha, 2016–) shows as empty folders the datasets nobody collects. <em>The REDress Project</em> (Jaime Black, 2010–) makes an uncounted gap present as empty dresses. Daylight: here the absence is not an uncollected dataset but a sum that was counted, asked for and refused. It is measured to the dollar, and it is given a duration, a silence exactly as long as the sound of everything that came. Grains here are grants, not people.</p>
 
     <h2>Beside the siblings</h2>
@@ -90,6 +94,7 @@
     m3: { data: await (await fetch("data-2022.json")).json(), rowh: 15, gap: 7 },
     m5: { data: await (await fetch("data-v.json")).json() },
     m6: { data: await (await fetch("data-vi.json")).json() },
+    m7: { data: await (await fetch("data-vii.json")).json() },
   };
   // movement IV: each year as one row of all its appeals' grants, built from the two files above
   {
@@ -340,17 +345,149 @@
     }
     return { layout, draw, hit, show, play, n: rows.length, reset() { head = null; plan = null; } };
   })();
-  const altTip = () => M === "m5" ? "tap a month to hear it alone, or a grain to read it" : "tap a period's name to play that row alone, or a grain to read the area";
+  // movement VII: Sudan's market prices by the month they were measured and the day they were written down
+  const VII = (function () {
+    const d = SETS.m7.data, MS = d.months, DAY = 864e5, SEC = 2 / 30.44;  // seconds per day: two a month
+    const MN = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
+    const ml = m => MN[+m.slice(5) - 1] + " " + m.slice(0, 4);
+    const dl = s => +s.slice(8) + " " + ml(s.slice(0, 7));
+    const T0 = Date.UTC(2024, 0, 1), T1 = Date.UTC(2026, 10, 1), t = s => Date.parse(s + "T00:00:00Z");
+    const num = v => v.toLocaleString("en-US");
+    const KIND = { price: 0, "Not Available": 1, "Missing Historic Data": 1, "Not Collected": 1, "No Data": 2 };
+    // grains of a month in a fixed order: FAMIS prices, WFP prices, missing rows written with a day, rows with no day
+    const cols = MS.map(m => {
+      const gs = [...m.groups].sort((a, b) => KIND[a[1]] - KIND[b[1]] || (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
+      let k = 0; return { m: m.month, gs: gs.map(g => { const o = { s: g[0], kind: g[1], day: g[2], n: g[3], k0: k, at: g[2] ? t(g[2]) : Infinity }; k += g[3]; return o; }), total: k };
+    });
+    const maxN = Math.max(...cols.map(c => c.total));
+    const days = [...new Set(d.days.map(x => x[0]))].map(s => ({ s, at: t(s), gs: d.days.filter(x => x[0] === s) }));
+    {
+      const S = d.summary, fb = d.days.find(x => x[0] === S.silent_to && x[2] === "Not Collected");
+      document.getElementById("sumtext7").textContent =
+        `Today the warehouse holds ${num(S.rows)} Sudanese rows for January 2024 to September 2026, ${num(S.prices)} of them prices, and they were written on ${S.days_written} days. Between ${dl(S.silent_from)} and ${dl(S.silent_to)}, sixteen months, it wrote no Sudanese row at all. On ${dl(S.silent_to)} it wrote sixteen months of the national system's rows in one day, ${num(d.days.find(x => x[0] === S.silent_to && x[2] === "price")[3])} prices and ${num(fb[3])} rows that say "Not Collected"; the warehouse holds no row from that system for any month after. Every WFP price of the whole span was written from ${dl("2026-06-17")} on. ${num(S.no_entry_day)} rows say "No Data" and carry no day at all.`;
+    }
+    let L = 8, R = 8, W2 = 0, H = 0, g = 3, per = 1, UT = 0, UB = 0, LY = 0, now = null, raf2 = 0;
+    const X = ms => L + (ms - T0) / (T1 - T0) * W2;
+    function layout() {
+      W2 = W - L - R; const cw = X(T0 + 30.44 * DAY) - X(T0);
+      const HU = narrow() ? 220 : 300;
+      for (g of [6, 5, 4, 3, 2.5, 2, 1.5, 1.2, 1]) { per = Math.max(1, Math.floor((cw - 1) / g)); if (Math.ceil(maxN / per) * g <= HU) break; }
+      UT = 30; UB = UT + Math.ceil(maxN / per) * g; LY = UB + (narrow() ? 90 : 120); H = LY + 64;
+      cv.style.height = H + "px"; cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      draw();
+    }
+    const colour = o => o.kind === "price" ? (o.s === "FAMIS" ? "#d9a441" : "#c9cfd4") : null;
+    function draw() {
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+      const sm = narrow(), lim = now === null ? Infinity : now;
+      ctx.textBaseline = "middle"; ctx.font = (sm ? 10 : 12) + "px ui-monospace, Menlo, monospace";
+      ctx.fillStyle = "#8a8378"; ctx.fillText(sm ? "measured: one grain a row, in its month" : "measured: each grain one row of the warehouse, in the month it is for", L, 12);
+      // the sixteen months in which nothing was written, on the writing calendar
+      const s0 = X(t(d.summary.silent_from)), s1 = X(t(d.summary.silent_to));
+      ctx.fillStyle = "rgba(255,255,255,0.03)"; ctx.fillRect(s0, LY - 14, s1 - s0, 28);
+      ctx.strokeStyle = "#3a3631"; ctx.beginPath(); ctx.moveTo(L, LY + 0.5); ctx.lineTo(L + W2, LY + 0.5); ctx.stroke();
+      // threads from the month measured to the day written
+      for (const c of cols) {
+        const x0 = X(t(c.m + "-01")) + (X(t(c.m + "-01") + 30.44 * DAY) - X(t(c.m + "-01"))) / 2;
+        for (const o of c.gs) if (o.day && o.at <= lim) {
+          ctx.strokeStyle = o.kind === "price" ? (o.s === "FAMIS" ? "rgba(217,164,65,0.35)" : "rgba(201,207,212,0.28)") : "rgba(120,112,102,0.35)";
+          ctx.lineWidth = Math.max(0.5, Math.sqrt(o.n) * 0.12);
+          const x1 = X(o.at); ctx.beginPath(); ctx.moveTo(x0, UB + 3); ctx.bezierCurveTo(x0, UB + 50, x1, LY - 50, x1, LY); ctx.stroke();
+        }
+      }
+      ctx.lineWidth = 1;
+      // the grains, bottom up from the measured band's floor
+      for (const c of cols) {
+        const cx = X(t(c.m + "-01")) + 0.5;
+        if (now !== null && t(c.m + "-01") > now) continue;          // a month not yet lived has no place yet
+        ctx.strokeStyle = "#2a2724"; ctx.strokeRect(cx, UB - Math.ceil(c.total / per) * g - 0.5, per * g, 0);
+        for (const o of c.gs) {
+          const undated = !o.day, shown = undated ? now === null || now >= T1 - DAY : o.at <= lim;
+          if (!shown) continue;
+          const col = colour(o);
+          for (let k = o.k0; k < o.k0 + o.n; k++) {
+            const x = cx + (k % per) * g, y = UB - (Math.floor(k / per) + 1) * g;
+            if (col) { ctx.fillStyle = col; ctx.fillRect(x, y, Math.max(g - 0.6, 0.6), Math.max(g - 0.6, 0.6)); }
+            else if (!undated) { ctx.fillStyle = "#4a4540"; ctx.fillRect(x, y, Math.max(g - 0.6, 0.6), Math.max(g - 0.6, 0.6)); }
+            else if (k % 2 === 0) { ctx.fillStyle = "#2f2b27"; ctx.fillRect(x, y, Math.max(g - 0.6, 0.6), Math.max(g - 0.6, 0.6)); }
+          }
+        }
+      }
+      ctx.fillStyle = "#8a8378"; ctx.font = (sm ? 10 : 11) + "px ui-monospace, Menlo, monospace";
+      for (const y of [2024, 2025, 2026]) { const x = X(Date.UTC(y, 0, 1)); ctx.fillRect(x, UB + 1, 1, 5); ctx.fillText(String(y), x + 3, UB + 10); }
+      // the days of writing
+      for (const w of days) {
+        const n = w.gs.reduce((a, x) => a + x[3], 0), h = Math.sqrt(n) * (sm ? 0.32 : 0.45), x = X(w.at), lit = w.at <= lim;
+        ctx.fillStyle = lit ? "#e9e4da" : "#3a3631"; ctx.fillRect(x - 0.75, LY - h / 2, 1.5, h);
+      }
+      ctx.fillStyle = "#8a8378"; ctx.font = (sm ? 10 : 12) + "px ui-monospace, Menlo, monospace";
+      ctx.fillText(sm ? "written: one mark a day of writing" : "written: each mark one day the warehouse wrote Sudanese rows, as tall as how many", L, LY + 40);
+      ctx.fillStyle = "#5c564e"; ctx.font = (sm ? 10 : 11) + "px ui-monospace, Menlo, monospace";
+      const tx = sm ? "no row written" : "no row written · 16 months"; ctx.fillText(tx, s0 + Math.max(4, (s1 - s0 - ctx.measureText(tx).width) / 2), LY + 22);
+      for (const y of [2024, 2025, 2026]) { const x = X(Date.UTC(y, 0, 1)); ctx.fillStyle = "#3a3631"; ctx.fillRect(x, LY + 2, 1, 5); }
+      if (now !== null) { ctx.fillStyle = "#e9e4da"; const x = X(now); ctx.fillRect(x, UT - 4, 1.5, LY - UT + 22); }
+    }
+    function hit(px, py) {
+      if (py >= LY - 30 && py <= LY + 30) {
+        const w = days.reduce((b, w) => Math.abs(X(w.at) - px) < Math.abs(X(b.at) - px) ? w : b, days[0]);
+        if (Math.abs(X(w.at) - px) < 8) return { day: w };
+        return py <= LY + 14 && px >= X(t(d.summary.silent_from)) && px <= X(t(d.summary.silent_to)) ? { silent: true } : null;
+      }
+      if (py < UT - 10 || py > UB + 4) return null;
+      const c = cols.find(c => px >= X(t(c.m + "-01")) && px < X(t(c.m + "-01") + 30.44 * DAY));
+      return c ? { col: c } : null;
+    }
+    const what = k => k === "price" ? "prices" : `"${k}"`;
+    function show(h) {
+      if (h.silent) { read.textContent = `${dl(d.summary.silent_from)} to ${dl(d.summary.silent_to)}: the warehouse wrote no Sudanese row of any kind. The prices of these months were measured; they were written later, or not at all.`; return; }
+      if (h.day) { read.textContent = `${dl(h.day.s)} · written that day: ` + h.day.gs.map(x => `${num(x[3])} ${x[1]} ${what(x[2])}`).join(", ") + ` · for ${(() => { const ms = cols.filter(c => c.gs.some(o => o.day === h.day.s)).map(c => c.m); return ms.length > 1 ? ml(ms[0]) + " to " + ml(ms[ms.length - 1]) : ml(ms[0]); })()}`; return; }
+      const c = h.col, by = {};
+      for (const o of c.gs) { const k = `${o.s} ${what(o.kind)}`; (by[k] = by[k] || []).push(o.day ? `${num(o.n)} on ${dl(o.day)}` : `${num(o.n)} with no day`); }
+      read.textContent = `${ml(c.m)}, measured · ` + Object.entries(by).map(([k, v]) => `${k}: ${v.join(", ")}`).join(" · ");
+    }
+    function play() {
+      if (ac) stop();
+      ac = new (window.AudioContext || window.webkitAudioContext)();
+      const t0 = ac.currentTime + 0.2, dur = (T1 - T0) / DAY * SEC;
+      for (const c of cols) for (const o of c.gs) if (o.day && o.kind === "price") {
+        const tt = t0 + (o.at - T0) / DAY * SEC, lag = Math.max(0, (o.at - t(c.m + "-01")) / DAY / 30.44);
+        const k = Math.min(o.n, 24);                                        // a written batch: a cluster, not every row
+        for (let j = 0; j < k; j++) {
+          const os = ac.createOscillator(), gn = ac.createGain(), ts = tt + j * 0.035 + Math.random() * 0.02;
+          os.type = o.s === "FAMIS" ? "sine" : "triangle";
+          os.frequency.value = 1320 / Math.pow(2, lag * 0.13) * (1 + 0.004 * (j % 5));   // the later written, the lower
+          const a = 0.012 + 0.03 * Math.min(1, Math.sqrt(o.n / 400));
+          gn.gain.setValueAtTime(0, ts); gn.gain.linearRampToValueAtTime(a, ts + 0.006); gn.gain.exponentialRampToValueAtTime(0.0004, ts + 0.5);
+          os.connect(gn).connect(ac.destination); os.start(ts); os.stop(ts + 0.55);
+        }
+      }
+      stopAt = t0 + dur + 1.2; document.getElementById("play").textContent = "stop";
+      const S0 = t(d.summary.silent_from), S1 = t(d.summary.silent_to);
+      (function frame() {
+        if (!ac) return;
+        const tn = ac.currentTime; if (tn >= stopAt) { stop(); return; }
+        now = Math.min(T1 - DAY, T0 + Math.max(0, tn - t0) / SEC * DAY);
+        const nd = new Date(now).toISOString().slice(0, 10);
+        const wr = days.filter(w => w.at <= now).reduce((a, w) => a + w.gs.reduce((b, x) => b + (x[2] === "price" ? x[3] : 0), 0), 0);
+        const lived = cols.filter(c => t(c.m + "-01") <= now).reduce((a, c) => a + c.gs.reduce((b, o) => b + (o.kind === "price" ? o.n : 0), 0), 0);
+        meter.innerHTML = `<b>${dl(nd)}</b> · prices written so far ${num(wr)} of the ${num(lived)} the warehouse now holds for the months up to here` +
+          (now > S0 && now < S1 ? ` · <b>silence ${((now - S0) / DAY * SEC).toFixed(1)} s of ${((S1 - S0) / DAY * SEC).toFixed(1)} s</b>, nothing written` : "");
+        draw(); raf = requestAnimationFrame(frame);
+      })();
+    }
+    return { layout, draw, hit, show, play, reset() { now = null; } };
+  })();
+  const altTip = () => M === "m7" ? "press play to run the calendar of writing, or hover a month or a day to read it" : M === "m5" ? "tap a month to hear it alone, or a grain to read it" : "tap a period's name to play that row alone, or a grain to read the area";
   const tip = () => M === "m1" || M === "m4" ? "tap a row's year to play only that year" : "tap an appeal's name to play only that appeal";
   function choose(id) {
     if (ac) stop();
     M = id; const S = SETS[id];
-    document.getElementById("pacebox").style.visibility = id === "m5" || id === "m6" ? "hidden" : "visible";
-    if (id === "m5" || id === "m6") { for (const b of ["m1", "m2", "m3", "m4", "m5", "m6"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id)); meter.textContent = altTip(); layout(); return; }
+    document.getElementById("pacebox").style.visibility = id === "m5" || id === "m6" || id === "m7" ? "hidden" : "visible";
+    if (id === "m5" || id === "m6" || id === "m7") { for (const b of ["m1", "m2", "m3", "m4", "m5", "m6", "m7"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id)); meter.textContent = altTip(); layout(); return; }
     Y = S.data.years; D = S.data.donors;
     maxReq = Math.max(...Y.map(y => Math.max(y.required, y.funded)));
     ROWH = S.rowh; GAP = S.gap;
-    for (const b of ["m1", "m2", "m3", "m4", "m5", "m6"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id));
+    for (const b of ["m1", "m2", "m3", "m4", "m5", "m6", "m7"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id));
     meter.textContent = tip();
     layout();
   }
@@ -365,6 +502,7 @@
     W = cv.clientWidth;
     if (M === "m5") return V.layout();
     if (M === "m6") return VI.layout();
+    if (M === "m7") return VII.layout();
     LABEL = M === "m1" || M === "m4" ? 56 : (narrow() ? 96 : 220);
     const H = TOP + Y.length * (ROWH + GAP);
     cv.style.height = H + "px";
@@ -377,6 +515,7 @@
   function draw() {
     if (M === "m5") return V.draw();
     if (M === "m6") return VI.draw();
+    if (M === "m7") return VII.draw();
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, W, cv.height);
     const s = scale();
@@ -412,6 +551,7 @@
   function hit(px, py) {
     if (M === "m5") return V.hit(px, py);
     if (M === "m6") return VI.hit(px, py);
+    if (M === "m7") return VII.hit(px, py);
     const s = scale();
     const i = Math.floor((py - TOP) / (ROWH + GAP));
     if (i < 0 || i >= Y.length || py - rowY(i) > ROWH) return null;
@@ -426,6 +566,7 @@
   function show(h) {
     if (M === "m5" && h) return V.show(h);
     if (M === "m6" && h) return VI.show(h);
+    if (M === "m7" && h) return VII.show(h);
     if (!h) { read.innerHTML = '<span class="q">hover or tap a grain, or the dark part of a row</span>'; return; }
     const y = Y[h.row];
     if (h.label) { read.textContent = `${y.name}${(M === "m2" || M === "m3") && y.kind ? " (" + y.kind.toLowerCase() + ")" : ""}: asked ${fmt(y.required)}, came ${fmt(y.funded)} in ${y.flows.length} grants (${(100 * y.funded / y.required).toFixed(1)} %). Tap to play ${M === "m1" || M === "m4" ? "this year" : "this appeal"}.`; return; }
@@ -436,7 +577,7 @@
   const pos = e => { const r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
   cv.addEventListener("mousemove", e => show(hit(...pos(e))));
   cv.addEventListener("mouseleave", () => show(null));
-  cv.addEventListener("click", e => { const h = hit(...pos(e)); show(h); if (M === "m5") { if (h && h.month !== undefined) V.play(h.month, h.month + 1); return; } if (M === "m6") { if (h && h.label) VI.play([h.row]); return; } if (h && h.label) play([h.row]); });
+  cv.addEventListener("click", e => { const h = hit(...pos(e)); show(h); if (M === "m5") { if (h && h.month !== undefined) V.play(h.month, h.month + 1); return; } if (M === "m6") { if (h && h.label) VI.play([h.row]); return; } if (M === "m7") return; if (h && h.label) play([h.row]); });
 
   // ---- sound: one short tone per grant as the line passes it; silence across the remainder
   let ac = null, raf = 0, stopAt = null;
@@ -451,10 +592,10 @@
     o.connect(g).connect(ac.destination); o.start(t); o.stop(t + 0.4);
   }
   function stop() {
-    cancelAnimationFrame(raf); head = null; playing = null; V.cur = null; VI.reset(); draw();
+    cancelAnimationFrame(raf); head = null; playing = null; V.cur = null; VI.reset(); VII.reset(); draw();
     if (ac) { ac.close(); ac = null; }
     document.getElementById("play").textContent = "play all";
-    meter.textContent = M === "m5" || M === "m6" ? altTip() : tip();
+    meter.textContent = M === "m5" || M === "m6" || M === "m7" ? altTip() : tip();
   }
   function play(rows) {
     if (ac) stop();
@@ -487,7 +628,7 @@
       raf = requestAnimationFrame(frame);
     })();
   }
-  document.getElementById("play").addEventListener("click", () => ac ? stop() : M === "m5" ? V.play(0, V.n) : M === "m6" ? VI.play([...Array(VI.n).keys()]) : play(Y.map((_, i) => i)));
+  document.getElementById("play").addEventListener("click", () => ac ? stop() : M === "m5" ? V.play(0, V.n) : M === "m6" ? VI.play([...Array(VI.n).keys()]) : M === "m7" ? VII.play() : play(Y.map((_, i) => i)));
   document.getElementById("pace").addEventListener("change", () => { if (ac) stop(); });
   document.getElementById("m1").addEventListener("click", () => choose("m1"));
   document.getElementById("m2").addEventListener("click", () => choose("m2"));
@@ -495,8 +636,9 @@
   document.getElementById("m4").addEventListener("click", () => choose("m4"));
   document.getElementById("m5").addEventListener("click", () => choose("m5"));
   document.getElementById("m6").addEventListener("click", () => choose("m6"));
+  document.getElementById("m7").addEventListener("click", () => choose("m7"));
   window.addEventListener("resize", layout);
-  choose({ "#ii": "m2", "#iii": "m3", "#iv": "m4", "#v": "m5", "#vi": "m6" }[location.hash] || "m1");
+  choose({ "#ii": "m2", "#iii": "m3", "#iv": "m4", "#v": "m5", "#vi": "m6", "#vii": "m7" }[location.hash] || "m1");
 })();
 </script>
 </body>
