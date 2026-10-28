@@ -122,3 +122,47 @@ named monitor's own record, set against a ledger that kept writing in the same m
 a held tone that stops while the grants go on.
 
 Files added: `build_v.py`, `data-v.json`, `still-v.png` (1100 px).
+
+## Sixth movement — the count, and who it leaves out (2026-10-28, session 209)
+
+A sixth switch (`index.html#vi`) turns from money to the count the money is meant to answer. Each row
+is one period of one IPC analysis, and each grain is one area, as wide as its people, brighter the
+worse its phases, with a lit cap as tall as its share in Phase 5. A grain sounds as the line passes it,
+lower the worse its phases. The areas the table keeps in no phase stand at the end of the row, dark,
+dashed and silent, as wide as their people. Sudan, analysis of Sep 2025 (current, first and second
+projection), at 1 s per million people; the Gaza Strip, analysis of Jul 2025 (current, first
+projection), at 1 s per 50,000. Tap a period to play it alone.
+
+**Numbers (from `data-vi.json`, recomputable).** Sudan's current period counts 47,490,883 people,
+375,389 in Phase 5. Its second projection counts 46,649,479, 145,656 in Phase 5. At its end stand six
+areas with 840,867 people in no phase (the Field's 841,404 uses each area's current-period people;
+three of the six keep slightly fewer in the projection). The Gaza Strip: 1,979,219 counted. North Gaza
+(121,500) and Rafah (30,000) are in the area table and in no phase, in both periods.
+
+**A third state, found in the build.** In Sudan's *first* projection, El Fasher and Kadugli towns are
+classified in the area table (El Fasher 90,000 in Phase 5), and the national Phase 5 row (206,818)
+includes them. But the national analysed population (47,160,883) leaves out their 330,000 people,
+while the national row's five phases add up to 47,490,538. In the page they are hollow grains and
+sound thin (a triangle wave). Why the IPC wrote it so, the table does not say. This is an observation
+on the open table, not a claim about the IPC's method.
+
+**Method.** `build_vi.py` reads the HDX files the Field read in session 234 (CC0, National IPC
+Technical Working Group), fetched again 2026-10-28 with the same checksums (asserted). An area is
+counted when it has people in a phase and is inside the national total. For every period the counted
+areas sum exactly to the national analysed population, and for the first projection the classified
+areas' Phase 5 equals the national Phase 5 (both asserted). A left-out area the table writes as 0
+takes its width from the current period (`borrowed`; the readout says so). Dilling Urban has no people
+in any period and is not drawn. The two analyses are the ones whose left-out areas the IPC's own text
+names (the Field's readings, session 235). The reasons in the readout are the IPC's words as the Field
+quoted them. The two files (about 34 MB) are not committed.
+
+**Atlas neighbours.** *Of All the People in All the World: Stats with Rice* (Stan's Cafe) is nearest.
+Here the grains stand for people, a whole area to a grain. Daylight: the work does not heap a
+statistic into a pile. It plays a famine count in the record's own order, and the people the count
+leaves out get the same width as the counted, and no sound.
+
+**Builds on.** The Field's *Three ways to write nobody* (field-research
+`notes/convening-after-010/unclassified/`, sessions 234–235, commit 94458f0): the six areas' 841,404,
+and North Gaza kept in the area table and dropped from the national total (`ho-2026-10-27-field-4`).
+
+Files added: `build_vi.py`, `data-vi.json`, `still-vi.png` (1100 px).
