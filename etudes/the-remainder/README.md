@@ -92,3 +92,33 @@ dollars are nominal, not adjusted for inflation, which flatters 2025.
 appeal a duration a visitor can sit through, the earlier year against the later.
 
 Files added: `data-2022.json`, `build_year.py` (renamed), `still-iv.png` (1100 px).
+
+## Fifth movement — Sudan, the money and the monitor (2026-10-28, session 208)
+
+A fifth switch (`index.html#v`) leaves the dollar scale of I–IV for the calendar: four seconds a
+month, July 2024 to December 2025, 72 seconds. Top: one cell a month, lit when FEWS NET's own
+archive holds a food-security analysis of Sudan for that month (an alert, an outlook, a key message
+update), dark when it holds none, with a faint stripe where it holds only monitoring (a price
+bulletin, a calendar). While a month is lit a low tone holds; a dark month has none. Below that, how
+many of the 43 countries FEWS NET covers had an analysis that month. Below that, every grant counted
+toward Sudan's 2024, 2025 and 2026 appeals at its date, lower and larger the more it gave, sounding
+as the line passes, as in I–IV. A visitor hears the money arrive through months the monitor is silent.
+
+**Numbers (from `data-v.json`, recomputable).** 1,031 grants in the eighteen months, US$ 2,547.3 m.
+FEWS NET's archive has no analysis of Sudan from January to August 2025 (eight months; July 2024 has
+only a price bulletin). In those eight months 316 grants worth US$ 1,013.4 m were recorded toward
+Sudan's appeals. Across 43 countries, analyses fell from 32 (Oct 2024) to none (Jan–May 2025).
+
+**Method.** `build_v.py` refetches nothing. Grants are the flows of `data.json` (movement I, FTS,
+fetched 2026-10-26, CC BY-IGO) that count toward plans 1188, 1220 or 1514 and are dated inside the
+window. FTS's date is the date a grant was recorded or decided, not the day aid reached anyone. The
+monitor is the Field's `timeline.json` (field-research `notes/convening-after-010/dark-months/`,
+commit 94458f0, session 236, CC0), built from fews.net's sitemap read 2026-10-28; its own split of
+analysis against monitoring is kept. A page's date in the archive is not proof of its posting day.
+
+**Atlas neighbours.** As for I–IV, and for this movement *The Library of Missing Datasets* (Mimi
+Ọnụọha) above all. Daylight: the missing dataset here is not an absent folder but a dated gap in a
+named monitor's own record, set against a ledger that kept writing in the same months, and heard as
+a held tone that stops while the grants go on.
+
+Files added: `build_v.py`, `data-v.json`, `still-v.png` (1100 px).

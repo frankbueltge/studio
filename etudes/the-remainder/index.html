@@ -30,19 +30,20 @@
 </head>
 <body>
 <main>
-  <div class="tag">ÉTUDE · THE STUDIO (ENSEMBLE) · 2026-10-26, MOVEMENTS II–IV 2026-10-27 · A FORM STUDY BEFORE THE CONVENING, NOT A WORK OF A CYCLE</div>
+  <div class="tag">ÉTUDE · THE STUDIO (ENSEMBLE) · 2026-10-26, MOVEMENTS II–IV 2026-10-27, V 2026-10-28 · A FORM STUDY BEFORE THE CONVENING, NOT A WORK OF A CYCLE</div>
   <h1>THE REMAINDER</h1>
-  <p class="lede">Four movements. <b>I</b>: sixteen humanitarian appeals for Sudan, 2011 to 2026. <b>II</b>: every one of the 46 appeals the record lists for 2025, the year of the cuts. <b>III</b>: every one of the 47 appeals of 2022, before them. <b>IV</b>: the two years, each as one row that holds every grant of its year. Each row is what was asked for. Every lit grain is one grant that came, in the order it was dated, as wide as its dollars. What is left of the row is what was asked for and never came. Press play: the grants sound as the line passes them, and the remainder is heard as silence, one second for every hundred million dollars.</p>
+  <p class="lede">Five movements. <b>I</b>: sixteen humanitarian appeals for Sudan, 2011 to 2026. <b>II</b>: every one of the 46 appeals the record lists for 2025, the year of the cuts. <b>III</b>: every one of the 47 appeals of 2022, before them. <b>IV</b>: the two years, each as one row that holds every grant of its year. <b>V</b> turns from dollars to the calendar: Sudan's grants from July 2024 to December 2025, day by day, under the months in which the famine monitor wrote nothing about Sudan. In I to IV each row is what was asked for. Every lit grain is one grant that came, in the order it was dated, as wide as its dollars. What is left of the row is what was asked for and never came. Press play: the grants sound as the line passes them, and the remainder is heard as silence, one second for every hundred million dollars.</p>
 
   <div class="controls" role="group" aria-label="movement">
     <button id="m1" type="button" aria-pressed="true">I · Sudan, 2011–2026</button>
     <button id="m2" type="button" aria-pressed="false">II · 2025, every appeal</button>
     <button id="m3" type="button" aria-pressed="false">III · 2022, every appeal</button>
     <button id="m4" type="button" aria-pressed="false">IV · 2022 against 2025</button>
+    <button id="m5" type="button" aria-pressed="false">V · Sudan, the money and the monitor</button>
   </div>
   <div class="controls">
     <button id="play" type="button">play all</button>
-    <label>pace <select id="pace">
+    <label id="pacebox">pace <select id="pace">
       <option value="50000000">1 s = $50 m</option>
       <option value="100000000" selected>1 s = $100 m</option>
       <option value="250000000">1 s = $250 m</option>
@@ -60,17 +61,20 @@
     <p>The second movement widens the same row to every appeal of 2025: <span id="sumtext2">…</span> Played at the default pace it lasts about eight minutes, and most of them are silent. Two appeals were met or more than met (the Philippines' cyclone plan at 145 %, Cuba's hurricane plan at 99 %); their rows run past their outline, and their silence is nil.</p>
     <p>The third movement plays 2022, the year before the cuts, by the same rule: <span id="sumtext3">…</span> No appeal of 2022 was fully met. The fourth movement lays the two years against each other, each as one row of every grant it received, in date order. <span id="sumtext4">…</span> The later year asked a little less and was given about half. Its grants are more and smaller (on average about half the size), so it sounds higher and busier, and then its silence is longer.</p>
 
+    <p>The fifth movement keeps time by the calendar, four seconds a month. Above, one cell a month says whether FEWS NET, the famine early warning network, published a food-security analysis of Sudan in that month, as its own archive lists it today: lit, and a low tone holds, when it did; dark and toneless when it did not. Beneath it, how many of the 43 countries the network covers had an analysis that month. Below, every grant counted toward Sudan's 2024, 2025 and 2026 appeals, at its date, lower and larger the more it gave, sounding as the line passes. <span id="sumtext5">…</span> The money kept arriving through the months the monitor was dark. What it bought in those months, and for whom, neither record says.</p>
+
     <h2>Source and method</h2>
     <p>OCHA Financial Tracking Service, public API (<code>api.hpc.tools/v1/public</code>), fetched 2026-10-26: the country's plan list (<code>plan/country/SDN</code>), and for each of the sixteen Sudan response plans every flow (<code>fts/flow?planId=</code>). A grant counts when FTS marks it incoming to the plan and paid or committed; pledges do not count. For every plan the counted flows add up exactly to FTS's own incoming funding total; the build script asserts it. Requirements are the plans' revised requirements as FTS states them. Nine flows of zero or negative value (corrections), skipped and counted in <code>data.json</code>. Grains in a paler grey are commitments not yet marked paid. Donor is the first organisation FTS names as source. Data: CC BY-IGO, OCHA FTS. Script: <code>build_data.py</code>; data: <code>data.json</code>.</p>
     <p>Movement II: the plan list for the year (<code>plan/year/2025</code>), fetched 2026-10-27, and every flow of each of its 46 plans, by the same rule; for all 46 the counted flows equal FTS's own total (asserted in <code>build_year.py</code>, run with the year 2025; data: <code>data-2025.json</code>). It includes regional refugee plans and flash appeals, sorted by what they asked. No flow is counted in two plans. A 2025 appeal can still receive funding after its year, so its dark can still shrink a little.</p>
     <p>Movement III: the same for <code>plan/year/2022</code>, fetched 2026-10-27: 47 plans, every flow, the counted flows equal FTS's own total for all 47 (asserted; script <code>build_year.py</code>, data <code>data-2022.json</code>). Four years of late funding have reached 2022's record; 2025's has had less than one. Movement IV is built in the page from the two files and adds nothing to them: each year's requirement and funding are the sums of its appeals, and its grains are all of its grants in date order. Dollars are nominal, not adjusted for inflation.</p>
+    <p>Movement V adds no fetch of its own. Its grants are the flows of <code>data.json</code> (movement I) that count toward Sudan's 2024, 2025 or 2026 plan and carry a date from July 2024 to December 2025; FTS's date is the date a grant was recorded or decided, not the day food reached anyone. Its monitor is the Field's table of every FEWS NET product page by country and month (<a href="https://github.com/frankbueltge/field-research/tree/94458f0516adca20e21b195e8db935d29135651d/notes/convening-after-010/dark-months">field-research, dark-months/timeline.json</a>, session 236, CC0), read from fews.net's sitemap on 2026-10-28, with the Field's own split kept: an analysis is a food-security judgement (an alert, an outlook, a key message update); prices, calendars and remote sensing are monitoring without a judgement and are drawn as a faint stripe. A page's date in the archive is not proof of the day it was posted. Script: <code>build_v.py</code>; data: <code>data-v.json</code>.</p>
     <p>In movement I, regional refugee plans and the COVID plans of 2020 are not Sudan's appeals and are left out. Funding outside any plan is left out too: this is the record of what was asked, not of everything that was given.</p>
 
     <h2>Neighbours in the Atlas of Data Art</h2>
     <p><em>Of All the People in All the World: Stats with Rice</em> (Stan's Cafe, 2004) gives a statistic its physical quantity, one grain a person. <em>The Library of Missing Datasets</em> (Mimi Ọnụọha, 2016–) shows as empty folders the datasets nobody collects. <em>The REDress Project</em> (Jaime Black, 2010–) makes an uncounted gap present as empty dresses. Daylight: here the absence is not an uncollected dataset but a sum that was counted, asked for and refused. It is measured to the dollar, and it is given a duration, a silence exactly as long as the sound of everything that came. Grains here are grants, not people.</p>
 
     <h2>Beside the siblings</h2>
-    <p>The Atelier's study <a href="https://github.com/frankbueltge/ulysses/tree/main/artifacts/convening-after-010/the-unclassified">The Unclassified</a> (2026-10-26) shows the places in Sudan that the famine rule cannot classify for lack of data. The Field's probe of the briefing's open data (<a href="https://github.com/frankbueltge/field-research/tree/main/notes/convening-after-010">notes/convening-after-010</a>, 2026-10-26) found the OCHA FTS door open, and this étude came in through it.</p>
+    <p>The Atelier's study <a href="https://github.com/frankbueltge/ulysses/tree/main/artifacts/convening-after-010/the-unclassified">The Unclassified</a> (2026-10-26) shows the places in Sudan that the famine rule cannot classify for lack of data. The Field's probe of the briefing's open data (<a href="https://github.com/frankbueltge/field-research/tree/main/notes/convening-after-010">notes/convening-after-010</a>, 2026-10-26) found the OCHA FTS door open, and this étude came in through it. Movement V is built on the Field's reading of FEWS NET's own archive (session 236, 2026-10-28), which dates Sudan's dark from the alert of 31 December 2024 to the alert of 5 September 2025, eight months, and which the Atelier checked and took into its card the same day.</p>
   </section>
 </main>
 <script>
@@ -79,6 +83,7 @@
     m1: { data: await (await fetch("data.json")).json(), rowh: 26, gap: 13 },
     m2: { data: await (await fetch("data-2025.json")).json(), rowh: 15, gap: 7 },
     m3: { data: await (await fetch("data-2022.json")).json(), rowh: 15, gap: 7 },
+    m5: { data: await (await fetch("data-v.json")).json() },
   };
   // movement IV: each year as one row of all its appeals' grants, built from the two files above
   {
@@ -111,15 +116,128 @@
     document.getElementById("sumtext4").textContent =
       `From 2022 to 2025 what was asked fell by ${(100 * (1 - b.required / a.required)).toFixed(1)} % (${fmt(a.required)} to ${fmt(b.required)}); what came fell by ${(100 * (1 - b.funded / a.funded)).toFixed(1)} % (${fmt(a.funded)} to ${fmt(b.funded)}), and ${(a.flows.length - b.flows.length) > 0 ? (a.flows.length - b.flows.length).toLocaleString("en-US") + " fewer" : (b.flows.length - a.flows.length).toLocaleString("en-US") + " more"} grants were counted (${a.flows.length.toLocaleString("en-US")} against ${b.flows.length.toLocaleString("en-US")}).`;
   }
+  // movement V: Sudan's grants on the calendar, under the months the famine monitor wrote about Sudan or did not
+  const V = (function () {
+    const d = SETS.m5.data, MS = d.months, n = MS.length, SEC = 4;       // seconds per month
+    const MN = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
+    const mlabel = m => MN[+m.slice(5) - 1] + " " + m.slice(0, 4);
+    const pretty = t => t.replace(/-/g, " ");
+    const at = date => {                                                 // date -> months from the start
+      const i = MS.findIndex(e => e.month === date.slice(0, 7));
+      const [y, mo] = date.slice(0, 7).split("-").map(Number), days = new Date(y, mo, 0).getDate();
+      return i + (+date.slice(8, 10) - 0.5) / days;
+    };
+    const G = d.grants.map(g => ({ g, t: at(g[1]) }));
+    const lg = a => Math.log10(Math.max(a, 1e3));
+    const darkSet = new Set(d.months_without_analysis.filter(m => m >= "2025"));
+    {
+      const dk = G.filter(o => darkSet.has(o.g[1].slice(0, 7))), sum = dk.reduce((a, o) => a + o.g[0], 0);
+      document.getElementById("sumtext5").textContent =
+        `FEWS NET's archive holds no analysis of Sudan from January to August 2025, eight months. In those months ${dk.length} grants worth ${fmt(sum)} were recorded toward Sudan's appeals; across all eighteen months, ${G.length} grants worth ${fmt(G.reduce((a, o) => a + o.g[0], 0))}.`;
+    }
+    let L = 8, R = 8, H = 0, top = {}, cur = null, hx = [];
+    const X = t => L + t * (W - L - R) / n;
+    function layout() {
+      const fh = narrow() ? 220 : 300;
+      top = { lab: 0, eye: 26, cnt: 86, cntH: 30, fld: 150, fldH: fh, axis: 150 + fh + 8 };
+      H = top.axis + 30;
+      cv.style.height = H + "px";
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      const mx = Math.max(...G.map(o => lg(o.g[0]))), mn = Math.min(...G.map(o => lg(o.g[0])));
+      hx = G.map(o => ({ o, x: X(o.t), y: top.fld + 6 + (lg(o.g[0]) - mn) / (mx - mn) * (top.fldH - 12), r: 1.2 + 6 * Math.sqrt(o.g[0] / 1.5e8) }));
+      draw();
+    }
+    function draw() {
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, W, H);
+      const cw = (W - L - R) / n, sm = narrow();
+      ctx.font = "11px ui-monospace, Menlo, monospace"; ctx.textBaseline = "middle";
+      ctx.fillStyle = "#8a8378";
+      ctx.fillText(sm ? "FEWS NET, analysis of Sudan" : "FEWS NET: a food-security analysis of Sudan in its archive for the month", L, top.lab + 12);
+      ctx.fillText(sm ? "countries with an analysis, of 43" : "countries with an analysis that month, of the 43 it covers", L, top.cnt - 12);
+      ctx.fillText(sm ? "grants to Sudan's appeals" : "grants toward Sudan's 2024, 2025 and 2026 appeals, at their date · lower = larger", L, top.fld - 16);
+      MS.forEach((e, i) => {
+        const x = L + i * cw, lit = e.analysis.length > 0, past = cur === null || cur >= i;
+        if (lit) { ctx.fillStyle = past ? "#e9e4da" : "#5c564e"; ctx.fillRect(x + 1, top.eye, cw - 2, 30); }
+        else {
+          ctx.strokeStyle = "#3a3631"; ctx.lineWidth = 1; ctx.strokeRect(x + 1.5, top.eye + 0.5, cw - 3, 29);
+          if (e.monitor.length) { ctx.fillStyle = "#3a3631"; ctx.fillRect(x + 1, top.eye + 24, cw - 2, 6); }
+        }
+        const h = top.cntH * e.countries_with_analysis / d.countries_read;
+        ctx.fillStyle = "#5c564e"; ctx.fillRect(x + cw * 0.3, top.cnt + top.cntH - h, cw * 0.4, h);
+        ctx.fillStyle = "#8a8378";
+        if (!sm || i % 3 === 0) ctx.fillText(sm ? mlabel(e.month).replace(" 20", " ’") : MN[+e.month.slice(5) - 1], x + 2, top.axis + 8);
+        if (e.month.endsWith("-01") || i === 0) { ctx.fillStyle = "#5c564e"; ctx.fillRect(x, top.eye, 1, top.axis - top.eye); if (!sm) { ctx.fillStyle = "#8a8378"; ctx.fillText(e.month.slice(0, 4), x + 2, top.axis + 20); } }
+      });
+      if (!sm) { ctx.fillStyle = "#5c564e"; ctx.fillText("dark: Jan–Aug 2025", X(6) + 4, top.eye + 15); }
+      for (const p of hx) {
+        if (cur !== null && p.o.t > cur) continue;
+        ctx.fillStyle = !p.o.g[3] ? "#7f8f9c" : p.o.g[4] === 2024 ? "#b8862f" : p.o.g[4] === 2025 ? "#d9a441" : "#e9e4da";
+        ctx.globalAlpha = 0.85;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      if (cur !== null) { ctx.fillStyle = "#e9e4da"; ctx.fillRect(X(cur), top.eye - 4, 1.5, top.axis - top.eye + 4); }
+    }
+    function hit(px, py) {
+      if (py >= top.eye && py <= top.cnt + top.cntH) { const i = Math.floor((px - L) / ((W - L - R) / n)); return i >= 0 && i < n ? { month: i } : null; }
+      if (py >= top.axis) { const i = Math.floor((px - L) / ((W - L - R) / n)); return i >= 0 && i < n ? { month: i } : null; }
+      let best = null, bd = 64;
+      for (const p of hx) { const dd = (p.x - px) ** 2 + (p.y - py) ** 2; if (dd < Math.max(bd, p.r * p.r)) { bd = dd; best = p; } }
+      return best ? { grant: best.o.g } : null;
+    }
+    function monthText(i) {
+      const e = MS[i], gs = G.filter(o => o.g[1].startsWith(e.month));
+      return `${mlabel(e.month)} · FEWS NET on Sudan: ${e.analysis.length ? e.analysis.map(pretty).join(", ") : "no analysis" + (e.monitor.length ? " (only " + e.monitor.map(pretty).join(", ") + ")" : "")} · ${e.countries_with_analysis} of ${d.countries_read} countries analysed · ${gs.length} grant${gs.length === 1 ? "" : "s"}, ${fmt(gs.reduce((a, o) => a + o.g[0], 0))}`;
+    }
+    function show(h) {
+      if (h.month !== undefined) { read.textContent = monthText(h.month) + ". Tap to hear the month alone."; return; }
+      const g = h.grant;
+      read.textContent = `${g[1]} · ${d.donors[g[2]]} · ${fmt(g[0])} · toward the ${g[4]} appeal · ${g[3] ? "paid" : "committed, not yet marked paid"} · ${MS.find(e => e.month === g[1].slice(0, 7)).analysis.length ? "the monitor wrote an analysis of Sudan this month" : "no analysis of Sudan this month"}`;
+    }
+    function play(a, b) {
+      if (ac) stop();
+      ac = new (window.AudioContext || window.webkitAudioContext)();
+      const t0 = ac.currentTime + 0.15;
+      for (const o of G) if (o.t >= a && o.t < b) tone(t0 + (o.t - a) * SEC, o.g[0], o.g[3]);
+      // the eye: a low held tone through every month the monitor wrote an analysis of Sudan
+      const o = ac.createOscillator(), o2 = ac.createOscillator(), g = ac.createGain();
+      o.type = "sine"; o.frequency.value = 73.4; o2.type = "sine"; o2.frequency.value = 110.1;
+      g.gain.setValueAtTime(0, t0);
+      for (let i = a; i < b; i++) {
+        const s = t0 + (i - a) * SEC, v = MS[i].analysis.length ? 0.06 : 0.0;
+        g.gain.setTargetAtTime(v, s, 0.25);
+      }
+      g.gain.setTargetAtTime(0, t0 + (b - a) * SEC, 0.2);
+      o.connect(g); o2.connect(g); g.connect(ac.destination);
+      o.start(t0); o2.start(t0); o.stop(t0 + (b - a) * SEC + 1.5); o2.stop(t0 + (b - a) * SEC + 1.5);
+      stopAt = t0 + (b - a) * SEC + 0.6;
+      document.getElementById("play").textContent = "stop";
+      (function frame() {
+        if (!ac) return;
+        const now = ac.currentTime;
+        if (now >= stopAt) { stop(); return; }
+        cur = Math.min(b, a + Math.max(0, now - t0) / SEC);
+        const i = Math.min(n - 1, Math.floor(cur)), e = MS[i];
+        const sofar = G.filter(o => o.t >= Math.floor(cur) && o.t <= cur);
+        meter.innerHTML = `<b>${mlabel(e.month)}</b> · ${e.analysis.length ? "the monitor wrote: " + e.analysis.map(pretty).join(", ") : "<b>no analysis of Sudan</b>" + (e.monitor.length ? " (only " + e.monitor.map(pretty).join(", ") + ")" : "")} · ${sofar.length} grant${sofar.length === 1 ? "" : "s"} so far this month, ${fmt(sofar.reduce((s, o) => s + o.g[0], 0))}`;
+        draw();
+        raf = requestAnimationFrame(frame);
+      })();
+    }
+    return { layout, draw, hit, show, play, n, set cur(v) { cur = v; } };
+  })();
   const narrow = () => cv.clientWidth < 600;
   const tip = () => M === "m1" || M === "m4" ? "tap a row's year to play only that year" : "tap an appeal's name to play only that appeal";
   function choose(id) {
     if (ac) stop();
     M = id; const S = SETS[id];
+    document.getElementById("pacebox").style.visibility = id === "m5" ? "hidden" : "visible";
+    if (id === "m5") { for (const b of ["m1", "m2", "m3", "m4", "m5"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id)); meter.textContent = "tap a month to hear it alone, or a grain to read it"; layout(); return; }
     Y = S.data.years; D = S.data.donors;
     maxReq = Math.max(...Y.map(y => Math.max(y.required, y.funded)));
     ROWH = S.rowh; GAP = S.gap;
-    for (const b of ["m1", "m2", "m3", "m4"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id));
+    for (const b of ["m1", "m2", "m3", "m4", "m5"]) document.getElementById(b).setAttribute("aria-pressed", String(b === id));
     meter.textContent = tip();
     layout();
   }
@@ -132,6 +250,7 @@
   function layout() {
     dpr = window.devicePixelRatio || 1;
     W = cv.clientWidth;
+    if (M === "m5") return V.layout();
     LABEL = M === "m1" || M === "m4" ? 56 : (narrow() ? 96 : 220);
     const H = TOP + Y.length * (ROWH + GAP);
     cv.style.height = H + "px";
@@ -142,6 +261,7 @@
   const rowY = i => TOP + i * (ROWH + GAP);
 
   function draw() {
+    if (M === "m5") return V.draw();
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, W, cv.height);
     const s = scale();
@@ -175,6 +295,7 @@
   }
 
   function hit(px, py) {
+    if (M === "m5") return V.hit(px, py);
     const s = scale();
     const i = Math.floor((py - TOP) / (ROWH + GAP));
     if (i < 0 || i >= Y.length || py - rowY(i) > ROWH) return null;
@@ -187,6 +308,7 @@
     return { row: i, gap: true };
   }
   function show(h) {
+    if (M === "m5" && h) return V.show(h);
     if (!h) { read.innerHTML = '<span class="q">hover or tap a grain, or the dark part of a row</span>'; return; }
     const y = Y[h.row];
     if (h.label) { read.textContent = `${y.name}${(M === "m2" || M === "m3") && y.kind ? " (" + y.kind.toLowerCase() + ")" : ""}: asked ${fmt(y.required)}, came ${fmt(y.funded)} in ${y.flows.length} grants (${(100 * y.funded / y.required).toFixed(1)} %). Tap to play ${M === "m1" || M === "m4" ? "this year" : "this appeal"}.`; return; }
@@ -197,7 +319,7 @@
   const pos = e => { const r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
   cv.addEventListener("mousemove", e => show(hit(...pos(e))));
   cv.addEventListener("mouseleave", () => show(null));
-  cv.addEventListener("click", e => { const h = hit(...pos(e)); show(h); if (h && h.label) play([h.row]); });
+  cv.addEventListener("click", e => { const h = hit(...pos(e)); show(h); if (M === "m5") { if (h && h.month !== undefined) V.play(h.month, h.month + 1); return; } if (h && h.label) play([h.row]); });
 
   // ---- sound: one short tone per grant as the line passes it; silence across the remainder
   let ac = null, raf = 0, stopAt = null;
@@ -212,10 +334,10 @@
     o.connect(g).connect(ac.destination); o.start(t); o.stop(t + 0.4);
   }
   function stop() {
-    cancelAnimationFrame(raf); head = null; playing = null; draw();
+    cancelAnimationFrame(raf); head = null; playing = null; V.cur = null; draw();
     if (ac) { ac.close(); ac = null; }
     document.getElementById("play").textContent = "play all";
-    meter.textContent = tip();
+    meter.textContent = M === "m5" ? "tap a month to hear it alone, or a grain to read it" : tip();
   }
   function play(rows) {
     if (ac) stop();
@@ -248,14 +370,15 @@
       raf = requestAnimationFrame(frame);
     })();
   }
-  document.getElementById("play").addEventListener("click", () => ac ? stop() : play(Y.map((_, i) => i)));
+  document.getElementById("play").addEventListener("click", () => ac ? stop() : M === "m5" ? V.play(0, V.n) : play(Y.map((_, i) => i)));
   document.getElementById("pace").addEventListener("change", () => { if (ac) stop(); });
   document.getElementById("m1").addEventListener("click", () => choose("m1"));
   document.getElementById("m2").addEventListener("click", () => choose("m2"));
   document.getElementById("m3").addEventListener("click", () => choose("m3"));
   document.getElementById("m4").addEventListener("click", () => choose("m4"));
+  document.getElementById("m5").addEventListener("click", () => choose("m5"));
   window.addEventListener("resize", layout);
-  choose({ "#ii": "m2", "#iii": "m3", "#iv": "m4" }[location.hash] || "m1");
+  choose({ "#ii": "m2", "#iii": "m3", "#iv": "m4", "#v": "m5" }[location.hash] || "m1");
 })();
 </script>
 </body>
