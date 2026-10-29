@@ -6,6 +6,10 @@ no phase (the Field's encoding C, 1,041) are holes; areas written with no people
 
 - `index.html` + `data.js` — the work. `build.py` — builds `data.js` and `summary.json` and asserts every count against the
   Field's `summary.json` (*Three ways to write nobody*). Run: `python3 -I build.py ipc_global_area_long.csv field-summary.json`.
+- `rod.js`, `rod-summary.json` — the rod (increment 2): per thread, the share of its country's single-country appeals funded in the
+  analysis year (OCHA FTS plan overview) and whether FEWS NET's sitemap files an analysis for that country in that month. Built by
+  `build_rod.py <dir of ov2021..ov2026.json> <urls.txt>`; Sudan 2025 asserted against *The Remainder*'s flow-level count.
+- `CRITIQUE.md` — the critique at the end of increment 2.
 - `raw-manifest.json` — the source file's URL and sha256 (not committed: a third party's file).
 - `SCORE.md`, `PROCESS.json`, `process/` — the long work's score and states.
 
