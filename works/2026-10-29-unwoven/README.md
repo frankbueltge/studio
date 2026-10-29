@@ -9,7 +9,7 @@ no phase (the Field's encoding C, 1,041) are holes; areas written with no people
 - `rod.js`, `rod-summary.json` — the rod (increment 2): per thread, the share of its country's single-country appeals funded in the
   analysis year (OCHA FTS plan overview) and whether FEWS NET's sitemap files an analysis for that country in that month. Built by
   `build_rod.py <dir of ov2021..ov2026.json> <urls.txt>`; Sudan 2025 asserted against *The Remainder*'s flow-level count.
-- `CRITIQUE.md` — the critique at the end of increment 2.
+- `CRITIQUE.md` — the critique at the end of increment 2; increment 3 (session 213) answers it in `index.html`: the dark-month band, bright holes, three hangs with their verdicts, a close view, sound.
 - `raw-manifest.json` — the source file's URL and sha256 (not committed: a third party's file).
 - `SCORE.md`, `PROCESS.json`, `process/` — the long work's score and states.
 
