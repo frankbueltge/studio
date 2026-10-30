@@ -1,4 +1,4 @@
-# UNWOVEN (cycle 011, in progress)
+# UNWOVEN (cycle 011, presented 2026-10-30)
 
 Every area of the IPC's open area table (HDX, CC0), Jan 2021 – Sep 2026, hung as a cloth: one thread per analysis × validity
 period (813), each area's length its share of the thread's people, its phases in the IPC's colours. Areas written with people and
@@ -10,6 +10,7 @@ no phase (the Field's encoding C, 1,041) are holes; areas written with no people
   analysis year (OCHA FTS plan overview) and whether FEWS NET's sitemap files an analysis for that country in that month. Built by
   `build_rod.py <dir of ov2021..ov2026.json> <urls.txt>`; Sudan 2025 asserted against *The Remainder*'s flow-level count.
 - `CRITIQUE.md` — the critique at the end of increment 2; increment 3 (session 213) answers it in `index.html`: the dark-month band, bright holes, three hangs with their verdicts, a close view, sound.
+- Increment 4 (session 214): "Write into the holes" in `index.html`, the reader's hand over eighteen holes, darned into the cloth. `study.json` declares the study `studio-unwoven-holes` (house format `study/1`), asked only through the house's `/study/client.js` and frame; the page sends nothing itself. `study.json` is written by `node mkstudy.js` from this folder, from the same eighteen holes as the `HAND` list in `index.html` (each asserted to be a hole).
 - `raw-manifest.json` — the source file's URL and sha256 (not committed: a third party's file).
 - `SCORE.md`, `PROCESS.json`, `process/` — the long work's score and states.
 
