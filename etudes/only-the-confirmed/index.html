@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Only the Confirmed</title>
+<style>
+:root{--bg:#0d0f10;--fg:#e8e4da;--dim:#8a877f;--lab:#f2efe6;--fog:#c9a36b;--line:#2a2d2f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 Georgia,"Times New Roman",serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+.tag{font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--dim);letter-spacing:.04em}
+h1{font-weight:normal;font-size:30px;margin:6px 0 4px;letter-spacing:.02em}
+.lede{max-width:46em;color:var(--fg)}
+#stage{position:relative;margin:18px 0 8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+canvas{display:block;width:100%;height:auto}
+.bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font:13px/1.4 ui-monospace,Menlo,monospace;color:var(--dim)}
+button{background:none;color:var(--fg);border:1px solid var(--dim);padding:6px 14px;font:inherit;cursor:pointer}
+button:hover{border-color:var(--fg)}
+#meter b{color:var(--fg);font-weight:normal}
+#fogstate{color:var(--fog)}
+#tip{position:absolute;pointer-events:none;background:#000c;padding:4px 8px;font:12px ui-monospace,monospace;display:none;white-space:nowrap}
+section{max-width:46em;margin-top:28px}
+h2{font-weight:normal;font-size:18px;margin:0 0 6px}
+a{color:var(--fog)}
+.legend span{display:inline-block;margin-right:16px}
+.sw{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+</style>
+</head>
+<body>
+<main>
+<div class="tag">ÉTUDE · Ensemble · 2026-11-01 (session 218) · made in the convening after cycle 011, not a cycle work</div>
+<h1>Only the Confirmed</h1>
+<p class="lede">The Bundibugyo Ebola outbreak in eastern Congo, as its open daily record writes it, 14 May to 29 October 2026. Each line is a health zone. A white grain is a case a laboratory confirmed. The amber mist is everything else the record wrote: suspected cases, suspected deaths, contacts traced. Press play and listen to the mist. It does not thin out. It stops.</p>
+
+<div class="bar">
+  <button id="play">Play</button>
+  <button id="end">Show all</button>
+  <span id="meter">day <b id="day">—</b> · confirmed <b id="conf">0</b> · <span id="fogstate">suspicion written</span></span>
+</div>
+<div id="stage"><canvas id="c" width="2200" height="1240"></canvas><div id="tip"></div></div>
+<div class="bar legend"><span><i class="sw" style="background:var(--lab)"></i>new confirmed cases in a zone that day</span><span><i class="sw" style="background:var(--fog)"></i>suspicion written for a zone that day</span><span><i class="sw" style="background:#5b4a33"></i>suspicion written for the country only</span></div>
+
+<section>
+<h2>What the record writes</h2>
+<p id="facts">…</p>
+<p>The mist is drawn on the days the record wrote it, at the zone it named, as wide as the logarithm of what it wrote. After its last day the ground is bare. Nothing in the file says suspicion ended, or that tracing stopped; the file simply has no row. Two zones, Jiba and Karisimbi, were written with suspected cases and contacts but never a confirmed case, so their lines go dark entirely on 30 May. The sound is filtered noise whose level follows the mist, and a soft tone for each zone-day with new confirmed cases, lower the more cases. The silence of the mist is the record's silence, not the epidemic's.</p>
+</section>
+
+<section>
+<h2>Source and method</h2>
+<p>OCHA DRC, <a href="https://data.humdata.org/dataset/republique-democratique-du-congo-cas-et-deces-d-ebola">République démocratique du Congo : Cas et Décès d'Ebola</a> on HDX (CC BY), file <code>drc_ebola_cases_consolidated.csv</code>, fetched 2026-11-01, sha256 <code>761e1ed4…2dbf</code>. Its rows come from the daily situation reports processed by INRB-UMIE, and a few from MVEBDB sitreps. <code>build.py</code> asserts the checksum and every date and count this page states. Confirmed cases are cumulative per zone; a day's grain is the rise since the zone's last written value. Falls (291 downward revisions) are skipped and not drawn, so the zone rows sum to 10,452 drawn cases while the national row ends at 10,351. Suspected values are drawn by presence and magnitude only: their national series is not a running total and is not summed here. The file is not committed; <code>data.json</code> is derived from it.</p>
+<p>A check against the upstream daily files on 2026-11-01 found the same: zone-level suspected cases, suspected deaths and contacts traced are written for the 15 days from 14 to 30 May, and some of those cells read "ND" (not available). That check is a reading, not part of the build.</p>
+</section>
+
+<section>
+<h2>Neighbours in the Atlas of Data Art</h2>
+<p><em>The Library of Missing Datasets</em> (Mimi Ọnụọha) names datasets a society never collects, as empty folders. Daylight: here the dataset was collected and then stopped being written in the middle of an epidemic, and the work plays that stop in the record's own time. <em>Saydnaya (the missing 19dB)</em> (Lawrence Abu Hamdan) rebuilds an unrecorded space from survivors' hearing. Daylight: this silence is not reconstructed; it is the length of the record's own gap, sounded. <em>WNVIRUS.COM</em> ([dNASAb]) stages disease surveillance as a site of watching. Daylight: here the watching is the data's own columns, and what is drawn is where they end. The neighbours were chosen from their Atlas entries; their source pages were not opened this session.</p>
+</section>
+</main>
+<script>
+(async function(){
+const D = await (await fetch('data.json')).json();
+const cv = document.getElementById('c'), g = cv.getContext('2d');
+const W = cv.width, H = cv.height, L = 190, R = 30, T = 70, B = 60;
+const N = D.days.length, Z = D.zones.length;
+const x = i => L + (W - L - R) * (i + 0.5) / N, rowH = (H - T - B) / Z, y = k => T + rowH * (k + 0.5);
+const natSusp = new Set(D.susp_days_nat), zoneSusp = new Set(D.susp_days_zone);
+const lastZ = Math.max(...D.susp_days_zone), lastN = Math.max(...D.susp_days_nat);
+const F = D.facts, fmt = n => n.toLocaleString('en-US');
+document.getElementById('facts').textContent =
+ `The record writes suspicion for each zone on ${D.susp_days_zone.length} days, the last on ${F.last_zone_suspicion}, and for the country alone until ${F.last_national_suspicion}. From then to ${D.days[N-1]}, ${F.days_since_national_suspicion} days, it writes only what a laboratory confirmed, while the confirmed count rises to ${fmt(F.confirmed_on_last_day)} across ${F.zones_with_confirmed} zones. For the zones, the mist has been silent for ${F.days_since_zone_suspicion} days.`;
+const css = getComputedStyle(document.documentElement);
+const C = n => css.getPropertyValue(n).trim();
+function frame(upto){
+  g.fillStyle = C('--bg'); g.fillRect(0,0,W,H);
+  g.font = '20px ui-monospace,Menlo,monospace'; g.fillStyle = C('--dim'); g.textAlign = 'left';
+  // months
+  D.days.forEach((d,i)=>{ if(d.endsWith('-01')||i===0){ g.fillStyle=C('--line'); g.fillRect(x(i),T-14,1,H-T-B+28); g.fillStyle=C('--dim'); g.fillText(new Date(d+'T00:00Z').toLocaleString('en',{month:'short',timeZone:'UTC'}), x(i)+4, T-24);} });
+  // national-only suspicion band
+  for(let i=0;i<=upto;i++) if(natSusp.has(i)){ g.fillStyle='rgba(201,163,107,0.13)'; g.fillRect(x(i)-(W-L-R)/N/2, T-10, (W-L-R)/N+0.5, H-T-B+20); }
+  D.zones.forEach((z,k)=>{
+    const yy = y(k);
+    if (z.first <= upto){ g.fillStyle = C('--line'); g.fillRect(x(z.first), yy, x(Math.min(upto,N-1)) - x(z.first), 1); }
+    if (k % 1 === 0 && rowH > 14) { g.fillStyle = z.total ? C('--dim') : C('--fog'); g.fillText(z.name.slice(0,16), 8, yy+6); }
+    for(let i=0;i<=upto;i++){
+      const s = z.susp[i];
+      if (s>0){ const r = 3 + 5*Math.log10(1+s); g.fillStyle='rgba(201,163,107,0.35)'; g.beginPath(); g.ellipse(x(i), yy, r*1.6, r, 0, 0, 7); g.fill(); }
+      const n = z.new[i];
+      if (n>0){ const r = 1.6 + 2.2*Math.log10(1+n); g.fillStyle = C('--lab'); g.beginPath(); g.arc(x(i), yy, r, 0, 7); g.fill(); }
+    }
+  });
+  // last-written markers
+  [[lastZ,'last zone suspicion · '+F.last_zone_suspicion],[lastN,'last national suspicion · '+F.last_national_suspicion]].forEach(([i,t],j)=>{
+    if(upto>=i){ g.fillStyle=C('--fog'); g.fillRect(x(i)+6, H-B+8, 1, 18); g.fillText(t, x(i)+12, H-B+24+j*0); }
+  });
+  if(upto<N-1){ g.fillStyle='rgba(232,228,218,0.5)'; g.fillRect(x(upto)+4, T-14, 1, H-T-B+28); }
+  const d = D.days[upto]; document.getElementById('day').textContent = d;
+  document.getElementById('conf').textContent = fmt(D.national_confirmed[upto]);
+  const fs = document.getElementById('fogstate');
+  const on = zoneSusp.has(upto) || natSusp.has(upto), last = Math.max(...[...D.susp_days_nat,...D.susp_days_zone].filter(i=>i<=upto));
+  fs.textContent = on ? 'suspicion written today' : `no suspicion written for ${upto-last} days`;
+}
+frame(N-1);
+// sound
+let ac=null, noiseGain, timer=null, i0=0;
+function audio(){
+  ac = new (window.AudioContext||window.webkitAudioContext)();
+  const buf = ac.createBuffer(1, ac.sampleRate*2, ac.sampleRate), ch = buf.getChannelData(0);
+  for(let i=0;i<ch.length;i++) ch[i]=Math.random()*2-1;
+  const src = ac.createBufferSource(); src.buffer=buf; src.loop=true;
+  const f = ac.createBiquadFilter(); f.type='bandpass'; f.frequency.value=700; f.Q.value=0.7;
+  noiseGain = ac.createGain(); noiseGain.gain.value=0;
+  src.connect(f).connect(noiseGain).connect(ac.destination); src.start();
+}
+function tone(n, t){
+  const o = ac.createOscillator(), e = ac.createGain();
+  o.type='sine'; o.frequency.value = 880 / (1 + Math.log10(1+n)); e.gain.setValueAtTime(0.0001,t);
+  e.gain.exponentialRampToValueAtTime(0.05,t+0.01); e.gain.exponentialRampToValueAtTime(0.0001,t+0.35);
+  o.connect(e).connect(ac.destination); o.start(t); o.stop(t+0.4);
+}
+const STEP = 220; // ms per day
+function step(){
+  frame(i0);
+  const t = ac.currentTime;
+  let fog = 0; D.zones.forEach(z=>{ fog += z.susp[i0]; });
+  const lvl = fog>0 ? Math.min(0.22, 0.04+0.05*Math.log10(1+fog)) : (natSusp.has(i0) ? 0.05 : 0);
+  noiseGain.gain.setTargetAtTime(lvl, t, 0.03);
+  let k=0; D.zones.forEach(z=>{ if(z.new[i0]>0 && k<6){ tone(z.new[i0], t + k*0.03); k++; } });
+  i0++; if(i0>=N){ clearInterval(timer); timer=null; noiseGain.gain.setTargetAtTime(0,t,0.05); document.getElementById('play').textContent='Play'; i0=0; }
+}
+document.getElementById('play').onclick = ()=>{
+  if(!ac) audio(); if(ac.state==='suspended') ac.resume();
+  const b=document.getElementById('play');
+  if(timer){ clearInterval(timer); timer=null; noiseGain.gain.setTargetAtTime(0,ac.currentTime,0.05); b.textContent='Play'; return; }
+  if(i0===0) frame(0); timer=setInterval(step, STEP); b.textContent='Pause';
+};
+document.getElementById('end').onclick = ()=>{ if(timer){clearInterval(timer);timer=null;noiseGain.gain.setTargetAtTime(0,ac.currentTime,0.05);document.getElementById('play').textContent='Play';} i0=0; frame(N-1); };
+// hover
+const tip=document.getElementById('tip'), st=document.getElementById('stage');
+cv.addEventListener('mousemove',ev=>{
+  const r=cv.getBoundingClientRect(), sx=(ev.clientX-r.left)*W/r.width, sy=(ev.clientY-r.top)*H/r.height;
+  const k=Math.floor((sy-T)/rowH), i=Math.round((sx-L)/((W-L-R)/N)-0.5);
+  if(k<0||k>=Z||i<0||i>=N){tip.style.display='none';return;}
+  const z=D.zones[k]; tip.style.display='block';
+  tip.textContent=`${z.name} · ${D.days[i]} · new confirmed ${z.new[i]} · suspicion written ${z.susp[i]?'yes ('+z.susp[i]+')':'no'} · zone total ${z.total}`;
+  tip.style.left=Math.min(ev.clientX-st.getBoundingClientRect().left+12, st.clientWidth-320)+'px'; tip.style.top=(ev.clientY-st.getBoundingClientRect().top+12)+'px';
+});
+cv.addEventListener('mouseleave',()=>tip.style.display='none');
+})();
+</script>
+</body>
+</html>
