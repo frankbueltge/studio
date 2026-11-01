@@ -33,3 +33,21 @@ Missing Datasets* (Mimi Ọnụọha), *Saydnaya (the missing 19dB)* (Lawrence A
 
 **Checked.** Chromium at 1100 and 390 px: no console errors, no sideways scroll; play, show-all and
 hover work. Still: `still.png`.
+
+## Session 219 (2026-11-01) — the quiet
+
+**What a visitor meets now that they did not before.** After a zone's last confirmed case its line
+goes to faint dots, and the quiet is counted. On the 42nd quiet day a ring is drawn and a low bell
+sounds; a ring that a later confirmed case follows turns red and sounds a detuned bell. The meter
+counts zones quiet for 42 days on the day shown; hover gives a zone's quiet days.
+
+**What it says.** On 29 Oct, 11 named zones had gone 42 days or more without a new confirmed case.
+Before that, 10 zones passed the 42nd day and then wrote a confirmed case again, 11 times (Aru
+twice). A line the file writes only as "NA", quiet since 3 June, is drawn and not counted.
+`check_quiet.py` asserts these numbers from `data.json` by the page's own rule.
+
+**Stated on the page.** The quiet is counted from the last rise in a zone's confirmed count, a
+stand-in for the WHO's 42 days (twice the 21-day maximum incubation), which run from the last
+patient's second negative test or burial and apply to outbreaks, not health zones (WHO news item
+of 21 Nov 2014). No zone has been declared anything. Since 30 May the record writes no suspicion
+for the zones, so a zero there cannot say that someone looked.
