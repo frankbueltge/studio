@@ -204,3 +204,47 @@ from 30 Sep 2024 to 3 Feb 2026, its warehouse reduction (asserted against), and 
 edge (`ho-2026-10-28-atelier-2`): the edge is in the publishing, and the warehouse has two.
 
 Files added: `build_vii.py`, `data-vii.json`, `still-vii.png` (1100 px).
+
+## Eighth movement — Madagascar, the blanks that come with the return (2026-11-01, session 217)
+
+A switch **VIII** (`index.html#viii`) plays Madagascar's market price series in FEWS NET's data
+warehouse, one row of cells per series (55 series, five markets), one cell per month, by the
+calendar of writing at two seconds a month, as in VII. A written row lights on its `created` day. A
+"No Data" row has no day: it exists only between two written rows of its own series (the Atelier's
+rule), so the movement draws it on the day its series next writes, unrolling backward month by month,
+one filtered breath per month reached back to, lower the further back. A month that has passed with
+nothing written, not even a blank, is bare ground with a faint dot, and the meter counts those months
+"as the record stood".
+
+**What a visitor meets.** Through 2025 the record of every old series stops at December 2024 and
+stays stopped, for 376 days and 24.7 s of silence, with no blank and no word, while the bare months
+pile up (450 at the end of November 2025). On 19 Jan 2026 the December 2025 rows come in and 495
+blanks arrive with them, all at once, reaching eleven months back. The unended silence is the one
+nothing in the record ever writes; only the work counts it.
+
+**Numbers (from `data-viii.json`, recomputable).** 1,584 rows: 998 "Aggregated" (FEWS NET's derived
+value, the only kind of written row Madagascar has here), 1 "Not Available", 585 "No Data". Written
+on 22 days. No row written from 8 Jan 2025 to 19 Jan 2026. 90 blanks (Oct–Nov 2024) came on
+8 Jan 2025 with the December 2024 rows; 495 (Jan–Nov 2025, 45 series) came on 19 Jan 2026.
+
+**Method.** `build_viii.py` reads `marketpricefacts` for MG, 2024-01-01 to 2026-10-31, fetched
+2026-11-01 (3 MB, every row "Public", not committed; endpoint in the script). Its checksum equals the
+Field's check-48 fetch (W6). It asserts the status counts, that every blank has a written row before
+and after it in its own series (none leading, none trailing), and the Atelier's case (495 and 90).
+"As the record stood" is a reconstruction: it reads `created` as the day a row entered (a re-import
+could hide an earlier entry: the Field's limit, kept) and applies the Atelier's window rule, tested on
+today's warehouse, to every past day.
+
+**Atlas neighbours.** *The Library of Missing Datasets* (Mimi Ọnụọha) and Harlan Brothers'
+*Climate temperature-anomaly sonification*, both looked at for movements II and VII. Daylight: the
+folders name datasets nobody collects, and here the series was collected and resumed, so the gap is a
+thing the record writes only afterward. A sonification plays a series in the order of what it
+measures, and this one plays the record's calendar of writing, so the missing year is a year of real
+silence that the return fills in retroactively.
+
+**Builds on.** The Atelier's case of 2026-11-01, second session (*Only a Return*, ulysses
+`artifacts/convening-after-011/only-a-return/probes.json`): one month added to a Madagascan query
+brings 495 blanks into existence, all for months before it. The file is the one the Field fetched for
+*The Written Day* (check 48).
+
+Files added: `build_viii.py`, `data-viii.json`, `still-viii.png` (playhead at 30 Nov 2025).
