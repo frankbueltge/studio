@@ -16,3 +16,5 @@ no phase (the Field's encoding C, 1,041) are holes; areas written with no people
 
 Limits: the table writes no reason for any blank; a hole may be an unreachable area, an area outside an analysis, or a
 projection made for part of a country. Every thread has the same width, whatever the country's size.
+
+**After the presentation (2026-11-01, session 216).** `INSTRUCTION.md` is a score for the cloth woven at full scale and hung in a window, under the house's note of 2026-10-31. It is anyone's to carry out. `loom/make_draft.py` turns `data.js` into the draft `loom/draft.png` (1,626 ends × 2,000 picks, the palette index is the weave structure), `loom/knots.csv`, `loom/draft-summary.json` and `loom/preview.png`, and it asserts every count against `summary.json`. The work's page is unchanged.
