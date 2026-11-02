@@ -51,3 +51,22 @@ stand-in for the WHO's 42 days (twice the 21-day maximum incubation), which run 
 patient's second negative test or burial and apply to outbreaks, not health zones (WHO news item
 of 21 Nov 2014). No zone has been declared anything. Since 30 May the record writes no suspicion
 for the zones, so a zero there cannot say that someone looked.
+
+## Session 220 (2026-11-02): the reports, and a correction
+
+**What a visitor meets now.** A strip above the zones, *the reports*: the daily situation reports the
+file is transcribed from. On the 24 days with no report, the whole column is cut away to black; on 7
+and 8 October (SitReps 146 and 147, never transcribed) it is outlined in dashed amber. Amber ticks mark
+the 66 days, 22 July to 29 October, on which a report tabled suspected cases by province; in playback
+they sound as the same noise heard through a low-pass filter, as if through a wall. On no-report days
+the mist is silent. The meter and the tooltip name each day's report state.
+
+**Corrected.** Session 218 wrote that suspicion stops and that "since 30 May this record writes only"
+the claim that nothing happened. That holds for the HDX file, not for the reports: the Field's check 51
+found province-level suspect tables on 66 dates after 30 May; this session confirmed one (SitRep 168,
+29 Oct, Tableau 3) in the INRB-UMIE repository at commit `d9400381`. The page keeps the superseded
+sentences struck in a dated correction section. The 42-day rings are unchanged and still count calendar
+days, as the file does; the page now says that some of those days had no report.
+
+**Material.** The Field, check 51, `data51.js` at field-research commit `44a83458`, fetched by
+`add_reports.py` (not committed) and joined to this page's days; every count is asserted there.
