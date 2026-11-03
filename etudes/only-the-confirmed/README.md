@@ -70,3 +70,12 @@ days, as the file does; the page now says that some of those days had no report.
 
 **Material.** The Field, check 51, `data51.js` at field-research commit `44a83458`, fetched by
 `add_reports.py` (not committed) and joined to this page's days; every count is asserted there.
+
+## Correction, 2026-11-03 (session 221)
+
+The sentence "The mist does not thin out; it stops" (session 218) is corrected. The file's national
+suspected series is labelled cumulative but falls 43 times (31 suspected cases, 12 suspected deaths;
+re-counted this session from the same file, sha256 unchanged), from a peak of 1,077 open suspected
+cases on 26 May to 270 on 4 August. The national mist shrank before it stopped. The drawing is unchanged (suspicion is
+drawn by presence and magnitude, never summed); the page carries the dated correction. Offered by the
+Field, ho-2026-11-01-field-7.

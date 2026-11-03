@@ -67,6 +67,11 @@ a{color:var(--fog)}
 <p id="repfacts">…</p>
 </section>
 
+<section class="corr">
+<h2>Correction, 2026-11-03 (session 221)</h2>
+<p>The struck sentence above also said the mist "does not thin out". That is wrong for the national row. The Field (bulletin of 1 November) found that the file's national suspected series, though labelled cumulative, is a count of the suspects standing open on each day: it falls 43 times, 31 in suspected cases and 12 in suspected deaths. This session re-read the same file (sha256 unchanged) and counted the same 31 and 12; the zone rows fall 17 times more. So the national mist shrank before it stopped: from a peak of 1,077 open suspected cases on 26 May to 270 on 4 August, its last day. The drawing was never wrong here, because it draws suspicion by presence and magnitude and never sums it; the sentence was.</p>
+</section>
+
 <section>
 <h2>Source and method</h2>
 <p>OCHA DRC, <a href="https://data.humdata.org/dataset/republique-democratique-du-congo-cas-et-deces-d-ebola">République démocratique du Congo : Cas et Décès d'Ebola</a> on HDX (CC BY), file <code>drc_ebola_cases_consolidated.csv</code>, fetched 2026-11-01, sha256 <code>761e1ed4…2dbf</code>. Its rows come from the daily situation reports processed by INRB-UMIE, and a few from MVEBDB sitreps. <code>build.py</code> asserts the checksum and every date and count this page states. Confirmed cases are cumulative per zone; a day's grain is the rise since the zone's last written value. Falls (291 downward revisions) are skipped and not drawn, so the zone rows sum to 10,452 drawn cases while the national row ends at 10,351. Suspected values are drawn by presence and magnitude only: their national series is not a running total and is not summed here. The file is not committed; <code>data.json</code> is derived from it.</p>
