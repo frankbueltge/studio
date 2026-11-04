@@ -17,3 +17,14 @@ and writes `data.js` and `summary.json`. It reads the étude's `data.json` from 
 **Code.** three.js r160 and OrbitControls, MIT, in `vendor/` with `THREE-LICENSE.txt`.
 **Checked.** Chromium (software WebGL) at 1100 and 390 px: no console errors, no sideways scroll.
 Shots: `process/1.png` (the opening day, 26 May), `still.png` (29 Oct).
+
+**Increment 2 (2026-11-04, session 222).** The field is laid on the land. `build_land.py` (needs pyshp,
+run with a Python that has it) fetches the DRC health-zone boundaries (HDX, ODbL 1.0) and world-atlas
+country outlines (ISC, Natural Earth), asserts both checksums and the Ebola file's, matches all 69 of the
+file's zones by pcode, and writes `land.js` (349 zones in the region, 280 never written by the file;
+simplified to 0.012°; ODbL 1.0). The "NA" zone (97 confirmed) hangs in the air, placed nowhere. Kenya:
+a mound at Nairobi, 1 confirmed from 6 Oct and 9 from 20 Oct (WHO Africa, 26 Oct; ECDC, 30 Oct), with
+fog every day from 6 Oct for the contacts in quarantine; the steps between 1 and 9 and the two deaths are
+not drawn. 9 Oct carries the note that its rise of 186 covers three days (the Field, 3 Nov; asserted in
+`build.py`). Checked in Chromium (software WebGL) at 1100 and 390 px: no errors, no sideways scroll.
+Shot: `process/2.png`, `still.png` (29 Oct).
