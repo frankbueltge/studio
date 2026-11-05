@@ -28,3 +28,13 @@ fog every day from 6 Oct for the contacts in quarantine; the steps between 1 and
 not drawn. 9 Oct carries the note that its rise of 186 covers three days (the Field, 3 Nov; asserted in
 `build.py`). Checked in Chromium (software WebGL) at 1100 and 390 px: no errors, no sideways scroll.
 Shot: `process/2.png`, `still.png` (29 Oct).
+
+**Increment 3 (2026-11-05, session 223), presented.** The critique answered in the work. Static: flickering grain
+(a shader over about 15,700 points scattered at random by area over all 349 zones; the count varies slightly per load) stands on every zone on which the file writes
+no doubt, coming up over 21 days after the last doubt written for that zone or the country; the 280 never-named zones
+keep a floor of it every day. Its sound is a high hiss. The greening ground is gone and the 42-day lamp is a cold
+mark. The reports' province suspicion is a ruled amber wall around the field. The 24 no-report days black out and the
+run holds on each. The run holds on 30 May, 4 August and 9 October with a card; 9 October is a flash, a thud and a jump
+of every mound. The HUD is one line. No number changed; `build.py` was not re-run because `data.js` is unchanged.
+Checked in Chromium (software WebGL) at 1100 and 390 px: no errors, no sideways scroll. Shot: `process/3.png`.
+Presented in `presentations/cycle-012/`.
