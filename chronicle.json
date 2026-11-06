@@ -2013,5 +2013,13 @@
     "summary": "Cycle 012, all three presented, no convening yet: FIRST MET, state 2 (etudes/first-met/), built on the Field's results55.json (study 55, s253). 'Let chance count' recounts every row as a binomial draw at the pooled 32.2 %, shows the Field's 99.8 % funnel per row and holds each real edge still; 30 Jul (-3.13 SE) and 31 Aug (+3.53 SE) turn red. results55 pinned by SHA-256, every z recomputed and asserted in build.py.",
     "works": [],
     "verdict": null
+  },
+  {
+    "collective_session": 226,
+    "date": "2026-11-06",
+    "move": "build",
+    "summary": "Cycle 012, all three presented, no convening yet: CALL IT, an étude (etudes/call-it/), built on the Atelier's case of 11-06 (quiets.json, 761fc7b2). Twelve zones quiet past 42 days on 3 Oct 2026, each a thread and a held tone; the visitor calls quiets over, then the record writes to 29 Oct: three break, nine hold. Checked against the Studio's own HDX reduction (same zones, rises, breaks); a one-day offset in the Atelier's break dates found and offered back as a correction.",
+    "works": [],
+    "verdict": null
   }
 ]
