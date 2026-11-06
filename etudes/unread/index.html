@@ -36,6 +36,11 @@
   #say { max-width:46em; margin:12px 0 0; min-height:5.5em; }
   #say .fr { display:block; font-style:italic; color:var(--dim); font-size:14px; margin-top:6px; }
   #say .h { color:var(--hole); }
+  #back { max-width:46em; margin:18px 0 0; opacity:0; transition:opacity .9s; }
+  #back.on { opacity:1; }
+  #back canvas { display:block; width:100%; height:40px; margin:0 0 6px; }
+  #back p { margin:0; font-size:15px; }
+  #back .fr { display:block; font:12px/1.5 ui-monospace, Menlo, monospace; color:var(--dim); margin-top:6px; }
   #strip { display:block; width:100%; height:190px; margin:28px 0 0; cursor:pointer; touch-action:manipulation; }
   .cap { font:12px/1.5 ui-monospace, Menlo, monospace; color:var(--dim); margin:4px 0 0; max-width:62em; }
   .key { display:inline-block; width:10px; height:10px; border-radius:50%; vertical-align:-1px; margin:0 4px 0 10px; }
@@ -48,13 +53,14 @@
 </head>
 <body>
 <main>
-<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu</p>
+<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu · state 3 (session 230): what the other table counts</p>
 <h1>UNREAD</h1>
 <p class="lede">When someone dies in Ituri or North Kivu during this outbreak, a team is called to the body. Its job is to take a swab, so the body can be tested, and to bury it safely.
 Every day the national report writes one line about this for each province: how many deaths the teams were called to, and how many bodies were swabbed.
 Each circle below is one of those deaths. <b>Draw across them</b> with a finger or the mouse to read them. A circle that fills was swabbed. A circle that turns into a red hole is one the report writes down as not swabbed.
 A dashed circle is one the report does not account for at all.
-The two provinces are read from the same reports, on the same days. Their lines do not speak the same way.</p>
+The two provinces are read from the same reports, on the same days. Their lines do not speak the same way.
+When a whole Ituri day is read, the report's other table appears beneath it: that day's new confirmed cases, and how many of them were already dead.</p>
 
 <div class="bar">
   <button id="p-it" aria-pressed="true">Ituri</button>
@@ -69,6 +75,7 @@ The two provinces are read from the same reports, on the same days. Their lines 
 <canvas id="field" tabindex="0" aria-label="The deaths of one report day. Draw across them to read them; the read all button does the same."></canvas>
 <p id="count" aria-live="polite"></p>
 <div id="say" aria-live="polite"></div>
+<div id="back" aria-live="polite"><canvas id="cases" aria-hidden="true"></canvas><p id="backsay"></p></div>
 
 <canvas id="strip" aria-label="Every report day from 30 August to 4 November 2026 for the open province. Tap a day to open it."></canvas>
 <p class="cap">Every report from 30 August to 4 November 2026, one column a day. Above the line, bodies swabbed.
@@ -94,6 +101,15 @@ On 30 August to 2 September and on 18 September the line writes bodies swabbed a
 </section>
 
 <section>
+<h2>The other table</h2>
+<p>The same report keeps a second count: the day's new confirmed cases, zone by zone, and among them the <i>décès communautaires</i>, people who died in the community, outside any treatment centre, and were confirmed as bodies.
+When you have read every circle of an Ituri day, that count appears beneath the field: one square for each new confirmed case, a filled square for each who was already dead.
+For Ituri, the two tables meet here. A body that was swabbed can come back as a confirmed case. A body that was not swabbed cannot.
+The report does not join the two tables, and neither does the page: a square is not one of that day's circles, and a swab taken today may be confirmed on a later day.</p>
+<p id="totcases"></p>
+</section>
+
+<section>
 <h2>Why this form</h2>
 <p>A daily count of the dead is read as if every body in it had been read. Here the reading is your gesture, and it fails where the record says it failed. Where the record says nothing, the gesture finds nothing either.
 The order of the circles is shuffled every day, so you cannot know a body before you touch it. Only the numbers come from the report.</p>
@@ -107,12 +123,14 @@ The order of the circles is shuffled every day, so you cannot know a body before
 <li><b>Counting.</b> A circle is a death alert: a call to a death. The reports sometimes count alerts “carried over from the day before”, so one death can be called on two days. Circles are calls, not people. When a report writes “swabbed of M”, the page shows M as written, but only an explicit count of failures turns a circle red.</li>
 <li><b>Not read.</b> Reports 158–163 and 172 are not in the archive. Reports 125, 126, 134, 135 and 164 were not found to carry an Ituri line on bodies (state 2 checked again: the swab lines in 125, 126, 134 and 135 are North Kivu's). Reports 128, 133, 136, 140, 142, 145, 146, 153 and 164 were not found to carry a North Kivu line on bodies. North Kivu often counts the bodies carried over to the next day; this reading takes them as burials still to be done (on 8 October 58 bodies are swabbed “sans échec” with 51 carried over), not bodies left unread, and the page does not draw them. Where a North Kivu line writes its calls as “N alerts and M carried over”, only N are drawn; where it writes “N alerts, of which M carried over”, all N are, as for Ituri. What a failure means (no swab taken, or a swab that could not be tested) is not written, and the page does not decide it.</li>
 <li><b>The case.</b> The Field offered the day this étude opens on: 1 September, when Ituri swabbed 65 bodies with 42 failures (<a href="https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md">study 57, READING57.md</a>).</li>
+<li><b>The other table (state 3).</b> New confirmed cases and community deaths per day come from the Field's study 59 (<a href="https://github.com/frankbueltge/field-research/blob/163fe066eaf2a747e2ea9a26412c1e1796b59314/artifacts/after-cycle-012/the-two-days/results59.json">results59.json</a>, session 257), which read the same reports with its own parser and joined them to this étude's reading of Ituri. <code>join59.py</code> checks that every joined day carries this page's date, calls, swabs and failures, and asserts the figures in this section. The squares are the sums over Ituri's health zones; on 6 and 30 October the report's own Ituri row writes other numbers (33 and 10; 34 and 12), and the page says so on those days. Reports 121, 127, 173 and 174 are not joined, and North Kivu's cases are not read here.</li>
 <li><b>Nearest works in the house's Atlas.</b> <i>Of All the People in All the World</i> (Stan's Cafe, since 2004): one grain of rice, one person. <i>The Library of Missing Datasets</i> (Mimi Ọnụọha, since 2016): an absence given a folder. Here one mark is one call to a death, but the mark has to be opened by hand, and opening it can fail. The absence is not a missing dataset. It is the part of a daily line that, on most days, says nothing.</li>
 </ul>
 </section>
 <p class="cap">Ensemble · The Studio · code Apache-2.0, text CC BY 4.0 · nothing you do here is sent anywhere</p>
 </main>
 <script src="data.js"></script>
+<script src="cases.js"></script>
 <script>
 (() => {
 const D = window.UNREAD; let DAYS = D.days, PROV = 'it';
@@ -127,6 +145,8 @@ const fmt = d => { const [y, m, dd] = d.split('-').map(Number);
   return dd + ' ' + ['January','February','March','April','May','June','July','August','September','October','November','December'][m - 1] + ' ' + y; };
 const nf = n => n.toLocaleString('en-GB');
 const T = D.totals;
+const C = window.UNREAD_CASES;
+$('totcases').innerHTML = `On the ${C.totals.days} Ituri days the Field joined, the report counts <b>${nf(C.totals.new)}</b> new confirmed cases. <b>${nf(C.totals.comm)}</b> of them were already dead when they were counted.`;
 $('tot').innerHTML = `Ituri, ${T.with_line} report days between 30 August and 4 November 2026: the teams were called to <b>${nf(T.alerts)}</b> deaths and swabbed <b>${nf(T.swabbed)}</b> bodies.
 Only ${T.written} of the ${T.with_line} days write how many were not swabbed. Together those days write <span style="color:var(--hole)">${nf(T.unread)}</span>.
 On the other ${T.with_line - T.written} days, ${nf(D.days.filter(d => d.alerts && d.unread == null).reduce((a, d) => a + d.alerts - d.swabbed, 0))} calls have no body swabbed and no failure written.
@@ -201,7 +221,7 @@ function counts() {
   const d = SLOTS[cur], t = marks.filter(m => m.t), rd = t.filter(m => m.k === 'read').length,
     hl = t.filter(m => m.k === 'hole').length, un = t.filter(m => m.k === 'unsaid').length;
   $('count').innerHTML = `read <b>${t.length}</b> of ${marks.length} · swabbed <b>${rd}</b> · <span class="h">not swabbed ${hl}</span> · unaccounted ${un}`;
-  if (t.length === marks.length) say(); else if (!t.length) $('say').innerHTML = '';
+  if (t.length === marks.length) { say(); if (!back.classList.contains('on')) showBack(); } else if (!t.length) { $('say').innerHTML = ''; hideBack(); }
 }
 function say() {
   const d = SLOTS[cur], S = d.swabbed || 0, rest = nOf(d) - S - (d.unread || 0);
@@ -211,8 +231,31 @@ function say() {
   if (d.alerts != null || d.of != null) en += rest > 0 ? `${rest} the line does not account for.` : rest < 0 ? `The numbers overrun the calls by ${-rest}.` : `Every call is accounted for.`;
   $('say').innerHTML = en + `<span class="fr">« ${d.q} »${d.uq ? ' … « ' + d.uq + ' »' : ''}${d.note ? ' … « ' + d.note + ' »' : ''} · SitRep ${d.report}</span>`;
 }
+// state 3: the other table, shown once a whole day is read
+const back = $('back'), cv = $('cases'), cx = cv.getContext('2d');
+function hideBack() { back.classList.remove('on'); $('backsay').innerHTML = ''; cx.clearRect(0, 0, cv.width, cv.height); }
+function showBack(quiet) {
+  const d = SLOTS[cur];
+  if (PROV !== 'it') { $('backsay').innerHTML = `<span class="fr">The other table, the day's confirmed cases, is drawn for Ituri only.</span>`; back.classList.add('on'); return; }
+  const c = C.days[d.report];
+  if (!c) { $('backsay').innerHTML = `<span class="fr">For this report the Field's reading of the other table is not joined.</span>`; back.classList.add('on'); return; }
+  const w = cv.clientWidth, s = w < 500 ? 7 : 9, g = 3, per = Math.max(1, Math.floor((w + g) / (s + g))), rows = Math.ceil(c.new / per), h = Math.max(12, rows * (s + g));
+  cv.style.height = h + 'px'; cv.width = w * dpr; cv.height = h * dpr; cx.setTransform(dpr, 0, 0, dpr, 0, 0); cx.clearRect(0, 0, w, h);
+  const ink = css('--read'), dim = css('--dim');
+  const r = rng(SEED ^ (d.report * 40503)), kinds = Array.from({ length: c.new }, (_, i) => i < c.comm);
+  for (let i = kinds.length - 1; i > 0; i--) { const j = (r() * (i + 1)) | 0; [kinds[i], kinds[j]] = [kinds[j], kinds[i]]; }
+  kinds.forEach((dead, i) => { const x = (i % per) * (s + g) + .5, y = ((i / per) | 0) * (s + g) + .5;
+    if (dead) { cx.fillStyle = ink; cx.fillRect(x, y, s, s); } else { cx.strokeStyle = dim; cx.lineWidth = 1; cx.strokeRect(x, y, s - 1, s - 1); } });
+  let t = `The same report, another table: <b>${c.new}</b> new confirmed cases in Ituri. <b>${c.comm}</b> of them were already dead when they were counted.`;
+  if (c.new !== c.provNew || c.comm !== c.provComm) t += ` <span class="fr">Summed over Ituri's zones. The report's own Ituri row writes ${c.provNew} and ${c.provComm}.</span>`;
+  $('backsay').innerHTML = t + `<span class="fr">not the bodies above: the report does not join its two tables · the Field, study 59</span>`;
+  back.classList.add('on');
+  if (!quiet && soundOn && ac) { const now = ac.currentTime + .3; for (let i = 0; i < c.comm; i++) { const o = ac.createOscillator(), gn = ac.createGain(), t0 = now + i * .11;
+    o.type = 'sine'; o.frequency.value = 130; gn.gain.setValueAtTime(0.0001, t0); gn.gain.exponentialRampToValueAtTime(0.08, t0 + .01); gn.gain.exponentialRampToValueAtTime(0.0001, t0 + .5);
+    o.connect(gn).connect(ac.destination); o.start(t0); o.stop(t0 + .55); } }
+}
 function open(i) {
-  cur = i; const d = SLOTS[cur];
+  cur = i; const d = SLOTS[cur]; hideBack();
   $('day').textContent = `${PNAME[PROV]} · ${fmt(d.date)} · report ${d.report}`;
   layout(); drawField(); counts(); drawStrip();
 }
@@ -266,9 +309,9 @@ function drawStrip() {
 }
 strip.addEventListener('click', e => { const b = strip.getBoundingClientRect(), i = Math.floor((e.clientX - b.left) / (b.width / SLOTS.length));
   if (has(SLOTS[i])) open(i); });
-let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { const keep = marks.map(m => m.t); size(); layout(); marks.forEach((m, i) => m.t = keep[i] || 0); drawField(); drawStrip(); }, 120); });
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { const keep = marks.map(m => m.t); size(); layout(); marks.forEach((m, i) => m.t = keep[i] || 0); drawField(); drawStrip(); if (back.classList.contains('on')) showBack(true); }, 120); });
 size(); open(cur);
-window.__unread = { SLOTS: () => SLOTS, marks: () => marks, open, OPEN: () => OPEN, prov, cur: () => cur };
+window.__unread = { SLOTS: () => SLOTS, marks: () => marks, open, OPEN: () => OPEN, prov, cur: () => cur, back: () => ({ on: back.classList.contains('on'), text: $('backsay').textContent }) };
 })();
 </script>
 </body>

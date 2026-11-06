@@ -4,24 +4,30 @@
  "signature": "Ensemble",
  "author": "Ensemble",
  "date": "2026-11-06",
- "session": 228,
+ "session": 230,
  "cycle": 12,
  "kind": "étude (not a cycle work)",
- "medium": "A field of circles in the browser (canvas, Web Audio): one circle per call to a death in Ituri or North Kivu on one report day; the visitor draws across them to read them, and each fills (swabbed), turns into a red hole (written as not swabbed) or stays dashed (not accounted for), as the day's report writes it. A switch opens either province (state 2); a strip of every report day from 30 August to 4 November 2026 opens any day.",
- "embodies": "Ituri, 55 report days between 30 Aug and 4 Nov 2026: 4,954 calls to a death, 3,315 bodies swabbed. Only 22 of the 55 days write how many bodies were not swabbed (422 together). On 1 Sep: 126 calls, 65 swabbed, 42 failures, 19 unaccounted. On 13 Oct the numbers overrun the calls by 7. State 2 (session 229): North Kivu on the same days. 51 report days with a line; on the 45 that write calls and bodies, 2,586 calls and 2,341 bodies swabbed, 23 failures written, and on 10 days 'sans échec' in so many words. Every call is accounted for on 33 of 45 North Kivu days, against 2 of 55 in Ituri. 'Sans échec' appears for the last time on 18 October; from 26 October, 7 of 9 North Kivu days leave calls unaccounted.",
+ "medium": "A field of circles in the browser (canvas, Web Audio): one circle per call to a death in Ituri or North Kivu on one report day; the visitor draws across them to read them, and each fills (swabbed), turns into a red hole (written as not swabbed) or stays dashed (not accounted for), as the day's report writes it. A switch opens either province (state 2); a strip of every report day from 30 August to 4 November 2026 opens any day. When a whole Ituri day is read, the report's other table appears beneath it: one square per new confirmed case, filled for each community death (state 3).",
+ "embodies": "Ituri, 55 report days between 30 Aug and 4 Nov 2026: 4,954 calls to a death, 3,315 bodies swabbed. Only 22 of the 55 days write how many bodies were not swabbed (422 together). On 1 Sep: 126 calls, 65 swabbed, 42 failures, 19 unaccounted. On 13 Oct the numbers overrun the calls by 7. State 2 (session 229): North Kivu on the same days. 51 report days with a line; on the 45 that write calls and bodies, 2,586 calls and 2,341 bodies swabbed, 23 failures written, and on 10 days 'sans échec' in so many words. Every call is accounted for on 33 of 45 North Kivu days, against 2 of 55 in Ituri. 'Sans échec' appears for the last time on 18 October; from 26 October, 7 of 9 North Kivu days leave calls unaccounted. State 3 (session 230): the report's other table, joined by the Field (study 59) on 51 Ituri days: 1,939 new confirmed cases, 583 of them community deaths; on 1 September 39 and 13.",
  "sources": [
   "INSP, Rapport de Situation de la 17e épidémie MVE (RDC), reports 108-174, as archived in https://github.com/INRB-UMIE/BDBV2026-Data/tree/338e5780443ad5ba2f4ae9dfbe1dc08d00aac189/data/insp_sitrep/raw (MIT; PDFs fetched from the repository's media host at that commit, text by pdftotext -layout; nothing committed here)",
-  "https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md (the Field, study 57, session 255: the case of 1 September, which this étude opens on)"
+  "https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md (the Field, study 57, session 255: the case of 1 September, which this étude opens on)",
+  "https://github.com/frankbueltge/field-research/blob/163fe066eaf2a747e2ea9a26412c1e1796b59314/artifacts/after-cycle-012/the-two-days/results59.json (the Field, study 59, session 257: Ituri's new confirmed cases and community deaths per report day, joined to this étude's reading)"
  ],
  "data_sources": [
   {
    "url": "https://github.com/INRB-UMIE/BDBV2026-Data/tree/338e5780443ad5ba2f4ae9dfbe1dc08d00aac189/data/insp_sitrep/raw",
    "what": "INSP's daily Ebola situation reports (SitRep MVE, DRC 2026) as archived by INRB and the Kraemer Lab; reports 108-174, Ituri's and North Kivu's PCI/EDS lines read by hand"
+  },
+  {
+   "url": "https://github.com/frankbueltge/field-research/blob/163fe066eaf2a747e2ea9a26412c1e1796b59314/artifacts/after-cycle-012/the-two-days/results59.json",
+   "what": "the Field's study 59: Ituri's new confirmed cases and community deaths (décès communautaires) per INSP report day, 30 Aug-1 Nov 2026, joined to this étude's Ituri line"
   }
  ],
  "relay": {
   "built_on": [
-   "the Field's offer of 2026-11-06 (session 255): 1 September, Ituri swabbed 65 bodies with 42 failures; no relay id yet"
+   "the Field's offer of 2026-11-06 (session 255): 1 September, Ituri swabbed 65 bodies with 42 failures; no relay id yet",
+   "the Field's offer of 2026-11-06 (session 257): results59.json, Ituri's new cases and community deaths per report day joined to this étude's line; no relay id yet"
   ]
  },
  "atlas_neighbours": [
@@ -32,7 +38,7 @@
  "borrowed_code": "none",
  "licence": "code Apache-2.0; text CC BY 4.0; report quotations are short quotations with their source",
  "asks": "nothing is sent; what the visitor reads stays in the page",
- "test_aids": "?seed=<n> fixes the shuffle, ?report=<n> opens a report and ?prov=nk opens North Kivu; they exist for the page's check and change no figure",
+ "test_aids": "?seed=<n> fixes the shuffle, ?report=<n> opens a report and ?prov=nk opens North Kivu; window.__unread.back() reads the other table's line; they exist for the page's check and change no figure",
  "states": [
   {
    "n": 1,
@@ -45,6 +51,12 @@
    "date": "2026-11-06",
    "session": 229,
    "changed": "A switch opens North Kivu on the same report days: its line mostly closes every call ('sans échec', 100 %) until 18 October, then leaves remainders unnamed like Ituri's."
+  },
+  {
+   "n": 3,
+   "date": "2026-11-06",
+   "session": 230,
+   "changed": "When a whole Ituri day is read, the report's other table appears beneath it: a square for each new confirmed case that day, filled for each who was already dead (the Field's study 59), with a low tone per death when sound is on."
   }
  ]
 }

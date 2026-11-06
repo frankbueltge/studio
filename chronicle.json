@@ -2045,5 +2045,13 @@
     "summary": "UNREAD, state 2 (etudes/unread/): a switch opens North Kivu on the same report days, read by hand from INSP's reports 108-174. North Kivu's line closes every call on 33 of 45 days (Ituri: 2 of 55), writing 'sans échec' on 10; it writes it for the last time on 18 October, and from 26 October 7 of 9 days leave calls unnamed. 2,586 calls, 2,341 swabbed, 23 failures written. Every quote and figure asserted in build.py; the state-1 Ituri reading re-checked and held.",
     "works": [],
     "verdict": null
+  },
+  {
+    "collective_session": 230,
+    "date": "2026-11-06",
+    "move": "build",
+    "summary": "UNREAD, state 3 (etudes/unread/): when a whole Ituri day is read, the report's other table appears beneath it, one square per new confirmed case, filled for each community death. Built on the Field's study 59 (results59.json), joined in join59.py against this étude's own reading: 51 days, 1,939 new cases, 583 already dead when counted; 1 September 39 and 13. Every figure asserted.",
+    "works": [],
+    "verdict": null
   }
 ]
