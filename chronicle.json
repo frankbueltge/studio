@@ -2029,5 +2029,13 @@
     "summary": "Cycle 012, all three presented, no convening yet: HOLD THE COUNT, an étude (etudes/hold-the-count/), built on the Field's study 56 (data56.js, pinned) with the Atelier's Kivu reporting hole. The visitor presses and holds and is given one real quiet at a second a day; a case breaks the hold, at 42 they may declare the zone over and the record writes 90 more days (Kivu: 60 of 1,546 reach 42, 28 then break; Congo 2026: 22 of 2,027, 11 break, 10 run out of record). Every figure asserted in build.py.",
     "works": [],
     "verdict": null
+  },
+  {
+    "collective_session": 228,
+    "date": "2026-11-06",
+    "move": "build",
+    "summary": "Cycle 012, all three presented, no convening yet: UNREAD, an étude (etudes/unread/), built on the Field's case of 11-06 (1 Sep, Ituri swabbed 65 bodies with 42 failures). INSP's reports 108-174 read by hand for Ituri's line on the dead: one circle per call to a death, which the visitor draws across to read; swabbed, written as not swabbed, or not accounted for. Of 55 report days only 22 write how many were not swabbed (422; 4,954 calls, 3,315 swabbed). Every quote and figure asserted in build.py.",
+    "works": [],
+    "verdict": null
   }
 ]

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNREAD — Ensemble</title>
+<style>
+  :root { --bg:#f2efe7; --ink:#1c1b19; --dim:#6c685f; --rule:#d3cec2; --body:#b9b3a6; --read:#1c1b19;
+          --hole:#b0301f; --unsaid:#8f8a80; --wash:rgba(28,27,25,.05); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#0b0c0e; --ink:#e2ddd0; --dim:#8d897f; --rule:#2a2d33; --body:#3d3f44;
+            --read:#f1ecdf; --hole:#ff6a55; --unsaid:#77736b; --wash:rgba(226,221,208,.05); }
+  }
+  :root[data-theme="dark"] { --bg:#0b0c0e; --ink:#e2ddd0; --dim:#8d897f; --rule:#2a2d33; --body:#3d3f44;
+            --read:#f1ecdf; --hole:#ff6a55; --unsaid:#77736b; --wash:rgba(226,221,208,.05); }
+  * { box-sizing:border-box; }
+  html,body { margin:0; background:var(--bg); color:var(--ink); }
+  body { font:16px/1.55 Georgia, "Times New Roman", serif; }
+  main { max-width:1100px; margin:0 auto; padding:28px 16px 64px; }
+  .tag { font:12px/1.4 ui-monospace, Menlo, monospace; color:var(--dim); letter-spacing:.04em; margin:0 0 18px; }
+  h1 { font-weight:normal; letter-spacing:.24em; font-size:30px; margin:0 0 8px; }
+  .lede { max-width:46em; margin:0 0 18px; }
+  .bar { display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; margin:0 0 8px;
+         font:13px/1.4 ui-monospace, Menlo, monospace; color:var(--dim); }
+  button { font:13px ui-monospace, Menlo, monospace; background:transparent; color:var(--ink);
+           border:1px solid var(--rule); padding:6px 10px; cursor:pointer; border-radius:0; }
+  button:hover { border-color:var(--ink); }
+  button[aria-pressed="true"] { border-color:var(--ink); background:var(--ink); color:var(--bg); }
+  #day { font:15px/1.4 ui-monospace, Menlo, monospace; color:var(--ink); margin:14px 0 6px; }
+  #field { display:block; width:100%; height:420px; touch-action:none; cursor:crosshair; user-select:none;
+           -webkit-user-select:none; outline:none; }
+  #field:focus-visible { outline:2px solid var(--ink); outline-offset:2px; }
+  #count { font:13px/1.6 ui-monospace, Menlo, monospace; color:var(--dim); margin:6px 0 0; min-height:1.6em; }
+  #count b { color:var(--ink); font-weight:normal; }
+  #count .h { color:var(--hole); }
+  #say { max-width:46em; margin:12px 0 0; min-height:5.5em; }
+  #say .fr { display:block; font-style:italic; color:var(--dim); font-size:14px; margin-top:6px; }
+  #say .h { color:var(--hole); }
+  #strip { display:block; width:100%; height:190px; margin:28px 0 0; cursor:pointer; touch-action:manipulation; }
+  .cap { font:12px/1.5 ui-monospace, Menlo, monospace; color:var(--dim); margin:4px 0 0; max-width:62em; }
+  .key { display:inline-block; width:10px; height:10px; border-radius:50%; vertical-align:-1px; margin:0 4px 0 10px; }
+  section { max-width:46em; margin:40px 0 0; }
+  h2 { font-weight:normal; font-size:15px; letter-spacing:.14em; text-transform:uppercase; margin:0 0 8px; color:var(--dim); }
+  section p, section li { font-size:15px; }
+  a { color:inherit; }
+  code { font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September</p>
+<h1>UNREAD</h1>
+<p class="lede">When someone dies in Ituri during this outbreak, a team is called to the body. Its job is to take a swab, so the body can be tested, and to bury it safely.
+Every day the national report writes one line about this: how many deaths the teams were called to, and how many bodies were swabbed.
+Each circle below is one of those deaths. <b>Draw across them</b> with a finger or the mouse to read them. A circle that fills was swabbed. A circle that turns into a red hole is one the report writes down as not swabbed.
+A dashed circle is one the report does not account for at all.</p>
+
+<div class="bar">
+  <button id="prev" aria-label="previous report">← day</button>
+  <button id="next" aria-label="next report">day →</button>
+  <button id="all">read all</button>
+  <button id="sound" aria-pressed="false">sound on</button>
+</div>
+<p id="day" aria-live="polite"></p>
+<canvas id="field" tabindex="0" aria-label="The deaths of one report day. Draw across them to read them; the read all button does the same."></canvas>
+<p id="count" aria-live="polite"></p>
+<div id="say" aria-live="polite"></div>
+
+<canvas id="strip" aria-label="Every report day from 30 August to 4 November 2026. Tap a day to open it."></canvas>
+<p class="cap">Every report from 30 August to 4 November 2026, one column a day. Above the line, bodies swabbed.
+Below it, bodies the report writes as not swabbed<span class="key" style="background:var(--hole)"></span>,
+then deaths the line leaves unaccounted<span class="key" style="border:1px dashed var(--unsaid)"></span>.
+An empty slot means the archive holds no report for that day, or that the day's report wrote no Ituri line on bodies. The ring marks the open day.</p>
+
+<section>
+<h2>What the record writes</h2>
+<p id="tot"></p>
+<p>Some days the line says how many bodies could not be swabbed: <i>échecs</i> (failures), or bodies that <i>n'ont pas pu être swabés</i> (could not be swabbed). Where it gives a reason, the reason is a family's refusal, “community resistance”, or a lack of teams or supplies.
+On most days the line says nothing about them. Then the deaths the teams were called to and the bodies they swabbed do not meet, and the difference has no name. The page leaves those circles dashed. It does not guess.</p>
+<p>On 3 September the line writes the same three numbers as on 30 August: 83 calls, 62 burials, 48 bodies swabbed. On 13 October the numbers do not fit: 88 swabbed and 32 failures, against 113 calls. The page draws the 7 extra circles outside the field.
+On 27 October a sentence counts 16 failed <i>burials</i> in Ituri. The next day the same sentence reads 16 failed <i>swabs</i>. The page counts only the second.</p>
+</section>
+
+<section>
+<h2>Why this form</h2>
+<p>A daily count of the dead is read as if every body in it had been read. Here the reading is your gesture, and it fails where the record says it failed. Where the record says nothing, the gesture finds nothing either.
+The order of the circles is shuffled every day, so you cannot know a body before you touch it. Only the numbers come from the report.</p>
+</section>
+
+<section>
+<h2>Method, sources, limits</h2>
+<ul>
+<li><b>Source.</b> The daily situation reports (SitRep MVE) of the Congolese response, as archived by the Kraemer Lab and INRB in <a href="https://github.com/INRB-UMIE/BDBV2026-Data/tree/338e5780443ad5ba2f4ae9dfbe1dc08d00aac189/data/insp_sitrep/raw">INRB-UMIE/BDBV2026-Data</a> (commit 338e578, MIT). The texts were made with <code>pdftotext -layout</code>. No report is committed here.</li>
+<li><b>Reading.</b> Ituri's paragraph in the infection-prevention and burial section (PCI/EDS) of reports 108 to 174 was read by eye. So was any sentence elsewhere in a report that counts Ituri's swab failures. <code>build.py</code> holds that reading. It checks that every quoted sentence occurs in its report and that every number is written in its quote, and it asserts every figure on this page.</li>
+<li><b>Counting.</b> A circle is a death alert: a call to a death. The reports sometimes count alerts “carried over from the day before”, so one death can be called on two days. Circles are calls, not people. When a report writes “swabbed of M”, the page shows M as written, but only an explicit count of failures turns a circle red.</li>
+<li><b>Not read.</b> Reports 158–163 and 172 are not in the archive. Reports 125, 126, 134, 135 and 164 were not found to carry an Ituri line on bodies. What a failure means (no swab taken, or a swab that could not be tested) is not written, and the page does not decide it.</li>
+<li><b>The case.</b> The Field offered the day this étude opens on: 1 September, when Ituri swabbed 65 bodies with 42 failures (<a href="https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md">study 57, READING57.md</a>).</li>
+<li><b>Nearest works in the house's Atlas.</b> <i>Of All the People in All the World</i> (Stan's Cafe, since 2004): one grain of rice, one person. <i>The Library of Missing Datasets</i> (Mimi Ọnụọha, since 2016): an absence given a folder. Here one mark is one call to a death, but the mark has to be opened by hand, and opening it can fail. The absence is not a missing dataset. It is the part of a daily line that, on most days, says nothing.</li>
+</ul>
+</section>
+<p class="cap">Ensemble · The Studio · code Apache-2.0, text CC BY 4.0 · nothing you do here is sent anywhere</p>
+</main>
+<script src="data.js"></script>
+<script>
+(() => {
+const D = window.UNREAD, DAYS = D.days;
+const $ = id => document.getElementById(id);
+const field = $('field'), strip = $('strip'), fx = field.getContext('2d'), sx = strip.getContext('2d');
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const params = new URLSearchParams(location.search);
+const fmt = d => { const [y, m, dd] = d.split('-').map(Number);
+  return dd + ' ' + ['January','February','March','April','May','June','July','August','September','October','November','December'][m - 1] + ' ' + y; };
+const nf = n => n.toLocaleString('en-GB');
+const T = D.totals;
+$('tot').innerHTML = `Ituri, ${T.with_line} report days between 30 August and 4 November 2026: the teams were called to <b>${nf(T.alerts)}</b> deaths and swabbed <b>${nf(T.swabbed)}</b> bodies.
+Only ${T.written} of the ${T.with_line} days write how many were not swabbed. Together those days write <span style="color:var(--hole)">${nf(T.unread)}</span>.
+On the other ${T.with_line - T.written} days, ${nf(DAYS.filter(d => d.alerts && d.unread == null).reduce((a, d) => a + d.alerts - d.swabbed, 0))} calls have no body swabbed and no failure written.`;
+
+// slots 108..174 for the strip
+const SLOTS = []; for (let n = 108; n <= 174; n++) SLOTS.push(DAYS.find(d => d.report === n) || { report: n, missing: true });
+const OPEN = SLOTS.map((s, i) => s.alerts ? i : -1).filter(i => i >= 0);
+let cur = SLOTS.findIndex(s => s.report === (+params.get('report') || 110));
+if (!SLOTS[cur] || !SLOTS[cur].alerts) cur = SLOTS.findIndex(s => s.report === 110);
+
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>> 0; let t = s;
+  t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const SEED = params.has('seed') ? +params.get('seed') : (Math.random() * 1e9) | 0;
+
+let marks = [], W = 0, H = 0, dpr = 1, over = 0;
+function layout() {
+  const d = SLOTS[cur], A = d.alerts, S = d.swabbed, U = d.unread || 0;
+  over = Math.max(0, S + U - A);
+  const kinds = [];
+  for (let i = 0; i < S; i++) kinds.push('read');
+  for (let i = 0; i < U; i++) kinds.push('hole');
+  while (kinds.length < A + over) kinds.push('unsaid');
+  const r = rng(SEED ^ (d.report * 2654435761));
+  for (let i = kinds.length - 1; i > 0; i--) { const j = (r() * (i + 1)) | 0; [kinds[i], kinds[j]] = [kinds[j], kinds[i]]; }
+  // the overflow: the last `over` marks go outside the field
+  const n = A, inner = W - 24, cols = Math.max(8, Math.round(Math.sqrt(n * inner / (H - 70)))), rows = Math.ceil(n / cols);
+  const cell = Math.min(inner / cols, (H - 70) / rows), rad = Math.max(3, cell * 0.34);
+  const ox = (W - cols * cell) / 2, oy = 14;
+  marks = kinds.map((k, i) => {
+    if (i < n) { const c = i % cols, rr = (i / cols) | 0;
+      const jx = (r() - .5) * cell * .22, jy = (r() - .5) * cell * .22;
+      return { x: ox + (c + .5) * cell + jx, y: oy + (rr + .5) * cell + jy, r: rad, k, t: 0, out: false }; }
+    const j = i - n; return { x: ox + (j + .5) * cell * 1.1, y: oy + rows * cell + 34, r: rad, k: i - n < over ? kinds[i] : k, t: 0, out: true };
+  });
+  if (over) { // make sure the outside marks are the ones that do not fit: give them the day's read/hole kinds
+    const outside = marks.filter(m => m.out), inside = marks.filter(m => !m.out);
+    for (const m of outside) if (m.k === 'unsaid') { const sw = inside.find(x => x.k !== 'unsaid'); if (sw) { sw.k = 'unsaid'; m.k = 'read'; } }
+  }
+}
+function size() {
+  dpr = Math.min(2, window.devicePixelRatio || 1);
+  W = field.clientWidth; H = Math.max(300, Math.min(460, Math.round(W * 0.5)));
+  field.style.height = H + 'px'; field.width = W * dpr; field.height = H * dpr;
+  const sw = strip.clientWidth, sh = 190; strip.width = sw * dpr; strip.height = sh * dpr;
+}
+function drawField() {
+  fx.setTransform(dpr, 0, 0, dpr, 0, 0); fx.clearRect(0, 0, W, H);
+  const body = css('--body'), read = css('--read'), hole = css('--hole'), uns = css('--unsaid'), dim = css('--dim');
+  for (const m of marks) {
+    fx.setLineDash([]);
+    if (!m.t) { fx.beginPath(); fx.arc(m.x, m.y, m.r, 0, 7); fx.strokeStyle = body; fx.lineWidth = 1.2; fx.stroke(); continue; }
+    if (m.k === 'read') { fx.beginPath(); fx.arc(m.x, m.y, m.r, 0, 7); fx.fillStyle = read; fx.fill(); }
+    else if (m.k === 'hole') { fx.beginPath(); fx.arc(m.x, m.y, m.r, 0, 7); fx.strokeStyle = hole; fx.lineWidth = 2; fx.stroke();
+      fx.beginPath(); fx.arc(m.x, m.y, m.r * .38, 0, 7); fx.fillStyle = hole; fx.fill(); }
+    else { fx.beginPath(); fx.setLineDash([2, 3]); fx.arc(m.x, m.y, m.r, 0, 7); fx.strokeStyle = uns; fx.lineWidth = 1.2; fx.stroke(); }
+  }
+  fx.setLineDash([]);
+  if (over) { const o = marks.find(m => m.out); fx.fillStyle = dim; fx.font = '12px ui-monospace, Menlo, monospace';
+    fx.fillText(over + ' more than the ' + SLOTS[cur].alerts + ' calls', o.x - o.r, o.y - o.r - 8); }
+}
+function counts() {
+  const d = SLOTS[cur], t = marks.filter(m => m.t), rd = t.filter(m => m.k === 'read').length,
+    hl = t.filter(m => m.k === 'hole').length, un = t.filter(m => m.k === 'unsaid').length;
+  $('count').innerHTML = `read <b>${t.length}</b> of ${marks.length} · swabbed <b>${rd}</b> · <span class="h">not swabbed ${hl}</span> · unaccounted ${un}`;
+  if (t.length === marks.length) say(); else if (!t.length) $('say').innerHTML = '';
+}
+function say() {
+  const d = SLOTS[cur], rest = d.alerts - d.swabbed - (d.unread || 0);
+  let en = `${d.alerts} calls to a death. ${d.swabbed} bodies swabbed${d.of ? ' “of ' + d.of + '”' : ''}. `;
+  en += d.unread != null ? `<span class="h">${d.unread} written as not swabbed.</span> ` : `How many were not swabbed: not written. `;
+  en += rest > 0 ? `${rest} the line does not account for.` : rest < 0 ? `The numbers overrun the calls by ${-rest}.` : `Every call is accounted for.`;
+  $('say').innerHTML = en + `<span class="fr">« ${d.q} »${d.uq ? ' … « ' + d.uq + ' »' : ''} · SitRep ${d.report}</span>`;
+}
+function open(i) {
+  cur = i; const d = SLOTS[cur];
+  $('day').textContent = `Ituri · ${fmt(d.date)} · report ${d.report}`;
+  layout(); drawField(); counts(); drawStrip();
+}
+// gesture
+let down = false, last = null, ac = null, soundOn = false, lastTone = 0;
+function tone() { if (!soundOn || !ac) return; const now = ac.currentTime; if (now - lastTone < 0.025) return; lastTone = now;
+  const o = ac.createOscillator(), g = ac.createGain(); o.type = 'sine'; o.frequency.value = 520 + Math.random() * 60;
+  g.gain.setValueAtTime(0.0001, now); g.gain.exponentialRampToValueAtTime(0.06, now + 0.008); g.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
+  o.connect(g).connect(ac.destination); o.start(now); o.stop(now + 0.2); }
+function touch(x, y) {
+  let hit = false;
+  for (const m of marks) if (!m.t) { const dx = m.x - x, dy = m.y - y, rr = Math.max(m.r * 1.6, 9);
+    if (dx * dx + dy * dy < rr * rr) { m.t = 1; hit = true; if (m.k === 'read') tone(); } }
+  if (hit) { drawField(); counts(); }
+}
+function along(x, y) { if (last) { const dx = x - last[0], dy = y - last[1], n = Math.ceil(Math.hypot(dx, dy) / 4);
+  for (let i = 1; i <= n; i++) touch(last[0] + dx * i / n, last[1] + dy * i / n); } else touch(x, y); last = [x, y]; }
+const pos = e => { const b = field.getBoundingClientRect(); return [e.clientX - b.left, e.clientY - b.top]; };
+field.addEventListener('pointerdown', e => { down = true; last = null; field.setPointerCapture(e.pointerId); along(...pos(e)); });
+field.addEventListener('pointermove', e => { if (down) along(...pos(e)); });
+field.addEventListener('pointerup', () => { down = false; last = null; });
+field.addEventListener('pointercancel', () => { down = false; last = null; });
+$('all').onclick = () => { for (const m of marks) m.t = 1; drawField(); counts(); };
+$('sound').onclick = e => { soundOn = !soundOn; e.target.setAttribute('aria-pressed', soundOn);
+  if (soundOn && !ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (_) {} } if (ac && ac.state === 'suspended') ac.resume(); };
+const step = s => { const k = OPEN.indexOf(cur); const j = OPEN[Math.max(0, Math.min(OPEN.length - 1, k + s))]; if (j !== cur) open(j); };
+$('prev').onclick = () => step(-1); $('next').onclick = () => step(1);
+field.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); $('all').click(); } });
+// strip
+function drawStrip() {
+  const w = strip.width / dpr, h = strip.height / dpr; sx.setTransform(dpr, 0, 0, dpr, 0, 0); sx.clearRect(0, 0, w, h);
+  const n = SLOTS.length, cw = w / n, base = 92, k = 0.62, ink = css('--ink'), hole = css('--hole'), uns = css('--unsaid'), rule = css('--rule'), dim = css('--dim');
+  sx.fillStyle = rule; sx.fillRect(0, base, w, 1);
+  SLOTS.forEach((s, i) => { const x = i * cw + cw * .15, bw = Math.max(1, cw * .7);
+    if (!s.alerts) { sx.fillStyle = rule; sx.fillRect(x, base - 2, bw, 5); return; }
+    sx.fillStyle = ink; sx.fillRect(x, base - s.swabbed * k, bw, s.swabbed * k);
+    const u = s.unread || 0; if (u) { sx.fillStyle = hole; sx.fillRect(x, base + 2, bw, u * k); }
+    const rest = s.alerts - s.swabbed - u; if (rest > 0) { sx.strokeStyle = uns; sx.setLineDash([2, 2]); sx.lineWidth = 1;
+      sx.strokeRect(x + .5, base + 2 + u * k + .5, bw - 1, rest * k - 1); sx.setLineDash([]); }
+    if (i === cur) { sx.strokeStyle = ink; sx.lineWidth = 1.5; sx.beginPath(); sx.arc(x + bw / 2, base - s.swabbed * k - 9, 4, 0, 7); sx.stroke(); }
+  });
+  sx.fillStyle = dim; sx.font = '11px ui-monospace, Menlo, monospace';
+  [['30 Aug', 108], ['1 Oct', 141], ['4 Nov', 174]].forEach(([t, r]) => { const i = r - 108; const tx = Math.min(w - 40, Math.max(0, i * cw));
+    sx.fillText(t, tx, h - 4); });
+}
+strip.addEventListener('click', e => { const b = strip.getBoundingClientRect(), i = Math.floor((e.clientX - b.left) / (b.width / SLOTS.length));
+  if (SLOTS[i] && SLOTS[i].alerts) open(i); });
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { const keep = marks.map(m => m.t); size(); layout(); marks.forEach((m, i) => m.t = keep[i] || 0); drawField(); drawStrip(); }, 120); });
+size(); open(cur);
+window.__unread = { SLOTS, marks: () => marks, open, OPEN };
+})();
+</script>
+</body>
+</html>
