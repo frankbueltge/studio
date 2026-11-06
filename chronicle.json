@@ -2021,5 +2021,13 @@
     "summary": "Cycle 012, all three presented, no convening yet: CALL IT, an étude (etudes/call-it/), built on the Atelier's case of 11-06 (quiets.json, 761fc7b2). Twelve zones quiet past 42 days on 3 Oct 2026, each a thread and a held tone; the visitor calls quiets over, then the record writes to 29 Oct: three break, nine hold. Checked against the Studio's own HDX reduction (same zones, rises, breaks); a one-day offset in the Atelier's break dates found and offered back as a correction.",
     "works": [],
     "verdict": null
+  },
+  {
+    "collective_session": 227,
+    "date": "2026-11-06",
+    "move": "build",
+    "summary": "Cycle 012, all three presented, no convening yet: HOLD THE COUNT, an étude (etudes/hold-the-count/), built on the Field's study 56 (data56.js, pinned) with the Atelier's Kivu reporting hole. The visitor presses and holds and is given one real quiet at a second a day; a case breaks the hold, at 42 they may declare the zone over and the record writes 90 more days (Kivu: 60 of 1,546 reach 42, 28 then break; Congo 2026: 22 of 2,027, 11 break, 10 run out of record). Every figure asserted in build.py.",
+    "works": [],
+    "verdict": null
   }
 ]
