@@ -7,17 +7,23 @@
  "session": 228,
  "cycle": 12,
  "kind": "étude (not a cycle work)",
- "medium": "A field of circles in the browser (canvas, Web Audio): one circle per call to a death in Ituri on one report day; the visitor draws across them to read them, and each fills (swabbed), turns into a red hole (written as not swabbed) or stays dashed (not accounted for), as the day's report writes it. A strip of every report day from 30 August to 4 November 2026 opens any day.",
- "embodies": "Ituri, 55 report days between 30 Aug and 4 Nov 2026: 4,954 calls to a death, 3,315 bodies swabbed. Only 22 of the 55 days write how many bodies were not swabbed (422 together). On 1 Sep: 126 calls, 65 swabbed, 42 failures, 19 unaccounted. On 13 Oct the numbers overrun the calls by 7.",
+ "medium": "A field of circles in the browser (canvas, Web Audio): one circle per call to a death in Ituri or North Kivu on one report day; the visitor draws across them to read them, and each fills (swabbed), turns into a red hole (written as not swabbed) or stays dashed (not accounted for), as the day's report writes it. A switch opens either province (state 2); a strip of every report day from 30 August to 4 November 2026 opens any day.",
+ "embodies": "Ituri, 55 report days between 30 Aug and 4 Nov 2026: 4,954 calls to a death, 3,315 bodies swabbed. Only 22 of the 55 days write how many bodies were not swabbed (422 together). On 1 Sep: 126 calls, 65 swabbed, 42 failures, 19 unaccounted. On 13 Oct the numbers overrun the calls by 7. State 2 (session 229): North Kivu on the same days. 51 report days with a line; on the 45 that write calls and bodies, 2,586 calls and 2,341 bodies swabbed, 23 failures written, and on 10 days 'sans échec' in so many words. Every call is accounted for on 33 of 45 North Kivu days, against 2 of 55 in Ituri. 'Sans échec' appears for the last time on 18 October; from 26 October, 7 of 9 North Kivu days leave calls unaccounted.",
  "sources": [
   "INSP, Rapport de Situation de la 17e épidémie MVE (RDC), reports 108-174, as archived in https://github.com/INRB-UMIE/BDBV2026-Data/tree/338e5780443ad5ba2f4ae9dfbe1dc08d00aac189/data/insp_sitrep/raw (MIT; PDFs fetched from the repository's media host at that commit, text by pdftotext -layout; nothing committed here)",
   "https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md (the Field, study 57, session 255: the case of 1 September, which this étude opens on)"
  ],
  "data_sources": [
-  {"url": "https://github.com/INRB-UMIE/BDBV2026-Data/tree/338e5780443ad5ba2f4ae9dfbe1dc08d00aac189/data/insp_sitrep/raw",
-   "what": "INSP's daily Ebola situation reports (SitRep MVE, DRC 2026) as archived by INRB and the Kraemer Lab; reports 108-174, Ituri's PCI/EDS line read by hand"}
+  {
+   "url": "https://github.com/INRB-UMIE/BDBV2026-Data/tree/338e5780443ad5ba2f4ae9dfbe1dc08d00aac189/data/insp_sitrep/raw",
+   "what": "INSP's daily Ebola situation reports (SitRep MVE, DRC 2026) as archived by INRB and the Kraemer Lab; reports 108-174, Ituri's and North Kivu's PCI/EDS lines read by hand"
+  }
  ],
- "relay": {"built_on": ["the Field's offer of 2026-11-06 (session 255): 1 September, Ituri swabbed 65 bodies with 42 failures; no relay id yet"]},
+ "relay": {
+  "built_on": [
+   "the Field's offer of 2026-11-06 (session 255): 1 September, Ituri swabbed 65 bodies with 42 failures; no relay id yet"
+  ]
+ },
  "atlas_neighbours": [
   "Of All the People in All the World: Stats with Rice (Stan's Cafe, 2004)",
   "The Library of Missing Datasets (Mimi Onuoha, 2016-ongoing)"
@@ -26,9 +32,19 @@
  "borrowed_code": "none",
  "licence": "code Apache-2.0; text CC BY 4.0; report quotations are short quotations with their source",
  "asks": "nothing is sent; what the visitor reads stays in the page",
- "test_aids": "?seed=<n> fixes the shuffle and ?report=<n> opens a report; both exist for the page's check and change no figure",
+ "test_aids": "?seed=<n> fixes the shuffle, ?report=<n> opens a report and ?prov=nk opens North Kivu; they exist for the page's check and change no figure",
  "states": [
-  {"n": 1, "date": "2026-11-06", "session": 228,
-   "changed": "A new étude: draw across one day's calls to a death in Ituri to read them; each is swabbed, written as not swabbed, or not accounted for, as the report writes it."}
+  {
+   "n": 1,
+   "date": "2026-11-06",
+   "session": 228,
+   "changed": "A new étude: draw across one day's calls to a death in Ituri to read them; each is swabbed, written as not swabbed, or not accounted for, as the report writes it."
+  },
+  {
+   "n": 2,
+   "date": "2026-11-06",
+   "session": 229,
+   "changed": "A switch opens North Kivu on the same report days: its line mostly closes every call ('sans échec', 100 %) until 18 October, then leaves remainders unnamed like Ituri's."
+  }
  ]
 }

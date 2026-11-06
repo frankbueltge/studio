@@ -653,5 +653,645 @@ window.UNREAD = {
   "alerts": 4954,
   "swabbed": 3315,
   "unread": 422
+ },
+ "nk": {
+  "days": [
+   {
+    "report": 108,
+    "date": "2026-08-30",
+    "alerts": null,
+    "swabbed": 56,
+    "of": null,
+    "unread": null,
+    "q": "56 corps swabés et 53 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 109,
+    "date": "2026-08-31",
+    "alerts": null,
+    "swabbed": 46,
+    "of": null,
+    "unread": null,
+    "q": "46 corps swabés et 48 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 110,
+    "date": "2026-09-01",
+    "alerts": null,
+    "swabbed": 51,
+    "of": null,
+    "unread": null,
+    "q": "51 corps swabés et 59 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 111,
+    "date": "2026-09-02",
+    "alerts": null,
+    "swabbed": 64,
+    "of": null,
+    "unread": null,
+    "q": "64 corps swabés et 59 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 112,
+    "date": "2026-09-03",
+    "alerts": 46,
+    "swabbed": 45,
+    "of": 46,
+    "unread": 1,
+    "q": "reçu 46 alertes, réalisé 41 EDS et swabé 45 corps sur 46 (97,8 %)",
+    "uq": "unique échec étant lié à une résistance communautaire dans l’AS de Mataba",
+    "note": null
+   },
+   {
+    "report": 113,
+    "date": "2026-09-04",
+    "alerts": 44,
+    "swabbed": 44,
+    "of": null,
+    "unread": 0,
+    "q": "reçu 44 alertes en plus de 21 reports de la veille, réalisé 46 EDS et swabé les 44 corps (100 %), sans aucun échec",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 114,
+    "date": "2026-09-05",
+    "alerts": 43,
+    "swabbed": 43,
+    "of": null,
+    "unread": 0,
+    "q": "Le pilier EDS a reçu 43 alertes, réalisé 37 EDS et swabé les 43 corps (100 %), sans aucun échec",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 115,
+    "date": "2026-09-06",
+    "alerts": 51,
+    "swabbed": 51,
+    "of": null,
+    "unread": null,
+    "q": "Le pilier EDS a reçu 51 alertes, dont 22 reports de la veille, réalisé 50 EDS et swabé les 51 corps (100 %)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 116,
+    "date": "2026-09-07",
+    "alerts": 51,
+    "swabbed": 51,
+    "of": null,
+    "unread": null,
+    "q": "Le pilier EDS a reçu 51 alertes (22 reports de la veille), 50 EDS réalisés et 51 corps swabés (100 %)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 117,
+    "date": "2026-09-08",
+    "alerts": 42,
+    "swabbed": 42,
+    "of": null,
+    "unread": null,
+    "q": "Le pilier EDS a reçu 42 alertes (23 reports de la veille), réalisé 44 EDS et swabé les 42 corps (100 %)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 118,
+    "date": "2026-09-09",
+    "alerts": 40,
+    "swabbed": 40,
+    "of": null,
+    "unread": null,
+    "q": "le pilier EDS a reçu 40 alertes (21 reports de la veille), réalisé 40 EDS avec swabs (100 %)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 119,
+    "date": "2026-09-10",
+    "alerts": 54,
+    "swabbed": 51,
+    "of": 54,
+    "unread": 3,
+    "q": "le pilier EDS a reçu 54 alertes (19 reports de la veille), réalisé 46 EDS et swabé 51 corps sur 54 (3 échecs à Kalunguta et Vuhovi)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 120,
+    "date": "2026-09-11",
+    "alerts": 48,
+    "swabbed": 44,
+    "of": null,
+    "unread": 4,
+    "q": "48 alertes ont été enregistrées (dont 24 reports de la veille), 47 EDS réalisés (97,9 %) et 44 corps swabés, 4 échecs à Kalunguta et Vuhovi",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 121,
+    "date": "2026-09-12",
+    "alerts": 61,
+    "swabbed": 59,
+    "of": null,
+    "unread": 2,
+    "q": "61 alertes ont été reçues (dont 21 reports de la veille), 56 EDS réalisés et 59 corps swabés, 2 échecs à Kalunguta et Vuhovi",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 122,
+    "date": "2026-09-13",
+    "alerts": 56,
+    "swabbed": 51,
+    "of": null,
+    "unread": null,
+    "q": "Quant aux EDS, 56 alertes ont été enregistrées, 53 EDS réalisés et 51 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 123,
+    "date": "2026-09-14",
+    "alerts": 56,
+    "swabbed": 51,
+    "of": null,
+    "unread": null,
+    "q": "Quant aux EDS, 56 alertes ont été enregistrées, 53 EDS réalisés et 51 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 124,
+    "date": "2026-09-15",
+    "alerts": 58,
+    "swabbed": 58,
+    "of": null,
+    "unread": null,
+    "q": "58 alertes ont été enregistrées, 61 EDS réalisés et 58 corps swabés (100 %)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 125,
+    "date": "2026-09-16",
+    "alerts": 56,
+    "swabbed": 56,
+    "of": null,
+    "unread": null,
+    "q": "56 alertes ont été enregistrées, 51 EDS réalisés et 56 corps swabés (100 %)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 126,
+    "date": "2026-09-17",
+    "alerts": 61,
+    "swabbed": 60,
+    "of": null,
+    "unread": 1,
+    "q": "61 alertes ont été enregistrées, 58 EDS réalisés et 60 corps swabés (98,4 %)",
+    "uq": "un seul échec étant enregistré à Katwa",
+    "note": null
+   },
+   {
+    "report": 127,
+    "date": "2026-09-18",
+    "alerts": null,
+    "swabbed": 42,
+    "of": 44,
+    "unread": null,
+    "q": "Quant aux EDS, 53 EDS réalisés et 42 corps swabés sur 44 (95,5 %)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 128,
+    "date": "2026-09-19",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 129,
+    "date": "2026-09-20",
+    "alerts": 50,
+    "swabbed": 50,
+    "of": null,
+    "unread": null,
+    "q": "50 alertes ont été reçues (plus 19 reports de la veille), 50 corps swabés et 47 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 130,
+    "date": "2026-09-21",
+    "alerts": 52,
+    "swabbed": 52,
+    "of": null,
+    "unread": null,
+    "q": "52 alertes ont été reçues (plus 23 reports de la veille), 52 corps swabés et 58 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 131,
+    "date": "2026-09-22",
+    "alerts": 54,
+    "swabbed": 54,
+    "of": null,
+    "unread": 0,
+    "q": "54 alertes ont été reçues (plus 23 reports de la veille), 54 corps swabés sans échec et 55 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 132,
+    "date": "2026-09-23",
+    "alerts": 55,
+    "swabbed": 55,
+    "of": null,
+    "unread": 0,
+    "q": "55 alertes ont été reçues (plus 22 reports de la veille), 55 corps swabés sans échec et 60 EDS réalisés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 133,
+    "date": "2026-09-24",
+    "alerts": null,
+    "swabbed": null,
+    "note": "absence de rapportage des activités PCI autour des cas et insécurité des équipes EDS à Beni"
+   },
+   {
+    "report": 134,
+    "date": "2026-09-25",
+    "alerts": 54,
+    "swabbed": 50,
+    "of": null,
+    "unread": 4,
+    "q": "54 alertes ont été reçues, 51 EDS réalisés et 50 corps swabés",
+    "uq": "4 échecs de swab ont été notifiés à Beni",
+    "note": "à la suite de l’incident survenu la veille au cimetière de Katula"
+   },
+   {
+    "report": 135,
+    "date": "2026-09-26",
+    "alerts": 40,
+    "swabbed": 39,
+    "of": null,
+    "unread": 1,
+    "q": "40 alertes ont été reçues, 39 corps swabés et 35 EDS réalisés (87,5 %)",
+    "uq": "1 échec de swab a été enregistré à Katwa",
+    "note": null
+   },
+   {
+    "report": 136,
+    "date": "2026-09-27",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 137,
+    "date": "2026-09-28",
+    "alerts": 56,
+    "swabbed": null,
+    "of": null,
+    "unread": null,
+    "q": "38 EDS réalisés sur 56 alertes",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 138,
+    "date": "2026-09-29",
+    "alerts": 47,
+    "swabbed": 45,
+    "of": null,
+    "unread": null,
+    "q": "61 EDS réalisés, avec 45 corps swabés sur 47 alertes reçues",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 139,
+    "date": "2026-09-30",
+    "alerts": 45,
+    "swabbed": 43,
+    "of": null,
+    "unread": null,
+    "q": "33 EDS réalisés, avec 43 corps swabés sur 45 alertes reçues (95,6%)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 140,
+    "date": "2026-10-01",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 141,
+    "date": "2026-10-01",
+    "alerts": 51,
+    "swabbed": 51,
+    "of": null,
+    "unread": null,
+    "q": "Sur 51 alertes EDS, 51 EDS ont été réalisés (100 %) et 51 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 142,
+    "date": "2026-10-03",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 143,
+    "date": "2026-10-04",
+    "alerts": 44,
+    "swabbed": 44,
+    "of": null,
+    "unread": null,
+    "q": "Sur 44 nouvelles alertes EDS et 44 reports, 45 EDS ont été réalisés et 44 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 144,
+    "date": "2026-10-05",
+    "alerts": 45,
+    "swabbed": 45,
+    "of": null,
+    "unread": null,
+    "q": "Sur 45 alertes EDS et 42 reports, 45 EDS ont été réalisés et 45 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 145,
+    "date": "2026-10-06",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 146,
+    "date": "2026-10-07",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 147,
+    "date": "2026-10-08",
+    "alerts": 58,
+    "swabbed": 58,
+    "of": null,
+    "unread": 0,
+    "q": "Sur 58 alertes EDS, 56 EDS ont été réalisés et 58 corps swabés sans échec",
+    "uq": null,
+    "note": "avec 51 reports au jour suivant"
+   },
+   {
+    "report": 148,
+    "date": "2026-10-09",
+    "alerts": 36,
+    "swabbed": 36,
+    "of": null,
+    "unread": 0,
+    "q": "Sur 77 décès attendus (36 alertes et 51 reports), 50 EDS ont été réalisés (64,9 %) et 36 corps swabés sans échec",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 149,
+    "date": "2026-10-10",
+    "alerts": 64,
+    "swabbed": 64,
+    "of": null,
+    "unread": 0,
+    "q": "Sur 101 décès attendus (64 alertes et 37 reports), 53 EDS ont été réalisés (52,5 %) et 64 corps swabés sans échec",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 150,
+    "date": "2026-10-11",
+    "alerts": 54,
+    "swabbed": 54,
+    "of": null,
+    "unread": 0,
+    "q": "Sur 54 alertes de décès et 48 reports de la veille, 57 EDS ont été réalisés et 54 corps swabés sans échec",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 151,
+    "date": "2026-10-12",
+    "alerts": 59,
+    "swabbed": 59,
+    "of": null,
+    "unread": 4,
+    "q": "Sur 59 alertes de décès et 45 reports de la veille, 63 EDS ont été réalisés et 59 corps swabés, avec 4 échecs (refus du sac mortuaire à Kyondo et à Mutwanga)",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 152,
+    "date": "2026-10-13",
+    "alerts": 39,
+    "swabbed": 39,
+    "of": null,
+    "unread": null,
+    "q": "Sur 39 alertes de décès, 39 EDS ont été réalisés et 39 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 153,
+    "date": "2026-10-14",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 154,
+    "date": "2026-10-15",
+    "alerts": 57,
+    "swabbed": 57,
+    "of": null,
+    "unread": null,
+    "q": "Sur 57 alertes EDS et 50 reports de la veille, 62 EDS ont été réalisés (57,9 %) et 57 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 155,
+    "date": "2026-10-16",
+    "alerts": 104,
+    "swabbed": 59,
+    "of": null,
+    "unread": null,
+    "q": "Sur 104 alertes EDS (dont 45 reports de la veille), 60 EDS ont été réalisés (57,7 %) et 59 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 156,
+    "date": "2026-10-17",
+    "alerts": 58,
+    "swabbed": 58,
+    "of": null,
+    "unread": 0,
+    "q": "Sur 58 alertes EDS reçues et 44 reports de la veille, 55 EDS ont été réalisés et 58 corps swabés, sans échec de prélèvement",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 157,
+    "date": "2026-10-18",
+    "alerts": 55,
+    "swabbed": 55,
+    "of": null,
+    "unread": 0,
+    "q": "Sur 55 alertes EDS reçues et 47 reports de la veille, 62 EDS ont été réalisés et 55 corps swabés, sans échec de prélèvement",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 164,
+    "date": "2026-10-25",
+    "alerts": null,
+    "swabbed": null,
+    "note": null
+   },
+   {
+    "report": 165,
+    "date": "2026-10-26",
+    "alerts": 108,
+    "swabbed": 55,
+    "of": null,
+    "unread": null,
+    "q": "59 EDS réalisés sur 108 alertes dont 55 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 166,
+    "date": "2026-10-27",
+    "alerts": 89,
+    "swabbed": 57,
+    "of": null,
+    "unread": 3,
+    "q": "52 EDS réalisés sur 89 alertes, et 57 corps swabés",
+    "uq": "3 échecs de swab (Lubero et Mutwanga)",
+    "note": null
+   },
+   {
+    "report": 167,
+    "date": "2026-10-28",
+    "alerts": 71,
+    "swabbed": 67,
+    "of": null,
+    "unread": null,
+    "q": "66 EDS réalisés sur 71 alertes (36 reports de la veille) et 67 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 168,
+    "date": "2026-10-29",
+    "alerts": 47,
+    "swabbed": 47,
+    "of": null,
+    "unread": null,
+    "q": "47 EDS réalisés sur 47 alertes et 47 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 169,
+    "date": "2026-10-30",
+    "alerts": 51,
+    "swabbed": 51,
+    "of": 51,
+    "unread": null,
+    "q": "46 EDS réalisés et 51 corps swabés sur 51 alertes",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 170,
+    "date": "2026-10-31",
+    "alerts": 79,
+    "swabbed": 59,
+    "of": null,
+    "unread": null,
+    "q": "58 EDS réalisés sur 79 alertes, reports et 59 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 171,
+    "date": "2026-11-01",
+    "alerts": 72,
+    "swabbed": 70,
+    "of": null,
+    "unread": null,
+    "q": "60 EDS réalisés sur 72 alertes (83,3 %), 70 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 173,
+    "date": "2026-11-03",
+    "alerts": 81,
+    "swabbed": 53,
+    "of": null,
+    "unread": null,
+    "q": "56 EDS réalisés sur 81 alertes, dont 22 reports (69,1 %), 53 corps swabés",
+    "uq": null,
+    "note": null
+   },
+   {
+    "report": 174,
+    "date": "2026-11-04",
+    "alerts": 100,
+    "swabbed": 69,
+    "of": null,
+    "unread": null,
+    "q": "71 EDS réalisés sur 100 alertes, dont 25 reports (71,0 %), 69 corps swabés",
+    "uq": null,
+    "note": null
+   }
+  ],
+  "totals": {
+   "reports": 60,
+   "with_line": 51,
+   "full": 45,
+   "written": 19,
+   "none": 10,
+   "alerts": 2586,
+   "swabbed": 2341,
+   "unread": 23,
+   "closed": 33,
+   "rest": 226
+  }
  }
 };

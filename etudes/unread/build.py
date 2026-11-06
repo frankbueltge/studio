@@ -122,8 +122,113 @@ assert over == [152], over
 d1 = next(x for x in ws if x['report'] == 110); assert (d1['date'], d1['alerts'], d1['swabbed'], d1['unread']) == ('2026-09-01', 126, 65, 42)
 # 30 Aug and 3 Sep write the same three numbers
 a, b = ROWS[108], ROWS[112]; assert a[:2] == b[:2]
+
+# ---- North Kivu (state 2, session 229): the same reading, of North Kivu's PCI/EDS paragraph ----
+# report: (alerts, swabbed, swabbed_of, unread_written, quote, unread_quote)
+# alerts None: the line writes bodies swabbed but no number of calls. swabbed None: calls but no bodies.
+# unread_written 0: the line writes "sans échec" / "sans aucun échec" in so many words.
+NK = {
+ 108: (None, 56, None, None, "56 corps swabés et 53 EDS réalisés", None),
+ 109: (None, 46, None, None, "46 corps swabés et 48 EDS réalisés", None),
+ 110: (None, 51, None, None, "51 corps swabés et 59 EDS réalisés", None),
+ 111: (None, 64, None, None, "64 corps swabés et 59 EDS réalisés", None),
+ 112: (46, 45, 46, 1, "reçu 46 alertes, réalisé 41 EDS et swabé 45 corps sur 46 (97,8 %)", "unique échec étant lié à une résistance communautaire dans l’AS de Mataba"),
+ 113: (44, 44, None, 0, "reçu 44 alertes en plus de 21 reports de la veille, réalisé 46 EDS et swabé les 44 corps (100 %), sans aucun échec", None),
+ 114: (43, 43, None, 0, "Le pilier EDS a reçu 43 alertes, réalisé 37 EDS et swabé les 43 corps (100 %), sans aucun échec", None),
+ 115: (51, 51, None, None, "Le pilier EDS a reçu 51 alertes, dont 22 reports de la veille, réalisé 50 EDS et swabé les 51 corps (100 %)", None),
+ 116: (51, 51, None, None, "Le pilier EDS a reçu 51 alertes (22 reports de la veille), 50 EDS réalisés et 51 corps swabés (100 %)", None),
+ 117: (42, 42, None, None, "Le pilier EDS a reçu 42 alertes (23 reports de la veille), réalisé 44 EDS et swabé les 42 corps (100 %)", None),
+ 118: (40, 40, None, None, "le pilier EDS a reçu 40 alertes (21 reports de la veille), réalisé 40 EDS avec swabs (100 %)", None),
+ 119: (54, 51, 54, 3, "le pilier EDS a reçu 54 alertes (19 reports de la veille), réalisé 46 EDS et swabé 51 corps sur 54 (3 échecs à Kalunguta et Vuhovi)", None),
+ 120: (48, 44, None, 4, "48 alertes ont été enregistrées (dont 24 reports de la veille), 47 EDS réalisés (97,9 %) et 44 corps swabés, 4 échecs à Kalunguta et Vuhovi", None),
+ 121: (61, 59, None, 2, "61 alertes ont été reçues (dont 21 reports de la veille), 56 EDS réalisés et 59 corps swabés, 2 échecs à Kalunguta et Vuhovi", None),
+ 122: (56, 51, None, None, "Quant aux EDS, 56 alertes ont été enregistrées, 53 EDS réalisés et 51 corps swabés", None),
+ 123: (56, 51, None, None, "Quant aux EDS, 56 alertes ont été enregistrées, 53 EDS réalisés et 51 corps swabés", None),
+ 124: (58, 58, None, None, "58 alertes ont été enregistrées, 61 EDS réalisés et 58 corps swabés (100 %)", None),
+ 125: (56, 56, None, None, "56 alertes ont été enregistrées, 51 EDS réalisés et 56 corps swabés (100 %)", None),
+ 126: (61, 60, None, 1, "61 alertes ont été enregistrées, 58 EDS réalisés et 60 corps swabés (98,4 %)", "un seul échec étant enregistré à Katwa"),
+ 127: (None, 42, 44, None, "Quant aux EDS, 53 EDS réalisés et 42 corps swabés sur 44 (95,5 %)", None),
+ 129: (50, 50, None, None, "50 alertes ont été reçues (plus 19 reports de la veille), 50 corps swabés et 47 EDS réalisés", None),
+ 130: (52, 52, None, None, "52 alertes ont été reçues (plus 23 reports de la veille), 52 corps swabés et 58 EDS réalisés", None),
+ 131: (54, 54, None, 0, "54 alertes ont été reçues (plus 23 reports de la veille), 54 corps swabés sans échec et 55 EDS réalisés", None),
+ 132: (55, 55, None, 0, "55 alertes ont été reçues (plus 22 reports de la veille), 55 corps swabés sans échec et 60 EDS réalisés", None),
+ 134: (54, 50, None, 4, "54 alertes ont été reçues, 51 EDS réalisés et 50 corps swabés", "4 échecs de swab ont été notifiés à Beni"),
+ 135: (40, 39, None, 1, "40 alertes ont été reçues, 39 corps swabés et 35 EDS réalisés (87,5 %)", "1 échec de swab a été enregistré à Katwa"),
+ 137: (56, None, None, None, "38 EDS réalisés sur 56 alertes", None),
+ 138: (47, 45, None, None, "61 EDS réalisés, avec 45 corps swabés sur 47 alertes reçues", None),
+ 139: (45, 43, None, None, "33 EDS réalisés, avec 43 corps swabés sur 45 alertes reçues (95,6%)", None),
+ 141: (51, 51, None, None, "Sur 51 alertes EDS, 51 EDS ont été réalisés (100 %) et 51 corps swabés", None),
+ 143: (44, 44, None, None, "Sur 44 nouvelles alertes EDS et 44 reports, 45 EDS ont été réalisés et 44 corps swabés", None),
+ 144: (45, 45, None, None, "Sur 45 alertes EDS et 42 reports, 45 EDS ont été réalisés et 45 corps swabés", None),
+ 147: (58, 58, None, 0, "Sur 58 alertes EDS, 56 EDS ont été réalisés et 58 corps swabés sans échec", None),
+ 148: (36, 36, None, 0, "Sur 77 décès attendus (36 alertes et 51 reports), 50 EDS ont été réalisés (64,9 %) et 36 corps swabés sans échec", None),
+ 149: (64, 64, None, 0, "Sur 101 décès attendus (64 alertes et 37 reports), 53 EDS ont été réalisés (52,5 %) et 64 corps swabés sans échec", None),
+ 150: (54, 54, None, 0, "Sur 54 alertes de décès et 48 reports de la veille, 57 EDS ont été réalisés et 54 corps swabés sans échec", None),
+ 151: (59, 59, None, 4, "Sur 59 alertes de décès et 45 reports de la veille, 63 EDS ont été réalisés et 59 corps swabés, avec 4 échecs (refus du sac mortuaire à Kyondo et à Mutwanga)", None),
+ 152: (39, 39, None, None, "Sur 39 alertes de décès, 39 EDS ont été réalisés et 39 corps swabés", None),
+ 154: (57, 57, None, None, "Sur 57 alertes EDS et 50 reports de la veille, 62 EDS ont été réalisés (57,9 %) et 57 corps swabés", None),
+ 155: (104, 59, None, None, "Sur 104 alertes EDS (dont 45 reports de la veille), 60 EDS ont été réalisés (57,7 %) et 59 corps swabés", None),
+ 156: (58, 58, None, 0, "Sur 58 alertes EDS reçues et 44 reports de la veille, 55 EDS ont été réalisés et 58 corps swabés, sans échec de prélèvement", None),
+ 157: (55, 55, None, 0, "Sur 55 alertes EDS reçues et 47 reports de la veille, 62 EDS ont été réalisés et 55 corps swabés, sans échec de prélèvement", None),
+ 165: (108, 55, None, None, "59 EDS réalisés sur 108 alertes dont 55 corps swabés", None),
+ 166: (89, 57, None, 3, "52 EDS réalisés sur 89 alertes, et 57 corps swabés", "3 échecs de swab (Lubero et Mutwanga)"),
+ 167: (71, 67, None, None, "66 EDS réalisés sur 71 alertes (36 reports de la veille) et 67 corps swabés", None),
+ 168: (47, 47, None, None, "47 EDS réalisés sur 47 alertes et 47 corps swabés", None),
+ 169: (51, 51, 51, None, "46 EDS réalisés et 51 corps swabés sur 51 alertes", None),
+ 170: (79, 59, None, None, "58 EDS réalisés sur 79 alertes, reports et 59 corps swabés", None),
+ 171: (72, 70, None, None, "60 EDS réalisés sur 72 alertes (83,3 %), 70 corps swabés", None),
+ 173: (81, 53, None, None, "56 EDS réalisés sur 81 alertes, dont 22 reports (69,1 %), 53 corps swabés", None),
+ 174: (100, 69, None, None, "71 EDS réalisés sur 100 alertes, dont 25 reports (71,0 %), 69 corps swabés", None),
+}
+NK_NO_LINE = [128, 133, 136, 140, 142, 145, 146, 153, 164]
+NK_NOTES = {133: "absence de rapportage des activités PCI autour des cas et insécurité des équipes EDS à Beni",
+            134: "à la suite de l’incident survenu la veille au cimetière de Katula",
+            147: "avec 51 reports au jour suivant"}
+WORD = {1: ('unique échec', 'un seul échec')}
+nk_days = []
+for n in sorted(set(texts)):
+    t = texts[n]; d = date_of(t)
+    if n in NK:
+        A, S, M, U, q, uq = NK[n]
+        for s_ in (q, uq):
+            if s_: assert s_ in t, (n, s_)
+        nums = [int(x) for x in re.findall(r'\d+', q + ' ' + (uq or ''))]
+        for v in (A, S, M):
+            if v is not None: assert v in nums, (n, v)
+        if U == 0: assert re.search(r'sans (aucun )?échec', q), n
+        elif U is not None: assert U in nums or any(w in (uq or '') for w in WORD.get(U, ())), (n, U)
+        nk_days.append({'report': n, 'date': d, 'alerts': A, 'swabbed': S, 'of': M, 'unread': U,
+                        'q': q, 'uq': uq, 'note': NK_NOTES.get(n)})
+    else:
+        assert n in NK_NO_LINE, n
+        nk_days.append({'report': n, 'date': d, 'alerts': None, 'swabbed': None, 'note': NK_NOTES.get(n)})
+for n, s_ in NK_NOTES.items(): assert s_ in texts[n], (n, s_)
+nkw = [x for x in nk_days if x.get('alerts') is not None or x.get('swabbed') is not None]
+nk_full = [x for x in nkw if x['alerts'] is not None and x['swabbed'] is not None]
+nk_written = [x for x in nkw if x.get('unread') is not None]
+nk_none = [x for x in nkw if x.get('unread') == 0]
+nk_A = sum(x['alerts'] for x in nk_full); nk_S = sum(x['swabbed'] for x in nk_full)
+nk_U = sum(x['unread'] for x in nk_written)
+nk_closed = [x for x in nk_full if x['swabbed'] + (x['unread'] or 0) >= x['alerts']]
+nk_over = [x['report'] for x in nk_full if x['swabbed'] + (x['unread'] or 0) > x['alerts']]
+nk_rest = sum(x['alerts'] - x['swabbed'] - (x['unread'] or 0) for x in nk_full if x['swabbed'] + (x['unread'] or 0) < x['alerts'])
+print('NK', len(nk_days), 'reports;', len(nkw), 'with a line;', len(nk_full), 'calls and bodies;', len(nk_written), 'write the unread (', len(nk_none), 'as none );',
+      nk_A, nk_S, nk_U, 'closed', len(nk_closed), 'over', nk_over, 'rest', nk_rest)
+assert (len(nk_days), len(nkw), len(nk_full), len(nk_written), len(nk_none)) == (60, 51, 45, 19, 10)
+assert (nk_A, nk_S, nk_U, len(nk_closed), nk_rest) == (2586, 2341, 23, 33, 226) and nk_over == [151]
+# Ituri closes (every call swabbed or written as not) on 2 of 55 days; North Kivu on 33 of 45
+assert sum(1 for x in ws if x['swabbed'] + (x['unread'] or 0) >= x['alerts']) == 2
+# from report 165 (26 Oct) on, North Kivu's line no longer writes "sans échec", and 7 of its 9 days leave calls unaccounted
+late = [x for x in nk_full if x['report'] >= 165]
+assert len(late) == 9 and sum(1 for x in late if x['swabbed'] + (x['unread'] or 0) < x['alerts']) == 7
+assert not any('sans' in x['q'] for x in late) and max(x['report'] for x in nk_none) == 157
+assert NK[122][4] == NK[123][4]   # 13 and 14 Sep: the same sentence, word for word
+NK_TOT = {'reports': len(nk_days), 'with_line': len(nkw), 'full': len(nk_full), 'written': len(nk_written), 'none': len(nk_none),
+          'alerts': nk_A, 'swabbed': nk_S, 'unread': nk_U, 'closed': len(nk_closed), 'rest': nk_rest}
+
 json.dump({'source': 'INSP SitRep MVE via INRB-UMIE/BDBV2026-Data@338e5780', 'gaps': gaps, 'days': days,
-           'totals': {'reports': len(days), 'with_line': len(ws), 'written': len(written), 'alerts': tot_A, 'swabbed': tot_S, 'unread': tot_U}},
+           'totals': {'reports': len(days), 'with_line': len(ws), 'written': len(written), 'alerts': tot_A, 'swabbed': tot_S, 'unread': tot_U},
+           'nk': {'days': nk_days, 'totals': NK_TOT}},
           open(os.path.join(HERE, 'data.json'), 'w'), ensure_ascii=False, indent=1)
 open(os.path.join(HERE, 'data.js'), 'w').write('window.UNREAD = ' + open(os.path.join(HERE, 'data.json'), encoding='utf-8').read() + ';\n')
 print('ok', len(days), 'reports;', len(ws), 'with a line;', len(written), 'write the unread;', tot_A, tot_S, tot_U, 'gaps', gaps)

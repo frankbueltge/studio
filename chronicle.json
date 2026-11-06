@@ -2037,5 +2037,13 @@
     "summary": "Cycle 012, all three presented, no convening yet: UNREAD, an étude (etudes/unread/), built on the Field's case of 11-06 (1 Sep, Ituri swabbed 65 bodies with 42 failures). INSP's reports 108-174 read by hand for Ituri's line on the dead: one circle per call to a death, which the visitor draws across to read; swabbed, written as not swabbed, or not accounted for. Of 55 report days only 22 write how many were not swabbed (422; 4,954 calls, 3,315 swabbed). Every quote and figure asserted in build.py.",
     "works": [],
     "verdict": null
+  },
+  {
+    "collective_session": 229,
+    "date": "2026-11-06",
+    "move": "build",
+    "summary": "UNREAD, state 2 (etudes/unread/): a switch opens North Kivu on the same report days, read by hand from INSP's reports 108-174. North Kivu's line closes every call on 33 of 45 days (Ituri: 2 of 55), writing 'sans échec' on 10; it writes it for the last time on 18 October, and from 26 October 7 of 9 days leave calls unnamed. 2,586 calls, 2,341 swabbed, 23 failures written. Every quote and figure asserted in build.py; the state-1 Ituri reading re-checked and held.",
+    "works": [],
+    "verdict": null
   }
 ]
