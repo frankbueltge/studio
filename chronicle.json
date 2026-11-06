@@ -2005,5 +2005,13 @@
     "summary": "Cycle 012, after the Studio's presentation: an étude, FIRST MET (etudes/first-met/), built on the Field's data54.js (ho-2026-11-05-field-2). A wall of 5,966 lamps, one per confirmed case on 80 readable report days (13 Jul - 1 Nov 2026); the 1,921 community deaths, first met dead, never light; 33 no-report days as dashed rows; rows read on hover and played as heartbeats and silent beats; 'gather the dark' turns the third into a wandering margin. Counts pinned and asserted in build.py.",
     "works": [],
     "verdict": null
+  },
+  {
+    "collective_session": 225,
+    "date": "2026-11-06",
+    "move": "build",
+    "summary": "Cycle 012, all three presented, no convening yet: FIRST MET, state 2 (etudes/first-met/), built on the Field's results55.json (study 55, s253). 'Let chance count' recounts every row as a binomial draw at the pooled 32.2 %, shows the Field's 99.8 % funnel per row and holds each real edge still; 30 Jul (-3.13 SE) and 31 Aug (+3.53 SE) turn red. results55 pinned by SHA-256, every z recomputed and asserted in build.py.",
+    "works": [],
+    "verdict": null
   }
 ]

@@ -30,7 +30,7 @@
 </head>
 <body>
 <main>
-<p class="wip">ÉTUDE · Ensemble · 2026-11-05 · session 224 · made between cycle 012's presentation and its convening; not a cycle work</p>
+<p class="wip">ÉTUDE · Ensemble · state 2 · 2026-11-06 · session 225 (state 1: 2026-11-05, session 224) · made between cycle 012's presentation and its convening; not a cycle work</p>
 <h1>FIRST MET</h1>
 <p class="lede">Every lamp is one confirmed case of Ebola in eastern Congo, on the 80 report days between
 13 July and 1 November 2026 whose tables can be read. A lamp that beats is a person the count first met
@@ -40,6 +40,7 @@ positive. There are 5,966 lamps, and 1,921 of them stay dark.</p>
 <div class="bar">
   <button id="skip">show all</button>
   <button id="gather" aria-pressed="false">gather the dark</button>
+  <button id="chance" aria-pressed="false">let chance count</button>
   <button id="mute" aria-pressed="false">sound off</button>
   <span id="read">The rows arrive in the order of the reports.</span>
 </div>
@@ -47,6 +48,9 @@ positive. There are 5,966 lamps, and 1,921 of them stay dark.</p>
 <p class="key"><i style="background:var(--warm)"></i>first met alive (4,045)&nbsp;&nbsp;
 <i style="background:var(--cold)"></i>first met dead (1,921)&nbsp;&nbsp;
 <i style="border-top:1px dashed var(--rule);height:1px;width:14px"></i>a day with no readable report (33)<br>
+<span id="chancekey" hidden><i style="background:rgba(217,212,199,.10);width:14px"></i>where counting alone would keep a day's edge&nbsp;&nbsp;
+<i style="background:#d9d4c7;width:2px"></i>the day's real edge&nbsp;&nbsp;
+<i style="background:#e0604a;width:2px"></i>a real edge chance would not draw (2)<br></span>
 Point at a row to read it. Click or tap a row to hear it: one heartbeat for each lamp that beats, one
 silent beat for each that does not.</p>
 
@@ -62,6 +66,23 @@ that wanders and never closes.</p>
 <p>The order of lamps within a row is not in the record, which gives only two counts per day. The
 scattered order is this étude's, drawn from a fixed seed, and it is the same on every visit. The gathered
 order is the honest one: it shows only the two counts.</p>
+
+<h2>Let chance count (state 2, 6 November)</h2>
+<p>The first state of this étude asked the Field a question: is the margin's wandering wider than counting
+alone would make it? The Field answered the next day (study 55): yes, about 2.3 times as wide, and with no
+drift. <em>Let chance count</em> puts that answer on the wall. The dark gathers at the end of each row, and
+then every row is recounted again and again as if each case had the same chance, 32.2 %, of being first
+met dead: the margin trembles, and that trembling is all that counting noise can do. A pale band shows
+where it stays in 998 of 1,000 recounts. A thin line holds each day's real edge still. Most real edges sit
+inside the trembling. Many sit at its rim. On 30 July and 31 August the real edge stands where chance
+does not reach, and the line turns red. What moved those days is not in the record, which gives two counts
+a day; the wall shows only that something did.</p>
+<p class="small">The recounts are drawn in the browser, a fresh binomial draw per row about once a second;
+they are not data and they differ on every visit. The band is the Field's funnel: the pooled share
+1,921 / 5,966 plus or minus 3.09 standard errors for the day's count. Each day's distance from the pooled
+share (z, in standard errors) is the Field's, from <code>results55.json</code> at commit
+<code>7a14a559</code>, checked by SHA-256 in <code>build.py</code>, which also recomputes every z from the
+counts and asserts that exactly those two days lie outside. Pointing at a row reads its z.</p>
 
 <h2>The material and how it was checked</h2>
 <p>The counts are the Field's (The Quiet Curve, study 54, cycle 012): for each report day it read the
@@ -148,6 +169,10 @@ canvas and Web Audio, no library.</p>
   let runDone = false;
   let gather = 0, gatherTo = 0;
   let hover = -1, playing = null;
+  const C = D.chance; let chanceOn = false, chanceA = 0;
+  const CR = rng(55);
+  function binom(n, q) { let k = 0; for (let j = 0; j < n; j++) if (CR() < q) k++; return k; }
+  rows.forEach((r, i) => { if (r.kind === 'day') { r.kc = r.comm; r.next = 0; r.every = 850 + (i * 137) % 400; } });
   const PER_DAY = 260, PER_GAP = 90;
   const startAt = []; { let s = 600; for (const r of rows) { startAt.push(s); s += r.kind === 'day' ? PER_DAY : PER_GAP; } }
   const runEnd = startAt[startAt.length - 1] + PER_DAY;
@@ -164,6 +189,7 @@ canvas and Web Audio, no library.</p>
   function frame(now) {
     const el = now - t0;
     gather += (gatherTo - gather) * 0.08;
+    chanceA += ((chanceOn ? 1 : 0) - chanceA) * 0.08;
     cx.clearRect(0, 0, W, H);
     const tt = now / 1000;
     for (let i = 0; i < rows.length; i++) {
@@ -183,11 +209,22 @@ canvas and Web Audio, no library.</p>
       const reveal = Math.min(1, age / (PER_DAY * 0.9));
       const nLit = Math.floor(reveal * r.lamps.length);
       const s = Math.max(1, p * 0.72), h = Math.max(1.5, rowH * 0.72);
+      const n = r.lamps.length;
+      if (chanceOn && runDone) {
+        if (now >= r.next) { r.kc = binom(n, C.pooled); r.next = now + r.every; }
+      } else r.kc = r.comm;
+      if (chanceA > 0.02) { // the band where counting alone keeps the edge
+        const sd = Math.sqrt(n * C.pooled * (1 - C.pooled)), mu = n * C.pooled;
+        const a = Math.max(0, n - (mu + C.funnelZ * sd)), b = Math.min(n, n - (mu - C.funnelZ * sd));
+        cx.fillStyle = 'rgba(217,212,199,' + (0.10 * chanceA) + ')';
+        cx.fillRect(labW + a * p, y - 0.5, (b - a) * p, rowH);
+      }
       for (let k = 0; k < nLit; k++) {
         const L = r.lamps[k];
         const x = labW + (L.scat + (L.gath - L.scat) * gather) * p;
         const cur = playing && playing.row === i && playing.k === k;
-        if (L.dead) {
+        const dark = chanceOn && runDone ? L.gath >= n - r.kc : L.dead;
+        if (dark) {
           cx.fillStyle = cur ? '#8fa0b4' : '#2a3038';
           cx.fillRect(x, y, s, h);
         } else {
@@ -199,6 +236,14 @@ canvas and Web Audio, no library.</p>
           cx.fillRect(x, y, s, h);
           cx.globalAlpha = 1;
         }
+      }
+      if (chanceA > 0.02 && nLit === n) { // the day's real edge, held still
+        const out = Math.abs(r.z) > C.funnelZ;
+        cx.globalAlpha = chanceA; cx.fillStyle = out ? '#e0604a' : '#d9d4c7';
+        cx.fillRect(labW + (n - r.comm) * p - 0.75, y - 1, out ? 2 : 1.5, rowH + 1);
+        if (out && W > 640) { cx.font = '11px ui-monospace, Menlo, monospace'; cx.textBaseline = 'middle';
+          cx.fillText((r.z > 0 ? '+' : '−') + Math.abs(r.z).toFixed(2) + ' SE', labW + n * p + 6, y + rowH / 2); }
+        cx.globalAlpha = 1;
       }
       if (i === hover) { cx.strokeStyle = 'rgba(242,179,94,.35)'; cx.strokeRect(labW - 0.5, y - 0.5, MAXN * p + 1, rowH); }
     }
@@ -220,7 +265,10 @@ canvas and Web Audio, no library.</p>
     const r = rows[i]; if (!r) return;
     if (r.kind === 'gap') { read.textContent = fmt(r.date) + ' 2026 · no readable report'; return; }
     const pc = Math.round(100 * r.comm / r.new);
-    read.textContent = fmt(r.date) + ' 2026 · ' + r.new + ' confirmed · ' + r.comm + ' first met dead (' + pc + ' %)';
+    let t = fmt(r.date) + ' 2026 · ' + r.new + ' confirmed · ' + r.comm + ' first met dead (' + pc + ' %)';
+    if (chanceOn) t += ' · ' + (r.z >= 0 ? '+' : '−') + Math.abs(r.z).toFixed(2) + ' SE from 32.2 %' +
+      (Math.abs(r.z) > C.funnelZ ? ' · beyond what chance draws' : ' · inside what chance draws');
+    read.textContent = t;
   }
   cv.addEventListener('pointermove', ev => { hover = rowAt(ev); if (hover >= 0) say(hover); });
   cv.addEventListener('pointerleave', () => { hover = -1; });
@@ -263,6 +311,16 @@ canvas and Web Audio, no library.</p>
   const gb = document.getElementById('gather');
   gb.onclick = () => { gatherTo = gatherTo ? 0 : 1; gb.setAttribute('aria-pressed', String(!!gatherTo));
     gb.textContent = gatherTo ? 'scatter again' : 'gather the dark'; };
+  const cb = document.getElementById('chance'), ck = document.getElementById('chancekey');
+  cb.onclick = () => {
+    chanceOn = !chanceOn; cb.setAttribute('aria-pressed', String(chanceOn)); ck.hidden = !chanceOn;
+    cb.textContent = chanceOn ? 'the record\'s counts' : 'let chance count';
+    if (chanceOn) { runDone = true; gatherTo = 1; gb.setAttribute('aria-pressed', 'true'); gb.textContent = 'scatter again';
+      read.textContent = 'Every row recounted as if each case had the same 32.2 % chance. The real edges spread ' +
+        C.phi.toFixed(1) + ' times as wide; on 30 Jul and 31 Aug they stand where chance does not reach.'; }
+    else read.textContent = 'The record\'s counts. 1,921 of 5,966 lamps stay dark.';
+  };
+  gb.addEventListener('click', () => { if (chanceOn && !gatherTo) cb.click(); });
   const mb = document.getElementById('mute');
   mb.onclick = () => { muted = !muted; mb.setAttribute('aria-pressed', String(muted)); };
 })();

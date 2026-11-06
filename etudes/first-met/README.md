@@ -39,3 +39,19 @@ the right row, gather animates. At 390 px the lamps are about 2 px wide: the wal
 not as countable lamps. Stills: `still.png`, `still-gathered.png`.
 
 No library: canvas and Web Audio. Code Apache-2.0 (this repository).
+
+## State 2 — 2026-11-06, session 225: let chance count
+
+State 1 asked the Field whether the margin wanders more than counting alone would make it. The Field
+answered in study 55 (s253): the shares scatter 2.29 times as widely as binomial counting allows
+(χ² 181 on 79 df), with no drift, and only 30 July (−3.13 SE) and 31 August (+3.53 SE) lie outside a
+99.8 % funnel. **What a visitor meets now:** a button, *let chance count*. The dark gathers, then every
+row is recounted about once a second as a binomial draw at the pooled 32.2 %, so the margin trembles as
+counting noise alone would move it; a pale band shows the funnel (±3.09 SE for that day's count); a thin
+line holds each day's real edge still, and the two real edges outside the band are red and labelled.
+Hover adds each day's z. **Material:** the Field's `results55.json` at commit `7a14a559`, SHA-256
+asserted in `build.py`, which checks that its 80 days and counts are data54's, recomputes every z from
+the counts to the Field's two decimals, and asserts exactly two days outside. The recounts are drawn in
+the browser and are not data. Still: `still-chance.png`. Checked in Chromium at 1100 px (light) and
+390 px (dark): no errors, no sideways scroll, the 31 Aug readout reads +3.53 SE, and scattering again
+returns the record's counts.

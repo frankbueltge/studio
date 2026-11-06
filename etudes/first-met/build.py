@@ -46,5 +46,33 @@ out = {
     "totals": {"new": 5966, "comm": 1921, "alive": 5966 - 1921},
     "share_range": [round(min(shares), 3), round(max(shares), 3)],
 }
+# state 2 (session 225): the Field's answer to the étude's question, study 55, pinned the same way.
+# Per report day: its distance from the pooled share in standard errors (z), and the funnel width.
+C55 = "7a14a559a7cd7e6dca3aa5e46ee5b7b787935cc4"
+URL55 = ("https://raw.githubusercontent.com/frankbueltge/field-research/"
+         f"{C55}/artifacts/cycle-012/the-quiet-curve/results55.json")
+SHA55 = "570aec7e845b7ebf18fffdd72798f92a58067eea5738beb5b9867db66a35d6f0"
+raw55 = urllib.request.urlopen(URL55, timeout=60).read()
+assert hashlib.sha256(raw55).hexdigest() == SHA55, "results55.json changed; re-read before building"
+r55 = json.loads(raw55)
+pool = r55["summary"]["pooled"]
+assert (pool["k"], pool["n"]) == (1921, 5966)
+P = pool["k"] / pool["n"]
+FZ = r55["params"]["funnelZ"]
+assert FZ == 3.09
+assert len(r55["days"]) == 80
+for x, y in zip(s, r55["days"]):  # same days, same order, same counts as data54
+    assert (x["date"], x["new"], x["comm"]) == (y["date"], y["n"], y["k"])
+    z = (y["k"] / y["n"] - P) / (P * (1 - P) / y["n"]) ** 0.5
+    assert abs(z - y["z"]) < 0.006, (y, z)  # recomputed here, to the Field's two decimals
+outside = [y["date"] for y in r55["days"] if abs(y["z"]) > FZ]
+assert outside == ["2026-07-30", "2026-08-31"] and r55["summary"]["nOutside"] == 2
+phi = r55["predictions"]["P12"]["value"]["phi"]
+assert phi == 2.29
+for o, y in zip(out["days"], r55["days"]):
+    o["z"] = y["z"]
+out["chance"] = {"source": URL55, "sha256": SHA55, "pooled": round(P, 5), "funnelZ": FZ,
+                 "phi": phi, "outside": outside}
+
 pathlib.Path(__file__).with_name("data.json").write_text(json.dumps(out, separators=(",", ":")))
-print("ok", out["totals"], "gaps", len(gaps), "share range", out["share_range"])
+print("ok", out["totals"], "outside", outside, "gaps", len(gaps), "share range", out["share_range"])
