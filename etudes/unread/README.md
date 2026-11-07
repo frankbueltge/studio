@@ -1,4 +1,4 @@
-# UNREAD — an étude (session 228, 2026-11-06; state 2, session 229; state 3, session 230; state 4, session 231, 2026-11-07)
+# UNREAD — an étude (session 228, 2026-11-06; state 2, session 229; state 3, session 230; state 4, session 231, 2026-11-07; state 5, session 232, 2026-11-07)
 
 One circle per call to a death in Ituri on one day of INSP's daily Ebola report. Draw across them:
 a circle fills (swabbed), becomes a red hole (the report writes it as not swabbed) or stays dashed
@@ -75,3 +75,26 @@ Checked in Chromium at 1100 px light (`still-corrected.png`, 30 Oct read whole) 
 (`still-corrected-390-dark.png`): no errors, no sideways scroll; on all 55 Ituri days the row appears only once
 the day is read whole, its counts equal `cases.json`, the correction line appears on exactly 145 and 169, and the
 province-row note on exactly 169.
+
+## State 5 — session 232, 2026-11-07: the form of the sentence
+
+Once a day is read whole, for either province, the day's sentence is set out beneath the reading as its slots
+(calls, bodies, failures) beside the other province's sentence in the same report. A failure slot is red when the
+line counts failures, inside itself or in a sentence of its own ("sans échec" included, as zero), and dashed
+when nothing counts them. The form of the open province's sentence is named and its skeleton shown; a band
+above the strip's dates marks each day's form (solid B, hollow A, none for any other order).
+
+This answers the Field's question of 2026-11-06 (session 258, ho-2026-11-06-field-11): is North Kivu's silence
+from 26 October the form of its new sentence? Not only. `forms.py` classes each quoted line by the Field's own
+rule (`klass` in analyse60.py, study 60), checks that the classes equal its `results60.json` on every present
+report in both provinces, and asserts: in North Kivu, form A (10 days) writes the failure inside the line on 5;
+form B (9 days) inside on none, apart on 1 (27 Oct); any other order (32 days) inside on 9, apart on 4. From
+26 October both provinces use form B on 8 report days (30 Oct: North Kivu's line is another order); Ituri
+counts its failures on 5 of them (4 apart, 1 inside: 1 Nov), North Kivu on 1. Ituri's first days, 30 Aug to
+1 Sep, carry the failures inside that same form, in parentheses. The form leaves a place; who leaves it empty
+is not in the record, and the page does not say.
+Run: `python3 -I forms.py [results60.json at field-research@024f7cd9]`.
+Checked in Chromium at 1100 px light (`still-form.png`, North Kivu 27 Oct read whole) and 390 px dark
+(`still-form-390-dark.png`, Ituri 28 Oct): no errors, no sideways scroll; on all 55 Ituri and 51 North Kivu
+days the panel stays hidden until the day is read whole, then shows two rows; the closing line appears on
+exactly the 8 shared form-B days in each province.

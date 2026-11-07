@@ -41,6 +41,16 @@
   #back canvas { display:block; width:100%; height:40px; margin:0 0 6px; }
   #back p { margin:0; font-size:15px; }
   #back .fr { display:block; font:12px/1.5 ui-monospace, Menlo, monospace; color:var(--dim); margin-top:6px; }
+  #form { max-width:46em; margin:16px 0 0; opacity:0; transition:opacity .9s; font:13px/1.5 ui-monospace, Menlo, monospace; }
+  #form.on { opacity:1; }
+  #form .row { display:flex; flex-wrap:wrap; gap:6px 8px; align-items:center; margin:6px 0; }
+  #form .who { min-width:12em; color:var(--dim); }
+  #form .slot { border:1px solid var(--ink); padding:2px 7px; }
+  #form .slot.no { border:1px dashed var(--unsaid); color:var(--dim); }
+  #form .slot.f { border-color:var(--hole); color:var(--hole); }
+  #form .sk { color:var(--dim); font-style:italic; margin:2px 0 0; }
+  #form .sk i { font-style:normal; color:var(--ink); }
+  #form .fr { color:var(--dim); margin:8px 0 0; }
   #strip { display:block; width:100%; height:190px; margin:28px 0 0; cursor:pointer; touch-action:manipulation; }
   .cap { font:12px/1.5 ui-monospace, Menlo, monospace; color:var(--dim); margin:4px 0 0; max-width:62em; }
   .key { display:inline-block; width:10px; height:10px; border-radius:50%; vertical-align:-1px; margin:0 4px 0 10px; }
@@ -53,14 +63,14 @@
 </head>
 <body>
 <main>
-<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu · state 3 (session 230): what the other table counts · state 4 (session 231, 2026-11-07): corrected, the squares the first reading lost</p>
+<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu · state 3 (session 230): what the other table counts · state 4 (session 231, 2026-11-07): corrected, the squares the first reading lost · state 5 (session 232, 2026-11-07): the form of the sentence</p>
 <h1>UNREAD</h1>
 <p class="lede">When someone dies in Ituri or North Kivu during this outbreak, a team is called to the body. Its job is to take a swab, so the body can be tested, and to bury it safely.
 Every day the national report writes one line about this for each province: how many deaths the teams were called to, and how many bodies were swabbed.
 Each circle below is one of those deaths. <b>Draw across them</b> with a finger or the mouse to read them. A circle that fills was swabbed. A circle that turns into a red hole is one the report writes down as not swabbed.
 A dashed circle is one the report does not account for at all.
 The two provinces are read from the same reports, on the same days. Their lines do not speak the same way.
-When a whole Ituri day is read, the report's other table appears beneath it: that day's new confirmed cases, and how many of them were already dead.</p>
+When a whole Ituri day is read, the report's other table appears beneath it: that day's new confirmed cases, and how many of them were already dead. And for either province, the day's sentence is set out as its slots beside the other province's sentence in the same report, so you can see which place it leaves empty.</p>
 
 <div class="bar">
   <button id="p-it" aria-pressed="true">Ituri</button>
@@ -75,13 +85,14 @@ When a whole Ituri day is read, the report's other table appears beneath it: tha
 <canvas id="field" tabindex="0" aria-label="The deaths of one report day. Draw across them to read them; the read all button does the same."></canvas>
 <p id="count" aria-live="polite"></p>
 <div id="say" aria-live="polite"></div>
+<div id="form" aria-live="polite"></div>
 <div id="back" aria-live="polite"><canvas id="cases" aria-hidden="true"></canvas><p id="backsay"></p></div>
 
 <canvas id="strip" aria-label="Every report day from 30 August to 4 November 2026 for the open province. Tap a day to open it."></canvas>
 <p class="cap">Every report from 30 August to 4 November 2026, one column a day. Above the line, bodies swabbed.
 Below it, bodies the report writes as not swabbed<span class="key" style="background:var(--hole)"></span>,
 then deaths the line leaves unaccounted<span class="key" style="border:1px dashed var(--unsaid)"></span>.
-An empty slot means the archive holds no report for that day, or that the day's report wrote no line on bodies for the province. A bar with a hollow cap is a day whose line writes bodies swabbed but no number of calls. The ring marks the open day. A blue tick beneath an Ituri day marks a day corrected on 7 November.</p>
+An empty slot means the archive holds no report for that day, or that the day's report wrote no line on bodies for the province. A bar with a hollow cap is a day whose line writes bodies swabbed but no number of calls. The ring marks the open day. A blue tick beneath an Ituri day marks a day corrected on 7 November. Above the dates, the form of the day's sentence: a solid band for form B (the burials first, the calls as their denominator), a hollow band for form A (the calls first), none for any other order.</p>
 
 <section>
 <h2>What the record writes</h2>
@@ -98,6 +109,7 @@ On 27 October a sentence counts 16 failed <i>burials</i> in Ituri. The next day 
 <p>North Kivu's line says, again and again, <i>sans aucun échec</i>, <i>sans échec</i>, <i>(100 %)</i>: every body swabbed, without a failure. Where it does name a failure, it names the place and often the cause: “community resistance” at Mataba and Katwa, a refused body bag at Kyondo and Mutwanga, and on 25 September four swabs lost at Beni after “the incident the day before at Katula cemetery”. The day before, the report's own list of difficulties writes that North Kivu sent no report on infection control around cases, and that the burial teams at Beni were not safe.</p>
 <p>The phrase <i>sans échec</i> appears for the last time on 18 October. From 26 October on, North Kivu's line is written like Ituri's: so many calls, so many bodies swabbed, and on 7 of 9 days a remainder with no name.
 On 30 August to 2 September and on 18 September the line writes bodies swabbed and no number of calls, so there is nothing for them to fall short of: the page draws only the bodies. On 28 September it writes 56 calls and no bodies, so every circle stays dashed. On 13 and 14 September it writes the same sentence word for word.</p>
+<p><b>The form of the sentence (state 5).</b> Once a day is read whole, the page now sets the day's sentence out as its slots, calls, bodies and failures, beside the other province's sentence in the same report. The Field asked whether North Kivu's late silence is the form of its new sentence, which opens on the burials and names no failure. It is not, or not only. From 26 October both provinces use that same form on 8 report days; on 5 of them Ituri writes its failures (four times in a sentence of its own, once inside the line), and North Kivu writes them on 1, in a sentence of its own. Ituri's very first days, 30 August to 1 September, carry the failures in that same form, in parentheses. The form leaves a place empty. Whoever writes North Kivu's line leaves it empty.</p>
 </section>
 
 <section>
@@ -125,6 +137,7 @@ The order of the circles is shuffled every day, so you cannot know a body before
 <li><b>Not read.</b> Reports 158–163 and 172 are not in the archive. Reports 125, 126, 134, 135 and 164 were not found to carry an Ituri line on bodies (state 2 checked again: the swab lines in 125, 126, 134 and 135 are North Kivu's). Reports 128, 133, 136, 140, 142, 145, 146, 153 and 164 were not found to carry a North Kivu line on bodies. North Kivu often counts the bodies carried over to the next day; this reading takes them as burials still to be done (on 8 October 58 bodies are swabbed “sans échec” with 51 carried over), not bodies left unread, and the page does not draw them. Where a North Kivu line writes its calls as “N alerts and M carried over”, only N are drawn; where it writes “N alerts, of which M carried over”, all N are, as for Ituri. What a failure means (no swab taken, or a swab that could not be tested) is not written, and the page does not decide it.</li>
 <li><b>The case.</b> The Field offered the day this étude opens on: 1 September, when Ituri swabbed 65 bodies with 42 failures (<a href="https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md">study 57, READING57.md</a>).</li>
 <li><b>The other table (state 3).</b> New confirmed cases and community deaths per day come from the Field's study 59 (<a href="https://github.com/frankbueltge/field-research/blob/163fe066eaf2a747e2ea9a26412c1e1796b59314/artifacts/after-cycle-012/the-two-days/results59.json">results59.json</a>, session 257), which read the same reports with its own parser and joined them to this étude's reading of Ituri. <code>join59.py</code> checks that every joined day carries this page's date, calls, swabs and failures, and asserts the figures in this section. The squares are the sums over Ituri's health zones. <b>Corrected 2026-11-07 (state 4):</b> this étude noted that on 6 and 30 October those sums fell short of the report's own Ituri row; the Field's study 61 (<a href="https://github.com/frankbueltge/field-research/blob/76314055b4f045797c889390fb1c035ded26c9ea/artifacts/after-cycle-012/the-two-days/results61.json">results61.json</a>, session 259) found that no zone was missing but that its parser had lost cells. <code>join61.py</code> puts them back (6 Oct 32/10 → 33/10; 30 Oct 21/7 → 34/13; in all 1,939/583 → 1,953/589) and the page draws them in blue. On 30 October the report's own Ituri row still writes 34 and 12. Reports 121, 127, 173 and 174 are not joined, and North Kivu's cases are not read here.</li>
+<li><b>The form of the sentence (state 5).</b> Each day's quoted line is classed by the Field's own rule (study 60, <code>klass</code> in <a href="https://github.com/frankbueltge/field-research/blob/024f7cd9e4be4a906445ec1f12dcf7fb831ac460/artifacts/after-cycle-012/the-two-days/analyse60.py">analyse60.py</a>, session 258): A opens on the calls (“Sur N alertes”), B on the burials (“N EDS réalisés sur M alertes”), C is any other order. <code>forms.py</code> applies that rule to this étude's own quotes, checks that it gives the Field's class on every present report in both provinces (<a href="https://github.com/frankbueltge/field-research/blob/024f7cd9e4be4a906445ec1f12dcf7fb831ac460/artifacts/after-cycle-012/the-two-days/results60.json">results60.json</a>), and asserts the figures: in North Kivu, form A on 10 days writes the failure inside the line on 5; form B on 9 days writes it inside the line on none, and apart on 1; the other order on 32 days writes it inside on 9 and apart on 4. A failure is “written” when the line or a sentence of its own counts it, “sans échec” included, as a count of zero. The page does not know who writes each line.</li>
 <li><b>Nearest works in the house's Atlas.</b> <i>Of All the People in All the World</i> (Stan's Cafe, since 2004): one grain of rice, one person. <i>The Library of Missing Datasets</i> (Mimi Ọnụọha, since 2016): an absence given a folder. Here one mark is one call to a death, but the mark has to be opened by hand, and opening it can fail. The absence is not a missing dataset. It is the part of a daily line that, on most days, says nothing.</li>
 </ul>
 </section>
@@ -132,6 +145,7 @@ The order of the circles is shuffled every day, so you cannot know a body before
 </main>
 <script src="data.js"></script>
 <script src="cases.js"></script>
+<script src="forms.js"></script>
 <script>
 (() => {
 const D = window.UNREAD; let DAYS = D.days, PROV = 'it';
@@ -223,7 +237,7 @@ function counts() {
   const d = SLOTS[cur], t = marks.filter(m => m.t), rd = t.filter(m => m.k === 'read').length,
     hl = t.filter(m => m.k === 'hole').length, un = t.filter(m => m.k === 'unsaid').length;
   $('count').innerHTML = `read <b>${t.length}</b> of ${marks.length} · swabbed <b>${rd}</b> · <span class="h">not swabbed ${hl}</span> · unaccounted ${un}`;
-  if (t.length === marks.length) { say(); if (!back.classList.contains('on')) showBack(); } else if (!t.length) { $('say').innerHTML = ''; hideBack(); }
+  if (t.length === marks.length) { say(); if (!fm.classList.contains('on')) showForm(); if (!back.classList.contains('on')) showBack(); } else if (!t.length) { $('say').innerHTML = ''; hideForm(); hideBack(); }
 }
 function say() {
   const d = SLOTS[cur], S = d.swabbed || 0, rest = nOf(d) - S - (d.unread || 0);
@@ -232,6 +246,33 @@ function say() {
   en += d.unread === 0 ? `Written: “without a failure”. ` : d.unread != null ? `<span class="h">${d.unread} written as not swabbed.</span> ` : `How many were not swabbed: not written. `;
   if (d.alerts != null || d.of != null) en += rest > 0 ? `${rest} the line does not account for.` : rest < 0 ? `The numbers overrun the calls by ${-rest}.` : `Every call is accounted for.`;
   $('say').innerHTML = en + `<span class="fr">« ${d.q} »${d.uq ? ' … « ' + d.uq + ' »' : ''}${d.note ? ' … « ' + d.note + ' »' : ''} · SitRep ${d.report}</span>`;
+}
+// state 5: the form of the sentence, both provinces, same report, once a whole day is read
+const FM = window.UNREAD_FORMS, fm = $('form');
+const SKEL = { A: 'Sur <i>calls</i> alertes …, <i>burials</i> EDS ont été réalisés et <i>bodies</i> corps swabés',
+  B: '<i>burials</i> EDS réalisés sur <i>calls</i> alertes … et <i>bodies</i> corps swabés',
+  C: 'another order: the calls, the burials and the bodies, each in its own clause' };
+function hideForm() { fm.classList.remove('on'); fm.innerHTML = ''; }
+function slotRow(p, d, f, first) {
+  const who = (first ? PNAME[p] : PNAME[p] + ', same report') + ` · form ${f ? f.f : '–'}`;
+  if (!d || !d.q) return `<div class="row"><span class="who">${who}</span><span class="slot no">no line on bodies this day</span></div>`;
+  const sl = (v, name) => v != null ? `<span class="slot">${name} ${v}</span>` : `<span class="slot no">${name}: not written</span>`;
+  const fail = d.unread != null && f.w
+    ? `<span class="slot f">failures ${d.unread} · ${f.w === 'in' ? 'in the line' : 'written apart'}</span>`
+    : `<span class="slot no">failures: not written</span>`;
+  return `<div class="row"><span class="who">${who}</span>${sl(d.alerts, 'calls')}${sl(d.swabbed, 'bodies')}${fail}</div>`
+    + (first ? `<p class="sk">${SKEL[f.f]}</p>` : '');
+}
+function showForm() {
+  const d = SLOTS[cur], o = PROV === 'it' ? 'nk' : 'it', other = (o === 'nk' ? D.nk.days : D.days).find(x => x.report === d.report);
+  const F = FM.days[d.report] || {};
+  if (!F[PROV]) { hideForm(); return; }
+  let t = slotRow(PROV, d, F[PROV], true) + slotRow(o, other, F[o], false);
+  const G = FM.figures;
+  if (G.both_B.includes(d.report)) t += `<p class="fr">From 26 October both provinces write this line in the same form, B, on ${G.both_B.length} report days. On those days Ituri writes its failures on ${G.it_written.length}, North Kivu on ${G.nk_written.length}. The form has room for a failure. `
+    + (G.nk_written.includes(d.report) ? `This is the one day North Kivu fills it.` : G.it_written.includes(d.report) ? `This day Ituri fills it, and North Kivu leaves it empty.` : `This day neither province fills it.`) + ` (state 5)</p>`;
+  else if (PROV === 'nk' && F.nk.f === 'A') t += `<p class="fr">In form A, from 1 to 18 October, North Kivu writes the failure, or “sans échec”, inside the sentence on ${G.nk_A[1]} of its ${G.nk_A[0]} days. (state 5)</p>`;
+  fm.innerHTML = t; fm.classList.add('on');
 }
 // state 3: the other table, shown once a whole day is read
 const back = $('back'), cv = $('cases'), cx = cv.getContext('2d');
@@ -263,7 +304,7 @@ function showBack(quiet) {
     o.connect(gn).connect(ac.destination); o.start(t0); o.stop(t0 + .55); } }
 }
 function open(i) {
-  cur = i; const d = SLOTS[cur]; hideBack();
+  cur = i; const d = SLOTS[cur]; hideBack(); hideForm();
   $('day').textContent = `${PNAME[PROV]} · ${fmt(d.date)} · report ${d.report}`;
   layout(); drawField(); counts(); drawStrip();
 }
@@ -309,6 +350,8 @@ function drawStrip() {
     const u = s.unread || 0; if (u) { sx.fillStyle = hole; sx.fillRect(x, base + 2, bw, u * k); }
     const rest = nOf(s) - sw - u; if (rest > 0) { sx.strokeStyle = uns; sx.setLineDash([2, 2]); sx.lineWidth = 1;
       sx.strokeRect(x + .5, base + 2 + u * k + .5, bw - 1, rest * k - 1); sx.setLineDash([]); }
+    const fo = FM.days[s.report] && FM.days[s.report][PROV];
+    if (fo && fo.f === 'B') { sx.fillStyle = dim; sx.fillRect(x, h - 30, bw, 4); } else if (fo && fo.f === 'A') { sx.strokeStyle = dim; sx.lineWidth = 1; sx.strokeRect(x + .5, h - 29.5, bw - 1, 3); }
     if (PROV === 'it' && C.days[s.report] && C.days[s.report].restored) { sx.fillStyle = css('--back'); sx.fillRect(x, h - 22, bw, 3); }
     if (i === cur) { sx.strokeStyle = ink; sx.lineWidth = 1.5; sx.beginPath(); sx.arc(x + bw / 2, base - sw * k - 14, 4, 0, 7); sx.stroke(); }
   });
