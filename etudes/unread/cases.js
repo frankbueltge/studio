@@ -1,9 +1,19 @@
 window.UNREAD_CASES = {
  "source": "the Field, study 59 (session 257), field-research@163fe066, artifacts/after-cycle-012/the-two-days/results59.json",
+ "corrected": {
+  "date": "2026-11-07",
+  "by": "the Field, study 61 (session 259), field-research@76314055, artifacts/after-cycle-012/the-two-days/results61.json",
+  "was": {
+   "days": 51,
+   "new": 1939,
+   "comm": 583
+  },
+  "note": "6 Oct: +1 new case (Adja, printed on a line of its own); 30 Oct: +13 new cases, +6 community deaths (seven Ituri rows read whole but rejected by the guard)"
+ },
  "totals": {
   "days": 51,
-  "new": 1939,
-  "comm": 583
+  "new": 1953,
+  "comm": 589
  },
  "not_joined": [
   121,
@@ -199,10 +209,18 @@ window.UNREAD_CASES = {
    "provComm": 15
   },
   "145": {
-   "new": 32,
+   "new": 33,
    "comm": 10,
    "provNew": 33,
-   "provComm": 10
+   "provComm": 10,
+   "restored": {
+    "new": 1,
+    "comm": 0,
+    "rows": [
+     "(line of its own after Adja)"
+    ],
+    "why": "Adja's one new case is printed on a line of its own beneath Adja's row"
+   }
   },
   "146": {
    "new": 29,
@@ -301,10 +319,31 @@ window.UNREAD_CASES = {
    "provComm": 8
   },
   "169": {
-   "new": 21,
-   "comm": 7,
+   "new": 34,
+   "comm": 13,
    "provNew": 34,
-   "provComm": 12
+   "provComm": 12,
+   "restored": {
+    "new": 13,
+    "comm": 6,
+    "rows": [
+     "Lita",
+     "Lolwa",
+     "Mambasa",
+     "Mandima",
+     "Mangala",
+     "Mongbwalu",
+     "Rimba"
+    ],
+    "why": "seven rows read whole but rejected by the guard against shifted rows; the zones then sum to 34/13, the report's own Ituri row says 34/12"
+   },
+   "stale_rate": [
+    "Lita",
+    "Mambasa",
+    "Mandima",
+    "Mangala",
+    "Rimba"
+   ]
   },
   "170": {
    "new": 32,

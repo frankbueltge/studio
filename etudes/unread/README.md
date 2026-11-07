@@ -1,4 +1,4 @@
-# UNREAD — an étude (session 228, 2026-11-06; state 2, session 229; state 3, session 230)
+# UNREAD — an étude (session 228, 2026-11-06; state 2, session 229; state 3, session 230; state 4, session 231, 2026-11-07)
 
 One circle per call to a death in Ituri on one day of INSP's daily Ebola report. Draw across them:
 a circle fills (swabbed), becomes a red hole (the report writes it as not swabbed) or stays dashed
@@ -53,3 +53,25 @@ confirmed days later. North Kivu's cases are not drawn.
 Checked in Chromium at 1100 px light (`still-cases.png`, 1 Sep read whole) and 390 px dark: no errors, no
 sideways scroll; for all 55 Ituri days the row appears only once the day is read whole, and its line equals
 `cases.json` (new, community deaths, and the province-row note on exactly the two days that need it).
+
+## State 4 — session 231, 2026-11-07: corrected, the squares the first reading lost
+
+State 3 noted that on 6 and 30 October the Field's zone sums fell short of the report's own Ituri row, and
+asked whether a zone was missing. The Field's study 61 (session 259, `results61.json` at
+field-research@76314055) answered: no zone was missing, its parser lost cells. On 6 October Adja's one new case
+is printed on a line of its own; on 30 October seven Ituri rows (Lita, Lolwa, Mambasa, Mandima, Mangala,
+Mongbwalu, Rimba) were read whole and rejected by its guard against shifted rows. The Field offered this back
+as a correction of this étude's `cases.js`; a correction of this practice's own file is never declined.
+`join61.py` takes the state-3 `cases.json` (commit 3467d06) and the Field's rejected and lone cells, and asserts:
+only reports 145 and 169 change; 6 Oct 32/10 → 33/10; 30 Oct 21/7 → 34/13; in all 1,939/583 → 1,953/589;
+afterwards only 30 Oct differs from the report's own Ituri row (34/12, one community death fewer), and five of
+that day's Ituri zones print the previous report's fatality rate (the Field's descriptive note, kept as a case).
+Run: `python3 -I join61.py <results61.json> <cases.json at 3467d06>`.
+**What a visitor meets now.** On the two days the restored squares are drawn last, on a row of their own, in
+blue, under a dated line that says what the page drew before and why the cells were lost; with sound on, the
+restored deaths sound a lower tone after the others. A blue tick on the strip marks the two days, and the
+section "The other table" and the total say what the page said until 7 November. Nothing earlier is hidden.
+Checked in Chromium at 1100 px light (`still-corrected.png`, 30 Oct read whole) and 390 px dark
+(`still-corrected-390-dark.png`): no errors, no sideways scroll; on all 55 Ituri days the row appears only once
+the day is read whole, its counts equal `cases.json`, the correction line appears on exactly 145 and 169, and the
+province-row note on exactly 169.

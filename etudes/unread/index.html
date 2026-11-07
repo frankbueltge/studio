@@ -6,13 +6,13 @@
 <title>UNREAD — Ensemble</title>
 <style>
   :root { --bg:#f2efe7; --ink:#1c1b19; --dim:#6c685f; --rule:#d3cec2; --body:#b9b3a6; --read:#1c1b19;
-          --hole:#b0301f; --unsaid:#8f8a80; --wash:rgba(28,27,25,.05); }
+          --hole:#b0301f; --unsaid:#8f8a80; --back:#2b6c8c; --wash:rgba(28,27,25,.05); }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) { --bg:#0b0c0e; --ink:#e2ddd0; --dim:#8d897f; --rule:#2a2d33; --body:#3d3f44;
-            --read:#f1ecdf; --hole:#ff6a55; --unsaid:#77736b; --wash:rgba(226,221,208,.05); }
+            --read:#f1ecdf; --hole:#ff6a55; --unsaid:#77736b; --back:#74b6d8; --wash:rgba(226,221,208,.05); }
   }
   :root[data-theme="dark"] { --bg:#0b0c0e; --ink:#e2ddd0; --dim:#8d897f; --rule:#2a2d33; --body:#3d3f44;
-            --read:#f1ecdf; --hole:#ff6a55; --unsaid:#77736b; --wash:rgba(226,221,208,.05); }
+            --read:#f1ecdf; --hole:#ff6a55; --unsaid:#77736b; --back:#74b6d8; --wash:rgba(226,221,208,.05); }
   * { box-sizing:border-box; }
   html,body { margin:0; background:var(--bg); color:var(--ink); }
   body { font:16px/1.55 Georgia, "Times New Roman", serif; }
@@ -53,7 +53,7 @@
 </head>
 <body>
 <main>
-<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu · state 3 (session 230): what the other table counts</p>
+<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu · state 3 (session 230): what the other table counts · state 4 (session 231, 2026-11-07): corrected, the squares the first reading lost</p>
 <h1>UNREAD</h1>
 <p class="lede">When someone dies in Ituri or North Kivu during this outbreak, a team is called to the body. Its job is to take a swab, so the body can be tested, and to bury it safely.
 Every day the national report writes one line about this for each province: how many deaths the teams were called to, and how many bodies were swabbed.
@@ -81,7 +81,7 @@ When a whole Ituri day is read, the report's other table appears beneath it: tha
 <p class="cap">Every report from 30 August to 4 November 2026, one column a day. Above the line, bodies swabbed.
 Below it, bodies the report writes as not swabbed<span class="key" style="background:var(--hole)"></span>,
 then deaths the line leaves unaccounted<span class="key" style="border:1px dashed var(--unsaid)"></span>.
-An empty slot means the archive holds no report for that day, or that the day's report wrote no line on bodies for the province. A bar with a hollow cap is a day whose line writes bodies swabbed but no number of calls. The ring marks the open day.</p>
+An empty slot means the archive holds no report for that day, or that the day's report wrote no line on bodies for the province. A bar with a hollow cap is a day whose line writes bodies swabbed but no number of calls. The ring marks the open day. A blue tick beneath an Ituri day marks a day corrected on 7 November.</p>
 
 <section>
 <h2>What the record writes</h2>
@@ -106,6 +106,7 @@ On 30 August to 2 September and on 18 September the line writes bodies swabbed a
 When you have read every circle of an Ituri day, that count appears beneath the field: one square for each new confirmed case, a filled square for each who was already dead.
 For Ituri, the two tables meet here. A body that was swabbed can come back as a confirmed case. A body that was not swabbed cannot.
 The report does not join the two tables, and neither does the page: a square is not one of that day's circles, and a swab taken today may be confirmed on a later day.</p>
+<p><b>Corrected, 7 November 2026.</b> The first reading of this table lost cells on two days: on 6 October one case printed on a line of its own, on 30 October thirteen cases, six of them dead, in seven rows that were read but rejected. They are back, drawn last, on a row of their own, in blue. On 30 October the zones, read whole, still count one more community death than the report's own Ituri row. Open <a href="?report=145">6 October</a> or <a href="?report=169">30 October</a> and read the day.</p>
 <p id="totcases"></p>
 </section>
 
@@ -123,7 +124,7 @@ The order of the circles is shuffled every day, so you cannot know a body before
 <li><b>Counting.</b> A circle is a death alert: a call to a death. The reports sometimes count alerts “carried over from the day before”, so one death can be called on two days. Circles are calls, not people. When a report writes “swabbed of M”, the page shows M as written, but only an explicit count of failures turns a circle red.</li>
 <li><b>Not read.</b> Reports 158–163 and 172 are not in the archive. Reports 125, 126, 134, 135 and 164 were not found to carry an Ituri line on bodies (state 2 checked again: the swab lines in 125, 126, 134 and 135 are North Kivu's). Reports 128, 133, 136, 140, 142, 145, 146, 153 and 164 were not found to carry a North Kivu line on bodies. North Kivu often counts the bodies carried over to the next day; this reading takes them as burials still to be done (on 8 October 58 bodies are swabbed “sans échec” with 51 carried over), not bodies left unread, and the page does not draw them. Where a North Kivu line writes its calls as “N alerts and M carried over”, only N are drawn; where it writes “N alerts, of which M carried over”, all N are, as for Ituri. What a failure means (no swab taken, or a swab that could not be tested) is not written, and the page does not decide it.</li>
 <li><b>The case.</b> The Field offered the day this étude opens on: 1 September, when Ituri swabbed 65 bodies with 42 failures (<a href="https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md">study 57, READING57.md</a>).</li>
-<li><b>The other table (state 3).</b> New confirmed cases and community deaths per day come from the Field's study 59 (<a href="https://github.com/frankbueltge/field-research/blob/163fe066eaf2a747e2ea9a26412c1e1796b59314/artifacts/after-cycle-012/the-two-days/results59.json">results59.json</a>, session 257), which read the same reports with its own parser and joined them to this étude's reading of Ituri. <code>join59.py</code> checks that every joined day carries this page's date, calls, swabs and failures, and asserts the figures in this section. The squares are the sums over Ituri's health zones; on 6 and 30 October the report's own Ituri row writes other numbers (33 and 10; 34 and 12), and the page says so on those days. Reports 121, 127, 173 and 174 are not joined, and North Kivu's cases are not read here.</li>
+<li><b>The other table (state 3).</b> New confirmed cases and community deaths per day come from the Field's study 59 (<a href="https://github.com/frankbueltge/field-research/blob/163fe066eaf2a747e2ea9a26412c1e1796b59314/artifacts/after-cycle-012/the-two-days/results59.json">results59.json</a>, session 257), which read the same reports with its own parser and joined them to this étude's reading of Ituri. <code>join59.py</code> checks that every joined day carries this page's date, calls, swabs and failures, and asserts the figures in this section. The squares are the sums over Ituri's health zones. <b>Corrected 2026-11-07 (state 4):</b> this étude noted that on 6 and 30 October those sums fell short of the report's own Ituri row; the Field's study 61 (<a href="https://github.com/frankbueltge/field-research/blob/76314055b4f045797c889390fb1c035ded26c9ea/artifacts/after-cycle-012/the-two-days/results61.json">results61.json</a>, session 259) found that no zone was missing but that its parser had lost cells. <code>join61.py</code> puts them back (6 Oct 32/10 → 33/10; 30 Oct 21/7 → 34/13; in all 1,939/583 → 1,953/589) and the page draws them in blue. On 30 October the report's own Ituri row still writes 34 and 12. Reports 121, 127, 173 and 174 are not joined, and North Kivu's cases are not read here.</li>
 <li><b>Nearest works in the house's Atlas.</b> <i>Of All the People in All the World</i> (Stan's Cafe, since 2004): one grain of rice, one person. <i>The Library of Missing Datasets</i> (Mimi Ọnụọha, since 2016): an absence given a folder. Here one mark is one call to a death, but the mark has to be opened by hand, and opening it can fail. The absence is not a missing dataset. It is the part of a daily line that, on most days, says nothing.</li>
 </ul>
 </section>
@@ -146,7 +147,8 @@ const fmt = d => { const [y, m, dd] = d.split('-').map(Number);
 const nf = n => n.toLocaleString('en-GB');
 const T = D.totals;
 const C = window.UNREAD_CASES;
-$('totcases').innerHTML = `On the ${C.totals.days} Ituri days the Field joined, the report counts <b>${nf(C.totals.new)}</b> new confirmed cases. <b>${nf(C.totals.comm)}</b> of them were already dead when they were counted.`;
+$('totcases').innerHTML = `On the ${C.totals.days} Ituri days the Field joined, the report counts <b>${nf(C.totals.new)}</b> new confirmed cases. <b>${nf(C.totals.comm)}</b> of them were already dead when they were counted.`
+  + ` <span style="color:var(--back)">Until 7 November this page said ${nf(C.corrected.was.new)} and ${nf(C.corrected.was.comm)}.</span>`;
 $('tot').innerHTML = `Ituri, ${T.with_line} report days between 30 August and 4 November 2026: the teams were called to <b>${nf(T.alerts)}</b> deaths and swabbed <b>${nf(T.swabbed)}</b> bodies.
 Only ${T.written} of the ${T.with_line} days write how many were not swabbed. Together those days write <span style="color:var(--hole)">${nf(T.unread)}</span>.
 On the other ${T.with_line - T.written} days, ${nf(D.days.filter(d => d.alerts && d.unread == null).reduce((a, d) => a + d.alerts - d.swabbed, 0))} calls have no body swabbed and no failure written.
@@ -239,19 +241,25 @@ function showBack(quiet) {
   if (PROV !== 'it') { $('backsay').innerHTML = `<span class="fr">The other table, the day's confirmed cases, is drawn for Ituri only.</span>`; back.classList.add('on'); return; }
   const c = C.days[d.report];
   if (!c) { $('backsay').innerHTML = `<span class="fr">For this report the Field's reading of the other table is not joined.</span>`; back.classList.add('on'); return; }
-  const w = cv.clientWidth, s = w < 500 ? 7 : 9, g = 3, per = Math.max(1, Math.floor((w + g) / (s + g))), rows = Math.ceil(c.new / per), h = Math.max(12, rows * (s + g));
+  const R0 = c.restored || { new: 0, comm: 0 }, n0 = c.new - R0.new, c0 = c.comm - R0.comm;
+  const w = cv.clientWidth, s = w < 500 ? 7 : 9, g = 3, per = Math.max(1, Math.floor((w + g) / (s + g))), rows0 = Math.ceil(n0 / per),
+    rows1 = Math.ceil(R0.new / per), gap = R0.new ? s + g : 0, h = Math.max(12, (rows0 + rows1) * (s + g) + gap);
   cv.style.height = h + 'px'; cv.width = w * dpr; cv.height = h * dpr; cx.setTransform(dpr, 0, 0, dpr, 0, 0); cx.clearRect(0, 0, w, h);
   const ink = css('--read'), dim = css('--dim');
-  const r = rng(SEED ^ (d.report * 40503)), kinds = Array.from({ length: c.new }, (_, i) => i < c.comm);
-  for (let i = kinds.length - 1; i > 0; i--) { const j = (r() * (i + 1)) | 0; [kinds[i], kinds[j]] = [kinds[j], kinds[i]]; }
-  kinds.forEach((dead, i) => { const x = (i % per) * (s + g) + .5, y = ((i / per) | 0) * (s + g) + .5;
-    if (dead) { cx.fillStyle = ink; cx.fillRect(x, y, s, s); } else { cx.strokeStyle = dim; cx.lineWidth = 1; cx.strokeRect(x, y, s - 1, s - 1); } });
+  const r = rng(SEED ^ (d.report * 40503)), shuf = (n, k) => { const a = Array.from({ length: n }, (_, i) => i < k);
+    for (let i = a.length - 1; i > 0; i--) { const j = (r() * (i + 1)) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const sq = (kinds, y0, full, line) => kinds.forEach((dead, i) => { const x = (i % per) * (s + g) + .5, y = y0 + ((i / per) | 0) * (s + g) + .5;
+    if (dead) { cx.fillStyle = full; cx.fillRect(x, y, s, s); } else { cx.strokeStyle = line; cx.lineWidth = 1; cx.strokeRect(x, y, s - 1, s - 1); } });
+  sq(shuf(n0, c0), 0, ink, dim);
+  if (R0.new) { const blue = css('--back'); sq(shuf(R0.new, R0.comm), rows0 * (s + g) + gap, blue, blue); }
   let t = `The same report, another table: <b>${c.new}</b> new confirmed cases in Ituri. <b>${c.comm}</b> of them were already dead when they were counted.`;
-  if (c.new !== c.provNew || c.comm !== c.provComm) t += ` <span class="fr">Summed over Ituri's zones. The report's own Ituri row writes ${c.provNew} and ${c.provComm}.</span>`;
+  if (c.restored) t += ` <span class="fr" style="color:var(--back)">Corrected 7 November 2026: until then this page drew ${c.new - c.restored.new} and ${c.comm - c.restored.comm}. The first reading lost ${c.restored.new === 1 ? 'the last square' : 'the last ' + c.restored.new + ' squares'}${c.restored.comm ? ', ' + c.restored.comm + ' of them filled' : ''}: ${c.restored.new === 1 ? 'a case printed on a line of its own, beneath Adja\'s row' : c.restored.rows.length + ' zone rows read whole but rejected (' + c.restored.rows.join(', ') + ')'}. Drawn in blue. (the Field, study 61)</span>`;
+  if (c.new !== c.provNew || c.comm !== c.provComm) t += ` <span class="fr">Summed over Ituri's zones. The report's own Ituri row writes ${c.provNew} and ${c.provComm}: the report disagrees with itself by ${Math.abs(c.comm - c.provComm) + Math.abs(c.new - c.provNew)}.</span>`;
+  if (c.stale_rate) t += ` <span class="fr">${c.stale_rate.length} of these zones (${c.stale_rate.join(', ')}) print the previous report's fatality rate beside this day's counts.</span>`;
   $('backsay').innerHTML = t + `<span class="fr">not the bodies above: the report does not join its two tables · the Field, study 59</span>`;
   back.classList.add('on');
-  if (!quiet && soundOn && ac) { const now = ac.currentTime + .3; for (let i = 0; i < c.comm; i++) { const o = ac.createOscillator(), gn = ac.createGain(), t0 = now + i * .11;
-    o.type = 'sine'; o.frequency.value = 130; gn.gain.setValueAtTime(0.0001, t0); gn.gain.exponentialRampToValueAtTime(0.08, t0 + .01); gn.gain.exponentialRampToValueAtTime(0.0001, t0 + .5);
+  if (!quiet && soundOn && ac) { const now = ac.currentTime + .3; for (let i = 0; i < c.comm; i++) { const o = ac.createOscillator(), gn = ac.createGain(), t0 = now + i * .11 + (i >= c0 ? .6 : 0);
+    o.type = 'sine'; o.frequency.value = i >= c0 ? 98 : 130; gn.gain.setValueAtTime(0.0001, t0); gn.gain.exponentialRampToValueAtTime(0.08, t0 + .01); gn.gain.exponentialRampToValueAtTime(0.0001, t0 + .5);
     o.connect(gn).connect(ac.destination); o.start(t0); o.stop(t0 + .55); } }
 }
 function open(i) {
@@ -301,6 +309,7 @@ function drawStrip() {
     const u = s.unread || 0; if (u) { sx.fillStyle = hole; sx.fillRect(x, base + 2, bw, u * k); }
     const rest = nOf(s) - sw - u; if (rest > 0) { sx.strokeStyle = uns; sx.setLineDash([2, 2]); sx.lineWidth = 1;
       sx.strokeRect(x + .5, base + 2 + u * k + .5, bw - 1, rest * k - 1); sx.setLineDash([]); }
+    if (PROV === 'it' && C.days[s.report] && C.days[s.report].restored) { sx.fillStyle = css('--back'); sx.fillRect(x, h - 22, bw, 3); }
     if (i === cur) { sx.strokeStyle = ink; sx.lineWidth = 1.5; sx.beginPath(); sx.arc(x + bw / 2, base - sw * k - 14, 4, 0, 7); sx.stroke(); }
   });
   sx.fillStyle = dim; sx.font = '11px ui-monospace, Menlo, monospace';
