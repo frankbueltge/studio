@@ -51,6 +51,18 @@
   #form .sk { color:var(--dim); font-style:italic; margin:2px 0 0; }
   #form .sk i { font-style:normal; color:var(--ink); }
   #form .fr { color:var(--dim); margin:8px 0 0; }
+  #carry { max-width:46em; margin:14px 0 0; opacity:0; transition:opacity .9s; font:13px/1.5 ui-monospace, Menlo, monospace; }
+  #carry.on { opacity:1; }
+  #carry .row { display:flex; flex-wrap:wrap; align-items:center; gap:4px 10px; margin:5px 0; }
+  #carry .who { min-width:17em; color:var(--dim); }
+  #carry .ticks { display:flex; gap:2px; }
+  #carry .t { width:6px; height:16px; background:var(--ink); opacity:0; transition:opacity .25s; }
+  #carry .t.no { background:transparent; outline:1px dashed var(--unsaid); outline-offset:-1px; }
+  #carry.on .t { opacity:1; }
+  #carry .n { color:var(--ink); }
+  #carry p { margin:8px 0 0; font:15px/1.5 Georgia, "Times New Roman", serif; }
+  #carry p.fr { color:var(--dim); font:12px/1.5 ui-monospace, Menlo, monospace; }
+  #carry .row .fr { color:var(--dim); font-size:12px; }
   #strip { display:block; width:100%; height:190px; margin:28px 0 0; cursor:pointer; touch-action:manipulation; }
   .cap { font:12px/1.5 ui-monospace, Menlo, monospace; color:var(--dim); margin:4px 0 0; max-width:62em; }
   .key { display:inline-block; width:10px; height:10px; border-radius:50%; vertical-align:-1px; margin:0 4px 0 10px; }
@@ -63,7 +75,7 @@
 </head>
 <body>
 <main>
-<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu · state 3 (session 230): what the other table counts · state 4 (session 231, 2026-11-07): corrected, the squares the first reading lost · state 5 (session 232, 2026-11-07): the form of the sentence</p>
+<p class="tag">ENSEMBLE · ÉTUDE · 2026-11-06 · after cycle 012 · on the Field's case of 1 September · state 2 (session 229): North Kivu · state 3 (session 230): what the other table counts · state 4 (session 231, 2026-11-07): corrected, the squares the first reading lost · state 5 (session 232, 2026-11-07): the form of the sentence · state 6 (session 233, 2026-11-07): what the running total carried</p>
 <h1>UNREAD</h1>
 <p class="lede">When someone dies in Ituri or North Kivu during this outbreak, a team is called to the body. Its job is to take a swab, so the body can be tested, and to bury it safely.
 Every day the national report writes one line about this for each province: how many deaths the teams were called to, and how many bodies were swabbed.
@@ -87,6 +99,7 @@ When a whole Ituri day is read, the report's other table appears beneath it: tha
 <div id="say" aria-live="polite"></div>
 <div id="form" aria-live="polite"></div>
 <div id="back" aria-live="polite"><canvas id="cases" aria-hidden="true"></canvas><p id="backsay"></p></div>
+<div id="carry" aria-live="polite"></div>
 
 <canvas id="strip" aria-label="Every report day from 30 August to 4 November 2026 for the open province. Tap a day to open it."></canvas>
 <p class="cap">Every report from 30 August to 4 November 2026, one column a day. Above the line, bodies swabbed.
@@ -119,6 +132,7 @@ When you have read every circle of an Ituri day, that count appears beneath the 
 For Ituri, the two tables meet here. A body that was swabbed can come back as a confirmed case. A body that was not swabbed cannot.
 The report does not join the two tables, and neither does the page: a square is not one of that day's circles, and a swab taken today may be confirmed on a later day.</p>
 <p><b>Corrected, 7 November 2026.</b> The first reading of this table lost cells on two days: on 6 October one case printed on a line of its own, on 30 October thirteen cases, six of them dead, in seven rows that were read but rejected. They are back, drawn last, on a row of their own, in blue. On 30 October the zones, read whole, still count one more community death than the report's own Ituri row. Open <a href="?report=145">6 October</a> or <a href="?report=169">30 October</a> and read the day.</p>
+<p><b>What the running total carried (state 6).</b> On 30 October the zones count one more community death than the report's own Ituri row, and one more death in the treatment centres. The next report keeps a running total of Ituri's dead. It moved from 3,436 to 3,455: by 19, the row's 12 and 7, not the zones' 13 and 8. The zones' own totals moved by 18. Mongbwalu prints a day total of 10 beside one death and none, and its total does not move at all. On 31 October the zones' totals move by one more than they print, and the two totals meet again. Read <a href="?report=169">30 October</a> or <a href="?report=170">31 October</a> whole, and four rows of ticks appear beneath the squares: one tick per death, each count beside the others. A total counts deaths, not places, so whether the zones' two more are deaths it left out or deaths counted twice is not written anywhere.</p>
 <p id="totcases"></p>
 </section>
 
@@ -137,6 +151,7 @@ The order of the circles is shuffled every day, so you cannot know a body before
 <li><b>Not read.</b> Reports 158–163 and 172 are not in the archive. Reports 125, 126, 134, 135 and 164 were not found to carry an Ituri line on bodies (state 2 checked again: the swab lines in 125, 126, 134 and 135 are North Kivu's). Reports 128, 133, 136, 140, 142, 145, 146, 153 and 164 were not found to carry a North Kivu line on bodies. North Kivu often counts the bodies carried over to the next day; this reading takes them as burials still to be done (on 8 October 58 bodies are swabbed “sans échec” with 51 carried over), not bodies left unread, and the page does not draw them. Where a North Kivu line writes its calls as “N alerts and M carried over”, only N are drawn; where it writes “N alerts, of which M carried over”, all N are, as for Ituri. What a failure means (no swab taken, or a swab that could not be tested) is not written, and the page does not decide it.</li>
 <li><b>The case.</b> The Field offered the day this étude opens on: 1 September, when Ituri swabbed 65 bodies with 42 failures (<a href="https://github.com/frankbueltge/field-research/blob/main/artifacts/after-cycle-012/the-two-days/READING57.md">study 57, READING57.md</a>).</li>
 <li><b>The other table (state 3).</b> New confirmed cases and community deaths per day come from the Field's study 59 (<a href="https://github.com/frankbueltge/field-research/blob/163fe066eaf2a747e2ea9a26412c1e1796b59314/artifacts/after-cycle-012/the-two-days/results59.json">results59.json</a>, session 257), which read the same reports with its own parser and joined them to this étude's reading of Ituri. <code>join59.py</code> checks that every joined day carries this page's date, calls, swabs and failures, and asserts the figures in this section. The squares are the sums over Ituri's health zones. <b>Corrected 2026-11-07 (state 4):</b> this étude noted that on 6 and 30 October those sums fell short of the report's own Ituri row; the Field's study 61 (<a href="https://github.com/frankbueltge/field-research/blob/76314055b4f045797c889390fb1c035ded26c9ea/artifacts/after-cycle-012/the-two-days/results61.json">results61.json</a>, session 259) found that no zone was missing but that its parser had lost cells. <code>join61.py</code> puts them back (6 Oct 32/10 → 33/10; 30 Oct 21/7 → 34/13; in all 1,939/583 → 1,953/589) and the page draws them in blue. On 30 October the report's own Ituri row still writes 34 and 12. Reports 121, 127, 173 and 174 are not joined, and North Kivu's cases are not read here.</li>
+<li><b>What the running total carried (state 6).</b> This étude asked which of the two counts of 30 October the next running total keeps. The Field's study 62 (<a href="https://github.com/frankbueltge/field-research/blob/1688a7978b50b11997b37ce58bf3372eb02fdfb9/artifacts/after-cycle-012/the-two-days/results62.json">results62.json</a>, session 260) read Ituri's row and zone totals in reports 168 to 171. <code>join62.py</code> re-derives every step from those rows, checks the community deaths against this page's corrected other table, and asserts the figures: 30 Oct, row 12 + 7, total 3,436 → 3,455; zones 13 + 8, their totals +18; Mambasa, Mongbwalu and Nizi move by less than they print; 31 Oct, row and zones 28, total +28, zones +29, and zones plus the deaths not yet assigned to a zone meet the row at 3,483. The ticks are counts, not people.</li>
 <li><b>The form of the sentence (state 5).</b> Each day's quoted line is classed by the Field's own rule (study 60, <code>klass</code> in <a href="https://github.com/frankbueltge/field-research/blob/024f7cd9e4be4a906445ec1f12dcf7fb831ac460/artifacts/after-cycle-012/the-two-days/analyse60.py">analyse60.py</a>, session 258): A opens on the calls (“Sur N alertes”), B on the burials (“N EDS réalisés sur M alertes”), C is any other order. <code>forms.py</code> applies that rule to this étude's own quotes, checks that it gives the Field's class on every present report in both provinces (<a href="https://github.com/frankbueltge/field-research/blob/024f7cd9e4be4a906445ec1f12dcf7fb831ac460/artifacts/after-cycle-012/the-two-days/results60.json">results60.json</a>), and asserts the figures: in North Kivu, form A on 10 days writes the failure inside the line on 5; form B on 9 days writes it inside the line on none, and apart on 1; the other order on 32 days writes it inside on 9 and apart on 4. A failure is “written” when the line or a sentence of its own counts it, “sans échec” included, as a count of zero. The page does not know who writes each line.</li>
 <li><b>Nearest works in the house's Atlas.</b> <i>Of All the People in All the World</i> (Stan's Cafe, since 2004): one grain of rice, one person. <i>The Library of Missing Datasets</i> (Mimi Ọnụọha, since 2016): an absence given a folder. Here one mark is one call to a death, but the mark has to be opened by hand, and opening it can fail. The absence is not a missing dataset. It is the part of a daily line that, on most days, says nothing.</li>
 </ul>
@@ -146,6 +161,7 @@ The order of the circles is shuffled every day, so you cannot know a body before
 <script src="data.js"></script>
 <script src="cases.js"></script>
 <script src="forms.js"></script>
+<script src="carry.js"></script>
 <script>
 (() => {
 const D = window.UNREAD; let DAYS = D.days, PROV = 'it';
@@ -276,7 +292,8 @@ function showForm() {
 }
 // state 3: the other table, shown once a whole day is read
 const back = $('back'), cv = $('cases'), cx = cv.getContext('2d');
-function hideBack() { back.classList.remove('on'); $('backsay').innerHTML = ''; cx.clearRect(0, 0, cv.width, cv.height); }
+const L = window.UNREAD_CARRY, cy = $('carry');
+function hideBack() { back.classList.remove('on'); $('backsay').innerHTML = ''; cx.clearRect(0, 0, cv.width, cv.height); hideCarry(); }
 function showBack(quiet) {
   const d = SLOTS[cur];
   if (PROV !== 'it') { $('backsay').innerHTML = `<span class="fr">The other table, the day's confirmed cases, is drawn for Ituri only.</span>`; back.classList.add('on'); return; }
@@ -298,7 +315,7 @@ function showBack(quiet) {
   if (c.new !== c.provNew || c.comm !== c.provComm) t += ` <span class="fr">Summed over Ituri's zones. The report's own Ituri row writes ${c.provNew} and ${c.provComm}: the report disagrees with itself by ${Math.abs(c.comm - c.provComm) + Math.abs(c.new - c.provNew)}.</span>`;
   if (c.stale_rate) t += ` <span class="fr">${c.stale_rate.length} of these zones (${c.stale_rate.join(', ')}) print the previous report's fatality rate beside this day's counts.</span>`;
   $('backsay').innerHTML = t + `<span class="fr">not the bodies above: the report does not join its two tables · the Field, study 59</span>`;
-  back.classList.add('on');
+  back.classList.add('on'); showCarry(d.report, quiet);
   if (!quiet && soundOn && ac) { const now = ac.currentTime + .3; for (let i = 0; i < c.comm; i++) { const o = ac.createOscillator(), gn = ac.createGain(), t0 = now + i * .11 + (i >= c0 ? .6 : 0);
     o.type = 'sine'; o.frequency.value = i >= c0 ? 98 : 130; gn.gain.setValueAtTime(0.0001, t0); gn.gain.exponentialRampToValueAtTime(0.08, t0 + .01); gn.gain.exponentialRampToValueAtTime(0.0001, t0 + .5);
     o.connect(gn).connect(ac.destination); o.start(t0); o.stop(t0 + .55); } }
@@ -363,7 +380,29 @@ strip.addEventListener('click', e => { const b = strip.getBoundingClientRect(), 
   if (has(SLOTS[i])) open(i); });
 let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { const keep = marks.map(m => m.t); size(); layout(); marks.forEach((m, i) => m.t = keep[i] || 0); drawField(); drawStrip(); if (back.classList.contains('on')) showBack(true); }, 120); });
 size(); open(cur);
-window.__unread = { SLOTS: () => SLOTS, marks: () => marks, open, OPEN: () => OPEN, prov, cur: () => cur, back: () => ({ on: back.classList.contains('on'), text: $('backsay').textContent }) };
+// state 6: what the running total carried (the Field, study 62)
+function hideCarry() { cy.classList.remove('on'); cy.innerHTML = ''; }
+function showCarry(rep, quiet) {
+  const c = L.days[rep]; if (!c || PROV !== 'it') { hideCarry(); return; }
+  const z = c.zones, w = c.row, max = Math.max(z.day, w.day, w.step, z.step);
+  const ticks = (n, cls) => '<span class="ticks">' + Array.from({ length: max }, (_, i) =>
+    `<span class="t${i < n ? (cls ? ' ' + cls : '') : ' no'}" style="transition-delay:${(i < n ? i * 60 : 0) + 900}ms"></span>`).join('') + '</span>';
+  const row = (who, n, note, cls) => `<div class="row"><span class="who">${who}</span>${ticks(n, cls)}<span class="n">${n}</span><span class="fr">${note}</span></div>`;
+  let t = `<p>The next report's running total. Ituri's deaths in all: ${nf(w.from)} on ${fmt(c.prev)}, ${nf(w.to)} on ${fmt(c.date)}.</p>`
+    + row('the zones print for the day', z.day, `${z.comm} in the community + ${z.cte} in treatment centres`)
+    + row("the Ituri row prints for the day", w.day, `${w.comm} + ${w.cte}`)
+    + row("Ituri's running total moved by", w.step, `${nf(w.from)} → ${nf(w.to)}`, 'k')
+    + row("the zones' own running totals moved by", z.step, `${nf(z.from)} → ${nf(z.to)}`);
+  if (w.step === w.day && z.day !== w.day) t += `<p>The total carried the row's ${w.day}, not the zones' ${z.day}. It counts deaths, not where they were met, so it cannot say whether ${w.comm} or ${z.comm} died in the community, and whether the zones' ${z.day - w.step} more are deaths the total left out or deaths counted twice is not written anywhere.</p>`;
+  else if (z.step !== z.day) t += `<p>The day's row and its zones agree again, and the total moves by the day. The zones' own totals move by ${z.step}: one more than they print, and from here the two totals meet again.</p>`;
+  if (c.off.length) t += `<p class="fr">Zones whose own total did not move by the deaths they printed: ${c.off.map(o => `${o.zone} (prints ${o.comm} + ${o.cte}${o.printed_total !== o.comm + o.cte ? ', and a day total of ' + o.printed_total : ''}; its total moves ${o.step})`).join(' · ')}.</p>`;
+  t += `<p class="fr">the Field, study 62 · one tick per death · a dashed tick is a death another count carries and this one does not</p>`;
+  cy.innerHTML = t; requestAnimationFrame(() => requestAnimationFrame(() => cy.classList.add('on')));
+  if (!quiet && soundOn && ac) { const now = ac.currentTime + 1.2; for (let i = 0; i < w.step; i++) { const o = ac.createOscillator(), gn = ac.createGain(), t0 = now + i * .06;
+    o.type = 'triangle'; o.frequency.value = 660; gn.gain.setValueAtTime(0.0001, t0); gn.gain.exponentialRampToValueAtTime(0.04, t0 + .005); gn.gain.exponentialRampToValueAtTime(0.0001, t0 + .08);
+    o.connect(gn).connect(ac.destination); o.start(t0); o.stop(t0 + .1); } }
+}
+window.__unread = { SLOTS: () => SLOTS, marks: () => marks, open, OPEN: () => OPEN, prov, cur: () => cur, back: () => ({ on: back.classList.contains('on'), text: $('backsay').textContent }), carry: () => ({ on: cy.classList.contains('on'), text: cy.textContent, ticks: [...cy.querySelectorAll('.ticks')].map(e => e.querySelectorAll('.t:not(.no)').length) }) };
 })();
 </script>
 </body>

@@ -1,4 +1,4 @@
-# UNREAD — an étude (session 228, 2026-11-06; state 2, session 229; state 3, session 230; state 4, session 231, 2026-11-07; state 5, session 232, 2026-11-07)
+# UNREAD — an étude (session 228, 2026-11-06; state 2, session 229; state 3, session 230; state 4, session 231, 2026-11-07; state 5, session 232, 2026-11-07; state 6, session 233, 2026-11-07)
 
 One circle per call to a death in Ituri on one day of INSP's daily Ebola report. Draw across them:
 a circle fills (swabbed), becomes a red hole (the report writes it as not swabbed) or stays dashed
@@ -98,3 +98,24 @@ Checked in Chromium at 1100 px light (`still-form.png`, North Kivu 27 Oct read w
 (`still-form-390-dark.png`, Ituri 28 Oct): no errors, no sideways scroll; on all 55 Ituri and 51 North Kivu
 days the panel stays hidden until the day is read whole, then shows two rows; the closing line appears on
 exactly the 8 shared form-B days in each province.
+
+## State 6 — session 233, 2026-11-07: what the running total carried
+
+State 4 left 30 October with two counts of the dead: the zones, read whole, print 13 community deaths and 8 in
+treatment centres; the report's own Ituri row prints 12 and 7. This étude asked the Field which of the two the
+next running total keeps. Its study 62 (session 260, `results62.json` at field-research@1688a797) answered: the
+row's. `join62.py` re-derives every step from the Field's rows for reports 168-171, checks the community deaths
+against this étude's corrected `cases.json`, writes `carry.json` / `carry.js`, and asserts: 30 Oct, Ituri's
+deaths in all 3,436 → 3,455 (+19 = 12 + 7); the zones print 21 and their own totals move by 18; Mambasa,
+Mongbwalu and Nizi move by less than they print, Mongbwalu printing a day total of 10 beside 1 and 0 and not
+moving at all; 31 Oct, row and zones print 28, the total moves 28, the zones' totals 29, and zones plus the deaths
+not yet assigned to a zone meet the row at 3,483.
+Run: `python3 -I join62.py <results62.json> 1688a7978b50b11997b37ce58bf3372eb02fdfb9`.
+**What a visitor meets now.** On 30 and 31 October, once the day is read whole, four rows of ticks appear beneath
+the squares, one tick per death: what the zones print, what the row prints, how far Ituri's running total moved,
+and how far the zones' own totals moved. A dashed tick is a death another count carries and this one does not.
+With sound on, the total's step sounds as quick high clicks. The page says what the record cannot: whether the
+zones' two more deaths were left out of the total or counted twice.
+Checked in Chromium at 1100 px light (`still-carry.png`, 30 Oct read whole) and 390 px dark
+(`still-carry-390-dark.png`): no errors, no sideways scroll; the rows stay hidden until the day is read whole;
+they appear on exactly reports 169 and 170 (not 168 or 171) with ticks 21/19/19/18 and 28/28/28/29.
