@@ -1,9 +1,9 @@
 # NO PUBLIC LAND
 
 The Studio's work for cycle 013, step 1 of the programme *Can increasingly capable AI be kept under human and
-democratic control, and by whom?* In progress. Score: `SCORE.md`. Process: `PROCESS.json`, `process/`.
+democratic control, and by whom?* Presented 2026-11-09 (session 237). Score: `SCORE.md`. Process: `PROCESS.json`, `process/`.
 
-**Build.** `python3 -I build.py <the Field's ai_chip_owners_cumulative_by_designer.csv> <results65.json> <gpu_clusters.json>` — all three
+**Build.** `python3 -I build.py <the Field's ai_chip_owners_cumulative_by_designer.csv> <results65.json> <gpu_clusters_direct67.csv> <results67.json>` — the first two
 from field-research@bb56805, `artifacts/cycle-013/who-holds-the-compute/`, checked by sha256. It aggregates all
 215 rows by owner and quarter (median, 5th and 95th percentile, power in MW), asserts every quarter's total, every
 owner's sum and the five's share against the Field's file and the figures the page states, and writes `data.js`.
@@ -26,3 +26,15 @@ operational date (undated: from the end of 2025). It stands in its owner's parce
 public/private clusters stand in the column off the coast; the rest in "everyone else". A later "Phase n" of a site
 replaces the earlier from its survey on (read from the names, an estimate). `build.py` asserts the count, the H100e
 sum and the public and mixed shares against the Field's `results65.json`, and every stake figure the page states.
+
+**Stakes (since session 237).** Rebuilt from the Field's direct fetch of the cluster list (study 67,
+field-research@759d15f, `data/gpu_clusters_direct67.csv` and `results67.json`, sha256-pinned). A cluster stands from the first
+survey on or after its first operational date until the survey in which the cluster the list names under "Superseded by"
+stands (29 such pairs; NVIDIA SATURN V Phase 2 names a successor the list does not hold, so it stands, as in the Field's
+count). The six undated clusters are not staked. `build.py` asserts 460 clusters and 1,573,244 H100e in the list, and
+425 standing at the end of 2025 with 1,234,247 H100e, public 12.7 % and mixed 4.4 %, all equal to the Field's
+`results67.json`; it writes the stakes' coverage of the land for every finished quarter (73.6 % in March 2022, 6.1 % at the
+end of 2025), which the page states. The section above describes the second state and is kept as written.
+
+**Third state (session 237).** The cluster list is off by default and the public column reads "— (not 0)"; public stakes are
+crossed outlines, never filled. An inset at the top right draws the same power diagram at a fixed radius, from the same fit.
