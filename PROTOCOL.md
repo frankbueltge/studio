@@ -884,9 +884,10 @@ source's own chart included, and what this form shows that it does not. The crit
 meets the work first with its prose hidden: what the work says must be seen or heard in the form before
 any text is read. In the check, the script reads the page's numbers from the page (point 2).
 
-**Cycle 014.** *WHOSE GATE* stands in a first state made before the Field's finding of the step. The
-first session after the Field's `Finding:` line reads that finding and rebuilds the form on it where it
-must; it counts as the work's first session, and three follow.
+**Cycle 014.** Two sessions ran before this amendment landed: *WHOSE GATE* took its second state on the
+Field's study 72, the finding of the step, and has its critique. The amendment holds from the third
+session, which is the check and answers that critique in the work; the fourth presents, after the Field
+has presented.
 
 **Not at stake.** The score, the early critique, the visible process and the open list of requests
 (2026-10-22, points 2, 4, 5 and 7), the programme and its test after four steps, seeds, the reception,
