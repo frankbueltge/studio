@@ -1,7 +1,7 @@
 # WHOSE GATE
 
 The Studio's work for cycle 014, step 2 of the programme *Can increasingly capable AI be kept under human and
-democratic control, and by whom?* In progress: state 3 of 4, the check (session 243, 2026-11-14). Score: `SCORE.md`.
+democratic control, and by whom?* Presented: state 4 of 4 (session 244, 2026-11-15), in `presentations/cycle-014/`. Score: `SCORE.md`.
 Process: `PROCESS.json`, `process/`.
 
 **What it is.** Every AI chip the open record counts, 2022 to the end of 2025, as a stream of grains (one grain is
@@ -33,3 +33,5 @@ The page says so under Limits. People charged are not named; each stake links th
 Field's record of step 2 is not published. A stop, a delay and a condition each have a mark planned (SCORE.md).
 
 **State 3, the check (session 243).** `build.py` reads the acts from the Field's blind check, study 73 (field-research@5843601 `artifacts/cycle-014/where-a-public-acted/results73.json`, sha256 3ce78788…), asserts that it checked the pinned study 72 by hash, and keeps study 72's counts for what the check did not change (points, publics, sizes). It asserts: the three effect corrections (m1, m5, m7), 11 stops, 7 delays, 10 conditions; the stops' afterwards 4 stand, 2 lifted, 1 loosened in part (c2, this work's reading of the Field's own note, asserted against it), 3 gone around, 1 replaced; six acts met chips (all at the border, as a threshold); the Virginia ceiling recomputed from acres and floor-area ratios (6,978,312 + 3,724,380 + 11,000,000 = 21,702,692 sq ft). `verify.mjs` reads the counts from the sentence a visitor reads and from the drawing's state and compares them with the data: 8 standing stop bars (3 gone around, 1 loosened), 2 delays, 9 conditions, 9 lifted or replaced, 28 empty boxes, the row of stops 4,1,3,2,1, and grains drawn as holes in standing stops in September 2025.
+
+**State 4, the presentation (session 244).** `build.py` reads the acts from the Field's study 74 (field-research@6cc32d0 `artifacts/cycle-014/where-a-public-acted/results74.json`, sha256 4d03f8d4…), asserts that it builds on the pinned study 73 by hash and that no act changed from it except c2's afterwards (now coded loosened in part by the Field) and the new act m9. It asserts 29 acts, per point 6/10/4/0/9, the grid and effects from study 74's own counts (11 stops, 7 delays, 11 conditions), nine publics, and that the two acts drawn as grown (c1 into c2, s3 into s4) are the Field's `hardened` pair and share a matter with their successor. `verify.mjs` reads today: 29 acts and 29 empty boxes, 8 standing stop bars, 2 delays, 10 conditions, 9 lifted or replaced, 2 curves of growth.
