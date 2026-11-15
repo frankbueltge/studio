@@ -1,12 +1,17 @@
 // OTHER HANDS — open the page as a visitor does and compare what it says and draws with the Field's and the Atelier's files.
 // Usage (repo root): node works/2026-11-15-other-hands/verify.mjs [out-dir-for-stills]
 // The siblings' results are fetched from their repositories at the commits data.js names, not from this work's data.
+// Third state (the check, session 248): one red rule, seals by side, three acts in the party's favour, the estimate as a range.
 import { createRequire } from 'module'; import path from 'path'; import { fileURLToPath } from 'url';
 const require = createRequire('/opt/node-tools/node_modules/'); const { chromium } = require('playwright');
 const here = path.dirname(fileURLToPath(import.meta.url)); const out = process.argv[2];
 const browser = await chromium.launch(); let bad = 0;
 const ok = (name, cond, detail) => { if (!cond) bad++; console.log((cond ? 'ok   ' : 'FAIL ') + name + (detail ? ' — ' + detail : '')); };
-let R77 = null, R75 = null, RA = null, ADJ = null;
+// The three acts read in the check as in the party's favour, and the words of the Field's act text that say so.
+const FOR = { 623: /declined to sanction/, 1677: /dismiss/, 1694: /did not create/ };
+// The two press first reports by the harmed that are a publication writing about harm done to itself.
+const SELF_PUBLICATION = { 1715: /Mother Jones/, 1725: /Policy Options/ };
+let R77 = null, R75 = null, RA = null, ADJ = null, D77 = null, PS = null;
 for (const [w, h] of [[1132, 900], [390, 800]]) {
   const page = await browser.newPage({ viewport: { width: w, height: h } });
   const errors = []; page.on('pageerror', e => errors.push(String(e))); page.on('console', m => m.type() === 'error' && errors.push(m.text()));
@@ -16,75 +21,79 @@ for (const [w, h] of [[1132, 900], [390, 800]]) {
     const base = `https://raw.githubusercontent.com/frankbueltge/field-research/${M.field_commit}/artifacts/cycle-015/what-harm-is-on-record/`;
     R77 = await (await fetch(base + 'results77.json')).json(); R75 = await (await fetch(base + 'results75.json')).json();
     ADJ = await (await fetch(base + 'check77/adjudication.json')).json();
+    PS = await (await fetch(base + 'check77/press-sample.json')).json();
+    const t = await (await fetch(base + 'data77.js')).text(); D77 = JSON.parse(t.slice(t.indexOf('=') + 1).trim().replace(/;$/, ''));
     RA = (await (await fetch(`https://raw.githubusercontent.com/frankbueltge/ulysses/${M.atelier_commit}/artifacts/cycle-015/named-for-them/check.json`)).json()).res;
   }
-  // the numbers a visitor reads under the sheet, read from the page
-  const said = await page.evaluate(() => Object.fromEntries([...document.querySelectorAll('[data-n]')].map(e => [e.dataset.n, +e.textContent.replace(/,/g, '')])));
-  const B = R77.B, P = R77.press, V = RA.voice;
+  const B = R77.B, P = R77.press, V = RA.voice, WR = R77.whole_record, FR = R75.first_reporter;
+  const acts = Object.fromEntries(D77.acts.map(a => [a[0], a]));
+  const forIds = Object.keys(FOR).map(Number);
+  ok(`${w}px the acts in the party's favour, read from the Field's act text`, forIds.every(i => acts[i] && FOR[i].test(acts[i][4])) && ADJ.frontier.general_model_makers.for_the_maker.includes(1677), forIds.map(i => acts[i] && acts[i][4]).join(' | '));
+  const found = R77.A.final_harmed + P.harmed;
   const field = {
-    with_report: R75.incidents_with_first_report, press: R75.first_reporter['press and other'], public: R75.first_reporter['public body'],
-    research: R75.first_reporter.research, maker: R75.first_reporter.maker, self: R75.first_reporter['self-published'],
-    read_by_hand: R77.A.agreement.n, harmed: R77.A.final_harmed,
-    field_press: P.drawn, press_wrote: P.harmed, field_carried: P.own_words - P.harmed,
-    atelier_press: V.own + V.body + V.other + V.none, own_words: V.own, body_words: V.body, through_another: V.other, atelier_none: V.none,
+    with_report: R75.incidents_with_first_report, press_research: FR['press and other'] + FR.research, public: FR['public body'],
+    maker: FR.maker, self: FR['self-published'], wrote_found: found,
     first_read: R77.A.agreement.n + P.drawn + V.own + V.body + V.other + V.none - M.read_twice,
-    estimate: R77.whole_record.estimate, estimate_lo: R77.whole_record.estimate_ci[0], estimate_hi: R77.whole_record.estimate_ci[1],
-    wrote_found: R77.A.final_harmed + P.harmed, estimate_not_found: R77.whole_record.estimate - R77.A.final_harmed - P.harmed,
-    answered: B.n, maker_answered: B.counts.M.first, other_answered: B.counts.O.first, public_acted: B.public_final,
-    on_user: B.target.user, on_maker: B.target.maker,
-    user_concluded: B.state['user concluded'], user_opened: B.state['user opened'],
-    maker_concluded: B.state['maker concluded'], maker_opened: B.state['maker opened'],
-    on_public_body: B.target_is_public_body.by_deployer_column.length,
+    estimate: WR.estimate, estimate_lo: WR.estimate_ci[0], estimate_hi: WR.estimate_ci[1],
+    not_found_lo: WR.estimate_ci[0] - found, not_found_hi: WR.estimate_ci[1] - found,
+    public_acted: B.public_final, on_user: B.target.user, on_maker: B.target.maker,
+    user_opened: B.state['user opened'], maker_opened: B.state['maker opened'], for_party: forIds.length,
   };
-  const witness = R77.A.final_codes.witness;
-  for (const k of Object.keys(field)) ok(`${w}px caption ${k}`, said[k] === field[k], `${said[k]} on the page, ${field[k]} in the siblings' files`);
-  ok(`${w}px every caption number has a source`, Object.keys(said).every(k => k in field));
-  ok(`${w}px one report was read by both`, Array.isArray(RA.voice_in_field_sample) && M.read_twice === RA.voice_in_field_sample.length, `${M.read_twice} / ${JSON.stringify(RA.voice_in_field_sample)}`);
-  // what was drawn on the sheet and in the counts
+  // the numbers a visitor reads, read from the page
+  const said = await page.evaluate(() => [...document.querySelectorAll('[data-n]')].map(e => [e.dataset.n, +e.textContent.replace(/,/g, '')]));
+  for (const [k, v] of said) ok(`${w}px number ${k}`, k in field && v === field[k], `${v} on the page, ${field[k]} in the siblings' files`);
+  // what was drawn on the sheet
   const d = await page.evaluate(() => window.__oh), s = d.drawn, t = d.tally;
-  const carried = field.field_carried + V.body + V.other, none = P.drawn - P.own_words + V.none - M.read_twice;
-  ok(`${w}px sheet: handwritten paragraphs`, s.H === field.harmed && s.W === field.press_wrote, `${s.H} + ${s.W}`);
-  ok(`${w}px sheet: the harmed's words in the type`, s.q === V.own && s.c === carried && s.e === none, `${s.q} own, ${s.c} carried, ${s.e} read and none`);
-  ok(`${w}px sheet: seals`, s.U === field.on_user && s.K === field.on_maker, `${s.U} discs, ${s.K} rings`);
-  ok(`${w}px sheet: whole and half seals`, s.Uc === field.user_concluded && s.Uo === field.user_opened && s.Kc === field.maker_concluded && s.Ko === field.maker_opened, `${s.Uc}/${s.Uo} ${s.Kc}/${s.Ko}`);
-  const gm = ADJ.frontier.general_model_makers;
-  ok(`${w}px sheet: marked seals`, s.fb === field.on_public_body && s.fg === gm.concluded.length + gm.opened.length + gm.inquiry_into_the_incident.length + gm.for_the_maker.length, `${s.fb} on a public body, ${s.fg} on a maker of a general model`);
-  ok(`${w}px sheet: answers`, s.A === field.maker_answered && s.O === field.other_answered);
-  ok(`${w}px sheet: witnesses`, s.w === witness);
-  const words = Object.entries(s).filter(([k]) => k.length === 1 && !'AOUK0'.includes(k)).reduce((a, [, v]) => a + v, 0);
+  const n = k => s[k] || 0;
+  const forUser = forIds.filter(i => acts[i][6] === 'user'), forMaker = forIds.filter(i => acts[i][6] === 'maker');
+  const opened = i => acts[i][8] === 'opened';
+  ok(`${w}px sheet: the harmed's hand`, n('H') === R77.A.final_harmed && n('W') === P.harmed, `${n('H')} + ${n('W')}`);
+  ok(`${w}px sheet: seals left and right`, n('Uc') + n('Uo') + n('Uf') === B.target.user && n('Kc') + n('Ko') + n('Kf') === B.target.maker, `${n('Uc')}/${n('Uo')}/${n('Uf')} left, ${n('Kc')}/${n('Ko')}/${n('Kf')} right`);
+  ok(`${w}px sheet: half seals and empty rings`, n('Uf') === forUser.length && n('Kf') === forMaker.length &&
+    n('Uo') === B.state['user opened'] - forUser.filter(opened).length && n('Ko') === B.state['maker opened'] - forMaker.filter(opened).length);
+  const words = ['p', 'm', 'g', 's', 'H', 'W'].reduce((a, k) => a + n(k), 0);
   ok(`${w}px sheet: one word per attached report`, words === M.words && words === 6964, `${words}`);
-  ok(`${w}px sheet: paragraphs without a report`, s['0'] === R75.incidents - R75.incidents_with_first_report);
-  const firsts = 'prmgecqWnxywH'.split('').reduce((a, k) => a + (t[k] || 0), 0);
-  ok(`${w}px counts: first reports`, firsts === field.with_report && t.H === field.harmed && t.W === field.press_wrote && t.q === V.own && t.c === carried && t.e === none, `${firsts}`);
-  ok(`${w}px counts: the estimate`, t.G === field.estimate_not_found && t.H + t.W + t.G === field.estimate, `${t.G}`);
-  ok(`${w}px counts: answers`, t.A === field.maker_answered && t.O === field.other_answered && t.Uc === field.user_concluded && t.Uo === field.user_opened && t.Kc === field.maker_concluded && t.Ko === field.maker_opened && t.fb === field.on_public_body);
-  // the numbers written into the page's sentences
-  const prose = await page.evaluate(() => document.querySelector('.progress').textContent + document.querySelector('.lede').textContent + [...document.querySelectorAll('section p')].map(p => p.textContent).join(' ') + document.getElementById('sheet').getAttribute('aria-label'));
-  ok(`${w}px text: 60, not 50`, prose.includes(`in ${B.public_final} incidents, not ${B.public_first}`) && prose.includes(`ten of the ${B.public_final}`) && B.missed_by_reading_the_opening === 10);
-  ok(`${w}px text: the limits`, prose.includes(`Only ${field.first_read} of 1,801`) && prose.includes(`the Field's ${field.field_carried} quote`) && prose.includes(`the Atelier's ${V.own} are`) && prose.includes(`The ${field.harmed} written on platforms`) && prose.includes(`the ${field.estimate} is an estimate from ${P.drawn} reports`) && prose.includes(`The ${B.public_final} acts are a floor`));
-  ok(`${w}px text: general-model makers`, prose.includes('five acts') && gm.concluded.length === 1 && gm.opened.length === 2 && gm.inquiry_into_the_incident.length === 1 && gm.for_the_maker.length === 1);
-  ok(`${w}px label: the sheet's description`, prose.includes('Twenty-one paragraphs') && field.harmed === 21 && prose.includes('four more') && field.press_wrote === 4 && prose.includes('sixty-eight paragraphs') && V.own + carried === 68 && prose.includes('Sixty paragraphs') && prose.includes('twenty-six of them only half') && field.user_opened + field.maker_opened === 26);
-  // the year sentence in the text
+  ok(`${w}px sheet: paragraphs without a report`, n('0') === R75.incidents - R75.incidents_with_first_report);
+  ok(`${w}px sheet: marks large enough`, d.seal >= (w < 520 ? 4 : 6), `seal radius ${d.seal}`);
+  // the counts under the sheet
+  const firsts = ['p', 'm', 'g', 's', 'H', 'W'].reduce((a, k) => a + (t[k] || 0), 0);
+  ok(`${w}px counts: first reports`, firsts === field.with_report && t.H === R77.A.final_harmed && t.W === P.harmed && t.m === FR.maker + R77.A.final_codes.maker && t.g === FR['public body'], `${firsts}`);
+  const gh = d.ghosts;
+  ok(`${w}px counts: the estimate drawn as its range`, t.G === field.not_found_hi && gh.lo === field.not_found_lo && gh.lo + gh.mid === WR.estimate - found, JSON.stringify(gh));
+  ok(`${w}px counts: seals`, (t.Uc || 0) + (t.Uo || 0) + (t.Uf || 0) === B.target.user && (t.Kc || 0) + (t.Ko || 0) + (t.Kf || 0) === B.target.maker);
+  // the sentences of the check, against the files
+  const text = await page.evaluate(() => document.body.textContent.replace(/\s+/g, ' '));
+  const selfPub = Object.keys(SELF_PUBLICATION).map(Number);
+  const writers = Object.fromEntries(PS.items.map(i => [i.id, i]));
+  ok(`${w}px check: two of the press four are a publication on itself`, selfPub.every(i => P.harmed_ids.includes(i) && SELF_PUBLICATION[i].test(writers[i].writer)) && text.includes('Two of the 4') && text.includes('(1715, 1725)'));
+  const persons = P.harmed - selfPub.length, est = R77.A.final_harmed + Math.round(persons / P.drawn * P.population);
+  ok(`${w}px check: about 26 when only people count`, est - (R77.A.final_harmed + persons) === 26 && text.includes('about 26 not found'), `${est}`);
+  ok(`${w}px check: what held`, text.includes(`kappa ${R77.A.agreement.kappa}`) && R77.A.final_harmed - R77.A.final_harmed_firm === 2 && text.includes('marks two as borderline') &&
+    text.includes(`(1,801; ${FR['press and other'].toLocaleString('en-US')}, ${FR['public body']}, ${FR.research}, ${FR.maker}, ${FR['self-published']})`) &&
+    text.includes(`${B.public_final} public acts, ${B.target.user} and ${B.target.maker}, ${B.state['user opened'] + B.state['maker opened']} only begun`) && text.includes(`207 read (58 + 120 + 30, one read twice)`));
+  ok(`${w}px check: the two rules`, text.includes(`the Field's ${P.own_words - P.harmed} that quote or carry, the Atelier's ${V.own} own words`));
+  ok(`${w}px check: the same arrest twice`, acts[1500][4] === acts[1501][4] && acts[1500][5] === acts[1501][5] && text.includes('(1500, 1501)'));
+  ok(`${w}px check: answers were the first reading`, B.counts.M.first === 79 && B.counts.O.first === 65 && text.includes('79 and 65 were the first reading'));
   const yr = await page.evaluate(() => [OH.inc.filter(r => r[1].slice(0, 4) === '2025').length, OH.inc.filter(r => r[1].slice(0, 4) <= '2021').length]);
-  const text = await page.evaluate(() => document.body.textContent);
-  ok(`${w}px text: 2025 against the years up to 2021`, text.includes(`(${yr[0]})`) && text.includes(`(${yr[1]})`) && yr[0] > yr[1] && yr[0] === R75.years['2025'], yr.join(' / '));
+  ok(`${w}px text: 2025 against the years up to 2021`, text.includes(`(${yr[0]})`) && text.includes(`(${yr[1]})`) && yr[0] === R75.years['2025'], yr.join(' / '));
   // the readings and the stepping
   await page.click('#rHand'); await page.waitForTimeout(700);
-  const seen = new Set();
-  const red = field.harmed + field.press_wrote + V.own + carried;
   const restText = await page.textContent('#say');
-  ok(`${w}px reading: what the harmed's reading says`, restText.includes(`${field.first_read} first reports`) && restText.includes(`wrote ${field.wrote_found}`) && restText.includes(`in ${V.own} more`) && restText.includes(`carried in ${carried}`) && restText.includes(`other ${(field.with_report - field.first_read).toLocaleString('en-US')} were`), restText);
-  for (let i = 0; i < red + 2; i++) { await page.click('#bNext'); seen.add(/Incident (\d+)/.exec(await page.textContent('#say'))[1]); }
-  ok(`${w}px stepping: the harmed's paragraphs`, seen.size === red && P.harmed_ids.every(i => seen.has(String(i))) && RA.press_harmed_ids.every(i => seen.has(String(i))), `${seen.size}`);
+  ok(`${w}px reading: what the harmed wrote`, restText.includes(`${found} first reports`) && restText.includes(`of ${field.first_read}`), restText);
+  const seen = new Set();
+  for (let i = 0; i < found + 2; i++) { await page.click('#bNext'); seen.add(/Incident (\d+)/.exec(await page.textContent('#say'))[1]); }
+  ok(`${w}px stepping: the harmed's paragraphs`, seen.size === found && P.harmed_ids.every(i => seen.has(String(i))), `${seen.size}`);
   if (out) await page.screenshot({ path: path.join(out, `hand-${w}.png`), fullPage: true });
   await page.click('#rSeal'); await page.waitForTimeout(700);
-  const acts = new Set();
   const sealText = await page.textContent('#say');
-  ok(`${w}px reading: what the seals' reading says`, sealText.includes(`${field.public_acted} acts`) && sealText.includes(`${field.on_user} discs`) && sealText.includes(`${field.on_maker} rings`) && sealText.includes(`${field.user_opened} of the discs, ${field.maker_opened} of the rings`), sealText);
-  for (let i = 0; i < field.public_acted + 2; i++) { await page.click('#bNext'); acts.add(/Incident (\d+)/.exec(await page.textContent('#say'))[1]); }
-  ok(`${w}px stepping: the acts`, acts.size === field.public_acted && B.admitted.every(i => acts.has(String(i))) && B.target_is_public_body.by_deployer_column.every(i => acts.has(String(i))), `${acts.size}`);
+  ok(`${w}px reading: what public bodies did`, sealText.includes(`${B.public_final} acts`) && sealText.includes(`${B.target.user} at the left`) && sealText.includes(`${B.target.maker} at the right`), sealText);
+  const stepped = new Set(); let favour = 0;
+  for (let i = 0; i < B.public_final + 2; i++) { await page.click('#bNext'); const st = await page.textContent('#say'); const id = /Incident (\d+)/.exec(st)[1]; if (!stepped.has(id) && /in favour of/.test(st)) favour++; stepped.add(id); }
+  ok(`${w}px stepping: the acts`, stepped.size === B.public_final && B.admitted.every(i => stepped.has(String(i))) && favour === forIds.length, `${stepped.size}, ${favour} in favour`);
   await page.click('#rAll'); await page.waitForTimeout(700);
   if (out) await page.screenshot({ path: path.join(out, `all-${w}.png`), fullPage: true });
+  const top = await page.evaluate(() => document.getElementById('sheet').getBoundingClientRect().top + scrollY);
+  ok(`${w}px the sheet begins on the first screen`, top < h, `${Math.round(top)} px`);
   const side = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   ok(`${w}px no sideways scroll`, side <= 0, `${side}`);
   ok(`${w}px no errors`, errors.length === 0, errors.join(' | '));

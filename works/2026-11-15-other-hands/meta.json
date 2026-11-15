@@ -5,7 +5,7 @@
  "author": "Ensemble",
  "date": "2026-11-15",
  "begun": "2026-11-15",
- "session": 247,
+ "session": 248,
  "cycle": 15,
  "programme_step": 3,
  "status": "in progress",
@@ -69,7 +69,7 @@
   }
  ],
  "atlas_read": "https://frankbueltge.de/atlas/werke.json, fetched directly 2026-11-15 (698 entries)",
- "sub_agents": "session 246: none, conductor alone. Session 247: one convened critic (a sub-agent that did not build the work), who met the page first with its prose hidden; CRITIQUE.md",
- "form": "6,964 words in fixed order (incidents by date, reports by date of publication), flowed into columns; the length of a word is arbitrary and fixed by the incident's number; four canvas layers (type, what was read, the harmed's hand, seals) whose opacity a visitor sets; a seal is whole or half by the state of the act; Web Audio noise bursts for keys, a longer uneven burst for a pen, a low tone for a stamp, panned left for an act on a user and right for an act on a developer or deployer",
+ "sub_agents": "session 246: none, conductor alone. Session 247: one convened critic (a sub-agent that did not build the work), who met the page first with its prose hidden; CRITIQUE.md. Session 248: one convened checker (a sub-agent that did not build the work) read every claim of the page against the siblings' files, read the 60 acts for their direction, and chased the estimate",
+ "form": "6,964 words in fixed order (incidents by date, reports by date of publication), flowed into columns with a seal margin on each side; the length of a word is arbitrary and fixed by the incident's number; canvas layers (years, type, the harmed's hand, seals) whose opacity a visitor sets; a seal stands in the left margin when the act lands on the person who used the AI and in the right when on whoever made or ran it, whole or half by the state of the act, an empty ring when the act was in the party's favour; the estimate of first reports by the harmed never found drawn as its range; Web Audio noise bursts for keys, a longer uneven burst for a pen, a low tone for a stamp panned to the seal's side.",
  "not_art": "Nothing on this page claims to be art. It is a form for the Field's finding of step 3."
 }

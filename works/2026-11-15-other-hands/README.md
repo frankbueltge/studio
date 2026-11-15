@@ -1,22 +1,19 @@
 # OTHER HANDS
 
 The Studio's work for cycle 015, step 3 of the programme *Can increasingly capable AI be kept under human and
-democratic control, and by whom?* In progress: state 2 of 4 (session 247, 2026-11-15). Score: `SCORE.md`.
+democratic control, and by whom?* In progress: state 3 of 4, checked (session 248, 2026-11-15). Score: `SCORE.md`.
 Critique: `CRITIQUE.md`.
 Process: `PROCESS.json`, `process/`.
 
 **What it is.** The AI Incident Database (snapshot of 2026-11-09) as one sheet: a paragraph per incident, a word per
-attached report, drawn by the class of the address it was published at. The first word of a paragraph is drawn by
-what readers found in it. On platforms without an editor (58, the Field's checked coding): a red scribble where the
-harmed party wrote, a grey pencil scribble for a witness. From edited addresses (149 read: the Field's 120 drawn by
-lot, the Atelier's 30, one read by both): a red scribble in a frame where the harmed wrote and a publication
-printed it (4), a red line through the word where the harmed speak in their own words (8, the Atelier's rule), a
-dashed red line where their words are quoted or carried (60: the Field's 46 by its wider rule, the Atelier's 4
-statements of an organisation and 10 through someone else), a thin outline where nothing of theirs was found (77).
-Answers stand at the paragraph's end: a black triangle (the maker), an open triangle (someone else), a blue seal (a
-public body). A disc lands on the person who used the AI, a ring on a developer or deployer; a whole seal is an act
-concluded in the record, half a seal one only begun; a square in the ring means the party acted on is itself a
-public body; a double ring marks the five acts concerning a maker of a general model. Open `index.html`.
+attached report, drawn by who wrote it: grey for the press or research, black for the maker, blue for a public body, a
+grey scribble on a platform by someone other than the harmed. Red is one rule: the harmed wrote the first report, 21 on
+platforms (the Field's checked coding of the 58) and 4 printed by a publication (the Field's 120 drawn by lot; two of
+the 4 are a publication writing about itself). A public body's act stands as a seal in the left margin of its paragraph
+when it lands on the person who used the AI, in the right margin when on whoever made or ran it: whole when concluded in
+the record, half when only begun, an empty ring for the three acts in the party's favour (623, 1677, 1694). Under the
+sheet: every first report as one mark, the Field's estimate of first reports by the harmed never found drawn as its
+range, and the 60 seals left and right. Open `index.html`.
 
 **Build.** `python3 -I works/2026-11-15-other-hands/build.py <mongodump_full_snapshot/> <field-research checkout>
 <ulysses checkout>` reads the snapshot's `incidents.csv` and `reports.csv` (backup-20261109100729.tar.bz2, sha256
@@ -29,13 +26,15 @@ report, 21 harmed of 58, 4 of 120, 60 public acts of 176 answered (36 on a user:
 developer or deployer: 18 and 6), the estimate of 77 (43 to 160). `data.js` holds no title and no text of the
 database; the short notes are the Field's and the Atelier's.
 
-**Check.** `node works/2026-11-15-other-hands/verify.mjs` opens the page at 1132 and 390 px, reads every number in
-the caption from the page and compares it with the Field's `results75.json`, `results77.json` and
-`check77/adjudication.json` and the Atelier's `check.json`, fetched at the pinned commits; it reads the numbers in
-the page's sentences and in the two lifted readings, counts the marks drawn on the sheet and in the counts, steps
-through all 93 red paragraphs and all 60 acts, and checks for errors and sideways scroll.
+**Check.** `node works/2026-11-15-other-hands/verify.mjs` opens the page at 1132 and 390 px, reads every number on it
+and compares it with the Field's `results75.json`, `results77.json`, `data77.js`, `check77/adjudication.json` and
+`check77/press-sample.json` and the Atelier's `check.json`, fetched at the pinned commits; it reads the act text of the
+three acts drawn as in the party's favour, counts the marks drawn on the sheet and under it, reads the sentences of the
+check box against the files, steps through the 25 paragraphs of the harmed and the 60 acts, and checks that the sheet
+starts on the first screen, with no errors and no sideways scroll. Session 248 (the check): all passed.
 
 **Readings that are this work's, not the siblings'.** A report as a word; the class of every later report (the
 Field classed first reports only; the same rule is applied to all 6,964); the length of a word, which is arbitrary;
-the order by the incident's date; drawing the Field's wider "quotes or carries" and the Atelier's "through someone
-else" and "an organisation's statement" as one dashed line; half a seal for an act the record shows only begun.
+the order by the incident's date; press and research as one grey; half a seal for an act the record shows only
+begun; three acts read as in the party's favour from the Field's own act text; "about 26 not found" when only people
+and not publications count, the Field's arithmetic on 2 hits instead of 4, marked on the page as this page's estimate.
