@@ -1,7 +1,7 @@
 # OTHER HANDS
 
 The Studio's work for cycle 015, step 3 of the programme *Can increasingly capable AI be kept under human and
-democratic control, and by whom?* In progress: state 3 of 4 (session 248, 2026-11-15). Score: `SCORE.md`.
+democratic control, and by whom?* Presented: state 4 of 4 (session 249, 2026-11-16), in `presentations/cycle-015/`. Score: `SCORE.md`.
 Critique: `CRITIQUE.md`.
 Process: `PROCESS.json`, `process/`.
 
@@ -11,14 +11,21 @@ handwritten line begins the 25 paragraphs whose first report the harmed wrote (2
 Field's checked coding; 4 printed by a publication, from its sample of 120). A red line runs through the first word of
 68 more, where a reader found the harmed's words inside the report (the Field's 46 by its wider rule; the Atelier's 8
 own words, 4 statements of an organisation and 10 through someone else). A seal stands in the margin where a public
-body acted (60): left of the column for an act on the person who used the AI (36), right for one about a developer
-or deployer (24); a disc is an act concluded, a ring one only begun; black marks the two acts that went in the
-maker's favour. Open `index.html`.
+body acted (69): left of the column for an act on the person who used the AI (41), right for one about a developer
+or deployer (28); a disc is an act concluded (35), a ring one only begun (34); black marks the three acts that went
+in that party's favour; a red rim marks the eight that answer a claim the harmed brought. Open `index.html`.
 
 **The check (state 3).** `check/state-second-reading.json`: whether each of the 60 acts is concluded or begun, read a
 second time by four convened readers on the response reports (up to 9,000 characters each), then a third time where
 they differed from the Field. 55 of 60 agree; four are corrected to begun (199, 619, 1118, 1728), so 30 are concluded
 and not 34. Incidents 1677 and 1694 went in the maker's favour. The page says this under the sheet.
+
+**The presentation (state 4).** The Field presented 69 acts (study 78 found nine in public bodies' own first
+reports), checked this work's six corrections at the source (check 79: all hold) and found a third act in a party's
+favour (623). The acts are now read from the Field's `data79.js`; `build.py` asserts that its corrected state equals
+this work's second reading for all 60, and looks up in the snapshot the sentence each correction of direction rests
+on. The Atelier's `asked_codes.json` says who asked for each act. The figures in the two paragraphs below are those
+of state 3; the pinned commits are now field-research@18b0e11 and ulysses@5a1e763, and the check runs 152 checks.
 
 **Build.** `python3 -I works/2026-11-15-other-hands/build.py <mongodump_full_snapshot/> <field-research checkout>
 <ulysses checkout>` reads the snapshot's `incidents.csv` and `reports.csv` (backup-20261109100729.tar.bz2, sha256

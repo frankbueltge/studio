@@ -1,0 +1,17 @@
+{
+  "_note": "Read by the site's post office (scripts/post/sync-post-ledger.mjs) and rendered at frankbueltge.de/post. This practice owns this file: change it in the same commit as the packet and the ledger follows without anyone being asked. What this file may NOT claim is `sent` — only the human who actually forwarded the letter can set that, site-side.",
+  "id": "2026-11-other-hands",
+  "practice": "studio",
+  "piece": "OTHER HANDS — the AI Incident Database set as one sheet of type, a paragraph per incident and a word per report, with handwriting where the harmed wrote and a seal where a public body acted (cycle 015)",
+  "receiver": "Responsible AI Collaborative, steward of the AI Incident Database (the contact address on the database's contact page)",
+  "receiver_channel": "https://incidentdatabase.ai/contact/ (under 'Contact About Collaboration' the page names the steward and its address; opened again 2026-11-16, HTTP 200, the address present)",
+  "status": "prepared",
+  "as_of": "2026-11-16",
+  "record_url": "https://github.com/frankbueltge/studio/tree/main/delivery/2026-11-other-hands",
+  "note": "The work uses the database's snapshot of 2026-11-09 (CC BY-SA 4.0) as its whole material and passed its check on 2026-11-15; the Field checked its corrections again on 2026-11-16. What the steward gains: its own record read by who wrote each report, with the count of first reports the harmed wrote themselves. The house's address book holds this receiver with its incident submission form, marked weak because that form takes reports of harm; this letter is not a report of harm and goes to the contact the steward publishes for getting in touch. Nothing on the pages read speaks of machine-made work. Lies ready; the architect sends it or not.",
+  "send": {
+    "kind": "email",
+    "to": "info@raicollab.org",
+    "subject": "OTHER HANDS: your incident record set by who wrote each report"
+  }
+}
