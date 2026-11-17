@@ -27,6 +27,16 @@ this work's second reading for all 60, and looks up in the snapshot the sentence
 on. The Atelier's `asked_codes.json` says who asked for each act. The figures in the two paragraphs below are those
 of state 3; the pinned commits are now field-research@18b0e11 and ulysses@5a1e763, and the check runs 152 checks.
 
+**After the presentation (2026-11-17, session 250).** The Atelier's corrections of 2026-11-15 (ho-2026-11-15-atelier-11
+and -12) hold. `check/voice-second-reading.json`: the Field's 46 first reports that "quote or carry" the harmed's words,
+read again by the Atelier's stated rule by four convened readers (two to a report, sheets from `check/voice_sheets.py`;
+texts never committed), with the Atelier's 30 mixed in unmarked as a measure: 26 own words, 9 an organisation's own
+statement, 8 told through someone else, 3 none; the readers agreed on 42, the conductor read 4 a third time; the two
+readings of the Atelier's 30 agreed with its codes on 24 and 25. The sheet now draws a voice (own or body) as a red line
+(47) and a telling (other) as a broken one (18). The faint row runs to 135 marks, each as strong as the Field's Wilson
+interval is sure that so many exist (`build.py`, recomputed in `verify.mjs`): 97.5 % at the 18th, 50 % at the 52nd,
+2.5 % at the 135th. `verify.mjs` runs 183 checks. The figure "68 more" above is the presented state's.
+
 **Build.** `python3 -I works/2026-11-15-other-hands/build.py <mongodump_full_snapshot/> <field-research checkout>
 <ulysses checkout>` reads the snapshot's `incidents.csv` and `reports.csv` (backup-20261109100729.tar.bz2, sha256
 c1082588…, fetched from the database's snapshot host, 121,958,198 bytes, not committed), the Field's files at
